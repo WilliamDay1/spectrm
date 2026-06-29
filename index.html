@@ -1187,8 +1187,8 @@ function renderBills(){
 function fbill(f,el){AB=f;document.querySelectorAll('#bill-pills .pill').forEach(x=>x.classList.remove('on'));el.classList.add('on');renderBills();}
 
 // POLLS
-const VI_LABELS=['Jul 24','Aug 24','Sep 24','Oct 24','Nov 24','Dec 24','Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26'];
-const VI_DATA={
+let VI_LABELS=['Jul 24','Aug 24','Sep 24','Oct 24','Nov 24','Dec 24','Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26'];
+let VI_DATA={
   ref:[15,16,17,18,19,20,21,22,22,23,25,25,25,25,25,25,26,26,26,26,27,27,27,26.3],
   lab:[33,31,29,28,27,26,25,24,23,22,21,21,21,21,21,21,21,21,21,21,19,19,18,20.7],
   con:[22,22,22,22,21,21,21,21,21,20,20,20,20,20,20,20,19,19,19,19,19,19,18,19.4],
