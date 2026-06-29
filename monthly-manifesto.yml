@@ -1,0 +1,45 @@
+name: Monthly manifesto update
+
+on:
+  schedule:
+    - cron: '0 8 1 * *'
+  workflow_dispatch:
+
+jobs:
+  update-manifesto:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Scrape Full Fact manifesto tracker
+        run: python scripts/fetch_manifesto.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet data/manifesto.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git diff data/manifesto.json | grep '"status"' | head -20
+          fi
+
+      - name: Commit and push
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Spectrm Bot"
+          git config user.email "bot@spectrm.app"
+          git add data/manifesto.json
+          git commit -m "chore: auto-update manifesto tracker $(date -u +%Y-%m-%d)"
+          git push
