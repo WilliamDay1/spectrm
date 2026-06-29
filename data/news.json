@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-06-29T15:14:16Z",
+    "updated": "2026-06-29T17:45:06Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,22 +8,40 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham confirms he will set up \u2018No 10 North\u2019 in Manchester in major policy speech \u2013 UK politics live",
+      "headline": "Nato chief says he is confident Burnham will stick to defence spending target",
       "date": "29 Jun 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jun/29/andy-burnham-devolution-speech-keir-starmer-labour-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/jun/29/nato-chief-confident-burnham-defence-spending"
     },
     {
       "id": "2",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Former Tory MP Craig Williams pleads guilty to cheating at gambling with election bets",
+      "headline": "Resident doctors in England accept government offer on pay and jobs",
       "date": "29 Jun 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jun/29/craig-williams-pleads-guilty-cheating-gambling-election"
+      "url": "https://www.theguardian.com/society/2026/jun/29/resident-doctors-england-accept-pay-jobs"
     },
     {
       "id": "3",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham will stand or fall on his plans for youth employment: he must put the next generation first | Polly Toynbee",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jun/29/andy-burnham-plans-youth-employment-labour"
+    },
+    {
+      "id": "4",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Can Andy Burnham\u2019s \u2018No 10 North\u2019 change anything? \u2013 podcast",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/audio/2026/jun/29/can-andy-burnham-no-10-north-change-anything-podcast"
+    },
+    {
+      "id": "5",
       "tag": "Election",
       "tag_class": "tc-c",
       "headline": "Ex-MP Craig Williams pleads guilty over general election betting offence",
@@ -32,67 +50,49 @@
       "url": "https://www.bbc.co.uk/news/articles/c3ry1zr8nw2o?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "At the People\u2019s History Museum, Burnham gives Labour hope they might just have a future",
-      "date": "29 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jun/29/peoples-history-museum-andy-burnham-labour-speech"
-    },
-    {
-      "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham vows to set up No 10 North as \u2018nerve centre of rewired Britain\u2019",
-      "date": "29 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jun/29/andy-burnham-no-10-north-nerve-centre-rewired-britain"
-    },
-    {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Henry Zeffman: Andy Burnham offers a blueprint for his premiership",
+      "headline": "Andy Burnham confirms he will set up \u2018No 10 North\u2019 in Manchester in major policy speech \u2013 as it happened",
       "date": "29 Jun 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cpq3yy48zglo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jun/29/andy-burnham-devolution-speech-keir-starmer-labour-latest-news-updates"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK state threats bill could pull British journalists into terror prosecutions \u2013 experts",
+      "headline": "UK state threats bill could pull British journalists into terror prosecutions, experts say",
       "date": "29 Jun 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/uk-news/2026/jun/29/uk-state-threats-bill-could-pull-british-journalists-into-terror-prosecutions-experts"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "White working-class children failed by education system, says inquiry",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "New 'No 10 North' plan will rebalance power in Britain, Burnham promises",
       "date": "29 Jun 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq51j10q601o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cx2jw5q5pdzo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Keir Starmer's attempts to placate big tech were a disaster. Andy Burnham must take a stand | Beeban Kidron",
+      "tag": "Housing",
+      "tag_class": "tc-c",
+      "headline": "Current and ex-DUP members knew of allegations about Jeffrey Donaldson, party says",
       "date": "29 Jun 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jun/29/keir-starmer-placate-big-tech-disaster-andy-burnham-labour-silicon-valley"
+      "url": "https://www.theguardian.com/politics/2026/jun/29/dup-members-knew-allegations-jeffrey-donaldson-party-says"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "White working-class children failed by England\u2019s school system, inquiry finds",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "How would PM-in-waiting Andy Burnham change Britain? - The Latest",
       "date": "29 Jun 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/education/2026/jun/29/white-working-class-children-failed-by-england-school-system-inquiry-finds"
+      "url": "https://www.theguardian.com/politics/audio/2026/jun/29/how-would-pm-in-waiting-andy-burnham-change-britain-the-latest"
     }
   ]
 }
