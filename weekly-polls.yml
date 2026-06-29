@@ -41,4 +41,5 @@ jobs:
           git config user.email "bot@spectrm.app"
           git add data/polls.json
           git commit -m "chore: auto-update polling data $(date -u +%Y-%m-%d)"
+          git pull --rebase
           git push
