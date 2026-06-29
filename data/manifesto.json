@@ -1,5 +1,17 @@
 {
-  "_meta": { "updated": "2026-06-29" },
-  "summary": { "total": 39, "achieved": 12, "on_track": 5, "in_progress": 14, "off_track": 4, "not_kept": 1, "unclear": 1, "wait_and_see": 2 },
+  "_meta": {
+    "updated": "2026-06-29",
+    "note": "Auto-checked 2026-06-29. 0 pledge(s) may need manual review \u2014 check Full Fact. Full Fact blocks scraping so status changes require manual update."
+  },
+  "summary": {
+    "total": 0,
+    "achieved": 0,
+    "on_track": 0,
+    "in_progress": 0,
+    "off_track": 0,
+    "not_kept": 0,
+    "unclear": 0,
+    "wait_and_see": 0
+  },
   "pledges": []
 }
