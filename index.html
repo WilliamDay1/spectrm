@@ -326,25 +326,21 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .ev-chevron{font-size:10px;color:var(--tm);margin-left:auto;flex-shrink:0;margin-top:3px;transition:transform .15s}
 .ev-chevron.open{transform:rotate(180deg)}
 
-/* Politicians tab */
 .mpc{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .15s;border-top:3px solid transparent}
 .mpc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
 .mpc-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:top center;background:var(--s1);display:block}
-.mpc-photo-placeholder{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600;background:var(--s1)}
+.mpc-photo-placeholder{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600}
 .mpc-body{padding:10px}
 .mpc-name{font-size:12px;font-weight:600;color:var(--tp);margin-bottom:2px;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .mpc-con{font-size:10px;color:var(--tm);margin-bottom:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .mpc-role{font-size:9px;font-weight:600;padding:2px 7px;border-radius:20px;display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.mp-detail{background:var(--s2);border-radius:14px;padding:0;overflow:hidden}
-.mp-detail-hero{display:flex;gap:16px;align-items:flex-start;padding:20px;border-bottom:.5px solid var(--bd)}
+.mp-detail{background:var(--s2);border-radius:14px;overflow:hidden}
 .mp-detail-photo{width:90px;height:110px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0;background:var(--s1)}
 .mp-detail-photo-ph{width:90px;height:110px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700}
 .mp-section{padding:14px 20px;border-bottom:.5px solid var(--bd)}
 .mp-section:last-child{border-bottom:none}
 .mp-section-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:10px}
 .mp-role-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;font-size:12px;color:var(--ts);line-height:1.4}
-.mp-vote-bar{height:6px;border-radius:3px;margin-top:3px}
-
 </style>
 </head>
 <body>
@@ -406,46 +402,47 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 
     <!-- News column -->
     <div>
-      <div class="card" id="ov-news">
+      <div class="card">
         <div class="ctt">Latest political news <span class="csrc">BBC · Guardian · Sky News · live</span></div>
-        <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/politics','_blank')">
+        <div id="ov-news">
+        <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/articles/c9dlg3gegwpo','_blank')">
           <span class="ntag" style="background:#FFF0F0;color:#8B0000">Leadership</span>
-          <div class="nhed">Starmer to resign — Burnham wins Makerfield, declared candidacy; Streeting stands aside in his favour</div>
-          <div class="ntime">22 Jun 2026 · BBC Politics</div>
+          <div class="nhed">Burnham declares Labour leadership bid — frontrunner with Streeting, Lammy backing; nominations open 9 July</div>
+          <div class="ntime">29 Jun 2026 · BBC Politics</div>
         </div>
-        <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/politics','_blank')">
-          <span class="ntag tc-c">By-election</span>
-          <div class="nhed">Burnham wins Makerfield with 54.8% — exceeds all expectations, Reform underperforms vs May local elections</div>
-          <div class="ntime">18 Jun 2026 · BBC Politics</div>
+        <div class="ni" onclick="window.open('https://www.theguardian.com/politics/2026/jun/29/labour-leadership','_blank')">
+          <span class="ntag" style="background:#FFF0F0;color:#8B0000">Leadership</span>
+          <div class="nhed">Who will replace Starmer? Guardian guide to the Labour leadership contest — candidates, timeline and rules</div>
+          <div class="ntime">29 Jun 2026 · The Guardian</div>
         </div>
-        <div class="ni" onclick="window.open('https://www.theguardian.com/politics','_blank')">
-          <span class="ntag tc-f">Gaza</span>
-          <div class="nhed">62% of Britons oppose Israel military actions — record high as YouGov poll shows growing opposition</div>
-          <div class="ntime">Jun 2026 · The Guardian</div>
+        <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/articles/reform-uk-polling','_blank')">
+          <span class="ntag tc-ref">Reform</span>
+          <div class="nhed">Reform UK holds 26% in latest polls — Farage says party ready to form government at next election</div>
+          <div class="ntime">28 Jun 2026 · BBC Politics</div>
         </div>
         <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/business','_blank')">
           <span class="ntag tc-e">Economy</span>
-          <div class="nhed">Bank of England holds at 3.75% for fourth consecutive month — CPI at 2.8%, above the 2% target</div>
+          <div class="nhed">Bank of England holds rates at 3.75% — governor signals cuts possible later in 2026 if inflation stays low</div>
           <div class="ntime">Jun 2026 · BBC Business</div>
         </div>
         <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/health','_blank')">
           <span class="ntag tc-h">NHS</span>
-          <div class="nhed">Waiting list hits 7.22m — Labour passes £3.1bn emergency funding, 40 new surgical hubs announced</div>
-          <div class="ntime">Apr 2026 · NHS England</div>
-        </div>
-        <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/politics','_blank')">
-          <span class="ntag tc-c">Reform</span>
-          <div class="nhed">Runcorn and Helsby (1 May 2025): Reform UK wins Labour seat by 6 votes — closest post-war by-election</div>
-          <div class="ntime">1 May 2025 · BBC Politics</div>
+          <div class="nhed">NHS waiting list at 7.22m — health secretary says 40 new surgical hubs will cut waits by 2027</div>
+          <div class="ntime">Jun 2026 · NHS England</div>
         </div>
         <div class="ni" onclick="window.open('https://www.theguardian.com/politics','_blank')">
-          <span class="ntag tc-d">Defence</span>
-          <div class="nhed">UK pledges additional £500m military aid to Ukraine — PM confirms package at NATO summit in London</div>
-          <div class="ntime">Jun 2026 · Reuters</div>
+          <span class="ntag tc-f">Gaza</span>
+          <div class="nhed">UK calls for immediate ceasefire as polls show 62% of Britons oppose Israeli military operations — record high</div>
+          <div class="ntime">Jun 2026 · The Guardian</div>
         </div>
         <div class="ni" onclick="window.open('https://www.bbc.co.uk/news/politics','_blank')">
+          <span class="ntag tc-d">Defence</span>
+          <div class="nhed">UK commits to 2.5% GDP defence spending — strategic defence review published, £3bn extra for armed forces</div>
+          <div class="ntime">Jun 2026 · BBC Politics</div>
+        </div>
+        <div class="ni" onclick="window.open('https://fullfact.org/government-tracker/','_blank')">
           <span class="ntag tc-e">Manifesto</span>
-          <div class="nhed">Full Fact tracker: Labour has achieved 24 of 92 pledges — 6 broken including NI rise promise</div>
+          <div class="nhed">Full Fact tracker: 24 of 92 Labour pledges achieved — NI rise pledge among 6 broken commitments</div>
           <div class="ntime">Jun 2026 · Full Fact</div>
         </div>
       </div>
@@ -536,23 +533,20 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 
 </div>
 
+</div>
 
 <!-- POLITICIANS -->
 <div class="sec" id="sec-politicians">
-  <!-- Search and filters -->
   <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
     <input class="search-inp" type="text" id="mps" placeholder="Search MPs by name or constituency..." 
       oninput="filterMPs()" style="flex:1;min-width:200px">
     <div style="font-size:11px;color:var(--tm)" id="mp-count"></div>
   </div>
   <div class="pills" id="mp-party-pills" style="margin-bottom:14px"></div>
-  <!-- MP grid -->
   <div id="mpg" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px"></div>
-  <!-- Load more -->
   <div id="mp-load-more" style="text-align:center;padding:16px;display:none">
     <button onclick="loadMoreMPs()" style="background:var(--s1);border:0.5px solid var(--bd);border-radius:8px;padding:8px 20px;font-size:12px;cursor:pointer;color:var(--ts)">Load more MPs</button>
   </div>
-  <!-- MP detail panel -->
   <div id="mpdp" style="display:none"></div>
 </div>
 
@@ -940,14 +934,193 @@ function sw(id,btn,deeplink){
   }
 }
 
-async function parlFetch(p){try{const r=await fetch('https://members-api.parliament.uk/api'+p,{headers:{Accept:'application/json'}});if(!r.ok)throw 0;return r.json();}catch{return null;}}
+async function parlFetch(p){
+  try{
+    const r=await fetch('/api/parliament?path='+encodeURIComponent(p),{headers:{Accept:'application/json'}});
+    if(!r.ok)throw new Error('status '+r.status);
+    return r.json();
+  }catch(e){
+    console.warn('parlFetch error:',e.message);
+    return null;
+  }
+}
+
 async function fetchVotes(pid){
   try{
-    const r=await fetch('https://commonsvotes-api.parliament.uk/data/divisions.json/membervoting?memberId='+pid+'&take=6',{headers:{Accept:'application/json'}});
+    const path='/data/divisions.json/membervoting?memberId='+pid+'&take=6';
+    const r=await fetch('/api/votes?path='+encodeURIComponent(path),{headers:{Accept:'application/json'}});
     if(!r.ok) return null;
     return r.json();
   }catch(e){return null;}
 }
+
+// =====================
+// POLITICIANS TAB
+// =====================
+let ALL_MPs=[];
+let MP_PAGE=0;
+let MP_TOTAL=0;
+let MP_LOADING=false;
+let MP_PARTY_FILTER='all';
+const MP_PAGE_SIZE=40;
+
+const MP_PARTIES={
+  'Labour':{c:'#CC0000',bg:'#FEE2E2',short:'Lab'},
+  'Conservative':{c:'#003087',bg:'#EEF2FF',short:'Con'},
+  'Liberal Democrat':{c:'#FAA61A',bg:'#FFFBEB',short:'LD'},
+  'Reform UK':{c:'#12B6CF',bg:'#CFFAFE',short:'Ref'},
+  'Scottish National Party':{c:'#005EB8',bg:'#DBEAFE',short:'SNP'},
+  'Green Party':{c:'#02A95B',bg:'#DCFCE7',short:'Grn'},
+  'Plaid Cymru':{c:'#3F8428',bg:'#DCFCE7',short:'PC'},
+  'Sinn Fein':{c:'#169B62',bg:'#DCFCE7',short:'SF'},
+  'Democratic Unionist Party':{c:'#D46A4C',bg:'#FEF2EE',short:'DUP'},
+  'Alliance':{c:'#F6CB2F',bg:'#FEFCE8',short:'All'},
+  'Independent':{c:'#6B7280',bg:'#F3F4F6',short:'Ind'},
+};
+
+function mpPartyStyle(name){return MP_PARTIES[name]||MP_PARTIES['Independent'];}
+function mpPhotoUrl(id){return 'https://members-api.parliament.uk/api/Members/'+id+'/Thumbnail';}
+function mpIni(name){return name.split(' ').filter(function(w){return w.length>0;}).slice(0,2).map(function(w){return w[0];}).join('');}
+
+async function renderMPs(){
+  ALL_MPs=[];MP_PAGE=0;MP_PARTY_FILTER='all';
+  var pillsEl=document.getElementById('mp-party-pills');
+  if(pillsEl){
+    var parties=['all','Labour','Conservative','Liberal Democrat','Reform UK','Scottish National Party','Green Party','Plaid Cymru'];
+    pillsEl.innerHTML='';
+    parties.forEach(function(p){
+      var label=p==='all'?'All parties':(MP_PARTIES[p]?MP_PARTIES[p].short:p);
+      var isOn=p==='all';
+      var pill=document.createElement('span');
+      pill.className='pill'+(isOn?' on':'');
+      if(isOn){pill.style.background='var(--brand)';pill.style.color='#fff';pill.style.borderColor='var(--brand)';}
+      pill.textContent=label;
+      (function(party,el){el.addEventListener('click',function(){setMPParty(party,el);});})(p,pill);
+      pillsEl.appendChild(pill);
+    });
+  }
+  await loadMPs(true);
+}
+
+async function loadMPs(reset){
+  if(MP_LOADING)return;
+  MP_LOADING=true;
+  var grid=document.getElementById('mpg');
+  if(!grid){MP_LOADING=false;return;}
+  if(reset){
+    grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--tm);font-size:13px"><div style="font-size:24px;margin-bottom:8px">⟳</div>Loading MPs from Parliament API...</div>';
+    ALL_MPs=[];MP_PAGE=0;
+  }
+  var nameParam='';
+  var searchEl=document.getElementById('mps');
+  if(searchEl&&searchEl.value){nameParam='&nameStartsWith='+encodeURIComponent(searchEl.value);}
+  var url='/Members/Search?House=Commons&IsCurrentMember=true&take='+MP_PAGE_SIZE+'&skip='+(MP_PAGE*MP_PAGE_SIZE)+nameParam;
+  var data=await parlFetch(url);
+  if(!data||!data.items){
+    if(reset)grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs — Parliament API unavailable.</div>';
+    MP_LOADING=false;return;
+  }
+  MP_TOTAL=data.totalResults;
+  var newMPs=data.items.map(function(item){
+    var m=item.value;
+    return{id:m.id,name:m.nameDisplayAs,party:m.latestParty?m.latestParty.name:'Independent',con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:''};
+  });
+  var filtered=MP_PARTY_FILTER==='all'?newMPs:newMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
+  ALL_MPs=ALL_MPs.concat(filtered);
+  MP_PAGE++;
+  var countEl=document.getElementById('mp-count');
+  if(countEl)countEl.textContent=MP_TOTAL+' MPs';
+  if(reset)grid.innerHTML='';
+  filtered.forEach(function(m){
+    var p=mpPartyStyle(m.party);
+    var card=document.createElement('div');
+    card.className='mpc';
+    card.style.borderTopColor=p.c;
+    var img=document.createElement('img');
+    img.className='mpc-photo';
+    img.src=mpPhotoUrl(m.id);
+    img.alt=m.name;
+    var ph=document.createElement('div');
+    ph.className='mpc-photo-placeholder';
+    ph.style.cssText='display:none;background:'+p.bg+';color:'+p.c;
+    ph.textContent=mpIni(m.name);
+    img.addEventListener('error',function(){img.style.display='none';ph.style.display='flex';});
+    var body=document.createElement('div');
+    body.className='mpc-body';
+    body.innerHTML='<div class="mpc-name">'+m.name+'</div><div class="mpc-con">'+m.con+'</div><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span>';
+    card.appendChild(img);card.appendChild(ph);card.appendChild(body);
+    card.addEventListener('click',function(){openMP(m.id);});
+    grid.appendChild(card);
+  });
+  var lmEl=document.getElementById('mp-load-more');
+  if(lmEl)lmEl.style.display=(ALL_MPs.length<MP_TOTAL)?'block':'none';
+  MP_LOADING=false;
+}
+
+function loadMoreMPs(){loadMPs(false);}
+function filterMPs(){loadMPs(true);}
+
+function setMPParty(party,el){
+  MP_PARTY_FILTER=party;
+  document.querySelectorAll('#mp-party-pills .pill').forEach(function(p){
+    p.classList.remove('on');p.style.background='';p.style.color='';p.style.borderColor='';
+  });
+  el.classList.add('on');el.style.background='var(--brand)';el.style.color='#fff';el.style.borderColor='var(--brand)';
+  filterMPs();
+}
+
+async function openMP(id){
+  var det=document.getElementById('mpdp');
+  if(!det)return;
+  document.getElementById('mpg').style.display='none';
+  document.getElementById('mp-load-more').style.display='none';
+  document.getElementById('mp-party-pills').style.display='none';
+  document.getElementById('mps').style.display='none';
+  document.getElementById('mp-count').style.display='none';
+  det.style.display='block';
+  det.innerHTML='<div style="padding:20px;color:var(--tm);font-size:13px">Loading...</div>';
+  var data=await parlFetch('/Members/'+id);
+  if(!data||!data.value){
+    det.innerHTML='<button class="backbtn" onclick="closeMP()"><i class="ti ti-arrow-left"></i> Back</button><div style="padding:20px;color:var(--tm)">Could not load MP.</div>';
+    return;
+  }
+  var m=data.value;
+  var p=mpPartyStyle(m.latestParty?m.latestParty.name:'Independent');
+  var con=m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'';
+  var posts=(m.currentPosts||[]).slice(0,8);
+  var rolesHTML=posts.length?'<div class="mp-section"><div class="mp-section-title">Current roles</div>'+posts.map(function(post){return'<div class="mp-role-item"><span style="color:'+p.c+';margin-top:2px">◆</span><span>'+post.name+'</span></div>';}).join('')+'</div>':'';
+  var bioHTML=m.synopsis?'<div class="mp-section"><div class="mp-section-title">Biography</div><div style="font-size:12px;color:var(--ts);line-height:1.7">'+m.synopsis+'</div></div>':'';
+  var votes=await fetchVotes(id);
+  var votesHTML='';
+  if(votes&&votes.length){
+    votesHTML='<div class="mp-section"><div class="mp-section-title">Recent votes</div>'+votes.slice(0,6).map(function(v){
+      var col=v.memberVotedAye?'#1baf7a':'#e34948';
+      return'<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:.5px solid var(--bd);gap:10px"><div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+v.title+'</div><span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 8px;border-radius:20px">'+(v.memberVotedAye?'Aye':'No')+'</span></div>';
+    }).join('')+'</div>';
+  }
+  det.innerHTML='<div class="mp-detail"><div style="padding:16px;border-bottom:.5px solid var(--bd)"><button class="backbtn" onclick="closeMP()"><i class="ti ti-arrow-left"></i> All MPs</button></div><div style="padding:20px"><div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:16px"><div class="mp-detail-photo-ph" id="mpph" style="background:'+p.bg+';color:'+p.c+'">'+mpIni(m.nameDisplayAs)+'</div><div style="flex:1"><div style="font-size:20px;font-weight:600;color:var(--tp);margin-bottom:4px">'+m.nameDisplayAs+'</div><div style="font-size:13px;color:var(--tm);margin-bottom:8px">'+con+'</div><span style="font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+(m.latestParty?m.latestParty.name:'Independent')+'</span></div></div></div>'+rolesHTML+bioHTML+votesHTML+'</div>';
+  // Load photo separately so it doesn't block render
+  var photoImg=document.createElement('img');
+  photoImg.className='mp-detail-photo';
+  photoImg.style.cssText='width:90px;height:110px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0';
+  photoImg.src=mpPhotoUrl(id);
+  photoImg.alt=m.nameDisplayAs;
+  photoImg.addEventListener('load',function(){
+    var ph=document.getElementById('mpph');
+    if(ph)ph.parentNode.replaceChild(photoImg,ph);
+  });
+}
+
+function closeMP(){
+  document.getElementById('mpdp').style.display='none';
+  document.getElementById('mpg').style.display='grid';
+  document.getElementById('mp-party-pills').style.display='';
+  document.getElementById('mps').style.display='';
+  document.getElementById('mp-count').style.display='';
+  var lmEl=document.getElementById('mp-load-more');
+  if(lmEl)lmEl.style.display=ALL_MPs.length<MP_TOTAL?'block':'none';
+}
+
 
 function loadOverview(){
   document.getElementById('seat-bars').innerHTML=SEATS.map(function(p){
@@ -1128,307 +1301,6 @@ function renderChartStrip(){
       '<div style="font-size:9px;color:var(--tm);margin-top:4px">'+c.src+' · '+c.labels[c.labels.length-1]+'</div>'+
     '</div>';
   }).join('');
-}
-
-// =====================
-// POLITICIANS TAB
-// =====================
-
-// State
-let ALL_MPs = [];       // All fetched MPs
-let MP_PAGE = 0;        // Current pagination offset
-let MP_TOTAL = 0;       // Total MPs from API
-let MP_LOADING = false;
-let MP_PARTY_FILTER = 'all';
-const MP_PAGE_SIZE = 40;
-
-// Party config
-const MP_PARTIES = {
-  'Labour': {c:'#CC0000',bg:'#FEE2E2',short:'Lab'},
-  'Conservative': {c:'#003087',bg:'#EEF2FF',short:'Con'},
-  'Liberal Democrat': {c:'#FAA61A',bg:'#FFFBEB',short:'LD'},
-  'Reform UK': {c:'#12B6CF',bg:'#CFFAFE',short:'Ref'},
-  'Scottish National Party': {c:'#FDF38E',bg:'#FEFCE8',short:'SNP'},
-  'Green Party': {c:'#02A95B',bg:'#DCFCE7',short:'Grn'},
-  'Plaid Cymru': {c:'#3F8428',bg:'#DCFCE7',short:'PC'},
-  'Sinn Féin': {c:'#169B62',bg:'#DCFCE7',short:'SF'},
-  'Democratic Unionist Party': {c:'#D46A4C',bg:'#FEF2EE',short:'DUP'},
-  'Alliance': {c:'#F6CB2F',bg:'#FEFCE8',short:'All'},
-  'Social Democratic & Labour Party': {c:'#2AA82C',bg:'#DCFCE7',short:'SDLP'},
-  'Alba Party': {c:'#005EB8',bg:'#DBEAFE',short:'Alba'},
-  'Independent': {c:'#6B7280',bg:'#F3F4F6',short:'Ind'},
-};
-
-function mpPartyStyle(partyName) {
-  return MP_PARTIES[partyName] || MP_PARTIES['Independent'];
-}
-
-function mpPhotoUrl(memberId) {
-  return 'https://members-api.parliament.uk/api/Members/' + memberId + '/Thumbnail';
-}
-
-function mpIni(name) {
-  return name.split(' ').filter(function(w){return w.length>0;}).slice(0,2).map(function(w){return w[0];}).join('');
-}
-
-async function renderMPs() {
-  // Reset and load fresh
-  ALL_MPs = [];
-  MP_PAGE = 0;
-  MP_PARTY_FILTER = 'all';
-  
-  // Build party filter pills
-  const pillsEl = document.getElementById('mp-party-pills');
-  if (pillsEl) {
-    const parties = ['all','Labour','Conservative','Liberal Democrat','Reform UK',
-      'Scottish National Party','Green Party','Plaid Cymru','Sinn Féin',
-      'Democratic Unionist Party','Alliance'];
-    pillsEl.innerHTML = parties.map(function(p) {
-      const style = p === 'all' ? MP_PARTIES['Labour'] : mpPartyStyle(p);
-      const label = p === 'all' ? 'All parties' : (MP_PARTIES[p] ? MP_PARTIES[p].short : p);
-      const isOn = p === 'all';
-      return '<span class="pill' + (isOn?' on':'') + '" ' +
-        'style="' + (isOn?'background:var(--brand);color:#fff;border-color:var(--brand)':'') + '" ' +
-        'onclick="setMPParty(\'' + p + '\',this)">' + label + '</span>';
-    }).join('');
-  }
-  
-  await loadMPs(true);
-}
-
-async function loadMPs(reset) {
-  if (MP_LOADING) return;
-  MP_LOADING = true;
-  
-  const grid = document.getElementById('mpg');
-  if (!grid) { MP_LOADING = false; return; }
-  
-  if (reset) {
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--tm);font-size:13px">' +
-      '<div style="font-size:24px;margin-bottom:8px">⟳</div>Loading MPs from Parliament API...</div>';
-    ALL_MPs = [];
-    MP_PAGE = 0;
-  }
-  
-  const searchQ = (document.getElementById('mps')?.value || '').toLowerCase();
-  // Party filter applied client-side (API uses numeric IDs, not names)
-  const partyParam = '';
-  const nameParam = searchQ ? '&nameStartsWith=' + encodeURIComponent(searchQ) : '';
-  
-  const url = '/Members/Search?House=Commons&IsCurrentMember=true&take=' + 
-    MP_PAGE_SIZE + '&skip=' + (MP_PAGE * MP_PAGE_SIZE) + nameParam;
-  
-  const data = await parlFetch(url);
-  
-  if (!data || !data.items) {
-    if (reset) grid.innerHTML = '<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs. Check your connection.</div>';
-    MP_LOADING = false;
-    return;
-  }
-  
-  MP_TOTAL = data.totalResults;
-  
-  const newMPs = data.items.map(function(item) {
-    const m = item.value;
-    return {
-      id: m.id,
-      name: m.nameDisplayAs,
-      party: m.latestParty ? m.latestParty.name : 'Independent',
-      con: m.latestHouseMembership ? m.latestHouseMembership.membershipFrom : '',
-      photo: mpPhotoUrl(m.id),
-    };
-  });
-  
-  ALL_MPs = ALL_MPs.concat(filteredMPs);
-  MP_PAGE++;
-  
-  // Update count
-  const countEl = document.getElementById('mp-count');
-  if (countEl) countEl.textContent = MP_TOTAL + ' MPs';
-  
-  // Render cards
-  if (reset) grid.innerHTML = '';
-  // Apply party filter client-side
-  const filteredMPs = MP_PARTY_FILTER === 'all' ? newMPs : newMPs.filter(function(m) {
-    return m.party === MP_PARTY_FILTER;
-  });
-  
-  filteredMPs.forEach(function(m) {
-    const p = mpPartyStyle(m.party);
-    const card = document.createElement('div');
-    card.className = 'mpc';
-    card.style.borderTopColor = p.c;
-    card.setAttribute('data-mp-id', m.id);
-    // Build card with DOM to avoid quote nesting issues
-    var img = document.createElement('img');
-    img.className = 'mpc-photo';
-    img.src = m.photo;
-    img.alt = m.name;
-    var ph = document.createElement('div');
-    ph.className = 'mpc-photo-placeholder';
-    ph.style.cssText = 'display:none;background:' + p.bg + ';color:' + p.c;
-    ph.textContent = mpIni(m.name);
-    img.addEventListener('error', function() {
-      img.style.display = 'none';
-      ph.style.display = 'flex';
-    });
-    var body = document.createElement('div');
-    body.className = 'mpc-body';
-    body.innerHTML = '<div class="mpc-name">' + m.name + '</div>' +
-      '<div class="mpc-con">' + m.con + '</div>' +
-      '<span class="mpc-role" style="background:' + p.bg + ';color:' + p.c + '">' + p.short + '</span>';
-    card.appendChild(img);
-    card.appendChild(ph);
-    card.appendChild(body);
-        card.addEventListener('click', function() { openMP(m.id); });
-    grid.appendChild(card);
-  });
-  
-  // Show/hide load more button
-  const loadMoreEl = document.getElementById('mp-load-more');
-  if (loadMoreEl) {
-    loadMoreEl.style.display = (ALL_MPs.length < MP_TOTAL) ? 'block' : 'none';
-  }
-  
-  MP_LOADING = false;
-}
-
-function loadMoreMPs() {
-  loadMPs(false);
-}
-
-function filterMPs() {
-  loadMPs(true);
-}
-
-function setMPParty(party, el) {
-  MP_PARTY_FILTER = party;
-  document.querySelectorAll('#mp-party-pills .pill').forEach(function(p) {
-    p.classList.remove('on');
-    p.style.background = '';
-    p.style.color = '';
-    p.style.borderColor = '';
-  });
-  el.classList.add('on');
-  el.style.background = 'var(--brand)';
-  el.style.color = '#fff';
-  el.style.borderColor = 'var(--brand)';
-  filterMPs();
-}
-
-async function openMP(id) {
-  const det = document.getElementById('mpdp');
-  if (!det) return;
-  
-  // Show detail panel, hide grid
-  document.getElementById('mpg').style.display = 'none';
-  document.getElementById('mp-load-more').style.display = 'none';
-  document.getElementById('mp-party-pills').style.display = 'none';
-  document.getElementById('mps').style.display = 'none';
-  document.getElementById('mp-count').style.display = 'none';
-  det.style.display = 'block';
-  det.innerHTML = '<div style="padding:20px;color:var(--tm);font-size:13px">Loading MP details...</div>';
-  
-  // Fetch full MP details from API
-  const data = await parlFetch('/Members/' + id);
-  if (!data || !data.value) {
-    det.innerHTML = '<button class="backbtn" onclick="closeMP()"><i class="ti ti-arrow-left"></i> Back</button>' +
-      '<div style="padding:20px;color:var(--tm)">Could not load MP details.</div>';
-    return;
-  }
-  
-  const m = data.value;
-  const p = mpPartyStyle(m.latestParty ? m.latestParty.name : 'Independent');
-  const con = m.latestHouseMembership ? m.latestHouseMembership.membershipFrom : '';
-  const photoUrl = mpPhotoUrl(id);
-  
-  // Current posts/roles
-  const posts = (m.currentPosts || []).slice(0, 8);
-  
-  // Synopsis
-  const synopsis = m.synopsis || '';
-  
-  // Build detail view
-  let rolesHTML = '';
-  if (posts.length > 0) {
-    rolesHTML = '<div class="mp-section">' +
-      '<div class="mp-section-title">Current roles</div>' +
-      posts.map(function(post) {
-        return '<div class="mp-role-item">' +
-          '<span style="color:' + p.c + ';margin-top:2px">◆</span>' +
-          '<span>' + post.name + '</span>' +
-        '</div>';
-      }).join('') +
-    '</div>';
-  }
-  
-  let synopsisHTML = '';
-  if (synopsis) {
-    synopsisHTML = '<div class="mp-section">' +
-      '<div class="mp-section-title">Biography</div>' +
-      '<div style="font-size:12px;color:var(--ts);line-height:1.7">' + synopsis + '</div>' +
-    '</div>';
-  }
-  
-  // Fetch recent votes
-  let votesHTML = '';
-  const votes = await fetchVotes(id);
-  if (votes && votes.length > 0) {
-    votesHTML = '<div class="mp-section">' +
-      '<div class="mp-section-title">Recent votes</div>' +
-      votes.slice(0, 6).map(function(v) {
-        const voted = v.memberVotedAye ? 'Aye' : 'No';
-        const col = v.memberVotedAye ? '#1baf7a' : '#e34948';
-        return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:.5px solid var(--bd);gap:10px">' +
-          '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">' + v.title + '</div>' +
-          '<span style="font-size:10px;font-weight:600;color:' + col + ';white-space:nowrap;background:' + col + '22;padding:2px 8px;border-radius:20px">' + voted + '</span>' +
-        '</div>';
-      }).join('') +
-    '</div>';
-  }
-  
-  det.innerHTML = 
-    '<div class="mp-detail">' +
-      '<div class="mp-detail-hero">' +
-        '<button class="backbtn" onclick="closeMP()" style="position:absolute;margin:0">' +
-          '<i class="ti ti-arrow-left"></i> All MPs' +
-        '</button>' +
-      '</div>' +
-      '<div style="padding:20px;padding-top:50px">' +
-        '<div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:16px">' +
-          '<img class="mp-detail-photo" id="mpdetimg" src="\' + photoUrl + \'" alt="\' + m.nameDisplayAs + \'">' +
-          '<div class="mp-detail-photo-ph" style="display:none;background:' + p.bg + ';color:' + p.c + '">' + 
-            mpIni(m.nameDisplayAs) + '</div>' +
-          '<div style="flex:1">' +
-            '<div style="font-size:20px;font-weight:600;color:var(--tp);margin-bottom:4px">' + m.nameDisplayAs + '</div>' +
-            '<div style="font-size:13px;color:var(--tm);margin-bottom:8px">' + con + '</div>' +
-            '<span style="font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;background:' + p.bg + ';color:' + p.c + '">' + 
-              (m.latestParty ? m.latestParty.name : 'Independent') + '</span>' +
-          '</div>' +
-        '</div>' +
-      '</div>' +
-      rolesHTML +
-      synopsisHTML +
-      votesHTML +
-    '</div>';
-  // Handle photo error via JS
-  var detPhoto = det.querySelector('.mp-detail-photo');
-  var detPh = det.querySelector('.mp-detail-photo-ph');
-  if (detPhoto && detPh) {
-    detPhoto.addEventListener('error', function() {
-      detPhoto.style.display = 'none';
-      detPh.style.display = 'flex';
-    });
-  }
-}
-
-function closeMP() {
-  document.getElementById('mpdp').style.display = 'none';
-  document.getElementById('mpg').style.display = 'grid';
-  document.getElementById('mp-load-more').style.display = ALL_MPs.length < MP_TOTAL ? 'block' : 'none';
-  document.getElementById('mp-party-pills').style.display = '';
-  document.getElementById('mps').style.display = '';
-  document.getElementById('mp-count').style.display = '';
 }
 
 
