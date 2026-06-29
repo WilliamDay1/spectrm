@@ -325,6 +325,26 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .ev-expand.open{display:block}
 .ev-chevron{font-size:10px;color:var(--tm);margin-left:auto;flex-shrink:0;margin-top:3px;transition:transform .15s}
 .ev-chevron.open{transform:rotate(180deg)}
+
+/* Politicians tab */
+.mpc{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .15s;border-top:3px solid transparent}
+.mpc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.mpc-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:top center;background:var(--s1);display:block}
+.mpc-photo-placeholder{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600;background:var(--s1)}
+.mpc-body{padding:10px}
+.mpc-name{font-size:12px;font-weight:600;color:var(--tp);margin-bottom:2px;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.mpc-con{font-size:10px;color:var(--tm);margin-bottom:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.mpc-role{font-size:9px;font-weight:600;padding:2px 7px;border-radius:20px;display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.mp-detail{background:var(--s2);border-radius:14px;padding:0;overflow:hidden}
+.mp-detail-hero{display:flex;gap:16px;align-items:flex-start;padding:20px;border-bottom:.5px solid var(--bd)}
+.mp-detail-photo{width:90px;height:110px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0;background:var(--s1)}
+.mp-detail-photo-ph{width:90px;height:110px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700}
+.mp-section{padding:14px 20px;border-bottom:.5px solid var(--bd)}
+.mp-section:last-child{border-bottom:none}
+.mp-section-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:10px}
+.mp-role-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;font-size:12px;color:var(--ts);line-height:1.4}
+.mp-vote-bar{height:6px;border-radius:3px;margin-top:3px}
+
 </style>
 </head>
 <body>
@@ -519,26 +539,21 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 
 <!-- POLITICIANS -->
 <div class="sec" id="sec-politicians">
-  <div class="api-bar">
-    <div class="ai"><span class="dot dok"></span> Parliament Members API (members-api.parliament.uk)</div>
-    <span class="sep">|</span>
-    <div class="ai"><span class="dot dok"></span> Commons Votes API (commonsvotes-api.parliament.uk)</div>
-    <span class="sep">|</span>
-    <div class="ai"><span class="dot dwn"></span> TheyWorkForYou — API key required for full debate search</div>
+  <!-- Search and filters -->
+  <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+    <input class="search-inp" type="text" id="mps" placeholder="Search MPs by name or constituency..." 
+      oninput="filterMPs()" style="flex:1;min-width:200px">
+    <div style="font-size:11px;color:var(--tm)" id="mp-count"></div>
   </div>
-  <input class="search-inp" type="text" id="mps" placeholder="Search by name, party or constituency…" oninput="filterMPs()">
-  <div class="pills">
-    <span class="pill p-all on" onclick="fparty('all',this)">All parties</span>
-    <span class="pill p-lab" onclick="fparty('lab',this)">Labour</span>
-    <span class="pill p-con" onclick="fparty('con',this)">Conservative</span>
-    <span class="pill p-lib" onclick="fparty('lib',this)">Lib Dems</span>
-    <span class="pill p-snp" onclick="fparty('snp',this)">SNP</span>
-    <span class="pill p-grn" onclick="fparty('grn',this)">Green</span>
-    <span class="pill p-ref" onclick="fparty('ref',this)">Reform UK</span>
-    <span class="pill" onclick="fparty('ind',this)">Independent</span>
+  <div class="pills" id="mp-party-pills" style="margin-bottom:14px"></div>
+  <!-- MP grid -->
+  <div id="mpg" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px"></div>
+  <!-- Load more -->
+  <div id="mp-load-more" style="text-align:center;padding:16px;display:none">
+    <button onclick="loadMoreMPs()" style="background:var(--s1);border:0.5px solid var(--bd);border-radius:8px;padding:8px 20px;font-size:12px;cursor:pointer;color:var(--ts)">Load more MPs</button>
   </div>
-  <div class="mpdp" id="mpdp"></div>
-  <div class="mpg" id="mpg"></div>
+  <!-- MP detail panel -->
+  <div id="mpdp" style="display:none"></div>
 </div>
 
 <!-- BILLS -->
@@ -926,7 +941,13 @@ function sw(id,btn,deeplink){
 }
 
 async function parlFetch(p){try{const r=await fetch('https://members-api.parliament.uk/api'+p,{headers:{Accept:'application/json'}});if(!r.ok)throw 0;return r.json();}catch{return null;}}
-async function fetchVotes(pid){try{const r=await fetch(`https://commonsvotes-api.parliament.uk/data/divisions.json/membervoting?memberId=${pid}&take=6`,{headers:{Accept:'application/json'}});if(!r.ok)throw 0;return r.json();}catch{return null;}}
+async function fetchVotes(pid){
+  try{
+    const r=await fetch('https://commonsvotes-api.parliament.uk/data/divisions.json/membervoting?memberId='+pid+'&take=6',{headers:{Accept:'application/json'}});
+    if(!r.ok) return null;
+    return r.json();
+  }catch(e){return null;}
+}
 
 function loadOverview(){
   document.getElementById('seat-bars').innerHTML=SEATS.map(function(p){
@@ -1109,62 +1130,307 @@ function renderChartStrip(){
   }).join('');
 }
 
-const MPs=[
-  {id:1,name:'Keir Starmer',role:'Prime Minister',party:'lab',con:'Holborn & St Pancras',pid:4514,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Gaza Ceasefire Feb 2024',r:'abs'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Neutral'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:2,name:'Angela Rayner',role:'Deputy PM, Housing Secretary',party:'lab',con:'Ashton-under-Lyne',pid:4656,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Support'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:3,name:'Rachel Reeves',role:'Chancellor of the Exchequer',party:'lab',con:'Leeds West and Pudsey',pid:4702,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Neutral'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:4,name:'David Lammy',role:'Foreign Secretary',party:'lab',con:'Tottenham',pid:4237,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Gaza Ceasefire Nov 2023',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Support'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:5,name:'Yvette Cooper',role:'Home Secretary',party:'lab',con:'Pontefract, Castleford & Knottingley',pid:420,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Border Security Bill 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:6,name:'Wes Streeting',role:'Health Secretary',party:'lab',con:'Ilford North',pid:4504,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Neutral'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:7,name:'Ed Miliband',role:'Energy Secretary',party:'lab',con:'Doncaster North',pid:1483,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Great British Energy Act',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Workers Rights Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Support'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:8,name:'Bridget Phillipson',role:'Education Secretary',party:'lab',con:'Houghton & Sunderland South',pid:4108,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Neutral'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:9,name:'Shabana Mahmood',role:'Justice Secretary',party:'lab',con:'Birmingham Ladywood',pid:3958,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Gaza Ceasefire Nov 2023',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Support'},{t:'Immigration cap',v:'Support'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:10,name:'Pat McFadden',role:'Chancellor of the Duchy of Lancaster',party:'lab',con:'Wolverhampton North East',pid:1570,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Neutral'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Neutral'},{t:'Digital ID',v:'Support'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:11,name:'Jess Phillips',role:'MP',party:'lab',con:'Birmingham Yardley',pid:4369,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Neutral'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Neutral'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:12,name:'Diane Abbott',role:'MP',party:'lab',con:'Hackney North & Stoke Newington',pid:172,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Defence Spending 2025',r:'no'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Neutral'}]},
-  {id:13,name:'Kemi Badenoch',role:'Leader of the Opposition',party:'con',con:'North West Essex',pid:4869,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Workers Rights Act 2025',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Net Zero Act 2025',r:'abs'},{b:'Border Security Bill 2025',r:'no'}],stances:[{t:'Net zero',v:'Neutral'},{t:'Gaza ceasefire',v:'Opposes'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:14,name:'Mel Stride',role:'Shadow Chancellor',party:'con',con:'Central Devon',pid:3922,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Workers Rights Act 2025',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Net Zero Act 2025',r:'abs'},{b:'Border Security Bill 2025',r:'no'}],stances:[{t:'Net zero',v:'Neutral'},{t:'Gaza ceasefire',v:'Opposes'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:15,name:'James Cleverly',role:'Shadow Home Secretary',party:'con',con:'Braintree',pid:3992,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Workers Rights Act 2025',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Net Zero Act 2025',r:'abs'},{b:'Border Security Bill 2025',r:'no'}],stances:[{t:'Net zero',v:'Neutral'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:16,name:'Rishi Sunak',role:'MP (former PM)',party:'con',con:'Richmond and Northallerton',pid:4483,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Net Zero Act 2025',r:'abs'},{b:'Workers Rights Act 2025',r:'no'},{b:'Border Security Bill 2025',r:'no'}],stances:[{t:'Net zero',v:'Neutral'},{t:'Gaza ceasefire',v:'Opposes'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:17,name:'Penny Mordaunt',role:'Shadow Defence Secretary',party:'con',con:'Portsmouth North',pid:4048,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Workers Rights Act 2025',r:'no'},{b:'Net Zero Act 2025',r:'abs'},{b:'Defence Spending 2025',r:'aye'}],stances:[{t:'Net zero',v:'Neutral'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:18,name:'Ed Davey',role:'Liberal Democrat Leader',party:'lib',con:'Kingston and Surbiton',pid:1396,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Gaza Ceasefire Nov 2023',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Neutral'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:19,name:'Daisy Cooper',role:'Lib Dem Deputy Leader',party:'lib',con:'St Albans',pid:4863,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Neutral'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:20,name:'Layla Moran',role:'Lib Dem MP, International spokesperson',party:'lib',con:'Oxford West and Abingdon',pid:4656,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Net Zero Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Neutral'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Neutral'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:21,name:'Tim Farron',role:'Lib Dem MP',party:'lib',con:'Westmorland and Lonsdale',pid:1528,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Net Zero Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Digital Markets Act',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Support'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Neutral'},{t:'Ukraine aid',v:'Strong support'}]},
-  {id:22,name:'Stephen Flynn',role:'SNP Westminster Leader',party:'snp',con:'Aberdeen South',pid:4698,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Net Zero Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Strong support'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Support'}]},
-  {id:23,name:'Kirsty Blackman',role:'SNP Deputy Westminster Leader',party:'snp',con:'Aberdeen North',pid:4357,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Net Zero Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Strong support'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Support'}]},
-  {id:24,name:'Carla Denyer',role:'Green Co-leader, MP',party:'grn',con:'Bristol East',pid:5001,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Net Zero Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Support'}]},
-  {id:25,name:'Adrian Ramsay',role:'Green Co-leader, MP',party:'grn',con:'Waveney Valley',pid:5003,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Net Zero Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Support'}]},
-  {id:26,name:'Sian Berry',role:'Green MP',party:'grn',con:'Brighton Pavilion',pid:4953,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Net Zero Act 2025',r:'aye'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Neutral'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Support'}]},
-  {id:27,name:'Nigel Farage',role:'Reform UK Leader, MP',party:'ref',con:'Clacton',pid:4819,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Workers Rights Act 2025',r:'no'},{b:'Net Zero Act 2025',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Border Security Bill 2025',r:'no'}],stances:[{t:'Net zero',v:'Opposes'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Neutral'}]},
-  {id:28,name:'Richard Tice',role:'Reform UK Deputy Leader, MP',party:'ref',con:'Boston and Skegness',pid:4999,votes:[{b:'NHS Funding Bill 2026',r:'no'},{b:'Workers Rights Act 2025',r:'no'},{b:'Net Zero Act 2025',r:'no'},{b:'Rwanda Asylum Bill',r:'aye'},{b:'Border Security Bill 2025',r:'no'}],stances:[{t:'Net zero',v:'Opposes'},{t:'Gaza ceasefire',v:'Neutral'},{t:'Immigration cap',v:'Strong support'},{t:'Nuclear deterrent',v:'Strong support'},{t:'Scottish independence',v:'Opposes'},{t:'NHS privatisation',v:'Support'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Neutral'}]},
-  {id:29,name:'Jeremy Corbyn',role:'Independent MP',party:'ind',con:'Islington North',pid:185,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Defence Spending 2025',r:'no'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Support'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Neutral'}]},
-  {id:30,name:'Zarah Sultana',role:'Independent MP (ex-Labour)',party:'ind',con:'Coventry South',pid:4921,votes:[{b:'NHS Funding Bill 2026',r:'aye'},{b:'Gaza Ceasefire Nov 2023',r:'aye'},{b:'Workers Rights Act 2025',r:'aye'},{b:'Rwanda Asylum Bill',r:'no'},{b:'Palestine Action proscription',r:'no'}],stances:[{t:'Net zero',v:'Strong support'},{t:'Gaza ceasefire',v:'Strong support'},{t:'Immigration cap',v:'Opposes'},{t:'Nuclear deterrent',v:'Opposes'},{t:'Scottish independence',v:'Support'},{t:'NHS privatisation',v:'Opposes'},{t:'Digital ID',v:'Opposes'},{t:'Ukraine aid',v:'Support'}]},
-];
+// =====================
+// POLITICIANS TAB
+// =====================
 
-const SCLS={'Strong support':'s-ss','Support':'s-s','Opposes':'s-o','Oppose':'s-o','Neutral':'s-n'};
-let AP='all';
-function ini(n){const p=n.split(' ');return(p[0][0]+(p[p.length-1][0])).toUpperCase();}
-function filterMPs(){
-  const q=(document.getElementById('mps')?.value||'').toLowerCase();
-  const f=MPs.filter(m=>(AP==='all'||m.party===AP)&&(!q||m.name.toLowerCase().includes(q)||m.con.toLowerCase().includes(q)||(PC[m.party]?.name||'').toLowerCase().includes(q)));
-  document.getElementById('mpg').innerHTML=f.length?f.map(m=>{const p=PC[m.party]||PC.ind;return`<div class="mpc" style="border-top-color:${p.c}" onclick="openMP(${m.id})"><div class="mpav" style="background:${p.bg};color:${p.c}">${ini(m.name)}</div><div class="mpn">${m.name}</div><div class="mpc-con">${m.con}</div><span class="ptag" style="background:${p.bg};color:${p.c}">${p.name}</span></div>`;}).join(''):'<div style="color:var(--tm);font-size:13px;padding:16px 0">No MPs match your search.</div>';
-}
-function renderMPs(){filterMPs();}
-function fparty(p,el){AP=p;document.querySelectorAll('.pills .pill').forEach(x=>x.classList.remove('on'));el.classList.add('on');closeMP();filterMPs();}
+// State
+let ALL_MPs = [];       // All fetched MPs
+let MP_PAGE = 0;        // Current pagination offset
+let MP_TOTAL = 0;       // Total MPs from API
+let MP_LOADING = false;
+let MP_PARTY_FILTER = 'all';
+const MP_PAGE_SIZE = 40;
 
-async function openMP(id){
-  const m=MPs.find(x=>x.id===id);const p=PC[m.party]||PC.ind;
-  const det=document.getElementById('mpdp');
-  det.innerHTML=`<button class="backbtn" onclick="closeMP()"><i class="ti ti-arrow-left"></i> All MPs</button>
-<div class="dh"><div class="dav" style="background:${p.bg};color:${p.c}">${ini(m.name)}</div><div><div class="dname">${m.name}</div><div class="drole">${m.role}</div><span class="ptag" style="background:${p.bg};color:${p.c}">${p.name} · ${m.con}</span></div></div>
-<div class="d2c"><div class="ds"><div class="dst">Key parliamentary votes</div>${m.votes.map(v=>`<div class="vr"><span class="vicon">${v.r==='aye'?'✓':v.r==='no'?'✗':'—'}</span><span class="vlbl">${v.b}</span><span class="vb ${v.r==='aye'?'vaye':v.r==='no'?'vno':'vabs'}">${v.r==='aye'?'Aye':v.r==='no'?'No':'Abstain'}</span></div>`).join('')}</div><div class="ds"><div class="dst">Policy stances</div>${m.stances.map(s=>`<div class="strow"><span class="stl">${s.t}</span><span class="stv ${SCLS[s.v]||'s-n'}">${s.v}</span></div>`).join('')}</div></div>
-<div class="lvs"><div class="lvsh">Live voting history — Parliament Votes API <span class="lvsrc">commonsvotes-api.parliament.uk</span></div><div id="lv-${id}" style="font-size:11px;color:var(--tm);font-style:italic">Fetching from Parliament API…</div></div>
-<div style="margin-top:10px"><button class="extbtn" onclick="window.open('https://votes.parliament.uk/Votes/Commons/Aye?memberId=${m.pid}','_blank')">All votes on votes.parliament.uk ↗</button><button class="extbtn" onclick="window.open('https://members-api.parliament.uk/api/Members/${m.pid}','_blank')">Parliament API ↗</button><button class="extbtn" onclick="window.open('https://www.theyworkforyou.com/mp/?id=${m.pid}','_blank')">TheyWorkForYou ↗</button></div>`;
-  det.classList.add('on');document.getElementById('mpg').style.display='none';
-  fetchVotes(m.pid).then(data=>{const el=document.getElementById(`lv-${id}`);if(!el)return;if(data?.length){el.outerHTML=data.map(d=>`<div class="divrow"><span class="divd">${(d.date||'').substring(0,10)}</span><span class="divt">${d.title||'Division'}</span><span class="divv ${d.memberVotedAye?'vaye':'vno'}">${d.memberVotedAye?'Aye':'No'}</span></div>`).join('');}else{el.textContent='CORS blocked in browser. View full record on votes.parliament.uk above.';}});
+// Party config
+const MP_PARTIES = {
+  'Labour': {c:'#CC0000',bg:'#FEE2E2',short:'Lab'},
+  'Conservative': {c:'#003087',bg:'#EEF2FF',short:'Con'},
+  'Liberal Democrat': {c:'#FAA61A',bg:'#FFFBEB',short:'LD'},
+  'Reform UK': {c:'#12B6CF',bg:'#CFFAFE',short:'Ref'},
+  'Scottish National Party': {c:'#FDF38E',bg:'#FEFCE8',short:'SNP'},
+  'Green Party': {c:'#02A95B',bg:'#DCFCE7',short:'Grn'},
+  'Plaid Cymru': {c:'#3F8428',bg:'#DCFCE7',short:'PC'},
+  'Sinn Féin': {c:'#169B62',bg:'#DCFCE7',short:'SF'},
+  'Democratic Unionist Party': {c:'#D46A4C',bg:'#FEF2EE',short:'DUP'},
+  'Alliance': {c:'#F6CB2F',bg:'#FEFCE8',short:'All'},
+  'Social Democratic & Labour Party': {c:'#2AA82C',bg:'#DCFCE7',short:'SDLP'},
+  'Alba Party': {c:'#005EB8',bg:'#DBEAFE',short:'Alba'},
+  'Independent': {c:'#6B7280',bg:'#F3F4F6',short:'Ind'},
+};
+
+function mpPartyStyle(partyName) {
+  return MP_PARTIES[partyName] || MP_PARTIES['Independent'];
 }
-function closeMP(){const d=document.getElementById('mpdp');d.classList.remove('on');d.innerHTML='';document.getElementById('mpg').style.display='';}
+
+function mpPhotoUrl(memberId) {
+  return 'https://members-api.parliament.uk/api/Members/' + memberId + '/Thumbnail';
+}
+
+function mpIni(name) {
+  return name.split(' ').filter(function(w){return w.length>0;}).slice(0,2).map(function(w){return w[0];}).join('');
+}
+
+async function renderMPs() {
+  // Reset and load fresh
+  ALL_MPs = [];
+  MP_PAGE = 0;
+  MP_PARTY_FILTER = 'all';
+  
+  // Build party filter pills
+  const pillsEl = document.getElementById('mp-party-pills');
+  if (pillsEl) {
+    const parties = ['all','Labour','Conservative','Liberal Democrat','Reform UK',
+      'Scottish National Party','Green Party','Plaid Cymru','Sinn Féin',
+      'Democratic Unionist Party','Alliance'];
+    pillsEl.innerHTML = parties.map(function(p) {
+      const style = p === 'all' ? MP_PARTIES['Labour'] : mpPartyStyle(p);
+      const label = p === 'all' ? 'All parties' : (MP_PARTIES[p] ? MP_PARTIES[p].short : p);
+      const isOn = p === 'all';
+      return '<span class="pill' + (isOn?' on':'') + '" ' +
+        'style="' + (isOn?'background:var(--brand);color:#fff;border-color:var(--brand)':'') + '" ' +
+        'onclick="setMPParty(\'' + p + '\',this)">' + label + '</span>';
+    }).join('');
+  }
+  
+  await loadMPs(true);
+}
+
+async function loadMPs(reset) {
+  if (MP_LOADING) return;
+  MP_LOADING = true;
+  
+  const grid = document.getElementById('mpg');
+  if (!grid) { MP_LOADING = false; return; }
+  
+  if (reset) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--tm);font-size:13px">' +
+      '<div style="font-size:24px;margin-bottom:8px">⟳</div>Loading MPs from Parliament API...</div>';
+    ALL_MPs = [];
+    MP_PAGE = 0;
+  }
+  
+  const searchQ = (document.getElementById('mps')?.value || '').toLowerCase();
+  // Party filter applied client-side (API uses numeric IDs, not names)
+  const partyParam = '';
+  const nameParam = searchQ ? '&nameStartsWith=' + encodeURIComponent(searchQ) : '';
+  
+  const url = '/Members/Search?House=Commons&IsCurrentMember=true&take=' + 
+    MP_PAGE_SIZE + '&skip=' + (MP_PAGE * MP_PAGE_SIZE) + nameParam;
+  
+  const data = await parlFetch(url);
+  
+  if (!data || !data.items) {
+    if (reset) grid.innerHTML = '<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs. Check your connection.</div>';
+    MP_LOADING = false;
+    return;
+  }
+  
+  MP_TOTAL = data.totalResults;
+  
+  const newMPs = data.items.map(function(item) {
+    const m = item.value;
+    return {
+      id: m.id,
+      name: m.nameDisplayAs,
+      party: m.latestParty ? m.latestParty.name : 'Independent',
+      con: m.latestHouseMembership ? m.latestHouseMembership.membershipFrom : '',
+      photo: mpPhotoUrl(m.id),
+    };
+  });
+  
+  ALL_MPs = ALL_MPs.concat(filteredMPs);
+  MP_PAGE++;
+  
+  // Update count
+  const countEl = document.getElementById('mp-count');
+  if (countEl) countEl.textContent = MP_TOTAL + ' MPs';
+  
+  // Render cards
+  if (reset) grid.innerHTML = '';
+  // Apply party filter client-side
+  const filteredMPs = MP_PARTY_FILTER === 'all' ? newMPs : newMPs.filter(function(m) {
+    return m.party === MP_PARTY_FILTER;
+  });
+  
+  filteredMPs.forEach(function(m) {
+    const p = mpPartyStyle(m.party);
+    const card = document.createElement('div');
+    card.className = 'mpc';
+    card.style.borderTopColor = p.c;
+    card.setAttribute('data-mp-id', m.id);
+    // Build card with DOM to avoid quote nesting issues
+    var img = document.createElement('img');
+    img.className = 'mpc-photo';
+    img.src = m.photo;
+    img.alt = m.name;
+    var ph = document.createElement('div');
+    ph.className = 'mpc-photo-placeholder';
+    ph.style.cssText = 'display:none;background:' + p.bg + ';color:' + p.c;
+    ph.textContent = mpIni(m.name);
+    img.addEventListener('error', function() {
+      img.style.display = 'none';
+      ph.style.display = 'flex';
+    });
+    var body = document.createElement('div');
+    body.className = 'mpc-body';
+    body.innerHTML = '<div class="mpc-name">' + m.name + '</div>' +
+      '<div class="mpc-con">' + m.con + '</div>' +
+      '<span class="mpc-role" style="background:' + p.bg + ';color:' + p.c + '">' + p.short + '</span>';
+    card.appendChild(img);
+    card.appendChild(ph);
+    card.appendChild(body);
+        card.addEventListener('click', function() { openMP(m.id); });
+    grid.appendChild(card);
+  });
+  
+  // Show/hide load more button
+  const loadMoreEl = document.getElementById('mp-load-more');
+  if (loadMoreEl) {
+    loadMoreEl.style.display = (ALL_MPs.length < MP_TOTAL) ? 'block' : 'none';
+  }
+  
+  MP_LOADING = false;
+}
+
+function loadMoreMPs() {
+  loadMPs(false);
+}
+
+function filterMPs() {
+  loadMPs(true);
+}
+
+function setMPParty(party, el) {
+  MP_PARTY_FILTER = party;
+  document.querySelectorAll('#mp-party-pills .pill').forEach(function(p) {
+    p.classList.remove('on');
+    p.style.background = '';
+    p.style.color = '';
+    p.style.borderColor = '';
+  });
+  el.classList.add('on');
+  el.style.background = 'var(--brand)';
+  el.style.color = '#fff';
+  el.style.borderColor = 'var(--brand)';
+  filterMPs();
+}
+
+async function openMP(id) {
+  const det = document.getElementById('mpdp');
+  if (!det) return;
+  
+  // Show detail panel, hide grid
+  document.getElementById('mpg').style.display = 'none';
+  document.getElementById('mp-load-more').style.display = 'none';
+  document.getElementById('mp-party-pills').style.display = 'none';
+  document.getElementById('mps').style.display = 'none';
+  document.getElementById('mp-count').style.display = 'none';
+  det.style.display = 'block';
+  det.innerHTML = '<div style="padding:20px;color:var(--tm);font-size:13px">Loading MP details...</div>';
+  
+  // Fetch full MP details from API
+  const data = await parlFetch('/Members/' + id);
+  if (!data || !data.value) {
+    det.innerHTML = '<button class="backbtn" onclick="closeMP()"><i class="ti ti-arrow-left"></i> Back</button>' +
+      '<div style="padding:20px;color:var(--tm)">Could not load MP details.</div>';
+    return;
+  }
+  
+  const m = data.value;
+  const p = mpPartyStyle(m.latestParty ? m.latestParty.name : 'Independent');
+  const con = m.latestHouseMembership ? m.latestHouseMembership.membershipFrom : '';
+  const photoUrl = mpPhotoUrl(id);
+  
+  // Current posts/roles
+  const posts = (m.currentPosts || []).slice(0, 8);
+  
+  // Synopsis
+  const synopsis = m.synopsis || '';
+  
+  // Build detail view
+  let rolesHTML = '';
+  if (posts.length > 0) {
+    rolesHTML = '<div class="mp-section">' +
+      '<div class="mp-section-title">Current roles</div>' +
+      posts.map(function(post) {
+        return '<div class="mp-role-item">' +
+          '<span style="color:' + p.c + ';margin-top:2px">◆</span>' +
+          '<span>' + post.name + '</span>' +
+        '</div>';
+      }).join('') +
+    '</div>';
+  }
+  
+  let synopsisHTML = '';
+  if (synopsis) {
+    synopsisHTML = '<div class="mp-section">' +
+      '<div class="mp-section-title">Biography</div>' +
+      '<div style="font-size:12px;color:var(--ts);line-height:1.7">' + synopsis + '</div>' +
+    '</div>';
+  }
+  
+  // Fetch recent votes
+  let votesHTML = '';
+  const votes = await fetchVotes(id);
+  if (votes && votes.length > 0) {
+    votesHTML = '<div class="mp-section">' +
+      '<div class="mp-section-title">Recent votes</div>' +
+      votes.slice(0, 6).map(function(v) {
+        const voted = v.memberVotedAye ? 'Aye' : 'No';
+        const col = v.memberVotedAye ? '#1baf7a' : '#e34948';
+        return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:.5px solid var(--bd);gap:10px">' +
+          '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">' + v.title + '</div>' +
+          '<span style="font-size:10px;font-weight:600;color:' + col + ';white-space:nowrap;background:' + col + '22;padding:2px 8px;border-radius:20px">' + voted + '</span>' +
+        '</div>';
+      }).join('') +
+    '</div>';
+  }
+  
+  det.innerHTML = 
+    '<div class="mp-detail">' +
+      '<div class="mp-detail-hero">' +
+        '<button class="backbtn" onclick="closeMP()" style="position:absolute;margin:0">' +
+          '<i class="ti ti-arrow-left"></i> All MPs' +
+        '</button>' +
+      '</div>' +
+      '<div style="padding:20px;padding-top:50px">' +
+        '<div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:16px">' +
+          '<img class="mp-detail-photo" id="mpdetimg" src="\' + photoUrl + \'" alt="\' + m.nameDisplayAs + \'">' +
+          '<div class="mp-detail-photo-ph" style="display:none;background:' + p.bg + ';color:' + p.c + '">' + 
+            mpIni(m.nameDisplayAs) + '</div>' +
+          '<div style="flex:1">' +
+            '<div style="font-size:20px;font-weight:600;color:var(--tp);margin-bottom:4px">' + m.nameDisplayAs + '</div>' +
+            '<div style="font-size:13px;color:var(--tm);margin-bottom:8px">' + con + '</div>' +
+            '<span style="font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;background:' + p.bg + ';color:' + p.c + '">' + 
+              (m.latestParty ? m.latestParty.name : 'Independent') + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      rolesHTML +
+      synopsisHTML +
+      votesHTML +
+    '</div>';
+  // Handle photo error via JS
+  var detPhoto = det.querySelector('.mp-detail-photo');
+  var detPh = det.querySelector('.mp-detail-photo-ph');
+  if (detPhoto && detPh) {
+    detPhoto.addEventListener('error', function() {
+      detPhoto.style.display = 'none';
+      detPh.style.display = 'flex';
+    });
+  }
+}
+
+function closeMP() {
+  document.getElementById('mpdp').style.display = 'none';
+  document.getElementById('mpg').style.display = 'grid';
+  document.getElementById('mp-load-more').style.display = ALL_MPs.length < MP_TOTAL ? 'block' : 'none';
+  document.getElementById('mp-party-pills').style.display = '';
+  document.getElementById('mps').style.display = '';
+  document.getElementById('mp-count').style.display = '';
+}
+
 
 const BILLS=[
   {id:1,n:'NHS Emergency Funding Bill 2026',s:'passed',date:'2026-03-15',aye:412,no:198,abs:40,d:'Pledges £3.1bn to reduce A&E waiting times and fund 40 new surgical hubs across England.'},
