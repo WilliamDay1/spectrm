@@ -1,6 +1,34 @@
 {
-  "_meta": { "updated": "2026-06-29" },
-  "average": { "date": "2026-06-29", "ref": 26.3, "lab": 20.7, "con": 19.4, "grn": 12.9, "lib": 12.1 },
-  "monthly_history": { "labels": ["Jun 26"], "ref": [26.3], "lab": [20.7], "con": [19.4], "grn": [12.9], "lib": [12.1] },
+  "_meta": {
+    "updated": "2026-06-29"
+  },
+  "average": {
+    "date": "2026-06-29",
+    "ref": 26.3,
+    "lab": 20.7,
+    "con": 19.4,
+    "grn": 12.9,
+    "lib": 12.1
+  },
+  "monthly_history": {
+    "labels": [
+      "Jun 26"
+    ],
+    "ref": [
+      26.3
+    ],
+    "lab": [
+      20.7
+    ],
+    "con": [
+      19.4
+    ],
+    "grn": [
+      12.9
+    ],
+    "lib": [
+      12.1
+    ]
+  },
   "recent_polls": []
 }
