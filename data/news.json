@@ -1,7 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-06-29",
+    "updated": "2026-06-29T15:14:16Z",
     "update_frequency": "daily"
   },
-  "headlines": []
+  "headlines": [
+    {
+      "id": "1",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham confirms he will set up \u2018No 10 North\u2019 in Manchester in major policy speech \u2013 UK politics live",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jun/29/andy-burnham-devolution-speech-keir-starmer-labour-latest-news-updates"
+    },
+    {
+      "id": "2",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Former Tory MP Craig Williams pleads guilty to cheating at gambling with election bets",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jun/29/craig-williams-pleads-guilty-cheating-gambling-election"
+    },
+    {
+      "id": "3",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Ex-MP Craig Williams pleads guilty over general election betting offence",
+      "date": "29 Jun 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3ry1zr8nw2o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "4",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "At the People\u2019s History Museum, Burnham gives Labour hope they might just have a future",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jun/29/peoples-history-museum-andy-burnham-labour-speech"
+    },
+    {
+      "id": "5",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham vows to set up No 10 North as \u2018nerve centre of rewired Britain\u2019",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jun/29/andy-burnham-no-10-north-nerve-centre-rewired-britain"
+    },
+    {
+      "id": "6",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Henry Zeffman: Andy Burnham offers a blueprint for his premiership",
+      "date": "29 Jun 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cpq3yy48zglo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "7",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK state threats bill could pull British journalists into terror prosecutions \u2013 experts",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jun/29/uk-state-threats-bill-could-pull-british-journalists-into-terror-prosecutions-experts"
+    },
+    {
+      "id": "8",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "White working-class children failed by education system, says inquiry",
+      "date": "29 Jun 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq51j10q601o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "9",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Keir Starmer's attempts to placate big tech were a disaster. Andy Burnham must take a stand | Beeban Kidron",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jun/29/keir-starmer-placate-big-tech-disaster-andy-burnham-labour-silicon-valley"
+    },
+    {
+      "id": "10",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "White working-class children failed by England\u2019s school system, inquiry finds",
+      "date": "29 Jun 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/education/2026/jun/29/white-working-class-children-failed-by-england-school-system-inquiry-finds"
+    }
+  ]
 }
