@@ -11,7 +11,7 @@ REPO_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 DATA_FILE = os.path.join(REPO_ROOT, 'data', 'news.json')
 
 FEEDS = [
-    {'name': 'BBC Politics',         'url': 'https://feeds.bbci.co.uk/news/politics/rss.xml'},
+    {'name': 'BBC Politics',          'url': 'https://feeds.bbci.co.uk/news/politics/rss.xml'},
     {'name': 'The Guardian Politics', 'url': 'https://www.theguardian.com/politics/rss'},
     {'name': 'Sky News Politics',     'url': 'https://feeds.skynews.com/feeds/rss/politics.xml'},
 ]
@@ -41,7 +41,6 @@ def fetch_feed(feed):
             link_el  = entry.find('link')
             pub_el   = entry.find('pubDate')
             title = title_el.text.strip() if title_el is not None and title_el.text else ''
-            # Strip "Source | Section | " prefixes
             title = re.sub(r'^[^|]+\|[^|]+\|\s*', '', title).strip()
             link  = link_el.text.strip() if link_el is not None and link_el.text else ''
             pub_dt = None
@@ -49,7 +48,7 @@ def fetch_feed(feed):
             if pub_el is not None and pub_el.text:
                 try:
                     pub_dt = parsedate_to_datetime(pub_el.text)
-                    pub_str = pub_dt.strftime('%-d %b %Y')
+                    pub_str = pub_dt.strftime('%d %b %Y').lstrip('0')
                 except Exception:
                     pub_str = ''
             if len(title) > 10:
@@ -84,7 +83,6 @@ def main():
     all_items = [i for i in all_items if is_relevant(i['title'])]
     all_items.sort(key=lambda x: x.get('pub_dt') or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
 
-    # Deduplicate
     seen, deduped = [], []
     for item in all_items:
         key = ' '.join(item['title'].lower().split()[:6])
