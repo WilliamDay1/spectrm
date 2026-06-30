@@ -957,43 +957,52 @@ async function fetchVotes(pid){
 }
 
 // Featured/priority MPs shown at top (Parliament member IDs)
-// Tier 1: Party leaders (shown first)
+// Party leaders — shown first in Key Figures section
 const FEATURED_LEADERS=[
-  'Andy Burnham',          // Labour leadership frontrunner / caretaker
-  'Kemi Badenoch',         // Conservative leader
-  'Ed Davey',              // Lib Dem leader
-  'Nigel Farage',          // Reform UK leader
-  'Liz Saville Roberts',   // Plaid Cymru leader
+  'Keir Starmer',    // Labour
+  'Kemi Badenoch',   // Conservative
+  'Nigel Farage',    // Reform UK
+  'Ed Davey',        // Lib Dem
+  // Zack Polanski (Green) is in NON_MP_FIGURES — not an MP
 ];
 
-// Tier 2: Cabinet ministers
+// Full Cabinet as specified
 const FEATURED_CABINET=[
-  'Keir Starmer','Angela Rayner','Rachel Reeves','David Lammy','Yvette Cooper',
-  'Shabana Mahmood','Pat McFadden','Bridget Phillipson','Jonathan Reynolds',
-  'Liz Kendall','Ed Miliband',
+  'Keir Starmer','David Lammy','Rachel Reeves','Yvette Cooper','Shabana Mahmood',
+  'Dan Jarvis','James Murray','Bridget Phillipson','Pat McFadden','Darren Jones',
+  'Ed Miliband','Steve Reed','Peter Kyle','Liz Kendall','Heidi Alexander',
+  'Emma Reynolds','Lisa Nandy','Hilary Benn','Douglas Alexander','Jo Stevens',
+  'Jonathan Reynolds','Alan Campbell',
 ];
 
-// Tier 3: Other senior figures (shadow cabinet, former leaders)
-const FEATURED_SENIOR=[
-  'Wes Streeting','Rishi Sunak','Jeremy Hunt',
-];
+// No "Other senior figures" tier
+const FEATURED_SENIOR=[];
 
-// Combined in priority order: leaders → cabinet → senior
-const FEATURED_NAMES=FEATURED_LEADERS.concat(FEATURED_CABINET).concat(FEATURED_SENIOR);
+// Combined
+const FEATURED_NAMES=FEATURED_LEADERS.concat(FEATURED_CABINET).filter(function(v,i,a){return a.indexOf(v)===i;});
 
-// Manual title overrides for party leaders the Parliament Biography API doesn't
-// reliably capture (smaller/newer parties, or titles outside government tracking)
+// Manual role overrides for party leaders not reliably captured by Parliament Biography API
 const MANUAL_ROLE_OVERRIDES={
-  'Andy Burnham':'Labour Leadership Candidate',
+  'Keir Starmer':'Prime Minister',
   'Kemi Badenoch':'Leader of the Opposition',
   'Ed Davey':'Leader of the Liberal Democrats',
   'Nigel Farage':'Leader of Reform UK',
   'Liz Saville Roberts':'Leader of Plaid Cymru',
+  'Dan Jarvis':'Secretary of State for Defence',
+  'James Murray':'Secretary of State for Health',
+  'Steve Reed':'Secretary of State for Housing',
+  'Peter Kyle':'Secretary of State for Business',
+  'Heidi Alexander':'Secretary of State for Transport',
+  'Emma Reynolds':'Secretary of State for Environment',
+  'Lisa Nandy':'Secretary of State for Culture',
+  'Hilary Benn':'Secretary of State for N. Ireland',
+  'Douglas Alexander':'Secretary of State for Scotland',
+  'Jo Stevens':'Secretary of State for Wales',
+  'Alan Campbell':'Leader of the House of Commons',
+  'Darren Jones':'Chief Secretary to the PM',
 };
 
-// Prominent political figures who are NOT sitting MPs — they don't exist in the
-// Parliament Members API at all, so their data is maintained manually here.
-// photo: official/press headshot URL. Update if it breaks or a better one is found.
+// NON-MP prominent figures (maintained manually — no Parliament API record)
 const NON_MP_FIGURES=[
   {
     name:'Zack Polanski',
@@ -1002,14 +1011,6 @@ const NON_MP_FIGURES=[
     photo:'images/Zack_Polanski.jpg',
     bio:'Elected Green Party leader in September 2025, succeeding co-leaders Carla Denyer and Adrian Ramsay. Polanski has driven a sharp rise in the party\u2019s profile and membership (over 220,000, more than tripling since he took over), positioning the Greens as a left-populist alternative to Labour. The party won its first-ever by-election under his leadership (Gorton and Denton, Feb 2026) and posted its best-ever local election results in May 2026.',
     detail:'Not an MP \u2014 Polanski has said he intends to stand for a Westminster seat in North London at the next general election.',
-  },
-  {
-    name:'Zia Yusuf',
-    role:'Reform UK Spokesperson for Home Affairs',
-    party:'Reform UK',
-    photo:'images/Zia_Yusuf.jpg',
-    bio:'Former Chairman of Reform UK (Jul 2024 \u2013 Jun 2025), credited with professionalising the party\u2019s operations and growing its membership several-fold. Briefly resigned in June 2025 before returning in a new role leading the party\u2019s efficiency drive, then served as Head of Policy until February 2026. Now serves as the party\u2019s frontbench spokesperson for Home Affairs.',
-    detail:'Not an MP \u2014 has applied to stand in recent by-elections but has not yet been selected as a candidate.',
   },
 ];
 
@@ -1188,7 +1189,6 @@ async function loadFeaturedMPs(){
   var tiers=[
     {names:FEATURED_LEADERS,label:'Party leaders'},
     {names:FEATURED_CABINET,label:'Cabinet'},
-    {names:FEATURED_SENIOR,label:'Other senior figures'},
   ];
 
   // Pre-create tier sub-headers and per-tier containers so cards land in the
@@ -1216,7 +1216,7 @@ async function loadFeaturedMPs(){
 
   var hdr2=document.createElement('div');
   hdr2.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:12px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
-  hdr2.textContent='All 650 MPs';
+  hdr2.textContent='All MPs';
   grid.appendChild(hdr2);
 
   var featuredIdSet=new Set();
@@ -1290,10 +1290,8 @@ async function loadMPs(reset){
       return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',roleLabel:null};
     });
     var pageFiltered=MP_PARTY_FILTER==='all'?pageMPs:pageMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
-    if(!q){
-      var featuredIdSet=window.FEATURED_ID_SET||new Set();
-      pageFiltered=pageFiltered.filter(function(m){return!featuredIdSet.has(m.id);});
-    }
+    // Don't dedupe against featured IDs — the "All MPs" section shows everyone
+    // alphabetically including cabinet/leaders (they appear in their alpha position)
     collected=collected.concat(pageFiltered);
     MP_PAGE++;
 
@@ -1442,7 +1440,16 @@ function setMPParty(party,el){
     p.classList.remove('on');p.style.background='';p.style.color='';p.style.borderColor='';
   });
   el.classList.add('on');el.style.background='var(--brand)';el.style.color='#fff';el.style.borderColor='var(--brand)';
-  filterMPs();
+  if(party==='all'){
+    // "All parties" = full page: key figures section + all MPs grid
+    renderMPs();
+  } else {
+    // Specific party = hide key figures, show only matching MPs
+    var grid=document.getElementById('mpg');
+    if(grid){grid.innerHTML='';}
+    ALL_MPs=[];MP_PAGE=0;
+    loadMPs(false);
+  }
 }
 
 async function openMP(id,cached){
