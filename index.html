@@ -963,7 +963,6 @@ const FEATURED_LEADERS=[
   'Kemi Badenoch',         // Conservative leader
   'Ed Davey',              // Lib Dem leader
   'Nigel Farage',          // Reform UK leader
-  'Carla Denyer',          // Green Party co-leader
   'Liz Saville Roberts',   // Plaid Cymru leader
 ];
 
@@ -989,9 +988,30 @@ const MANUAL_ROLE_OVERRIDES={
   'Kemi Badenoch':'Leader of the Opposition',
   'Ed Davey':'Leader of the Liberal Democrats',
   'Nigel Farage':'Leader of Reform UK',
-  'Carla Denyer':'Co-leader of the Green Party',
   'Liz Saville Roberts':'Leader of Plaid Cymru',
 };
+
+// Prominent political figures who are NOT sitting MPs — they don't exist in the
+// Parliament Members API at all, so their data is maintained manually here.
+// photo: official/press headshot URL. Update if it breaks or a better one is found.
+const NON_MP_FIGURES=[
+  {
+    name:'Zack Polanski',
+    role:'Leader of the Green Party',
+    party:'Green Party',
+    photo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Zack_Polanski_2023.jpg/440px-Zack_Polanski_2023.jpg',
+    bio:'Elected Green Party leader in September 2025, succeeding co-leaders Carla Denyer and Adrian Ramsay. Polanski has driven a sharp rise in the party\u2019s profile and membership (over 220,000, more than tripling since he took over), positioning the Greens as a left-populist alternative to Labour. The party won its first-ever by-election under his leadership (Gorton and Denton, Feb 2026) and posted its best-ever local election results in May 2026.',
+    detail:'Not an MP \u2014 Polanski has said he intends to stand for a Westminster seat in North London at the next general election.',
+  },
+  {
+    name:'Zia Yusuf',
+    role:'Reform UK Spokesperson for Home Affairs',
+    party:'Reform UK',
+    photo:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Zia_Yusuf.jpg/440px-Zia_Yusuf.jpg',
+    bio:'Former Chairman of Reform UK (Jul 2024 \u2013 Jun 2025), credited with professionalising the party\u2019s operations and growing its membership several-fold. Briefly resigned in June 2025 before returning in a new role leading the party\u2019s efficiency drive, then served as Head of Policy until February 2026. Now serves as the party\u2019s frontbench spokesperson for Home Affairs.',
+    detail:'Not an MP \u2014 has applied to stand in recent by-elections but has not yet been selected as a candidate.',
+  },
+];
 
 // Role priority for sorting (lower = more senior)
 const ROLE_PRIORITY={
@@ -1183,6 +1203,15 @@ async function loadFeaturedMPs(){
     container.style.cssText='display:contents'; // transparent wrapper, cards still flow into the grid
     grid.appendChild(container);
     tierContainers[tier.label]=container;
+
+    // Insert non-MP party figures right after "Party leaders" — they're not
+    // sitting MPs so they have no Parliament record, but they're prominent
+    // enough to belong alongside the elected leaders.
+    if(tier.label==='Party leaders'&&NON_MP_FIGURES.length){
+      NON_MP_FIGURES.forEach(function(fig){
+        renderNonMPCard(fig,container);
+      });
+    }
   });
 
   var hdr2=document.createElement('div');
@@ -1328,6 +1357,68 @@ function renderMPCard(m, grid, featured){
       }).catch(function(){});
     });
   }
+}
+
+function renderNonMPCard(fig,grid){
+  var p=mpPartyStyle(fig.party);
+  var card=document.createElement('div');
+  card.className='mpc';
+  card.style.borderTopColor=p.c;
+  card.style.boxShadow='0 0 0 1.5px '+p.c+'44';
+  var img=document.createElement('img');
+  img.className='mpc-photo';
+  img.src=fig.photo;
+  img.alt=fig.name;
+  var ph=document.createElement('div');
+  ph.className='mpc-photo-placeholder';
+  ph.style.cssText='display:none;background:'+p.bg+';color:'+p.c;
+  ph.textContent=mpIni(fig.name);
+  img.addEventListener('error',function(){img.style.display='none';ph.style.display='flex';});
+  var body=document.createElement('div');
+  body.className='mpc-body';
+  body.innerHTML='<div class="mpc-name">'+fig.name+'</div>'+
+    '<div class="mpc-con" style="font-style:italic">Not an MP</div>'+
+    '<div class="mpc-role-label" style="color:'+p.c+';background:'+p.bg+'">'+fig.role+'</div>'+
+    '<div style="margin-top:2px"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span></div>';
+  card.appendChild(img);card.appendChild(ph);card.appendChild(body);
+  card.addEventListener('click',function(){openNonMP(fig);});
+  grid.appendChild(card);
+}
+
+function openNonMP(fig){
+  var modal=document.getElementById('mp-modal');
+  if(!modal){
+    modal=document.createElement('div');
+    modal.id='mp-modal';
+    modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto';
+    modal.addEventListener('click',function(e){if(e.target===modal)closeMP();});
+    document.body.appendChild(modal);
+  }
+  var p=mpPartyStyle(fig.party);
+  modal.innerHTML=
+    '<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;overflow:hidden">'+
+      '<div style="padding:16px 20px;border-bottom:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">'+
+        '<div style="font-size:12px;font-weight:500;color:var(--tm)">Political Figure</div>'+
+        '<button onclick="closeMP()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px;color:var(--ts);display:flex;align-items:center;justify-content:center">✕</button>'+
+      '</div>'+
+      '<div style="padding:20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
+        '<img src="'+fig.photo+'" alt="'+fig.name+'" style="width:85px;height:105px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0;background:'+p.bg+'" onerror="this.style.display=\'none\'">'+
+        '<div style="flex:1;min-width:0">'+
+          '<div style="font-size:18px;font-weight:600;color:var(--tp);margin-bottom:3px;line-height:1.3">'+fig.name+'</div>'+
+          '<div style="font-size:12px;color:var(--tm);margin-bottom:8px;font-style:italic">Not a sitting MP</div>'+
+          '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+fig.party+'</span>'+
+          '<div style="font-size:11px;color:var(--ts);margin-top:8px;font-style:italic">'+fig.role+'</div>'+
+        '</div>'+
+      '</div>'+
+      '<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
+        '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Biography</div>'+
+        '<div style="font-size:12px;color:var(--ts);line-height:1.7">'+fig.bio+'</div>'+
+      '</div>'+
+      '<div style="padding:14px 20px">'+
+        '<div style="font-size:11px;color:var(--tm);line-height:1.5"><i class="ti ti-info-circle"></i> '+fig.detail+'</div>'+
+      '</div>'+
+    '</div>';
+  modal.style.display='flex';
 }
 
 
