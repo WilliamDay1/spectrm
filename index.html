@@ -1402,7 +1402,7 @@ function openNonMP(fig){
         '<button onclick="closeMP()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px;color:var(--ts);display:flex;align-items:center;justify-content:center">✕</button>'+
       '</div>'+
       '<div style="padding:20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
-        '<img src="'+fig.photo+'" alt="'+fig.name+'" style="width:85px;height:105px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0;background:'+p.bg+'" onerror="this.style.display=\'none\'">'+
+        '<div id="nonmp-photo-wrap" style="width:85px;height:105px;border-radius:10px;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:'+p.c+'">'+mpIni(fig.name)+'</div>'+
         '<div style="flex:1;min-width:0">'+
           '<div style="font-size:18px;font-weight:600;color:var(--tp);margin-bottom:3px;line-height:1.3">'+fig.name+'</div>'+
           '<div style="font-size:12px;color:var(--tm);margin-bottom:8px;font-style:italic">Not a sitting MP</div>'+
@@ -1419,6 +1419,14 @@ function openNonMP(fig){
       '</div>'+
     '</div>';
   modal.style.display='flex';
+  // Try loading the real photo; if it succeeds, swap it in over the initials placeholder
+  var photoWrap=document.getElementById('nonmp-photo-wrap');
+  if(photoWrap&&fig.photo){
+    var img=document.createElement('img');
+    img.style.cssText='width:100%;height:100%;object-fit:cover;object-position:top';
+    img.src=fig.photo;
+    img.addEventListener('load',function(){photoWrap.innerHTML='';photoWrap.style.background='none';photoWrap.appendChild(img);});
+  }
 }
 
 
