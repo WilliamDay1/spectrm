@@ -538,7 +538,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 <!-- POLITICIANS -->
 <div class="sec" id="sec-politicians">
   <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
-    <input class="search-inp" type="text" id="mps" placeholder="Search MPs by name or constituency..." 
+    <input class="search-inp" type="text" id="mps" placeholder="Search MPs by name or constituency..." autocomplete="off"
       oninput="filterMPs()" style="flex:1;min-width:200px">
     <div style="font-size:11px;color:var(--tm)" id="mp-count"></div>
   </div>
@@ -785,9 +785,9 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     </div>
     <div class="cal-modal-body" id="cal-modal-body"></div>
   </div>
-</div>
 
-<script>// =====================
+<script>
+// =====================
 // DATA LOADER — fetches /data/*.json when deployed on Vercel
 // Falls back to hardcoded data when running locally (file://)
 // =====================
@@ -952,7 +952,12 @@ async function fetchVotes(pid){
 }
 
 // Featured/priority MPs shown at top (Parliament member IDs)
-const FEATURED_IDS=[4514,4356,471,4243,2052,4508,282,4392,3990,4520,4357,4519,4879,4483,1524,254,4971,4856,4161];
+const FEATURED_NAMES=[
+  'Keir Starmer','Angela Rayner','Ed Miliband','Rachel Reeves','David Lammy',
+  'Wes Streeting','Yvette Cooper','Shabana Mahmood','Pat McFadden','Bridget Phillipson',
+  'Jonathan Reynolds','Liz Kendall','Kemi Badenoch','Rishi Sunak','Jeremy Hunt',
+  'Ed Davey','Nigel Farage','Carla Denyer','Liz Saville Roberts'
+];
 
 // Role priority for sorting (lower = more senior)
 const ROLE_PRIORITY={
@@ -1050,14 +1055,25 @@ async function loadFeaturedMPs(){
   var grid=document.getElementById('mpg');
   if(!grid)return;
   grid.innerHTML='';
-  // Add section header
   var hdr=document.createElement('div');
   hdr.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:4px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr.textContent='Key figures';
   grid.appendChild(hdr);
-  // Fetch each featured MP (parallel)
-  var results=await Promise.all(FEATURED_IDS.map(function(id){return parlFetch('/Members/'+id);}));
+  // Search for each featured MP by name (robust — no fragile hardcoded IDs)
+  var results=await Promise.all(FEATURED_NAMES.map(function(name){
+    return parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
+  }));
+  var featuredIdSet=new Set();
   results.forEach(function(data){
+    if(!data||!data.items||!data.items.length)return;
+    var m=data.items[0].value;
+    featuredIdSet.add(m.id);
+  });
+  // Now fetch full details (with posts/synopsis) for each found MP
+  var detailResults=await Promise.all(Array.from(featuredIdSet).map(function(id){
+    return parlFetch('/Members/'+id);
+  }));
+  detailResults.forEach(function(data){
     if(!data||!data.value)return;
     var m=data.value;
     var mp={
@@ -1071,7 +1087,7 @@ async function loadFeaturedMPs(){
     ALL_MPs.push(mp);
     renderMPCard(mp,grid,true);
   });
-  // Section header for all MPs
+  window.FEATURED_ID_SET=featuredIdSet;
   var hdr2=document.createElement('div');
   hdr2.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:12px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr2.textContent='All 650 MPs';
@@ -1104,7 +1120,7 @@ async function loadMPs(reset){
   });
   var filtered=MP_PARTY_FILTER==='all'?newMPs:newMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
   // Skip MPs already shown in featured section
-  var featuredIdSet=new Set(FEATURED_IDS);
+  var featuredIdSet=window.FEATURED_ID_SET||new Set();
   filtered=filtered.filter(function(m){return!featuredIdSet.has(m.id);});
   ALL_MPs=ALL_MPs.concat(filtered);
   MP_PAGE++;
