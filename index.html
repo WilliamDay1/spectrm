@@ -987,6 +987,33 @@ const ROLE_PRIORITY={
   'Committee Chair':7,'Select Committee':9,
 };
 
+
+// Fetches a member's Biography and returns their most senior CURRENT role
+// (government post > opposition post > other post), or null if none.
+// This is the correct Parliament API endpoint — /Members/{id} does NOT include
+// role data; it only lives under /Members/{id}/Biography.
+async function fetchCurrentRole(id){
+  var data=await parlFetch('/Members/'+id+'/Biography');
+  if(!data||!data.value)return null;
+  var v=data.value;
+  // Only current roles (endDate null) count
+  var gov=(v.governmentPosts||[]).filter(function(p){return!p.endDate;});
+  var opp=(v.oppositionPosts||[]).filter(function(p){return!p.endDate;});
+  var other=(v.otherPosts||[]).filter(function(p){return!p.endDate;});
+  var all=gov.concat(opp).concat(other);
+  if(!all.length)return null;
+  // Prefer government posts, then opposition, then other (arrays already in that order)
+  var top=gov.length?gov[0]:(opp.length?opp[0]:other[0]);
+  var role=top.name;
+  role=role.replace('Secretary of State for ','SoS ');
+  role=role.replace('Parliamentary Under Secretary of State for ','PUS ');
+  role=role.replace('Minister of State for ','Min ');
+  role=role.replace('Shadow Secretary of State for ','Shadow SoS ');
+  role=role.replace('Parliamentary Private Secretary','PPS');
+  role=role.replace(' and First Lord of the Treasury','');
+  if(role.length>30)role=role.slice(0,28)+'…';
+  return role;
+}
 function getRolePriority(posts){
   if(!posts||!posts.length)return 99;
   var best=99;
@@ -1097,7 +1124,6 @@ async function loadFeaturedMPs(){
   grid.appendChild(hdr);
 
   // PHASE A: search for IDs only (fast) — populate FEATURED_ID_SET immediately
-  // so the general grid (loading in parallel) can dedupe correctly from the start.
   var allNames=FEATURED_NAMES;
   var results=await Promise.all(allNames.map(function(name){
     return parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
@@ -1109,17 +1135,15 @@ async function loadFeaturedMPs(){
     nameToBasic[allNames[idx]]=data.items[0].value;
     featuredIdSet.add(data.items[0].value.id);
   });
-  window.FEATURED_ID_SET=featuredIdSet; // available immediately for loadMPs to use
+  window.FEATURED_ID_SET=featuredIdSet;
 
-  // PHASE B: fetch full details (posts/synopsis) for each found MP — slower
+  // PHASE B: fetch Biography (roles) for each found MP — the correct endpoint for roles
   var foundIds=Object.values(nameToBasic).map(function(m){return m.id;});
-  var detailResults=await Promise.all(foundIds.map(function(id){return parlFetch('/Members/'+id);}));
-  var idToDetail={};
-  detailResults.forEach(function(data){
-    if(data&&data.value)idToDetail[data.value.id]=data.value;
-  });
+  var roleResults=await Promise.all(foundIds.map(function(id){return fetchCurrentRole(id);}));
+  var idToRole={};
+  foundIds.forEach(function(id,idx){idToRole[id]=roleResults[idx];});
 
-  // Render in tier order: leaders, then cabinet, then senior — each with its own sub-header
+  // Render in tier order: leaders, then cabinet, then senior
   var tiers=[
     {names:FEATURED_LEADERS,label:'Party leaders'},
     {names:FEATURED_CABINET,label:'Cabinet'},
@@ -1131,9 +1155,7 @@ async function loadFeaturedMPs(){
     tier.names.forEach(function(name){
       var basic=nameToBasic[name];
       if(!basic)return;
-      var detail=idToDetail[basic.id];
-      if(!detail)return;
-      tierMPs.push(detail);
+      tierMPs.push(basic);
     });
     if(!tierMPs.length)return;
 
@@ -1148,8 +1170,7 @@ async function loadFeaturedMPs(){
         name:m.nameDisplayAs,
         party:(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent'),
         con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
-        posts:m.currentPosts||[],
-        synopsis:m.synopsis||'',
+        roleLabel:idToRole[m.id]||null,
       };
       ALL_MPs.push(mp);
       renderMPCard(mp,grid,true);
@@ -1191,7 +1212,7 @@ async function loadMPs(reset){
   var newMPs=data.items.map(function(item){
     var m=item.value;
     var party=(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent');
-    return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',posts:[]};
+    return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',roleLabel:null};
   });
   var filtered=MP_PARTY_FILTER==='all'?newMPs:newMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
   // Skip MPs already shown in featured section (only relevant when not searching)
@@ -1229,31 +1250,30 @@ function renderMPCard(m, grid, featured){
   ph.textContent=mpIni(m.name);
   img.addEventListener('error',function(){img.style.display='none';ph.style.display='flex';});
   // Body
-  var roleBadge=m.posts&&m.posts.length?getRoleBadge(m.posts):null;
+  var roleBadge=m.roleLabel||null;
   var body=document.createElement('div');
   body.className='mpc-body';
   body.innerHTML='<div class="mpc-name">'+m.name+'</div>'+
     '<div class="mpc-con">'+m.con+'</div>'+
-    (roleBadge?'<div style="font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block">'+roleBadge+'</div>':'')+
+    (roleBadge?'<div class="mpc-role-label" style="font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block">'+roleBadge+'</div>':'')+
     '<div style="margin-top:'+(roleBadge?'2px':'0')+'"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span></div>';
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openMP(m.id,m);});
   grid.appendChild(card);
 
-  // If this card has no role data yet, fetch it lazily via a throttled queue
+  // If this card has no role yet, fetch it via the throttled queue from Biography endpoint
   // (max 4 concurrent — avoids overwhelming the API proxy when 40 cards load at once)
-  if(!featured&&(!m.posts||!m.posts.length)){
+  if(!featured&&!m.roleLabel){
     queueRoleLookup(function(){
-      return parlFetch('/Members/'+m.id).then(function(data){
-        if(!data||!data.value||!data.value.currentPosts||!data.value.currentPosts.length)return;
-        m.posts=data.value.currentPosts;
-        var newBadge=getRoleBadge(m.posts);
-        if(!newBadge)return;
+      return fetchCurrentRole(m.id).then(function(role){
+        if(!role)return;
+        m.roleLabel=role;
         var roleDiv=document.createElement('div');
+        roleDiv.className='mpc-role-label';
         roleDiv.style.cssText='font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block';
-        roleDiv.textContent=newBadge;
-        var nameDiv=body.querySelector('.mpc-con');
-        if(nameDiv)nameDiv.insertAdjacentElement('afterend',roleDiv);
+        roleDiv.textContent=role;
+        var conDiv=body.querySelector('.mpc-con');
+        if(conDiv)conDiv.insertAdjacentElement('afterend',roleDiv);
       }).catch(function(){});
     });
   }
@@ -1276,7 +1296,6 @@ function setMPParty(party,el){
 }
 
 async function openMP(id,cached){
-  // Show modal overlay
   var modal=document.getElementById('mp-modal');
   if(!modal){
     modal=document.createElement('div');
@@ -1288,85 +1307,83 @@ async function openMP(id,cached){
   modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;overflow:hidden"><div style="padding:20px;text-align:center;color:var(--tm)">Loading...</div></div>';
   modal.style.display='flex';
 
-  // Use cached data if available (featured MPs already have full data)
-  var m=null;
-  if(cached&&cached.posts&&cached.synopsis!==undefined){
-    m=cached;
-  } else {
-    var data=await parlFetch('/Members/'+id);
-    if(!data||!data.value){
-      modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;padding:20px"><button onclick="closeMP()" style="background:none;border:none;cursor:pointer;font-size:20px;float:right">✕</button><p style="color:var(--tm)">Could not load MP.</p></div>';
-      return;
-    }
-    var raw=data.value;
-    m={id:raw.id,name:raw.nameDisplayAs,party:raw.latestParty?raw.latestParty.name:'Independent',
-       con:raw.latestHouseMembership?raw.latestHouseMembership.membershipFrom:'',
-       posts:raw.currentPosts||[],synopsis:raw.synopsis||''};
+  // Basic info (overview endpoint — name, party, constituency, photo)
+  var data=await parlFetch('/Members/'+id);
+  if(!data||!data.value){
+    modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;padding:20px"><button onclick="closeMP()" style="background:none;border:none;cursor:pointer;font-size:20px;float:right">✕</button><p style="color:var(--tm)">Could not load MP.</p></div>';
+    return;
   }
+  var raw=data.value;
+  var m={id:raw.id,name:raw.nameDisplayAs,
+     party:(raw.nameDisplayAs==='Andy Burnham')?'Labour':(raw.latestParty?raw.latestParty.name:'Independent'),
+     con:raw.latestHouseMembership?raw.latestHouseMembership.membershipFrom:''};
 
   var p=mpPartyStyle(m.party);
 
-  // Sort posts by seniority
-  var sortedPosts=(m.posts||[]).slice().sort(function(a,b){return getRolePriority([a])-getRolePriority([b]);});
+  // Biography endpoint — the correct source for roles, committees, synopsis text
+  var bio=await parlFetch('/Members/'+id+'/Biography');
+  var synopsisData=await parlFetch('/Members/'+id+'/Synopsis');
 
-  // Build roles section
+  var allRoles=[];
+  if(bio&&bio.value){
+    var gov=(bio.value.governmentPosts||[]).filter(function(r){return!r.endDate;});
+    var opp=(bio.value.oppositionPosts||[]).filter(function(r){return!r.endDate;});
+    var other=(bio.value.otherPosts||[]).filter(function(r){return!r.endDate;});
+    var committees=(bio.value.committeeMemberships||[]).filter(function(r){return!r.endDate;});
+    allRoles=gov.concat(opp).concat(other).concat(committees);
+  }
+
   var rolesHTML='';
-  if(sortedPosts.length){
+  if(allRoles.length){
     rolesHTML='<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
       '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:10px">Current roles</div>'+
-      sortedPosts.map(function(post){
+      allRoles.map(function(role){
         return '<div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:7px">'+
           '<span style="color:'+p.c+';flex-shrink:0;margin-top:2px;font-size:10px">◆</span>'+
-          '<span style="font-size:12px;color:var(--ts);line-height:1.4">'+post.name+'</span></div>';
+          '<span style="font-size:12px;color:var(--ts);line-height:1.4">'+role.name+'</span></div>';
       }).join('')+
     '</div>';
   }
 
-  // Bio section
+  var synopsisText=(synopsisData&&synopsisData.value&&typeof synopsisData.value==='string')?synopsisData.value:'';
   var bioHTML='';
-  if(m.synopsis){
+  if(synopsisText){
     bioHTML='<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
       '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Biography</div>'+
-      '<div style="font-size:12px;color:var(--ts);line-height:1.7">'+m.synopsis+'</div>'+
+      '<div style="font-size:12px;color:var(--ts);line-height:1.7">'+synopsisText+'</div>'+
     '</div>';
   }
 
-  // Votes section - fetch live
   var votesHTML='<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
     '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Recent votes</div>'+
     '<div id="mp-votes-loading" style="font-size:12px;color:var(--tm)">Loading votes...</div>'+
   '</div>';
 
-  // Parliament profile link
   var profileUrl='https://members.parliament.uk/member/'+id+'/career';
 
   modal.innerHTML=
     '<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;overflow:hidden">'+
-      // Header
       '<div style="padding:16px 20px;border-bottom:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">'+
         '<div style="font-size:12px;font-weight:500;color:var(--tm)">MP Profile</div>'+
         '<button onclick="closeMP()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px;color:var(--ts);display:flex;align-items:center;justify-content:center">✕</button>'+
       '</div>'+
-      // Hero
       '<div style="padding:20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
         '<div id="mp-detail-photo-wrap" style="width:85px;height:105px;border-radius:10px;overflow:hidden;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:'+p.c+'">'+mpIni(m.name)+'</div>'+
         '<div style="flex:1;min-width:0">'+
           '<div style="font-size:18px;font-weight:600;color:var(--tp);margin-bottom:3px;line-height:1.3">'+m.name+'</div>'+
           '<div style="font-size:12px;color:var(--tm);margin-bottom:8px">'+m.con+'</div>'+
           '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+m.party+'</span>'+
-          (sortedPosts.length?'<div style="font-size:11px;color:var(--ts);margin-top:8px;font-style:italic">'+sortedPosts[0].name+'</div>':'')+
+          (allRoles.length?'<div style="font-size:11px;color:var(--ts);margin-top:8px;font-style:italic">'+allRoles[0].name+'</div>':'')+
         '</div>'+
       '</div>'+
       rolesHTML+
       bioHTML+
       votesHTML+
-      // Footer link
       '<div style="padding:12px 20px">'+
         '<a href="'+profileUrl+'" target="_blank" style="font-size:11px;color:var(--brand);text-decoration:none;font-weight:500">View full Parliament profile ↗</a>'+
       '</div>'+
     '</div>';
 
-  // Load photo async
   var photoWrap=document.getElementById('mp-detail-photo-wrap');
   if(photoWrap){
     var img=document.createElement('img');
@@ -1375,7 +1392,6 @@ async function openMP(id,cached){
     img.addEventListener('load',function(){photoWrap.innerHTML='';photoWrap.appendChild(img);});
   }
 
-  // Load votes async
   var votes=await fetchVotes(id);
   var votesEl=document.getElementById('mp-votes-loading');
   if(votesEl){
