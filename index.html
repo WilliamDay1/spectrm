@@ -933,18 +933,22 @@ function sw(id,btn,deeplink){
 
 async function parlFetch(p){
   try{
-    const r=await fetch('/api/parliament?path='+encodeURIComponent(p),{headers:{Accept:'application/json'}});
+    const r=await fetch('/api/parliament?path='+encodeURIComponent(p),{headers:{Accept:'application/json'},cache:'no-store'});
     if(!r.ok)return null;
-    return r.json();
+    const text=await r.text();
+    if(!text)return null;
+    try{return JSON.parse(text);}catch(e2){return null;}
   }catch(e){return null;}
 }
 
 async function fetchVotes(pid){
   try{
     const path='/data/divisions.json/membervoting?memberId='+pid+'&take=6';
-    const r=await fetch('/api/votes?path='+encodeURIComponent(path),{headers:{Accept:'application/json'}});
+    const r=await fetch('/api/votes?path='+encodeURIComponent(path),{headers:{Accept:'application/json'},cache:'no-store'});
     if(!r.ok) return null;
-    return r.json();
+    const text=await r.text();
+    if(!text)return null;
+    try{return JSON.parse(text);}catch(e2){return null;}
   }catch(e){return null;}
 }
 
