@@ -1019,6 +1019,22 @@ let MP_PAGE=0;
 let MP_TOTAL=0;
 let MP_LOADING=false;
 let MP_PARTY_FILTER='all';
+// Throttled queue for lazy role lookups — runs N at a time instead of all at once,
+// which avoids overwhelming the API proxy when 40 cards load simultaneously.
+let MP_ROLE_QUEUE=[];
+let MP_ROLE_RUNNING=0;
+const MP_ROLE_CONCURRENCY=4;
+function queueRoleLookup(fn){
+  MP_ROLE_QUEUE.push(fn);
+  pumpRoleQueue();
+}
+function pumpRoleQueue(){
+  while(MP_ROLE_RUNNING<MP_ROLE_CONCURRENCY&&MP_ROLE_QUEUE.length){
+    var fn=MP_ROLE_QUEUE.shift();
+    MP_ROLE_RUNNING++;
+    fn().finally(function(){MP_ROLE_RUNNING--;pumpRoleQueue();});
+  }
+}
 const MP_PAGE_SIZE=40;
 
 const MP_PARTIES={
@@ -1220,20 +1236,22 @@ function renderMPCard(m, grid, featured){
   card.addEventListener('click',function(){openMP(m.id,m);});
   grid.appendChild(card);
 
-  // If this card has no role data yet, fetch it lazily in the background
-  // (non-blocking — card already shows party badge, role appears when ready)
+  // If this card has no role data yet, fetch it lazily via a throttled queue
+  // (max 4 concurrent — avoids overwhelming the API proxy when 40 cards load at once)
   if(!featured&&(!m.posts||!m.posts.length)){
-    parlFetch('/Members/'+m.id).then(function(data){
-      if(!data||!data.value||!data.value.currentPosts||!data.value.currentPosts.length)return;
-      m.posts=data.value.currentPosts;
-      var newBadge=getRoleBadge(m.posts);
-      if(!newBadge)return;
-      var roleDiv=document.createElement('div');
-      roleDiv.style.cssText='font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block';
-      roleDiv.textContent=newBadge;
-      var nameDiv=body.querySelector('.mpc-con');
-      if(nameDiv)nameDiv.insertAdjacentElement('afterend',roleDiv);
-    }).catch(function(){});
+    queueRoleLookup(function(){
+      return parlFetch('/Members/'+m.id).then(function(data){
+        if(!data||!data.value||!data.value.currentPosts||!data.value.currentPosts.length)return;
+        m.posts=data.value.currentPosts;
+        var newBadge=getRoleBadge(m.posts);
+        if(!newBadge)return;
+        var roleDiv=document.createElement('div');
+        roleDiv.style.cssText='font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block';
+        roleDiv.textContent=newBadge;
+        var nameDiv=body.querySelector('.mpc-con');
+        if(nameDiv)nameDiv.insertAdjacentElement('afterend',roleDiv);
+      }).catch(function(){});
+    });
   }
 }
 
