@@ -882,6 +882,8 @@ const ABBR={
 function pipLabel(n){var a=ABBR[n];if(a)return a;return n.length>22?n.slice(0,20)+'…':n;}
 function sw(id,btn,deeplink){
   try {
+  // Remember the active tab so a page refresh returns here instead of Overview
+  try{localStorage.setItem('spectrm_active_tab',id);}catch(e){}
   document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('on');});
   document.querySelectorAll('.nb').forEach(function(b){b.classList.remove('on');});
   document.getElementById('sec-'+id).classList.add('on');
@@ -980,6 +982,17 @@ const FEATURED_SENIOR=[
 // Combined in priority order: leaders → cabinet → senior
 const FEATURED_NAMES=FEATURED_LEADERS.concat(FEATURED_CABINET).concat(FEATURED_SENIOR);
 
+// Manual title overrides for party leaders the Parliament Biography API doesn't
+// reliably capture (smaller/newer parties, or titles outside government tracking)
+const MANUAL_ROLE_OVERRIDES={
+  'Andy Burnham':'Labour Leadership Candidate',
+  'Kemi Badenoch':'Leader of the Opposition',
+  'Ed Davey':'Leader of the Liberal Democrats',
+  'Nigel Farage':'Leader of Reform UK',
+  'Carla Denyer':'Co-leader of the Green Party',
+  'Liz Saville Roberts':'Leader of Plaid Cymru',
+};
+
 // Role priority for sorting (lower = more senior)
 const ROLE_PRIORITY={
   'Prime Minister':1,'Deputy Prime Minister':2,'Chancellor of the Exchequer':3,
@@ -1022,17 +1035,26 @@ function shortenRoleTitle(role){
   return role;
 }
 
-async function fetchCurrentRole(id){
+async function fetchCurrentRole(id,name){
   var data=await parlFetch('/Members/'+id+'/Biography');
-  if(!data||!data.value)return null;
-  var v=data.value;
-  var gov=(v.governmentPosts||[]).filter(function(p){return!p.endDate;});
-  var opp=(v.oppositionPosts||[]).filter(function(p){return!p.endDate;});
-  var other=(v.otherPosts||[]).filter(function(p){return!p.endDate;});
-  var all=gov.concat(opp).concat(other);
-  if(!all.length)return null;
-  var top=gov.length?gov[0]:(opp.length?opp[0]:other[0]);
-  return shortenRoleTitle(top.name);
+  var roleFromApi=null;
+  if(data&&data.value){
+    var v=data.value;
+    var gov=(v.governmentPosts||[]).filter(function(p){return!p.endDate;});
+    var opp=(v.oppositionPosts||[]).filter(function(p){return!p.endDate;});
+    var other=(v.otherPosts||[]).filter(function(p){return!p.endDate;});
+    var all=gov.concat(opp).concat(other);
+    if(all.length){
+      var top=gov.length?gov[0]:(opp.length?opp[0]:other[0]);
+      roleFromApi=shortenRoleTitle(top.name);
+    }
+  }
+  // Prefer API data when available; fall back to manual override for party
+  // leaders the API doesn't track (e.g. smaller party leadership isn't always
+  // recorded in governmentPosts/oppositionPosts/otherPosts).
+  if(roleFromApi)return roleFromApi;
+  if(name&&MANUAL_ROLE_OVERRIDES[name])return MANUAL_ROLE_OVERRIDES[name];
+  return null;
 }
 function getRolePriority(posts){
   if(!posts||!posts.length)return 99;
@@ -1207,41 +1229,60 @@ async function loadMPs(reset){
     ALL_MPs=[];MP_PAGE=0;
     grid.innerHTML='';
   }
-  var nameParam='';
   var searchEl=document.getElementById('mps');
   var q=searchEl?searchEl.value.trim():'';
-  // Use "Name" (substring match across full name) not "nameStartsWith" (prefix only) —
-  // this is what lets "Burnham" find "Andy Burnham".
-  if(q){nameParam='&Name='+encodeURIComponent(q);}
-  var url='/Members/Search?House=Commons&IsCurrentMember=true&take='+MP_PAGE_SIZE+'&skip='+(MP_PAGE*MP_PAGE_SIZE)+nameParam;
-  var data=await parlFetch(url);
-  if(!data||!data.items){
-    if(reset)grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs — Parliament API unavailable.</div>';
-    MP_LOADING=false;return;
+  var nameParam=q?('&Name='+encodeURIComponent(q)):'';
+
+  // Target: render at least 20 new cards per "page" the user sees. Since the
+  // Parliament API has no party filter param, we filter client-side — which
+  // means a single page of 40 MPs might only contain 1-2 of the selected party.
+  // So when a party filter is active, keep pulling additional pages from the
+  // API (up to a safety cap) until we have 20 matches or run out of MPs.
+  var TARGET_NEW_CARDS=20;
+  var MAX_PAGES_PER_CALL=8; // safety cap so a rare party can't loop forever
+  var collected=[];
+  var pagesThisCall=0;
+  var ranOut=false;
+
+  while(collected.length<TARGET_NEW_CARDS&&pagesThisCall<MAX_PAGES_PER_CALL){
+    var url='/Members/Search?House=Commons&IsCurrentMember=true&take='+MP_PAGE_SIZE+'&skip='+(MP_PAGE*MP_PAGE_SIZE)+nameParam;
+    var data=await parlFetch(url);
+    pagesThisCall++;
+    if(!data||!data.items){
+      if(reset&&!collected.length)grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs — Parliament API unavailable.</div>';
+      break;
+    }
+    MP_TOTAL=data.totalResults;
+    if(data.items.length===0){ranOut=true;break;}
+
+    var pageMPs=data.items.map(function(item){
+      var m=item.value;
+      var party=(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent');
+      return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',roleLabel:null};
+    });
+    var pageFiltered=MP_PARTY_FILTER==='all'?pageMPs:pageMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
+    if(!q){
+      var featuredIdSet=window.FEATURED_ID_SET||new Set();
+      pageFiltered=pageFiltered.filter(function(m){return!featuredIdSet.has(m.id);});
+    }
+    collected=collected.concat(pageFiltered);
+    MP_PAGE++;
+
+    // Stop if we've reached the end of all MPs
+    if(MP_PAGE*MP_PAGE_SIZE>=MP_TOTAL){ranOut=true;break;}
   }
-  MP_TOTAL=data.totalResults;
-  if(reset&&data.items.length===0){
+
+  if(reset&&collected.length===0&&q){
     grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">No MPs found matching "'+q+'".</div>';
     MP_LOADING=false;return;
   }
-  var newMPs=data.items.map(function(item){
-    var m=item.value;
-    var party=(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent');
-    return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',roleLabel:null};
-  });
-  var filtered=MP_PARTY_FILTER==='all'?newMPs:newMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
-  // Skip MPs already shown in featured section (only relevant when not searching)
-  if(!q){
-    var featuredIdSet=window.FEATURED_ID_SET||new Set();
-    filtered=filtered.filter(function(m){return!featuredIdSet.has(m.id);});
-  }
-  ALL_MPs=ALL_MPs.concat(filtered);
-  MP_PAGE++;
+
+  ALL_MPs=ALL_MPs.concat(collected);
   var countEl=document.getElementById('mp-count');
-  if(countEl)countEl.textContent=(q?filtered.length+' result'+(filtered.length===1?'':'s'):MP_TOTAL+' MPs');
-  filtered.forEach(function(m){renderMPCard(m,grid,false);});
+  if(countEl)countEl.textContent=(q?ALL_MPs.length+' result'+(ALL_MPs.length===1?'':'s'):MP_TOTAL+' MPs');
+  collected.forEach(function(m){renderMPCard(m,grid,false);});
   var lmEl=document.getElementById('mp-load-more');
-  if(lmEl)lmEl.style.display=(!q&&MP_PAGE*MP_PAGE_SIZE<MP_TOTAL)?'block':'none';
+  if(lmEl)lmEl.style.display=(!ranOut&&MP_PAGE*MP_PAGE_SIZE<MP_TOTAL)?'block':'none';
   MP_LOADING=false;
 }
 
@@ -1275,7 +1316,7 @@ function renderMPCard(m, grid, featured){
 
   if(!m.roleLabel){
     queueRoleLookup(function(){
-      return fetchCurrentRole(m.id).then(function(role){
+      return fetchCurrentRole(m.id,m.name).then(function(role){
         if(!role)return;
         m.roleLabel=role;
         var roleDiv=document.createElement('div');
@@ -2389,6 +2430,16 @@ document.addEventListener('DOMContentLoaded',function(){
     loadOverview();
     renderBills();
     setTimeout(loadLiveData,500);
+    // Restore the tab the user was on before refreshing, if any
+    var savedTab=null;
+    try{savedTab=localStorage.getItem('spectrm_active_tab');}catch(e){}
+    var validTabs=['overview','politicians','bills','data','polls','calendar','policy','institutions','manifesto'];
+    if(savedTab&&savedTab!=='overview'&&validTabs.indexOf(savedTab)!==-1){
+      var navButtons=document.querySelectorAll('.nb');
+      var tabIndex=validTabs.indexOf(savedTab);
+      var targetBtn=navButtons[tabIndex];
+      if(targetBtn)sw(savedTab,targetBtn);
+    }
   } catch(e) {
     console.error('Boot crash:', e);
     // Show error visibly so we can debug
