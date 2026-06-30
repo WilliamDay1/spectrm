@@ -952,12 +952,30 @@ async function fetchVotes(pid){
 }
 
 // Featured/priority MPs shown at top (Parliament member IDs)
-const FEATURED_NAMES=[
-  'Keir Starmer','Angela Rayner','Ed Miliband','Rachel Reeves','David Lammy',
-  'Wes Streeting','Yvette Cooper','Shabana Mahmood','Pat McFadden','Bridget Phillipson',
-  'Jonathan Reynolds','Liz Kendall','Kemi Badenoch','Rishi Sunak','Jeremy Hunt',
-  'Ed Davey','Nigel Farage','Carla Denyer','Liz Saville Roberts'
+// Tier 1: Party leaders (shown first)
+const FEATURED_LEADERS=[
+  'Andy Burnham',          // Labour leadership frontrunner / caretaker
+  'Kemi Badenoch',         // Conservative leader
+  'Ed Davey',              // Lib Dem leader
+  'Nigel Farage',          // Reform UK leader
+  'Carla Denyer',          // Green Party co-leader
+  'Liz Saville Roberts',   // Plaid Cymru leader
 ];
+
+// Tier 2: Cabinet ministers
+const FEATURED_CABINET=[
+  'Keir Starmer','Angela Rayner','Rachel Reeves','David Lammy','Yvette Cooper',
+  'Shabana Mahmood','Pat McFadden','Bridget Phillipson','Jonathan Reynolds',
+  'Liz Kendall','Ed Miliband',
+];
+
+// Tier 3: Other senior figures (shadow cabinet, former leaders)
+const FEATURED_SENIOR=[
+  'Wes Streeting','Rishi Sunak','Jeremy Hunt',
+];
+
+// Combined in priority order: leaders → cabinet → senior
+const FEATURED_NAMES=FEATURED_LEADERS.concat(FEATURED_CABINET).concat(FEATURED_SENIOR);
 
 // Role priority for sorting (lower = more senior)
 const ROLE_PRIORITY={
@@ -1059,35 +1077,69 @@ async function loadFeaturedMPs(){
   hdr.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:4px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr.textContent='Key figures';
   grid.appendChild(hdr);
+
   // Search for each featured MP by name (robust — no fragile hardcoded IDs)
-  var results=await Promise.all(FEATURED_NAMES.map(function(name){
+  var allNames=FEATURED_NAMES;
+  var results=await Promise.all(allNames.map(function(name){
     return parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
   }));
-  var featuredIdSet=new Set();
-  results.forEach(function(data){
+
+  // Build a name->mp lookup, fetch full details
+  var nameToBasic={};
+  results.forEach(function(data,idx){
     if(!data||!data.items||!data.items.length)return;
-    var m=data.items[0].value;
-    featuredIdSet.add(m.id);
+    nameToBasic[allNames[idx]]=data.items[0].value;
   });
-  // Now fetch full details (with posts/synopsis) for each found MP
-  var detailResults=await Promise.all(Array.from(featuredIdSet).map(function(id){
-    return parlFetch('/Members/'+id);
-  }));
+
+  var foundIds=Object.values(nameToBasic).map(function(m){return m.id;});
+  var detailResults=await Promise.all(foundIds.map(function(id){return parlFetch('/Members/'+id);}));
+  var idToDetail={};
   detailResults.forEach(function(data){
-    if(!data||!data.value)return;
-    var m=data.value;
-    var mp={
-      id:m.id,
-      name:m.nameDisplayAs,
-      party:m.latestParty?m.latestParty.name:'Independent',
-      con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
-      posts:m.currentPosts||[],
-      synopsis:m.synopsis||'',
-    };
-    ALL_MPs.push(mp);
-    renderMPCard(mp,grid,true);
+    if(data&&data.value)idToDetail[data.value.id]=data.value;
   });
+
+  var featuredIdSet=new Set();
+
+  // Render in tier order: leaders, then cabinet, then senior — each with its own sub-header
+  var tiers=[
+    {names:FEATURED_LEADERS,label:'Party leaders'},
+    {names:FEATURED_CABINET,label:'Cabinet'},
+    {names:FEATURED_SENIOR,label:'Other senior figures'},
+  ];
+
+  tiers.forEach(function(tier){
+    var tierMPs=[];
+    tier.names.forEach(function(name){
+      var basic=nameToBasic[name];
+      if(!basic)return;
+      var detail=idToDetail[basic.id];
+      if(!detail)return;
+      tierMPs.push(detail);
+    });
+    if(!tierMPs.length)return;
+
+    var subHdr=document.createElement('div');
+    subHdr.style.cssText='grid-column:1/-1;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ts);opacity:.7;padding:8px 0 4px';
+    subHdr.textContent=tier.label;
+    grid.appendChild(subHdr);
+
+    tierMPs.forEach(function(m){
+      var mp={
+        id:m.id,
+        name:m.nameDisplayAs,
+        party:m.latestParty?m.latestParty.name:'Independent',
+        con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
+        posts:m.currentPosts||[],
+        synopsis:m.synopsis||'',
+      };
+      ALL_MPs.push(mp);
+      featuredIdSet.add(mp.id);
+      renderMPCard(mp,grid,true);
+    });
+  });
+
   window.FEATURED_ID_SET=featuredIdSet;
+
   var hdr2=document.createElement('div');
   hdr2.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:12px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr2.textContent='All 650 MPs';
@@ -1155,8 +1207,8 @@ function renderMPCard(m, grid, featured){
   body.className='mpc-body';
   body.innerHTML='<div class="mpc-name">'+m.name+'</div>'+
     '<div class="mpc-con">'+m.con+'</div>'+
-    (roleBadge?'<div class="mpc-role-badge" style="font-size:9px;color:'+p.c+';margin-bottom:4px;line-height:1.3;font-weight:500">'+roleBadge+'</div>':'')+
-    '<span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span>';
+    (roleBadge?'<div style="font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block">'+roleBadge+'</div>':'')+
+    '<div style="margin-top:'+(roleBadge?'2px':'0')+'"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span></div>';
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openMP(m.id,m);});
   grid.appendChild(card);
