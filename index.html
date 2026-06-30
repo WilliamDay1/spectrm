@@ -1043,7 +1043,7 @@ function mpPhotoUrl(id){return 'https://members-api.parliament.uk/api/Members/'+
 function mpIni(name){return name.split(' ').filter(function(w){return w.length>0;}).slice(0,2).map(function(w){return w[0];}).join('');}
 
 async function renderMPs(){
-  ALL_MPs=[];MP_PAGE=0;MP_PARTY_FILTER='all';
+  ALL_MPs=[];MP_PAGE=0;MP_PARTY_FILTER='all';window.FEATURED_ID_SET=new Set();
   var pillsEl=document.getElementById('mp-party-pills');
   if(pillsEl){
     var parties=['all','Labour','Conservative','Liberal Democrat','Reform UK','Scottish National Party','Green Party','Plaid Cymru'];
@@ -1063,10 +1063,11 @@ async function renderMPs(){
   if(grid){
     grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--tm);font-size:13px"><div style="font-size:24px;margin-bottom:8px">⟳</div>Loading MPs...</div>';
   }
-  // Load featured MPs first with full details (so we can show roles)
+  // Run featured load fully (it populates FEATURED_ID_SET early in Phase A internally),
+  // then kick off the general grid. Featured cards appear first since they resolve faster
+  // per-name; general grid starts immediately after Phase A search resolves.
   await loadFeaturedMPs();
-  // Then load the rest
-  await loadMPs(false);
+  loadMPs(false); // background — not awaited, page is already interactive
 }
 
 async function loadFeaturedMPs(){
@@ -1078,27 +1079,28 @@ async function loadFeaturedMPs(){
   hdr.textContent='Key figures';
   grid.appendChild(hdr);
 
-  // Search for each featured MP by name (robust — no fragile hardcoded IDs)
+  // PHASE A: search for IDs only (fast) — populate FEATURED_ID_SET immediately
+  // so the general grid (loading in parallel) can dedupe correctly from the start.
   var allNames=FEATURED_NAMES;
   var results=await Promise.all(allNames.map(function(name){
     return parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
   }));
-
-  // Build a name->mp lookup, fetch full details
   var nameToBasic={};
+  var featuredIdSet=new Set();
   results.forEach(function(data,idx){
     if(!data||!data.items||!data.items.length)return;
     nameToBasic[allNames[idx]]=data.items[0].value;
+    featuredIdSet.add(data.items[0].value.id);
   });
+  window.FEATURED_ID_SET=featuredIdSet; // available immediately for loadMPs to use
 
+  // PHASE B: fetch full details (posts/synopsis) for each found MP — slower
   var foundIds=Object.values(nameToBasic).map(function(m){return m.id;});
   var detailResults=await Promise.all(foundIds.map(function(id){return parlFetch('/Members/'+id);}));
   var idToDetail={};
   detailResults.forEach(function(data){
     if(data&&data.value)idToDetail[data.value.id]=data.value;
   });
-
-  var featuredIdSet=new Set();
 
   // Render in tier order: leaders, then cabinet, then senior — each with its own sub-header
   var tiers=[
@@ -1127,18 +1129,15 @@ async function loadFeaturedMPs(){
       var mp={
         id:m.id,
         name:m.nameDisplayAs,
-        party:m.latestParty?m.latestParty.name:'Independent',
+        party:(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent'),
         con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
         posts:m.currentPosts||[],
         synopsis:m.synopsis||'',
       };
       ALL_MPs.push(mp);
-      featuredIdSet.add(mp.id);
       renderMPCard(mp,grid,true);
     });
   });
-
-  window.FEATURED_ID_SET=featuredIdSet;
 
   var hdr2=document.createElement('div');
   hdr2.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:12px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
@@ -1152,13 +1151,15 @@ async function loadMPs(reset){
   var grid=document.getElementById('mpg');
   if(!grid){MP_LOADING=false;return;}
   if(reset){
-    // Full reset — clear everything including featured section
     ALL_MPs=[];MP_PAGE=0;
     grid.innerHTML='';
   }
   var nameParam='';
   var searchEl=document.getElementById('mps');
-  if(searchEl&&searchEl.value.trim()){nameParam='&nameStartsWith='+encodeURIComponent(searchEl.value.trim());}
+  var q=searchEl?searchEl.value.trim():'';
+  // Use "Name" (substring match across full name) not "nameStartsWith" (prefix only) —
+  // this is what lets "Burnham" find "Andy Burnham".
+  if(q){nameParam='&Name='+encodeURIComponent(q);}
   var url='/Members/Search?House=Commons&IsCurrentMember=true&take='+MP_PAGE_SIZE+'&skip='+(MP_PAGE*MP_PAGE_SIZE)+nameParam;
   var data=await parlFetch(url);
   if(!data||!data.items){
@@ -1166,26 +1167,35 @@ async function loadMPs(reset){
     MP_LOADING=false;return;
   }
   MP_TOTAL=data.totalResults;
+  if(reset&&data.items.length===0){
+    grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">No MPs found matching "'+q+'".</div>';
+    MP_LOADING=false;return;
+  }
   var newMPs=data.items.map(function(item){
     var m=item.value;
-    return{id:m.id,name:m.nameDisplayAs,party:m.latestParty?m.latestParty.name:'Independent',con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',posts:[]};
+    var party=(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent');
+    return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',posts:[]};
   });
   var filtered=MP_PARTY_FILTER==='all'?newMPs:newMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
-  // Skip MPs already shown in featured section
-  var featuredIdSet=window.FEATURED_ID_SET||new Set();
-  filtered=filtered.filter(function(m){return!featuredIdSet.has(m.id);});
+  // Skip MPs already shown in featured section (only relevant when not searching)
+  if(!q){
+    var featuredIdSet=window.FEATURED_ID_SET||new Set();
+    filtered=filtered.filter(function(m){return!featuredIdSet.has(m.id);});
+  }
   ALL_MPs=ALL_MPs.concat(filtered);
   MP_PAGE++;
   var countEl=document.getElementById('mp-count');
-  if(countEl)countEl.textContent=MP_TOTAL+' MPs';
+  if(countEl)countEl.textContent=(q?filtered.length+' result'+(filtered.length===1?'':'s'):MP_TOTAL+' MPs');
   filtered.forEach(function(m){renderMPCard(m,grid,false);});
   var lmEl=document.getElementById('mp-load-more');
-  if(lmEl)lmEl.style.display=(MP_PAGE*MP_PAGE_SIZE<MP_TOTAL)?'block':'none';
+  if(lmEl)lmEl.style.display=(!q&&MP_PAGE*MP_PAGE_SIZE<MP_TOTAL)?'block':'none';
   MP_LOADING=false;
 }
 
 function loadMoreMPs(){loadMPs(false);}
 function renderMPCard(m, grid, featured){
+  // Manual party override for very new MPs the API hasn't updated yet
+  if(m.name==='Andy Burnham'){m.party='Labour';}
   var p=mpPartyStyle(m.party);
   var card=document.createElement('div');
   card.className='mpc';
@@ -1212,10 +1222,30 @@ function renderMPCard(m, grid, featured){
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openMP(m.id,m);});
   grid.appendChild(card);
+
+  // If this card has no role data yet, fetch it lazily in the background
+  // (non-blocking — card already shows party badge, role appears when ready)
+  if(!featured&&(!m.posts||!m.posts.length)){
+    parlFetch('/Members/'+m.id).then(function(data){
+      if(!data||!data.value||!data.value.currentPosts||!data.value.currentPosts.length)return;
+      m.posts=data.value.currentPosts;
+      var newBadge=getRoleBadge(m.posts);
+      if(!newBadge)return;
+      var roleDiv=document.createElement('div');
+      roleDiv.style.cssText='font-size:10px;font-weight:700;color:'+p.c+';margin:4px 0 6px;line-height:1.35;padding:3px 6px;background:'+p.bg+';border-radius:5px;display:inline-block';
+      roleDiv.textContent=newBadge;
+      var nameDiv=body.querySelector('.mpc-con');
+      if(nameDiv)nameDiv.insertAdjacentElement('afterend',roleDiv);
+    }).catch(function(){});
+  }
 }
 
 
-function filterMPs(){loadMPs(true);}
+var MP_SEARCH_DEBOUNCE=null;
+function filterMPs(){
+  if(MP_SEARCH_DEBOUNCE)clearTimeout(MP_SEARCH_DEBOUNCE);
+  MP_SEARCH_DEBOUNCE=setTimeout(function(){loadMPs(true);},350);
+}
 
 function setMPParty(party,el){
   MP_PARTY_FILTER=party;
