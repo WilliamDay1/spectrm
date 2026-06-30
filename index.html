@@ -961,18 +961,38 @@ async function fetchVotes(pid){
 const FEATURED_LEADERS=[
   'Keir Starmer',    // Labour
   'Kemi Badenoch',   // Conservative
-  'Nigel Farage',    // Reform UK
   'Ed Davey',        // Lib Dem
-  // Zack Polanski (Green) is in NON_MP_FIGURES — not an MP
+  'Nigel Farage',    // Reform UK
+  // Zack Polanski (Green) is in NON_MP_FIGURES — rendered after Farage
 ];
 
 // Full Cabinet as specified
 const FEATURED_CABINET=[
-  'Keir Starmer','David Lammy','Rachel Reeves','Yvette Cooper','Shabana Mahmood',
-  'Dan Jarvis','James Murray','Bridget Phillipson','Pat McFadden','Darren Jones',
-  'Ed Miliband','Steve Reed','Peter Kyle','Liz Kendall','Heidi Alexander',
-  'Emma Reynolds','Lisa Nandy','Hilary Benn','Douglas Alexander','Jo Stevens',
-  'Jonathan Reynolds','Alan Campbell',
+  // Ordered by seniority: Chancellor, Foreign, Home, Justice, Health, Defence,
+  // Education, Energy, Housing, Business, Science, Transport, Environment,
+  // Culture, NI, Scotland, Wales, Chief Whip, Cabinet Office, Lords Leader,
+  // Commons Leader, DWP
+  'Rachel Reeves',     // Chancellor of the Exchequer
+  'David Lammy',       // Foreign Secretary
+  'Yvette Cooper',     // Home Secretary
+  'Shabana Mahmood',   // Lord Chancellor / Justice
+  'James Murray',      // Health Secretary
+  'Dan Jarvis',        // Defence Secretary
+  'Bridget Phillipson',// Education Secretary
+  'Ed Miliband',       // Energy Secretary
+  'Steve Reed',        // Housing Secretary
+  'Peter Kyle',        // Business Secretary
+  'Liz Kendall',       // Science Secretary
+  'Heidi Alexander',   // Transport Secretary
+  'Emma Reynolds',     // Environment Secretary
+  'Lisa Nandy',        // Culture Secretary
+  'Hilary Benn',       // Northern Ireland Secretary
+  'Douglas Alexander', // Scotland Secretary
+  'Jo Stevens',        // Wales Secretary
+  'Jonathan Reynolds', // Chief Whip
+  'Pat McFadden',      // Cabinet Office / DWP
+  'Darren Jones',      // Chancellor of the Duchy / Chief Sec to PM
+  'Alan Campbell',     // Leader of the Commons
 ];
 
 // No "Other senior figures" tier
@@ -1145,9 +1165,17 @@ const MP_PARTIES={
   'Independent':{c:'#6B7280',bg:'#F3F4F6',short:'Ind'},
 };
 
-function mpPartyStyle(name){return MP_PARTIES[name]||MP_PARTIES['Independent'];}
+function mpPartyStyle(name){
+  // Normalise Labour (Co-op) → Labour for display purposes
+  if(name&&name.indexOf('Labour')!==-1)name='Labour';
+  return MP_PARTIES[name]||MP_PARTIES['Independent'];
+}
 function mpPhotoUrl(id){return 'https://members-api.parliament.uk/api/Members/'+id+'/Thumbnail';}
-function mpIni(name){return name.split(' ').filter(function(w){return w.length>0;}).slice(0,2).map(function(w){return w[0];}).join('');}
+function mpIni(name){return cleanMPName(name).split(' ').filter(function(w){return w.length>0;}).slice(0,2).map(function(w){return w[0];}).join('');}
+// Strip parliamentary title prefixes (Mr/Mrs/Ms/Sir/Dr/Rt Hon etc) from display names
+function cleanMPName(name){
+  return name.replace(/^(Mrs?|Ms|Miss|Sir|Dr|Prof|Rt Hon|The Rt Hon|Lord|Baroness|Baron)\.?\s+/gi,'').trim();
+}
 
 async function renderMPs(){
   ALL_MPs=[];MP_PAGE=0;MP_PARTY_FILTER='all';window.FEATURED_ID_SET=new Set();
@@ -1236,7 +1264,7 @@ async function loadFeaturedMPs(){
         var mp={
           id:basic.id,
           name:basic.nameDisplayAs,
-          party:(basic.nameDisplayAs==='Andy Burnham')?'Labour':(basic.latestParty?basic.latestParty.name:'Independent'),
+          party:(function(){var rp=basic.latestParty?basic.latestParty.name:'Independent';return(basic.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})(),
           con:basic.latestHouseMembership?basic.latestHouseMembership.membershipFrom:'',
           roleLabel:null,
         };
@@ -1256,7 +1284,13 @@ async function loadMPs(reset){
   if(!grid){MP_LOADING=false;return;}
   if(reset){
     ALL_MPs=[];MP_PAGE=0;
-    grid.innerHTML='';
+    // Only clear MPs below the sentinel, not the key figures section above
+    var sentinel=document.getElementById('mp-grid-sentinel');
+    if(sentinel){
+      while(sentinel.nextSibling)grid.removeChild(sentinel.nextSibling);
+    } else {
+      grid.innerHTML='';
+    }
   }
   var searchEl=document.getElementById('mps');
   var q=searchEl?searchEl.value.trim():'';
@@ -1286,7 +1320,8 @@ async function loadMPs(reset){
 
     var pageMPs=data.items.map(function(item){
       var m=item.value;
-      var party=(m.nameDisplayAs==='Andy Burnham')?'Labour':(m.latestParty?m.latestParty.name:'Independent');
+      var rawParty=m.latestParty?m.latestParty.name:'Independent';
+    var party=(m.nameDisplayAs==='Andy Burnham'||rawParty.indexOf('Labour')!==-1)?'Labour':rawParty;
       return{id:m.id,name:m.nameDisplayAs,party:party,con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',roleLabel:null};
     });
     var pageFiltered=MP_PARTY_FILTER==='all'?pageMPs:pageMPs.filter(function(m){return m.party===MP_PARTY_FILTER;});
@@ -1333,7 +1368,7 @@ function renderMPCard(m, grid, featured){
   var roleBadge=m.roleLabel||null;
   var body=document.createElement('div');
   body.className='mpc-body';
-  body.innerHTML='<div class="mpc-name">'+m.name+'</div>'+
+  body.innerHTML='<div class="mpc-name">'+cleanMPName(m.name)+'</div>'+
     '<div class="mpc-con">'+m.con+'</div>'+
     (roleBadge?'<div class="mpc-role-label" style="color:'+p.c+';background:'+p.bg+'">'+roleBadge+'</div>':'')+
     '<div style="margin-top:'+(roleBadge?'2px':'0')+'"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span></div>';
@@ -1472,7 +1507,7 @@ async function openMP(id,cached){
   }
   var raw=data.value;
   var m={id:raw.id,name:raw.nameDisplayAs,
-     party:(raw.nameDisplayAs==='Andy Burnham')?'Labour':(raw.latestParty?raw.latestParty.name:'Independent'),
+     party:(function(){var rp=raw.latestParty?raw.latestParty.name:'Independent';return(raw.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})(),
      con:raw.latestHouseMembership?raw.latestHouseMembership.membershipFrom:''};
 
   var p=mpPartyStyle(m.party);
@@ -1527,7 +1562,7 @@ async function openMP(id,cached){
       '<div style="padding:20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
         '<div id="mp-detail-photo-wrap" style="width:85px;height:105px;border-radius:10px;overflow:hidden;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:'+p.c+'">'+mpIni(m.name)+'</div>'+
         '<div style="flex:1;min-width:0">'+
-          '<div style="font-size:18px;font-weight:600;color:var(--tp);margin-bottom:3px;line-height:1.3">'+m.name+'</div>'+
+          '<div style="font-size:18px;font-weight:600;color:var(--tp);margin-bottom:3px;line-height:1.3">'+cleanMPName(m.name)+'</div>'+
           '<div style="font-size:12px;color:var(--tm);margin-bottom:8px">'+m.con+'</div>'+
           '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+m.party+'</span>'+
           (allRoles.length?'<div style="font-size:11px;color:var(--ts);margin-top:8px;font-style:italic">'+allRoles[0].name+'</div>':'')+
