@@ -1051,27 +1051,45 @@ const ROLE_PRIORITY={
 // Shortens a Parliament role title to fit on a small card (~18-20 chars/line, wraps to 2 lines max)
 function shortenRoleTitle(role){
   role=role.replace(' and First Lord of the Treasury','');
-  role=role.replace('Secretary of State for ','SoS: ');
-  role=role.replace('Parliamentary Under Secretary of State for ','PUS: ');
-  role=role.replace('Parliamentary Under Secretary of State','PUS');
-  role=role.replace('Minister of State for ','Min: ');
-  role=role.replace('Minister of State',  'Min of State');
-  role=role.replace('Shadow Secretary of State for ','Shadow SoS: ');
-  role=role.replace('Shadow Minister (','Shadow Min (');
+  role=role.replace(' and Minister for the Civil Service','');
+  role=role.replace(' and Minister for the Union','');
+  role=role.replace('Lord Chancellor and Secretary of State for Justice','Justice Secretary');
+  // "Secretary of State for X" -> "X Secretary"
+  role=role.replace(/Secretary of State for (.+)/,function(_,dept){return dept+' Secretary';});
+  // "Parliamentary Under Secretary of State for X" -> "X Minister"
+  role=role.replace(/Parliamentary Under Secretary of State for (.+)/,function(_,dept){return dept+' Minister';});
+  role=role.replace('Parliamentary Under Secretary of State','Junior Minister');
+  // "Minister of State for X" -> "X Minister"
+  role=role.replace(/Minister of State for (.+)/,function(_,dept){return dept+' Minister';});
+  role=role.replace('Minister of State','Minister');
+  // Shadow roles
+  role=role.replace(/Shadow Secretary of State for (.+)/,function(_,dept){return 'Shadow '+dept+' Secretary';});
+  role=role.replace(/Shadow Minister for (.+)/,function(_,dept){return 'Shadow '+dept+' Minister';});
+  // Spokesperson — strip party name prefix: "Labour Spokesperson for X" -> "X Spokesperson"
+  role=role.replace(/(?:Labour|Conservative|Liberal Democrat|Reform UK|SNP|Green|Plaid Cymru) Spokesperson for (.+)/i,function(_,area){return area+' Spokesperson';});
+  role=role.replace(/(?:Labour|Conservative|Liberal Democrat|Reform UK|SNP|Green|Plaid Cymru) Spokesperson/i,'Spokesperson');
+  // Specific named roles
   role=role.replace('Parliamentary Private Secretary','PPS');
-  role=role.replace('Leader of HM Official Opposition','Opposition Leader');
-  role=role.replace('Prime Minister','PM');
-  role=role.replace('Deputy Prime Minister','Deputy PM');
+  role=role.replace('Leader of HM Official Opposition','Leader of the Opposition');
+  role=role.replace('Prime Minister','Prime Minister');
+  role=role.replace('Deputy Prime Minister','Deputy Prime Minister');
   role=role.replace('Chancellor of the Exchequer','Chancellor');
-  role=role.replace('Chief Secretary to the Treasury','Chief Sec. Treasury');
-  role=role.replace('Lord Chancellor and ','');
-  role=role.replace('Leader of the House of Commons','Leader of Commons');
+  role=role.replace('Chief Secretary to the Treasury','Chief Sec. to Treasury');
+  role=role.replace('Leader of the House of Commons','Leader of the Commons');
+  role=role.replace('Leader of the House of Lords','Leader of the Lords');
   role=role.replace('Government Chief Whip','Chief Whip');
+  role=role.replace('Parliamentary Secretary to the Treasury','Chief Whip');
   role=role.replace(' (Commons)','');
   role=role.replace(' (Lords)','');
-  role=role.replace('Department for ','');
-  role=role.replace('Department of ','');
-  // Final hard cap with ellipsis if still too long for 2 lines (~36 chars)
+  // Clean up "Foreign, Commonwealth and Development Affairs Secretary" -> "Foreign Secretary"
+  role=role.replace('Foreign, Commonwealth and Development Affairs Secretary','Foreign Secretary');
+  role=role.replace('Housing, Communities and Local Government Secretary','Housing Secretary');
+  role=role.replace('Environment, Food and Rural Affairs Secretary','Environment Secretary');
+  role=role.replace('Business and Trade Secretary','Business Secretary');
+  role=role.replace('Science, Innovation and Technology Secretary','Science Secretary');
+  role=role.replace('Energy Security and Net Zero Secretary','Energy Secretary');
+  role=role.replace('Culture, Media and Sport Secretary','Culture Secretary');
+  // Final hard cap
   if(role.length>36)role=role.slice(0,34)+'…';
   return role;
 }
@@ -1184,7 +1202,7 @@ async function renderMPs(){
     var parties=['all','Labour','Conservative','Liberal Democrat','Reform UK','Scottish National Party','Green Party','Plaid Cymru'];
     pillsEl.innerHTML='';
     parties.forEach(function(p){
-      var label=p==='all'?'All parties':(MP_PARTIES[p]?MP_PARTIES[p].short:p);
+      var label=p==='all'?'All parties':p; // full party name
       var isOn=p==='all';
       var pill=document.createElement('span');
       pill.className='pill'+(isOn?' on':'');
@@ -1221,23 +1239,21 @@ async function loadFeaturedMPs(){
 
   // Pre-create tier sub-headers and per-tier containers so cards land in the
   // right visual section even though they arrive asynchronously and out of order.
+  // Build tier containers — use the grid directly (no display:contents wrapper)
+  // so cards always flow left-to-right in the order they are appended.
   var tierContainers={};
   tiers.forEach(function(tier){
     var subHdr=document.createElement('div');
     subHdr.style.cssText='grid-column:1/-1;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ts);opacity:.7;padding:8px 0 4px';
     subHdr.textContent=tier.label;
     grid.appendChild(subHdr);
-    var container=document.createElement('div');
-    container.style.cssText='display:contents'; // transparent wrapper, cards still flow into the grid
-    grid.appendChild(container);
-    tierContainers[tier.label]=container;
+    // Store reference to grid itself — cards appended in order to grid directly
+    tierContainers[tier.label]=grid;
 
-    // Insert non-MP party figures right after "Party leaders" — they're not
-    // sitting MPs so they have no Parliament record, but they're prominent
-    // enough to belong alongside the elected leaders.
+    // Non-MP party figures (Polanski) go right after Party leaders header
     if(tier.label==='Party leaders'&&NON_MP_FIGURES.length){
       NON_MP_FIGURES.forEach(function(fig){
-        renderNonMPCard(fig,container);
+        renderNonMPCard(fig,grid);
       });
     }
   });
@@ -1368,10 +1384,11 @@ function renderMPCard(m, grid, featured){
   var roleBadge=m.roleLabel||null;
   var body=document.createElement('div');
   body.className='mpc-body';
+  // Full party name (not abbreviation); role as plain text under constituency (no coloured badge)
   body.innerHTML='<div class="mpc-name">'+cleanMPName(m.name)+'</div>'+
     '<div class="mpc-con">'+m.con+'</div>'+
-    (roleBadge?'<div class="mpc-role-label" style="color:'+p.c+';background:'+p.bg+'">'+roleBadge+'</div>':'')+
-    '<div style="margin-top:'+(roleBadge?'2px':'0')+'"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span></div>';
+    (roleBadge?'<div style="font-size:10px;color:var(--tm);margin:3px 0 5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">'+roleBadge+'</div>':'')+
+    '<div style="margin-top:'+(roleBadge?'2px':'4px')+'"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+m.party+'</span></div>';
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openMP(m.id,m);});
   grid.appendChild(card);
@@ -1382,8 +1399,7 @@ function renderMPCard(m, grid, featured){
         if(!role)return;
         m.roleLabel=role;
         var roleDiv=document.createElement('div');
-        roleDiv.className='mpc-role-label';
-        roleDiv.style.cssText='color:'+p.c+';background:'+p.bg;
+        roleDiv.style.cssText='font-size:10px;color:var(--tm);margin:3px 0 5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden';
         roleDiv.textContent=role;
         var conDiv=body.querySelector('.mpc-con');
         if(conDiv)conDiv.insertAdjacentElement('afterend',roleDiv);
