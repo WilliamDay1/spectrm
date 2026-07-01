@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-06-30T13:28:06Z",
+    "updated": "2026-07-01T16:09:44Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Defence secretary to update MPs after Starmer unveils extra \u00a315bn for armed forces \u2013 UK politics live",
-      "date": "30 Jun 2026",
+      "headline": "Badenoch urges Burnham to condemn defence investment plan as No 10 says funding is \u2018credible\u2019 \u2013 UK politics live",
+      "date": "1 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jun/30/defence-investment-plan-keir-starmer-dan-jarvis-labour-andy-burnham-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/01/keir-starmer-andy-burnham-labour-defence-investment-plan-pmqs-kemi-badenoch"
     },
     {
       "id": "2",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Hospitality VAT cut: can it help the sector and at what cost to UK taxpayer?",
-      "date": "30 Jun 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham says \u2018nothing off table\u2019 in case of Rochdale grooming gang leader",
+      "date": "1 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jun/30/hospitality-vat-cut-can-it-help-sector-what-cost-to-uk-taxpayer"
+      "url": "https://www.theguardian.com/politics/2026/jul/01/andy-burnham-says-nothing-off-table-in-case-of-rochdale-grooming-gang-leader"
     },
     {
       "id": "3",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Labour MPs tell Burnham to ignore \u2018deluded\u2019 calls for more North Sea drilling",
-      "date": "30 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/jun/30/labour-mps-tell-burnham-ignore-deluded-calls-more-north-sea-drilling"
+      "headline": "Burnham calls for grooming gang ringleader to be deported",
+      "date": "1 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c0jy53n8q1do?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Starmer warns Burnham not to borrow to fund defence as he reveals \u00a315bn plan",
-      "date": "30 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jun/30/defence-investment-plan-keir-starmer-labour"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "File sent to CPS after sex offence allegations against suspended Labour MP",
+      "date": "1 Jul 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/file-sent-to-cps-after-sex-offence-allegations-against-suspended-labour-mp-dan-norris-13559570"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "I\u2019ve worked closely with both Andy Burnham and Keir Starmer. A single quality separates them | Nazir Afzal",
-      "date": "30 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jun/30/andy-burnham-keir-starmer-voters-no-10"
+      "headline": "Badenoch accuses Starmer of leaving defence spending 'mess' for Burnham",
+      "date": "1 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy9rgg9ddw2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK chair of Welsh environment committee may \u2018undermine scrutiny\u2019, says thinktank",
-      "date": "30 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/jun/30/reform-mp-chair-of-welsh-environment-committee-may-undermine-scrutiny-says-thinktank"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "CPS considering charges against MP after rape arrest",
+      "date": "1 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cp8r1x2614eo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Refugees would be told to repay around \u00a310,000 under new asylum bill",
-      "date": "30 Jun 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham's plans are a warning to Whitehall, minister says",
+      "date": "1 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cddlgqlm7q2o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c77yeykgxlpo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Share your views on Andy Burnham\u2019s plans for a new No 10 North",
-      "date": "30 Jun 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jun/30/share-your-views-andy-burnham-announcement-no-10-north"
+      "headline": "Is Andy Burnham facing a \u00a35bn defence 'black hole'?",
+      "date": "1 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c14ymy41v5go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Nearly 25% of UK pubs and restaurants lose money, research shows",
-      "date": "30 Jun 2026",
+      "headline": "UK national lottery review to give public more say in how funds are spent",
+      "date": "1 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jun/30/uk-pubs-restaurants-lose-money-research-shows-vat-cut-campaign"
+      "url": "https://www.theguardian.com/uk-news/2026/jul/01/uk-national-lottery-review-public-say-funds-spent"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Want to know what Andy Burnham would do in government? Take a look at his past | Frances Ryan",
-      "date": "30 Jun 2026",
+      "headline": "Keir Starmer forced on back foot at PMQs over \u2018weak\u2019 defence plan",
+      "date": "1 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jun/30/andy-burnham-government-views-tax-welfare-social-care"
+      "url": "https://www.theguardian.com/politics/2026/jul/01/keir-starmer-pmqs-defence-investment-plan-kemi-badenoch"
     }
   ]
 }
