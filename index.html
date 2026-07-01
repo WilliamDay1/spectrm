@@ -103,7 +103,14 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .ntime{font-size:10px;color:var(--tm);margin-top:2px}
 /* POLITICIANS */
 .mpg{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:9px}
-.mpc{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;padding:13px;cursor:pointer;transition:all .12s;border-top:3px solid}
+.mpc{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .12s;border-top:3px solid;display:flex;flex-direction:column}
+.mpc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.mpc-body{padding:10px;display:flex;flex-direction:column;flex:1}
+.mpc-name{font-size:12px;font-weight:600;color:var(--tp);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:2.6em}
+.mpc-con{font-size:10px;color:var(--tm);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-top:2px}
+.mpc-job{font-size:10px;color:var(--ts);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-top:2px;min-height:1.4em}
+.mpc-party{margin-top:auto;padding-top:7px}
+.mpc-role{font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .mpc:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.08)}
 .mpav{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:500;font-size:13px;margin-bottom:7px}
 .mpn{font-size:12px;font-weight:500;margin-bottom:2px;line-height:1.3}
@@ -330,10 +337,10 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .mpc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
 .mpc-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:top center;background:var(--s1);display:block}
 .mpc-photo-placeholder{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600}
-.mpc-body{padding:10px}
-.mpc-name{font-size:12px;font-weight:600;color:var(--tp);margin-bottom:2px;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.mpc-con{font-size:10px;color:var(--tm);margin-bottom:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.mpc-role{font-size:9px;font-weight:600;padding:2px 7px;border-radius:20px;display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+
+
+
 .mp-detail{background:var(--s2);border-radius:14px;overflow:hidden}
 .mp-detail-photo{width:90px;height:110px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0;background:var(--s1)}
 .mp-detail-photo-ph{width:90px;height:110px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700}
@@ -342,7 +349,6 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .mp-section-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:10px}
 .mp-role-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;font-size:12px;color:var(--ts);line-height:1.4}
 
-.mpc-role-label{font-size:9.5px;font-weight:700;margin:4px 0 6px;line-height:1.3;padding:3px 6px;border-radius:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;word-break:break-word}
 </style>
 </head>
 <body>
@@ -786,6 +792,11 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
   </div>
 
 <script>
+// =====================
+// DATA LOADER — fetches /data/*.json when deployed on Vercel
+// Falls back to hardcoded data when running locally (file://)
+// =====================
+const DATA_BASE=(location.hostname==='localhost
 // =====================
 // DATA LOADER — fetches /data/*.json when deployed on Vercel
 // Falls back to hardcoded data when running locally (file://)
@@ -1387,11 +1398,11 @@ function renderMPCard(m, grid, featured){
   var roleBadge=m.roleLabel||null;
   var body=document.createElement('div');
   body.className='mpc-body';
-  // Full party name (not abbreviation); role as plain text under constituency (no coloured badge)
-  body.innerHTML='<div class="mpc-name">'+cleanMPName(m.name)+'</div>'+
+  body.innerHTML=
+    '<div class="mpc-name">'+cleanMPName(m.name)+'</div>'+
     '<div class="mpc-con">'+m.con+'</div>'+
-    (roleBadge?'<div style="font-size:10px;color:var(--tm);margin:3px 0 5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">'+roleBadge+'</div>':'')+
-    '<div style="margin-top:'+(roleBadge?'2px':'4px')+'"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+m.party+'</span></div>';
+    '<div class="mpc-job">'+(roleBadge||'')+'</div>'+
+    '<div class="mpc-party"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+m.party+'</span></div>';
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openMP(m.id,m);});
   grid.appendChild(card);
@@ -1401,11 +1412,9 @@ function renderMPCard(m, grid, featured){
       return fetchCurrentRole(m.id,m.name).then(function(role){
         if(!role)return;
         m.roleLabel=role;
-        var roleDiv=document.createElement('div');
-        roleDiv.style.cssText='font-size:10px;color:var(--tm);margin:3px 0 5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden';
-        roleDiv.textContent=role;
-        var conDiv=body.querySelector('.mpc-con');
-        if(conDiv)conDiv.insertAdjacentElement('afterend',roleDiv);
+        // Update the pre-existing mpc-job slot instead of inserting a new element
+        var jobDiv=body.querySelector('.mpc-job');
+        if(jobDiv)jobDiv.textContent=role;
       }).catch(function(){});
     });
   }
@@ -1428,10 +1437,11 @@ function renderNonMPCard(fig,grid){
   img.addEventListener('error',function(){img.style.display='none';ph.style.display='flex';});
   var body=document.createElement('div');
   body.className='mpc-body';
-  body.innerHTML='<div class="mpc-name">'+fig.name+'</div>'+
+  body.innerHTML=
+    '<div class="mpc-name">'+fig.name+'</div>'+
     '<div class="mpc-con" style="font-style:italic">Not an MP</div>'+
-    '<div style="font-size:10px;color:var(--tm);margin:3px 0 5px;line-height:1.35">'+fig.role+'</div>'+
-    '<div style="margin-top:2px"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+fig.party+'</span></div>';
+    '<div class="mpc-job">'+fig.role+'</div>'+
+    '<div class="mpc-party"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+fig.party+'</span></div>';
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openNonMP(fig);});
   grid.appendChild(card);
@@ -2609,6 +2619,3 @@ document.addEventListener('DOMContentLoaded',function(){
     document.body&&document.body.appendChild(d);
   }
 })();
-</script>
-</body>
-</html>
