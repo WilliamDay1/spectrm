@@ -1227,70 +1227,73 @@ async function loadFeaturedMPs(){
   var grid=document.getElementById('mpg');
   if(!grid)return;
   grid.innerHTML='';
+
   var hdr=document.createElement('div');
   hdr.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:4px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr.textContent='Key figures';
   grid.appendChild(hdr);
 
+  // Step 1: Fetch all featured names in parallel (fast — search endpoint)
+  var allNames=FEATURED_NAMES;
+  var searchResults=await Promise.all(allNames.map(function(name){
+    return parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
+  }));
+
+  // Build name→basic lookup
+  var nameToBasic={};
+  var featuredIdSet=new Set();
+  searchResults.forEach(function(data,idx){
+    if(!data||!data.items||!data.items.length)return;
+    var m=data.items[0].value;
+    nameToBasic[allNames[idx]]=m;
+    featuredIdSet.add(m.id);
+  });
+  window.FEATURED_ID_SET=featuredIdSet;
+
+  // Step 2: Render tiers in order — Party leaders first, then Cabinet
   var tiers=[
     {names:FEATURED_LEADERS,label:'Party leaders'},
     {names:FEATURED_CABINET,label:'Cabinet'},
   ];
 
-  // Pre-create tier sub-headers and per-tier containers so cards land in the
-  // right visual section even though they arrive asynchronously and out of order.
-  // Build tier containers — use the grid directly (no display:contents wrapper)
-  // so cards always flow left-to-right in the order they are appended.
-  var tierContainers={};
   tiers.forEach(function(tier){
+    // Sub-header
     var subHdr=document.createElement('div');
     subHdr.style.cssText='grid-column:1/-1;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ts);opacity:.7;padding:8px 0 4px';
     subHdr.textContent=tier.label;
     grid.appendChild(subHdr);
-    // Store reference to grid itself — cards appended in order to grid directly
-    tierContainers[tier.label]=grid;
 
-    // Non-MP party figures (Polanski) go right after Party leaders header
-    if(tier.label==='Party leaders'&&NON_MP_FIGURES.length){
-      NON_MP_FIGURES.forEach(function(fig){
-        renderNonMPCard(fig,grid);
-      });
+    // Party leaders tier: render non-MP figures first (Polanski after MPs)
+    // For MP leaders: render in the order of FEATURED_LEADERS array
+    tier.names.forEach(function(name){
+      var basic=nameToBasic[name];
+      if(!basic)return;
+      var mp={
+        id:basic.id,
+        name:basic.nameDisplayAs,
+        party:(function(){var rp=basic.latestParty?basic.latestParty.name:'Independent';return(basic.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})(),
+        con:basic.latestHouseMembership?basic.latestHouseMembership.membershipFrom:'',
+        roleLabel:null,
+      };
+      ALL_MPs.push(mp);
+      renderMPCard(mp,grid,true);
+    });
+
+    // After party leader MPs, add non-MP figures (Polanski)
+    if(tier.label==='Party leaders'){
+      NON_MP_FIGURES.forEach(function(fig){renderNonMPCard(fig,grid);});
     }
   });
 
+  // All MPs header + sentinel
   var hdr2=document.createElement('div');
   hdr2.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:12px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr2.textContent='All MPs';
   grid.appendChild(hdr2);
-
-  var featuredIdSet=new Set();
-  window.FEATURED_ID_SET=featuredIdSet; // populated incrementally below; loadMPs reads it once Phase A name lookups land
-
-  // For each featured name: search → render card immediately with whatever we have →
-  // fetch role in background and patch the card when it arrives. No waiting for the
-  // other 18 names. This means the first card can appear in ~100ms instead of ~2s.
-  var allWork=[];
-  tiers.forEach(function(tier){
-    tier.names.forEach(function(name){
-      allWork.push((async function(){
-        var searchData=await parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
-        if(!searchData||!searchData.items||!searchData.items.length)return;
-        var basic=searchData.items[0].value;
-        featuredIdSet.add(basic.id);
-        var mp={
-          id:basic.id,
-          name:basic.nameDisplayAs,
-          party:(function(){var rp=basic.latestParty?basic.latestParty.name:'Independent';return(basic.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})(),
-          con:basic.latestHouseMembership?basic.latestHouseMembership.membershipFrom:'',
-          roleLabel:null,
-        };
-        ALL_MPs.push(mp);
-        renderMPCard(mp,tierContainers[tier.label],true);
-      })());
-    });
-  });
-
-  await Promise.all(allWork); // all featured cards now rendered; roles fill in via the same lazy queue used for the general grid
+  var sentinel=document.createElement('div');
+  sentinel.id='mp-grid-sentinel';
+  sentinel.style.cssText='display:contents';
+  grid.appendChild(sentinel);
 }
 
 async function loadMPs(reset){
@@ -1427,8 +1430,8 @@ function renderNonMPCard(fig,grid){
   body.className='mpc-body';
   body.innerHTML='<div class="mpc-name">'+fig.name+'</div>'+
     '<div class="mpc-con" style="font-style:italic">Not an MP</div>'+
-    '<div class="mpc-role-label" style="color:'+p.c+';background:'+p.bg+'">'+fig.role+'</div>'+
-    '<div style="margin-top:2px"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+p.short+'</span></div>';
+    '<div style="font-size:10px;color:var(--tm);margin:3px 0 5px;line-height:1.35">'+fig.role+'</div>'+
+    '<div style="margin-top:2px"><span class="mpc-role" style="background:'+p.bg+';color:'+p.c+'">'+fig.party+'</span></div>';
   card.appendChild(img);card.appendChild(ph);card.appendChild(body);
   card.addEventListener('click',function(){openNonMP(fig);});
   grid.appendChild(card);
