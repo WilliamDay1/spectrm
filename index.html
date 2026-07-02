@@ -1468,7 +1468,7 @@ async function openMP(id,cached){
       .slice(0,6);
     votesEl.innerHTML=scored.length?
       scored.map(function(item){
-        var aye=item.v.memberVotedAye;
+        var aye=item.v.MemberVotedAye;
         var col=aye?'#1baf7a':'#e34948';
         return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:.5px solid var(--bd);gap:12px">'+
           '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+item.title+'</div>'+
@@ -1482,6 +1482,60 @@ async function openMP(id,cached){
 }
 
 // Derive key policy stances from an MP's roles, votes, and committee memberships
+function simplifyVoteTitle(raw){
+  if(!raw)return null;
+  var t=raw.trim();
+  t=t.replace(/bill:\s*third reading$/gi,' Bill');
+  t=t.replace(/bill:\s*second reading$/gi,' Bill');
+  t=t.replace(/bill:\s*report stage$/gi,' Bill');
+  t=t.replace(/:\s*amendment[s]?[^$]*/gi,'');
+  t=t.replace(/:\s*motion to (disagree|agree)[^$]*/gi,'');
+  var known={
+    'king’s speech':'King’s Speech vote',
+    'national insurance':'National Insurance changes',
+    'workers rights act':'Workers’ Rights Act',
+    'employment rights bill':'Employment Rights Bill',
+    'renters rights bill':'Renters’ Rights Bill',
+    'planning and infrastructure':'Planning and Infrastructure Bill',
+    'nhs':'NHS funding vote',
+    'rwanda':'Rwanda Asylum Bill',
+    'illegal migration':'Illegal Migration Bill',
+    'net zero':'Net Zero legislation',
+    'great british energy':'Great British Energy Bill',
+    'minimum service levels':'Minimum Service Levels Bill',
+    'free school meals':'Free School Meals vote',
+    'two child':'Two-Child Benefit Cap vote',
+    'online safety':'Online Safety Bill',
+    'lords reform':'House of Lords Reform vote',
+    'privileges':'Privileges Committee vote',
+    'windfall tax':'Windfall Tax vote',
+    'gaza':'Gaza ceasefire vote',
+    'ukraine':'Ukraine support vote',
+    'english devolution':'English Devolution Bill',
+    'assisted dying':'Assisted Dying Bill',
+    'tobacco':'Tobacco and Vapes Bill',
+  };
+  var tl=t.toLowerCase();
+  for(var key in known){if(tl.indexOf(key)!==-1)return known[key];}
+  t=t.replace(/\s+/g,' ').trim();
+  if(t.length>60)t=t.slice(0,57)+'…';
+  return t||null;
+}
+
+function voteImportance(v){
+  var t=(v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title:'').toLowerCase();
+  var score=0;
+  ['gaza','assisted dying','ukraine','rwanda','two child','welfare','net zero','nhs',
+    'workers rights','employment rights','renters','budget','national insurance',
+    'lords reform','tobacco','illegal migration','windfall tax','energy','strikes'
+  ].forEach(function(kw){if(t.indexOf(kw)!==-1)score+=3;});
+  ['programme motion','carry-over','money resolution','ways and means',
+    'standing order','timetable','humble address'
+  ].forEach(function(kw){if(t.indexOf(kw)!==-1)score-=2;});
+  if(t.indexOf('third reading')!==-1)score+=1;
+  return score;
+}
+
 function derivePolicyViews(name,party,roles,votes,bio){
   var stances=[];
 
@@ -1525,7 +1579,7 @@ function derivePolicyViews(name,party,roles,votes,bio){
   if(votes&&votes.length){
     votes.forEach(function(v){
       var t=v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title.toLowerCase():'';
-      var aye=v.memberVotedAye;
+      var aye=v.MemberVotedAye;
       if(!t)return;
       if(t.indexOf('net zero')!==-1||t.indexOf('climate')!==-1||t.indexOf('environment')!==-1)
         stances.push(aye?'Voted in support of climate and net zero legislation':'Voted against climate/net zero legislation');
