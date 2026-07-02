@@ -1463,56 +1463,107 @@ async function openMP(id,cached){
   }
 
   // Generate AI bio + policy views via Anthropic API
-  var partyHistory=bio&&bio.value?
-    (bio.value.partyAffiliations||[]).map(function(a){return a.name;}).join(', '):'';
-  var pastRoles=bio&&bio.value?
-    (bio.value.governmentPosts||[]).concat(bio.value.oppositionPosts||[]).concat(bio.value.otherPosts||[])
-    .filter(function(r){return r.endDate;}).slice(0,5).map(function(r){return r.name;}).join(', '):'';
-
-  var prompt='Write a concise but informative political profile for '+name+
-    ', MP for '+con+', '+party+' party.'+
-    (synopsisText?' Parliament synopsis: '+synopsisText:'')+
-    (pastRoles?' Past roles include: '+pastRoles+'.':'')+
-    '\n\nRespond with JSON only, no markdown, in this exact format: '+
-    '{"bio":"2-3 sentence biography covering background and political career","policies":["Short policy stance 1","Short policy stance 2","Short policy stance 3","Short policy stance 4"]}'+
-    '\n\nBe factual and neutral. For policies, focus on their known positions, what they campaign on, or their voting record themes.';
-
-  try{
-    var aiResp=await fetch('/api/ai',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-6',
-        max_tokens:400,
-        messages:[{role:'user',content:prompt}]
-      })
-    });
-    var aiData=await aiResp.json();
-    var aiText=aiData.content&&aiData.content[0]?aiData.content[0].text:'';
-    var parsed=JSON.parse(aiText.replace(/```json|```/g,'').trim());
-
-    var bioPanelEl=document.getElementById('mp-ai-bio');
-    var policyEl=document.getElementById('mp-ai-policy');
-
-    if(bioPanelEl&&parsed.bio){
-      bioPanelEl.innerHTML='<div style="font-size:12px;color:var(--ts);line-height:1.75">'+parsed.bio+'</div>';
-    }
-    if(policyEl&&parsed.policies&&parsed.policies.length){
-      policyEl.innerHTML=parsed.policies.map(function(pol){
+  // Derive policy views from votes and roles — no external API needed
+  var policyEl=document.getElementById('mp-ai-policy');
+  if(policyEl){
+    var policies=derivePolicyViews(name,party,allRoles,votes,bio);
+    if(policies.length){
+      policyEl.innerHTML=policies.map(function(pol){
         return '<div style="display:flex;gap:8px;margin-bottom:8px">'+
           '<span style="color:'+p.c+';flex-shrink:0;margin-top:1px">•</span>'+
           '<span style="color:var(--ts);line-height:1.5">'+pol+'</span>'+
         '</div>';
       }).join('');
-    } else if(policyEl){
-      policyEl.textContent='Policy views not available.';
+    } else {
+      policyEl.innerHTML='<div style="font-size:12px;color:var(--tm)">Vote and role data insufficient to determine policy positions.</div>';
     }
-  }catch(err){
-    var bioPanelEl=document.getElementById('mp-ai-bio');
-    var policyEl=document.getElementById('mp-ai-policy');
-    if(bioPanelEl)bioPanelEl.innerHTML='<div style="font-size:12px;color:var(--ts);line-height:1.75">'+synopsisText+'</div>';
-    if(policyEl)policyEl.textContent='Policy views not available.';
   }
+}
+
+// Derive key policy stances from an MP's roles, votes, and committee memberships
+function derivePolicyViews(name,party,roles,votes,bio){
+  var stances=[];
+
+  // 1. Infer from current roles
+  var roleNames=roles.map(function(r){return r.name.toLowerCase();});
+  var roleStr=roleNames.join(' ');
+  if(roleStr.indexOf('health')!==-1) stances.push('Health policy advocate — holds a current health portfolio role');
+  if(roleStr.indexOf('education')!==-1) stances.push('Education policy — holds a current education portfolio role');
+  if(roleStr.indexOf('defence')!==-1) stances.push('Defence and security — holds a current defence portfolio role');
+  if(roleStr.indexOf('environment')!==-1||roleStr.indexOf('climate')!==-1) stances.push('Climate and environment — holds a current environment portfolio role');
+  if(roleStr.indexOf('treasury')!==-1||roleStr.indexOf('chancellor')!==-1) stances.push('Economic policy — holds a current Treasury role');
+  if(roleStr.indexOf('home')!==-1) stances.push('Law and order — holds a current Home Office role');
+  if(roleStr.indexOf('foreign')!==-1||roleStr.indexOf('international')!==-1) stances.push('Foreign affairs — holds a current foreign policy role');
+  if(roleStr.indexOf('housing')!==-1) stances.push('Housing reform — holds a current housing portfolio role');
+  if(roleStr.indexOf('transport')!==-1) stances.push('Transport and infrastructure — holds a current transport role');
+  if(roleStr.indexOf('justice')!==-1) stances.push('Legal reform and justice — holds a current justice role');
+  if(roleStr.indexOf('business')!==-1) stances.push('Business and industry — holds a current business portfolio role');
+  if(roleStr.indexOf('science')!==-1||roleStr.indexOf('technology')!==-1) stances.push('Science and tech — holds a current science/technology role');
+  if(roleStr.indexOf('energy')!==-1) stances.push('Energy policy — holds a current energy role');
+  if(roleStr.indexOf('culture')!==-1||roleStr.indexOf('media')!==-1) stances.push('Culture and media — holds a current culture portfolio role');
+  if(roleStr.indexOf('welfare')!==-1||roleStr.indexOf('work and pensions')!==-1) stances.push('Social security and welfare — holds a current DWP role');
+
+  // 2. Infer from committee memberships
+  var committees=(bio&&bio.value?bio.value.committeeMemberships||[]:[]).filter(function(r){return!r.endDate;});
+  committees.forEach(function(c){
+    var cn=c.name.toLowerCase();
+    if(cn.indexOf('public accounts')!==-1) stances.push('Public spending scrutiny — sits on the Public Accounts Committee');
+    else if(cn.indexOf('health')!==-1) stances.push('Health policy scrutiny — sits on the Health Select Committee');
+    else if(cn.indexOf('home affairs')!==-1) stances.push('Home affairs scrutiny — sits on the Home Affairs Committee');
+    else if(cn.indexOf('foreign affairs')!==-1) stances.push('Foreign policy scrutiny — sits on the Foreign Affairs Committee');
+    else if(cn.indexOf('treasury')!==-1) stances.push('Economic scrutiny — sits on the Treasury Select Committee');
+    else if(cn.indexOf('environment')!==-1) stances.push('Environmental scrutiny — sits on the Environment Select Committee');
+    else if(cn.indexOf('education')!==-1) stances.push('Education scrutiny — sits on the Education Select Committee');
+    else if(cn.indexOf('defence')!==-1) stances.push('Defence scrutiny — sits on the Defence Select Committee');
+    else if(cn.indexOf('work and pensions')!==-1) stances.push('Welfare scrutiny — sits on the Work and Pensions Committee');
+    else if(cn.indexOf('business')!==-1) stances.push('Business scrutiny — sits on the Business and Trade Committee');
+    else if(cn.indexOf('transport')!==-1) stances.push('Transport scrutiny — sits on the Transport Select Committee');
+  });
+
+  // 3. Infer from key votes (Aye/No on known bills)
+  if(votes&&votes.length){
+    votes.forEach(function(v){
+      var t=v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title.toLowerCase():'';
+      var aye=v.memberVotedAye;
+      if(!t)return;
+      if(t.indexOf('net zero')!==-1||t.indexOf('climate')!==-1||t.indexOf('environment')!==-1)
+        stances.push(aye?'Voted in support of climate and net zero legislation':'Voted against climate/net zero legislation');
+      if(t.indexOf('nhs')!==-1||t.indexOf('health')!==-1)
+        stances.push(aye?'Voted in support of NHS funding legislation':'Voted against NHS funding legislation');
+      if(t.indexOf('workers')!==-1||t.indexOf('employment')!==-1||t.indexOf('trade union')!==-1)
+        stances.push(aye?'Voted for workers\u2019 rights legislation':'Voted against workers\u2019 rights legislation');
+      if(t.indexOf('rwanda')!==-1||t.indexOf('asylum')!==-1||t.indexOf('immigration')!==-1)
+        stances.push(aye?'Voted for tougher immigration/asylum measures':'Voted against tougher immigration/asylum measures');
+      if(t.indexOf('tax')!==-1||t.indexOf('national insurance')!==-1)
+        stances.push(aye?'Voted for tax increases':'Voted against tax increases');
+      if(t.indexOf('housing')!==-1||t.indexOf('planning')!==-1)
+        stances.push(aye?'Voted for housing and planning reforms':'Voted against housing and planning reforms');
+    });
+  }
+
+  // 4. Party-level default stances if we couldn't infer enough
+  if(stances.length<2){
+    var partyDefaults={
+      'Labour':['Supports public investment in NHS, schools and infrastructure','Backs workers\u2019 rights and trade union protections','Advocates for wealth redistribution and progressive taxation'],
+      'Conservative':['Supports lower taxes and reduced state intervention','Advocates for stricter immigration controls','Backs free market economic policies and deregulation'],
+      'Liberal Democrat':['Champions proportional representation and electoral reform','Supports rejoining the EU single market','Advocates for mental health and social care investment'],
+      'Reform UK':['Advocates for significant cuts to public spending and the state','Supports zero net migration policy','Opposes net zero climate targets'],
+      'Scottish National Party':['Advocates for Scottish independence','Supports a second independence referendum','Opposes UK Conservative and Labour economic policy'],
+      'Green Party':['Prioritises urgent action on climate change','Supports a Green New Deal and public investment','Advocates for nature protection and environmental legislation'],
+      'Plaid Cymru':['Advocates for Welsh independence or maximum devolution','Supports Welsh language promotion','Opposes Tory and Labour austerity measures'],
+    };
+    var defaults=partyDefaults[party]||[];
+    defaults.forEach(function(d){stances.push(d);});
+  }
+
+  // Dedupe and cap at 4
+  var seen={};
+  var out=[];
+  stances.forEach(function(s){
+    var key=s.slice(0,30);
+    if(!seen[key]){seen[key]=true;out.push(s);}
+  });
+  return out.slice(0,4);
 }
 
 function closeMP(){
