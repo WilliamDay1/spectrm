@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-01T16:09:44Z",
+    "updated": "2026-07-02T13:19:54Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Badenoch urges Burnham to condemn defence investment plan as No 10 says funding is \u2018credible\u2019 \u2013 UK politics live",
-      "date": "1 Jul 2026",
+      "headline": "\u2018Stain on our history\u2019: Starmer issues government apology over forced adoption scandal \u2013 UK politics live",
+      "date": "2 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/01/keir-starmer-andy-burnham-labour-defence-investment-plan-pmqs-kemi-badenoch"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/02/keir-starmer-apology-forced-adoption-labour-andy-burnham-uk-politics-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham says \u2018nothing off table\u2019 in case of Rochdale grooming gang leader",
-      "date": "1 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ministers call for better tracking of teenagers at risk of dropping out of work or training in England",
+      "date": "2 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/01/andy-burnham-says-nothing-off-table-in-case-of-rochdale-grooming-gang-leader"
+      "url": "https://www.theguardian.com/money/2026/jul/02/ministers-better-tracking-teenagers-risk-dropping-out-of-work-training-england"
     },
     {
       "id": "3",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham calls for grooming gang ringleader to be deported",
-      "date": "1 Jul 2026",
+      "headline": "Burnham meets trade union leaders ahead of expected premiership",
+      "date": "2 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0jy53n8q1do?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cwyednjr4mko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "File sent to CPS after sex offence allegations against suspended Labour MP",
-      "date": "1 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/file-sent-to-cps-after-sex-offence-allegations-against-suspended-labour-mp-dan-norris-13559570"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Is Starmer deliberately leaving a mess for Burnham? \u2013 podcast",
+      "date": "2 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/audio/2026/jul/02/is-starmer-deliberately-leaving-a-mess-for-burnham-podcast"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Badenoch accuses Starmer of leaving defence spending 'mess' for Burnham",
-      "date": "1 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy9rgg9ddw2o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "MPs seek to end UK broadcast of Russian cartoon Masha and the Bear",
+      "date": "2 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/tv-and-radio/2026/jul/02/mps-uk-broadcast-russian-cartoon-masha-and-the-bear"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "CPS considering charges against MP after rape arrest",
-      "date": "1 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cp8r1x2614eo?at_medium=RSS&at_campaign=rss"
+      "headline": "No 10 shares \u2018public\u2019s shock\u2019 at reports of convicted people smuggler living in UK",
+      "date": "2 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/02/convicted-people-smuggler-uk-should-deported-tories"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham's plans are a warning to Whitehall, minister says",
-      "date": "1 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c77yeykgxlpo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Whistleblower \u2018terrified\u2019 as Rochdale grooming gang leader released",
+      "date": "2 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/02/release-rochdale-grooming-gang-leader-really-scary-whistleblower"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Is Andy Burnham facing a \u00a35bn defence 'black hole'?",
-      "date": "1 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour failed to prepare for power, admits PM's former top aide",
+      "date": "2 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c14ymy41v5go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ce8j2e38zzgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK national lottery review to give public more say in how funds are spent",
-      "date": "1 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Bitcoin firm advertised by Nigel Farage loses 15% of asset value",
+      "date": "2 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/01/uk-national-lottery-review-public-say-funds-spent"
+      "url": "https://www.theguardian.com/politics/2026/jul/02/bitcoin-firm-advertised-by-nigel-farage-loses-15-percent-asset-value"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Keir Starmer forced on back foot at PMQs over \u2018weak\u2019 defence plan",
-      "date": "1 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/01/keir-starmer-pmqs-defence-investment-plan-kemi-badenoch"
+      "headline": "Forced adoptions 'a stain on our history' says Starmer as he gives formal apology",
+      "date": "2 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c20yq332018o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
