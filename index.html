@@ -760,7 +760,7 @@ async function parlFetch(p){
 
 async function fetchVotes(pid){
   try{
-    const path='/data/divisions.json/membervoting?memberId='+pid+'&take=6';
+    const path='/data/divisions.json/membervoting?memberId='+pid+'&take=25';
     const r=await fetch('/api/votes?path='+encodeURIComponent(path),{headers:{Accept:'application/json'},cache:'no-store'});
     if(!r.ok) return null;
     const text=await r.text();
@@ -1385,18 +1385,25 @@ async function openMP(id,cached){
   // Synopsis text
   var synopsisText=(synopsisData&&synopsisData.value&&typeof synopsisData.value==='string')?synopsisData.value:'';
 
-  // Key votes — field is PublishedDivision.Title (not v.title)
+  // Key votes — filter, score and simplify titles for readability
   var keyVotesHTML='<div style="color:var(--tm);font-size:12px">No vote data available.</div>';
   if(votes&&votes.length){
-    keyVotesHTML=votes.slice(0,6).map(function(v){
-      var title=(v.PublishedDivision&&v.PublishedDivision.Title)?v.PublishedDivision.Title:'Division '+v.divisionId;
-      var aye=v.memberVotedAye;
-      var col=aye?'#1baf7a':'#e34948';
-      return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:.5px solid var(--bd);gap:12px">'+
-        '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+title+'</div>'+
-        '<span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 9px;border-radius:20px">'+(aye?'Aye':'No')+'</span>'+
-      '</div>';
-    }).join('');
+    var scoredVotes=votes.map(function(v){
+      return{v:v,score:voteImportance(v),title:simplifyVoteTitle(v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title:'')};
+    }).filter(function(item){
+      return item.title&&item.score>-3; // drop clearly procedural noise
+    }).sort(function(a,b){return b.score-a.score;});
+    var topVotes=scoredVotes.slice(0,6);
+    if(topVotes.length){
+      keyVotesHTML=topVotes.map(function(item){
+        var aye=item.v.memberVotedAye;
+        var col=aye?'#1baf7a':'#e34948';
+        return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:.5px solid var(--bd);gap:12px">'+
+          '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+item.title+'</div>'+
+          '<span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 9px;border-radius:20px">'+(aye?'Aye':'No')+'</span>'+
+        '</div>';
+      }).join('');
+    }
   }
 
   // Roles section
@@ -1463,7 +1470,129 @@ async function openMP(id,cached){
   }
 
   // Generate AI bio + policy views via Anthropic API
-  // Derive policy views from votes and roles — no external API needed
+  // Simplify a Parliamentary division title into plain English
+function simplifyVoteTitle(raw){
+  if(!raw)return null;
+  var t=raw.trim();
+
+  // Remove amendment/clause noise at the end
+  t=t.replace(/:\s*amendment[s]?\s*[\w\(\),\s\-]*/gi,'');
+  t=t.replace(/:\s*new clause\s*[\d\w]*/gi,'');
+  t=t.replace(/:\s*motion to (disagree|agree)[^$]*/gi,'');
+  t=t.replace(/:\s*clause\s*\d+[^$]*/gi,'');
+  t=t.replace(/\s*\([a-z]\)\s*$/gi,'');
+  t=t.replace(/bill:\s*third reading$/gi,' Bill — Third Reading');
+  t=t.replace(/bill:\s*second reading$/gi,' Bill — Second Reading');
+  t=t.replace(/bill:\s*report stage$/gi,' Bill — Report Stage');
+  t=t.replace(/bill:\s*committee stage$/gi,' Bill — Committee Stage');
+
+  // Known important bills → plain English
+  var known={
+    'king\u2019s speech':'King\u2019s Speech vote',
+    'king’s speech':'King’s Speech vote',
+    'spring statement':'Spring Statement / Budget',
+    'autumn statement':'Autumn Statement / Budget',
+    'budget':'Budget vote',
+    'national insurance':'National Insurance changes',
+    'workers rights act':'Workers’ Rights Act',
+    'employment rights bill':'Employment Rights Bill',
+    'renters reform bill':'Renters Reform Bill',
+    'renters rights bill':'Renters’ Rights Bill',
+    'leasehold reform':'Leasehold Reform',
+    'planning and infrastructure':'Planning and Infrastructure Bill',
+    'housing bill':'Housing Bill',
+    'nhs':'NHS funding vote',
+    'social care':'Social Care vote',
+    'mental health units':'Mental Health Bill',
+    'armed forces':'Armed Forces vote',
+    'defence':'Defence vote',
+    'rwanda':'Rwanda Asylum Bill',
+    'illegal migration':'Illegal Migration Bill',
+    'borders and immigration':'Borders and Immigration Bill',
+    'safety of rwanda':'Rwanda Safety Bill',
+    'net zero':'Net Zero legislation',
+    'great british energy':'Great British Energy Bill',
+    'energy security':'Energy Security Bill',
+    'onshore wind':'Onshore Wind vote',
+    'climate change':'Climate Change vote',
+    'strikes':'Minimum Service Levels / Strikes Bill',
+    'minimum service levels':'Minimum Service Levels Bill',
+    'schools bill':'Schools Bill',
+    'free school meals':'Free School Meals vote',
+    'breakfast clubs':'Breakfast Clubs vote',
+    'universal credit':'Universal Credit vote',
+    'two child benefit':'Two-Child Benefit Cap vote',
+    'welfare reform':'Welfare Reform vote',
+    'disability':'Disability benefits vote',
+    'investigatory powers':'Investigatory Powers Bill',
+    'online safety':'Online Safety Bill',
+    'digital markets':'Digital Markets Bill',
+    'data protection':'Data Protection Bill',
+    'artificial intelligence':'AI regulation vote',
+    'levelling-up':'Levelling-Up Bill',
+    'lords reform':'House of Lords Reform vote',
+    'voting rights':'Voting Rights Bill',
+    'elections bill':'Elections Bill',
+    'recall of mps':'Recall of MPs vote',
+    'privileges':'Privileges Committee vote',
+    'tax':'Tax legislation vote',
+    'corporation tax':'Corporation Tax vote',
+    'stamp duty':'Stamp Duty vote',
+    'windfall tax':'Windfall Tax vote',
+    'gaza':'Gaza ceasefire vote',
+    'ceasefire':'Ceasefire vote',
+    'ukraine':'Ukraine support vote',
+    'devolution':'Devolution vote',
+    'english devolution':'English Devolution Bill',
+    'northern ireland':'Northern Ireland vote',
+    'scottish independence':'Scottish Independence vote',
+    'voting age':'Voting Age vote',
+    'conversion therapy':'Conversion Therapy Ban vote',
+    'equality':'Equality legislation vote',
+    'fishing':'Fishing legislation vote',
+    'tobacco':'Tobacco and Vapes Bill',
+    'vapes':'Tobacco and Vapes Bill',
+    'cannabis':'Cannabis legislation vote',
+    'assisted dying':'Assisted Dying Bill',
+    'euthanasia':'Assisted Dying Bill',
+    'fox hunting':'Fox Hunting vote',
+    'animal welfare':'Animal Welfare vote',
+  };
+
+  var tl=t.toLowerCase();
+  for(var key in known){
+    if(tl.indexOf(key)!==-1)return known[key];
+  }
+
+  // Fall back to cleaned-up original, capped at 60 chars
+  t=t.replace(/\s+/g,' ').trim();
+  if(t.length>60)t=t.slice(0,57)+'…';
+  return t||null;
+}
+
+// Score a vote for importance — higher = more significant
+function voteImportance(v){
+  var t=(v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title:'').toLowerCase();
+  var score=0;
+  // High-profile topics get boosted
+  var highProfile=['gaza','ceasefire','assisted dying','ukraine','rwanda','two child','welfare','net zero',
+    'nhs','workers rights','employment rights','renters','king\u2019s speech','budget','autumn statement',
+    'spring statement','national insurance','lords reform','tobacco','assisted dying','iraq','afghan',
+    'abortion','free school meals','breakfast club'];
+  highProfile.forEach(function(kw){if(t.indexOf(kw)!==-1)score+=3;});
+  // Procedural/irrelevant votes get penalised
+  var noise=['amendment','lords amendment','standing order','programme motion','carry-over',
+    'money resolution','ways and means','second reading committee','reasoned amendment',
+    'timetable','suspension','sitting','motion for a humble address'];
+  noise.forEach(function(kw){if(t.indexOf(kw)!==-1)score-=2;});
+  // Final division (third reading) preferred over committee stages
+  if(t.indexOf('third reading')!==-1)score+=1;
+  if(t.indexOf('report stage')!==-1)score+=0;
+  if(t.indexOf('second reading')!==-1)score-=1;
+  return score;
+}
+
+// Derive policy views from votes and roles — no external API needed
   var policyEl=document.getElementById('mp-ai-policy');
   if(policyEl){
     var policies=derivePolicyViews(name,party,allRoles,votes,bio);
