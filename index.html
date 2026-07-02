@@ -103,18 +103,25 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .ntime{font-size:10px;color:var(--tm);margin-top:2px}
 /* POLITICIANS */
 .mpg{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
-.mpc{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform .12s,box-shadow .12s;border-top:3px solid;display:flex;flex-direction:column}
+.mpc{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .15s;border-top:3px solid transparent}
 .mpc:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
-.mpc-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block;background:var(--s1)}
-.mpc-photo-placeholder{width:100%;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600}
-.mpc-body{padding:10px 10px 8px;display:flex;flex-direction:column;flex:1;min-height:0}
-.mpc-name{font-size:12px;font-weight:600;color:var(--tp);line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:2.7em}
-.mpc-con{font-size:10px;color:var(--tm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mpc-job{font-size:10px;color:var(--ts);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:1.5em;margin-top:2px;margin-bottom:6px}
-.mpc-party{margin-top:auto;padding-top:8px}
-.mpc-role{font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.mpdp{display:none}
+.mpc-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:top center;background:var(--s1);display:block}
+.mpc-photo-placeholder{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:600}
+.mpc-body{padding:10px}
+.mpc-name{font-size:12px;font-weight:600;color:var(--tp);margin-bottom:2px;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.mpc-con{font-size:10px;color:var(--tm);margin-bottom:4px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.mpc-job{font-size:10px;color:var(--ts);margin-bottom:8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-height:1.4em}
+.mpc-party{}
+.mpc-role{font-size:9px;font-weight:600;padding:2px 7px;border-radius:20px;display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.mp-detail{background:var(--s2);border-radius:14px;overflow:hidden}
+.mp-detail-photo{width:90px;height:110px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0;background:var(--s1)}
+.mp-detail-photo-ph{width:90px;height:110px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700}
+.mp-section{padding:14px 20px;border-bottom:.5px solid var(--bd)}
+.mp-section:last-child{border-bottom:none}
+.mp-section-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:10px}
+.mp-role-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;font-size:12px;color:var(--ts);line-height:1.4}
 /* SEARCH */
+
 
 .search-inp{width:100%;font-size:13px;padding:9px 13px;border:.5px solid var(--bd);border-radius:8px;background:var(--s2);color:var(--tp);margin-bottom:10px}
 .search-inp:focus{outline:none;border-color:var(--brand)}
