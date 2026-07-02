@@ -762,11 +762,18 @@ async function fetchVotes(pid){
   try{
     const path='/data/divisions.json/membervoting?memberId='+pid+'&take=25';
     const r=await fetch('/api/votes?path='+encodeURIComponent(path),{headers:{Accept:'application/json'},cache:'no-store'});
-    if(!r.ok) return null;
+    if(!r.ok){console.warn('Votes API status:',r.status);return null;}
     const text=await r.text();
     if(!text)return null;
-    try{return JSON.parse(text);}catch(e2){return null;}
-  }catch(e){return null;}
+    var parsed;
+    try{parsed=JSON.parse(text);}catch(e2){console.warn('Votes parse error:',e2);return null;}
+    // API returns bare array OR sometimes wrapped in an object
+    if(Array.isArray(parsed))return parsed;
+    if(parsed&&Array.isArray(parsed.items))return parsed.items;
+    if(parsed&&Array.isArray(parsed.value))return parsed.value;
+    console.warn('Votes unexpected shape:',JSON.stringify(parsed).slice(0,200));
+    return null;
+  }catch(e){console.warn('Votes fetch error:',e);return null;}
 }
 
 // Featured/priority MPs shown at top (Parliament member IDs)
@@ -1451,6 +1458,7 @@ async function openMP(id,cached){
   fetchVotes(id).then(function(votes){
     var votesEl=document.getElementById('mp-votes-content');
     if(!votesEl)return;
+    console.log('Votes received:',votes?votes.length:'null',votes&&votes[0]?JSON.stringify(votes[0]).slice(0,100):'');
     var v=votes||[];
     if(!v.length){votesEl.innerHTML='<div style="font-size:12px;color:var(--tm)">No vote data available.</div>';return;}
     var scored=v.map(function(vt){
