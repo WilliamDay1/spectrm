@@ -1478,7 +1478,7 @@ async function openMP(id,cached){
     '\n\nBe factual and neutral. For policies, focus on their known positions, what they campaign on, or their voting record themes.';
 
   try{
-    var aiResp=await fetch('https://api.anthropic.com/v1/messages',{
+    var aiResp=await fetch('/api/ai',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
