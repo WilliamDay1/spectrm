@@ -1009,6 +1009,13 @@ function cleanMPName(name){
 }
 
 async function renderMPs(){
+  // Clear search, restore key figures visibility
+  var searchEl=document.getElementById('mps');
+  if(searchEl)searchEl.value='';
+  var kf=document.getElementById('mp-key-figures');
+  var allHdr=document.getElementById('mp-all-header');
+  if(kf)kf.style.display='contents';
+  if(allHdr)allHdr.style.display='';
   ALL_MPs=[];MP_PAGE=0;MP_PARTY_FILTER='all';window.FEATURED_ID_SET=new Set();
   var pillsEl=document.getElementById('mp-party-pills');
   if(pillsEl){
@@ -1041,10 +1048,16 @@ async function loadFeaturedMPs(){
   if(!grid)return;
   grid.innerHTML='';
 
+  // Wrapper so we can hide/show all key figures at once during search
+  var kfWrap=document.createElement('div');
+  kfWrap.id='mp-key-figures';
+  kfWrap.style.cssText='display:contents';
+  grid.appendChild(kfWrap);
+
   var hdr=document.createElement('div');
   hdr.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:4px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr.textContent='Key figures';
-  grid.appendChild(hdr);
+  kfWrap.appendChild(hdr);
 
   // Step 1: Fetch all featured names in parallel (fast — search endpoint)
   var allNames=FEATURED_NAMES;
@@ -1074,7 +1087,7 @@ async function loadFeaturedMPs(){
     var subHdr=document.createElement('div');
     subHdr.style.cssText='grid-column:1/-1;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ts);opacity:.7;padding:8px 0 4px';
     subHdr.textContent=tier.label;
-    grid.appendChild(subHdr);
+    kfWrap.appendChild(subHdr);
 
     // Party leaders tier: render non-MP figures first (Polanski after MPs)
     // For MP leaders: render in the order of FEATURED_LEADERS array
@@ -1089,17 +1102,18 @@ async function loadFeaturedMPs(){
         roleLabel:null,
       };
       ALL_MPs.push(mp);
-      renderMPCard(mp,grid,true);
+      renderMPCard(mp,kfWrap,true);
     });
 
     // After party leader MPs, add non-MP figures (Polanski)
     if(tier.label==='Party leaders'){
-      NON_MP_FIGURES.forEach(function(fig){renderNonMPCard(fig,grid);});
+      NON_MP_FIGURES.forEach(function(fig){renderNonMPCard(fig,kfWrap);});
     }
   });
 
   // All MPs header + sentinel
   var hdr2=document.createElement('div');
+  hdr2.id='mp-all-header';
   hdr2.style.cssText='grid-column:1/-1;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);padding:12px 0 8px;border-bottom:.5px solid var(--bd);margin-bottom:4px';
   hdr2.textContent='All MPs';
   grid.appendChild(hdr2);
@@ -1297,7 +1311,14 @@ function openNonMP(fig){
 var MP_SEARCH_DEBOUNCE=null;
 function filterMPs(){
   if(MP_SEARCH_DEBOUNCE)clearTimeout(MP_SEARCH_DEBOUNCE);
-  MP_SEARCH_DEBOUNCE=setTimeout(function(){loadMPs(true);},350);
+  MP_SEARCH_DEBOUNCE=setTimeout(function(){
+    var q=(document.getElementById('mps')||{value:''}).value.trim();
+    var kf=document.getElementById('mp-key-figures');
+    var allHdr=document.getElementById('mp-all-header');
+    if(kf){kf.style.display=q?'none':'contents';}
+    if(allHdr){allHdr.style.display=q?'none':'';}
+    loadMPs(true);
+  },350);
 }
 
 function setMPParty(party,el){
@@ -1319,6 +1340,7 @@ function setMPParty(party,el){
 }
 
 async function openMP(id,cached){
+  // Create or reuse modal
   var modal=document.getElementById('mp-modal');
   if(!modal){
     modal=document.createElement('div');
@@ -1327,26 +1349,30 @@ async function openMP(id,cached){
     modal.addEventListener('click',function(e){if(e.target===modal)closeMP();});
     document.body.appendChild(modal);
   }
-  modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;overflow:hidden"><div style="padding:20px;text-align:center;color:var(--tm)">Loading...</div></div>';
   modal.style.display='flex';
+  modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:580px;margin:auto;padding:24px;text-align:center;color:var(--tm)"><div style="font-size:22px;margin-bottom:8px">⟳</div>Loading profile...</div>';
 
-  // Basic info (overview endpoint — name, party, constituency, photo)
-  var data=await parlFetch('/Members/'+id);
+  // Fetch basic info, biography, and synopsis in parallel
+  var results=await Promise.all([
+    parlFetch('/Members/'+id),
+    parlFetch('/Members/'+id+'/Biography'),
+    parlFetch('/Members/'+id+'/Synopsis'),
+    fetchVotes(id),
+  ]);
+  var data=results[0], bio=results[1], synopsisData=results[2], votes=results[3];
+
   if(!data||!data.value){
-    modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;padding:20px"><button onclick="closeMP()" style="background:none;border:none;cursor:pointer;font-size:20px;float:right">✕</button><p style="color:var(--tm)">Could not load MP.</p></div>';
+    modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:580px;margin:auto;padding:24px"><button onclick="closeMP()" style="float:right;background:none;border:none;cursor:pointer;font-size:20px;color:var(--ts)">✕</button><p style="color:var(--tm)">Could not load MP.</p></div>';
     return;
   }
+
   var raw=data.value;
-  var m={id:raw.id,name:raw.nameDisplayAs,
-     party:(function(){var rp=raw.latestParty?raw.latestParty.name:'Independent';return(raw.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})(),
-     con:raw.latestHouseMembership?raw.latestHouseMembership.membershipFrom:''};
+  var party=(function(){var rp=raw.latestParty?raw.latestParty.name:'Independent';return(raw.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})();
+  var p=mpPartyStyle(party);
+  var name=cleanMPName(raw.nameDisplayAs);
+  var con=raw.latestHouseMembership?raw.latestHouseMembership.membershipFrom:'';
 
-  var p=mpPartyStyle(m.party);
-
-  // Biography endpoint — the correct source for roles, committees, synopsis text
-  var bio=await parlFetch('/Members/'+id+'/Biography');
-  var synopsisData=await parlFetch('/Members/'+id+'/Synopsis');
-
+  // Current roles from biography
   var allRoles=[];
   if(bio&&bio.value){
     var gov=(bio.value.governmentPosts||[]).filter(function(r){return!r.endDate;});
@@ -1356,58 +1382,79 @@ async function openMP(id,cached){
     allRoles=gov.concat(opp).concat(other).concat(committees);
   }
 
+  // Synopsis text
+  var synopsisText=(synopsisData&&synopsisData.value&&typeof synopsisData.value==='string')?synopsisData.value:'';
+
+  // Key votes — field is PublishedDivision.Title (not v.title)
+  var keyVotesHTML='<div style="color:var(--tm);font-size:12px">No vote data available.</div>';
+  if(votes&&votes.length){
+    keyVotesHTML=votes.slice(0,6).map(function(v){
+      var title=(v.PublishedDivision&&v.PublishedDivision.Title)?v.PublishedDivision.Title:'Division '+v.divisionId;
+      var aye=v.memberVotedAye;
+      var col=aye?'#1baf7a':'#e34948';
+      return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:.5px solid var(--bd);gap:12px">'+
+        '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+title+'</div>'+
+        '<span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 9px;border-radius:20px">'+(aye?'Aye':'No')+'</span>'+
+      '</div>';
+    }).join('');
+  }
+
+  // Roles section
   var rolesHTML='';
   if(allRoles.length){
-    rolesHTML='<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
-      '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:10px">Current roles</div>'+
-      allRoles.map(function(role){
-        return '<div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:7px">'+
-          '<span style="color:'+p.c+';flex-shrink:0;margin-top:2px;font-size:10px">◆</span>'+
-          '<span style="font-size:12px;color:var(--ts);line-height:1.4">'+role.name+'</span></div>';
+    rolesHTML='<div class="mp-section">'+
+      '<div class="mp-section-title">Current roles</div>'+
+      allRoles.map(function(r){
+        return '<div style="display:flex;gap:8px;margin-bottom:6px">'+
+          '<span style="color:'+p.c+';flex-shrink:0;font-size:10px;margin-top:2px">◆</span>'+
+          '<span style="font-size:12px;color:var(--ts);line-height:1.4">'+r.name+'</span></div>';
       }).join('')+
     '</div>';
   }
 
-  var synopsisText=(synopsisData&&synopsisData.value&&typeof synopsisData.value==='string')?synopsisData.value:'';
-  var bioHTML='';
-  if(synopsisText){
-    bioHTML='<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
-      '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Biography</div>'+
-      '<div style="font-size:12px;color:var(--ts);line-height:1.7">'+synopsisText+'</div>'+
-    '</div>';
-  }
-
-  var votesHTML='<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
-    '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Recent votes</div>'+
-    '<div id="mp-votes-loading" style="font-size:12px;color:var(--tm)">Loading votes...</div>'+
-  '</div>';
-
   var profileUrl='https://members.parliament.uk/member/'+id+'/career';
 
   modal.innerHTML=
-    '<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;overflow:hidden">'+
-      '<div style="padding:16px 20px;border-bottom:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">'+
+    '<div style="background:var(--s2);border-radius:14px;width:100%;max-width:580px;margin:auto;overflow:hidden">'+
+      // Header
+      '<div style="padding:14px 20px;border-bottom:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">'+
         '<div style="font-size:12px;font-weight:500;color:var(--tm)">MP Profile</div>'+
-        '<button onclick="closeMP()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px;color:var(--ts);display:flex;align-items:center;justify-content:center">✕</button>'+
+        '<button onclick="closeMP()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:15px;color:var(--ts)">✕</button>'+
       '</div>'+
-      '<div style="padding:20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
-        '<div id="mp-detail-photo-wrap" style="width:85px;height:105px;border-radius:10px;overflow:hidden;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:'+p.c+'">'+mpIni(m.name)+'</div>'+
+      // Hero
+      '<div style="padding:18px 20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
+        '<div id="mpphw" style="width:80px;height:100px;border-radius:10px;overflow:hidden;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:'+p.c+'">'+mpIni(raw.nameDisplayAs)+'</div>'+
         '<div style="flex:1;min-width:0">'+
-          '<div style="font-size:18px;font-weight:600;color:var(--tp);margin-bottom:3px;line-height:1.3">'+cleanMPName(m.name)+'</div>'+
-          '<div style="font-size:12px;color:var(--tm);margin-bottom:8px">'+m.con+'</div>'+
-          '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+m.party+'</span>'+
-          (allRoles.length?'<div style="font-size:11px;color:var(--ts);margin-top:8px;font-style:italic">'+allRoles[0].name+'</div>':'')+
+          '<div style="font-size:17px;font-weight:700;color:var(--tp);line-height:1.3;margin-bottom:3px">'+name+'</div>'+
+          '<div style="font-size:12px;color:var(--tm);margin-bottom:8px">'+con+'</div>'+
+          '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+party+'</span>'+
+          (allRoles.length?'<div style="font-size:11px;color:var(--ts);margin-top:7px;line-height:1.4">'+shortenRoleTitle(allRoles[0].name)+'</div>':'')+
         '</div>'+
       '</div>'+
       rolesHTML+
-      bioHTML+
-      votesHTML+
+      // Biography
+      (synopsisText?
+        '<div class="mp-section">'+
+          '<div class="mp-section-title">Biography</div>'+
+          '<div style="font-size:12px;color:var(--ts);line-height:1.75">'+synopsisText+'</div>'+
+        '</div>':'<div class="mp-section"><div id="mp-ai-bio"><div style="font-size:12px;color:var(--tm)">Generating biography...</div></div></div>')+
+      // Key policy views — AI generated
+      '<div class="mp-section">'+
+        '<div class="mp-section-title">Key policy views</div>'+
+        '<div id="mp-ai-policy" style="font-size:12px;color:var(--tm)">Generating policy summary...</div>'+
+      '</div>'+
+      // Key votes
+      '<div class="mp-section">'+
+        '<div class="mp-section-title">Key votes</div>'+
+        keyVotesHTML+
+      '</div>'+
       '<div style="padding:12px 20px">'+
         '<a href="'+profileUrl+'" target="_blank" style="font-size:11px;color:var(--brand);text-decoration:none;font-weight:500">View full Parliament profile ↗</a>'+
       '</div>'+
     '</div>';
 
-  var photoWrap=document.getElementById('mp-detail-photo-wrap');
+  // Load photo async
+  var photoWrap=document.getElementById('mpphw');
   if(photoWrap){
     var img=document.createElement('img');
     img.style.cssText='width:100%;height:100%;object-fit:cover;object-position:top';
@@ -1415,20 +1462,56 @@ async function openMP(id,cached){
     img.addEventListener('load',function(){photoWrap.innerHTML='';photoWrap.appendChild(img);});
   }
 
-  var votes=await fetchVotes(id);
-  var votesEl=document.getElementById('mp-votes-loading');
-  if(votesEl){
-    if(votes&&votes.length){
-      votesEl.outerHTML=votes.slice(0,6).map(function(v){
-        var col=v.memberVotedAye?'#1baf7a':'#e34948';
-        return'<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:.5px solid var(--bd);gap:10px">'+
-          '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+v.title+'</div>'+
-          '<span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 8px;border-radius:20px">'+(v.memberVotedAye?'Aye':'No')+'</span>'+
+  // Generate AI bio + policy views via Anthropic API
+  var partyHistory=bio&&bio.value?
+    (bio.value.partyAffiliations||[]).map(function(a){return a.name;}).join(', '):'';
+  var pastRoles=bio&&bio.value?
+    (bio.value.governmentPosts||[]).concat(bio.value.oppositionPosts||[]).concat(bio.value.otherPosts||[])
+    .filter(function(r){return r.endDate;}).slice(0,5).map(function(r){return r.name;}).join(', '):'';
+
+  var prompt='Write a concise but informative political profile for '+name+
+    ', MP for '+con+', '+party+' party.'+
+    (synopsisText?' Parliament synopsis: '+synopsisText:'')+
+    (pastRoles?' Past roles include: '+pastRoles+'.':'')+
+    '\n\nRespond with JSON only, no markdown, in this exact format: '+
+    '{"bio":"2-3 sentence biography covering background and political career","policies":["Short policy stance 1","Short policy stance 2","Short policy stance 3","Short policy stance 4"]}'+
+    '\n\nBe factual and neutral. For policies, focus on their known positions, what they campaign on, or their voting record themes.';
+
+  try{
+    var aiResp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-6',
+        max_tokens:400,
+        messages:[{role:'user',content:prompt}]
+      })
+    });
+    var aiData=await aiResp.json();
+    var aiText=aiData.content&&aiData.content[0]?aiData.content[0].text:'';
+    var parsed=JSON.parse(aiText.replace(/```json|```/g,'').trim());
+
+    var bioPanelEl=document.getElementById('mp-ai-bio');
+    var policyEl=document.getElementById('mp-ai-policy');
+
+    if(bioPanelEl&&parsed.bio){
+      bioPanelEl.innerHTML='<div style="font-size:12px;color:var(--ts);line-height:1.75">'+parsed.bio+'</div>';
+    }
+    if(policyEl&&parsed.policies&&parsed.policies.length){
+      policyEl.innerHTML=parsed.policies.map(function(pol){
+        return '<div style="display:flex;gap:8px;margin-bottom:8px">'+
+          '<span style="color:'+p.c+';flex-shrink:0;margin-top:1px">•</span>'+
+          '<span style="color:var(--ts);line-height:1.5">'+pol+'</span>'+
         '</div>';
       }).join('');
-    } else {
-      votesEl.textContent='No recent vote data available.';
+    } else if(policyEl){
+      policyEl.textContent='Policy views not available.';
     }
+  }catch(err){
+    var bioPanelEl=document.getElementById('mp-ai-bio');
+    var policyEl=document.getElementById('mp-ai-policy');
+    if(bioPanelEl)bioPanelEl.innerHTML='<div style="font-size:12px;color:var(--ts);line-height:1.75">'+synopsisText+'</div>';
+    if(policyEl)policyEl.textContent='Policy views not available.';
   }
 }
 
