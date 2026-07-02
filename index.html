@@ -1340,7 +1340,6 @@ function setMPParty(party,el){
 }
 
 async function openMP(id,cached){
-  // Create or reuse modal
   var modal=document.getElementById('mp-modal');
   if(!modal){
     modal=document.createElement('div');
@@ -1350,117 +1349,50 @@ async function openMP(id,cached){
     document.body.appendChild(modal);
   }
   modal.style.display='flex';
-  modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:580px;margin:auto;padding:24px;text-align:center;color:var(--tm)"><div style="font-size:22px;margin-bottom:8px">⟳</div>Loading profile...</div>';
 
-  // Fetch basic info, biography, and synopsis in parallel
-  var results=await Promise.all([
-    parlFetch('/Members/'+id),
-    parlFetch('/Members/'+id+'/Biography'),
-    parlFetch('/Members/'+id+'/Synopsis'),
-    fetchVotes(id),
-  ]);
-  var data=results[0], bio=results[1], synopsisData=results[2], votes=results[3];
-
-  if(!data||!data.value){
-    modal.innerHTML='<div style="background:var(--s2);border-radius:14px;width:100%;max-width:580px;margin:auto;padding:24px"><button onclick="closeMP()" style="float:right;background:none;border:none;cursor:pointer;font-size:20px;color:var(--ts)">✕</button><p style="color:var(--tm)">Could not load MP.</p></div>';
-    return;
-  }
-
-  var raw=data.value;
-  var party=(function(){var rp=raw.latestParty?raw.latestParty.name:'Independent';return(raw.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})();
+  // Use cached card data to render INSTANTLY — no waiting for API
+  var name=cached?cleanMPName(cached.name||''):'';
+  var party=cached?cached.party||'Independent':'Independent';
+  var con=cached?cached.con||'':'';
+  var roleLabel=cached?cached.roleLabel||'':'';
   var p=mpPartyStyle(party);
-  var name=cleanMPName(raw.nameDisplayAs);
-  var con=raw.latestHouseMembership?raw.latestHouseMembership.membershipFrom:'';
 
-  // Current roles from biography
-  var allRoles=[];
-  if(bio&&bio.value){
-    var gov=(bio.value.governmentPosts||[]).filter(function(r){return!r.endDate;});
-    var opp=(bio.value.oppositionPosts||[]).filter(function(r){return!r.endDate;});
-    var other=(bio.value.otherPosts||[]).filter(function(r){return!r.endDate;});
-    var committees=(bio.value.committeeMemberships||[]).filter(function(r){return!r.endDate;});
-    allRoles=gov.concat(opp).concat(other).concat(committees);
-  }
-
-  // Synopsis text
-  var synopsisText=(synopsisData&&synopsisData.value&&typeof synopsisData.value==='string')?synopsisData.value:'';
-
-  // Key votes — filter, score and simplify titles for readability
-  var keyVotesHTML='<div style="color:var(--tm);font-size:12px">No vote data available.</div>';
-  if(votes&&votes.length){
-    var scoredVotes=votes.map(function(v){
-      return{v:v,score:voteImportance(v),title:simplifyVoteTitle(v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title:'')};
-    }).filter(function(item){
-      return item.title&&item.score>-3; // drop clearly procedural noise
-    }).sort(function(a,b){return b.score-a.score;});
-    var topVotes=scoredVotes.slice(0,6);
-    if(topVotes.length){
-      keyVotesHTML=topVotes.map(function(item){
-        var aye=item.v.memberVotedAye;
-        var col=aye?'#1baf7a':'#e34948';
-        return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:.5px solid var(--bd);gap:12px">'+
-          '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+item.title+'</div>'+
-          '<span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 9px;border-radius:20px">'+(aye?'Aye':'No')+'</span>'+
-        '</div>';
-      }).join('');
-    }
-  }
-
-  // Roles section
-  var rolesHTML='';
-  if(allRoles.length){
-    rolesHTML='<div class="mp-section">'+
-      '<div class="mp-section-title">Current roles</div>'+
-      allRoles.map(function(r){
-        return '<div style="display:flex;gap:8px;margin-bottom:6px">'+
-          '<span style="color:'+p.c+';flex-shrink:0;font-size:10px;margin-top:2px">◆</span>'+
-          '<span style="font-size:12px;color:var(--ts);line-height:1.4">'+r.name+'</span></div>';
-      }).join('')+
-    '</div>';
-  }
-
-  var profileUrl='https://members.parliament.uk/member/'+id+'/career';
-
+  // Show full modal immediately with what we have
   modal.innerHTML=
     '<div style="background:var(--s2);border-radius:14px;width:100%;max-width:580px;margin:auto;overflow:hidden">'+
-      // Header
       '<div style="padding:14px 20px;border-bottom:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">'+
         '<div style="font-size:12px;font-weight:500;color:var(--tm)">MP Profile</div>'+
         '<button onclick="closeMP()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:15px;color:var(--ts)">✕</button>'+
       '</div>'+
-      // Hero
       '<div style="padding:18px 20px;display:flex;gap:16px;align-items:flex-start;border-bottom:.5px solid var(--bd)">'+
-        '<div id="mpphw" style="width:80px;height:100px;border-radius:10px;overflow:hidden;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:'+p.c+'">'+mpIni(raw.nameDisplayAs)+'</div>'+
+        '<div id="mpphw" style="width:80px;height:100px;border-radius:10px;overflow:hidden;flex-shrink:0;background:'+p.bg+';display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:'+p.c+'">'+mpIni(name||String(id))+'</div>'+
         '<div style="flex:1;min-width:0">'+
-          '<div style="font-size:17px;font-weight:700;color:var(--tp);line-height:1.3;margin-bottom:3px">'+name+'</div>'+
+          '<div style="font-size:17px;font-weight:700;color:var(--tp);line-height:1.3;margin-bottom:3px">'+(name||'Loading...')+'</div>'+
           '<div style="font-size:12px;color:var(--tm);margin-bottom:8px">'+con+'</div>'+
           '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+party+'</span>'+
-          (allRoles.length?'<div style="font-size:11px;color:var(--ts);margin-top:7px;line-height:1.4">'+shortenRoleTitle(allRoles[0].name)+'</div>':'')+
+          (roleLabel?'<div style="font-size:11px;color:var(--ts);margin-top:7px;line-height:1.4">'+roleLabel+'</div>':'')+
         '</div>'+
       '</div>'+
-      rolesHTML+
-      // Biography
-      (synopsisText?
-        '<div class="mp-section">'+
-          '<div class="mp-section-title">Biography</div>'+
-          '<div style="font-size:12px;color:var(--ts);line-height:1.75">'+synopsisText+'</div>'+
-        '</div>':'<div class="mp-section"><div id="mp-ai-bio"><div style="font-size:12px;color:var(--tm)">Generating biography...</div></div></div>')+
-      // Key policy views — AI generated
+      // Placeholders for async-loaded sections
+      '<div id="mp-roles-section"></div>'+
+      '<div class="mp-section">'+
+        '<div class="mp-section-title">Biography</div>'+
+        '<div id="mp-bio-content" style="font-size:12px;color:var(--tm)">Loading...</div>'+
+      '</div>'+
       '<div class="mp-section">'+
         '<div class="mp-section-title">Key policy views</div>'+
-        '<div id="mp-ai-policy" style="font-size:12px;color:var(--tm)">Generating policy summary...</div>'+
+        '<div id="mp-ai-policy" style="font-size:12px;color:var(--tm)">Loading...</div>'+
       '</div>'+
-      // Key votes
       '<div class="mp-section">'+
         '<div class="mp-section-title">Key votes</div>'+
-        keyVotesHTML+
+        '<div id="mp-votes-content" style="font-size:12px;color:var(--tm)">Loading...</div>'+
       '</div>'+
       '<div style="padding:12px 20px">'+
-        '<a href="'+profileUrl+'" target="_blank" style="font-size:11px;color:var(--brand);text-decoration:none;font-weight:500">View full Parliament profile ↗</a>'+
+        '<a href="https://members.parliament.uk/member/'+id+'/career" target="_blank" style="font-size:11px;color:var(--brand);text-decoration:none;font-weight:500">View full Parliament profile ↗</a>'+
       '</div>'+
     '</div>';
 
-  // Load photo async
+  // Load photo immediately (often cached by browser from card)
   var photoWrap=document.getElementById('mpphw');
   if(photoWrap){
     var img=document.createElement('img');
@@ -1469,144 +1401,90 @@ async function openMP(id,cached){
     img.addEventListener('load',function(){photoWrap.innerHTML='';photoWrap.appendChild(img);});
   }
 
-  // Generate AI bio + policy views via Anthropic API
-  // Simplify a Parliamentary division title into plain English
-function simplifyVoteTitle(raw){
-  if(!raw)return null;
-  var t=raw.trim();
+  // Now fire all API calls in parallel — patch results in as they arrive
+  var bioPromise=parlFetch('/Members/'+id+'/Biography');
+  var synopsisPromise=parlFetch('/Members/'+id+'/Synopsis');
+  var votesPromise=fetchVotes(id);
 
-  // Remove amendment/clause noise at the end
-  t=t.replace(/:\s*amendment[s]?\s*[\w\(\),\s\-]*/gi,'');
-  t=t.replace(/:\s*new clause\s*[\d\w]*/gi,'');
-  t=t.replace(/:\s*motion to (disagree|agree)[^$]*/gi,'');
-  t=t.replace(/:\s*clause\s*\d+[^$]*/gi,'');
-  t=t.replace(/\s*\([a-z]\)\s*$/gi,'');
-  t=t.replace(/bill:\s*third reading$/gi,' Bill — Third Reading');
-  t=t.replace(/bill:\s*second reading$/gi,' Bill — Second Reading');
-  t=t.replace(/bill:\s*report stage$/gi,' Bill — Report Stage');
-  t=t.replace(/bill:\s*committee stage$/gi,' Bill — Committee Stage');
-
-  // Known important bills → plain English
-  var known={
-    'king\u2019s speech':'King\u2019s Speech vote',
-    'king’s speech':'King’s Speech vote',
-    'spring statement':'Spring Statement / Budget',
-    'autumn statement':'Autumn Statement / Budget',
-    'budget':'Budget vote',
-    'national insurance':'National Insurance changes',
-    'workers rights act':'Workers’ Rights Act',
-    'employment rights bill':'Employment Rights Bill',
-    'renters reform bill':'Renters Reform Bill',
-    'renters rights bill':'Renters’ Rights Bill',
-    'leasehold reform':'Leasehold Reform',
-    'planning and infrastructure':'Planning and Infrastructure Bill',
-    'housing bill':'Housing Bill',
-    'nhs':'NHS funding vote',
-    'social care':'Social Care vote',
-    'mental health units':'Mental Health Bill',
-    'armed forces':'Armed Forces vote',
-    'defence':'Defence vote',
-    'rwanda':'Rwanda Asylum Bill',
-    'illegal migration':'Illegal Migration Bill',
-    'borders and immigration':'Borders and Immigration Bill',
-    'safety of rwanda':'Rwanda Safety Bill',
-    'net zero':'Net Zero legislation',
-    'great british energy':'Great British Energy Bill',
-    'energy security':'Energy Security Bill',
-    'onshore wind':'Onshore Wind vote',
-    'climate change':'Climate Change vote',
-    'strikes':'Minimum Service Levels / Strikes Bill',
-    'minimum service levels':'Minimum Service Levels Bill',
-    'schools bill':'Schools Bill',
-    'free school meals':'Free School Meals vote',
-    'breakfast clubs':'Breakfast Clubs vote',
-    'universal credit':'Universal Credit vote',
-    'two child benefit':'Two-Child Benefit Cap vote',
-    'welfare reform':'Welfare Reform vote',
-    'disability':'Disability benefits vote',
-    'investigatory powers':'Investigatory Powers Bill',
-    'online safety':'Online Safety Bill',
-    'digital markets':'Digital Markets Bill',
-    'data protection':'Data Protection Bill',
-    'artificial intelligence':'AI regulation vote',
-    'levelling-up':'Levelling-Up Bill',
-    'lords reform':'House of Lords Reform vote',
-    'voting rights':'Voting Rights Bill',
-    'elections bill':'Elections Bill',
-    'recall of mps':'Recall of MPs vote',
-    'privileges':'Privileges Committee vote',
-    'tax':'Tax legislation vote',
-    'corporation tax':'Corporation Tax vote',
-    'stamp duty':'Stamp Duty vote',
-    'windfall tax':'Windfall Tax vote',
-    'gaza':'Gaza ceasefire vote',
-    'ceasefire':'Ceasefire vote',
-    'ukraine':'Ukraine support vote',
-    'devolution':'Devolution vote',
-    'english devolution':'English Devolution Bill',
-    'northern ireland':'Northern Ireland vote',
-    'scottish independence':'Scottish Independence vote',
-    'voting age':'Voting Age vote',
-    'conversion therapy':'Conversion Therapy Ban vote',
-    'equality':'Equality legislation vote',
-    'fishing':'Fishing legislation vote',
-    'tobacco':'Tobacco and Vapes Bill',
-    'vapes':'Tobacco and Vapes Bill',
-    'cannabis':'Cannabis legislation vote',
-    'assisted dying':'Assisted Dying Bill',
-    'euthanasia':'Assisted Dying Bill',
-    'fox hunting':'Fox Hunting vote',
-    'animal welfare':'Animal Welfare vote',
-  };
-
-  var tl=t.toLowerCase();
-  for(var key in known){
-    if(tl.indexOf(key)!==-1)return known[key];
-  }
-
-  // Fall back to cleaned-up original, capped at 60 chars
-  t=t.replace(/\s+/g,' ').trim();
-  if(t.length>60)t=t.slice(0,57)+'…';
-  return t||null;
-}
-
-// Score a vote for importance — higher = more significant
-function voteImportance(v){
-  var t=(v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title:'').toLowerCase();
-  var score=0;
-  // High-profile topics get boosted
-  var highProfile=['gaza','ceasefire','assisted dying','ukraine','rwanda','two child','welfare','net zero',
-    'nhs','workers rights','employment rights','renters','king\u2019s speech','budget','autumn statement',
-    'spring statement','national insurance','lords reform','tobacco','assisted dying','iraq','afghan',
-    'abortion','free school meals','breakfast club'];
-  highProfile.forEach(function(kw){if(t.indexOf(kw)!==-1)score+=3;});
-  // Procedural/irrelevant votes get penalised
-  var noise=['amendment','lords amendment','standing order','programme motion','carry-over',
-    'money resolution','ways and means','second reading committee','reasoned amendment',
-    'timetable','suspension','sitting','motion for a humble address'];
-  noise.forEach(function(kw){if(t.indexOf(kw)!==-1)score-=2;});
-  // Final division (third reading) preferred over committee stages
-  if(t.indexOf('third reading')!==-1)score+=1;
-  if(t.indexOf('report stage')!==-1)score+=0;
-  if(t.indexOf('second reading')!==-1)score-=1;
-  return score;
-}
-
-// Derive policy views from votes and roles — no external API needed
-  var policyEl=document.getElementById('mp-ai-policy');
-  if(policyEl){
-    var policies=derivePolicyViews(name,party,allRoles,votes,bio);
-    if(policies.length){
-      policyEl.innerHTML=policies.map(function(pol){
-        return '<div style="display:flex;gap:8px;margin-bottom:8px">'+
-          '<span style="color:'+p.c+';flex-shrink:0;margin-top:1px">•</span>'+
-          '<span style="color:var(--ts);line-height:1.5">'+pol+'</span>'+
-        '</div>';
-      }).join('');
-    } else {
-      policyEl.innerHTML='<div style="font-size:12px;color:var(--tm)">Vote and role data insufficient to determine policy positions.</div>';
+  // Biography + roles (when Biography endpoint responds)
+  bioPromise.then(function(bio){
+    var allRoles=[];
+    if(bio&&bio.value){
+      var gov=(bio.value.governmentPosts||[]).filter(function(r){return!r.endDate;});
+      var opp=(bio.value.oppositionPosts||[]).filter(function(r){return!r.endDate;});
+      var other=(bio.value.otherPosts||[]).filter(function(r){return!r.endDate;});
+      var committees=(bio.value.committeeMemberships||[]).filter(function(r){return!r.endDate;});
+      allRoles=gov.concat(opp).concat(other).concat(committees);
     }
-  }
+    if(allRoles.length){
+      var rolesEl=document.getElementById('mp-roles-section');
+      if(rolesEl){
+        rolesEl.innerHTML='<div class="mp-section">'+
+          '<div class="mp-section-title">Current roles</div>'+
+          allRoles.map(function(r){
+            return '<div style="display:flex;gap:8px;margin-bottom:6px">'+
+              '<span style="color:'+p.c+';flex-shrink:0;font-size:10px;margin-top:2px">◆</span>'+
+              '<span style="font-size:12px;color:var(--ts);line-height:1.4">'+r.name+'</span></div>';
+          }).join('')+
+        '</div>';
+      }
+    }
+    // Once bio loaded, derive policy views
+    var policyEl=document.getElementById('mp-ai-policy');
+    if(policyEl){
+      votesPromise.then(function(votes){
+        var policies=derivePolicyViews(name,party,allRoles,votes,bio);
+        if(policies.length){
+          policyEl.innerHTML=policies.map(function(pol){
+            return '<div style="display:flex;gap:8px;margin-bottom:8px">'+
+              '<span style="color:'+p.c+';flex-shrink:0;margin-top:1px">•</span>'+
+              '<span style="color:var(--ts);line-height:1.5">'+pol+'</span>'+
+            '</div>';
+          }).join('');
+        } else {
+          policyEl.innerHTML='<div style="font-size:12px;color:var(--tm)">Insufficient data for policy summary.</div>';
+        }
+      });
+    }
+  });
+
+  // Synopsis / biography text
+  synopsisPromise.then(function(synopsisData){
+    var synopsisText=(synopsisData&&synopsisData.value&&typeof synopsisData.value==='string')?synopsisData.value:'';
+    var bioEl=document.getElementById('mp-bio-content');
+    if(bioEl){
+      bioEl.innerHTML=synopsisText?
+        '<div style="font-size:12px;color:var(--ts);line-height:1.75">'+synopsisText+'</div>':
+        '<div style="font-size:12px;color:var(--tm)">No biography available.</div>';
+    }
+  });
+
+  // Votes
+  votesPromise.then(function(votes){
+    var votesEl=document.getElementById('mp-votes-content');
+    if(!votesEl)return;
+    if(!votes||!votes.length){
+      votesEl.innerHTML='<div style="font-size:12px;color:var(--tm)">No vote data available.</div>';
+      return;
+    }
+    var scored=votes.map(function(v){
+      return{v:v,score:voteImportance(v),title:simplifyVoteTitle(v.PublishedDivision&&v.PublishedDivision.Title?v.PublishedDivision.Title:'')};
+    }).filter(function(item){return item.title&&item.score>-3;})
+      .sort(function(a,b){return b.score-a.score;})
+      .slice(0,6);
+    if(!scored.length){
+      votesEl.innerHTML='<div style="font-size:12px;color:var(--tm)">No significant votes found.</div>';
+      return;
+    }
+    votesEl.innerHTML=scored.map(function(item){
+      var aye=item.v.memberVotedAye;
+      var col=aye?'#1baf7a':'#e34948';
+      return '<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:.5px solid var(--bd);gap:12px">'+
+        '<div style="font-size:11px;color:var(--ts);flex:1;line-height:1.4">'+item.title+'</div>'+
+        '<span style="font-size:10px;font-weight:600;color:'+col+';white-space:nowrap;background:'+col+'22;padding:2px 9px;border-radius:20px">'+(aye?'Aye':'No')+'</span>'+
+      '</div>';
+    }).join('');
+  });
 }
 
 // Derive key policy stances from an MP's roles, votes, and committee memberships
