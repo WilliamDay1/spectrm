@@ -796,11 +796,6 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 // DATA LOADER — fetches /data/*.json when deployed on Vercel
 // Falls back to hardcoded data when running locally (file://)
 // =====================
-const DATA_BASE=(location.hostname==='localhost
-// =====================
-// DATA LOADER — fetches /data/*.json when deployed on Vercel
-// Falls back to hardcoded data when running locally (file://)
-// =====================
 const DATA_BASE=(location.hostname==='localhost'||location.protocol==='file:')?null:'/data';
 async function loadJSON(path){
   if(!DATA_BASE)return null;
@@ -2619,3 +2614,7 @@ document.addEventListener('DOMContentLoaded',function(){
     document.body&&document.body.appendChild(d);
   }
 })();
+
+</script>
+</body>
+</html>
