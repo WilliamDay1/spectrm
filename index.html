@@ -823,8 +823,22 @@ async function maybeUpdatePolls(){
   const d=await loadJSON('/polls.json');if(!d)return;
   if(d.monthly_history){
     const h=d.monthly_history;
-    ['ref','lab','con','grn','lib'].forEach(function(p){if(h[p]&&h[p].length)VI_DATA[p]=h[p];});
-    if(h.labels&&h.labels.length)VI_LABELS=h.labels;
+    // Only replace if we get a full history (>3 points); otherwise just update latest point
+    if(h.labels&&h.labels.length>3){
+      ['ref','lab','con','grn','lib'].forEach(function(p){if(h[p]&&h[p].length)VI_DATA[p]=h[p];});
+      VI_LABELS=h.labels;
+    } else if(h.labels&&h.labels.length){
+      // Append/update latest month only
+      var lastLabel=h.labels[h.labels.length-1];
+      var lastIdx=VI_LABELS.indexOf(lastLabel);
+      ['ref','lab','con','grn','lib'].forEach(function(p){
+        var val=h[p]&&h[p].length?h[p][h[p].length-1]:null;
+        if(val===null)return;
+        if(lastIdx!==-1){VI_DATA[p][lastIdx]=val;}
+        else{VI_DATA[p].push(val);}
+      });
+      if(lastIdx===-1)VI_LABELS.push(lastLabel);
+    }
   }
   if(d.recent_polls&&d.recent_polls.length)RECENT_POLLS=d.recent_polls;
   if(d.leader_approval&&d.leader_approval.length){
