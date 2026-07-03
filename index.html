@@ -688,6 +688,10 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <div class="ctt">Recent by-elections <span class="csrc">Electoral Commission</span></div>
       <div class="belist" id="belist"></div>
     </div>
+    <div class="card" style="margin-top:10px">
+      <div class="ctt">May 2026 local &amp; devolved elections <span class="csrc">Electoral Commission</span></div>
+      <div id="local-els"></div>
+    </div>
   </div>
   <div class="card">
     <div class="ctt">Key policy approval polls <span class="csrc">Click any poll to see trend · YouGov / Ipsos / Survation 2025–2026</span></div>
@@ -2134,11 +2138,14 @@ const LEADERS=[
   {name:'Keir Starmer',party:'lab',role:'Prime Minister · Announced resignation 22 Jun',approve:19,disapprove:62,net:-43,src:'Opinium · Jun 2026'},
 ];
 const BY_ELS=[
-  {seat:'Runcorn and Helsby',date:'1 May 2025',cls:'loss',result:'Reform UK GAIN — Lab→Ref swing +37%',note:'Sarah Pochin (Reform) won by just 6 votes — closest post-war by-election. Lab majority of 14,696 overturned.'},
-  {seat:'Makerfield',date:'18 Jun 2026',cls:'hold',result:'Labour HOLD — Burnham 54.8%, Reform 34.5%',note:'Andy Burnham (former GM Mayor) won with 9,241 majority — exceeding expectations. Burnham now eligible to contest Labour leadership.'},
-  {seat:'Blackpool South',date:'May 2024',cls:'gain',result:'Labour GAIN — Con→Lab swing +26%',note:'Major swing to Labour before the general election.'},
-  {seat:'Wellingborough',date:'Feb 2024',cls:'gain',result:'Labour GAIN — Con→Lab swing +28.5%',note:'Conservative heartland collapse.'},
-  {seat:'Mid Bedfordshire',date:'Oct 2023',cls:'gain',result:'Labour GAIN — Con→Lab swing +20%',note:'Huge pre-election Labour gain.'},
+  {seat:'Makerfield',date:'18 Jun 2026',cls:'hold',result:'Labour HOLD — Burnham 54.8%, Reform 34.5%',note:'Burnham won with 9,241 majority. Now in Labour leadership contest.'},
+  {seat:'Arbroath & Broughty Ferry',date:'Jun 2026',cls:'hold',result:'SNP HOLD — Reform 2nd with 18.3%',note:'Labour vote collapsed from 33% to 15% (−18pts). SNP held.'},
+  {seat:'Runcorn and Helsby',date:'1 May 2025',cls:'loss',result:'Reform UK GAIN — Lab→Ref swing +37%',note:'Won by 6 votes. Lab majority of 14,696 overturned. Closest post-war by-election.'},
+  {seat:'Blackpool South',date:'May 2024',cls:'gain',result:'Labour GAIN — Con→Lab swing +26%',note:'Major pre-election swing to Labour.'},
+];
+const LOCAL_ELS=[
+  {name:'English local elections',date:'7 May 2026',col1:'Reform +1,453 seats · 14 councils',col2:'Labour −1,496 seats · 38 councils lost',note:'National equiv: Reform 27%, Con 20%, Lab 15%, Green 14%, LD 14%. Labour worst local result in 40 years.'},
+  {name:'Scottish Parliament (Holyrood)',date:'7 May 2026',col1:'SNP 57 seats — 5th term, no majority',col2:'Reform 17 seats — Holyrood debut',note:'SNP short of 65-seat majority. Greens won first-ever constituency seats (Edinburgh Central, Glasgow Southside).'},
 ];
 const POLICY_POLLS=[
   {name:'Digital ID scheme',q:'Do you support introducing a national digital identity card scheme?',support:32,oppose:40,neutral:28,src:'Ipsos · Jan 2026 (n=1,150)',ctx:'Support collapsed from 57% in July 2025 after the mandatory scheme was announced. The government U-turned to a voluntary scheme in January 2026 after nearly 3 million people signed a petition opposing it.',trend:[{d:'Nov 2024',s:53,o:12},{d:'Jul 2025',s:57,o:19},{d:'Sep 2025',s:27,o:47},{d:'Jan 2026',s:32,o:40}]},
@@ -2166,6 +2173,8 @@ function renderPolls(){
   }
   document.getElementById('aplist').innerHTML=LEADERS.map(l=>{const p=PC[l.party]||PC.ind;const tot=l.approve+l.disapprove;return`<div class="apitem"><div class="ap-top"><div><div class="ap-name">${l.name}</div><div style="font-size:10px;color:var(--tm)">${l.role} · <span style="color:${p.c}">${p.name}</span></div></div><div class="ap-net" style="color:${l.net>=-10?'#eda100':'#e34948'}">${l.net>0?'+':''}${l.net}</div></div><div class="ap-bw"><div class="ap-ap" style="width:${Math.round(l.approve/tot*100)}%"></div><div class="ap-op" style="width:${Math.round(l.disapprove/tot*100)}%"></div></div><div class="ap-meta"><span>${l.approve}% approve</span><span>${l.disapprove}% disapprove</span><span>${l.src}</span></div></div>`;}).join('');
   document.getElementById('belist').innerHTML=BY_ELS.map(b=>`<div class="be ${b.cls}"><div class="be-top"><span class="be-seat">${b.seat}</span><span class="be-date">${b.date}</span></div><div class="be-result">${b.result}</div><div class="be-note">${b.note}</div></div>`).join('');
+  var lel=document.getElementById('local-els');
+  if(lel){lel.innerHTML=LOCAL_ELS.map(l=>`<div class="be" style="border-left:3px solid #1baf7a"><div class="be-top"><span class="be-seat">${l.name}</span><span class="be-date">${l.date}</span></div><div class="be-result" style="font-size:11px;margin-bottom:2px">${l.col1}</div><div class="be-result" style="font-size:11px;margin-bottom:4px">${l.col2}</div><div class="be-note">${l.note}</div></div>`).join('');}
   const max60=60;
 
   // Leadership contest card
