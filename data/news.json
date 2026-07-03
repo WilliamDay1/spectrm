@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-02T13:19:54Z",
+    "updated": "2026-07-03T13:21:53Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Stain on our history\u2019: Starmer issues government apology over forced adoption scandal \u2013 UK politics live",
-      "date": "2 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Downing Street defends decision to let pubs stay open until 5am for England match \u2013 UK politics live",
+      "date": "3 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/02/keir-starmer-apology-forced-adoption-labour-andy-burnham-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/03/andy-burnham-says-labour-manifesto-has-room-for-movement-on-tax-uk-politics-live"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Ministers call for better tracking of teenagers at risk of dropping out of work or training in England",
-      "date": "2 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/jul/02/ministers-better-tracking-teenagers-risk-dropping-out-of-work-training-england"
+      "headline": "Police criticise timing of decision on pubs staying open for England match",
+      "date": "3 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cd95v388k5jo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham meets trade union leaders ahead of expected premiership",
-      "date": "2 Jul 2026",
+      "headline": "Burnham says there is some room for movement on tax",
+      "date": "3 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwyednjr4mko?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c5yz9j7v0z6o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Is Starmer deliberately leaving a mess for Burnham? \u2013 podcast",
-      "date": "2 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/jul/02/is-starmer-deliberately-leaving-a-mess-for-burnham-podcast"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Culture secretary quits X in protest at 'misinformation'",
+      "date": "3 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyrx1ee2r4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "MPs seek to end UK broadcast of Russian cartoon Masha and the Bear",
-      "date": "2 Jul 2026",
+      "headline": "UK parents warned over posting images of children amid AI sexual abuse fears",
+      "date": "3 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/tv-and-radio/2026/jul/02/mps-uk-broadcast-russian-cartoon-masha-and-the-bear"
+      "url": "https://www.theguardian.com/society/2026/jul/03/ai-sexual-abuse-fears-uk-parents-warned-posting-images-children-national-crime-agency"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "No 10 shares \u2018public\u2019s shock\u2019 at reports of convicted people smuggler living in UK",
-      "date": "2 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/02/convicted-people-smuggler-uk-should-deported-tories"
+      "headline": "Labour general secretary to stand down after party conference",
+      "date": "3 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cly9xlgkyz5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Whistleblower \u2018terrified\u2019 as Rochdale grooming gang leader released",
-      "date": "2 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Keir Starmer ally Hollie Ridley to step down as Labour general secretary",
+      "date": "3 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/02/release-rochdale-grooming-gang-leader-really-scary-whistleblower"
+      "url": "https://www.theguardian.com/politics/2026/jul/03/keir-starmer-ally-hollie-ridley-step-down-labour-general-secretary"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour failed to prepare for power, admits PM's former top aide",
-      "date": "2 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ce8j2e38zzgo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "A council housebuilding boom is central to Burnham\u2019s vision. Can it be done?",
+      "date": "3 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/03/council-houses-building-burnham-vision"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Bitcoin firm advertised by Nigel Farage loses 15% of asset value",
-      "date": "2 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Far from waging war on the south, Burnham could improve the lives of Londoners. Here\u2019s how | Polly Toynbee",
+      "date": "3 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/02/bitcoin-firm-advertised-by-nigel-farage-loses-15-percent-asset-value"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/03/andy-burnham-londoners-manchesterism-north-south"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Forced adoptions 'a stain on our history' says Starmer as he gives formal apology",
-      "date": "2 Jul 2026",
+      "tag": "Devolution",
+      "tag_class": "tc-c",
+      "headline": "I was 'slam dunk' for SNP leadership until revealing gay marriage views - Forbes",
+      "date": "3 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c20yq332018o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c2ky31qelgzo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
