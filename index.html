@@ -401,7 +401,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
   </div>
 
   <!-- Main three-column grid -->
-  <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;margin-bottom:14px">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-bottom:14px;align-items:start">
 
     <!-- News column -->
     <div>
@@ -452,9 +452,8 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     </div>
 
     <!-- Middle column: polls snapshot + parliament status -->
-    <div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start">
-        <div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div>
       <div class="card" style="margin-bottom:12px">
         <div class="ctt">Polling snapshot <span class="csrc">PollCheck 7-poll avg · 27 Jun 2026</span></div>
         <div style="margin-bottom:10px">
@@ -498,7 +497,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     </div>
 
     <!-- Right column: seats + institution approval + manifesto score -->
-        <div>
+      <div>
       <div class="card" style="margin-bottom:12px">
         <div class="ctt">Commons seats <span class="csrc">Parliament API · live</span></div>
         <div id="seat-bars"></div>
@@ -534,7 +533,6 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
         <button onclick="sw('manifesto',document.querySelectorAll('.nb')[8])" style="font-size:11px;background:none;border:0.5px solid var(--bd);border-radius:7px;padding:5px 11px;cursor:pointer;color:var(--ts);width:100%">View all 92 pledges →</button>
       </div>
     </div>
-      </div>
     </div>
   </div>
 
@@ -827,8 +825,19 @@ async function maybeUpdatePolls(){
   const d=await loadJSON('/polls.json');if(!d)return;
   if(d.monthly_history){
     const h=d.monthly_history;
-    ['ref','lab','con','grn','lib'].forEach(function(p){if(h[p]&&h[p].length)VI_DATA[p]=h[p];});
-    if(h.labels&&h.labels.length)VI_LABELS=h.labels;
+    if(h.labels&&h.labels.length>3){
+      ['ref','lab','con','grn','lib'].forEach(function(p){if(h[p]&&h[p].length)VI_DATA[p]=h[p];});
+      VI_LABELS=h.labels;
+    } else if(h.labels&&h.labels.length){
+      var lastLabel=h.labels[h.labels.length-1];
+      var lastIdx=VI_LABELS.indexOf(lastLabel);
+      ['ref','lab','con','grn','lib'].forEach(function(p){
+        var val=h[p]&&h[p].length?h[p][h[p].length-1]:null;
+        if(val===null)return;
+        if(lastIdx!==-1){VI_DATA[p][lastIdx]=val;}else{VI_DATA[p].push(val);}
+      });
+      if(lastIdx===-1)VI_LABELS.push(lastLabel);
+    }
   }
   if(d.recent_polls&&d.recent_polls.length)RECENT_POLLS=d.recent_polls;
   if(d.leader_approval&&d.leader_approval.length){
