@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-03T13:21:53Z",
+    "updated": "2026-07-04T11:49:03Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Downing Street defends decision to let pubs stay open until 5am for England match \u2013 UK politics live",
-      "date": "3 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Boris Johnson wasted my levelling up idea. Here\u2019s how Burnham and his \u2018good growth\u2019 plan can do better | Justine Greening",
+      "date": "4 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/03/andy-burnham-says-labour-manifesto-has-room-for-movement-on-tax-uk-politics-live"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/04/boris-johnson-my-levelling-up-idea-burnham-good-growth"
     },
     {
       "id": "2",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Labour should win next election under Burnham after work already done, Starmer says",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/04/labour-win-next-election-under-burnham-keir-starmer"
+    },
+    {
+      "id": "3",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "British Medical Association could axe up to a third of its staff amid cash crisis",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/jul/04/british-medical-association-union-could-axe-staff-cash-crisis"
+    },
+    {
+      "id": "4",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Why can\u2019t Britain turn its green revolution into cheap energy? A visual analysis",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/ng-interactive/2026/jul/04/britain-green-energy-revolution-a-visual-story"
+    },
+    {
+      "id": "5",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Overseas education project for women and girls axed by UK after two years",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/global-development/2026/jul/04/overseas-education-project-for-women-and-girls-axed-by-uk-after-two-years"
+    },
+    {
+      "id": "6",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Celtic nations begin to plan for breakup of UK in event of Reform election win",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/04/uk-ireland-leaders-fear-union-future-nigel-farage-led-government"
+    },
+    {
+      "id": "7",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Britain has so many stories. The reason we fund the arts together is so we can tell them | James Graham",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/04/britain-stories-arts-funding-dear-england-sherwood"
+    },
+    {
+      "id": "8",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Starmer warns Burnham he cannot spend less time on diplomacy",
+      "date": "3 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/03/starmer-warns-burnham-he-cannot-spend-less-time-on-diplomacy"
+    },
+    {
+      "id": "9",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Starmer tells of 'intensely personal' decision to quit and warns Burnham in first interview since resigning",
+      "date": "3 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c0qy2zxjkwvo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Police criticise timing of decision on pubs staying open for England match",
       "date": "3 Jul 2026",
       "source": "BBC Politics",
       "url": "https://www.bbc.co.uk/news/articles/cd95v388k5jo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says there is some room for movement on tax",
-      "date": "3 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5yz9j7v0z6o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Culture secretary quits X in protest at 'misinformation'",
-      "date": "3 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyrx1ee2r4o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "5",
-      "tag": "Housing",
-      "tag_class": "tc-c",
-      "headline": "UK parents warned over posting images of children amid AI sexual abuse fears",
-      "date": "3 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/03/ai-sexual-abuse-fears-uk-parents-warned-posting-images-children-national-crime-agency"
-    },
-    {
-      "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour general secretary to stand down after party conference",
-      "date": "3 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cly9xlgkyz5o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Keir Starmer ally Hollie Ridley to step down as Labour general secretary",
-      "date": "3 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/03/keir-starmer-ally-hollie-ridley-step-down-labour-general-secretary"
-    },
-    {
-      "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "A council housebuilding boom is central to Burnham\u2019s vision. Can it be done?",
-      "date": "3 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/03/council-houses-building-burnham-vision"
-    },
-    {
-      "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Far from waging war on the south, Burnham could improve the lives of Londoners. Here\u2019s how | Polly Toynbee",
-      "date": "3 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/03/andy-burnham-londoners-manchesterism-north-south"
-    },
-    {
-      "id": "10",
-      "tag": "Devolution",
-      "tag_class": "tc-c",
-      "headline": "I was 'slam dunk' for SNP leadership until revealing gay marriage views - Forbes",
-      "date": "3 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c2ky31qelgzo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
