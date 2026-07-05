@@ -1834,16 +1834,28 @@ async function openMP(id,cached){
         (bio.value.governmentPosts||[]).concat(bio.value.oppositionPosts||[]).concat(bio.value.otherPosts||[])
         .filter(function(r){return r.endDate;}).slice(0,6).map(function(r){return r.name;}):[]).join(', ');
       var currentRoleStr=allRoles.slice(0,3).map(function(r){return r.name;}).join(', ');
-      var prompt='You are writing for Spectrm, a UK political data site. Write a profile for '+name+', '+party+' MP for '+con+'.'+
+      var profileContext='MP: '+name+', '+party+', '+con+'.'+
         (currentRoleStr?' Current roles: '+currentRoleStr+'.':'')+
-        (pastRoles?' Past roles: '+pastRoles+'.':'')+
-        ' Respond ONLY with JSON, no markdown: {"bio":"3-4 sentences. Specific about career, background, political position within their party, notable actions or controversies. No generic statements.","policies":["Specific stance 1 with real context e.g. how they voted, what they said","Specific stance 2","Specific stance 3","Specific stance 4"]}'+
-        ' For policies: be precise and nuanced. E.g. not “supports NHS” but “Backed the Oct 2024 Budget NI rise despite business lobbying”. Include where they differ from their party line. Use their actual portfolio and record.';
-      fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:600,messages:[{role:'user',content:prompt}]})
-      }).then(function(r){return r.json();}).then(function(d){
+        (pastRoles?' Past roles: '+pastRoles+'.':'');
+      var prompt=profileContext+
+        ' Write a specific, nuanced political profile. Respond ONLY with valid JSON (no markdown):'+
+        ' {"bio":"3-4 sentences covering career background, rise to prominence, position within party (left/centrist/right), and any notable actions or controversies. Be specific, not generic.",'+
+        ' "policies":["Specific stance with real context and how they voted or acted","Specific stance 2","Specific stance 3","Specific stance 4"]}'+
+        ' For policies: name actual bills, budgets or votes. Note where they differ from party line. Use their portfolio specifically.';
+      var aiBody=JSON.stringify({
+        model:'claude-sonnet-4-6',
+        max_tokens:600,
+        messages:[{role:'user',content:prompt}]
+      });
+      fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:aiBody})
+      .then(function(r){
+        if(!r.ok)throw new Error('API '+r.status);
+        return r.json();
+      }).then(function(d){
+        if(d.error)throw new Error(d.error);
         var txt=d.content&&d.content[0]?d.content[0].text:'';
-        var parsed=JSON.parse(txt.replace(/```json|```/g,'').trim());
+        var clean=txt.replace(/```json/g,'').replace(/```/g,'').trim();
+        var parsed=JSON.parse(clean);
         var bioEl=document.getElementById('mp-bio-content');
         if(bioEl&&parsed.bio)bioEl.innerHTML='<div style="font-size:12px;color:var(--ts);line-height:1.75">'+parsed.bio+'</div>';
         if(policyEl&&parsed.policies&&parsed.policies.length){
@@ -1851,9 +1863,12 @@ async function openMP(id,cached){
             return '<div style="display:flex;gap:8px;margin-bottom:8px"><span style="color:'+p.c+';flex-shrink:0;margin-top:1px">•</span><span style="color:var(--ts);line-height:1.5">'+pol+'</span></div>';
           }).join('');
         }
-      }).catch(function(){
+      }).catch(function(err){
+        console.warn('AI profile failed:',err);
         var fb=derivePolicyViews(name,party,allRoles,[],bio);
-        policyEl.innerHTML=fb.map(function(pol){return '<div style="display:flex;gap:8px;margin-bottom:8px"><span style="color:'+p.c+';flex-shrink:0">•</span><span style="color:var(--ts);line-height:1.5">'+pol+'</span></div>';}).join('');
+        if(policyEl)policyEl.innerHTML=fb.map(function(pol){
+          return '<div style="display:flex;gap:8px;margin-bottom:8px"><span style="color:'+p.c+';flex-shrink:0">•</span><span style="color:var(--ts);line-height:1.5">'+pol+'</span></div>';
+        }).join('');
       });
     }
   }).catch(function(){
