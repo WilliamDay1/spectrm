@@ -203,7 +203,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--tp);min-height:100
 <div id="toast"></div>
 
 <script>
-const PW = 'spectrm2026';
+const PW='spectrm2026';
 function tryLogin(){
   if(document.getElementById('pw-input').value===PW){
     sessionStorage.setItem('sa','1');
@@ -221,7 +221,6 @@ if(sessionStorage.getItem('sa')==='1'){
   document.getElementById('app').style.display='block';
 }
 
-// ── Navigation ────────────────────────────────────────────────────────────────
 function nav(el){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
@@ -229,13 +228,11 @@ function nav(el){
   document.getElementById('sec-'+el.dataset.sec).classList.add('active');
 }
 
-// ── Toast ─────────────────────────────────────────────────────────────────────
 function toast(msg,ms=3000){
   const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),ms);
 }
 
-// ── GitHub settings ───────────────────────────────────────────────────────────
 function saveGH(){
   localStorage.setItem('gh_token',document.getElementById('gh-token').value);
   localStorage.setItem('gh_user',document.getElementById('gh-user').value);
@@ -272,12 +269,10 @@ async function testGH(){
   }catch(e){el.innerHTML=`<span style="color:#c0392b">✗ Network error</span>`;}
 }
 
-// ── DATA STATE ────────────────────────────────────────────────────────────────
-let DATA = {bills:[],byelections:[],localels:[],polls:[],leaders:[],recentpolls:[],manifesto:[]};
-let RAW_INDEX = '';   // full text of index.html from GitHub
-let RAW_SHA = '';     // SHA for the PUT request
+let DATA={bills:[],byelections:[],localels:[],polls:[],leaders:[],recentpolls:[],manifesto:[],politicians:[]};
+let RAW_INDEX='';
+let RAW_SHA='';
 
-// ── Load live data from GitHub ────────────────────────────────────────────────
 async function loadFromGitHub(){
   const {token,user,repo,branch}=getGH();
   if(!token){toast('Set up GitHub first');nav(document.querySelector('[data-sec="github"]'));return;}
@@ -305,16 +300,15 @@ function setSyncBar(type,msg){
   el.innerHTML=`<div class="sync-bar ${type==='loading'?'loading':type==='err'?'err':''}">${msg}</div>`;
 }
 
-// ── Parse index.html and extract data arrays ──────────────────────────────────
 function parseAndPopulate(src){
-  DATA.bills       = parseArr(src,'const BILLS=');
-  DATA.byelections = parseArr(src,'const BY_ELS=');
-  DATA.localels    = parseArr(src,'const LOCAL_ELS=');
-  DATA.polls       = parseArr(src,'const POLICY_POLLS=');
-  DATA.leaders     = parseArr(src,'const LEADERS=');
-  DATA.recentpolls = parseArr(src,'const RECENT_POLLS=');
-  DATA.manifesto   = parseArr(src,'const MF_PLEDGES=');
-  DATA.politicians = parseMPProfiles(src);
+  DATA.bills=parseArr(src,'const BILLS=');
+  DATA.byelections=parseArr(src,'const BY_ELS=');
+  DATA.localels=parseArr(src,'const LOCAL_ELS=');
+  DATA.polls=parseArr(src,'const POLICY_POLLS=');
+  DATA.leaders=parseArr(src,'const LEADERS=');
+  DATA.recentpolls=parseArr(src,'const RECENT_POLLS=');
+  DATA.manifesto=parseArr(src,'const MF_PLEDGES=');
+  DATA.politicians=parseMPProfiles(src);
   renderAll();
 }
 
@@ -328,23 +322,31 @@ function parseArr(src,marker){
     i++;
   }
   const raw=src.slice(arrStart,i);
-  // Convert JS object literal to JSON
   try{
     const json=raw
-      .replace(/\/\*[\s\S]*?\*\//g,'')   // strip /* comments */
-      .replace(/\/\/[^\n]*/g,'')            // strip // comments
-      .replace(/([{,])\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:/g,'$1"$2":') // quote keys
-      .replace(/:\s*\'([^\']*)\'/g,':"$1"')  // single→double quoted values (simple)
-      .replace(/,\s*([}\]])/g,'$1')           // trailing commas
-      .replace(/\\u([0-9a-fA-F]{4})/g,(m,h)=>String.fromCharCode(parseInt(h,16)));
+      .replace(/\/\*[\s\S]*?\*\//g,'')
+      .replace(/\/\/[^\n]*/g,'')
+      .replace(/([{,])\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:/g,'$1"$2":')
+      .replace(/:\s*'([^']*)'/g,':"$1"')
+      .replace(/,\s*([}\]])/g,'$1');
     return JSON.parse(json);
-  }catch(e){
-    console.warn('parseArr failed for',marker,e.message);
-    return [];
-  }
+  }catch(e){console.warn('parseArr failed for',marker,e.message);return[];}
 }
 
-// ── Render all sections ───────────────────────────────────────────────────────
+function parseMPProfiles(src){
+  const marker="MP_PROFILES_JSON='";
+  const pos=src.indexOf(marker);
+  if(pos===-1){console.warn('MP_PROFILES_JSON not found');return[];}
+  const start=pos+marker.length;
+  let i=start;
+  while(i<src.length){
+    if(src[i]==="'" && src[i-1]!=="\\") break;
+    i++;
+  }
+  try{return JSON.parse(src.slice(start,i).replace(/\\'/g,"'"));}
+  catch(e){console.warn('parseMPProfiles failed:',e.message);return[];}
+}
+
 function renderAll(){
   renderBills();renderByElections();renderLocalEls();
   renderPolls();renderLeaders();renderRecentPolls();renderManifesto();renderPoliticians();
@@ -358,7 +360,6 @@ function toggleBody(hdr){
 }
 function upd(key,i,field,val){DATA[key][i][field]=val;}
 
-// ── BILLS ─────────────────────────────────────────────────────────────────────
 function renderBills(){
   document.getElementById('bills-list').innerHTML=DATA.bills.map((b,i)=>{
     const sc={passed:'bp',progress:'bw',committee:'bw',defeated:'bd'};
@@ -369,12 +370,12 @@ function renderBills(){
       </div>
       <div class="item-body">
         <div class="field-row"><div class="field"><label>Bill name</label>
-          <input value="${esc(b.n)}" oninput="upd('bills',${i},'n',this.value);this.closest('.item-card').querySelector('.item-hdr-l span:last-child').textContent=this.value"></div>
+          <input value="${esc(b.n)}" oninput="upd('bills',${i},'n',this.value)"></div>
           <div class="field"><label>Status</label><select onchange="upd('bills',${i},'s',this.value)">
             ${['passed','progress','committee','defeated'].map(s=>`<option value="${s}"${b.s===s?' selected':''}>${s}</option>`).join('')}
           </select></div></div>
         <div class="field-row-4">
-          <div class="field"><label>Date</label><input value="${esc(b.date||'')}" placeholder="2026-01-01" oninput="upd('bills',${i},'date',this.value)"></div>
+          <div class="field"><label>Date</label><input value="${esc(b.date||'')}" oninput="upd('bills',${i},'date',this.value)"></div>
           <div class="field"><label>Ayes</label><input type="number" value="${b.aye||0}" oninput="upd('bills',${i},'aye',+this.value)"></div>
           <div class="field"><label>Noes</label><input type="number" value="${b.no||0}" oninput="upd('bills',${i},'no',+this.value)"></div>
           <div class="field"><label>Abstained</label><input type="number" value="${b.abs||0}" oninput="upd('bills',${i},'abs',+this.value)"></div>
@@ -386,7 +387,6 @@ function renderBills(){
 }
 function addItem_bills(){DATA.bills.push({id:Date.now(),n:'New Bill',s:'progress',date:'',aye:0,no:0,abs:0,d:''});renderBills();openLast('bills-list');}
 
-// ── BY-ELECTIONS ──────────────────────────────────────────────────────────────
 function renderByElections(){
   document.getElementById('byelections-list').innerHTML=DATA.byelections.map((b,i)=>{
     const sc={hold:'bp',gain:'bp',loss:'bd'};
@@ -410,7 +410,6 @@ function renderByElections(){
 }
 function addItem_byelections(){DATA.byelections.push({seat:'New constituency',date:'',cls:'hold',result:'',note:''});renderByElections();openLast('byelections-list');}
 
-// ── LOCAL ELECTIONS ───────────────────────────────────────────────────────────
 function renderLocalEls(){
   document.getElementById('localels-list').innerHTML=DATA.localels.map((l,i)=>`
     <div class="item-card">
@@ -421,15 +420,14 @@ function renderLocalEls(){
         <div class="field-row"><div class="field"><label>Election name</label>
           <input value="${esc(l.name)}" oninput="upd('localels',${i},'name',this.value)"></div>
           <div class="field"><label>Date</label><input value="${esc(l.date)}" oninput="upd('localels',${i},'date',this.value)"></div></div>
-        <div class="field"><label>Top result / winners</label><input value="${esc(l.col1)}" oninput="upd('localels',${i},'col1',this.value)"></div>
-        <div class="field"><label>Second result / losses</label><input value="${esc(l.col2)}" oninput="upd('localels',${i},'col2',this.value)"></div>
+        <div class="field"><label>Top result</label><input value="${esc(l.col1)}" oninput="upd('localels',${i},'col1',this.value)"></div>
+        <div class="field"><label>Second result</label><input value="${esc(l.col2)}" oninput="upd('localels',${i},'col2',this.value)"></div>
         <div class="field"><label>Context note</label><textarea oninput="upd('localels',${i},'note',this.value)">${esc(l.note)}</textarea></div>
         <button class="btn btn-danger" style="margin-top:8px" onclick="removeItem('localels',${i},renderLocalEls)">Remove</button>
       </div></div>`).join('');
 }
 function addItem_localels(){DATA.localels.push({name:'New election',date:'',col1:'',col2:'',note:''});renderLocalEls();openLast('localels-list');}
 
-// ── POLICY POLLS ──────────────────────────────────────────────────────────────
 function renderPolls(){
   document.getElementById('polls-list').innerHTML=DATA.polls.map((p,i)=>`
     <div class="item-card">
@@ -440,9 +438,9 @@ function renderPolls(){
         <div class="field"><label>Short name</label><input value="${esc(p.name||'')}" oninput="upd('polls',${i},'name',this.value)"></div>
         <div class="field"><label>Full question</label><textarea oninput="upd('polls',${i},'q',this.value)">${esc(p.q)}</textarea></div>
         <div class="field-row-3">
-          <div class="field"><label>Support %</label><input type="number" min="0" max="100" value="${p.support}" oninput="upd('polls',${i},'support',+this.value)"></div>
-          <div class="field"><label>Neutral %</label><input type="number" min="0" max="100" value="${p.neutral}" oninput="upd('polls',${i},'neutral',+this.value)"></div>
-          <div class="field"><label>Oppose %</label><input type="number" min="0" max="100" value="${p.oppose}" oninput="upd('polls',${i},'oppose',+this.value)"></div>
+          <div class="field"><label>Support %</label><input type="number" value="${p.support}" oninput="upd('polls',${i},'support',+this.value)"></div>
+          <div class="field"><label>Neutral %</label><input type="number" value="${p.neutral}" oninput="upd('polls',${i},'neutral',+this.value)"></div>
+          <div class="field"><label>Oppose %</label><input type="number" value="${p.oppose}" oninput="upd('polls',${i},'oppose',+this.value)"></div>
         </div>
         <div class="field"><label>Source</label><input value="${esc(p.src)}" oninput="upd('polls',${i},'src',this.value)"></div>
         <div class="field"><label>Context</label><textarea oninput="upd('polls',${i},'ctx',this.value)">${esc(p.ctx||'')}</textarea></div>
@@ -451,7 +449,6 @@ function renderPolls(){
 }
 function addItem_polls(){DATA.polls.push({name:'New poll',q:'',support:33,neutral:34,oppose:33,src:'',ctx:'',trend:[]});renderPolls();openLast('polls-list');}
 
-// ── LEADERS ───────────────────────────────────────────────────────────────────
 const PARTY_COLS={lab:'#CC0000',con:'#003087',ref:'#0A8A9F',grn:'#4CAF50',lib:'#F4A01C',snp:'#FDF38E'};
 function renderLeaders(){
   document.getElementById('leaders-list').innerHTML=DATA.leaders.map((l,i)=>{
@@ -471,7 +468,7 @@ function renderLeaders(){
           <div class="field"><label>Party</label><select onchange="upd('leaders',${i},'party',this.value)">
             ${[['lab','Labour'],['con','Conservative'],['ref','Reform UK'],['grn','Green'],['lib','Lib Dem'],['snp','SNP']].map(([v,t])=>`<option value="${v}"${l.party===v?' selected':''}>${t}</option>`).join('')}
           </select></div></div>
-        <div class="field"><label>Role / subtitle</label><input value="${esc(l.role||'')}" oninput="upd('leaders',${i},'role',this.value)"></div>
+        <div class="field"><label>Role</label><input value="${esc(l.role||'')}" oninput="upd('leaders',${i},'role',this.value)"></div>
         <div class="field-row-3">
           <div class="field"><label>Approve %</label><input type="number" value="${l.approve}" oninput="updNet(${i},'approve',+this.value)"></div>
           <div class="field"><label>Disapprove %</label><input type="number" value="${l.disapprove}" oninput="updNet(${i},'disapprove',+this.value)"></div>
@@ -489,7 +486,6 @@ function updNet(i,field,val){
 }
 function addItem_leaders(){DATA.leaders.push({name:'New leader',party:'lab',role:'',approve:0,disapprove:0,net:0,src:''});renderLeaders();openLast('leaders-list');}
 
-// ── RECENT POLLS ──────────────────────────────────────────────────────────────
 function renderRecentPolls(){
   document.getElementById('recentpolls-list').innerHTML=DATA.recentpolls.map((p,i)=>`
     <div class="item-card">
@@ -517,7 +513,6 @@ function renderRecentPolls(){
 }
 function addItem_recentpolls(){DATA.recentpolls.push({pollster:'',client:'',date:'',n:0,ref:0,lab:0,con:0,grn:0,lib:0,src:''});renderRecentPolls();openLast('recentpolls-list');}
 
-// ── MANIFESTO ─────────────────────────────────────────────────────────────────
 const STATUS_EMOJI={achieved:'✅',progress:'🔄',track:'🟡',offtrack:'⚠️',broken:'❌',unclear:'❓',wait:'⏳'};
 const STATUS_OPTS=[['achieved','✅ Achieved'],['progress','🔄 In progress'],['track','🟡 On track'],['offtrack','⚠️ Off track'],['broken','❌ Broken'],['unclear','❓ Unclear'],['wait','⏳ Not yet due']];
 function renderManifesto(){
@@ -543,11 +538,13 @@ function renderManifesto(){
         <button class="btn btn-danger" style="margin-top:8px" onclick="removeItem('manifesto',${i},renderManifesto)">Remove</button>
       </div></div>`).join('');
 }
+function addItem_manifesto(){DATA.manifesto.push({area:'',pledge:'',status:'progress',src:'',updated:''});renderManifesto();openLast('manifesto-list');}
+
 function renderPoliticians(){
   document.getElementById('politicians-list').innerHTML=DATA.politicians.map((pol,i)=>`
     <div class="item-card">
       <div class="item-hdr" onclick="toggleBody(this)">
-        <div class="item-hdr-l"><span>🧑‍💼</span><span>${esc(pol.name)}</span></div>
+        <div class="item-hdr-l"><span>🧑</span><span>${esc(pol.name)}</span></div>
         <span class="chev">▾</span>
       </div>
       <div class="item-body">
@@ -560,21 +557,18 @@ function renderPoliticians(){
           <textarea style="min-height:120px" oninput="upd('politicians',${i},'bio',this.value)">${esc(pol.bio)}</textarea>
         </div>
         <div class="field">
-          <label>Policy views (one per line — start each with "Title: description")</label>
-          <textarea style="min-height:160px" oninput="updatePolicies(${i},this.value)">${(pol.policies||[]).join('\n\n')}</textarea>
+          <label>Policy views — one per paragraph, format: "Title: description"</label>
+          <textarea style="min-height:160px" oninput="updatePolicies(${i},this.value)">${esc((pol.policies||[]).join('\n\n'))}</textarea>
         </div>
         <button class="btn btn-danger" style="margin-top:8px" onclick="removeItem('politicians',${i},renderPoliticians)">Remove</button>
       </div>
     </div>`).join('');
 }
-
 function updatePolicies(i,val){
   DATA.politicians[i].policies=val.split(/\n\n+/).map(s=>s.trim()).filter(Boolean);
 }
+function addItem_politicians(){DATA.politicians.push({name:'',bio:'',policies:[]});renderPoliticians();openLast('politicians-list');}
 
-function addItem_manifesto(){DATA.manifesto.push({area:'',pledge:'',status:'progress',src:'',updated:''});renderManifesto();openLast('manifesto-list');}
-
-// ── Generic helpers ───────────────────────────────────────────────────────────
 function addItem(key){window['addItem_'+key]();}
 function removeItem(key,i,renderFn){if(!confirm('Remove?'))return;DATA[key].splice(i,1);renderFn();}
 function openLast(listId){
@@ -584,21 +578,18 @@ function openLast(listId){
   },50);
 }
 
-// ── Push to GitHub ────────────────────────────────────────────────────────────
 async function pushToGitHub(){
   const {token,user,repo,branch}=getGH();
   if(!token||!RAW_INDEX){toast('Load live data first');return;}
   const btn=document.getElementById('push-btn');
   btn.textContent='Pushing...';btn.disabled=true;
   try{
-    // Re-fetch SHA if needed
     let sha=RAW_SHA;
     if(!sha){
       const r=await fetch(`https://api.github.com/repos/${user}/${repo}/contents/index.html?ref=${branch}`,
         {headers:{Authorization:'token '+token,Accept:'application/vnd.github.v3+json'}});
       const d=await r.json();sha=d.sha;
     }
-    // Patch each array in the raw source
     let content=RAW_INDEX;
     content=patchArr(content,'const BILLS=',DATA.bills);
     content=patchArr(content,'const BY_ELS=',DATA.byelections);
@@ -615,7 +606,6 @@ async function pushToGitHub(){
       body:JSON.stringify({message:'Admin: update content',content:btoa(unescape(encodeURIComponent(content))),sha,branch})
     });
     if(!r2.ok){const e=await r2.json();throw new Error(e.message||r2.status);}
-    // Update SHA for next push
     const rd=await r2.json();RAW_SHA=rd.content.sha;RAW_INDEX=content;
     toast('✓ Pushed! Site will update in ~30 seconds.',4000);
   }catch(e){toast('✗ Push failed: '+e.message,5000);}
@@ -627,21 +617,28 @@ function patchArr(src,marker,data){
   const arrStart=src.indexOf('[',pos);if(arrStart===-1)return src;
   let depth=0,i=arrStart;
   while(i<src.length){if(src[i]==='[')depth++;else if(src[i]===']'){depth--;if(depth===0){i++;break;}}i++;}
-  // Serialise back to JS (single-quoted, key:value format)
   const js=JSON.stringify(data,null,2)
     .replace(/"([^"]+)":/g,(m,k)=>k+':')
-    .replace(/: "([^"]*)"/g,(m,v)=>": '"+v.replace(/'/g,"\'")+"'");
+    .replace(/: "([^"]*)"/g,(m,v)=>": '"+v.replace(/'/g,"\\'")+  "'");
   return src.slice(0,arrStart)+js+src.slice(i);
 }
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+function patchMPProfiles(src,profiles){
+  const marker="MP_PROFILES_JSON='";
+  const pos=src.indexOf(marker);if(pos===-1)return src;
+  const start=pos+marker.length;
+  let i=start;
+  while(i<src.length){if(src[i]==="'" && src[i-1]!=="\\") break;i++;}
+  const newJson=JSON.stringify(profiles).replace(/'/g,"\\'");
+  return src.slice(0,start)+newJson+src.slice(i);
+}
+
 function init(){
   const gh=getGH();
   document.getElementById('gh-token').value=gh.token;
   document.getElementById('gh-user').value=gh.user;
   document.getElementById('gh-repo').value=gh.repo;
   document.getElementById('gh-branch').value=gh.branch;
-
   if(gh.token){
     updateStatus('loading','Loading live data...');
     loadFromGitHub();
@@ -652,48 +649,8 @@ function init(){
   }
 }
 
-function patchMPProfiles(src,profiles){
-  const marker='const MP_PROFILES=';
-  const pos=src.indexOf(marker);
-  if(pos===-1)return src;
-  const arrStart=src.indexOf('[',pos);
-  if(arrStart===-1)return src;
-  let depth=0,i=arrStart;
-  while(i<src.length){
-    if(src[i]==='[')depth++;
-    else if(src[i]===']'){depth--;if(depth===0){i++;break;}}
-    i++;
-  }
-  const js=JSON.stringify(profiles,null,2)
-    .replace(/"([^"]+)":/g,(m,k)=>k+':')
-    .replace(/: "([^"]*)"/g,(m,v)=>": '"+v.replace(/'/g,"\\'")+  "'");
-  return src.slice(0,arrStart)+js+src.slice(i);
-}
-
-// Parse MP_PROFILES from index.html source
-function parseMPProfiles(src){
-  const marker='const MP_PROFILES=';
-  const pos=src.indexOf(marker);if(pos===-1)return[];
-  const arrStart=src.indexOf('[',pos);if(arrStart===-1)return[];
-  let depth=0,i=arrStart;
-  while(i<src.length){
-    if(src[i]==='[')depth++;
-    else if(src[i]===']'){depth--;if(depth===0){i++;break;}}
-    i++;
-  }
-  const raw=src.slice(arrStart,i);
-  try{
-    const json=raw
-      .replace(/\/\*[\s\S]*?\*\//g,'')
-      .replace(/\/\/[^\n]*/g,'')
-      .replace(/([{,])\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:/g,'$1"$2":')
-      .replace(/:\s*\'([^\']*)\'/g,':"$1"')
-      .replace(/,\s*([}\]])/g,'$1');
-    return JSON.parse(json);
-  }catch(e){console.warn('parseMPProfiles failed:',e);return[];}
-}
-
 if(sessionStorage.getItem('sa')==='1') init();
+
 </script>
 </body>
 </html>
