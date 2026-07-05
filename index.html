@@ -1510,6 +1510,7 @@ function getRoleBadge(posts){
 // POLITICIANS TAB
 // =====================
 let ALL_MPs=[];
+let ALL_MPs_CACHE=[];
 let MP_PAGE=0;
 let MP_TOTAL=0;
 let MP_LOADING=false;
@@ -1740,6 +1741,8 @@ async function loadMPs(reset){
   var countEl=document.getElementById('mp-count');
   if(countEl)countEl.textContent=(q?ALL_MPs.length+' result'+(ALL_MPs.length===1?'':'s'):MP_TOTAL+' MPs');
   collected.forEach(function(m){renderMPCard(m,grid,false);});
+  // Build cache for instant party filtering
+  collected.forEach(function(m){if(!ALL_MPs_CACHE.find(function(c){return c.id===m.id;}))ALL_MPs_CACHE.push(m);});
   var lmEl=document.getElementById('mp-load-more');
   if(lmEl)lmEl.style.display=(!ranOut&&MP_PAGE*MP_PAGE_SIZE<MP_TOTAL)?'block':'none';
   MP_LOADING=false;
@@ -1908,37 +1911,45 @@ function setMPParty(party,el){
 }
 
 async function loadPartyMPs(party,grid){
-  // Fetch all current MPs in one request
-  var data=await parlFetch('/Members/Search?House=Commons&IsCurrentMember=true&take=650&skip=0');
-  if(!grid)return;
-  // Clear loading message
+  // Use the cache if we have all MPs loaded already
+  if(ALL_MPs_CACHE.length>=600){
+    renderFromCache(party,grid);
+    return;
+  }
+  // Otherwise fetch all MPs via parlFetch (goes through Vercel proxy on prod)
+  var pages=[0,40,80,120,160,200,240,280,320,360,400,440,480,520,560,600,640];
+  var all=[];
+  for(var pi=0;pi<pages.length;pi++){
+    var data=await parlFetch('/Members/Search?House=Commons&IsCurrentMember=true&take=40&skip='+pages[pi]);
+    if(!data||!data.items)break;
+    data.items.forEach(function(item){
+      var m=item.value;
+      var rawParty=m.latestParty?m.latestParty.name:'Independent';
+      var mp_party=(m.nameDisplayAs==='Andy Burnham'||rawParty.indexOf('Labour')!==-1)?'Labour':rawParty;
+      all.push({id:m.id,name:m.nameDisplayAs,party:mp_party,
+        con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
+        since:m.latestHouseMembership&&m.latestHouseMembership.membershipStartDate?(new Date(m.latestHouseMembership.membershipStartDate)).getFullYear():'',
+        roleLabel:null});
+    });
+    if(data.items.length<40)break;
+  }
+  ALL_MPs_CACHE=all;
+  renderFromCache(party,grid);
+}
+
+function renderFromCache(party,grid){
   var sentinel=document.getElementById('mp-grid-sentinel');
   if(sentinel){while(sentinel.nextSibling)grid.removeChild(sentinel.nextSibling);}
   else{grid.innerHTML='';}
-  if(!data||!data.items){
-    grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs.</div>';
-    return;
-  }
-  var filtered=data.items.map(function(item){
-    var m=item.value;
-    var rawParty=m.latestParty?m.latestParty.name:'Independent';
-    var mp_party=(m.nameDisplayAs==='Andy Burnham'||rawParty.indexOf('Labour')!==-1)?'Labour':rawParty;
-    return{
-      id:m.id,
-      name:m.nameDisplayAs,
-      party:mp_party,
-      con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
-      since:m.latestHouseMembership&&m.latestHouseMembership.membershipStartDate?(new Date(m.latestHouseMembership.membershipStartDate)).getFullYear():'',
-      roleLabel:null
-    };
-  }).filter(function(m){return m.party===party;});
+  var filtered=ALL_MPs_CACHE.filter(function(m){return m.party===party;});
   var countEl=document.getElementById('mp-count');
-  if(countEl)countEl.textContent=filtered.length+' MPs';
+  if(countEl)countEl.textContent=filtered.length+' '+party+' MPs';
   if(filtered.length===0){
     grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">No '+party+' MPs found.</div>';
     return;
   }
-  filtered.forEach(function(m){ALL_MPs.push(m);renderMPCard(m,grid,false);});
+  ALL_MPs=filtered.slice();
+  filtered.forEach(function(m){renderMPCard(m,grid,false);});
   var lmEl=document.getElementById('mp-load-more');
   if(lmEl)lmEl.style.display='none';
 }
