@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectrm Admin</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#F7F7F5;--s1:#fff;--s2:#F0F0EC;--bd:#E5E5E0;
+    --tp:#111;--ts:#444;--tm:#888;
+    --brand:#1a6b4a;--brand-light:#e8f5ef;
+    --danger:#c0392b;--danger-light:#fdf0ef;
+    --warn:#b35c00;--warn-light:#fff8f0;
+    --ok:#1a6b4a;--ok-light:#e8f5ef;
+    --radius:10px;--font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  body{font-family:var(--font);background:var(--bg);color:var(--tp);min-height:100vh;font-size:14px}
+
+  /* Login */
+  #login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh}
+  .login-box{background:var(--s1);border:1px solid var(--bd);border-radius:16px;padding:40px;width:340px;text-align:center}
+  .login-logo{font-size:22px;font-weight:700;color:var(--brand);margin-bottom:4px;letter-spacing:-.5px}
+  .login-sub{font-size:12px;color:var(--tm);margin-bottom:28px}
+  .login-box input{width:100%;padding:10px 14px;border:1px solid var(--bd);border-radius:8px;font-size:14px;outline:none;font-family:var(--font)}
+  .login-box input:focus{border-color:var(--brand)}
+  .login-btn{margin-top:12px;width:100%;padding:10px;background:var(--brand);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer}
+  .login-btn:hover{opacity:.9}
+  .login-err{color:var(--danger);font-size:12px;margin-top:8px;display:none}
+
+  /* App shell */
+  #app{display:none}
+  .topbar{background:var(--s1);border-bottom:1px solid var(--bd);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:100}
+  .topbar-brand{font-size:15px;font-weight:700;color:var(--brand);letter-spacing:-.3px}
+  .topbar-brand span{font-weight:400;color:var(--tm);font-size:12px;margin-left:6px}
+  .topbar-right{display:flex;gap:10px;align-items:center}
+  .logout-btn{background:none;border:1px solid var(--bd);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--ts);cursor:pointer}
+  .logout-btn:hover{background:var(--s2)}
+  .save-btn{background:var(--brand);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:500;cursor:pointer}
+  .save-btn:hover{opacity:.9}
+  .save-btn:disabled{opacity:.5;cursor:default}
+
+  /* Layout */
+  .layout{display:grid;grid-template-columns:200px 1fr;min-height:calc(100vh - 52px)}
+  .sidebar{background:var(--s1);border-right:1px solid var(--bd);padding:16px 0}
+  .nav-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--tm);padding:0 16px 6px}
+  .nav-item{display:block;padding:8px 16px;font-size:13px;color:var(--ts);cursor:pointer;border-radius:0;text-decoration:none;transition:all .1s}
+  .nav-item:hover{background:var(--s2);color:var(--tp)}
+  .nav-item.active{background:var(--brand-light);color:var(--brand);font-weight:500}
+  .main{padding:24px;max-width:900px}
+
+  /* Sections */
+  .section{display:none}
+  .section.active{display:block}
+  .section-title{font-size:18px;font-weight:600;margin-bottom:4px}
+  .section-desc{font-size:12px;color:var(--tm);margin-bottom:20px}
+
+  /* Cards */
+  .card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
+  .card-header{padding:12px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
+  .card-title{font-size:13px;font-weight:600}
+  .card-body{padding:16px}
+
+  /* Form fields */
+  .field{margin-bottom:14px}
+  .field:last-child{margin-bottom:0}
+  .field label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm);margin-bottom:5px}
+  .field input,.field textarea,.field select{width:100%;padding:8px 10px;border:1px solid var(--bd);border-radius:6px;font-size:13px;font-family:var(--font);background:var(--bg);color:var(--tp);outline:none}
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--brand);background:var(--s1)}
+  .field textarea{resize:vertical;min-height:70px;line-height:1.5}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .field-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+
+  /* Status badges */
+  .badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block}
+  .badge-passed{background:#e8f5ef;color:#1a6b4a}
+  .badge-progress{background:#fff8f0;color:#b35c00}
+  .badge-defeated{background:#fdf0ef;color:#c0392b}
+  .badge-hold{background:#e8f5ef;color:#1a6b4a}
+  .badge-gain{background:#e8f5ef;color:#1a6b4a}
+  .badge-loss{background:#fdf0ef;color:#c0392b}
+
+  /* Item list */
+  .item-list{display:flex;flex-direction:column;gap:8px}
+  .item-card{background:var(--s1);border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+  .item-header{padding:10px 14px;background:var(--s2);display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
+  .item-header-left{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500}
+  .item-header-right{display:flex;gap:6px;align-items:center}
+  .item-body{padding:14px;border-top:1px solid var(--bd);display:none}
+  .item-body.open{display:block}
+  .chevron{font-size:12px;color:var(--tm);transition:transform .15s}
+  .chevron.open{transform:rotate(180deg)}
+
+  /* Buttons */
+  .btn{padding:7px 14px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;border:none;font-family:var(--font)}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{opacity:.9}
+  .btn-danger{background:var(--danger-light);color:var(--danger);border:1px solid #f5c6c3}
+  .btn-danger:hover{background:#fbe0de}
+  .btn-secondary{background:var(--s2);color:var(--ts);border:1px solid var(--bd)}
+  .btn-secondary:hover{background:var(--bd)}
+  .add-btn{width:100%;padding:10px;border:1.5px dashed var(--bd);border-radius:8px;background:none;color:var(--tm);font-size:13px;cursor:pointer;font-family:var(--font);margin-top:8px}
+  .add-btn:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-light)}
+
+  /* Toast */
+  #toast{position:fixed;bottom:24px;right:24px;background:#111;color:#fff;padding:10px 18px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:999}
+  #toast.show{opacity:1}
+
+  /* Status indicator */
+  .status-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--tm);margin-top:8px}
+  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--tm)}
+  .status-dot.ok{background:#1baf7a}
+  .status-dot.err{background:var(--danger)}
+
+  /* GitHub section */
+  .gh-box{background:var(--warn-light);border:1px solid #fde8cc;border-radius:8px;padding:14px 16px;margin-bottom:16px;font-size:12px;line-height:1.6;color:var(--warn)}
+  .gh-box strong{font-weight:600}
+  .copy-btn{background:var(--s1);border:1px solid var(--bd);border-radius:5px;padding:3px 8px;font-size:11px;cursor:pointer;font-family:var(--font);color:var(--ts)}
+
+  /* Polls special UI */
+  .poll-bar-preview{display:flex;gap:6px;align-items:center;margin-top:4px}
+  .poll-bar{height:6px;border-radius:3px;transition:width .3s}
+
+  select option{font-family:var(--font)}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">Spectrm</div>
+    <div class="login-sub">Admin panel</div>
+    <input type="password" id="pw-input" placeholder="Password" onkeydown="if(event.key==='Enter')tryLogin()">
+    <button class="login-btn" onclick="tryLogin()">Sign in</button>
+    <div class="login-err" id="login-err">Incorrect password</div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="topbar">
+    <div class="topbar-brand">Spectrm <span>Admin</span></div>
+    <div class="topbar-right">
+      <div id="status-indicator" class="status-row"><span class="status-dot" id="sdot"></span><span id="slabel">Loading...</span></div>
+      <button class="btn btn-secondary" onclick="deployToGitHub()" id="deploy-btn" style="font-size:12px">⬆ Push to site</button>
+      <button class="logout-btn" onclick="logout()">Sign out</button>
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <div class="nav-label">Content</div>
+      <div class="nav-item active" onclick="showSection('bills')">📄 Bills</div>
+      <div class="nav-item" onclick="showSection('byelections')">🗳 By-elections</div>
+      <div class="nav-item" onclick="showSection('localels')">🏛 Local elections</div>
+      <div class="nav-item" onclick="showSection('polls')">📊 Polls data</div>
+      <div class="nav-item" onclick="showSection('leaders')">👤 Leader ratings</div>
+      <div class="nav-item" onclick="showSection('manifesto')">📋 Manifesto</div>
+      <div class="nav-label" style="margin-top:16px">Settings</div>
+      <div class="nav-item" onclick="showSection('github')">⚙ GitHub setup</div>
+    </div>
+    <div class="main">
+
+      <!-- BILLS -->
+      <div class="section active" id="sec-bills">
+        <div class="section-title">Bills</div>
+        <div class="section-desc">Add, edit or remove parliamentary bills. Changes publish to the live site when you push.</div>
+        <div class="item-list" id="bills-list"></div>
+        <button class="add-btn" onclick="addBill()">+ Add bill</button>
+      </div>
+
+      <!-- BY-ELECTIONS -->
+      <div class="section" id="sec-byelections">
+        <div class="section-title">By-elections</div>
+        <div class="section-desc">Recent Westminster by-election results shown in the Polls tab.</div>
+        <div class="item-list" id="byelections-list"></div>
+        <button class="add-btn" onclick="addByEl()">+ Add by-election</button>
+      </div>
+
+      <!-- LOCAL ELECTIONS -->
+      <div class="section" id="sec-localels">
+        <div class="section-title">Local &amp; devolved elections</div>
+        <div class="section-desc">Snapshot results for local councils, Scottish Parliament, Senedd etc.</div>
+        <div class="item-list" id="localels-list"></div>
+        <button class="add-btn" onclick="addLocalEl()">+ Add election result</button>
+      </div>
+
+      <!-- POLLS -->
+      <div class="section" id="sec-polls">
+        <div class="section-title">Policy approval polls</div>
+        <div class="section-desc">Public opinion polls on specific policy questions.</div>
+        <div class="item-list" id="polls-list"></div>
+        <button class="add-btn" onclick="addPoll()">+ Add poll</button>
+      </div>
+
+      <!-- LEADERS -->
+      <div class="section" id="sec-leaders">
+        <div class="section-title">Leader approval ratings</div>
+        <div class="section-desc">Approval / disapproval numbers shown in the Polls tab. Update these when new polling comes in.</div>
+        <div class="item-list" id="leaders-list"></div>
+        <button class="add-btn" onclick="addLeader()">+ Add leader</button>
+      </div>
+
+      <!-- MANIFESTO -->
+      <div class="section" id="sec-manifesto">
+        <div class="section-title">Manifesto pledges</div>
+        <div class="section-desc">Labour's 2024 manifesto pledges and their current status.</div>
+        <div class="item-list" id="manifesto-list"></div>
+        <button class="add-btn" onclick="addPledge()">+ Add pledge</button>
+      </div>
+
+      <!-- GITHUB -->
+      <div class="section" id="sec-github">
+        <div class="section-title">GitHub setup</div>
+        <div class="section-desc">Connect to your GitHub repo to push changes directly to the live site.</div>
+        <div class="gh-box">
+          <strong>One-time setup.</strong> You need a GitHub Personal Access Token with <em>repo</em> scope. 
+          Create one at <strong>github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong>. 
+          Give it read/write access to Contents for the spectrm repo. Your token is stored only in this browser.
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="field">
+              <label>GitHub Personal Access Token</label>
+              <input type="password" id="gh-token" placeholder="github_pat_..." oninput="saveGHSettings()">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label>GitHub username</label>
+                <input type="text" id="gh-user" placeholder="WilliamDay1" oninput="saveGHSettings()">
+              </div>
+              <div class="field">
+                <label>Repository name</label>
+                <input type="text" id="gh-repo" placeholder="spectrm" oninput="saveGHSettings()">
+              </div>
+            </div>
+            <div class="field">
+              <label>Branch</label>
+              <input type="text" id="gh-branch" placeholder="main" oninput="saveGHSettings()">
+            </div>
+            <button class="btn btn-primary" onclick="testGitHub()">Test connection</button>
+            <div id="gh-status" style="margin-top:10px;font-size:12px;color:var(--tm)"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ── Password ─────────────────────────────────────────────────────────────────
+const ADMIN_PW = 'spectrm2026'; // Change this!
+
+function tryLogin(){
+  const pw = document.getElementById('pw-input').value;
+  if(pw === ADMIN_PW){
+    sessionStorage.setItem('spectrm_admin','1');
+    document.getElementById('login-screen').style.display='none';
+    document.getElementById('app').style.display='block';
+    init();
+  } else {
+    document.getElementById('login-err').style.display='block';
+    setTimeout(()=>document.getElementById('login-err').style.display='none',2000);
+  }
+}
+function logout(){sessionStorage.removeItem('spectrm_admin');location.reload();}
+if(sessionStorage.getItem('spectrm_admin')==='1'){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='block';
+}
+
+// ── Navigation ────────────────────────────────────────────────────────────────
+function showSection(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ── Toast ────────────────────────────────────────────────────────────────────
+function toast(msg,ms=2500){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),ms);
+}
+
+// ── Local storage data ────────────────────────────────────────────────────────
+function load(key,def){try{const v=localStorage.getItem('sadmin_'+key);return v?JSON.parse(v):def;}catch(e){return def;}}
+function save(key,val){try{localStorage.setItem('sadmin_'+key,JSON.stringify(val));}catch(e){}}
+
+// ── Default data ──────────────────────────────────────────────────────────────
+const DEFAULTS = {
+  bills:[
+    {id:1,n:'NHS Emergency Funding Bill 2026',s:'passed',date:'2026-03-15',aye:412,no:198,abs:40,d:'Pledges £3.1bn to reduce A&E waiting times and fund 40 new surgical hubs across England.'},
+    {id:2,n:'Workers Rights Act 2025',s:'passed',date:'2025-09-22',aye:402,no:215,abs:33,d:'Day-one employment rights, stronger unfair dismissal protections, gig economy workers included.'},
+    {id:3,n:'Net Zero Acceleration Act 2025',s:'passed',date:'2025-07-14',aye:389,no:220,abs:41,d:'UK to run on clean energy by 2035. Bans new petrol and diesel car sales from 2030.'},
+    {id:4,n:'Employment Rights (Amendment) Bill 2026',s:'progress',date:'',aye:0,no:0,abs:0,d:'Extends workers rights to gig economy and zero-hours contractors. Lords amendments pending.'},
+    {id:5,n:'Renters Rights Bill 2025',s:'passed',date:'2025-11-08',aye:371,no:192,abs:28,d:'Abolishes Section 21 no-fault evictions. Introduces rent increase caps and ombudsman.'},
+  ],
+  byelections:[
+    {seat:'Makerfield',date:'18 Jun 2026',cls:'hold',result:'Labour HOLD — Burnham 54.8%, Reform 34.5%',note:'Burnham won with 9,241 majority. Now in Labour leadership contest.'},
+    {seat:'Arbroath & Broughty Ferry',date:'Jun 2026',cls:'hold',result:'SNP HOLD — Reform 2nd with 18.3%',note:'Labour vote collapsed from 33% to 15% (−18pts). SNP held.'},
+    {seat:'Runcorn and Helsby',date:'1 May 2025',cls:'loss',result:'Reform UK GAIN — Lab→Ref swing +37%',note:'Won by 6 votes. Lab majority of 14,696 overturned. Closest post-war by-election.'},
+    {seat:'Blackpool South',date:'May 2024',cls:'gain',result:'Labour GAIN — Con→Lab swing +26%',note:'Major pre-election swing to Labour.'},
+  ],
+  localels:[
+    {name:'English local elections',date:'7 May 2026',col1:'Reform +1,453 seats · 14 councils',col2:'Labour −1,496 seats · 38 councils lost',note:'National equiv: Reform 27%, Con 20%, Lab 15%, Green 14%, LD 14%. Labour worst local result in 40 years.'},
+    {name:'Scottish Parliament (Holyrood)',date:'7 May 2026',col1:'SNP 57 seats — 5th term, no majority',col2:'Reform 17 seats — Holyrood debut',note:'SNP short of 65-seat majority. Greens won first-ever constituency seats (Edinburgh Central, Glasgow Southside).'},
+  ],
+  polls:[
+    {name:'Digital ID scheme',q:'Do you support introducing a national digital identity card scheme?',support:32,oppose:40,neutral:28,src:'Ipsos · Jan 2026 (n=1,150)',ctx:'Support collapsed from 57% in July 2025 after the mandatory scheme was announced.'},
+    {name:"Israel's military actions",q:"Do you support or oppose Israel's military actions in Gaza and the West Bank?",support:13,oppose:62,neutral:25,src:'YouGov for MAP · Apr 2026 (n=2,104)',ctx:'62% oppose Israeli military actions — a record high.'},
+  ],
+  leaders:[
+    {name:'Andy Burnham',party:'lab',role:'MP for Makerfield · Leadership frontrunner',approve:45,disapprove:40,net:5,src:'YouGov · Jun 2026'},
+    {name:'Zack Polanski',party:'grn',role:'Leader of the Green Party',approve:28,disapprove:22,net:6,src:'Opinium · May 2026'},
+    {name:'Keir Starmer',party:'lab',role:'Prime Minister · Announced resignation 22 Jun',approve:19,disapprove:62,net:-43,src:'Opinium · Jun 2026'},
+    {name:'Kemi Badenoch',party:'con',role:'Leader of the Opposition',approve:22,disapprove:48,net:-26,src:'Opinium · Jun 2026'},
+    {name:'Nigel Farage',party:'ref',role:'Reform UK leader',approve:28,disapprove:58,net:-30,src:'Opinium · Jun 2026'},
+  ],
+  manifesto:[
+    {area:'Economy',pledge:'Deliver the highest sustained growth in the G7',status:'offtrack',src:'fullfact.org',updated:'Jun 2026'},
+    {area:'NHS',pledge:'Cut NHS waiting lists — 2m extra appointments per year',status:'progress',src:'nhsengland.nhs.uk',updated:'May 2026'},
+    {area:'Workers',pledge:'Pass a Workers Rights Act within 100 days',status:'achieved',src:'parliament.uk',updated:'Oct 2024'},
+    {area:'Energy',pledge:'Great British Energy — publicly owned clean energy',status:'achieved',src:'gov.uk',updated:'May 2025'},
+    {area:'Housing',pledge:'Build 1.5 million new homes over this parliament',status:'progress',src:'gov.uk',updated:'Jun 2026'},
+  ]
+};
+
+// ── Data state ────────────────────────────────────────────────────────────────
+let DATA = {};
+function init(){
+  // Load GH settings
+  document.getElementById('gh-token').value = localStorage.getItem('gh_token')||'';
+  document.getElementById('gh-user').value = localStorage.getItem('gh_user')||'WilliamDay1';
+  document.getElementById('gh-repo').value = localStorage.getItem('gh_repo')||'spectrm';
+  document.getElementById('gh-branch').value = localStorage.getItem('gh_branch')||'main';
+
+  // Load all data
+  ['bills','byelections','localels','polls','leaders','manifesto'].forEach(k=>{
+    DATA[k] = load(k, DEFAULTS[k]);
+  });
+
+  renderAll();
+  updateStatus();
+}
+
+function renderAll(){
+  renderBills(); renderByElections(); renderLocalEls();
+  renderPolls(); renderLeaders(); renderManifesto();
+}
+
+// ── Accordion helper ──────────────────────────────────────────────────────────
+function toggleItem(el){
+  const body = el.nextElementSibling;
+  const chev = el.querySelector('.chevron');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  if(chev) chev.classList.toggle('open', !isOpen);
+}
+
+function itemCard(headerHTML, bodyHTML, extraHeaderRight=''){
+  return `<div class="item-card">
+    <div class="item-header" onclick="toggleItem(this)">
+      <div class="item-header-left">${headerHTML}</div>
+      <div class="item-header-right">${extraHeaderRight}<span class="chevron">▾</span></div>
+    </div>
+    <div class="item-body">${bodyHTML}</div>
+  </div>`;
+}
+
+// ── BILLS ─────────────────────────────────────────────────────────────────────
+function renderBills(){
+  const el = document.getElementById('bills-list');
+  el.innerHTML = DATA.bills.map((b,i)=>{
+    const statusColors = {passed:'badge-passed',progress:'badge-progress',defeated:'badge-defeated',committee:'badge-progress'};
+    const header = `<span class="badge ${statusColors[b.s]||''}">${b.s}</span>${b.n}`;
+    const body = `
+      <div class="field-row">
+        <div class="field"><label>Bill name</label><input value="${esc(b.n)}" oninput="updateItem('bills',${i},'n',this.value)"></div>
+        <div class="field"><label>Status</label>
+          <select onchange="updateItem('bills',${i},'s',this.value)">
+            ${['passed','progress','committee','defeated'].map(s=>`<option value="${s}"${b.s===s?' selected':''}>${s}</option>`).join('')}
+          </select></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Date (YYYY-MM-DD)</label><input value="${esc(b.date||'')}" placeholder="2026-03-15" oninput="updateItem('bills',${i},'date',this.value)"></div>
+        <div class="field"><label>Ayes</label><input type="number" value="${b.aye||0}" oninput="updateItem('bills',${i},'aye',+this.value)"></div>
+        <div class="field"><label>Noes</label><input type="number" value="${b.no||0}" oninput="updateItem('bills',${i},'no',+this.value)"></div>
+        <div class="field"><label>Abstained</label><input type="number" value="${b.abs||0}" oninput="updateItem('bills',${i},'abs',+this.value)"></div>
+      </div>
+      <div class="field"><label>Description</label><textarea oninput="updateItem('bills',${i},'d',this.value)">${esc(b.d)}</textarea></div>
+      <button class="btn btn-danger" onclick="removeItem('bills',${i})">Remove bill</button>`;
+    return itemCard(header, body);
+  }).join('');
+}
+
+function addBill(){
+  const id = Math.max(0,...DATA.bills.map(b=>b.id||0))+1;
+  DATA.bills.push({id,n:'New Bill',s:'progress',date:'',aye:0,no:0,abs:0,d:''});
+  saveData('bills'); renderBills();
+  // Open the last item
+  setTimeout(()=>{
+    const items = document.querySelectorAll('#bills-list .item-card');
+    if(items.length) items[items.length-1].querySelector('.item-header').click();
+  },50);
+}
+
+// ── BY-ELECTIONS ──────────────────────────────────────────────────────────────
+function renderByElections(){
+  const el = document.getElementById('byelections-list');
+  el.innerHTML = DATA.byelections.map((b,i)=>{
+    const clsColors = {hold:'badge-hold',gain:'badge-gain',loss:'badge-loss'};
+    const header = `<span class="badge ${clsColors[b.cls]||''}">${b.cls}</span>${b.seat}`;
+    const body = `
+      <div class="field-row">
+        <div class="field"><label>Constituency</label><input value="${esc(b.seat)}" oninput="updateItem('byelections',${i},'seat',this.value)"></div>
+        <div class="field"><label>Date</label><input value="${esc(b.date)}" placeholder="18 Jun 2026" oninput="updateItem('byelections',${i},'date',this.value)"></div>
+        <div class="field"><label>Result type</label>
+          <select onchange="updateItem('byelections',${i},'cls',this.value)">
+            ${['hold','gain','loss'].map(s=>`<option value="${s}"${b.cls===s?' selected':''}>${s}</option>`).join('')}
+          </select></div>
+      </div>
+      <div class="field"><label>Result headline</label><input value="${esc(b.result)}" oninput="updateItem('byelections',${i},'result',this.value)"></div>
+      <div class="field"><label>Context note</label><textarea oninput="updateItem('byelections',${i},'note',this.value)">${esc(b.note)}</textarea></div>
+      <button class="btn btn-danger" onclick="removeItem('byelections',${i})">Remove</button>`;
+    return itemCard(header, body);
+  }).join('');
+}
+
+function addByEl(){
+  DATA.byelections.push({seat:'New constituency',date:'',cls:'hold',result:'',note:''});
+  saveData('byelections'); renderByElections();
+  setTimeout(()=>{const items=document.querySelectorAll('#byelections-list .item-card');if(items.length)items[items.length-1].querySelector('.item-header').click();},50);
+}
+
+// ── LOCAL ELECTIONS ───────────────────────────────────────────────────────────
+function renderLocalEls(){
+  const el = document.getElementById('localels-list');
+  el.innerHTML = DATA.localels.map((l,i)=>{
+    const header = `🏛 ${l.name}`;
+    const body = `
+      <div class="field-row">
+        <div class="field"><label>Election name</label><input value="${esc(l.name)}" oninput="updateItem('localels',${i},'name',this.value)"></div>
+        <div class="field"><label>Date</label><input value="${esc(l.date)}" oninput="updateItem('localels',${i},'date',this.value)"></div>
+      </div>
+      <div class="field"><label>Winner / top result</label><input value="${esc(l.col1)}" oninput="updateItem('localels',${i},'col1',this.value)"></div>
+      <div class="field"><label>Second result / losses</label><input value="${esc(l.col2)}" oninput="updateItem('localels',${i},'col2',this.value)"></div>
+      <div class="field"><label>Context note</label><textarea oninput="updateItem('localels',${i},'note',this.value)">${esc(l.note)}</textarea></div>
+      <button class="btn btn-danger" onclick="removeItem('localels',${i})">Remove</button>`;
+    return itemCard(header, body);
+  }).join('');
+}
+
+function addLocalEl(){
+  DATA.localels.push({name:'New election',date:'',col1:'',col2:'',note:''});
+  saveData('localels'); renderLocalEls();
+  setTimeout(()=>{const items=document.querySelectorAll('#localels-list .item-card');if(items.length)items[items.length-1].querySelector('.item-header').click();},50);
+}
+
+// ── POLLS ─────────────────────────────────────────────────────────────────────
+function renderPolls(){
+  const el = document.getElementById('polls-list');
+  el.innerHTML = DATA.polls.map((p,i)=>{
+    const header = `📊 ${p.name}`;
+    const body = `
+      <div class="field"><label>Short name (for header)</label><input value="${esc(p.name)}" oninput="updateItem('polls',${i},'name',this.value)"></div>
+      <div class="field"><label>Full question</label><textarea oninput="updateItem('polls',${i},'q',this.value)">${esc(p.q)}</textarea></div>
+      <div class="field-row-3">
+        <div class="field"><label>Support %</label><input type="number" min="0" max="100" value="${p.support}" oninput="updateItem('polls',${i},'support',+this.value)"></div>
+        <div class="field"><label>Neutral %</label><input type="number" min="0" max="100" value="${p.neutral}" oninput="updateItem('polls',${i},'neutral',+this.value)"></div>
+        <div class="field"><label>Oppose %</label><input type="number" min="0" max="100" value="${p.oppose}" oninput="updateItem('polls',${i},'oppose',+this.value)"></div>
+      </div>
+      <div class="field"><label>Source</label><input value="${esc(p.src)}" placeholder="YouGov · Jan 2026 (n=1,500)" oninput="updateItem('polls',${i},'src',this.value)"></div>
+      <div class="field"><label>Context / interpretation</label><textarea oninput="updateItem('polls',${i},'ctx',this.value)">${esc(p.ctx||'')}</textarea></div>
+      <button class="btn btn-danger" onclick="removeItem('polls',${i})">Remove</button>`;
+    return itemCard(header, body);
+  }).join('');
+}
+
+function addPoll(){
+  DATA.polls.push({name:'New poll',q:'',support:33,neutral:33,oppose:34,src:'',ctx:'',trend:[]});
+  saveData('polls'); renderPolls();
+  setTimeout(()=>{const items=document.querySelectorAll('#polls-list .item-card');if(items.length)items[items.length-1].querySelector('.item-header').click();},50);
+}
+
+// ── LEADERS ───────────────────────────────────────────────────────────────────
+function renderLeaders(){
+  const el = document.getElementById('leaders-list');
+  const partyColors = {lab:'#CC0000',con:'#003087',ref:'#0A8A9F',grn:'#4CAF50',lib:'#F4A01C'};
+  el.innerHTML = DATA.leaders.map((l,i)=>{
+    const col = partyColors[l.party]||'#888';
+    const header = `<span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span>${l.name}
+      <span style="font-size:11px;font-weight:${l.net>0?600:400};color:${l.net>0?'#1baf7a':l.net<-20?'#e34948':'#888'}">${l.net>0?'+':''}${l.net}</span>`;
+    const body = `
+      <div class="field-row">
+        <div class="field"><label>Name</label><input value="${esc(l.name)}" oninput="updateItem('leaders',${i},'name',this.value)"></div>
+        <div class="field"><label>Party</label>
+          <select onchange="updateItem('leaders',${i},'party',this.value)">
+            ${[['lab','Labour'],['con','Conservative'],['ref','Reform UK'],['grn','Green'],['lib','Lib Dem'],['snp','SNP']].map(([v,t])=>`<option value="${v}"${l.party===v?' selected':''}>${t}</option>`).join('')}
+          </select></div>
+      </div>
+      <div class="field"><label>Role / subtitle</label><input value="${esc(l.role)}" oninput="updateItem('leaders',${i},'role',this.value)"></div>
+      <div class="field-row-3">
+        <div class="field"><label>Approve %</label><input type="number" value="${l.approve}" oninput="updateLeaderNet(${i},'approve',+this.value)"></div>
+        <div class="field"><label>Disapprove %</label><input type="number" value="${l.disapprove}" oninput="updateLeaderNet(${i},'disapprove',+this.value)"></div>
+        <div class="field"><label>Net (auto)</label><input type="number" value="${l.net}" id="net-${i}" readonly style="opacity:.6"></div>
+      </div>
+      <div class="field"><label>Source</label><input value="${esc(l.src)}" placeholder="YouGov · Jun 2026" oninput="updateItem('leaders',${i},'src',this.value)"></div>
+      <button class="btn btn-danger" onclick="removeItem('leaders',${i})">Remove</button>`;
+    return itemCard(header, body);
+  }).join('');
+}
+
+function updateLeaderNet(i,field,val){
+  DATA.leaders[i][field]=val;
+  DATA.leaders[i].net = DATA.leaders[i].approve - DATA.leaders[i].disapprove;
+  const netEl = document.getElementById('net-'+i);
+  if(netEl) netEl.value = DATA.leaders[i].net;
+  saveData('leaders');
+}
+
+function addLeader(){
+  DATA.leaders.push({name:'New leader',party:'lab',role:'',approve:0,disapprove:0,net:0,src:''});
+  saveData('leaders'); renderLeaders();
+  setTimeout(()=>{const items=document.querySelectorAll('#leaders-list .item-card');if(items.length)items[items.length-1].querySelector('.item-header').click();},50);
+}
+
+// ── MANIFESTO ─────────────────────────────────────────────────────────────────
+function renderManifesto(){
+  const el = document.getElementById('manifesto-list');
+  const statusEmoji = {achieved:'✅',progress:'🔄',track:'🟡',offtrack:'⚠️',broken:'❌',unclear:'❓',wait:'⏳'};
+  el.innerHTML = DATA.manifesto.map((p,i)=>{
+    const header = `${statusEmoji[p.status]||'•'} <span style="font-size:11px;color:var(--tm);margin-right:4px">${p.area}</span>${p.pledge}`;
+    const body = `
+      <div class="field-row">
+        <div class="field"><label>Policy area</label><input value="${esc(p.area)}" oninput="updateItem('manifesto',${i},'area',this.value)"></div>
+        <div class="field"><label>Status</label>
+          <select onchange="updateItem('manifesto',${i},'status',this.value)">
+            ${[['achieved','✅ Achieved'],['progress','🔄 In progress'],['track','🟡 On track'],['offtrack','⚠️ Off track'],['broken','❌ Broken'],['unclear','❓ Unclear'],['wait','⏳ Not yet due']].map(([v,t])=>`<option value="${v}"${p.status===v?' selected':''}>${t}</option>`).join('')}
+          </select></div>
+      </div>
+      <div class="field"><label>Pledge text</label><textarea oninput="updateItem('manifesto',${i},'pledge',this.value)">${esc(p.pledge)}</textarea></div>
+      <div class="field-row">
+        <div class="field"><label>Source URL</label><input value="${esc(p.src||'')}" placeholder="fullfact.org/..." oninput="updateItem('manifesto',${i},'src',this.value)"></div>
+        <div class="field"><label>Last updated</label><input value="${esc(p.updated||'')}" placeholder="Jun 2026" oninput="updateItem('manifesto',${i},'updated',this.value)"></div>
+      </div>
+      <button class="btn btn-danger" onclick="removeItem('manifesto',${i})">Remove</button>`;
+    return itemCard(header, body);
+  }).join('');
+}
+
+function addPledge(){
+  DATA.manifesto.push({area:'',pledge:'',status:'progress',src:'',updated:''});
+  saveData('manifesto'); renderManifesto();
+  setTimeout(()=>{const items=document.querySelectorAll('#manifesto-list .item-card');if(items.length)items[items.length-1].querySelector('.item-header').click();},50);
+}
+
+// ── Generic helpers ───────────────────────────────────────────────────────────
+function updateItem(key,i,field,val){
+  DATA[key][i][field]=val;
+  saveData(key);
+}
+function removeItem(key,i){
+  if(!confirm('Remove this item?')) return;
+  DATA[key].splice(i,1);
+  saveData(key);
+  renderAll();
+}
+function saveData(key){
+  save(key, DATA[key]);
+  updateStatus();
+}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+
+// ── GitHub settings ───────────────────────────────────────────────────────────
+function saveGHSettings(){
+  ['gh-token','gh-user','gh-repo','gh-branch'].forEach(id=>{
+    localStorage.setItem(id.replace('-','_'), document.getElementById(id).value);
+  });
+}
+function getGHSettings(){
+  return {
+    token: document.getElementById('gh-token').value,
+    user: document.getElementById('gh-user').value,
+    repo: document.getElementById('gh-repo').value,
+    branch: document.getElementById('gh-branch').value,
+  };
+}
+async function testGitHub(){
+  const {token,user,repo} = getGHSettings();
+  const el = document.getElementById('gh-status');
+  el.textContent='Testing...';
+  try{
+    const r = await fetch(`https://api.github.com/repos/${user}/${repo}`,{
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}
+    });
+    if(r.ok){
+      const d = await r.json();
+      el.innerHTML=`<span style="color:#1baf7a">✓ Connected to ${d.full_name} (${d.private?'private':'public'})</span>`;
+    } else {
+      el.innerHTML=`<span style="color:#c0392b">✗ Error ${r.status} — check token and repo name</span>`;
+    }
+  }catch(e){el.innerHTML=`<span style="color:#c0392b">✗ Network error</span>`;}
+}
+
+// ── Status indicator ──────────────────────────────────────────────────────────
+function updateStatus(){
+  const token = localStorage.getItem('gh_token');
+  const dot = document.getElementById('sdot');
+  const label = document.getElementById('slabel');
+  if(token){dot.className='status-dot ok';label.textContent='Ready to push';}
+  else{dot.className='status-dot';label.textContent='GitHub not configured';}
+}
+
+// ── Generate updated index.html and push to GitHub ────────────────────────────
+async function deployToGitHub(){
+  const {token,user,repo,branch} = getGHSettings();
+  if(!token){toast('⚙ Set up GitHub first');showSection('github');return;}
+
+  const btn = document.getElementById('deploy-btn');
+  btn.textContent='Pushing...'; btn.disabled=true;
+
+  try{
+    // 1. Fetch current index.html from GitHub
+    const fileResp = await fetch(`https://api.github.com/repos/${user}/${repo}/contents/index.html?ref=${branch}`,{
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}
+    });
+    if(!fileResp.ok) throw new Error('Could not fetch index.html from GitHub ('+fileResp.status+')');
+    const fileData = await fileResp.json();
+    const sha = fileData.sha;
+    let content = atob(fileData.content.replace(/\n/g,''));
+
+    // 2. Patch each data array
+    content = patchArray(content,'BILLS',DATA.bills,'const BILLS=');
+    content = patchArray(content,'BY_ELS',DATA.byelections,'const BY_ELS=');
+    content = patchArray(content,'LOCAL_ELS',DATA.localels,'const LOCAL_ELS=');
+    content = patchArray(content,'POLICY_POLLS',DATA.polls,'const POLICY_POLLS=');
+    content = patchLeaders(content, DATA.leaders);
+    content = patchManifesto(content, DATA.manifesto);
+
+    // 3. Push back
+    const pushResp = await fetch(`https://api.github.com/repos/${user}/${repo}/contents/index.html`,{
+      method:'PUT',
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body: JSON.stringify({
+        message:'Admin: update content via admin panel',
+        content: btoa(unescape(encodeURIComponent(content))),
+        sha, branch
+      })
+    });
+    if(!pushResp.ok){const e=await pushResp.json();throw new Error(e.message||pushResp.status);}
+    toast('✓ Pushed! Vercel will deploy in ~30 seconds.',4000);
+  }catch(e){
+    toast('✗ Push failed: '+e.message,5000);
+    console.error(e);
+  }
+  btn.textContent='⬆ Push to site'; btn.disabled=false;
+}
+
+function patchArray(content, name, data, marker){
+  // Find the array in the JS and replace it
+  const start = content.indexOf(marker);
+  if(start===-1) return content;
+  const arrStart = content.indexOf('[', start);
+  let depth=0, i=arrStart;
+  while(i<content.length){
+    if(content[i]==='[') depth++;
+    else if(content[i]===']'){depth--;if(depth===0){i++;break;}}
+    i++;
+  }
+  const newArr = JSON.stringify(data,null,2).replace(/"([^"]+)":/g,'$1:').replace(/"/g,"'");
+  return content.slice(0,arrStart) + newArr + content.slice(i);
+}
+
+function patchLeaders(content, leaders){
+  return patchArray(content,'LEADERS',leaders,'const LEADERS=');
+}
+function patchManifesto(content, pledges){
+  return patchArray(content,'MF_PLEDGES',pledges,'const MF_PLEDGES=');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+if(sessionStorage.getItem('spectrm_admin')==='1') init();
+</script>
+</body>
+</html>
