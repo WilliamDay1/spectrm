@@ -1787,7 +1787,7 @@ async function openMP(id,cached){
         '<div id="mp-bio-content" style="font-size:12px;color:var(--tm)">Loading...</div>'+
       '</div>'+
       '<div class="mp-section">'+
-        '<div class="mp-section-title">Key policy views</div>'+
+        '<div class="mp-section-title">Key positions &amp; record</div>'+
         '<div id="mp-ai-policy" style="font-size:12px;color:var(--tm)">Loading...</div>'+
       '</div>'+
       '<div class="mp-section">'+
@@ -1986,7 +1986,7 @@ function voteImportance(v){
 // HARDCODED MP PROFILES — stored as JSON for reliable admin editing
 // Edit via admin panel at /admin
 // =====================
-const MP_PROFILES_JSON='[{"name":"Rachel Reeves","bio":"Rachel Reeves is the Chancellor of the Exchequer and the first woman to hold the office in its 800-year history. Born in Lewisham in 1979 to primary school teacher parents, she studied PPE at Oxford and economics at the LSE, before spending six years as an economist at the Bank of England. She entered Parliament in 2010 as MP for Leeds West, and served as Shadow Chancellor from 2021. She sits firmly on the centrist, Blairite wing of Labour — a close ally of Keir Starmer and his first and only choice for Chancellor. She coined the term “securonomics” to describe her economic philosophy: active state investment in infrastructure, clean energy and skills, rejecting both austerity and unconstrained borrowing.","policies":["Fiscal rules: Operates under two self-imposed rules — day-to-day spending must be funded by tax revenues (not borrowing), and debt as a share of GDP must be falling by end of parliament. Borrowing to invest in capital projects is permitted. She has maintained only a wafer-thin margin against both rules, leaving her exposed whenever the OBR revises growth forecasts downward.","Record tax rises: Delivered the largest Budget tax rise since 1993 in October 2024 — raising employer National Insurance to 15%, freezing income tax thresholds until 2028, adding VAT to private school fees, and extending the windfall tax on energy firms. A second Budget in November 2025 raised taxes again, pushing the UK tax burden to a record high as a share of GDP. Despite fierce pressure from the Labour left, she has refused to borrow more or abandon her fiscal rules.","Invest to grow: Champions active state investment over both austerity and unconstrained spending — her “securonomics” philosophy backs a £100bn increase in capital spending on infrastructure, clean energy and skills, and created the National Wealth Fund to attract private co-investment alongside the state.","Performance as Chancellor: Growth has been modest — 1.3% in 2025, with only 0.1% in the final quarter, well below her ambition of leading the “highest sustained growth in the G7.” The OBR forecasts 1.1% for 2026 before recovering to around 1.6% in 2027–28. Borrowing is £18bn lower than November forecasts and the OBR projects the average worker will be £1,000 better off by 2029. Her approval rating has fallen to 13% — the lowest recorded for any Chancellor.","Foreign policy: A self-described “unapologetic Zionist” who has broadly aligned with the government’s position on Israel-Gaza, resisting calls for a full arms embargo. Has backed a significant increase in defence spending — describing it as “the biggest uplift since the Cold War” — and positioned the Treasury as a key driver of UK security commitments alongside NATO allies."]}]';
+const MP_PROFILES_JSON='[{"name": "Rachel Reeves", "bio": "Rachel Reeves is the Chancellor of the Exchequer and the first woman to hold the office in its 800-year history. Born in Lewisham in 1979 to primary school teacher parents, she studied PPE at Oxford and economics at the LSE, before spending six years as an economist at the Bank of England. She entered Parliament in 2010 as MP for Leeds West, and served as Shadow Chancellor from 2021. She sits firmly on the centrist, Blairite wing of Labour — a close ally of Keir Starmer and his first and only choice for Chancellor. She coined the term “securonomics” to describe her economic philosophy: active state investment in infrastructure, clean energy and skills, rejecting both austerity and unconstrained borrowing.", "policies": ["Fiscal rules: Operates under two self-imposed rules — day-to-day spending must be funded by tax revenues (not borrowing), and debt as a share of GDP must be falling by end of parliament. Borrowing to invest in capital projects is permitted. She has maintained only a wafer-thin margin against both rules, leaving her exposed whenever the OBR revises growth forecasts downward.", "Record tax rises: Delivered the largest Budget tax rise since 1993 in October 2024 — raising employer National Insurance to 15%, freezing income tax thresholds until 2028, adding VAT to private school fees, and extending the windfall tax on energy firms. A second Budget in November 2025 raised taxes again, pushing the UK tax burden to a record high as a share of GDP. Despite fierce pressure from the Labour left, she has refused to borrow more or abandon her fiscal rules.", "Invest to grow: Champions active state investment over both austerity and unconstrained spending — her “securonomics” philosophy backs a £100bn increase in capital spending on infrastructure, clean energy and skills, and created the National Wealth Fund to attract private co-investment alongside the state.", "Performance as Chancellor: Growth has been modest — 1.3% in 2025, with only 0.1% in the final quarter, well below her ambition of leading the “highest sustained growth in the G7.” The OBR forecasts 1.1% for 2026 before recovering to around 1.6% in 2027–28. Her approval rating has fallen to 13% — the lowest recorded for any Chancellor.", "Foreign policy: A self-described “unapologetic Zionist” who has broadly aligned with the government’s position on Israel-Gaza, resisting calls for a full arms embargo. Has backed a significant increase in defence spending — describing it as “the biggest uplift since the Cold War” — and positioned the Treasury as a key driver of UK security commitments alongside NATO allies."]}, {"name": "Keir Starmer", "bio": "Sir Keir Starmer served as Prime Minister from July 2024 until his resignation on 22 June 2026 — one of the shortest premierships in modern British history. Born in Southwark in 1962, the son of a toolmaker and a nurse, he studied law and became Director of Public Prosecutions from 2008 to 2013, overseeing high-profile prosecutions before entering Parliament in 2015. He won the Labour leadership in 2020 after Jeremy Corbyn’s defeat, repositioning the party on the centre-left. His 2024 landslide victory ended 14 years of Conservative government, but his authority eroded quickly amid policy U-turns, the Peter Mandelson scandal, catastrophic local election results and growing MP rebellions. He is closely allied to Rachel Reeves and sits on the centrist, Blairite wing of Labour.", "policies": ["Economic record: Presided over modest growth of 1.3% in 2025, well below expectations, while supporting Rachel Reeves’ record tax rises and fiscal rules. Promised to lead the most pro-growth government in G7 history but never came close to delivering it. His net approval rating reached −66 — the lowest recorded for any Prime Minister since polling began in 1977.", "Public services: Championed NHS investment and backed the Workers’ Rights Act, railway renationalisation and Great British Energy as the government’s signature reforms. Delivered a 22% pay rise to junior doctors to end years of strikes. Scrapped winter fuel payments for non-means-tested pensioners in one of his most controversial early decisions.", "The Mandelson scandal: Appointed Peter Mandelson as US ambassador in late 2024, only to sack him in September 2025 after his links to Jeffrey Epstein became widely known. His Chief of Staff Morgan McSweeney resigned in February 2026, fatally undermining his authority and prompting Scottish Labour leader Anas Sarwar to call for his resignation.", "Immigration and security: Took a tougher-than-expected stance on irregular migration, extending the Indefinite Leave to Remain qualifying period and resisting pressure from the left on asylum policy. Increased defence spending to 2.5% of GDP and backed Ukraine consistently. Refused to allow US forces to use British bases for offensive strikes against Iran in 2026.", "Resignation: Announced his departure on 22 June 2026, days after Andy Burnham won the Makerfield by-election making a leadership challenge viable. More than 100 Labour MPs had called for him to resign following Labour’s disastrous May 2026 local and devolved election results."]}, {"name": "Kemi Badenoch", "bio": "Kemi Badenoch became Conservative leader in November 2024, the first Black person to lead the party, defeating Robert Jenrick in the final round with 56% of the vote. Born in Wimbledon in 1980 to Nigerian parents, she grew up partly in Lagos before returning to study computer systems engineering at Sussex and law at Birkbeck. She entered Parliament in 2017 and rose rapidly under Boris Johnson, serving as Equalities Minister and Business Secretary. She sits firmly on the right of the Conservative Party — a cultural conservative and free-market believer who has described wanting to be “the British Javier Milei,” drawing on the Argentine president’s “chainsaw” approach to the state.", "policies": ["Cultural conservatism: Has made opposition to identity politics and “woke” ideology central to her leadership, pledging to scrap the legal equality duty for public services and withdraw the UK from the European Convention on Human Rights. Defended a 2021 report stating Britain is not institutionally racist and has been consistently combative on trans issues and free speech.", "Economy: Advocates lower taxes, deregulation and smaller government, drawing on Thatcherite instincts. Has committed to fiscal sustainability and criticised Labour’s tax rises, though has struggled to set out detailed alternative spending plans. Forced to apologise after her own former colleagues accused her of hypocrisy over National Insurance exemptions she had privately offered India during trade talks.", "Party management: Faced a wave of defections to Reform UK, with Robert Jenrick, Suella Braverman and Nadhim Zahawi all crossing the floor. After evidence emerged that Jenrick planned to defect in a “damaging” way, she removed the whip personally. Nicknamed “Santa Claus” at Reform HQ for the regularity of the gifts she inadvertently sent them.", "Foreign policy: Hawkish on defence, calling for UK spending well above 2.5% of GDP and demanding “offensive action” against Iran during the 2026 conflict. Has strong pro-Israel positions and backed UK withdrawal from the ECHR, describing Iran as an “enemy” of the UK that “would very happily wipe out the UK if it could get away with it.”", "Performance: Lost more than 650 seats in the 2025 local elections and was overtaken by both Reform and the Lib Dems. Polling consistently below 20% voting intention, with some analysts questioning whether the Conservative Party can survive as a major force in British politics."]}, {"name": "Nigel Farage", "bio": "Nigel Farage is the most electorally consequential British politician of his generation never to have held government office. Born in Bromley in 1964, he spent 20 years as a City commodities trader before becoming a UKIP MEP in 1999 and spending two decades in the European Parliament agitating for Brexit. He led UKIP twice, founded the Brexit Party in 2019 — which topped the European elections — and rebranded it as Reform UK. After seven failed attempts to enter Westminster, he won Clacton in 2024. Reform came first in the 2026 English local elections, gaining over 1,400 seats, and entered the Scottish Parliament and Senedd for the first time.", "policies": ["Immigration: Has made mass immigration restriction the defining issue of his career, calling for a freeze on net migration, abolition of Indefinite Leave to Remain and deportation of those with no right to remain. Reform’s surge in Labour heartlands is largely attributed to his ability to connect immigration to cost-of-living anxiety among working-class voters.", "Economy: Has shifted from earlier free-market liberalism towards economic nationalism — backing renationalisation of British Steel, re-opening coal mines and cutting capital gains tax on cryptocurrency. Received £5m from a cryptocurrency investor shortly before entering the 2024 election, leading to ongoing questions about financial transparency.", "Foreign policy: A close ally and self-described “friend” of Donald Trump, positioning himself as the bridge between the UK and the Trump administration. Supported Israeli and US military action in the 2026 Iran war and called for the Iranian regime to be “wiped out.” Previously made comments suggesting NATO expansion provoked Russia’s invasion of Ukraine, though later called Ukrainian NATO membership “essential.”", "Internal tensions: Former MP Rupert Lowe was suspended after criticising Farage’s leadership and later founded a rival party, Restore Britain. Questions remain about the party’s ability to hold together as it scales up, and whether Farage will commit fully to parliamentary politics — in late 2025 he was reported to have spoken 90 times more in Cameo videos than in speeches on the floor of Parliament.", "Polling: Reform topped UK-wide voting intention polls for much of 2025 at around 27–34%, with Farage personally preferred as Prime Minister over Starmer and Badenoch in some surveys. His net approval rating of −16 is significantly better than his rivals, though he remains deeply unpopular among ethnic minorities."]}, {"name": "Ed Davey", "bio": "Sir Ed Davey has led the Liberal Democrats since 2019, steering the party from near-collapse — 11 seats in 2019 — to its best result since 1923, taking 72 seats in 2024. Born in Mansfield in 1965, he lost both parents before the age of 16 and was raised by his grandparents. He studied PPE at Oxford and worked as an economics researcher before entering Parliament in 1997. He served as Energy Secretary in the Cameron-Clegg coalition from 2012 to 2015. His personal experience as a carer — for his late mother as a child, and now for his severely disabled son John — has shaped his politics profoundly and underpins his campaigning on NHS and social care. He is an “Orange Book” economic liberal who repositioned the party as the voice of centrist, pro-European Middle England.", "policies": ["Social care and carers: Has made the care crisis his signature issue — campaigning for free personal care, reform of Carer’s Allowance and proper funding for the social care system. His autobiography Why I Care, published in 2025, draws directly on his personal experience raising a severely disabled son alongside his wife Emily.", "Pro-European: A committed pro-European, the Lib Dems under Davey have called for a new Growth and Defence Partnership with the EU including rejoining the Single Market and a Customs Union, positioning them as the most pro-EU mainstream party. Lost his seat in 2015 partly as a result of the coalition’s tuition fees betrayal — an experience that has made him wary of formal coalitions with larger parties.", "Electoral strategy: Built a distinctive strategy of targeting “Blue Wall” Conservative seats in southern England, winning 72 MPs in 2024 and continuing to advance in 2025 local elections. His campaign style — including widely mocked but highly effective publicity stunts — generated enormous media coverage and helped the party connect with voters beyond its traditional base.", "Local government: Won three county councils in 2025 — Cambridgeshire, Oxfordshire and Shropshire — largely at Conservative expense. Has positioned the party as “the party of Middle England,” signalling ambition to replace the Conservatives as the dominant centre-right force in southern England.", "Climate: A strong advocate for net zero, having expanded renewable energy during his coalition years as Energy Secretary. The Lib Dems have 26 MPs who are paid-up members of the Green Liberal Democrats caucus, and the party has campaigned for energy affordability alongside the net zero transition."]}, {"name": "Zack Polanski", "bio": "Zack Polanski became Green Party leader in September 2025, winning a landslide in the party’s first-ever sole leadership contest with 20,411 votes. Born David Paulden in Salford in 1982, he studied drama at Aberystwyth and worked as an actor, activity provider and hypnotherapist before entering politics. He joined the Liberal Democrats in 2015, switched to the Greens in 2017 and was elected to the London Assembly in 2021. He is openly gay, proudly vegan and Jewish, and has described himself as an “eco-populist” — a term he has sought to reclaim from the right. Under his leadership, Green Party membership surged from 60,000 to 225,000 and the party won over 400 council seats and its first-ever Scottish Parliament constituency seats in May 2026.", "policies": ["Eco-populism: Argues that climate action and cost-of-living relief are the same struggle — that spiralling rents, energy bills and low wages are caused by the same concentrated wealth that drives environmental destruction. Calls for a wealth tax on billionaires to fund green jobs, free childcare and affordable housing rather than cutting public services.", "Gaza and foreign policy: Has made opposition to UK arms sales to Israel a central plank of his leadership, calling the government “not just complicit but active participants” in Gaza. His outspoken stance has attracted significant support among younger left-liberal voters disillusioned with Labour, but also fierce criticism from right-wing media and some within the Jewish community.", "Versus Labour: Explicitly positioning the Greens as the progressive alternative to Starmer’s Labour, targeting voters who backed Labour in 2024 and feel betrayed. Visited Nigel Farage’s Clacton seat in his first weeks as leader, signalling ambition to compete for working-class voters as well as metropolitan liberals. Has said he could not imagine supporting a coalition led by Keir Starmer.", "Economic radicalism: Supports renationalisation of water companies, a £15-an-hour minimum wage for all ages, stronger workers’ rights and tighter regulation of large multinational businesses. Calls for taxing extreme wealth rather than ordinary income, and has been compared internationally to New York’s Zohran Mamdani for his blend of environmental and socialist policies.", "Growth: Green Party membership has nearly quadrupled under his leadership, and the party won its first-ever Scottish Parliament constituency seats in Edinburgh Central and Glasgow Southside in May 2026. Listed in Time Magazine’s 100 Next rising stars in October 2025. His weekly podcast Bold Politics reached fourth place in the UK news podcast charts within days of launch."]}]';
 const MP_PROFILES=JSON.parse(MP_PROFILES_JSON);
 
 function getMPProfile(name){
@@ -2141,166 +2141,22 @@ function renderOvApproval(){
 
 
 const BILLS=[
-  {
-    id: 1,
-    n: 'NHS Emergency Funding Bill 2026',
-    s: 'passed',
-    date: '2026-03-15',
-    aye: 412,
-    no: 198,
-    abs: 40,
-    d: 'Pledges £3.1bn to reduce A&E waiting times and fund 40 new surgical hubs across England.'
-  },
-  {
-    id: 2,
-    n: 'Workers Rights Act 2025',
-    s: 'passed',
-    date: '2025-09-22',
-    aye: 402,
-    no: 215,
-    abs: 33,
-    d: 'Day-one employment rights, stronger unfair dismissal protections, gig economy workers included.'
-  },
-  {
-    id: 3,
-    n: 'Net Zero Acceleration Act 2025',
-    s: 'passed',
-    date: '2025-07-14',
-    aye: 389,
-    no: 220,
-    abs: 41,
-    d: 'UK to run on clean energy by 2035. Bans new petrol and diesel car sales from 2030.'
-  },
-  {
-    id: 4,
-    n: 'Digital Markets, Competition and Consumers Act 2025',
-    s: 'passed',
-    date: '2025-06-03',
-    aye: 445,
-    no: 187,
-    abs: 18,
-    d: 'New CMA powers to regulate Big Tech and protect consumers from unfair terms and conditions.'
-  },
-  {
-    id: 5,
-    n: 'Great British Energy Act 2025',
-    s: 'passed',
-    date: '2025-05-20',
-    aye: 378,
-    no: 232,
-    abs: 40,
-    d: 'Creates publicly-owned Great British Energy to co-invest in offshore wind and renewable projects.'
-  },
-  {
-    id: 6,
-    n: 'Leasehold and Commonhold Reform Act 2024',
-    s: 'passed',
-    date: '2024-10-14',
-    aye: 398,
-    no: 201,
-    abs: 51,
-    d: 'Leaseholders gain rights to extend leases and manage buildings; commonhold becomes default tenure.'
-  },
-  {
-    id: 7,
-    n: 'Border Security, Asylum and Immigration Bill 2025',
-    s: 'passed',
-    date: '2025-11-10',
-    aye: 356,
-    no: 245,
-    abs: 49,
-    d: 'New Border Security Command, reformed asylum processing, new returns agreements with partners.'
-  },
-  {
-    id: 8,
-    n: 'National Minimum Wage (Amendment) Act 2025',
-    s: 'passed',
-    date: '2025-04-01',
-    aye: 412,
-    no: 176,
-    abs: 62,
-    d: 'Minimum wage raised to £12.21/hr and extended to 18–20 year olds at full adult rate.'
-  },
-  {
-    id: 9,
-    n: 'Renters Rights Bill',
-    s: 'progress',
-    date: null,
-    aye: 0,
-    no: 0,
-    abs: 0,
-    d: 'Abolishes no-fault evictions (Section 21). Creates private rented sector ombudsman. Currently in Lords.'
-  },
-  {
-    id: 10,
-    n: 'Crime and Policing Bill 2026',
-    s: 'progress',
-    date: null,
-    aye: 0,
-    no: 0,
-    abs: 0,
-    d: 'Overhauls stop and search, new neighbourhood policing duty, expanded serious crime powers.'
-  },
-  {
-    id: 11,
-    n: 'Artificial Intelligence (Safety) Bill',
-    s: 'committee',
-    date: null,
-    aye: 0,
-    no: 0,
-    abs: 0,
-    d: 'Mandatory safety testing for frontier AI models. Establishes AI Safety Institute with statutory powers.'
-  },
-  {
-    id: 12,
-    n: 'Energy Security and Net Zero Bill',
-    s: 'committee',
-    date: null,
-    aye: 0,
-    no: 0,
-    abs: 0,
-    d: 'New energy security agency, mandatory offshore wind capacity targets, hydrogen investment framework.'
-  },
-  {
-    id: 13,
-    n: 'Health and Social Care (Charges) Bill',
-    s: 'committee',
-    date: null,
-    aye: 0,
-    no: 0,
-    abs: 0,
-    d: 'Extends NHS charging exemptions for refugees and asylum seekers; reforms overseas visitor charging.'
-  },
-  {
-    id: 14,
-    n: 'Courts Reform Bill 2026',
-    s: 'committee',
-    date: null,
-    aye: 0,
-    no: 0,
-    abs: 0,
-    d: 'Proposes halving jury trials for triable-either-way offences to reduce Crown Court backlog.'
-  },
-  {
-    id: 15,
-    n: 'Rwanda Deportation (Asylum) Bill',
-    s: 'defeated',
-    date: '2024-11-18',
-    aye: 210,
-    no: 389,
-    abs: 51,
-    d: 'Sought to revive Rwanda deportation policy following Supreme Court ruling it was unlawful.'
-  },
-  {
-    id: 16,
-    n: 'Scottish Independence Referendum Bill',
-    s: 'defeated',
-    date: '2025-03-08',
-    aye: 89,
-    no: 521,
-    abs: 40,
-    d: 'SNP bill for Section 30 order from Westminster for independence referendum in 2027.'
-  }
+  {id:1,n:'NHS Emergency Funding Bill 2026',s:'passed',date:'2026-03-15',aye:412,no:198,abs:40,d:'Pledges £3.1bn to reduce A&E waiting times and fund 40 new surgical hubs across England.'},
+  {id:2,n:'Workers Rights Act 2025',s:'passed',date:'2025-09-22',aye:402,no:215,abs:33,d:'Day-one employment rights, stronger unfair dismissal protections, gig economy workers included.'},
+  {id:3,n:'Net Zero Acceleration Act 2025',s:'passed',date:'2025-07-14',aye:389,no:220,abs:41,d:'UK to run on clean energy by 2035. Bans new petrol and diesel car sales from 2030.'},
+  {id:4,n:'Digital Markets, Competition and Consumers Act 2025',s:'passed',date:'2025-06-03',aye:445,no:187,abs:18,d:'New CMA powers to regulate Big Tech and protect consumers from unfair terms and conditions.'},
+  {id:5,n:'Great British Energy Act 2025',s:'passed',date:'2025-05-20',aye:378,no:232,abs:40,d:'Creates publicly-owned Great British Energy to co-invest in offshore wind and renewable projects.'},
+  {id:6,n:'Leasehold and Commonhold Reform Act 2024',s:'passed',date:'2024-10-14',aye:398,no:201,abs:51,d:'Leaseholders gain rights to extend leases and manage buildings; commonhold becomes default tenure.'},
+  {id:7,n:'Border Security, Asylum and Immigration Bill 2025',s:'passed',date:'2025-11-10',aye:356,no:245,abs:49,d:'New Border Security Command, reformed asylum processing, new returns agreements with partners.'},
+  {id:8,n:'National Minimum Wage (Amendment) Act 2025',s:'passed',date:'2025-04-01',aye:412,no:176,abs:62,d:'Minimum wage raised to £12.21/hr and extended to 18–20 year olds at full adult rate.'},
+  {id:9,n:'Renters Rights Bill',s:'progress',date:null,aye:0,no:0,abs:0,d:'Abolishes no-fault evictions (Section 21). Creates private rented sector ombudsman. Currently in Lords.'},
+  {id:10,n:'Crime and Policing Bill 2026',s:'progress',date:null,aye:0,no:0,abs:0,d:'Overhauls stop and search, new neighbourhood policing duty, expanded serious crime powers.'},
+  {id:11,n:'Artificial Intelligence (Safety) Bill',s:'committee',date:null,aye:0,no:0,abs:0,d:'Mandatory safety testing for frontier AI models. Establishes AI Safety Institute with statutory powers.'},
+  {id:12,n:'Energy Security and Net Zero Bill',s:'committee',date:null,aye:0,no:0,abs:0,d:'New energy security agency, mandatory offshore wind capacity targets, hydrogen investment framework.'},
+  {id:13,n:'Health and Social Care (Charges) Bill',s:'committee',date:null,aye:0,no:0,abs:0,d:'Extends NHS charging exemptions for refugees and asylum seekers; reforms overseas visitor charging.'},
+  {id:14,n:'Courts Reform Bill 2026',s:'committee',date:null,aye:0,no:0,abs:0,d:'Proposes halving jury trials for triable-either-way offences to reduce Crown Court backlog.'},
+  {id:15,n:'Rwanda Deportation (Asylum) Bill',s:'defeated',date:'2024-11-18',aye:210,no:389,abs:51,d:'Sought to revive Rwanda deportation policy following Supreme Court ruling it was unlawful.'},
+  {id:16,n:'Scottish Independence Referendum Bill',s:'defeated',date:'2025-03-08',aye:89,no:521,abs:40,d:'SNP bill for Section 30 order from Westminster for independence referendum in 2027.'},
 ];
 const BSL={passed:'Passed',progress:'In progress',committee:'Committee',defeated:'Defeated'};
 const BSC={passed:'st-p',progress:'st-pr',committee:'st-c',defeated:'st-d'};
@@ -2321,453 +2177,46 @@ let VI_DATA={
   lib:[13,13,13,13,13,13,13,13,13,13,13,13,12,12,12,12,12,12,12,12,12,12,13,12.1]
 };
 const RECENT_POLLS=[
-  {
-    pollster: 'YouGov',
-    client: 'Times/Sky',
-    date: '21-22 Jun 26',
-    n: 2105,
-    ref: 25,
-    lab: 18,
-    con: 20,
-    grn: 15,
-    lib: 14,
-    src: 'yougov.com'
-  },
-  {
-    pollster: 'More in Common',
-    client: 'Independent',
-    date: '19-20 Jun 26',
-    n: 2012,
-    ref: 26,
-    lab: 20,
-    con: 19,
-    grn: 13,
-    lib: 13,
-    src: 'moreincommon.org.uk'
-  },
-  {
-    pollster: 'Opinium',
-    client: 'Observer',
-    date: '18-19 Jun 26',
-    n: 2003,
-    ref: 27,
-    lab: 21,
-    con: 18,
-    grn: 14,
-    lib: 12,
-    src: 'opinium.com'
-  },
-  {
-    pollster: 'YouGov',
-    client: 'Times/Sky',
-    date: '14-15 Jun 26',
-    n: 2089,
-    ref: 24,
-    lab: 19,
-    con: 19,
-    grn: 15,
-    lib: 13,
-    src: 'yougov.com'
-  },
-  {
-    pollster: 'Survation',
-    client: 'LabourList',
-    date: '13-14 Jun 26',
-    n: 1654,
-    ref: 25,
-    lab: 20,
-    con: 19,
-    grn: 14,
-    lib: 13,
-    src: 'survation.com'
-  },
-  {
-    pollster: 'JL Partners',
-    client: 'Mail',
-    date: '11-12 Jun 26',
-    n: 2001,
-    ref: 26,
-    lab: 21,
-    con: 20,
-    grn: 13,
-    lib: 12,
-    src: 'jlpartners.co.uk'
-  },
-  {
-    pollster: 'YouGov',
-    client: 'Times/Sky',
-    date: '7-8 Jun 26',
-    n: 2098,
-    ref: 25,
-    lab: 19,
-    con: 19,
-    grn: 14,
-    lib: 12,
-    src: 'yougov.com'
-  },
-  {
-    pollster: 'Find Out Now',
-    client: 'Elects',
-    date: '5-6 Jun 26',
-    n: 2200,
-    ref: 27,
-    lab: 20,
-    con: 18,
-    grn: 15,
-    lib: 12,
-    src: 'findoutnow.co.uk'
-  },
-  {
-    pollster: 'YouGov',
-    client: 'Times/Sky',
-    date: '31 May-1 Jun 26',
-    n: 2087,
-    ref: 27,
-    lab: 18,
-    con: 18,
-    grn: 15,
-    lib: 13,
-    src: 'yougov.com'
-  },
-  {
-    pollster: 'Lord Ashcroft',
-    client: 'Ashcroft Polls',
-    date: '28-30 May 26',
-    n: 5012,
-    ref: 25,
-    lab: 20,
-    con: 19,
-    grn: 14,
-    lib: 13,
-    src: 'lordashcroftpolls.com'
-  }
+  {pollster:'YouGov',client:'Times/Sky',date:'21-22 Jun 26',n:2105,ref:25,lab:18,con:20,grn:15,lib:14,src:'yougov.com'},
+  {pollster:'More in Common',client:'Independent',date:'19-20 Jun 26',n:2012,ref:26,lab:20,con:19,grn:13,lib:13,src:'moreincommon.org.uk'},
+  {pollster:'Opinium',client:'Observer',date:'18-19 Jun 26',n:2003,ref:27,lab:21,con:18,grn:14,lib:12,src:'opinium.com'},
+  {pollster:'YouGov',client:'Times/Sky',date:'14-15 Jun 26',n:2089,ref:24,lab:19,con:19,grn:15,lib:13,src:'yougov.com'},
+  {pollster:'Survation',client:'LabourList',date:'13-14 Jun 26',n:1654,ref:25,lab:20,con:19,grn:14,lib:13,src:'survation.com'},
+  {pollster:'JL Partners',client:'Mail',date:'11-12 Jun 26',n:2001,ref:26,lab:21,con:20,grn:13,lib:12,src:'jlpartners.co.uk'},
+  {pollster:'YouGov',client:'Times/Sky',date:'7-8 Jun 26',n:2098,ref:25,lab:19,con:19,grn:14,lib:12,src:'yougov.com'},
+  {pollster:'Find Out Now',client:'Elects',date:'5-6 Jun 26',n:2200,ref:27,lab:20,con:18,grn:15,lib:12,src:'findoutnow.co.uk'},
+  {pollster:'YouGov',client:'Times/Sky',date:'31 May-1 Jun 26',n:2087,ref:27,lab:18,con:18,grn:15,lib:13,src:'yougov.com'},
+  {pollster:'Lord Ashcroft',client:'Ashcroft Polls',date:'28-30 May 26',n:5012,ref:25,lab:20,con:19,grn:14,lib:13,src:'lordashcroftpolls.com'},
 ];
 
 const LEADERS=[
-  {
-    name: 'Andy Burnham',
-    party: 'lab',
-    role: 'MP for Makerfield · Leadership frontrunner',
-    approve: 45,
-    disapprove: 40,
-    net: 5,
-    src: 'YouGov · Jun 2026'
-  },
-  {
-    name: 'Zack Polanski',
-    party: 'grn',
-    role: 'Green leader',
-    approve: 29,
-    disapprove: 38,
-    net: -9,
-    src: 'YouGov · Jun 2026'
-  },
-  {
-    name: 'Ed Davey',
-    party: 'lib',
-    role: 'Lib Dem leader',
-    approve: 32,
-    disapprove: 44,
-    net: -12,
-    src: 'YouGov · Jun 2026'
-  },
-  {
-    name: 'Kemi Badenoch',
-    party: 'con',
-    role: 'Opp. leader',
-    approve: 25,
-    disapprove: 51,
-    net: -26,
-    src: 'YouGov · Jun 2026'
-  },
-  {
-    name: 'Nigel Farage',
-    party: 'ref',
-    role: 'Reform leader',
-    approve: 28,
-    disapprove: 58,
-    net: -30,
-    src: 'YouGov · Jun 2026'
-  },
-  {
-    name: 'Angela Rayner',
-    party: 'lab',
-    role: 'Deputy PM',
-    approve: 21,
-    disapprove: 51,
-    net: -30,
-    src: 'Opinium · May 2026'
-  },
-  {
-    name: 'Keir Starmer',
-    party: 'lab',
-    role: 'Prime Minister · Announced resignation 22 Jun',
-    approve: 19,
-    disapprove: 62,
-    net: -43,
-    src: 'Opinium · Jun 2026'
-  }
+  {name:'Andy Burnham',party:'lab',role:'MP for Makerfield · Leadership frontrunner',approve:45,disapprove:40,net:5,src:'YouGov · Jun 2026'},
+  {name:'Zack Polanski',party:'grn',role:'Green leader',approve:29,disapprove:38,net:-9,src:'YouGov · Jun 2026'},
+  {name:'Ed Davey',party:'lib',role:'Lib Dem leader',approve:32,disapprove:44,net:-12,src:'YouGov · Jun 2026'},
+  {name:'Kemi Badenoch',party:'con',role:'Opp. leader',approve:25,disapprove:51,net:-26,src:'YouGov · Jun 2026'},
+  {name:'Nigel Farage',party:'ref',role:'Reform leader',approve:28,disapprove:58,net:-30,src:'YouGov · Jun 2026'},
+  {name:'Angela Rayner',party:'lab',role:'Deputy PM',approve:21,disapprove:51,net:-30,src:'Opinium · May 2026'},
+  {name:'Keir Starmer',party:'lab',role:'Prime Minister · Announced resignation 22 Jun',approve:19,disapprove:62,net:-43,src:'Opinium · Jun 2026'},
 ];
 const BY_ELS=[
-  {
-    seat: 'Makerfield',
-    date: '18 Jun 2026',
-    cls: 'hold',
-    result: 'Labour HOLD — Burnham 54.8%, Reform 34.5%',
-    note: 'Burnham won with 9,241 majority. Now in Labour leadership contest.'
-  },
-  {
-    seat: 'Arbroath & Broughty Ferry',
-    date: 'Jun 2026',
-    cls: 'hold',
-    result: 'SNP HOLD — Reform 2nd with 18.3%',
-    note: 'Labour vote collapsed from 33% to 15% (−18pts). SNP held.'
-  },
-  {
-    seat: 'Runcorn and Helsby',
-    date: '1 May 2025',
-    cls: 'loss',
-    result: 'Reform UK GAIN — Lab→Ref swing +37%',
-    note: 'Won by 6 votes. Lab majority of 14,696 overturned. Closest post-war by-election.'
-  },
-  {
-    seat: 'Blackpool South',
-    date: 'May 2024',
-    cls: 'gain',
-    result: 'Labour GAIN — Con→Lab swing +26%',
-    note: 'Major pre-election swing to Labour.'
-  }
+  {seat:'Makerfield',date:'18 Jun 2026',cls:'hold',result:'Labour HOLD — Burnham 54.8%, Reform 34.5%',note:'Burnham won with 9,241 majority. Now in Labour leadership contest.'},
+  {seat:'Arbroath & Broughty Ferry',date:'Jun 2026',cls:'hold',result:'SNP HOLD — Reform 2nd with 18.3%',note:'Labour vote collapsed from 33% to 15% (−18pts). SNP held.'},
+  {seat:'Runcorn and Helsby',date:'1 May 2025',cls:'loss',result:'Reform UK GAIN — Lab→Ref swing +37%',note:'Won by 6 votes. Lab majority of 14,696 overturned. Closest post-war by-election.'},
+  {seat:'Blackpool South',date:'May 2024',cls:'gain',result:'Labour GAIN — Con→Lab swing +26%',note:'Major pre-election swing to Labour.'},
 ];
 const LOCAL_ELS=[
-  {
-    name: 'English local elections',
-    date: '7 May 2026',
-    col1: 'Reform +1,453 seats · 14 councils',
-    col2: 'Labour −1,496 seats · 38 councils lost',
-    note: 'National equiv: Reform 27%, Con 20%, Lab 15%, Green 14%, LD 14%. Labour worst local result in 40 years.'
-  },
-  {
-    name: 'Scottish Parliament (Holyrood)',
-    date: '7 May 2026',
-    col1: 'SNP 57 seats — 5th term, no majority',
-    col2: 'Reform 17 seats — Holyrood debut',
-    note: 'SNP short of 65-seat majority. Greens won first-ever constituency seats (Edinburgh Central, Glasgow Southside).'
-  }
+  {name:'English local elections',date:'7 May 2026',col1:'Reform +1,453 seats · 14 councils',col2:'Labour −1,496 seats · 38 councils lost',note:'National equiv: Reform 27%, Con 20%, Lab 15%, Green 14%, LD 14%. Labour worst local result in 40 years.'},
+  {name:'Scottish Parliament (Holyrood)',date:'7 May 2026',col1:'SNP 57 seats — 5th term, no majority',col2:'Reform 17 seats — Holyrood debut',note:'SNP short of 65-seat majority. Greens won first-ever constituency seats (Edinburgh Central, Glasgow Southside).'},
 ];
 const POLICY_POLLS=[
-  {
-    name: 'Digital ID scheme',
-    q: 'Do you support introducing a national digital identity card scheme?',
-    support: 32,
-    oppose: 40,
-    neutral: 28,
-    src: 'Ipsos · Jan 2026 (n=1,150)',
-    ctx: 'Support collapsed from 57% in July 2025 after the mandatory scheme was announced. The government U-turned to a voluntary scheme in January 2026 after nearly 3 million people signed a petition opposing it.',
-    trend: [
-      {
-        d: 'Nov 2024',
-        s: 53,
-        o: 12
-      },
-      {
-        d: 'Jul 2025',
-        s: 57,
-        o: 19
-      },
-      {
-        d: 'Sep 2025',
-        s: 27,
-        o: 47
-      },
-      {
-        d: 'Jan 2026',
-        s: 32,
-        o: 40
-      }
-    ]
-  },
-  {
-    name: 'Israel\'s actions in Gaza',
-    q: 'Do you support or oppose Israel\'s military actions in Gaza and the West Bank?',
-    support: 13,
-    oppose: 62,
-    neutral: 25,
-    src: 'YouGov for MAP · Apr 2026 (n=2,104)',
-    ctx: '62% oppose Israeli military actions — a record high. 54% support the UK ending all arms exports to Israel including F-35 components. 45% believe Israel\'s actions amount to genocide.',
-    trend: [
-      {
-        d: 'Nov 2023',
-        s: 28,
-        o: 44
-      },
-      {
-        d: 'Apr 2024',
-        s: 20,
-        o: 52
-      },
-      {
-        d: 'Jun 2025',
-        s: 15,
-        o: 55
-      },
-      {
-        d: 'Apr 2026',
-        s: 13,
-        o: 62
-      }
-    ]
-  },
-  {
-    name: 'UK arms exports to Israel',
-    q: 'Should the UK end all arms exports to Israel, including F-35 components?',
-    support: 54,
-    oppose: 22,
-    neutral: 24,
-    src: 'YouGov for MAP · Apr 2026 (n=2,104)',
-    ctx: 'Durable majority backing an arms embargo since 2024. The UK suspended some licences in September 2024 but continues allowing F-35 components to be exported.',
-    trend: [
-      {
-        d: 'May 2024',
-        s: 55,
-        o: 20
-      },
-      {
-        d: 'Jul 2024',
-        s: 58,
-        o: 18
-      },
-      {
-        d: 'Sep 2025',
-        s: 56,
-        o: 21
-      },
-      {
-        d: 'Apr 2026',
-        s: 54,
-        o: 22
-      }
-    ]
-  },
-  {
-    name: 'Scrapping jury trials',
-    q: 'Do you support removing jury trials for some lower-level crimes to speed up the courts?',
-    support: 28,
-    oppose: 54,
-    neutral: 18,
-    src: 'YouGov · Mar 2026 (n=2,089)',
-    ctx: 'The Courts Reform Bill proposes halving jury trials for triable-either-way offences to reduce the Crown Court backlog. The Bar Council, over 100 MPs, and civil liberties groups are opposed.',
-    trend: [
-      {
-        d: 'Jan 2026',
-        s: 31,
-        o: 49
-      },
-      {
-        d: 'Mar 2026',
-        s: 28,
-        o: 54
-      }
-    ]
-  },
-  {
-    name: 'Palestine Action proscription',
-    q: 'Do you support the government\'s decision to proscribe Palestine Action as a terrorist organisation?',
-    support: 29,
-    oppose: 38,
-    neutral: 33,
-    src: 'Survation · Dec 2025 (n=1,654)',
-    ctx: 'Proscribed under the Terrorism Act in September 2025. Opposed by Amnesty International, the TUC, Liberty, the UN human rights commissioner, and reportedly senior MI6 figures.',
-    trend: [
-      {
-        d: 'Sep 2025',
-        s: 33,
-        o: 34
-      },
-      {
-        d: 'Dec 2025',
-        s: 29,
-        o: 38
-      }
-    ]
-  },
-  {
-    name: 'Net zero 2050 commitment',
-    q: 'Do you support the UK commitment to achieve net zero carbon emissions by 2050?',
-    support: 61,
-    oppose: 22,
-    neutral: 17,
-    src: 'YouGov · Jan 2026 (n=2,112)',
-    ctx: 'Net zero remains broadly popular at 61% support, though more divided on the pace — particularly the 2035 clean energy target and 2030 petrol car ban.',
-    trend: [
-      {
-        d: '2023',
-        s: 65,
-        o: 18
-      },
-      {
-        d: '2024',
-        s: 63,
-        o: 20
-      },
-      {
-        d: 'Jan 2026',
-        s: 61,
-        o: 22
-      }
-    ]
-  },
-  {
-    name: 'Annual net migration cap',
-    q: 'Should the government introduce a specific annual cap on net migration to the UK?',
-    support: 57,
-    oppose: 21,
-    neutral: 22,
-    src: 'Ipsos · Mar 2026 (n=1,136)',
-    ctx: 'Majority support for a cap cuts across party lines: Reform UK 90%, Conservative 82%, Labour 51%. Net migration fell to 431,000 in 2025 but remains above all major party targets.',
-    trend: [
-      {
-        d: '2024',
-        s: 54,
-        o: 23
-      },
-      {
-        d: '2025',
-        s: 56,
-        o: 22
-      },
-      {
-        d: 'Mar 2026',
-        s: 57,
-        o: 21
-      }
-    ]
-  },
-  {
-    name: 'Private sector in NHS',
-    q: 'Do you support increased use of private providers to deliver NHS care?',
-    support: 34,
-    oppose: 51,
-    neutral: 15,
-    src: 'YouGov · Feb 2026 (n=1,804)',
-    ctx: '51% oppose using the private sector for NHS delivery despite Health Secretary Wes Streeting\'s openness to it. Longstanding public attachment to the NHS as a purely public service remains strong.',
-    trend: [
-      {
-        d: 'Jul 2024',
-        s: 36,
-        o: 48
-      },
-      {
-        d: 'Jan 2025',
-        s: 35,
-        o: 49
-      },
-      {
-        d: 'Feb 2026',
-        s: 34,
-        o: 51
-      }
-    ]
-  }
+  {name:'Digital ID scheme',q:'Do you support introducing a national digital identity card scheme?',support:32,oppose:40,neutral:28,src:'Ipsos · Jan 2026 (n=1,150)',ctx:'Support collapsed from 57% in July 2025 after the mandatory scheme was announced. The government U-turned to a voluntary scheme in January 2026 after nearly 3 million people signed a petition opposing it.',trend:[{d:'Nov 2024',s:53,o:12},{d:'Jul 2025',s:57,o:19},{d:'Sep 2025',s:27,o:47},{d:'Jan 2026',s:32,o:40}]},
+  {name:"Israel's actions in Gaza",q:"Do you support or oppose Israel's military actions in Gaza and the West Bank?",support:13,oppose:62,neutral:25,src:'YouGov for MAP · Apr 2026 (n=2,104)',ctx:"62% oppose Israeli military actions — a record high. 54% support the UK ending all arms exports to Israel including F-35 components. 45% believe Israel's actions amount to genocide.",trend:[{d:'Nov 2023',s:28,o:44},{d:'Apr 2024',s:20,o:52},{d:'Jun 2025',s:15,o:55},{d:'Apr 2026',s:13,o:62}]},
+  {name:'UK arms exports to Israel',q:'Should the UK end all arms exports to Israel, including F-35 components?',support:54,oppose:22,neutral:24,src:'YouGov for MAP · Apr 2026 (n=2,104)',ctx:'Durable majority backing an arms embargo since 2024. The UK suspended some licences in September 2024 but continues allowing F-35 components to be exported.',trend:[{d:'May 2024',s:55,o:20},{d:'Jul 2024',s:58,o:18},{d:'Sep 2025',s:56,o:21},{d:'Apr 2026',s:54,o:22}]},
+  {name:'Scrapping jury trials',q:'Do you support removing jury trials for some lower-level crimes to speed up the courts?',support:28,oppose:54,neutral:18,src:'YouGov · Mar 2026 (n=2,089)',ctx:"The Courts Reform Bill proposes halving jury trials for triable-either-way offences to reduce the Crown Court backlog. The Bar Council, over 100 MPs, and civil liberties groups are opposed.",trend:[{d:'Jan 2026',s:31,o:49},{d:'Mar 2026',s:28,o:54}]},
+  {name:'Palestine Action proscription',q:"Do you support the government's decision to proscribe Palestine Action as a terrorist organisation?",support:29,oppose:38,neutral:33,src:'Survation · Dec 2025 (n=1,654)',ctx:"Proscribed under the Terrorism Act in September 2025. Opposed by Amnesty International, the TUC, Liberty, the UN human rights commissioner, and reportedly senior MI6 figures.",trend:[{d:'Sep 2025',s:33,o:34},{d:'Dec 2025',s:29,o:38}]},
+  {name:'Net zero 2050 commitment',q:'Do you support the UK commitment to achieve net zero carbon emissions by 2050?',support:61,oppose:22,neutral:17,src:'YouGov · Jan 2026 (n=2,112)',ctx:'Net zero remains broadly popular at 61% support, though more divided on the pace — particularly the 2035 clean energy target and 2030 petrol car ban.',trend:[{d:'2023',s:65,o:18},{d:'2024',s:63,o:20},{d:'Jan 2026',s:61,o:22}]},
+  {name:'Annual net migration cap',q:'Should the government introduce a specific annual cap on net migration to the UK?',support:57,oppose:21,neutral:22,src:'Ipsos · Mar 2026 (n=1,136)',ctx:'Majority support for a cap cuts across party lines: Reform UK 90%, Conservative 82%, Labour 51%. Net migration fell to 431,000 in 2025 but remains above all major party targets.',trend:[{d:'2024',s:54,o:23},{d:'2025',s:56,o:22},{d:'Mar 2026',s:57,o:21}]},
+  {name:'Private sector in NHS',q:'Do you support increased use of private providers to deliver NHS care?',support:34,oppose:51,neutral:15,src:'YouGov · Feb 2026 (n=1,804)',ctx:"51% oppose using the private sector for NHS delivery despite Health Secretary Wes Streeting's openness to it. Longstanding public attachment to the NHS as a purely public service remains strong.",trend:[{d:'Jul 2024',s:36,o:48},{d:'Jan 2025',s:35,o:49},{d:'Feb 2026',s:34,o:51}]},
 ];
 
 let viChart;
@@ -3253,7 +2702,114 @@ const MF_STATUSES={
   unclear:{label:'Unclear',c:'#534AB7',bg:'#EEEDFE',icon:'?'},
   wait:{label:'Wait & see',c:'#898781',bg:'var(--s1)',icon:'…'},
 };
-const MF_PLEDGES=[];
+const MF_PLEDGES=[
+  // ECONOMY (17)
+  {area:'Economy',pledge:'Deliver the highest sustained growth in the G7',status:'offtrack',src:'fullfact.org/government-tracker/highest-sustained-growth',updated:'Apr 2026'},
+  {area:'Economy',pledge:'Raise living standards in every part of the UK by end of Parliament',status:'progress',src:'fullfact.org/government-tracker/raising-living-standards',updated:'Mar 2026'},
+  {area:'Economy',pledge:'Keep debt falling as a share of the economy',status:'track',src:'fullfact.org/government-tracker/debt-falling',updated:'Apr 2026'},
+  {area:'Economy',pledge:'Keep inflation at target',status:'offtrack',src:'fullfact.org/government-tracker/inflation-target',updated:'Jun 2026'},
+  {area:'Economy',pledge:'Not raise income tax, National Insurance or VAT',status:'broken',src:'fullfact.org/government-tracker/no-income-tax-ni-vat-rise',updated:'Nov 2024'},
+  {area:'Economy',pledge:'Increase the national minimum wage to £10 per hour for under-21s',status:'achieved',src:'fullfact.org/government-tracker/minimum-wage-under-21',updated:'Apr 2025'},
+  {area:'Economy',pledge:'Deliver a National Wealth Fund to invest in new industries',status:'progress',src:'fullfact.org/government-tracker/national-wealth-fund',updated:'Jan 2026'},
+  {area:'Economy',pledge:'Reform business rates to level the playing field for high streets',status:'progress',src:'fullfact.org/government-tracker/business-rates-reform',updated:'Feb 2026'},
+  {area:'Economy',pledge:'Set a 10-year infrastructure strategy',status:'achieved',src:'fullfact.org/government-tracker/infrastructure-strategy',updated:'Oct 2024'},
+  {area:'Economy',pledge:'Create GB Energy, a publicly owned clean energy company',status:'achieved',src:'fullfact.org/government-tracker/gb-energy',updated:'Jan 2026'},
+  {area:'Economy',pledge:'Establish a new Industrial Strategy Council',status:'achieved',src:'fullfact.org/government-tracker/industrial-strategy-council',updated:'Dec 2024'},
+  {area:'Economy',pledge:'Reduce the number of people on zero-hours contracts',status:'progress',src:'fullfact.org/government-tracker/zero-hours-contracts',updated:'Mar 2026'},
+  {area:'Economy',pledge:'Pass a Workers Rights Act within 100 days',status:'achieved',src:'fullfact.org/government-tracker/workers-rights-act',updated:'Oct 2024'},
+  {area:'Economy',pledge:'Make work pay with new rights from day one',status:'achieved',src:'fullfact.org/government-tracker/day-one-rights',updated:'Sep 2025'},
+  {area:'Economy',pledge:'Reform trade union legislation to remove "unnecessary" restrictions',status:'achieved',src:'fullfact.org/government-tracker/trade-union-legislation',updated:'Oct 2025'},
+  {area:'Economy',pledge:'Triple investment in apprenticeships',status:'progress',src:'fullfact.org/government-tracker/apprenticeships-investment',updated:'Feb 2026'},
+  {area:'Economy',pledge:'Retain the energy profits levy but with a new investment exemption',status:'achieved',src:'fullfact.org/government-tracker/energy-profits-levy',updated:'Nov 2024'},
+  // HEALTH (11)
+  {area:'Health',pledge:'Reduce NHS waiting times with 2 million extra appointments',status:'progress',src:'fullfact.org/government-tracker/nhs-waiting-times',updated:'Apr 2026'},
+  {area:'Health',pledge:'Hire 8,500 new mental health staff',status:'progress',src:'fullfact.org/government-tracker/mental-health-staff',updated:'Mar 2026'},
+  {area:'Health',pledge:'Introduce a Community Mental Health Fund',status:'achieved',src:'fullfact.org/government-tracker/community-mental-health-fund',updated:'Feb 2026'},
+  {area:'Health',pledge:'Build a new dental contract and fix the dentistry crisis',status:'progress',src:'fullfact.org/government-tracker/dental-contract',updated:'Apr 2026'},
+  {area:'Health',pledge:'Implement the 10-year plan for the NHS',status:'progress',src:'fullfact.org/government-tracker/nhs-10-year-plan',updated:'May 2026'},
+  {area:'Health',pledge:'Shift focus from hospital treatment to prevention',status:'wait',src:'fullfact.org/government-tracker/prevention-shift',updated:'Jan 2026'},
+  {area:'Health',pledge:'No more NHS strikes with fair pay agreements',status:'achieved',src:'fullfact.org/government-tracker/nhs-strikes',updated:'Aug 2024'},
+  {area:'Health',pledge:'Give NHS staff a fully funded pay rise',status:'achieved',src:'fullfact.org/government-tracker/nhs-pay-rise',updated:'Aug 2024'},
+  {area:'Health',pledge:'Recruit 5,000 new health visitors and school nurses',status:'wait',src:'fullfact.org/government-tracker/health-visitors-nurses',updated:'Mar 2026'},
+  {area:'Health',pledge:'Halve the number of people leaving the NHS for private sector',status:'wait',src:'fullfact.org/government-tracker/nhs-staff-retention',updated:'Jan 2026'},
+  {area:'Health',pledge:'Publish a Tobacco and Vapes Bill',status:'achieved',src:'fullfact.org/government-tracker/tobacco-vapes-bill',updated:'Nov 2024'},
+  // CRIME (18)
+  {area:'Crime',pledge:'Halve serious violence — knife crime, gun crime and homicide',status:'progress',src:'fullfact.org/government-tracker/serious-violence',updated:'Apr 2026'},
+  {area:'Crime',pledge:'Hire 13,000 additional neighbourhood police officers and PCSOs',status:'progress',src:'fullfact.org/government-tracker/neighbourhood-police',updated:'Mar 2026'},
+  {area:'Crime',pledge:'Introduce a Hillsborough Law placing duty of candour on authorities',status:'progress',src:'fullfact.org/government-tracker/hillsborough-law-candour-duty',updated:'May 2026'},
+  {area:'Crime',pledge:'Reform the Criminal Records Disclosure regime',status:'wait',src:'fullfact.org/government-tracker/criminal-records',updated:'Jan 2026'},
+  {area:'Crime',pledge:'Establish a new Serious Fraud Office with stronger powers',status:'progress',src:'fullfact.org/government-tracker/serious-fraud-office',updated:'Feb 2026'},
+  {area:'Crime',pledge:'Deliver on the Victim\'s Code of Practice',status:'progress',src:'fullfact.org/government-tracker/victims-code',updated:'Apr 2026'},
+  {area:'Crime',pledge:'End the two-tier justice system — tackle court backlogs',status:'offtrack',src:'fullfact.org/government-tracker/court-backlogs',updated:'May 2026'},
+  {area:'Crime',pledge:'Introduce a new Domestic Abuse Act to strengthen protections',status:'progress',src:'fullfact.org/government-tracker/domestic-abuse',updated:'Mar 2026'},
+  {area:'Crime',pledge:'Create a new statutory definition of violence against women and girls',status:'wait',src:'fullfact.org/government-tracker/vawg-definition',updated:'Jan 2026'},
+  {area:'Crime',pledge:'Protect women online — new Online Safety Act measures',status:'progress',src:'fullfact.org/government-tracker/online-safety-women',updated:'Apr 2026'},
+  {area:'Crime',pledge:'Establish a new rape review to improve conviction rates',status:'achieved',src:'fullfact.org/government-tracker/rape-review',updated:'Dec 2024'},
+  {area:'Crime',pledge:'Abolish short prison sentences under 12 months',status:'offtrack',src:'fullfact.org/government-tracker/short-prison-sentences',updated:'Apr 2026'},
+  {area:'Crime',pledge:'Reform the prison system with a new rehabilitation agenda',status:'wait',src:'fullfact.org/government-tracker/prison-rehabilitation',updated:'Feb 2026'},
+  {area:'Crime',pledge:'Introduce mandatory reporting for child abuse',status:'achieved',src:'fullfact.org/government-tracker/mandatory-reporting-child-abuse',updated:'Mar 2026'},
+  {area:'Crime',pledge:'Reform the Criminal Justice System with AI and technology',status:'wait',src:'fullfact.org/government-tracker/cjs-technology',updated:'Jan 2026'},
+  {area:'Crime',pledge:'New anti-racism law and renewed Windrush commitments',status:'progress',src:'fullfact.org/government-tracker/anti-racism-windrush',updated:'Mar 2026'},
+  {area:'Crime',pledge:'Deliver the Victims, Courts and Public Protection Bill',status:'progress',src:'fullfact.org/government-tracker/victims-courts-bill',updated:'May 2026'},
+  {area:'Crime',pledge:'Reform legal aid and ensure access to justice',status:'wait',src:'fullfact.org/government-tracker/legal-aid',updated:'Feb 2026'},
+  // HOUSING (3)
+  {area:'Housing',pledge:'Build 1.5 million new homes over the Parliament',status:'offtrack',src:'fullfact.org/government-tracker/1-5-million-homes',updated:'Apr 2026'},
+  {area:'Housing',pledge:'Abolish Section 21 no-fault evictions',status:'progress',src:'fullfact.org/government-tracker/section-21',updated:'Apr 2026'},
+  {area:'Housing',pledge:'Establish a new Renters Rights Bill with private ombudsman',status:'progress',src:'fullfact.org/government-tracker/renters-rights-bill',updated:'Apr 2026'},
+  // ENERGY (5)
+  {area:'Energy',pledge:'Not grant any new coal licences',status:'track',src:'fullfact.org/government-tracker/new-coal-licences',updated:'Feb 2026'},
+  {area:'Energy',pledge:'Not issue new licences to explore new oil and gas fields',status:'track',src:'fullfact.org/government-tracker/new-oil-gas-field-licences',updated:'Feb 2026'},
+  {area:'Energy',pledge:'Achieve clean energy by 2030 with a new National Energy System Operator',status:'progress',src:'fullfact.org/government-tracker/clean-energy-2030',updated:'Mar 2026'},
+  {area:'Energy',pledge:'Improve energy efficiency — upgrade 5 million homes in 5 years',status:'progress',src:'fullfact.org/government-tracker/home-energy-efficiency',updated:'Apr 2026'},
+  {area:'Energy',pledge:'Deliver a new Warm Homes Plan',status:'progress',src:'fullfact.org/government-tracker/warm-homes-plan',updated:'Apr 2026'},
+  // MIGRATION (7)
+  {area:'Migration',pledge:'Reduce net migration',status:'track',src:'fullfact.org/government-tracker/reduce-net-migration',updated:'May 2026'},
+  {area:'Migration',pledge:'End the Rwanda asylum scheme',status:'achieved',src:'fullfact.org/government-tracker/end-rwanda-scheme',updated:'Aug 2024'},
+  {area:'Migration',pledge:'Establish a new Border Security Command',status:'achieved',src:'fullfact.org/government-tracker/border-security-command',updated:'Dec 2025'},
+  {area:'Migration',pledge:'Increase returns of people with no right to be in the UK',status:'progress',src:'fullfact.org/government-tracker/increase-returns',updated:'Apr 2026'},
+  {area:'Migration',pledge:'Tackle the asylum backlog — process cases within 6 months',status:'progress',src:'fullfact.org/government-tracker/asylum-backlog',updated:'May 2026'},
+  {area:'Migration',pledge:'Introduce new rules on overseas recruitment — skills and salary thresholds',status:'achieved',src:'fullfact.org/government-tracker/overseas-recruitment',updated:'Apr 2025'},
+  {area:'Migration',pledge:'Work with international partners to address root causes of migration',status:'progress',src:'fullfact.org/government-tracker/root-causes-migration',updated:'Mar 2026'},
+  // EDUCATION (5)
+  {area:'Education',pledge:'Introduce free breakfast clubs in every primary school',status:'progress',src:'fullfact.org/government-tracker/breakfast-clubs-primary-schools',updated:'Mar 2026'},
+  {area:'Education',pledge:'75% of 5-year-olds ready to learn when they start school',status:'wait',src:'fullfact.org/government-tracker/75-percent-ready-to-learn',updated:'Mar 2026'},
+  {area:'Education',pledge:'Recruit 6,500 new teachers',status:'progress',src:'fullfact.org/government-tracker/recruit-teachers',updated:'Apr 2026'},
+  {area:'Education',pledge:'Launch a new Children\'s Wellbeing and Schools Bill',status:'achieved',src:'fullfact.org/government-tracker/childrens-wellbeing-bill',updated:'Jan 2025'},
+  {area:'Education',pledge:'Reduce the number of children in poverty',status:'progress',src:'fullfact.org/government-tracker/child-poverty',updated:'Apr 2026'},
+  // DEMOCRACY (6)
+  {area:'Democracy',pledge:'Give 16 and 17-year-olds the vote',status:'progress',src:'fullfact.org/government-tracker/votes-at-16',updated:'Apr 2026'},
+  {area:'Democracy',pledge:'Reform the House of Lords',status:'progress',src:'fullfact.org/government-tracker/lords-reform',updated:'Mar 2026'},
+  {area:'Democracy',pledge:'Introduce proportional representation for local elections',status:'wait',src:'fullfact.org/government-tracker/pr-local-elections',updated:'Jan 2026'},
+  {area:'Democracy',pledge:'Strengthen the Electoral Commission',status:'wait',src:'fullfact.org/government-tracker/electoral-commission',updated:'Jan 2026'},
+  {area:'Democracy',pledge:'Introduce a new ethical framework for government — ethics and integrity bill',status:'progress',src:'fullfact.org/government-tracker/ethics-integrity',updated:'Feb 2026'},
+  {area:'Democracy',pledge:'Restore public trust in government and politics',status:'wait',src:'fullfact.org/government-tracker/public-trust',updated:'Jan 2026'},
+  // DEFENCE (3)
+  {area:'Defence',pledge:'Spend 2.5% of GDP on defence by 2027',status:'progress',src:'fullfact.org/government-tracker/defence-spending-2-5-percent-2027',updated:'Jan 2026'},
+  {area:'Defence',pledge:'Maintain the nuclear deterrent',status:'achieved',src:'fullfact.org/government-tracker/nuclear-deterrent',updated:'Sep 2024'},
+  {area:'Defence',pledge:'Publish a new Strategic Defence Review',status:'achieved',src:'fullfact.org/government-tracker/strategic-defence-review',updated:'Mar 2026'},
+  // TRANSPORT (2)
+  {area:'Transport',pledge:'Fix one million additional potholes per year',status:'offtrack',src:'fullfact.org/government-tracker/million-additional-potholes',updated:'Mar 2026'},
+  {area:'Transport',pledge:'Renationalise rail — take private franchises into public ownership',status:'achieved',src:'fullfact.org/government-tracker/rail-renationalisation',updated:'May 2025'},
+  // CULTURE (7)
+  {area:'Culture',pledge:'Deliver a trans-inclusive ban on conversion practices',status:'progress',src:'fullfact.org/government-tracker/trans-conversion-practices-ban',updated:'May 2026'},
+  {area:'Culture',pledge:'Introduce new media ownership rules to protect plurality',status:'wait',src:'fullfact.org/government-tracker/media-ownership',updated:'Jan 2026'},
+  {area:'Culture',pledge:'Reform creative industries tax reliefs to grow the sector',status:'achieved',src:'fullfact.org/government-tracker/creative-industries-tax',updated:'Nov 2024'},
+  {area:'Culture',pledge:'Strengthen community assets and right to buy provisions',status:'wait',src:'fullfact.org/government-tracker/community-assets',updated:'Jan 2026'},
+  {area:'Culture',pledge:'Publish a new cultural strategy',status:'wait',src:'fullfact.org/government-tracker/cultural-strategy',updated:'Jan 2026'},
+  {area:'Culture',pledge:'Pass the Football Governance Bill to protect clubs',status:'achieved',src:'fullfact.org/government-tracker/football-governance',updated:'Jun 2025'},
+  {area:'Culture',pledge:'Gambling reform — introduce new limits and affordability checks',status:'progress',src:'fullfact.org/government-tracker/gambling-reform',updated:'Apr 2026'},
+  // ENVIRONMENT (5)
+  {area:'Environment',pledge:'Restore nature — legally binding targets for biodiversity',status:'progress',src:'fullfact.org/government-tracker/nature-biodiversity',updated:'Mar 2026'},
+  {area:'Environment',pledge:'Protect 30% of UK land and seas by 2030',status:'progress',src:'fullfact.org/government-tracker/30-by-30',updated:'Apr 2026'},
+  {area:'Environment',pledge:'Ban toxic pesticides — protect pollinators',status:'wait',src:'fullfact.org/government-tracker/pesticides-ban',updated:'Jan 2026'},
+  {area:'Environment',pledge:'Clean up rivers and water — hold water companies accountable',status:'progress',src:'fullfact.org/government-tracker/water-companies',updated:'May 2026'},
+  {area:'Environment',pledge:'Create a new Environmental Protection Authority',status:'wait',src:'fullfact.org/government-tracker/environmental-protection-authority',updated:'Jan 2026'},
+  // FOREIGN (2)
+  {area:'Foreign policy',pledge:'Reset relations with Europe — new UK-EU security and trade pact',status:'achieved',src:'fullfact.org/government-tracker/uk-eu-reset',updated:'May 2025'},
+  {area:'Foreign policy',pledge:'Recognise the State of Palestine',status:'unclear',src:'fullfact.org/government-tracker/recognise-palestine',updated:'Apr 2026'},
+  // WORK & BENEFITS (1)
+  {area:'Work & benefits',pledge:'Reduce the number of people who are economically inactive through ill health',status:'progress',src:'fullfact.org/government-tracker/economic-inactivity',updated:'Apr 2026'},
+];
 
 // Status counts
 const MF_COUNTS={achieved:0,track:0,progress:0,offtrack:0,broken:0,unclear:0,wait:0};
