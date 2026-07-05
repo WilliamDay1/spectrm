@@ -655,7 +655,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
   <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
     <input class="search-inp" type="text" id="mps" placeholder="Search MPs by name or constituency..." autocomplete="off"
       oninput="filterMPs()" style="flex:1;min-width:200px">
-    <div style="font-size:11px;color:var(--tm)" id="mp-count"></div>
+    <div style="font-size:11px;color:var(--tm)" id="mp-count">650 MPs</div>
   </div>
   <div class="pills" id="mp-party-pills" style="margin-bottom:14px"></div>
   <div id="mpg" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px"></div>
@@ -1288,7 +1288,9 @@ function ini(n){const p=n.split(' ');return(p[0][0]+(p[p.length-1][0])).toUpperC
 
 // Featured/priority MPs shown at top (Parliament member IDs)
 // Party leaders — shown first in Key Figures section
-const FEATURED_LEADERS=[
+const HARDCODED_MP_IDS={"Keir Starmer": 4514, "Kemi Badenoch": 4683, "Ed Davey": 254, "Nigel Farage": 4750, "Rachel Reeves": 4356, "David Lammy": 206, "Yvette Cooper": 420, "Shabana Mahmood": 4396, "Ed Miliband": 1510, "Andy Burnham": 1427, "Pat McFadden": 1587, "Bridget Phillipson": 4399, "Jonathan Reynolds": 4119, "Liz Kendall": 4026, "Hilary Benn": 413, "Douglas Alexander": 10661, "Jo Stevens": 4425, "Heidi Alexander": 4038, "Lisa Nandy": 4082, "James Murray": 4480, "Darren Jones": 4731, "Alan Campbell": 529, "Dan Jarvis": 4391};
+
+FEATURED_LEADERS=[
   'Keir Starmer',    // Labour
   'Kemi Badenoch',   // Conservative
   'Ed Davey',        // Lib Dem
@@ -1613,6 +1615,13 @@ async function loadFeaturedMPs(){
   // Step 1: Fetch all featured names in parallel (fast — search endpoint)
   var allNames=FEATURED_NAMES;
   var searchResults=await Promise.all(allNames.map(function(name){
+    // Use hardcoded ID if available — avoids API name-matching failures
+    if(HARDCODED_MP_IDS[name]){
+      return parlFetch('/Members/'+HARDCODED_MP_IDS[name]).then(function(d){
+        if(!d||!d.value)return null;
+        return{items:[{value:d.value}]};
+      });
+    }
     return parlFetch('/Members/Search?Name='+encodeURIComponent(name)+'&House=Commons&IsCurrentMember=true&take=1');
   }));
 
