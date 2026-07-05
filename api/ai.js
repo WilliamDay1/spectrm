@@ -9,6 +9,16 @@ export default async function handler(req, res) {
   if (!apiKey) { res.status(500).json({ error: 'API key not configured' }); return; }
 
   try {
+    // Parse body — Vercel may pass it as string or object
+    let body = req.body;
+    if (typeof body === 'string') {
+      body = JSON.parse(body);
+    }
+    if (!body || !body.messages) {
+      res.status(400).json({ error: 'Missing messages in request body' });
+      return;
+    }
+
     const r = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -16,8 +26,13 @@ export default async function handler(req, res) {
         'x-api-key': apiKey,
         'anthropic-version': '2023-06-01',
       },
-      body: JSON.stringify(req.body),
+      body: JSON.stringify({
+        model: body.model || 'claude-sonnet-4-6',
+        max_tokens: body.max_tokens || 1024,
+        messages: body.messages,
+      }),
     });
+
     const data = await r.json();
     res.status(r.status).json(data);
   } catch (e) {
