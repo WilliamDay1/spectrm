@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-04T11:49:03Z",
+    "updated": "2026-07-05T11:51:34Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Boris Johnson wasted my levelling up idea. Here\u2019s how Burnham and his \u2018good growth\u2019 plan can do better | Justine Greening",
-      "date": "4 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/04/boris-johnson-my-levelling-up-idea-burnham-good-growth"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform denies rules broken by Farage after reports benefits from ally were not declared",
+      "date": "5 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy0424end7vo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Labour should win next election under Burnham after work already done, Starmer says",
-      "date": "4 Jul 2026",
+      "headline": "Polo shirts, Clarks Wallabees, shorts: Burnham has finessed his style. Can he carry it to high office? | Morwenna Ferrier",
+      "date": "5 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/04/labour-win-next-election-under-burnham-keir-starmer"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/andy-burnham-polo-shirts-clarks-wallabees-style-prime-minister-manchester-no-10"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "British Medical Association could axe up to a third of its staff amid cash crisis",
-      "date": "4 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "\u2018New direction, same old problems\u2019: the economic challenges facing  Andy Burnham | Richard Partington",
+      "date": "5 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/04/british-medical-association-union-could-axe-staff-cash-crisis"
+      "url": "https://www.theguardian.com/business/2026/jul/05/new-direction-same-old-problems-the-economic-challenges-facing-andy-burnham"
     },
     {
       "id": "4",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Why can\u2019t Britain turn its green revolution into cheap energy? A visual analysis",
-      "date": "4 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage did not declare gifts from crypto entrepreneur convicted of fraud",
+      "date": "5 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/ng-interactive/2026/jul/04/britain-green-energy-revolution-a-visual-story"
+      "url": "https://www.theguardian.com/politics/2026/jul/05/nigel-farage-did-not-declare-gifts-from-crypto-entrepreneur-george-cottrell-says-reform-uk"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Overseas education project for women and girls axed by UK after two years",
-      "date": "4 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "I\u2019ve seen what the death of major industry did to Britain. Without a good revival plan, Burnham cannot succeed | John Harris",
+      "date": "5 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/global-development/2026/jul/04/overseas-education-project-for-women-and-girls-axed-by-uk-after-two-years"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/major-industry-britain-andy-burnham-collieries-retail-parks-manufacturing"
     },
     {
       "id": "6",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Celtic nations begin to plan for breakup of UK in event of Reform election win",
-      "date": "4 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Make Ed Miliband chancellor, ex-chief Treasury adviser tells Andy Burnham",
+      "date": "5 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/04/uk-ireland-leaders-fear-union-future-nigel-farage-led-government"
+      "url": "https://www.theguardian.com/business/2026/jul/05/make-ed-miliband-chancellor-ex-chief-treasury-adviser-nicholas-stern-tells-andy-burnham"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Britain has so many stories. The reason we fund the arts together is so we can tell them | James Graham",
+      "headline": "Police leadership needs 'ethical reset', Lord Blunkett tells BBC",
       "date": "4 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/04/britain-stories-arts-funding-dear-england-sherwood"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy0429yx1k9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Starmer warns Burnham he cannot spend less time on diplomacy",
-      "date": "3 Jul 2026",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Elon Musk posted twice as often on UK race and immigration as about SpaceX in IPO run-up",
+      "date": "4 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/03/starmer-warns-burnham-he-cannot-spend-less-time-on-diplomacy"
+      "url": "https://www.theguardian.com/technology/2026/jul/04/elon-musk-uk-race-immigration-spacex-ipo"
     },
     {
       "id": "9",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Starmer tells of 'intensely personal' decision to quit and warns Burnham in first interview since resigning",
-      "date": "3 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0qy2zxjkwvo?at_medium=RSS&at_campaign=rss"
+      "headline": "Burnham will change No 10 \u2018boys club\u2019 briefing culture, says Lucy Powell",
+      "date": "4 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/04/burnham-will-change-no-10-boys-club-briefing-culture-says-lucy-powell"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Police criticise timing of decision on pubs staying open for England match",
-      "date": "3 Jul 2026",
+      "headline": "The massive scramble behind the scenes before the new PM arrives",
+      "date": "4 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cd95v388k5jo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cj4g0n0p15xo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
