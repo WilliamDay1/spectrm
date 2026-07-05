@@ -1616,6 +1616,7 @@ async function loadFeaturedMPs(){
         name:basic.nameDisplayAs,
         party:(function(){var rp=basic.latestParty?basic.latestParty.name:'Independent';return(basic.nameDisplayAs==='Andy Burnham'||rp.indexOf('Labour')!==-1)?'Labour':rp;})(),
         con:basic.latestHouseMembership?basic.latestHouseMembership.membershipFrom:'',
+        since:basic.latestHouseMembership&&basic.latestHouseMembership.membershipStartDate?(new Date(basic.latestHouseMembership.membershipStartDate)).getFullYear():'',
         roleLabel:null,
       };
       ALL_MPs.push(mp);
@@ -1876,12 +1877,14 @@ async function openMP(id,cached){
     document.body.appendChild(modal);
   }
   modal.style.display='flex';
+  modal.scrollTop=0;
 
   // Use cached card data to render INSTANTLY — no waiting for API
   var name=cached?cleanMPName(cached.name||''):'';
   var party=cached?cached.party||'Independent':'Independent';
   var con=cached?cached.con||'':'';
   var roleLabel=cached?cached.roleLabel||'':'';
+  var mpSince=cached&&cached.since?String(cached.since):'';
   var p=mpPartyStyle(party);
 
   // Show full modal immediately with what we have
@@ -1897,7 +1900,7 @@ async function openMP(id,cached){
           '<div style="font-size:17px;font-weight:700;color:var(--tp);line-height:1.3;margin-bottom:3px">'+(name||'Loading...')+'</div>'+
           '<div style="font-size:12px;color:var(--tm);margin-bottom:8px">'+con+'</div>'+
           '<span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:'+p.bg+';color:'+p.c+'">'+party+'</span>'+
-          (roleLabel?'<div style="font-size:11px;color:var(--ts);margin-top:7px;line-height:1.4">'+roleLabel+'</div>':'')+
+          (mpSince?'<div style="font-size:11px;color:var(--tm);margin-top:7px">MP since '+mpSince+'</div>':'')+
         '</div>'+
       '</div>'+
       // Placeholders for async-loaded sections
