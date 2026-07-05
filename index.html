@@ -1680,6 +1680,7 @@ function openNonMP(fig){
     document.body.appendChild(modal);
   }
   var p=mpPartyStyle(fig.party);
+  var hardcodedNonMP=getMPProfile(fig.name);
   modal.innerHTML=
     '<div style="background:var(--s2);border-radius:14px;width:100%;max-width:540px;margin:auto;overflow:hidden">'+
       '<div style="padding:16px 20px;border-bottom:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">'+
@@ -1697,8 +1698,17 @@ function openNonMP(fig){
       '</div>'+
       '<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
         '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Biography</div>'+
-        '<div style="font-size:12px;color:var(--ts);line-height:1.7">'+fig.bio+'</div>'+
+        '<div style="font-size:12px;color:var(--ts);line-height:1.7">'+(hardcodedNonMP?hardcodedNonMP.bio:fig.bio)+'</div>'+
       '</div>'+
+      (hardcodedNonMP&&hardcodedNonMP.policies&&hardcodedNonMP.policies.length?
+        '<div style="padding:14px 20px;border-bottom:.5px solid var(--bd)">'+
+          '<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:8px">Key positions &amp; record</div>'+
+          hardcodedNonMP.policies.map(function(pol){
+            var colon=pol.indexOf(":");
+            var content=colon>0?"<strong>"+pol.slice(0,colon)+"</strong>:"+pol.slice(colon+1):pol;
+            return "<div style=\"display:flex;gap:8px;margin-bottom:10px\"><span style=\"color:"+p.c+";flex-shrink:0;margin-top:2px\">•</span><span style=\"color:var(--ts);font-size:12px;line-height:1.6\">"+content+"</span></div>";
+          }).join("")+
+        "</div>":"")+
       '<div style="padding:14px 20px">'+
         '<div style="font-size:11px;color:var(--tm);line-height:1.5"><i class="ti ti-info-circle"></i> '+fig.detail+'</div>'+
       '</div>'+
