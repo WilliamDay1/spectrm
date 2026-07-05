@@ -1889,15 +1889,58 @@ function setMPParty(party,el){
   });
   el.classList.add('on');el.style.background='var(--brand)';el.style.color='#fff';el.style.borderColor='var(--brand)';
   if(party==='all'){
-    // "All parties" = full page: key figures section + all MPs grid
     renderMPs();
   } else {
-    // Specific party = hide key figures, show only matching MPs
+    // For specific party filter: fetch all MPs in one call using take=650
     var grid=document.getElementById('mpg');
-    if(grid){grid.innerHTML='';}
+    var kfSec=document.getElementById('mp-kf-section');
+    if(kfSec)kfSec.style.display='none';
+    if(grid){
+      // Keep sentinel, clear MP cards
+      var sentinel=document.getElementById('mp-grid-sentinel');
+      if(sentinel){while(sentinel.nextSibling)grid.removeChild(sentinel.nextSibling);}
+      else{grid.innerHTML='';}
+      grid.innerHTML+='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:10px 0">Loading '+party+' MPs...</div>';
+    }
     ALL_MPs=[];MP_PAGE=0;
-    loadMPs(false);
+    loadPartyMPs(party,grid);
   }
+}
+
+async function loadPartyMPs(party,grid){
+  // Fetch all current MPs in one request
+  var data=await parlFetch('/Members/Search?House=Commons&IsCurrentMember=true&take=650&skip=0');
+  if(!grid)return;
+  // Clear loading message
+  var sentinel=document.getElementById('mp-grid-sentinel');
+  if(sentinel){while(sentinel.nextSibling)grid.removeChild(sentinel.nextSibling);}
+  else{grid.innerHTML='';}
+  if(!data||!data.items){
+    grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">Could not load MPs.</div>';
+    return;
+  }
+  var filtered=data.items.map(function(item){
+    var m=item.value;
+    var rawParty=m.latestParty?m.latestParty.name:'Independent';
+    var mp_party=(m.nameDisplayAs==='Andy Burnham'||rawParty.indexOf('Labour')!==-1)?'Labour':rawParty;
+    return{
+      id:m.id,
+      name:m.nameDisplayAs,
+      party:mp_party,
+      con:m.latestHouseMembership?m.latestHouseMembership.membershipFrom:'',
+      since:m.latestHouseMembership&&m.latestHouseMembership.membershipStartDate?(new Date(m.latestHouseMembership.membershipStartDate)).getFullYear():'',
+      roleLabel:null
+    };
+  }).filter(function(m){return m.party===party;});
+  var countEl=document.getElementById('mp-count');
+  if(countEl)countEl.textContent=filtered.length+' MPs';
+  if(filtered.length===0){
+    grid.innerHTML='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:20px">No '+party+' MPs found.</div>';
+    return;
+  }
+  filtered.forEach(function(m){ALL_MPs.push(m);renderMPCard(m,grid,false);});
+  var lmEl=document.getElementById('mp-load-more');
+  if(lmEl)lmEl.style.display='none';
 }
 
 async function openMP(id,cached){
