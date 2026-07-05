@@ -344,7 +344,117 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .pp-bw{font-size:11px;color:var(--ts)}
 .pp-meta{font-size:10px;color:var(--tm)}
 .pp-net{font-size:11px;font-weight:600}
-.pp-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}</style>
+.pp-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}
+/* =====================================================================
+   MOBILE RESPONSIVE — max-width 768px
+   All rules here are additive overrides. Desktop layout unchanged.
+   ===================================================================== */
+@media(max-width:768px){
+
+  /* Topbar */
+  .topbar{padding:10px 14px}
+  .bsub{display:none}
+  .live span:not(.ldot){display:none}
+  .live{padding:4px 8px}
+
+  /* Nav */
+  .nav-bar{padding:0 10px;top:52px}
+  .nb{padding:10px 10px;font-size:11px;gap:3px}
+
+  /* Content padding */
+  .content{padding:14px 12px}
+
+  /* Overview — stack columns */
+  .krow{grid-template-columns:1fr 1fr}
+  .kcard{padding:11px 12px}
+  .kval{font-size:18px}
+
+  /* Overview main grid — single column */
+  div[style*="grid-template-columns:minmax(0,1fr) minmax(0,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+  div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Politicians grid — 2 cols on mobile */
+  .mpg{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  .mpc{padding:10px}
+  .mpc-photo{width:52px;height:65px;font-size:18px}
+  .mpc-name{font-size:12px}
+  .mpc-job{font-size:10px}
+
+  /* MP Profile modal */
+  .mp-detail{border-radius:0;max-height:100vh}
+  .mp-detail-photo{width:64px;height:80px}
+  .pdtitle{font-size:15px}
+
+  /* Section headers */
+  .sh{font-size:11px}
+
+  /* Cards */
+  .card{padding:12px 14px;border-radius:10px}
+
+  /* Data tab — hide table on small screens, show as cards */
+  .dtbl thead{display:none}
+  .dtbl tr{display:block;margin-bottom:8px;border:.5px solid var(--bd);border-radius:8px;padding:8px}
+  .dtbl td{display:block;border:none;padding:3px 0;font-size:12px}
+  .dtbl td:before{content:attr(data-label);font-size:10px;font-weight:600;color:var(--tm);display:block;text-transform:uppercase;letter-spacing:.3px}
+
+  /* Calendar grid — tighter cells */
+  .cg{gap:1px}
+  .cday{min-height:44px;padding:3px}
+  .dnum{font-size:9px}
+  .ban{font-size:8px;padding:1px 2px}
+  .cal-top{flex-direction:column;align-items:flex-start;gap:6px}
+  .cal-leg{gap:8px}
+  .legi{font-size:10px}
+
+  /* Polls — VI tiles 2-col */
+  .pkrow{grid-template-columns:1fr 1fr}
+
+  /* Policy grid — single column */
+  .polg{grid-template-columns:1fr}
+
+  /* Institutions grid — single column */
+  .ig{grid-template-columns:1fr}
+
+  /* Bills — full width */
+  .bc{padding:12px 13px}
+
+  /* Modals */
+  .modal-overlay{padding:0 !important}
+  .modal{border-radius:0 !important;max-height:100vh;overflow-y:auto}
+  .cal-modal{border-radius:12px 12px 0 0;position:fixed;bottom:0;left:0;right:0}
+  .cal-modal-overlay{align-items:flex-end;padding:0}
+
+  /* Manifesto — hide source col on mobile */
+  .mf-src{display:none}
+
+  /* Search bar */
+  #mp-search{font-size:14px}
+
+  /* Party pills — wrap nicely */
+  .p-all{gap:5px}
+  .pill{padding:4px 10px;font-size:11px}
+
+  /* Topbar brand text */
+  .btitle{font-size:16px}
+  .bsub{font-size:10px}
+
+  /* Overview chart strip — horizontal scroll */
+  .chart-strip-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+
+/* Extra small — 375px (iPhone SE etc) */
+@media(max-width:390px){
+  .krow{grid-template-columns:1fr 1fr}
+  .mpg{grid-template-columns:1fr 1fr}
+  .nb{padding:9px 8px;font-size:10px}
+  .content{padding:10px 10px}
+  .pkrow{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 <body>
 <div class="app">
