@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-05T11:51:34Z",
+    "updated": "2026-07-06T17:22:21Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform denies rules broken by Farage after reports benefits from ally were not declared",
-      "date": "5 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "PM intervened in row over Mexico-England kick-off time",
+      "date": "6 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy0424end7vo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cjwgggp28dlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Polo shirts, Clarks Wallabees, shorts: Burnham has finessed his style. Can he carry it to high office? | Morwenna Ferrier",
-      "date": "5 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/andy-burnham-polo-shirts-clarks-wallabees-style-prime-minister-manchester-no-10"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Treasury sees defence as a drain not a driver for growth, says Healey",
+      "date": "6 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6211j3q7l5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018New direction, same old problems\u2019: the economic challenges facing  Andy Burnham | Richard Partington",
-      "date": "5 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage is on the brink but if he goes, Labour can\u2019t rest easy: people still need something worth voting for | Gaby Hinsliff",
+      "date": "6 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/05/new-direction-same-old-problems-the-economic-challenges-facing-andy-burnham"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/06/farage-on-brink-labour-cant-rest-easy-reform-funding-andy-burnham"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage did not declare gifts from crypto entrepreneur convicted of fraud",
-      "date": "5 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Angela Rayner goes full beige in her push for an Andy Burnham promotion",
+      "date": "6 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/05/nigel-farage-did-not-declare-gifts-from-crypto-entrepreneur-george-cottrell-says-reform-uk"
+      "url": "https://www.theguardian.com/politics/2026/jul/06/angela-rayner-goes-full-beige-in-her-push-for-an-andy-burnham-promotion"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "I\u2019ve seen what the death of major industry did to Britain. Without a good revival plan, Burnham cannot succeed | John Harris",
-      "date": "5 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/major-industry-britain-andy-burnham-collieries-retail-parks-manufacturing"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Why is Farage facing renewed scrutiny over his finances?",
+      "date": "6 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c1kyygjvz7go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Make Ed Miliband chancellor, ex-chief Treasury adviser tells Andy Burnham",
-      "date": "5 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage cries \u2018witch-hunt\u2019 but this may be Reform\u2019s Partygate moment",
+      "date": "6 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/05/make-ed-miliband-chancellor-ex-chief-treasury-adviser-nicholas-stern-tells-andy-burnham"
+      "url": "https://www.theguardian.com/politics/2026/jul/06/nigel-farage-witch-hunt-reform-partygate-moment"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Police leadership needs 'ethical reset', Lord Blunkett tells BBC",
-      "date": "4 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy0429yx1k9o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "UK politics: Farage warned attack against \u2018establishment\u2019 over unregistered gifts could lead to harsher punishment \u2013 as it happened",
+      "date": "6 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/06/nigel-farage-reform-unregistered-gift-crypto-christopher-harborne-keir-starmer-labour-andy-burnham-uk-politics-live"
     },
     {
       "id": "8",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Elon Musk posted twice as often on UK race and immigration as about SpaceX in IPO run-up",
-      "date": "4 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage under pressure over gifts from convicted fraudster \u2013 The Latest",
+      "date": "6 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/technology/2026/jul/04/elon-musk-uk-race-immigration-spacex-ipo"
+      "url": "https://www.theguardian.com/news/audio/2026/jul/06/farage-under-pressure-gifts-convicted-fraudster-the-latest"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham will change No 10 \u2018boys club\u2019 briefing culture, says Lucy Powell",
-      "date": "4 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK row: who funds Farage? \u2013 podcast",
+      "date": "6 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/04/burnham-will-change-no-10-boys-club-briefing-culture-says-lucy-powell"
+      "url": "https://www.theguardian.com/politics/audio/2026/jul/06/reform-uk-row-who-funds-farage-podcast"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The massive scramble behind the scenes before the new PM arrives",
-      "date": "4 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage says he's 'done no wrongdoing' after benefits from ally not declared",
+      "date": "6 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj4g0n0p15xo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cql11kk90zgo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
