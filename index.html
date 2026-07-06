@@ -1288,7 +1288,7 @@ function ini(n){const p=n.split(' ');return(p[0][0]+(p[p.length-1][0])).toUpperC
 
 // Featured/priority MPs shown at top (Parliament member IDs)
 // Party leaders — shown first in Key Figures section
-const HARDCODED_MP_IDS={"Keir Starmer":4514,"Kemi Badenoch":4597,"Ed Davey":188,"Nigel Farage":5091,"Rachel Reeves":4031,"David Lammy":206,"Yvette Cooper":420,"Shabana Mahmood":3914,"Ed Miliband":1510,"Andy Burnham":1427,"Pat McFadden":1587,"Bridget Phillipson":4046,"Jonathan Reynolds":4119,"Liz Kendall":4026,"Hilary Benn":413,"Douglas Alexander":632,"Jo Stevens":4425,"Heidi Alexander":4038,"Lisa Nandy":4082,"James Murray":4480,"Darren Jones":4621,"Alan Campbell":529,"Emma Reynolds":4077,"Lucy Rigby":5333};
+const HARDCODED_MP_IDS={"Keir Starmer":4514,"Kemi Badenoch":4597,"Ed Davey":188,"Nigel Farage":5091,"Rachel Reeves":4031,"David Lammy":206,"Yvette Cooper":420,"Shabana Mahmood":3914,"James Murray":4480,"Dan Jarvis":4391,"Bridget Phillipson":4046,"Ed Miliband":1510,"Steve Reed":4268,"Peter Kyle":4505,"Liz Kendall":4026,"Heidi Alexander":4038,"Emma Reynolds":4077,"Lisa Nandy":4082,"Hilary Benn":413,"Douglas Alexander":632,"Jo Stevens":4425,"Jonathan Reynolds":4119,"Pat McFadden":1587,"Darren Jones":4621,"Alan Campbell":529,"Andy Burnham":1427,"Lucy Rigby":5333};
 
 FEATURED_LEADERS=[
   'Keir Starmer',    // Labour
@@ -1300,32 +1300,29 @@ FEATURED_LEADERS=[
 
 // Full Cabinet as specified
 const FEATURED_CABINET=[
-  // Ordered by seniority: Chancellor, Foreign, Home, Justice, Health, Defence,
-  // Education, Energy, Housing, Business, Science, Transport, Environment,
-  // Culture, NI, Scotland, Wales, Chief Whip, Cabinet Office, Lords Leader,
-  // Commons Leader, DWP
-  'Rachel Reeves',     // Chancellor of the Exchequer
-  'David Lammy',       // Foreign Secretary
-  'Yvette Cooper',     // Home Secretary
-  'Shabana Mahmood',   // Lord Chancellor / Justice
-  'James Murray',      // Health Secretary
-  'Dan Jarvis',        // Defence Secretary
-  'Bridget Phillipson',// Education Secretary
-  'Ed Miliband',       // Energy Secretary
-  'Steve Reed',        // Housing Secretary
-  'Peter Kyle',        // Business Secretary
-  'Liz Kendall',       // Science Secretary
-  'Heidi Alexander',   // Transport Secretary
-  'Emma Reynolds',     // Environment Secretary
-  'Lisa Nandy',        // Culture Secretary
-  'Hilary Benn',       // Northern Ireland Secretary
-  'Douglas Alexander', // Scotland Secretary
-  'Jo Stevens',        // Wales Secretary
-  'Jonathan Reynolds', // Chief Whip
-  'Pat McFadden',      // Cabinet Office / DWP
-  'Darren Jones',      // Chancellor of the Duchy / Chief Sec to PM
-  'Alan Campbell',     // Leader of the Commons
-];
+  'Rachel Reeves',      // Chancellor of the Exchequer
+  'David Lammy',        // Deputy PM & Justice Secretary
+  'Yvette Cooper',      // Foreign Secretary
+  'Shabana Mahmood',    // Home Secretary
+  'James Murray',       // Health Secretary
+  'Dan Jarvis',         // Defence Secretary
+  'Bridget Phillipson', // Education Secretary
+  'Ed Miliband',        // Energy Secretary
+  'Steve Reed',         // Housing Secretary
+  'Peter Kyle',         // Business Secretary
+  'Liz Kendall',        // Science Secretary
+  'Heidi Alexander',    // Transport Secretary
+  'Emma Reynolds',      // Environment Secretary
+  'Lisa Nandy',         // Culture Secretary
+  'Hilary Benn',        // Northern Ireland Secretary
+  'Douglas Alexander',  // Scotland Secretary
+  'Jo Stevens',         // Wales Secretary
+  'Jonathan Reynolds',  // Chief Whip
+  'Pat McFadden',       // Work and Pensions Secretary
+  'Darren Jones',       // Chancellor of the Duchy of Lancaster
+  'Alan Campbell',      // Leader of the Commons
+  'Lucy Rigby',         // Chief Secretary to Treasury
+]
 
 // No "Other senior figures" tier
 const FEATURED_SENIOR=[];
@@ -1335,7 +1332,7 @@ const FEATURED_NAMES=FEATURED_LEADERS.concat(FEATURED_CABINET).filter(function(v
 
 // Manual role overrides for party leaders not reliably captured by Parliament Biography API
 const MANUAL_ROLE_OVERRIDES={
-  'Keir Starmer':'Prime Minister',
+  'Keir Starmer':'Former Prime Minister',
   'Kemi Badenoch':'Leader of the Opposition',
   'Ed Davey':'Leader of the Liberal Democrats',
   'Nigel Farage':'Leader of Reform UK',
@@ -1344,15 +1341,9 @@ const MANUAL_ROLE_OVERRIDES={
   'James Murray':'Secretary of State for Health',
   'Steve Reed':'Secretary of State for Housing',
   'Peter Kyle':'Secretary of State for Business',
-  'Heidi Alexander':'Secretary of State for Transport',
-  'Emma Reynolds':'Secretary of State for Environment',
-  'Lisa Nandy':'Secretary of State for Culture',
-  'Hilary Benn':'Secretary of State for N. Ireland',
-  'Douglas Alexander':'Secretary of State for Scotland',
-  'Jo Stevens':'Secretary of State for Wales',
-  'Alan Campbell':'Leader of the House of Commons',
-  'Darren Jones':'Chief Secretary to the PM',
-};
+  'Lucy Rigby':'Chief Secretary to the Treasury',
+  'Andy Burnham':'Labour leadership candidate',
+}
 
 // NON-MP prominent figures (maintained manually — no Parliament API record)
 const NON_MP_FIGURES=[
@@ -1903,16 +1894,17 @@ function setMPParty(party,el){
   if(party==='all'){
     renderMPs();
   } else {
-    // For specific party filter: fetch all MPs in one call using take=650
     var grid=document.getElementById('mpg');
-    var kfSec=document.getElementById('mp-kf-section');
+    var kfSec=document.getElementById('mp-key-figures');
     if(kfSec)kfSec.style.display='none';
+    var allHdr=document.getElementById('mp-all-header');
+    if(allHdr)allHdr.style.display='none';
     if(grid){
-      // Keep sentinel, clear MP cards
-      var sentinel=document.getElementById('mp-grid-sentinel');
-      if(sentinel){while(sentinel.nextSibling)grid.removeChild(sentinel.nextSibling);}
-      else{grid.innerHTML='';}
-      grid.innerHTML+='<div style="grid-column:1/-1;color:var(--tm);font-size:13px;padding:10px 0">Loading '+party+' MPs...</div>';
+      grid.innerHTML='';
+      var loadMsg=document.createElement('div');
+      loadMsg.style.cssText='grid-column:1/-1;color:var(--tm);font-size:13px;padding:10px 0';
+      loadMsg.textContent='Loading '+party+' MPs...';
+      grid.appendChild(loadMsg);
     }
     ALL_MPs=[];MP_PAGE=0;
     loadPartyMPs(party,grid);
@@ -1947,9 +1939,7 @@ async function loadPartyMPs(party,grid){
 }
 
 function renderFromCache(party,grid){
-  var sentinel=document.getElementById('mp-grid-sentinel');
-  if(sentinel){while(sentinel.nextSibling)grid.removeChild(sentinel.nextSibling);}
-  else{grid.innerHTML='';}
+  if(grid)grid.innerHTML='';
   var filtered=ALL_MPs_CACHE.filter(function(m){return m.party===party;});
   var countEl=document.getElementById('mp-count');
   if(countEl)countEl.textContent=filtered.length+' '+party+' MPs';
