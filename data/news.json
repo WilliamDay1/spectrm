@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-06T17:22:21Z",
+    "updated": "2026-07-07T16:07:13Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "PM intervened in row over Mexico-England kick-off time",
-      "date": "6 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjwgggp28dlo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Starmer accuses Farage of \u2018desperate stunt\u2019 as he says he will resign and then stand in byelection \u2013 UK politics live",
+      "date": "7 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/07/nigel-farage-reform-uk-donations-investigations-parliament-electoral-commission-defence-nato-keir-starmer-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Treasury sees defence as a drain not a driver for growth, says Healey",
-      "date": "6 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6211j3q7l5o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage resigns to stand in \u2018people vs establishment\u2019 byelection \u2013 The Latest",
+      "date": "7 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/news/audio/2026/jul/07/nigel-farage-resigns-to-stand-in-people-vs-establishment-byelection-the-latest"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage is on the brink but if he goes, Labour can\u2019t rest easy: people still need something worth voting for | Gaby Hinsliff",
-      "date": "6 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Europe doesn\u2019t need to worry about Andy Burnham. He has the makings of a great ally | Jessica Berlin",
+      "date": "7 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/06/farage-on-brink-labour-cant-rest-easy-reform-funding-andy-burnham"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/07/europe-andy-burnham-ally-defence-nato"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Angela Rayner goes full beige in her push for an Andy Burnham promotion",
-      "date": "6 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage quits as MP amid scrutiny over finances",
+      "date": "7 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/06/angela-rayner-goes-full-beige-in-her-push-for-an-andy-burnham-promotion"
+      "url": "https://www.theguardian.com/politics/2026/jul/07/nigel-farage-quits-as-mp-amid-scrunity-over-finances-clacton-reform"
     },
     {
       "id": "5",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Why is Farage facing renewed scrutiny over his finances?",
-      "date": "6 Jul 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Next PM needs to wake UK up to threat of war, ex-Nato chief warns",
+      "date": "7 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c1kyygjvz7go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cddljy1y3nlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage cries \u2018witch-hunt\u2019 but this may be Reform\u2019s Partygate moment",
-      "date": "6 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham urged to ditch \u2018dangerous\u2019 UK-US NHS drug deal",
+      "date": "7 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/06/nigel-farage-witch-hunt-reform-partygate-moment"
+      "url": "https://www.theguardian.com/society/2026/jul/07/burnham-urged-to-ditch-dangerous-uk-us-nhs-drug-deal"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "UK politics: Farage warned attack against \u2018establishment\u2019 over unregistered gifts could lead to harsher punishment \u2013 as it happened",
-      "date": "6 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Act soon to change \u2018unsustainable\u2019 direction of UK debt, OBR warns",
+      "date": "7 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/06/nigel-farage-reform-unregistered-gift-crypto-christopher-harborne-keir-starmer-labour-andy-burnham-uk-politics-live"
+      "url": "https://www.theguardian.com/business/2026/jul/07/change-unsustainable-direction-uk-debt-obr-health-pensions"
     },
     {
       "id": "8",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage under pressure over gifts from convicted fraudster \u2013 The Latest",
-      "date": "6 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Ex-Nato chief behind defence review says Starmer\u2019s military spending plan is too little, too late",
+      "date": "7 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/jul/06/farage-under-pressure-gifts-convicted-fraudster-the-latest"
+      "url": "https://www.theguardian.com/politics/2026/jul/07/ex-nato-chief-behind-defence-review-says-starmers-military-spending-plan-is-too-little-too-late"
     },
     {
       "id": "9",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Reform UK row: who funds Farage? \u2013 podcast",
-      "date": "6 Jul 2026",
+      "headline": "\u2018Serious consequences\u2019: Farage attacks Sky News after question about George Cottrell",
+      "date": "7 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/jul/06/reform-uk-row-who-funds-farage-podcast"
+      "url": "https://www.theguardian.com/politics/2026/jul/07/serious-consequences-farage-attacks-sky-news-after-question-about-george-cottrell"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage says he's 'done no wrongdoing' after benefits from ally not declared",
-      "date": "6 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cql11kk90zgo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "What really worries Reform about Posh George?",
+      "date": "7 Jul 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/what-really-worries-reform-about-posh-george-13560994"
     }
   ]
 }
