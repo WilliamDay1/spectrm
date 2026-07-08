@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-07T16:07:13Z",
+    "updated": "2026-07-08T12:06:42Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Starmer accuses Farage of \u2018desperate stunt\u2019 as he says he will resign and then stand in byelection \u2013 UK politics live",
-      "date": "7 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ruth Ellis, last woman to be hanged in UK, granted conditional posthumous pardon \u2013 UK politics live",
+      "date": "8 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/07/nigel-farage-reform-uk-donations-investigations-parliament-electoral-commission-defence-nato-keir-starmer-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/08/nigel-farage-reform-uk-clacton-5m-gift-crime-agency-labour-keir-starmer-pmqs-uk-politics-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Nigel Farage resigns to stand in \u2018people vs establishment\u2019 byelection \u2013 The Latest",
-      "date": "7 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/jul/07/nigel-farage-resigns-to-stand-in-people-vs-establishment-byelection-the-latest"
+      "headline": "Chris Mason: It's far from certain whether by-election will strengthen Farage",
+      "date": "8 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c9d2882jj3yo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Europe doesn\u2019t need to worry about Andy Burnham. He has the makings of a great ally | Jessica Berlin",
-      "date": "7 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "More Reform UK transactions worth millions reported to National Crime Agency",
+      "date": "8 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/07/europe-andy-burnham-ally-defence-nato"
+      "url": "https://www.theguardian.com/politics/2026/jul/08/more-reform-uk-transactions-worth-millions-reported-to-national-agency"
     },
     {
       "id": "4",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Nigel Farage quits as MP amid scrutiny over finances",
-      "date": "7 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/07/nigel-farage-quits-as-mp-amid-scrunity-over-finances-clacton-reform"
+      "headline": "Farage's rivals rule out standing in Clacton by-election",
+      "date": "8 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjdg4y3g0z7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Next PM needs to wake UK up to threat of war, ex-Nato chief warns",
-      "date": "7 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cddljy1y3nlo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Lack of safeguards over prisoners\u2019 early release puts abuse victims at risk, Lammy warned",
+      "date": "8 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/law/2026/jul/08/lack-of-safeguards-prisoners-early-release-abuse-victims-england-wales"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham urged to ditch \u2018dangerous\u2019 UK-US NHS drug deal",
-      "date": "7 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Report to National Crime Agency of \u00a35m Farage gift is \u2018deeply serious\u2019",
+      "date": "8 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/07/burnham-urged-to-ditch-dangerous-uk-us-nhs-drug-deal"
+      "url": "https://www.theguardian.com/politics/2026/jul/08/report-to-national-agency-of-5m-farage-gift-is-deeply-serious"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Act soon to change \u2018unsustainable\u2019 direction of UK debt, OBR warns",
-      "date": "7 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "The great carbon capture con: behold the wasted billions Burnham could claw back | George Monbiot",
+      "date": "8 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/07/change-unsustainable-direction-uk-debt-obr-health-pensions"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/08/carbon-capture-con-andy-burnham-fossil-fuels-renewables"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Ex-Nato chief behind defence review says Starmer\u2019s military spending plan is too little, too late",
-      "date": "7 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK housebuilders have far too much power. Now a \u00a34.5bn lawsuit could change that for good | Peter Apps",
+      "date": "8 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/07/ex-nato-chief-behind-defence-review-says-starmers-military-spending-plan-is-too-little-too-late"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/08/uk-housebuilders-too-much-power-45bn-lawsuit"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "\u2018Serious consequences\u2019: Farage attacks Sky News after question about George Cottrell",
-      "date": "7 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/07/serious-consequences-farage-attacks-sky-news-after-question-about-george-cottrell"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Nato allies announce \u00a337bn for new missile project",
+      "date": "8 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "What really worries Reform about Posh George?",
-      "date": "7 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/what-really-worries-reform-about-posh-george-13560994"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage is likely to win in Clacton but can his credibility survive? | Peter Walker",
+      "date": "8 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/08/nigel-farage-win-clacton-credibility-survive-reform"
     }
   ]
 }
