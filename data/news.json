@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-08T12:06:42Z",
+    "updated": "2026-07-09T16:16:06Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ruth Ellis, last woman to be hanged in UK, granted conditional posthumous pardon \u2013 UK politics live",
-      "date": "8 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Louise Haigh accuses \u2018cabal of men\u2019 around Keir Starmer of mistreating women in cabinet",
+      "date": "9 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/08/nigel-farage-reform-uk-clacton-5m-gift-crime-agency-labour-keir-starmer-pmqs-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/jul/09/louise-haigh-accuses-cabal-of-men-around-keir-starmer-of-mistreating-women-in-cabinet"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Chris Mason: It's far from certain whether by-election will strengthen Farage",
-      "date": "8 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham on path to No 10 with Labour nominations under way",
+      "date": "9 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c9d2882jj3yo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c77y0n7k801o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "More Reform UK transactions worth millions reported to National Crime Agency",
-      "date": "8 Jul 2026",
+      "headline": "Farage launches preemptive attack on Commons standards committee, claiming it won\u2019t judge him fairly \u2013 UK politics live",
+      "date": "9 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/08/more-reform-uk-transactions-worth-millions-reported-to-national-agency"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/09/andy-burnham-keir-starmer-labour-nigel-farage-binface-reform-latest-news-updates"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage's rivals rule out standing in Clacton by-election",
-      "date": "8 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Restore Britain leader describes Dunblane tragedy as 'one murder'",
+      "date": "9 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjdg4y3g0z7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cj3gdj300lyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Lack of safeguards over prisoners\u2019 early release puts abuse victims at risk, Lammy warned",
-      "date": "8 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/law/2026/jul/08/lack-of-safeguards-prisoners-early-release-abuse-victims-england-wales"
+      "headline": "Disability benefit not fit for purpose, minister leading review says",
+      "date": "9 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/czrxj5vvey0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Report to National Crime Agency of \u00a35m Farage gift is \u2018deeply serious\u2019",
-      "date": "8 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/08/report-to-national-agency-of-5m-farage-gift-is-deeply-serious"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham planning for No 10 for at least a year, key ally says",
+      "date": "9 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c0lyr660p8zo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "The great carbon capture con: behold the wasted billions Burnham could claw back | George Monbiot",
-      "date": "8 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Convicted fraudster was introduced as Farage\u2019s chief of staff, says ex-Reform candidate",
+      "date": "9 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/08/carbon-capture-con-andy-burnham-fossil-fuels-renewables"
+      "url": "https://www.theguardian.com/politics/2026/jul/09/fraudster-cottrell-was-introduced-as-farage-chief-of-staff-says-ex-reform-candidate"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK housebuilders have far too much power. Now a \u00a34.5bn lawsuit could change that for good | Peter Apps",
-      "date": "8 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Five pressing questions for Reform UK about its finances",
+      "date": "9 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/08/uk-housebuilders-too-much-power-45bn-lawsuit"
+      "url": "https://www.theguardian.com/politics/2026/jul/09/five-pressing-questions-farage-reform-uk-finances"
     },
     {
       "id": "9",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Nato allies announce \u00a337bn for new missile project",
-      "date": "8 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform activists urged to switch focus from Manchester to Farage\u2019s Clacton contest",
+      "date": "9 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/09/reform-activists-manchester-farage-clacton-byelection-contest"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage is likely to win in Clacton but can his credibility survive? | Peter Walker",
-      "date": "8 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham urged to scrap income tax and NI in radical fiscal overhaul",
+      "date": "9 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/08/nigel-farage-win-clacton-credibility-survive-reform"
+      "url": "https://www.theguardian.com/business/2026/jul/09/andy-burnham-scrap-income-tax-national-insurance-fiscal-overhaul"
     }
   ]
 }
