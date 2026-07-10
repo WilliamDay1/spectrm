@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-09T16:16:06Z",
+    "updated": "2026-07-10T13:35:29Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Louise Haigh accuses \u2018cabal of men\u2019 around Keir Starmer of mistreating women in cabinet",
-      "date": "9 Jul 2026",
+      "headline": "The bulging in-tray of challenges Andy Burnham faces upon entering No 10",
+      "date": "10 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/09/louise-haigh-accuses-cabal-of-men-around-keir-starmer-of-mistreating-women-in-cabinet"
+      "url": "https://www.theguardian.com/politics/2026/jul/10/in-tray-of-challenges-andy-burnham-faces-as-prime-minister"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham on path to No 10 with Labour nominations under way",
-      "date": "9 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c77y0n7k801o?at_medium=RSS&at_campaign=rss"
+      "tag": "Housing",
+      "tag_class": "tc-c",
+      "headline": "One thought on the Clacton contenders: the \u2018establishment\u2019 looks a bit different these days, doesn\u2019t it? | Marina Hyde",
+      "date": "10 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/10/clacton-byelection-nigel-farage-establishment-laurence-fox-reform"
     },
     {
       "id": "3",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Farage launches preemptive attack on Commons standards committee, claiming it won\u2019t judge him fairly \u2013 UK politics live",
-      "date": "9 Jul 2026",
+      "headline": "More than half of voters view Farage and Reform as \u2018very sleazy\u2019 as Clacton byelection called for 13 August\u2013 UK politics live",
+      "date": "10 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/09/andy-burnham-keir-starmer-labour-nigel-farage-binface-reform-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/10/andy-burnham-labour-shabana-mahmood-reform-nigel-farage-uk-politics-live-news"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Restore Britain leader describes Dunblane tragedy as 'one murder'",
-      "date": "9 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj3gdj300lyo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Ann Widdecombe, former Tory minister and Reform UK member, dies aged 78",
+      "date": "10 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/10/ann-widdecombe-former-tory-mp-and-reform-uk-member-dies-aged-78"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Disability benefit not fit for purpose, minister leading review says",
-      "date": "9 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/czrxj5vvey0o?at_medium=RSS&at_campaign=rss"
+      "headline": "Greater Manchester candidate says non-Reform voters should house \u2018migrant rapists\u2019",
+      "date": "10 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/10/reform-greater-manchester-candidate-criticised-over-migrant-rapists-comments"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham planning for No 10 for at least a year, key ally says",
-      "date": "9 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0lyr660p8zo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "GMB warns Labour MPs that cap on political donations could endanger party funding",
+      "date": "10 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/10/gmb-warns-labour-cap-political-donations-endanger-party-funding"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Convicted fraudster was introduced as Farage\u2019s chief of staff, says ex-Reform candidate",
-      "date": "9 Jul 2026",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Mahmood\u2019s cutting of protections to enable \u2018one in, one out\u2019 asylum deal with France ruled unlawful",
+      "date": "10 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/09/fraudster-cottrell-was-introduced-as-farage-chief-of-staff-says-ex-reform-candidate"
+      "url": "https://www.theguardian.com/uk-news/2026/jul/10/home-office-policy-protections-trafficking-victims-ruled-unlawful"
     },
     {
       "id": "8",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Five pressing questions for Reform UK about its finances",
-      "date": "9 Jul 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "MPs call on UK government to host televised emergency briefing on climate emergency",
+      "date": "10 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/09/five-pressing-questions-farage-reform-uk-finances"
+      "url": "https://www.theguardian.com/environment/2026/jul/10/mps-government-televised-emergency-briefing-climate-emergency"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform activists urged to switch focus from Manchester to Farage\u2019s Clacton contest",
-      "date": "9 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/09/reform-activists-manchester-farage-clacton-byelection-contest"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Labour under Burnham will be faster and bolder, says minister",
+      "date": "10 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgeyx1e4kno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham urged to scrap income tax and NI in radical fiscal overhaul",
-      "date": "9 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/09/andy-burnham-scrap-income-tax-national-insurance-fiscal-overhaul"
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Met police investigating Reform over election donations - reports",
+      "date": "10 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3eyq2np7qgo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
