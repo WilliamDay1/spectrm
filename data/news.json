@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-13T16:12:32Z",
+    "updated": "2026-07-14T11:51:23Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Counter terrorism police take over investigation into Ann Widdecombe's death",
-      "date": "13 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0mydjl12mwo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage turned down taxpayer-funded security including bodyguard, car and driver last year \u2013 UK politics live",
+      "date": "14 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/14/ann-widdecombe-nigel-farage-reform-uk-security-protection-burnham-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Shabana Mahmood tells MPs suspect in Ann Widdecombe investigation \u2018not known to Prevent\u2019 \u2013 UK politics live",
-      "date": "13 Jul 2026",
+      "headline": "Johnson government wasted \u00a310bn on PPE, Covid inquiry finds",
+      "date": "14 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/13/shabana-mahmood-migration-rochdale-grooming-gang-pakistan-visas-immigration-andy-burnham-labour"
+      "url": "https://www.theguardian.com/uk-news/2026/jul/14/boris-johnson-government-wasted-vast-sums-on-ppe-covid-inquiry-finds"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "MP groped breasts of two women, trial hears",
-      "date": "13 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Government failing Farage over security, says Jenrick",
+      "date": "14 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cdjk17j2d81o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c4gyg9452qlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Count Binface represents the Silly Sausage Britain I know and love | Sofie Jenkinson",
-      "date": "13 Jul 2026",
+      "headline": "David Lammy\u2019s proposed cohabitation law would be bad for couples \u2013 and worse for some women | Ruth Deech",
+      "date": "14 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/13/count-binface-silly-sausage-britain-mr-blobby-liz-truss-boaty-mcboatface-clacton"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/14/david-lammy-cohabitation-law-bad-for-couples-women"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-starmer-labour-tories-badenoch-farage-12593360?postid=12050077#liveblog-body'>Top civil servant launches legal challenge after being sacked by Starmer</a>",
-      "date": "13 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/ex-foreign-office-boss-launches-legal-challenge-after-being-fired-by-starmer-13563091"
+      "headline": "It\u2019s the hope that kills you \u2013 so fingers crossed for Andy Burnham | Zoe Williams",
+      "date": "14 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/commentisfree/2026/jul/14/world-cup-england-andy-burnham"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham expected to vote in favour of Mahmood\u2019s asylum system changes",
-      "date": "13 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Jenrick criticises government for not offering Farage earlier security meeting",
+      "date": "14 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/13/andy-burnham-expected-to-vote-shabana-mahmood-asylum-system-changes"
+      "url": "https://www.theguardian.com/politics/2026/jul/14/robert-jenrick-nigel-farage-security-meeting-reform"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK bans support for Iran's Islamic Revolutionary Guard Corps",
-      "date": "13 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cz0jkj7e87go?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Blair tells Burnham: Don't expect to be popular",
+      "date": "14 Jul 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/blair-tells-burnham-dont-expect-to-be-popular-13563047"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-starmer-labour-tories-badenoch-farage-12593360?postid=12050554#liveblog-body'>UK proscribes Iran's IRGC after 'threats to life' on British soil</a>",
-      "date": "13 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/uk-proscribes-irans-irgc-after-threats-to-life-on-british-soil-13563034"
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "\u2018We are dying little by little here\u2019: asylum seekers at mercy of Home Office hotel closures",
+      "date": "14 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/14/asylum-seekers-mercy-home-office-hotel-closures-legal-challenge"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Olly Robbins launches legal challenge to dismissal as Foreign Office chief by Keir Starmer",
-      "date": "13 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/13/olly-robbins-legal-challenge-dismissal-foreign-office-keir-starmer-peter-mandelson"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Chris Mason: Investigation into Widdecombe's death rekindles debate over how to protect politicians",
+      "date": "14 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgdgx01y98o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Former top official Robbins takes legal action over sacking",
-      "date": "13 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjegqpwxk98o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham has a chance to overhaul Pip. Here's what a truly progressive system could look like | Frances Ryan",
+      "date": "14 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/14/andy-burnham-overhaul-pip-progressive-disability-timms-report"
     }
   ]
 }
