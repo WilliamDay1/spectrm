@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-14T11:51:23Z",
+    "updated": "2026-07-15T12:04:05Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage turned down taxpayer-funded security including bodyguard, car and driver last year \u2013 UK politics live",
-      "date": "14 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Starmer shares tributes and offers \u2018full support\u2019 to his successor in his final PMQs before stepping down \u2013 UK politics live",
+      "date": "15 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/14/ann-widdecombe-nigel-farage-reform-uk-security-protection-burnham-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/15/keir-starmer-pmqs-andy-burnham-labour-leadership-kemi-badenoch-conservatives-nigel-farage-reform-uk-politics-live-news"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Johnson government wasted \u00a310bn on PPE, Covid inquiry finds",
-      "date": "14 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/14/boris-johnson-government-wasted-vast-sums-on-ppe-covid-inquiry-finds"
+      "headline": "Midnight social media curfew proposed for UK teens aged 16 and 17",
+      "date": "15 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c982857nlrlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Government failing Farage over security, says Jenrick",
-      "date": "14 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4gyg9452qlo?at_medium=RSS&at_campaign=rss"
+      "headline": "Bank of England governor would have put off Farage meeting had \u00a35m gift been under investigation",
+      "date": "15 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/15/bank-of-england-governor-nigel-farage-meeting-andrew-bailey"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "David Lammy\u2019s proposed cohabitation law would be bad for couples \u2013 and worse for some women | Ruth Deech",
-      "date": "14 Jul 2026",
+      "headline": "600 rape threats in one night: the daily reality of abuse faced by MPs",
+      "date": "15 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/14/david-lammy-cohabitation-law-bad-for-couples-women"
+      "url": "https://www.theguardian.com/politics/2026/jul/14/mp-death-threats-daily-reality-increasing-climate-abuse-intimidation"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "It\u2019s the hope that kills you \u2013 so fingers crossed for Andy Burnham | Zoe Williams",
-      "date": "14 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Sadiq Khan backs calls for maximum workplace temperature in UK",
+      "date": "15 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/commentisfree/2026/jul/14/world-cup-england-andy-burnham"
+      "url": "https://www.theguardian.com/environment/2026/jul/15/sadiq-khan-backs-calls-uk-maximum-workplace-temperature"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Jenrick criticises government for not offering Farage earlier security meeting",
-      "date": "14 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour should ditch triple-lock pensions promise, says OECD",
+      "date": "15 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/14/robert-jenrick-nigel-farage-security-meeting-reform"
+      "url": "https://www.theguardian.com/business/2026/jul/15/labour-should-ditch-triple-lock-pensions-promise-says-oecd"
     },
     {
       "id": "7",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Blair tells Burnham: Don't expect to be popular",
-      "date": "14 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/blair-tells-burnham-dont-expect-to-be-popular-13563047"
+      "headline": "Review of MP security needed after Widdecombe death, Burnham says",
+      "date": "15 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8e2eyg2p40o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "\u2018We are dying little by little here\u2019: asylum seekers at mercy of Home Office hotel closures",
-      "date": "14 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham urged to overhaul \u2018timid and limited\u2019 elections bill",
+      "date": "15 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/14/asylum-seekers-mercy-home-office-hotel-closures-legal-challenge"
+      "url": "https://www.theguardian.com/politics/2026/jul/15/andy-burnham-strengthen-elections-bill"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Chris Mason: Investigation into Widdecombe's death rekindles debate over how to protect politicians",
-      "date": "14 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgdgx01y98o?at_medium=RSS&at_campaign=rss"
+      "headline": "Labour must stop just writing a cheque for benefit claimants, says McFadden",
+      "date": "15 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/jul/15/labour-stop-writing-cheque-benefit-claimants-pat-mcfadden-welfare-reform"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham has a chance to overhaul Pip. Here's what a truly progressive system could look like | Frances Ryan",
-      "date": "14 Jul 2026",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Green-led council plans to ban cooperation with Home Office on immigration raids",
+      "date": "15 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/14/andy-burnham-overhaul-pip-progressive-disability-timms-report"
+      "url": "https://www.theguardian.com/uk-news/2026/jul/15/green-led-council-plans-to-ban-cooperation-with-home-office-on-immigration-raids"
     }
   ]
 }
