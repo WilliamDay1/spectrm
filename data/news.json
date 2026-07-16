@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-15T12:04:05Z",
+    "updated": "2026-07-16T12:06:11Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Starmer shares tributes and offers \u2018full support\u2019 to his successor in his final PMQs before stepping down \u2013 UK politics live",
-      "date": "15 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/15/keir-starmer-pmqs-andy-burnham-labour-leadership-kemi-badenoch-conservatives-nigel-farage-reform-uk-politics-live-news"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Argentina face action over Falklands banner",
+      "date": "16 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/sport/football/articles/c935pgr4dklo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Midnight social media curfew proposed for UK teens aged 16 and 17",
-      "date": "15 Jul 2026",
+      "headline": "British Steel taken into public ownership to protect 'vital' UK supply",
+      "date": "16 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c982857nlrlo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c5y680w62wno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Bank of England governor would have put off Farage meeting had \u00a35m gift been under investigation",
-      "date": "15 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Making Mahmood chancellor shows Burnham \u2018subservient to City\u2019, claims Polanski \u2013 UK politics live",
+      "date": "16 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/15/bank-of-england-governor-nigel-farage-meeting-andrew-bailey"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/16/keir-starmer-andy-burnham-labour-farage-badenoch-widdecombe-latest-news-updates"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "600 rape threats in one night: the daily reality of abuse faced by MPs",
-      "date": "15 Jul 2026",
+      "headline": "If you have been listening to Suella Braverman and think Britain has gone bonkers, let me explain | Nels Abbey",
+      "date": "16 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/14/mp-death-threats-daily-reality-increasing-climate-abuse-intimidation"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/16/suella-braverman-reparations-colonialism-reform-race"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sadiq Khan backs calls for maximum workplace temperature in UK",
-      "date": "15 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/jul/15/sadiq-khan-backs-calls-uk-maximum-workplace-temperature"
+      "headline": "Who is the frontrunner to be the UK's next chancellor?",
+      "date": "16 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour should ditch triple-lock pensions promise, says OECD",
-      "date": "15 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/15/labour-should-ditch-triple-lock-pensions-promise-says-oecd"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK economy returns to growth in May",
+      "date": "16 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8xnllq944go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Review of MP security needed after Widdecombe death, Burnham says",
-      "date": "15 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Pakistan resisting UK attempts to deport grooming gang leader",
+      "date": "16 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8e2eyg2p40o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/clyxnvjy706o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham urged to overhaul \u2018timid and limited\u2019 elections bill",
-      "date": "15 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/15/andy-burnham-strengthen-elections-bill"
+      "headline": "Starmer pledges 'cast-iron support' for Ukraine on final visit as PM",
+      "date": "16 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx2myl1erj8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour must stop just writing a cheque for benefit claimants, says McFadden",
-      "date": "15 Jul 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK economy grew by 0.1% in May despite impact of Iran war",
+      "date": "16 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/15/labour-stop-writing-cheque-benefit-claimants-pat-mcfadden-welfare-reform"
+      "url": "https://www.theguardian.com/business/2026/jul/16/uk-economy-grew-gdp-despite-iran-war"
     },
     {
       "id": "10",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Green-led council plans to ban cooperation with Home Office on immigration raids",
-      "date": "15 Jul 2026",
+      "headline": "British Steel is taken into public ownership to save UK supply",
+      "date": "16 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/15/green-led-council-plans-to-ban-cooperation-with-home-office-on-immigration-raids"
+      "url": "https://www.theguardian.com/business/2026/jul/16/british-steel-public-ownership-save-uk-supply-scunthorpe"
     }
   ]
 }
