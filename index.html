@@ -2598,7 +2598,7 @@ function buildVIChart(months){
         x:{grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?7:months<=6?7:months<=12?7:9}},
         y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',callback:v=>v+'%'}}
       },
-      onHover:function(e,els,chart){handleVIHover(e,chart);}
+      onHover:function(e,els,chart){handleVIHover(e,chart);}  // smooth via raw mouseX
     }
   });
   const canvas=document.getElementById('vi-chart');
@@ -2622,73 +2622,80 @@ function handleVIHover(event,chart){
   var dp=document.getElementById('vi-date-pill');
   var hl=document.getElementById('vi-hover-labels');
   if(!ch||!dp||!hl)return;
-  var els=chart.getElementsAtEventForMode(event.native,'index',{intersect:false},false);
-  if(!els.length){hideVIHover();return;}
-  var idx=els[0].index;
-  // Chart.js 4: getPixelForValue on x scale with category index
-  var x=chart.scales.x.getPixelForValue(idx);
-  // Fallback: use element's x position directly
-  if(isNaN(x)||x===undefined)x=els[0].element.x;
-  var area=chart.chartArea;
 
-  // Dashed crosshair
-  ch.style.left=x+'px';
+  var area=chart.chartArea;
+  var rect=chart.canvas.getBoundingClientRect();
+  // Raw mouse X relative to canvas
+  var mouseX=event.native.clientX-rect.left;
+
+  // Only show when inside the chart plot area
+  if(mouseX<area.left||mouseX>area.right){hideVIHover();return;}
+
+  // Convert mouseX to a fractional data index (smooth — not snapped)
+  var pct=(mouseX-area.left)/(area.right-area.left);
+  var dataLen=VI_CUR.labels.length;
+  var fracIdx=pct*(dataLen-1);
+  var i0=Math.max(0,Math.min(dataLen-2,Math.floor(fracIdx)));
+  var i1=Math.min(dataLen-1,i0+1);
+  var t=fracIdx-i0; // 0..1 interpolation factor
+
+  // Interpolate label (show nearest whole-index label)
+  var nearIdx=Math.round(fracIdx);
+  var label=VI_CUR.labels[nearIdx]||'';
+
+  // Crosshair follows mouse exactly
+  ch.style.left=mouseX+'px';
   ch.style.top=area.top+'px';
   ch.style.height=(area.bottom-area.top)+'px';
   ch.style.opacity=1;
 
-  // Date pill at top of the line
-  dp.textContent=VI_CUR.labels[idx]||'';
-  dp.style.left=x+'px';
-  dp.style.top=(area.top-22)+'px';
+  // Date pill above the line
+  dp.textContent=label;
+  dp.style.left=mouseX+'px';
+  dp.style.top=(area.top-24)+'px';
   dp.style.opacity=1;
 
-  // Per-party % labels at each line's y position, to the right of the crosshair
   var parties=[
-    {key:'ref',label:'Reform UK',c:'#0A8A9F'},
-    {key:'lab',label:'Labour',c:'#CC0000'},
-    {key:'con',label:'Conservative',c:'#003087'},
-    {key:'grn',label:'Green',c:'#1A6B2A'},
-    {key:'lib',label:'Lib Dems',c:'#D4730A'},
+    {key:'ref',c:'#0A8A9F'},
+    {key:'lab',c:'#CC0000'},
+    {key:'con',c:'#003087'},
+    {key:'grn',c:'#1A6B2A'},
+    {key:'lib',c:'#D4730A'},
   ];
+
+  // Interpolate each party's value smoothly between i0 and i1
   var items=parties.map(function(p){
-    var v=VI_CUR.data[p.key]?VI_CUR.data[p.key][idx]:null;
-    if(v===null||v===undefined)return null;
-    return {c:p.c,v:v,y:chart.scales.y.getPixelForValue(v)};
+    var d=VI_CUR.data[p.key];
+    if(!d||d.length<2)return null;
+    var v0=d[i0]||0, v1=d[i1]||0;
+    var v=v0+(v1-v0)*t;
+    var vRound=Math.round(v*10)/10;
+    var py=chart.scales.y.getPixelForValue(v);
+    return {c:p.c,v:vRound,y:py};
   }).filter(Boolean);
 
-  // Sort by y (top first) and resolve overlaps with min 17px separation
+  // Sort by y ascending (top of chart = lowest y px)
   items.sort(function(a,b){return a.y-b.y;});
-  for(var i2=1;i2<items.length;i2++){
-    if(items[i2].y-items[i2-1].y<17)items[i2].y=items[i2-1].y+17;
+  // Resolve overlaps with 17px min gap
+  for(var j=1;j<items.length;j++){
+    if(items[j].y-items[j-1].y<17) items[j].y=items[j-1].y+17;
   }
   // Keep within chart area
-  var overflow=items.length?items[items.length-1].y-(area.bottom-4):0;
-  if(overflow>0)items.forEach(function(it){it.y-=overflow;});
+  var overflow=items[items.length-1].y-(area.bottom-4);
+  if(overflow>0) items.forEach(function(it){it.y-=overflow;});
 
-  // Flip labels to left side if near right edge
   var wrap=document.getElementById('vi-chart-wrap');
   var wrapW=wrap?wrap.offsetWidth:600;
-  var flip=x>wrapW-72;
+  var flip=mouseX>wrapW-80;
+  var dotR=6;
 
-  // Inline % labels with halo
+  // Labels + dots combined
   hl.innerHTML=items.map(function(it){
-    return '<div style="position:absolute;left:'+(flip?(x-62):(x+9))+'px;top:'+(it.y-9)+'px;font-size:12px;font-weight:700;color:'+it.c+';text-shadow:0 1px 4px var(--s2),0 -1px 4px var(--s2),1px 0 4px var(--s2),-1px 0 4px var(--s2),0 0 8px var(--s2)">'+it.v+'%</div>';
+    // Dot at actual interpolated y position (not label-adjusted)
+    var dotY=it.y; // use label y for visual alignment
+    return '<div style="position:absolute;left:'+(mouseX-dotR)+'px;top:'+(dotY-dotR)+'px;width:'+(dotR*2)+'px;height:'+(dotR*2)+'px;border-radius:50%;background:'+it.c+';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.3);pointer-events:none"></div>'+
+    '<div style="position:absolute;left:'+(flip?(mouseX-58):(mouseX+11))+'px;top:'+(it.y-9)+'px;font-size:12px;font-weight:700;color:'+it.c+';text-shadow:0 0 6px var(--s2),0 0 4px var(--s2),0 0 4px var(--s2)">'+it.v+'%</div>';
   }).join('');
-
-  // Draw highlighted dots at each party's current position on the line
-  var fullParties=[
-    {key:'ref',c:'#0A8A9F'},{key:'lab',c:'#CC0000'},{key:'con',c:'#003087'},
-    {key:'grn',c:'#1A6B2A'},{key:'lib',c:'#D4730A'},
-  ];
-  var dotSize=7;
-  var dotHtml=fullParties.map(function(p){
-    var v=VI_CUR.data[p.key]?VI_CUR.data[p.key][idx]:null;
-    if(v===null||v===undefined)return '';
-    var py=chart.scales.y.getPixelForValue(v);
-    return '<div style="position:absolute;left:'+(x-dotSize)+'px;top:'+(py-dotSize)+'px;width:'+(dotSize*2)+'px;height:'+(dotSize*2)+'px;border-radius:50%;background:'+p.c+';border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);pointer-events:none"></div>';
-  }).join('');
-  hl.innerHTML+=dotHtml;
 }
 
 function setVIRange(months,btn){
