@@ -767,7 +767,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Green</span>
       <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts)"><span style="width:10px;height:10px;border-radius:2px;background:var(--lib);display:inline-block"></span>Lib Dems</span>
     </div>
-    <div style="position:relative;height:200px" id="vi-chart-wrap" style="cursor:crosshair"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:0;border-left:1.5px dashed rgba(0,0,0,.3);pointer-events:none;opacity:0"></div><div id="vi-date-pill" style="position:absolute;background:var(--tp);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;pointer-events:none;opacity:0;z-index:52;white-space:nowrap;transform:translateX(-50%)"></div><div id="vi-hover-labels" style="position:absolute;inset:0;pointer-events:none;z-index:51"></div></div>
+    <div style="position:relative;height:300px" id="vi-chart-wrap" style="cursor:crosshair;height:300px"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:0;border-left:1.5px dashed rgba(0,0,0,.3);pointer-events:none;opacity:0"></div><div id="vi-date-pill" style="position:absolute;background:var(--tp);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;pointer-events:none;opacity:0;z-index:52;white-space:nowrap;transform:translateX(-50%)"></div><div id="vi-hover-labels" style="position:absolute;inset:0;pointer-events:none;z-index:51"></div></div>
   </div>
   <div id="pollster-table"></div>
   <div id="poll-expand-wrap" style="display:none;margin-bottom:14px"></div>
@@ -2427,9 +2427,10 @@ function renderPolls(){
 }
 
 function renderSeatProjection(){
+  // ── dot-matrix UK map ──
   var mapEl=document.getElementById('seat-map-svg');
   if(mapEl){
-    var partyColors={lab:'#CC0000',ref:'#0A8A9F',lib:'#D4730A',con:'#003087',grn:'#1A6B2A',snp:'#8B7700',oth:'#898781'};
+    var pc={lab:'#CC0000',ref:'#0A8A9F',lib:'#D4730A',con:'#003087',grn:'#1A6B2A',snp:'#8B7700',oth:'#898781'};
     var regions=[
       {seats:8,party:'snp',cx:120,cy:55},{seats:6,party:'snp',cx:185,cy:80},
       {seats:12,party:'lab',cx:155,cy:115},{seats:10,party:'lab',cx:115,cy:120},
@@ -2443,16 +2444,14 @@ function renderSeatProjection(){
       {seats:28,party:'ref',cx:255,cy:345},{seats:25,party:'ref',cx:240,cy:330},
       {seats:18,party:'oth',cx:80,cy:145},
     ];
-    var W=320,H=400;
-    var svg='<svg viewBox="0 0 '+W+' '+H+'" width="280" style="display:block;background:var(--s1);border-radius:10px;border:.5px solid var(--bd)">';
+    var W=320,H=400,svg='<svg viewBox="0 0 '+W+' '+H+'" width="280" style="display:block;background:var(--s1);border-radius:10px;border:.5px solid var(--bd)">';
     regions.forEach(function(reg){
-      var c=partyColors[reg.party]||'#898781';
-      var cols=Math.ceil(Math.sqrt(reg.seats*1.6));
-      var rows=Math.ceil(reg.seats/cols);
-      var gap=9;var startX=reg.cx-cols*gap/2;var startY=reg.cy-rows*gap/2;var count=0;
+      var c=pc[reg.party]||'#898781';
+      var cols=Math.ceil(Math.sqrt(reg.seats*1.6)),rows=Math.ceil(reg.seats/cols),gap=9;
+      var startX=reg.cx-cols*gap/2,startY=reg.cy-rows*gap/2,count=0;
       for(var row=0;row<rows&&count<reg.seats;row++){
         for(var col=0;col<cols&&count<reg.seats;col++){
-          var x=startX+col*gap+(row%2?gap/2:0);var y=startY+row*gap;
+          var x=startX+col*gap+(row%2?gap/2:0),y=startY+row*gap;
           svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="3.2" fill="'+c+'" opacity=".88"/>';
           count++;
         }
@@ -2469,6 +2468,8 @@ function renderSeatProjection(){
     svg+='</svg>';
     mapEl.innerHTML=svg;
   }
+
+  // ── MRP findings ──
   var findingsEl=document.getElementById('mrp-findings');
   if(findingsEl){
     var findings=[
@@ -2484,52 +2485,85 @@ function renderSeatProjection(){
         '<span style="font-size:11px;color:var(--ts);line-height:1.5">'+f.text+'</span></div>';
     }).join('');
   }
+
+  // ── Parliament chamber — large Flourish-style dots ──
   var chamberEl=document.getElementById('seat-chamber');
   if(chamberEl){
     var parties=[
-      {party:'Labour',seats:249,c:'#CC0000'},{party:'Reform UK',seats:198,c:'#0A8A9F'},
-      {party:'Lib Dem',seats:128,c:'#D4730A'},{party:'Conservative',seats:82,c:'#003087'},
-      {party:'Green',seats:31,c:'#1A6B2A'},{party:'SNP',seats:24,c:'#8B7700'},{party:'Other',seats:38,c:'#898781'},
+      {party:'Labour',seats:249,c:'#CC0000'},
+      {party:'Reform UK',seats:198,c:'#0A8A9F'},
+      {party:'Lib Dem',seats:128,c:'#D4730A'},
+      {party:'Conservative',seats:82,c:'#003087'},
+      {party:'Green',seats:31,c:'#1A6B2A'},
+      {party:'SNP',seats:24,c:'#8B7700'},
+      {party:'Other',seats:38,c:'#898781'},
     ];
     var allDots=[];
-    parties.forEach(function(p){for(var i=0;i<p.seats;i++)allDots.push(p.c);});
-    var W=420,H=210,cx=W/2,cy=H+5;
-    var rowSeats=[130,120,110,100,90,100];var rowR=[165,148,131,114,97,80];
-    var svg='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-height:210px">';
+    parties.forEach(function(p){for(var i=0;i<p.seats;i++)allDots.push({c:p.c,party:p.party});});
+
+    var W=580,H=300,cx=W/2,cy=H+20;
+    // More rows, larger dots, better spacing — like the Flourish screenshot
+    var rowSeats=[90,100,110,115,120,115];
+    var rowR=[220,198,176,154,132,110];
+    var dotR=7; // larger dots
+    var svg='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-height:300px">';
+
     var dotIdx=0;
-    rowR.forEach(function(r,ri){
+    for(var ri=0;ri<rowR.length;ri++){
+      var r=rowR[ri];
       var count=rowSeats[ri];
-      for(var i=0;i<count&&dotIdx<allDots.length;i++){
-        var angle=-Math.PI+(i+1)*(Math.PI/(count+1));
-        var x=cx+r*Math.cos(angle);var y=cy+r*Math.sin(angle);
-        svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4" fill="'+allDots[dotIdx]+'" opacity=".9"/>';
+      // Spread slightly more than PI for a fuller chamber look
+      var startAngle=-Math.PI+0.05;
+      var endAngle=-0.05;
+      var angleStep=(endAngle-startAngle)/(count-1);
+      for(var di=0;di<count&&dotIdx<allDots.length;di++){
+        var angle=startAngle+di*angleStep;
+        var x=cx+r*Math.cos(angle);
+        var y=cy+r*Math.sin(angle);
+        svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+dotR+'" fill="'+allDots[dotIdx].c+'" opacity=".92"><title>'+allDots[dotIdx].party+'</title></circle>';
         dotIdx++;
       }
-    });
-    svg+='<line x1="'+cx+'" y1="'+(cy-168)+'" x2="'+cx+'" y2="'+(cy-85)+'" stroke="rgba(0,0,0,.2)" stroke-width="1.5" stroke-dasharray="3,2"/>';
-    svg+='<text x="'+(cx+4)+'" y="'+(cy-152)+'" font-size="9" fill="var(--tm)" font-family="Instrument Sans">326 majority</text>';
-    svg+='<text x="'+cx+'" y="'+(cy-18)+'" font-size="10" fill="var(--tm)" font-family="Instrument Sans" text-anchor="middle">No party wins majority · 650 seats total</text>';
+    }
+
+    // Majority dashed line
+    svg+='<line x1="'+cx+'" y1="'+(cy-rowR[0]-16)+'" x2="'+cx+'" y2="'+(cy-rowR[rowR.length-1]+20)+'" stroke="rgba(0,0,0,.25)" stroke-width="1.5" stroke-dasharray="4,3"/>';
+    svg+='<text x="'+(cx+6)+'" y="'+(cy-rowR[0]-4)+'" font-size="10" fill="var(--tm)" font-family="Instrument Sans" font-weight="500">326 majority</text>';
     svg+='</svg>';
     chamberEl.innerHTML=svg;
-  }
-  var barsEl=document.getElementById('seat-bars');
-  if(barsEl){
-    var sData=[
-      {party:'Labour',seats:249,change:-155,c:'#CC0000'},{party:'Reform UK',seats:198,change:193,c:'#0A8A9F'},
-      {party:'Lib Dem',seats:128,change:56,c:'#D4730A'},{party:'Conservative',seats:82,change:-83,c:'#003087'},
-      {party:'Green',seats:31,change:27,c:'#1A6B2A'},{party:'SNP',seats:24,change:-24,c:'#8B7700'},{party:'Other',seats:38,change:0,c:'#898781'},
-    ];
-    barsEl.innerHTML=sData.map(function(s){
-      var cc=s.change>0?'#1baf7a':s.change<0?'#e34948':'#898781';
-      return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">'+
-        '<span style="font-size:11px;font-weight:500;width:90px;flex-shrink:0;color:'+s.c+'">'+s.party+'</span>'+
-        '<div style="flex:1;height:7px;background:var(--s1);border-radius:4px;overflow:hidden">'+
-          '<div style="width:'+Math.round(s.seats/2.49*100)+'%;height:100%;background:'+s.c+';border-radius:4px;opacity:.85"></div>'+
-        '</div>'+
-        '<span style="font-size:12px;font-weight:600;width:30px;text-align:right;color:'+s.c+'">'+s.seats+'</span>'+
-        '<span style="font-size:10px;width:34px;text-align:right;color:'+cc+'">'+(s.change>0?'+':'')+s.change+'</span>'+
-      '</div>';
-    }).join('');
+
+    // ── Seat count table below chamber ──
+    var barsEl=document.getElementById('seat-bars');
+    if(barsEl){
+      barsEl.innerHTML='<table style="width:100%;border-collapse:collapse;margin-top:14px;font-size:12px">'+
+        '<thead><tr style="border-bottom:.5px solid var(--bd)">'+
+        '<th style="text-align:left;padding:6px 0;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Party</th>'+
+        '<th style="text-align:right;padding:6px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">2024</th>'+
+        '<th style="text-align:right;padding:6px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Projected</th>'+
+        '<th style="text-align:right;padding:6px 0;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Change</th>'+
+        '</tr></thead><tbody>'+
+        [
+          {party:'Labour',seats:249,prev:404,change:-155,c:'#CC0000'},
+          {party:'Reform UK',seats:198,prev:5,change:193,c:'#0A8A9F'},
+          {party:'Lib Dem',seats:128,prev:72,change:56,c:'#D4730A'},
+          {party:'Conservative',seats:82,prev:121,change:-39,c:'#003087'},
+          {party:'Green',seats:31,prev:4,change:27,c:'#1A6B2A'},
+          {party:'SNP',seats:24,prev:9,change:15,c:'#8B7700'},
+          {party:'Other',seats:38,prev:35,change:3,c:'#898781'},
+        ].map(function(s){
+          var cc=s.change>0?'#1baf7a':s.change<0?'#e34948':'#898781';
+          var arrow=s.change>0?'↑':'↓';
+          return '<tr style="border-bottom:.5px solid var(--bd)">'+
+            '<td style="padding:7px 0;display:flex;align-items:center;gap:6px">'+
+              '<span style="width:10px;height:10px;border-radius:50%;background:'+s.c+';display:inline-block;flex-shrink:0"></span>'+
+              '<span style="font-weight:500;color:var(--tp)">'+s.party+'</span>'+
+            '</td>'+
+            '<td style="padding:7px 8px;text-align:right;color:var(--tm)">'+s.prev+'</td>'+
+            '<td style="padding:7px 8px;text-align:right;font-weight:600;color:'+s.c+'">'+s.seats+'</td>'+
+            '<td style="padding:7px 0;text-align:right;color:'+cc+';font-weight:500">'+arrow+' '+Math.abs(s.change)+'</td>'+
+          '</tr>';
+        }).join('')+
+        '</tbody></table>';
+    }
   }
 }
 
@@ -2581,26 +2615,72 @@ function buildVIChart(months){
   }
   VI_CUR={labels:labels,data:series};
 
+  // ── Scatter dots from individual poll data ──
+  // Each poll maps to an x-index based on its position in the label array
+  // We spread polls slightly around their true x position for the Flourish look
+  var scatterParties=[
+    {key:'ref',color:'rgba(10,138,159,.35)'},
+    {key:'lab',color:'rgba(204,0,0,.35)'},
+    {key:'con',color:'rgba(0,48,135,.3)'},
+    {key:'grn',color:'rgba(26,107,42,.35)'},
+    {key:'lib',color:'rgba(212,115,10,.35)'},
+  ];
+  var scatterDatasets=scatterParties.map(function(sp){
+    var pts=[];
+    RECENT_POLLS.forEach(function(p,pi){
+      // Map most recent polls to end of x axis — spread across last labels
+      var xIdx=labels.length-1-(RECENT_POLLS.length-1-pi)*Math.max(1,Math.floor(labels.length/RECENT_POLLS.length));
+      if(xIdx<0||xIdx>=labels.length)return;
+      // Add slight jitter
+      var jitter=(pi%3-1)*0.15;
+      pts.push({x:Math.max(0,Math.min(labels.length-1,xIdx+jitter)),y:p[sp.key]});
+    });
+    return {
+      type:'scatter',
+      label:sp.key+'-scatter',
+      data:pts,
+      backgroundColor:sp.color,
+      borderColor:'transparent',
+      pointRadius:4,
+      pointHoverRadius:0,
+      showLine:false,
+      order:2,
+    };
+  });
+
+  // ── Smooth moving average lines ──
+  var lineDatasets=[
+    {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.06)',tension:.4,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0,order:1},
+    {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.05)',tension:.4,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0,order:1},
+    {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'transparent',tension:.4,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:0,order:1},
+    {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'transparent',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0,order:1},
+    {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'transparent',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0,order:1},
+  ];
+
   viChart=new Chart(ctx,{
-    type:'line',
-    data:{labels:labels,datasets:[
-      {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.08)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:7,pointBackgroundColor:'#0A8A9F',pointBorderColor:'#fff',pointBorderWidth:2,pointHitRadius:20},
-      {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.06)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:7,pointBackgroundColor:'#CC0000',pointBorderColor:'#fff',pointBorderWidth:2,pointHitRadius:20},
-      {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'rgba(0,48,135,.04)',tension:.4,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:7,pointBackgroundColor:'#003087',pointBorderColor:'#fff',pointBorderWidth:2,pointHitRadius:20},
-      {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'rgba(26,107,42,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:7,pointBackgroundColor:'#1A6B2A',pointBorderColor:'#fff',pointBorderWidth:2,pointHitRadius:20},
-      {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'rgba(212,115,10,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:7,pointBackgroundColor:'#D4730A',pointBorderColor:'#fff',pointBorderWidth:2,pointHitRadius:20},
-    ]},
+    data:{labels:labels,datasets:[...scatterDatasets,...lineDatasets]},
     options:{
       responsive:true,maintainAspectRatio:false,
       interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{enabled:false}},
       scales:{
-        x:{grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?7:months<=6?7:months<=12?7:9}},
-        y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',callback:v=>v+'%'}}
+        x:{
+          type:'category',
+          grid:{color:'rgba(0,0,0,.04)',drawTicks:false},
+          border:{display:false},
+          ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?7:months<=6?7:months<=12?8:10,padding:8}
+        },
+        y:{
+          min:0,max:40,
+          grid:{color:'rgba(0,0,0,.05)',drawTicks:false},
+          border:{display:false},
+          ticks:{font:{size:10},color:'#898781',callback:v=>v+'%',padding:8}
+        }
       },
-      onHover:function(e,els,chart){handleVIHover(e,chart);}  // smooth via raw mouseX
+      onHover:function(e,els,chart){handleVIHover(e,chart);}
     }
   });
+
   const canvas=document.getElementById('vi-chart');
   if(canvas&&!canvas.dataset.mlBound){
     canvas.dataset.mlBound='1';
