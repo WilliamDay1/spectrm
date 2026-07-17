@@ -2625,7 +2625,10 @@ function handleVIHover(event,chart){
   var els=chart.getElementsAtEventForMode(event.native,'index',{intersect:false},false);
   if(!els.length){hideVIHover();return;}
   var idx=els[0].index;
-  var x=chart.scales.x.getPixelForIndex(idx);
+  // Chart.js 4: getPixelForValue on x scale with category index
+  var x=chart.scales.x.getPixelForValue(idx);
+  // Fallback: use element's x position directly
+  if(isNaN(x)||x===undefined)x=els[0].element.x;
   var area=chart.chartArea;
 
   // Dashed crosshair
