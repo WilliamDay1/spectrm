@@ -767,7 +767,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Green</span>
       <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts)"><span style="width:10px;height:10px;border-radius:2px;background:var(--lib);display:inline-block"></span>Lib Dems</span>
     </div>
-    <div style="position:relative;height:200px" id="vi-chart-wrap"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:1px;background:rgba(0,0,0,.2);pointer-events:none;opacity:0"></div><div id="vi-tooltip" style="position:absolute;background:var(--s2);border:.5px solid var(--bds);border-radius:9px;padding:9px 13px;pointer-events:none;opacity:0;z-index:50;min-width:150px;box-shadow:0 4px 16px rgba(0,0,0,.12);font-size:12px"></div></div>
+    <div style="position:relative;height:200px" id="vi-chart-wrap"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:0;border-left:1.5px dashed rgba(0,0,0,.3);pointer-events:none;opacity:0"></div><div id="vi-date-pill" style="position:absolute;background:var(--tp);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;pointer-events:none;opacity:0;z-index:52;white-space:nowrap;transform:translateX(-50%)"></div><div id="vi-hover-labels" style="position:absolute;inset:0;pointer-events:none;z-index:51"></div></div>
   </div>
   <div id="pollster-table"></div>
   <div id="poll-expand-wrap" style="display:none;margin-bottom:14px"></div>
@@ -2541,90 +2541,142 @@ function renderSeatProjection(){
 
 // ── Build / rebuild VI chart with given month range ──
 var viRangeMonths=24;
+var VI_CUR={labels:[],data:{}};
+
+function getWeeklySeries(months){
+  // Interpolate monthly data into weekly points for 3M/6M views
+  var keys=['ref','lab','con','grn','lib'];
+  var M=Math.min(months+1,VI_LABELS.length);
+  var anchors={};
+  keys.forEach(function(k){anchors[k]=VI_DATA[k].slice(-M);});
+  var monthNames=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var lastLabel=VI_LABELS[VI_LABELS.length-1]||'Jun 26';
+  var parts=lastLabel.split(' ');
+  var endDate=new Date(2000+parseInt(parts[1]||'26'),Math.max(0,monthNames.indexOf(parts[0])),28);
+  var weeks=Math.round(months*4.33);
+  var labels=[],data={ref:[],lab:[],con:[],grn:[],lib:[]};
+  for(var w=0;w<weeks;w++){
+    var frac=weeks<=1?1:w/(weeks-1);
+    var pos=frac*(M-1);
+    var i0=Math.floor(pos),i1=Math.min(M-1,i0+1),t=pos-i0;
+    keys.forEach(function(k){
+      var v=anchors[k][i0]*(1-t)+anchors[k][i1]*t;
+      data[k].push(Math.round(v*10)/10);
+    });
+    var d=new Date(endDate.getTime()-(weeks-1-w)*7*24*3600*1000);
+    labels.push(d.getDate()+' '+monthNames[d.getMonth()]);
+  }
+  return {labels:labels,data:data};
+}
+
 function buildVIChart(months){
   viRangeMonths=months;
   if(viChart)viChart.destroy();
   const ctx=document.getElementById('vi-chart');
   if(!ctx)return;
-  const n=Math.min(months,VI_LABELS.length);
-  const labels=VI_LABELS.slice(-n);
-  const PC2={'ref':VI_DATA.ref,'lab':VI_DATA.lab,'con':VI_DATA.con,'grn':VI_DATA.grn,'lib':VI_DATA.lib};
-  const keys=['ref','lab','con','grn','lib'];
+
+  var labels,series;
+  if(months<=6){
+    var wk=getWeeklySeries(months);
+    labels=wk.labels;
+    series=wk.data;
+  } else {
+    var n=Math.min(months,VI_LABELS.length);
+    labels=VI_LABELS.slice(-n);
+    series={ref:VI_DATA.ref.slice(-n),lab:VI_DATA.lab.slice(-n),con:VI_DATA.con.slice(-n),grn:VI_DATA.grn.slice(-n),lib:VI_DATA.lib.slice(-n)};
+  }
+  VI_CUR={labels:labels,data:series};
+
   viChart=new Chart(ctx,{
     type:'line',
-    data:{labels,datasets:[
-      {label:'Reform UK',data:VI_DATA.ref.slice(-n),borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.08)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#0A8A9F',pointBorderColor:'#fff',pointBorderWidth:2},
-      {label:'Labour',data:VI_DATA.lab.slice(-n),borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.06)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#CC0000',pointBorderColor:'#fff',pointBorderWidth:2},
-      {label:'Conservative',data:VI_DATA.con.slice(-n),borderColor:'#003087',backgroundColor:'rgba(0,48,135,.04)',tension:.4,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#003087',pointBorderColor:'#fff',pointBorderWidth:2},
-      {label:'Green',data:VI_DATA.grn.slice(-n),borderColor:'#1A6B2A',backgroundColor:'rgba(26,107,42,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#1A6B2A',pointBorderColor:'#fff',pointBorderWidth:2},
-      {label:'Lib Dems',data:VI_DATA.lib.slice(-n),borderColor:'#D4730A',backgroundColor:'rgba(212,115,10,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#D4730A',pointBorderColor:'#fff',pointBorderWidth:2},
+    data:{labels:labels,datasets:[
+      {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.08)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#0A8A9F',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.06)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#CC0000',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'rgba(0,48,135,.04)',tension:.4,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#003087',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'rgba(26,107,42,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#1A6B2A',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'rgba(212,115,10,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#D4730A',pointBorderColor:'#fff',pointBorderWidth:2},
     ]},
     options:{
       responsive:true,maintainAspectRatio:false,
       interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{enabled:false}},
       scales:{
-        x:{grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?4:months<=6?7:months<=12?7:9}},
+        x:{grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?7:months<=6?7:months<=12?7:9}},
         y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',callback:v=>v+'%'}}
       },
       onHover:function(e,els,chart){handleVIHover(e,chart);}
     }
   });
   const canvas=document.getElementById('vi-chart');
-  if(canvas){
-    canvas.addEventListener('mouseleave',function(){
-      const tt=document.getElementById('vi-tooltip');
-      const ch=document.getElementById('vi-crosshair');
-      if(tt){tt.style.opacity=0;}
-      if(ch){ch.style.opacity=0;}
-    });
+  if(canvas&&!canvas.dataset.mlBound){
+    canvas.dataset.mlBound='1';
+    canvas.addEventListener('mouseleave',function(){hideVIHover();});
   }
 }
 
+function hideVIHover(){
+  var ch=document.getElementById('vi-crosshair');
+  var dp=document.getElementById('vi-date-pill');
+  var hl=document.getElementById('vi-hover-labels');
+  if(ch)ch.style.opacity=0;
+  if(dp)dp.style.opacity=0;
+  if(hl)hl.innerHTML='';
+}
+
 function handleVIHover(event,chart){
-  const tt=document.getElementById('vi-tooltip');
-  const ch=document.getElementById('vi-crosshair');
-  if(!tt||!ch)return;
-  const els=chart.getElementsAtEventForMode(event.native,'index',{intersect:false},false);
-  if(!els.length){tt.style.opacity=0;ch.style.opacity=0;return;}
-  const idx=els[0].index;
-  const x=chart.scales.x.getPixelForIndex(idx);
-  const area=chart.chartArea;
-  // Position crosshair
+  var ch=document.getElementById('vi-crosshair');
+  var dp=document.getElementById('vi-date-pill');
+  var hl=document.getElementById('vi-hover-labels');
+  if(!ch||!dp||!hl)return;
+  var els=chart.getElementsAtEventForMode(event.native,'index',{intersect:false},false);
+  if(!els.length){hideVIHover();return;}
+  var idx=els[0].index;
+  var x=chart.scales.x.getPixelForIndex(idx);
+  var area=chart.chartArea;
+
+  // Dashed crosshair
   ch.style.left=x+'px';
   ch.style.top=area.top+'px';
   ch.style.height=(area.bottom-area.top)+'px';
   ch.style.opacity=1;
-  // Build tooltip sorted by value
-  const n=viRangeMonths;
-  const parties=[
-    {label:'Reform UK',data:VI_DATA.ref,c:'#0A8A9F'},
-    {label:'Labour',data:VI_DATA.lab,c:'#CC0000'},
-    {label:'Conservative',data:VI_DATA.con,c:'#003087'},
-    {label:'Green',data:VI_DATA.grn,c:'#1A6B2A'},
-    {label:'Lib Dems',data:VI_DATA.lib,c:'#D4730A'},
+
+  // Date pill at top of the line
+  dp.textContent=VI_CUR.labels[idx]||'';
+  dp.style.left=x+'px';
+  dp.style.top=(area.top-22)+'px';
+  dp.style.opacity=1;
+
+  // Per-party % labels at each line's y position, to the right of the crosshair
+  var parties=[
+    {key:'ref',label:'Reform UK',c:'#0A8A9F'},
+    {key:'lab',label:'Labour',c:'#CC0000'},
+    {key:'con',label:'Conservative',c:'#003087'},
+    {key:'grn',label:'Green',c:'#1A6B2A'},
+    {key:'lib',label:'Lib Dems',c:'#D4730A'},
   ];
-  const sorted=[...parties].sort((a,b)=>(b.data.slice(-n)[idx]||0)-(a.data.slice(-n)[idx]||0));
-  tt.innerHTML='<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:7px;border-bottom:.5px solid var(--bd);padding-bottom:5px">'+chart.data.labels[idx]+'</div>'+
-    sorted.map(p=>{
-      const v=p.data.slice(-n)[idx];
-      return '<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:4px">'+
-        '<div style="display:flex;align-items:center;gap:5px">'+
-          '<span style="width:8px;height:8px;border-radius:50%;background:'+p.c+';display:inline-block;flex-shrink:0"></span>'+
-          '<span style="font-size:11px;color:var(--ts)">'+p.label+'</span>'+
-        '</div>'+
-        '<span style="font-size:12px;font-weight:600;color:var(--tp)">'+v+'%</span>'+
-      '</div>';
-    }).join('');
-  // Position tooltip — flip if near right edge
-  const wrap=document.getElementById('vi-chart-wrap');
-  const wrapW=wrap?wrap.offsetWidth:500;
-  const ttW=170;
-  let left=x+14;
-  if(left+ttW>wrapW-8)left=x-ttW-14;
-  tt.style.left=Math.max(4,left)+'px';
-  tt.style.top=(area.top+4)+'px';
-  tt.style.opacity=1;
+  var items=parties.map(function(p){
+    var v=VI_CUR.data[p.key]?VI_CUR.data[p.key][idx]:null;
+    if(v===null||v===undefined)return null;
+    return {c:p.c,v:v,y:chart.scales.y.getPixelForValue(v)};
+  }).filter(Boolean);
+
+  // Sort by y (top first) and resolve overlaps with min 17px separation
+  items.sort(function(a,b){return a.y-b.y;});
+  for(var i2=1;i2<items.length;i2++){
+    if(items[i2].y-items[i2-1].y<17)items[i2].y=items[i2-1].y+17;
+  }
+  // Keep within chart area
+  var overflow=items.length?items[items.length-1].y-(area.bottom-4):0;
+  if(overflow>0)items.forEach(function(it){it.y-=overflow;});
+
+  // Flip labels to left side if near right edge
+  var wrap=document.getElementById('vi-chart-wrap');
+  var wrapW=wrap?wrap.offsetWidth:600;
+  var flip=x>wrapW-72;
+
+  hl.innerHTML=items.map(function(it){
+    return '<div style="position:absolute;left:'+(flip?(x-62):(x+9))+'px;top:'+(it.y-9)+'px;font-size:12px;font-weight:700;color:'+it.c+';text-shadow:0 1px 3px var(--s2),0 -1px 3px var(--s2),1px 0 3px var(--s2),-1px 0 3px var(--s2)">'+it.v+'%</div>';
+  }).join('');
 }
 
 function setVIRange(months,btn){
@@ -2632,6 +2684,7 @@ function setVIRange(months,btn){
     b.style.background='';b.style.color='';b.style.borderColor='';
   });
   btn.style.background='var(--brand)';btn.style.color='#fff';btn.style.borderColor='var(--brand)';
+  hideVIHover();
   buildVIChart(months);
 }
 
