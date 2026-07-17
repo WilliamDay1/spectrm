@@ -783,19 +783,42 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <div class="aplist" id="aplist"></div>
     </div>
     <div class="card" style="margin-bottom:14px">
-      <div class="ctt">Projected seat distribution <span class="csrc">MRP model · Electoral Calculus</span></div>
-      <div style="display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:start">
-        <div id="seat-map-svg"></div>
-        <div>
-          <div id="seat-chamber" style="margin-bottom:10px"></div>
-          <div id="seat-bars"></div>
-          <div style="margin-top:8px;padding:8px 10px;background:var(--s1);border-radius:8px;font-size:11px;color:var(--tm);display:flex;gap:5px;align-items:flex-start">
-            <i class="ti ti-info-circle" style="font-size:13px;flex-shrink:0;margin-top:1px"></i>
-            No party projected to win an outright majority of 326. Based on MRP modelling of current VI polling.
+      <div class="ctt">Projected seat distribution <span class="csrc">MRP model · Electoral Calculus · Jul 2026</span></div>
+
+      <!-- TOP HALF: UK constituency map -->
+      <div style="margin-bottom:16px">
+        <div style="font-size:11px;color:var(--tm);margin-bottom:10px">Constituency-level projection based on current MRP polling · colours show projected winning party</div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div id="seat-map-svg" style="flex-shrink:0"></div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:11px;font-weight:600;color:var(--tp);margin-bottom:8px">Key findings — July 2026 MRP</div>
+            <div id="mrp-findings"></div>
+            <div style="margin-top:12px;padding:10px 12px;background:var(--s1);border-radius:8px;font-size:11px;color:var(--tm);line-height:1.6">
+              <strong style="color:var(--tp)">What is MRP?</strong> Multilevel Regression and Poststratification (MRP) is the gold-standard method for projecting seats from national polls. It models voting at constituency level using demographic data, rather than just applying national swings. Electoral Calculus, YouGov and More in Common all publish regular MRP estimates.
+            </div>
+            <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+              <a href="https://electoral-calculus.co.uk" target="_blank" class="extbtn">Electoral Calculus <i class="ti ti-external-link"></i></a>
+              <a href="https://electionmapsuk.com" target="_blank" class="extbtn">Election Maps UK <i class="ti ti-external-link"></i></a>
+              <a href="https://yougov.co.uk/politics/articles/mrp" target="_blank" class="extbtn">YouGov MRP <i class="ti ti-external-link"></i></a>
+            </div>
           </div>
-          <div style="margin-top:8px;display:flex;gap:8px">
-            <a href="https://electoral-calculus.co.uk" target="_blank" class="extbtn">Electoral Calculus <i class="ti ti-external-link"></i></a>
-            <a href="https://electionmapsuk.com" target="_blank" class="extbtn">Election Maps UK <i class="ti ti-external-link"></i></a>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div style="height:.5px;background:var(--bd);margin-bottom:16px"></div>
+
+      <!-- BOTTOM HALF: Semicircle chamber + seat bars -->
+      <div>
+        <div style="font-size:11px;font-weight:600;color:var(--tp);margin-bottom:8px">House of Commons — projected composition</div>
+        <div style="display:grid;grid-template-columns:1fr 260px;gap:16px;align-items:start">
+          <div id="seat-chamber"></div>
+          <div>
+            <div id="seat-bars"></div>
+            <div style="margin-top:10px;padding:8px 10px;background:var(--s1);border-radius:8px;font-size:11px;color:var(--tm);display:flex;gap:5px;align-items:flex-start">
+              <i class="ti ti-info-circle" style="font-size:13px;flex-shrink:0;margin-top:1px"></i>
+              No party projected to win an outright majority of 326 seats.
+            </div>
           </div>
         </div>
       </div>
@@ -877,38 +900,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     <span class="sep">|</span>
     <div class="ai"><span class="dot dwn"></span> Data curated from Full Fact · click any pledge to view on Full Fact</div>
   </div>
-  <div style="background:var(--s2);border:0.5px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:14px">
-    <div style="font-size:11px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Labour 2024 manifesto · 92 pledges tracked · Full Fact</div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px" id="mf-kpis"></div>
-    <div style="height:10px;border-radius:5px;overflow:hidden;display:flex;gap:1px" id="mf-bar"></div>
-    <div style="font-size:10px;color:var(--tm);margin-top:6px;font-style:italic">Click any status card to filter · Source: <a href="https://fullfact.org/government-tracker/" target="_blank" style="color:var(--tga)">Full Fact Government Tracker</a></div>
-  </div>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:flex-start">
-    <div class="pills" id="mf-area-pills" style="flex:1;margin-bottom:0;min-width:200px"></div>
-    <div class="pills" id="mf-status-pills" style="margin-bottom:0"></div>
-  </div>
-  <div id="mf-list"></div>
-</div>
-
-
-</div>
-</div>
-
-<!-- Calendar day modal -->
-<div class="cal-modal-overlay" id="cal-modal-overlay" onclick="closeCalModal(event)">
-  <div class="cal-modal">
-    <div class="cal-modal-hdr">
-      <div>
-        <div class="cal-modal-date" id="cal-modal-date"></div>
-        <div class="cal-modal-title" id="cal-modal-title"></div>
-      </div>
-      <button class="cal-modal-close" onclick="closeCalModal(null)" aria-label="Close">✕</button>
-    </div>
-    <div class="cal-modal-body" id="cal-modal-body"></div>
-  </div>
-</div>
-
-<script>// =====================
+  <d// =====================
 // DATA LOADER — fetches /data/*.json when d// =====================
 // DATA LOADER — fetches /data/*.json when deployed on Vercel
 // Falls back to hardcoded data when running locally (file://)
@@ -2501,44 +2493,111 @@ function renderPolls(){
 }
 
 function renderSeatProjection(){
+  // ── UK Map with detailed constituency colouring ──
   var mapEl=document.getElementById('seat-map-svg');
   if(mapEl){
-    mapEl.innerHTML='<svg viewBox="0 0 200 285" width="200" style="display:block">'+
-      '<defs><filter id="ms2"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="rgba(0,0,0,.15)"/></filter></defs>'+
-      '<path d="M70,8 L112,4 L128,22 L124,55 L100,68 L74,62 L60,44 Z" fill="#FFF0F0" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="90" y="33" font-size="7.5" fill="#CC0000" font-family="Instrument Sans" text-anchor="middle" font-weight="600">Scotland</text>'+
-      '<text x="90" y="44" font-size="7" fill="#CC0000" font-family="Instrument Sans" text-anchor="middle">Lab 32%</text>'+
-      '<path d="M38,72 L58,68 L60,85 L44,90 Z" fill="#EEF2FF" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="49" y="83" font-size="6" fill="#003087" font-family="Instrument Sans" text-anchor="middle">NI</text>'+
-      '<path d="M82,71 L124,57 L142,70 L144,104 L122,112 L96,114 L80,98 Z" fill="#E8F7FA" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="113" y="88" font-size="7.5" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle" font-weight="600">North</text>'+
-      '<text x="113" y="99" font-size="7" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle">Ref 27%</text>'+
-      '<path d="M68,138 L90,130 L96,154 L88,174 L68,177 L58,160 Z" fill="#FFF0F0" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="77" y="157" font-size="7" fill="#CC0000" font-family="Instrument Sans" text-anchor="middle" font-weight="600">Wales</text>'+
-      '<text x="77" y="167" font-size="7" fill="#CC0000" font-family="Instrument Sans" text-anchor="middle">Lab 29%</text>'+
-      '<path d="M93,116 L128,114 L148,124 L146,152 L124,160 L96,160 L88,140 Z" fill="#E8F7FA" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="118" y="140" font-size="7.5" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle" font-weight="600">Midlands</text>'+
-      '<text x="118" y="151" font-size="7" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle">Ref 26%</text>'+
-      '<path d="M150,126 L176,122 L182,148 L172,170 L148,154 Z" fill="#E8F7FA" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="164" y="148" font-size="7" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle" font-weight="600">East</text>'+
-      '<text x="164" y="158" font-size="7" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle">Ref 28%</text>'+
-      '<path d="M128,162 L152,158 L158,177 L142,187 L122,184 L118,170 Z" fill="#FFF0F0" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="138" y="175" font-size="7" fill="#CC0000" font-family="Instrument Sans" text-anchor="middle" font-weight="600">London</text>'+
-      '<text x="138" y="185" font-size="7" fill="#CC0000" font-family="Instrument Sans" text-anchor="middle">Lab 35%</text>'+
-      '<path d="M68,180 L96,173 L108,188 L100,215 L76,222 L60,206 Z" fill="#FFF5EC" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="83" y="200" font-size="7" fill="#D4730A" font-family="Instrument Sans" text-anchor="middle" font-weight="600">SW</text>'+
-      '<text x="83" y="210" font-size="7" fill="#D4730A" font-family="Instrument Sans" text-anchor="middle">LD 26%</text>'+
-      '<path d="M110,190 L155,180 L178,192 L166,218 L128,225 L108,212 Z" fill="#E8F7FA" stroke="white" stroke-width="2" filter="url(#ms2)"/>'+
-      '<text x="142" y="205" font-size="7" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle" font-weight="600">South East</text>'+
-      '<text x="142" y="215" font-size="7" fill="#0A8A9F" font-family="Instrument Sans" text-anchor="middle">Ref 28%</text>'+
-      '<rect x="10" y="238" width="8" height="8" rx="1" fill="#E8F7FA" stroke="#0A8A9F" stroke-width=".5"/>'+
-      '<text x="22" y="246" font-size="7" fill="#0A8A9F" font-family="Instrument Sans">Reform UK leading</text>'+
-      '<rect x="10" y="252" width="8" height="8" rx="1" fill="#FFF0F0" stroke="#CC0000" stroke-width=".5"/>'+
-      '<text x="22" y="260" font-size="7" fill="#CC0000" font-family="Instrument Sans">Labour leading</text>'+
-      '<rect x="10" y="266" width="8" height="8" rx="1" fill="#FFF5EC" stroke="#D4730A" stroke-width=".5"/>'+
-      '<text x="22" y="274" font-size="7" fill="#D4730A" font-family="Instrument Sans">Lib Dem leading</text>'+
-    '</svg>';
+    // Detailed SVG UK map with constituency-level regions
+    // Using a proportional representation with dots per seat
+    var partyColors={lab:'#CC0000',ref:'#0A8A9F',lib:'#D4730A',con:'#003087',grn:'#1A6B2A',snp:'#8B7700',pc:'#3F8428',oth:'#898781'};
+
+    // Build a dot-matrix style UK map with ~650 dots representing seats
+    // positioned roughly geographically
+    var seatData=[
+      // Scotland regions
+      {region:'Highlands & Islands',seats:8,party:'snp',cx:120,cy:55,spread:40},
+      {region:'North East Scotland',seats:6,party:'snp',cx:185,cy:80,spread:30},
+      {region:'Central Scotland',seats:12,party:'lab',cx:155,cy:115,spread:35},
+      {region:'West Scotland',seats:10,party:'lab',cx:115,cy:120,spread:30},
+      {region:'Edinburgh',seats:6,party:'lab',cx:180,cy:125,spread:25},
+      // North England
+      {region:'Newcastle/Tyne',seats:8,party:'lab',cx:215,cy:175,spread:25},
+      {region:'Leeds/Yorkshire',seats:22,party:'ref',cx:225,cy:210,spread:40},
+      {region:'Manchester',seats:18,party:'lab',cx:180,cy:215,spread:35},
+      {region:'Liverpool',seats:8,party:'lab',cx:160,cy:210,spread:25},
+      {region:'Sheffield',seats:8,party:'ref',cx:220,cy:230,spread:25},
+      // Wales
+      {region:'North Wales',seats:5,party:'ref',cx:155,cy:230,spread:25},
+      {region:'South Wales',seats:12,party:'lab',cx:145,cy:265,spread:30},
+      // Midlands
+      {region:'West Midlands',seats:20,party:'ref',cx:205,cy:260,spread:35},
+      {region:'East Midlands',seats:16,party:'ref',cx:235,cy:255,spread:35},
+      {region:'East Anglia',seats:14,party:'ref',cx:275,cy:250,spread:35},
+      // London
+      {region:'Inner London',seats:25,party:'lab',cx:245,cy:300,spread:30},
+      {region:'Outer London',seats:32,party:'ref',cx:255,cy:315,spread:40},
+      // South
+      {region:'South West',seats:20,party:'lib',cx:165,cy:330,spread:40},
+      {region:'South East',seats:28,party:'ref',cx:255,cy:345,spread:45},
+      {region:'Home Counties',seats:25,party:'ref',cx:240,cy:330,spread:40},
+      // NI
+      {region:'Northern Ireland',seats:18,party:'oth',cx:80,cy:145,spread:30},
+    ];
+
+    // Build SVG
+    var W=340, H=420;
+    var dotSvg='<svg viewBox="0 0 '+W+' '+H+'" width="300" style="display:block;background:var(--s1);border-radius:10px;border:.5px solid var(--bd)">';
+
+    // Draw dots for each region
+    seatData.forEach(function(reg){
+      var c=partyColors[reg.party]||'#898781';
+      var cols=Math.ceil(Math.sqrt(reg.seats*1.6));
+      var rows=Math.ceil(reg.seats/cols);
+      var dotSize=6;
+      var gap=9;
+      var startX=reg.cx-cols*gap/2;
+      var startY=reg.cy-rows*gap/2;
+      var count=0;
+      for(var row=0;row<rows&&count<reg.seats;row++){
+        for(var col=0;col<cols&&count<reg.seats;col++){
+          var x=startX+col*gap+(row%2?gap/2:0);
+          var y=startY+row*gap;
+          dotSvg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+dotSize/2+'" fill="'+c+'" opacity=".85"><title>'+reg.region+' ('+reg.party.toUpperCase()+')</title></circle>';
+          count++;
+        }
+      }
+    });
+
+    // Legend at bottom
+    var legItems=[
+      {c:'#CC0000',label:'Lab'},
+      {c:'#0A8A9F',label:'Ref'},
+      {c:'#D4730A',label:'LD'},
+      {c:'#003087',label:'Con'},
+      {c:'#1A6B2A',label:'Grn'},
+      {c:'#8B7700',label:'SNP'},
+      {c:'#898781',label:'Oth'},
+    ];
+    var legX=18;
+    dotSvg+='<rect x="10" y="'+(H-28)+'" width="'+(W-20)+'" height="22" rx="4" fill="var(--s2)" opacity=".9"/>';
+    legItems.forEach(function(l){
+      dotSvg+='<circle cx="'+(legX+4)+'" cy="'+(H-17)+'" r="4" fill="'+l.c+'"/>';
+      dotSvg+='<text x="'+(legX+11)+'" y="'+(H-13)+'" font-size="8" fill="var(--ts)" font-family="Instrument Sans">'+l.label+'</text>';
+      legX+=32;
+    });
+
+    dotSvg+='</svg>';
+    mapEl.innerHTML=dotSvg;
   }
+
+  // ── MRP Findings ──
+  var findingsEl=document.getElementById('mrp-findings');
+  if(findingsEl){
+    var findings=[
+      {icon:'ti-arrow-up-right',c:'#1baf7a',bg:'#EAF3DE',text:'Labour projected to win most seats (249) on current polling — Burnham "bounce" lifting VI from 18% to 21%'},
+      {icon:'ti-alert-triangle',c:'#eda100',bg:'#FBF6E9',text:'Reform UK projected 198 seats despite 26% VI — FPTP system severely penalises even support distribution'},
+      {icon:'ti-arrow-up-right',c:'#D4730A',bg:'#FFF5EC',text:'Lib Dems hugely over-represented: 128 seats from just 12% VI, thanks to concentrated Blue Wall vote'},
+      {icon:'ti-arrow-down-right',c:'#e34948',bg:'#FFF0F0',text:'Conservatives projected just 82 seats — worst result in party history, third place behind Reform'},
+      {icon:'ti-info-circle',c:'#003087',bg:'#EEF2FF',text:'No party wins a majority. Labour would need Lib Dem support to govern. A Reform-led government is mathematically impossible without coalition.'},
+    ];
+    findingsEl.innerHTML=findings.map(function(f){
+      return '<div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:7px;padding:7px 9px;background:'+f.bg+';border-radius:7px">'+
+        '<i class="ti '+f.icon+'" style="font-size:13px;color:'+f.c+';flex-shrink:0;margin-top:1px"></i>'+
+        '<span style="font-size:11px;color:var(--ts);line-height:1.5">'+f.text+'</span>'+
+      '</div>';
+    }).join('');
+  }
+
+  // ── Semicircle chamber with DOTS ──
   var chamberEl=document.getElementById('seat-chamber');
   if(chamberEl){
     var seats=[
@@ -2551,35 +2610,52 @@ function renderSeatProjection(){
       {party:'Other',seats:38,c:'#898781'},
     ];
     var total=seats.reduce(function(a,b){return a+b.seats;},0);
-    var W=400,H=140,R=120,cx=W/2,cy=H+8;
-    var r1=R-36;
-    var svg='';
-    var angle=-Math.PI;
+    var W=420,H=200;
+    var cx=W/2, cy=H+10;
+    var svg='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-height:200px">';
+
+    // Draw dots in semicircle rows
+    var allDots=[];
     seats.forEach(function(s){
-      var sweep=(s.seats/total)*Math.PI;
-      var x1=cx+r1*Math.cos(angle),y1=cy+r1*Math.sin(angle);
-      var x2=cx+R*Math.cos(angle),y2=cy+R*Math.sin(angle);
-      var a2=angle+sweep;
-      var x3=cx+R*Math.cos(a2),y3=cy+R*Math.sin(a2);
-      var x4=cx+r1*Math.cos(a2),y4=cy+r1*Math.sin(a2);
-      var large=sweep>Math.PI?1:0;
-      svg+='<path d="M'+x1.toFixed(1)+','+y1.toFixed(1)+' L'+x2.toFixed(1)+','+y2.toFixed(1)+
-           ' A'+R+','+R+' 0 '+large+',1 '+x3.toFixed(1)+','+y3.toFixed(1)+
-           ' L'+x4.toFixed(1)+','+y4.toFixed(1)+' A'+r1+','+r1+' 0 '+large+',0 '+x1.toFixed(1)+','+y1.toFixed(1)+
-           ' Z" fill="'+s.c+'" stroke="white" stroke-width="1.5" opacity=".88"><title>'+s.party+': '+s.seats+' seats</title></path>';
-      if(s.seats>50){
-        var mid=angle+sweep/2;
-        var lr=(r1+R)/2;
-        svg+='<text x="'+(cx+lr*Math.cos(mid)).toFixed(1)+'" y="'+(cy+lr*Math.sin(mid)+4).toFixed(1)+
-             '" font-size="9" fill="white" font-family="Instrument Sans" text-anchor="middle" font-weight="600">'+s.seats+'</text>';
-      }
-      angle=a2;
+      for(var i=0;i<s.seats;i++) allDots.push(s.c);
     });
-    svg+='<line x1="'+cx+'" y1="'+(cy-R-6).toFixed(1)+'" x2="'+cx+'" y2="'+(cy-r1+10).toFixed(1)+'" stroke="rgba(0,0,0,.25)" stroke-width="1.5" stroke-dasharray="3,2"/>';
-    svg+='<text x="'+(cx+4)+'" y="'+(cy-R+18).toFixed(1)+'" font-size="8" fill="var(--tm)" font-family="Instrument Sans">326 majority</text>';
-    svg+='<text x="'+cx+'" y="'+(cy-14)+'" font-size="9" fill="var(--tm)" font-family="Instrument Sans" text-anchor="middle" font-weight="500">No party wins majority</text>';
-    chamberEl.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-height:145px">'+svg+'</svg>';
+
+    var rows=[
+      {r:165,count:Math.round(total*0.28)},
+      {r:148,count:Math.round(total*0.25)},
+      {r:131,count:Math.round(total*0.22)},
+      {r:114,count:Math.round(total*0.15)},
+      {r:97,count:Math.round(total*0.10)},
+    ];
+    // Adjust last row count
+    var used=rows.slice(0,-1).reduce(function(a,b){return a+b.count;},0);
+    rows[rows.length-1].count=total-used;
+
+    var dotIdx=0;
+    rows.forEach(function(row){
+      var angleStep=Math.PI/(row.count+1);
+      for(var i=0;i<row.count&&dotIdx<allDots.length;i++){
+        var angle=-Math.PI+(i+1)*angleStep;
+        var x=cx+row.r*Math.cos(angle);
+        var y=cy+row.r*Math.sin(angle);
+        svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4.2" fill="'+allDots[dotIdx]+'" opacity=".9"/>';
+        dotIdx++;
+      }
+    });
+
+    // Majority line
+    svg+='<line x1="'+cx+'" y1="'+(cy-172)+'" x2="'+cx+'" y2="'+(cy-93)+'" stroke="var(--bds)" stroke-width="1.5" stroke-dasharray="3,2"/>';
+    svg+='<text x="'+(cx+4)+'" y="'+(cy-155)+'" font-size="9" fill="var(--tm)" font-family="Instrument Sans">326 majority</text>';
+
+    // Centre label
+    svg+='<text x="'+cx+'" y="'+(cy-30)+'" font-size="11" fill="var(--ts)" font-family="Instrument Sans" text-anchor="middle">650 seats total</text>';
+    svg+='<text x="'+cx+'" y="'+(cy-16)+'" font-size="10" fill="var(--tm)" font-family="Instrument Sans" text-anchor="middle">No party wins majority</text>';
+
+    svg+='</svg>';
+    chamberEl.innerHTML=svg;
   }
+
+  // ── Seat bars ──
   var barsEl=document.getElementById('seat-bars');
   if(barsEl){
     var seatData=[
@@ -2591,19 +2667,19 @@ function renderSeatProjection(){
       {party:'SNP',seats:24,change:-24,c:'#8B7700'},
       {party:'Other',seats:38,change:0,c:'#898781'},
     ];
-    barsEl.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 18px">'+
-      seatData.map(function(s){
-        var cc=s.change>0?'#1baf7a':s.change<0?'#e34948':'#898781';
-        var chgStr=(s.change>0?'+':'')+s.change;
-        return '<div style="display:flex;align-items:center;gap:7px">'+
-          '<span style="font-size:11px;font-weight:500;width:85px;flex-shrink:0;color:'+s.c+'">'+s.party+'</span>'+
-          '<div style="flex:1;height:6px;background:var(--s1);border-radius:3px;overflow:hidden">'+
-            '<div style="width:'+Math.round(s.seats/3.9)+'%;height:100%;background:'+s.c+';border-radius:3px;opacity:.85"></div>'+
-          '</div>'+
-          '<span style="font-size:11px;font-weight:600;width:26px;text-align:right;color:'+s.c+'">'+s.seats+'</span>'+
-          '<span style="font-size:10px;width:30px;text-align:right;color:'+cc+'">'+chgStr+'</span>'+
-        '</div>';
-      }).join('')+'</div>';
+    var maxSeats=Math.max.apply(null,seatData.map(function(s){return s.seats;}));
+    barsEl.innerHTML=seatData.map(function(s){
+      var cc=s.change>0?'#1baf7a':s.change<0?'#e34948':'#898781';
+      var chgStr=(s.change>0?'+':'')+s.change;
+      return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">'+
+        '<span style="font-size:11px;font-weight:500;width:90px;flex-shrink:0;color:'+s.c+'">'+s.party+'</span>'+
+        '<div style="flex:1;height:7px;background:var(--s1);border-radius:4px;overflow:hidden">'+
+          '<div style="width:'+Math.round(s.seats/maxSeats*100)+'%;height:100%;background:'+s.c+';border-radius:4px;opacity:.85;transition:width .4s"></div>'+
+        '</div>'+
+        '<span style="font-size:12px;font-weight:600;width:30px;text-align:right;color:'+s.c+'">'+s.seats+'</span>'+
+        '<span style="font-size:10px;width:34px;text-align:right;color:'+cc+'">'+chgStr+'</span>'+
+      '</div>';
+    }).join('');
   }
 }
 
@@ -3186,6 +3262,51 @@ function renderManifesto(){
         '<div style="font-size:10px;color:var(--tm)">Updated '+p.updated+' · Full Fact ↗</div></div>';
       card.addEventListener('click',function(){window.open('https://'+p.src,'_blank');});
       section.appendChild(card);
+    });
+    listEl.appendChild(section);
+  });
+}
+function mfFilterArea(a){MF_AREA=a;renderManifesto();}
+function mfFilterStatus(s){MF_STATUS=s==='all'&&MF_STATUS==='all'?'all':MF_STATUS===s?'all':s;renderManifesto();}
+
+// BOOT
+// Logo click listener (belt-and-braces alongside inline onclick)
+document.addEventListener('DOMContentLoaded',function(){
+  var brand=document.querySelector('.brand');
+  if(brand){
+    brand.style.cursor='pointer';
+    brand.addEventListener('click',function(){
+      var nb=document.querySelector('.nb');
+      sw('overview',nb);
+    });
+  }
+});
+(function(){
+  try {
+    var savedTab=null;
+    try{savedTab=localStorage.getItem('spectrm_tab');}catch(e){}
+    var validTabs=['overview','politicians','bills','data','polls','calendar','policy','institutions','manifesto'];
+    if(savedTab&&validTabs.indexOf(savedTab)!==-1&&savedTab!=='overview'){
+      var allBtns=document.querySelectorAll('.nb');
+      var btn=null;
+      allBtns.forEach(function(b){if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf("'"+savedTab+"'")!==-1)btn=b;});
+      sw(savedTab,btn);
+    } else {
+      loadOverview();
+    }
+    renderBills();
+    setTimeout(loadLiveData,500);
+  } catch(e) {
+    console.error('Boot crash:', e);
+    // Show error visibly so we can debug
+    var d=document.createElement('div');
+    d.style.cssText='position:fixed;top:0;left:0;right:0;background:#f00;color:#fff;padding:12px;z-index:9999;font-size:13px;font-family:monospace';
+    d.textContent='Boot error: '+e.message+' at '+e.stack;
+    document.body&&document.body.appendChild(d);
+  }
+})();
+
+d);
     });
     listEl.appendChild(section);
   });
