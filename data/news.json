@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-16T12:06:11Z",
+    "updated": "2026-07-17T11:45:21Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Argentina face action over Falklands banner",
-      "date": "16 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c935pgr4dklo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham thanks Starmer after being confirmed as new Labour leader \u2013 UK politics live",
+      "date": "17 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/17/andy-burnham-labour-leader-speech-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "British Steel taken into public ownership to protect 'vital' UK supply",
-      "date": "16 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5y680w62wno?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham becomes Labour leader in final step towards becoming UK PM",
+      "date": "17 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/17/andy-burnham-becomes-labour-leader-final-step-towards-uk-pm"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Making Mahmood chancellor shows Burnham \u2018subservient to City\u2019, claims Polanski \u2013 UK politics live",
-      "date": "16 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/16/keir-starmer-andy-burnham-labour-farage-badenoch-widdecombe-latest-news-updates"
-    },
-    {
-      "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "If you have been listening to Suella Braverman and think Britain has gone bonkers, let me explain | Nels Abbey",
-      "date": "16 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/16/suella-braverman-reparations-colonialism-reform-race"
-    },
-    {
-      "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Who is the frontrunner to be the UK's next chancellor?",
-      "date": "16 Jul 2026",
+      "date": "17 Jul 2026",
       "source": "BBC Politics",
       "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "6",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK economy returns to growth in May",
-      "date": "16 Jul 2026",
+      "id": "4",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to promise new path for UK when he becomes Labour leader",
+      "date": "17 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8xnllq944go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c2lq12z1xdlo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "5",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham\u2019s difficult first cabinet \u2013 a visual guide to the options and dilemmas",
+      "date": "17 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/jul/17/andy-burnham-first-cabinet-options-visual-guide"
+    },
+    {
+      "id": "6",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Five headaches Andy Burnham will have to deal with as PM",
+      "date": "17 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c62122pgjqdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Pakistan resisting UK attempts to deport grooming gang leader",
-      "date": "16 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "A very quick guide to Andy Burnham",
+      "date": "17 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyxnvjy706o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/clyv9qe6wj7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Starmer pledges 'cast-iron support' for Ukraine on final visit as PM",
-      "date": "16 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cx2myl1erj8o?at_medium=RSS&at_campaign=rss"
+      "headline": "The Manchester years: how Burnham\u2019s rebirth as \u2018king of the north\u2019 set him on road to No 10",
+      "date": "17 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/ng-interactive/2026/jul/17/andy-burnham-rebirth-king-of-the-north-road-to-no-10"
     },
     {
       "id": "9",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK economy grew by 0.1% in May despite impact of Iran war",
-      "date": "16 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ann Widdecombe\u2019s death should make Britain ask itself: what sort of political culture do we want? | Gaby Hinsliff",
+      "date": "17 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/16/uk-economy-grew-gdp-despite-iran-war"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/17/ann-widdecombe-death-britain-political-culture"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "British Steel is taken into public ownership to save UK supply",
-      "date": "16 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/16/british-steel-public-ownership-save-uk-supply-scunthorpe"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham's 'Manchesterism' got him to No 10 - but will it work for the UK?",
+      "date": "17 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyl3z2xld8o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
