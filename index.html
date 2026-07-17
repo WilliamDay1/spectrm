@@ -2599,9 +2599,17 @@ function getWeeklySeries(months){
 
 function buildVIChart(months){
   viRangeMonths=months;
-  if(viChart)viChart.destroy();
-  const ctx=document.getElementById('vi-chart');
-  if(!ctx)return;
+  if(viChart){try{viChart.destroy();}catch(e){}}
+  viChart=null;
+  var oldCanvas=document.getElementById('vi-chart');
+  if(!oldCanvas)return;
+  var par=oldCanvas.parentElement;
+  var newCanvas=document.createElement('canvas');
+  newCanvas.id='vi-chart';
+  newCanvas.setAttribute('role','img');
+  newCanvas.setAttribute('aria-label','Voting intention trend chart');
+  if(par){par.replaceChild(newCanvas,oldCanvas);}
+  const ctx=newCanvas;
 
   var labels,series;
   if(months<=6){
@@ -2631,9 +2639,7 @@ function buildVIChart(months){
       // Map most recent polls to end of x axis — spread across last labels
       var xIdx=labels.length-1-(RECENT_POLLS.length-1-pi)*Math.max(1,Math.floor(labels.length/RECENT_POLLS.length));
       if(xIdx<0||xIdx>=labels.length)return;
-      // Add slight jitter
-      var jitter=(pi%3-1)*0.15;
-      pts.push({x:Math.max(0,Math.min(labels.length-1,xIdx+jitter)),y:p[sp.key]});
+      pts.push({x:labels[xIdx],y:p[sp.key]});
     });
     return {
       type:'scatter',
@@ -2658,6 +2664,7 @@ function buildVIChart(months){
   ];
 
   viChart=new Chart(ctx,{
+    type:'line',
     data:{labels:labels,datasets:[...scatterDatasets,...lineDatasets]},
     options:{
       responsive:true,maintainAspectRatio:false,
@@ -2682,10 +2689,7 @@ function buildVIChart(months){
   });
 
   const canvas=document.getElementById('vi-chart');
-  if(canvas&&!canvas.dataset.mlBound){
-    canvas.dataset.mlBound='1';
-    canvas.addEventListener('mouseleave',function(){hideVIHover();});
-  }
+  if(ctx){ctx.addEventListener('mouseleave',function(){hideVIHover();});}
 }
 
 function hideVIHover(){
@@ -2704,6 +2708,7 @@ function handleVIHover(event,chart){
   if(!ch||!dp||!hl)return;
 
   var area=chart.chartArea;
+  if(!area||typeof area.left==='undefined'){return;}
   var rect=chart.canvas.getBoundingClientRect();
   // Raw mouse X relative to canvas
   var mouseX=event.native.clientX-rect.left;
