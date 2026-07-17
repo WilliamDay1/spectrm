@@ -751,15 +751,8 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 
 <!-- POLLS -->
 <div class="sec" id="sec-polls">
-  <div class="api-bar">
-    <div class="ai"><span class="dot dok"></span> PollCheck 7-poll moving average · 27 Jun 2026</div>
-    <span class="sep">|</span>
-    <div class="ai"><span class="dot dok"></span> YouGov / Ipsos / Opinium · leadership ratings</div>
-    <span class="sep">|</span>
-    <div class="ai"><span class="dot dok"></span> YouGov / Ipsos / Survation · policy polls</div>
-  </div>
   <div class="card" style="margin-bottom:14px">
-    <div class="ctt">Voting intention — 7-poll moving average <span class="csrc">PollCheck · 27 Jun 2026</span></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div class="ctt" style="margin-bottom:0">Voting intention — 7-poll moving average</div><div style="display:flex;gap:3px" id="vi-range-btns"><button class="pill" onclick="setVIRange(24,this)" style="background:var(--brand);color:#fff;border-color:var(--brand);font-size:11px;padding:3px 10px">2Y</button><button class="pill" onclick="setVIRange(12,this)" style="font-size:11px;padding:3px 10px">1Y</button><button class="pill" onclick="setVIRange(6,this)" style="font-size:11px;padding:3px 10px">6M</button><button class="pill" onclick="setVIRange(3,this)" style="font-size:11px;padding:3px 10px">3M</button></div></div>
     <div class="pkrow">
       <div class="pk" style="border-top-color:var(--ref)"><div class="pk-p">Reform UK</div><div class="pk-n" style="color:var(--ref)">26.3%</div><div class="pk-d up">↑ 1st place</div></div>
       <div class="pk" style="border-top-color:var(--lab)"><div class="pk-p">Labour</div><div class="pk-n" style="color:var(--lab)">20.7%</div><div class="pk-d dn">↓ −0.3 on month</div></div>
@@ -774,48 +767,16 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Green</span>
       <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts)"><span style="width:10px;height:10px;border-radius:2px;background:var(--lib);display:inline-block"></span>Lib Dems</span>
     </div>
-    <div style="position:relative;height:200px"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas></div>
+    <div style="position:relative;height:200px" id="vi-chart-wrap"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:1px;background:rgba(0,0,0,.2);pointer-events:none;opacity:0"></div><div id="vi-tooltip" style="position:absolute;background:var(--s2);border:.5px solid var(--bds);border-radius:9px;padding:9px 13px;pointer-events:none;opacity:0;z-index:50;min-width:150px;box-shadow:0 4px 16px rgba(0,0,0,.12);font-size:12px"></div></div>
   </div>
   <div id="pollster-table"></div>
+  <div id="poll-expand-wrap" style="display:none;margin-bottom:14px"></div>
   <div class="tc" style="margin-bottom:14px">
     <div class="card">
       <div class="ctt">Leader net approval ratings <span class="csrc">YouGov / Opinium · Jun 2026</span></div>
       <div class="aplist" id="aplist"></div>
     </div>
-    <div class="card" style="margin-bottom:14px">
-      <div class="ctt">Projected seat distribution <span class="csrc">MRP model · Electoral Calculus · Jul 2026</span></div>
-      <div style="margin-bottom:16px">
-        <div style="font-size:11px;color:var(--tm);margin-bottom:10px">Constituency-level projection based on current MRP polling · colours show projected winning party</div>
-        <div style="display:flex;gap:16px;align-items:flex-start">
-          <div id="seat-map-svg" style="flex-shrink:0"></div>
-          <div style="flex:1;min-width:0">
-            <div style="font-size:11px;font-weight:600;color:var(--tp);margin-bottom:8px">Key findings — July 2026 MRP</div>
-            <div id="mrp-findings"></div>
-            <div style="margin-top:12px;padding:10px 12px;background:var(--s1);border-radius:8px;font-size:11px;color:var(--tm);line-height:1.6">
-              <strong style="color:var(--tp)">What is MRP?</strong> Multilevel Regression and Poststratification models voting at constituency level using demographic data, rather than applying national swings. Electoral Calculus, YouGov and More in Common all publish regular MRP estimates.
-            </div>
-            <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-              <a href="https://electoral-calculus.co.uk" target="_blank" class="extbtn">Electoral Calculus <i class="ti ti-external-link"></i></a>
-              <a href="https://electionmapsuk.com" target="_blank" class="extbtn">Election Maps UK <i class="ti ti-external-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="height:.5px;background:var(--bd);margin-bottom:16px"></div>
-      <div>
-        <div style="font-size:11px;font-weight:600;color:var(--tp);margin-bottom:8px">House of Commons — projected composition</div>
-        <div style="display:grid;grid-template-columns:1fr 260px;gap:16px;align-items:start">
-          <div id="seat-chamber"></div>
-          <div>
-            <div id="seat-bars"></div>
-            <div style="margin-top:10px;padding:8px 10px;background:var(--s1);border-radius:8px;font-size:11px;color:var(--tm);display:flex;gap:5px;align-items:flex-start">
-              <i class="ti ti-info-circle" style="font-size:13px;flex-shrink:0;margin-top:1px"></i>
-              No party projected to win an outright majority of 326 seats.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="card" style="margin-bottom:14px"><div class="ctt">Projected seat distribution <span class="csrc">MRP model · Electoral Calculus</span></div><div style="margin-bottom:16px"><div style="display:flex;gap:16px;align-items:flex-start"><div id="seat-map-svg" style="flex-shrink:0"></div><div style="flex:1;min-width:0"><div id="mrp-findings"></div><div style="margin-top:10px;display:flex;gap:8px"><a href="https://electoral-calculus.co.uk" target="_blank" class="extbtn">Electoral Calculus <i class="ti ti-external-link"></i></a><a href="https://electionmapsuk.com" target="_blank" class="extbtn">Election Maps UK <i class="ti ti-external-link"></i></a></div></div></div></div><div style="height:.5px;background:var(--bd);margin-bottom:12px"></div><div><div id="seat-chamber"></div><div id="seat-bars"></div><div style="margin-top:8px;padding:8px 10px;background:var(--s1);border-radius:8px;font-size:11px;color:var(--tm)"><i class="ti ti-info-circle"></i> No party projected to win an outright majority of 326 seats.</div></div></div>
     <div class="card" style="margin-top:10px">
       <div class="ctt">May 2026 local &amp; devolved elections <span class="csrc">Electoral Commission</span></div>
       <div id="local-els"></div>
@@ -2448,70 +2409,26 @@ const POLICY_POLLS=[
 
 let viChart;
 function renderPolls(){
-  if(viChart)viChart.destroy();
-  const ctx=document.getElementById('vi-chart');
-  if(ctx){
-    viChart=new Chart(ctx,{type:'line',data:{labels:VI_LABELS,datasets:[
-      {label:'Reform UK',data:VI_DATA.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.08)',tension:.4,fill:true,borderWidth:2},
-      {label:'Labour',data:VI_DATA.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.06)',tension:.4,fill:true,borderWidth:2},
-      {label:'Conservative',data:VI_DATA.con,borderColor:'#003087',backgroundColor:'rgba(0,48,135,.04)',tension:.4,fill:false,borderWidth:2},
-      {label:'Green',data:VI_DATA.grn,borderColor:'#1A6B2A',backgroundColor:'rgba(26,107,42,.04)',tension:.4,fill:false,borderWidth:1.5},
-      {label:'Lib Dems',data:VI_DATA.lib,borderColor:'#D4730A',backgroundColor:'rgba(212,115,10,.04)',tension:.4,fill:false,borderWidth:1.5},
-    ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:10},color:'#898781'}},y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:10},color:'#898781',callback:v=>v+'%'}}}}});
-  }
-  document.getElementById('aplist').innerHTML=LEADERS.map(l=>{const p=PC[l.party]||PC.ind;const tot=l.approve+l.disapprove;return`<div class="apitem"><div class="ap-top"><div><div class="ap-name">${l.name}</div><div style="font-size:10px;color:var(--tm)">${l.role} · <span style="color:${p.c}">${p.name}</span></div></div><div class="ap-net" style="color:${l.net>=-10?'#eda100':'#e34948'}">${l.net>0?'+':''}${l.net}</div></div><div class="ap-bw"><div class="ap-ap" style="width:${Math.round(l.approve/tot*100)}%"></div><div class="ap-op" style="width:${Math.round(l.disapprove/tot*100)}%"></div></div><div class="ap-meta"><span>${l.approve}% approve</span><span>${l.disapprove}% disapprove</span><span>${l.src}</span></div></div>`;}).join('');
+  // ── VI Chart ──
+  buildVIChart(24);
+
+  // ── Leader approval ──
+  document.getElementById('aplist').innerHTML=LEADERS.map(l=>{
+    const p=PC[l.party]||PC.ind;
+    const tot=l.approve+l.disapprove;
+    return `<div class="apitem"><div class="ap-top"><div><div class="ap-name">${l.name}</div><div style="font-size:10px;color:var(--tm)">${l.role} · <span style="color:${p.c}">${p.name}</span></div></div><div class="ap-net" style="color:${l.net>=-10?'#eda100':'#e34948'}">${l.net>0?'+':''}${l.net}</div></div><div class="ap-bw"><div class="ap-ap" style="width:${Math.round(l.approve/tot*100)}%"></div><div class="ap-op" style="width:${Math.round(l.disapprove/tot*100)}%"></div></div><div class="ap-meta"><span>${l.approve}% approve</span><span>${l.disapprove}% disapprove</span><span>${l.src}</span></div></div>`;
+  }).join('');
+
   renderSeatProjection();
+
   var lel=document.getElementById('local-els');
   if(lel){lel.innerHTML=LOCAL_ELS.map(l=>`<div class="be" style="border-left:3px solid #1baf7a"><div class="be-top"><span class="be-seat">${l.name}</span><span class="be-date">${l.date}</span></div><div class="be-result" style="font-size:11px;margin-bottom:2px">${l.col1}</div><div class="be-result" style="font-size:11px;margin-bottom:4px">${l.col2}</div><div class="be-note">${l.note}</div></div>`).join('');}
+
+  // ── Recent polls table ──
+  renderPollsTable();
+
+  // ── Policy polls ──
   const max60=60;
-
-  
-
-  // Pollster drill-down table
-  const pollTable = document.getElementById('pollster-table');
-  if(pollTable){
-    const rows = RECENT_POLLS.map(function(p,i){
-      return [i, p.pollster, p.client, p.date, p.ref, p.lab, p.con, p.grn, p.lib, p.n, p.src];
-    });
-    const hdr = '<div style="margin-bottom:14px">' +
-      '<div style="font-size:10px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px">Recent individual polls — click any row to view source</div>' +
-      '<div style="overflow-x:auto"><table id="poll-tbl" style="width:100%;border-collapse:collapse;font-size:11px;min-width:560px">' +
-      '<thead><tr style="border-bottom:1.5px solid var(--bd)">' +
-      '<th style="text-align:left;padding:4px 8px 7px 0;font-size:10px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.4px">Pollster</th>' +
-      '<th style="text-align:left;padding:4px 8px 7px;font-size:10px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.4px">Date</th>' +
-      '<th style="text-align:centre;padding:4px 6px 7px;font-size:10px;font-weight:600;color:var(--ref)">Ref</th>' +
-      '<th style="text-align:centre;padding:4px 6px 7px;font-size:10px;font-weight:600;color:var(--lab)">Lab</th>' +
-      '<th style="text-align:centre;padding:4px 6px 7px;font-size:10px;font-weight:600;color:var(--con)">Con</th>' +
-      '<th style="text-align:centre;padding:4px 6px 7px;font-size:10px;font-weight:600;color:var(--grn)">Grn</th>' +
-      '<th style="text-align:centre;padding:4px 6px 7px;font-size:10px;font-weight:600;color:var(--lib)">LD</th>' +
-      '<th style="text-align:right;padding:4px 0 7px 6px;font-size:10px;font-weight:500;color:var(--tm)">n</th>' +
-      '</tr></thead><tbody id="poll-tbody"></tbody></table></div>' +
-      '<div style="font-size:10px;color:var(--tm);margin-top:8px;font-style:italic">BPC-registered pollsters · PollCheck avg 27 Jun 2026 · Click row to view original poll.</div>' +
-      '</div>';
-    pollTable.innerHTML = hdr;
-    const tbody = document.getElementById('poll-tbody');
-    if(tbody){
-      RECENT_POLLS.forEach(function(p){
-        const tr = document.createElement('tr');
-        tr.style.borderBottom = '0.5px solid var(--bd)';
-        tr.style.cursor = 'pointer';
-        tr.addEventListener('mouseover', function(){tr.style.background='var(--s1)';});
-        tr.addEventListener('mouseout', function(){tr.style.background='';});
-        tr.addEventListener('click', function(){window.open('https://www.'+p.src,'_blank');});
-        tr.innerHTML = '<td style="padding:7px 8px 7px 0;font-weight:500;color:var(--tp)">'+p.pollster+
-          '<span style="font-weight:400;color:var(--tm);font-size:10px;margin-left:5px">'+p.client+'</span></td>'+
-          '<td style="padding:7px 8px;color:var(--tm)">'+p.date+'</td>'+
-          '<td style="text-align:centre;padding:7px 6px;font-weight:600;color:var(--ref)">'+p.ref+'%</td>'+
-          '<td style="text-align:centre;padding:7px 6px;font-weight:600;color:var(--lab)">'+p.lab+'%</td>'+
-          '<td style="text-align:centre;padding:7px 6px;font-weight:600;color:var(--con)">'+p.con+'%</td>'+
-          '<td style="text-align:centre;padding:7px 6px;font-weight:600;color:var(--grn)">'+p.grn+'%</td>'+
-          '<td style="text-align:centre;padding:7px 6px;font-weight:600;color:var(--lib)">'+p.lib+'%</td>'+
-          '<td style="text-align:right;padding:7px 0 7px 6px;color:var(--tm)">'+p.n.toLocaleString()+'</td>';
-        tbody.appendChild(tr);
-      });
-    }
-  }
-
   document.getElementById('pol-polls').innerHTML=POLICY_POLLS.map((p,i)=>`<div class="pp" style="cursor:pointer" onclick="this.querySelector('.pp-trend').style.display=this.querySelector('.pp-trend').style.display==='none'?'block':'none'"><div class="ppq">${p.q}</div><div class="ppbars"><div class="ppbar pp-s"><div class="pp-pct">${p.support}%</div><div class="pp-lbl">Support</div></div><div class="ppbar pp-n"><div class="pp-pct">${p.neutral}%</div><div class="pp-lbl">Neutral / DK</div></div><div class="ppbar pp-o"><div class="pp-pct">${p.oppose}%</div><div class="pp-lbl">Oppose</div></div></div><div class="pp-ctx">${p.ctx}</div><div class="pp-src">${p.src} · Click to see trend ↓</div><div class="pp-trend"><div class="pp-tt">Support vs oppose trend over time</div>${p.trend.map(t=>`<div class="trow"><span class="tdate">${t.d}</span><div class="tbars"><div class="tb-s" style="width:${Math.round(t.s/max60*100)}%"></div><div style="width:4px"></div><div class="tb-o" style="width:${Math.round(t.o/max60*100)}%"></div></div><span class="tvals">${t.s}% / ${t.o}%</span></div>`).join('')}</div></div>`).join('');
 }
 
@@ -2538,14 +2455,10 @@ function renderSeatProjection(){
       var c=partyColors[reg.party]||'#898781';
       var cols=Math.ceil(Math.sqrt(reg.seats*1.6));
       var rows=Math.ceil(reg.seats/cols);
-      var gap=9;
-      var startX=reg.cx-cols*gap/2;
-      var startY=reg.cy-rows*gap/2;
-      var count=0;
+      var gap=9;var startX=reg.cx-cols*gap/2;var startY=reg.cy-rows*gap/2;var count=0;
       for(var row=0;row<rows&&count<reg.seats;row++){
         for(var col=0;col<cols&&count<reg.seats;col++){
-          var x=startX+col*gap+(row%2?gap/2:0);
-          var y=startY+row*gap;
+          var x=startX+col*gap+(row%2?gap/2:0);var y=startY+row*gap;
           svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="3.2" fill="'+c+'" opacity=".88"/>';
           count++;
         }
@@ -2566,9 +2479,9 @@ function renderSeatProjection(){
   if(findingsEl){
     var findings=[
       {icon:'ti-arrow-up-right',c:'#1baf7a',bg:'#EAF3DE',text:'Labour projected 249 seats — most of any party. Burnham bounce lifting VI from 18% to 21%.'},
-      {icon:'ti-alert-triangle',c:'#eda100',bg:'#FBF6E9',text:'Reform UK 26% VI but only 198 seats — FPTP system severely penalises evenly spread support.'},
-      {icon:'ti-arrow-up-right',c:'#D4730A',bg:'#FFF5EC',text:'Lib Dems: 128 seats from just 12% VI, thanks to concentrated Blue Wall vote in southern England.'},
-      {icon:'ti-arrow-down-right',c:'#e34948',bg:'#FFF0F0',text:'Conservatives projected just 82 seats — worst result in party history, third place behind Reform.'},
+      {icon:'ti-alert-triangle',c:'#eda100',bg:'#FBF6E9',text:'Reform UK 26% VI but only 198 seats — FPTP severely penalises evenly spread support.'},
+      {icon:'ti-arrow-up-right',c:'#D4730A',bg:'#FFF5EC',text:'Lib Dems: 128 seats from just 12% VI, concentrated Blue Wall vote in southern England.'},
+      {icon:'ti-arrow-down-right',c:'#e34948',bg:'#FFF0F0',text:'Conservatives projected 82 seats — worst result in party history, third behind Reform.'},
       {icon:'ti-ban',c:'#003087',bg:'#EEF2FF',text:'No party wins a majority. Labour would need Lib Dem support to govern.'},
     ];
     findingsEl.innerHTML=findings.map(function(f){
@@ -2580,33 +2493,26 @@ function renderSeatProjection(){
   var chamberEl=document.getElementById('seat-chamber');
   if(chamberEl){
     var parties=[
-      {party:'Labour',seats:249,c:'#CC0000'},
-      {party:'Reform UK',seats:198,c:'#0A8A9F'},
-      {party:'Lib Dem',seats:128,c:'#D4730A'},
-      {party:'Conservative',seats:82,c:'#003087'},
-      {party:'Green',seats:31,c:'#1A6B2A'},
-      {party:'SNP',seats:24,c:'#8B7700'},
-      {party:'Other',seats:38,c:'#898781'},
+      {party:'Labour',seats:249,c:'#CC0000'},{party:'Reform UK',seats:198,c:'#0A8A9F'},
+      {party:'Lib Dem',seats:128,c:'#D4730A'},{party:'Conservative',seats:82,c:'#003087'},
+      {party:'Green',seats:31,c:'#1A6B2A'},{party:'SNP',seats:24,c:'#8B7700'},{party:'Other',seats:38,c:'#898781'},
     ];
-    var total=650;
     var allDots=[];
     parties.forEach(function(p){for(var i=0;i<p.seats;i++)allDots.push(p.c);});
     var W=420,H=210,cx=W/2,cy=H+5;
-    var rowSeats=[130,120,110,100,90,100];
-    var rowR=[165,148,131,114,97,80];
+    var rowSeats=[130,120,110,100,90,100];var rowR=[165,148,131,114,97,80];
     var svg='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-height:210px">';
     var dotIdx=0;
     rowR.forEach(function(r,ri){
       var count=rowSeats[ri];
       for(var i=0;i<count&&dotIdx<allDots.length;i++){
         var angle=-Math.PI+(i+1)*(Math.PI/(count+1));
-        var x=cx+r*Math.cos(angle);
-        var y=cy+r*Math.sin(angle);
+        var x=cx+r*Math.cos(angle);var y=cy+r*Math.sin(angle);
         svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4" fill="'+allDots[dotIdx]+'" opacity=".9"/>';
         dotIdx++;
       }
     });
-    svg+='<line x1="'+cx+'" y1="'+( cy-168)+'" x2="'+cx+'" y2="'+(cy-85)+'" stroke="rgba(0,0,0,.2)" stroke-width="1.5" stroke-dasharray="3,2"/>';
+    svg+='<line x1="'+cx+'" y1="'+(cy-168)+'" x2="'+cx+'" y2="'+(cy-85)+'" stroke="rgba(0,0,0,.2)" stroke-width="1.5" stroke-dasharray="3,2"/>';
     svg+='<text x="'+(cx+4)+'" y="'+(cy-152)+'" font-size="9" fill="var(--tm)" font-family="Instrument Sans">326 majority</text>';
     svg+='<text x="'+cx+'" y="'+(cy-18)+'" font-size="10" fill="var(--tm)" font-family="Instrument Sans" text-anchor="middle">No party wins majority · 650 seats total</text>';
     svg+='</svg>';
@@ -2615,13 +2521,9 @@ function renderSeatProjection(){
   var barsEl=document.getElementById('seat-bars');
   if(barsEl){
     var sData=[
-      {party:'Labour',seats:249,change:-155,c:'#CC0000'},
-      {party:'Reform UK',seats:198,change:193,c:'#0A8A9F'},
-      {party:'Lib Dem',seats:128,change:56,c:'#D4730A'},
-      {party:'Conservative',seats:82,change:-83,c:'#003087'},
-      {party:'Green',seats:31,change:27,c:'#1A6B2A'},
-      {party:'SNP',seats:24,change:-24,c:'#8B7700'},
-      {party:'Other',seats:38,change:0,c:'#898781'},
+      {party:'Labour',seats:249,change:-155,c:'#CC0000'},{party:'Reform UK',seats:198,change:193,c:'#0A8A9F'},
+      {party:'Lib Dem',seats:128,change:56,c:'#D4730A'},{party:'Conservative',seats:82,change:-83,c:'#003087'},
+      {party:'Green',seats:31,change:27,c:'#1A6B2A'},{party:'SNP',seats:24,change:-24,c:'#8B7700'},{party:'Other',seats:38,change:0,c:'#898781'},
     ];
     barsEl.innerHTML=sData.map(function(s){
       var cc=s.change>0?'#1baf7a':s.change<0?'#e34948':'#898781';
@@ -2635,6 +2537,225 @@ function renderSeatProjection(){
       '</div>';
     }).join('');
   }
+}
+
+// ── Build / rebuild VI chart with given month range ──
+var viRangeMonths=24;
+function buildVIChart(months){
+  viRangeMonths=months;
+  if(viChart)viChart.destroy();
+  const ctx=document.getElementById('vi-chart');
+  if(!ctx)return;
+  const n=Math.min(months,VI_LABELS.length);
+  const labels=VI_LABELS.slice(-n);
+  const PC2={'ref':VI_DATA.ref,'lab':VI_DATA.lab,'con':VI_DATA.con,'grn':VI_DATA.grn,'lib':VI_DATA.lib};
+  const keys=['ref','lab','con','grn','lib'];
+  viChart=new Chart(ctx,{
+    type:'line',
+    data:{labels,datasets:[
+      {label:'Reform UK',data:VI_DATA.ref.slice(-n),borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.08)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#0A8A9F',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Labour',data:VI_DATA.lab.slice(-n),borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.06)',tension:.4,fill:true,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#CC0000',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Conservative',data:VI_DATA.con.slice(-n),borderColor:'#003087',backgroundColor:'rgba(0,48,135,.04)',tension:.4,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#003087',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Green',data:VI_DATA.grn.slice(-n),borderColor:'#1A6B2A',backgroundColor:'rgba(26,107,42,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#1A6B2A',pointBorderColor:'#fff',pointBorderWidth:2},
+      {label:'Lib Dems',data:VI_DATA.lib.slice(-n),borderColor:'#D4730A',backgroundColor:'rgba(212,115,10,.04)',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:5,pointBackgroundColor:'#D4730A',pointBorderColor:'#fff',pointBorderWidth:2},
+    ]},
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{display:false},tooltip:{enabled:false}},
+      scales:{
+        x:{grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?4:months<=6?7:months<=12?7:9}},
+        y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',callback:v=>v+'%'}}
+      },
+      onHover:function(e,els,chart){handleVIHover(e,chart);}
+    }
+  });
+  const canvas=document.getElementById('vi-chart');
+  if(canvas){
+    canvas.addEventListener('mouseleave',function(){
+      const tt=document.getElementById('vi-tooltip');
+      const ch=document.getElementById('vi-crosshair');
+      if(tt){tt.style.opacity=0;}
+      if(ch){ch.style.opacity=0;}
+    });
+  }
+}
+
+function handleVIHover(event,chart){
+  const tt=document.getElementById('vi-tooltip');
+  const ch=document.getElementById('vi-crosshair');
+  if(!tt||!ch)return;
+  const els=chart.getElementsAtEventForMode(event.native,'index',{intersect:false},false);
+  if(!els.length){tt.style.opacity=0;ch.style.opacity=0;return;}
+  const idx=els[0].index;
+  const x=chart.scales.x.getPixelForIndex(idx);
+  const area=chart.chartArea;
+  // Position crosshair
+  ch.style.left=x+'px';
+  ch.style.top=area.top+'px';
+  ch.style.height=(area.bottom-area.top)+'px';
+  ch.style.opacity=1;
+  // Build tooltip sorted by value
+  const n=viRangeMonths;
+  const parties=[
+    {label:'Reform UK',data:VI_DATA.ref,c:'#0A8A9F'},
+    {label:'Labour',data:VI_DATA.lab,c:'#CC0000'},
+    {label:'Conservative',data:VI_DATA.con,c:'#003087'},
+    {label:'Green',data:VI_DATA.grn,c:'#1A6B2A'},
+    {label:'Lib Dems',data:VI_DATA.lib,c:'#D4730A'},
+  ];
+  const sorted=[...parties].sort((a,b)=>(b.data.slice(-n)[idx]||0)-(a.data.slice(-n)[idx]||0));
+  tt.innerHTML='<div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--tm);margin-bottom:7px;border-bottom:.5px solid var(--bd);padding-bottom:5px">'+chart.data.labels[idx]+'</div>'+
+    sorted.map(p=>{
+      const v=p.data.slice(-n)[idx];
+      return '<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:4px">'+
+        '<div style="display:flex;align-items:center;gap:5px">'+
+          '<span style="width:8px;height:8px;border-radius:50%;background:'+p.c+';display:inline-block;flex-shrink:0"></span>'+
+          '<span style="font-size:11px;color:var(--ts)">'+p.label+'</span>'+
+        '</div>'+
+        '<span style="font-size:12px;font-weight:600;color:var(--tp)">'+v+'%</span>'+
+      '</div>';
+    }).join('');
+  // Position tooltip — flip if near right edge
+  const wrap=document.getElementById('vi-chart-wrap');
+  const wrapW=wrap?wrap.offsetWidth:500;
+  const ttW=170;
+  let left=x+14;
+  if(left+ttW>wrapW-8)left=x-ttW-14;
+  tt.style.left=Math.max(4,left)+'px';
+  tt.style.top=(area.top+4)+'px';
+  tt.style.opacity=1;
+}
+
+function setVIRange(months,btn){
+  document.querySelectorAll('#vi-range-btns .pill').forEach(function(b){
+    b.style.background='';b.style.color='';b.style.borderColor='';
+  });
+  btn.style.background='var(--brand)';btn.style.color='#fff';btn.style.borderColor='var(--brand)';
+  buildVIChart(months);
+}
+
+// ── Polls table with 5-row default + expand + click-to-chart ──
+var pollExpandIdx=-1;
+var pollExpandChart=null;
+function renderPollsTable(){
+  var pt=document.getElementById('pollster-table');
+  if(!pt)return;
+  var PC2={'ref':'#0A8A9F','lab':'#CC0000','con':'#003087','grn':'#1A6B2A','lib':'#D4730A'};
+  var PCBG={'ref':'#E8F7FA','lab':'#FFF0F0','con':'#EEF2FF','grn':'#EEF8EE','lib':'#FFF5EC'};
+
+  var makeRow=function(p,i,hidden){
+    var vals={ref:p.ref,lab:p.lab,con:p.con,grn:p.grn,lib:p.lib};
+    var lead=Math.max(p.ref,p.lab,p.con,p.grn,p.lib);
+    var lp=Object.keys(vals).find(k=>vals[k]===lead);
+    var others=Object.values(vals).filter(v=>v!==lead);
+    var margin=lead-Math.max(...others);
+    var pct=(v,c)=>'<td style="text-align:center;padding:7px 8px"><span style="font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;background:'+PCBG[c]+';color:'+PC2[c]+'">'+v+'%</span></td>';
+    return '<tr class="poll-row'+(hidden?' poll-row-hidden':'')+'" data-idx="'+i+'" style="border-bottom:.5px solid var(--bd);cursor:pointer'+(hidden?';display:none':'')+'" onclick="expandPoll('+i+')">'+
+      '<td style="padding:7px 10px 7px 0;font-weight:500;color:var(--tp)">'+p.pollster+'<span style="font-weight:400;color:var(--tm);font-size:10px;margin-left:5px">'+p.client+'</span></td>'+
+      '<td style="padding:7px 8px;color:var(--tm);white-space:nowrap">'+p.date+'</td>'+
+      pct(p.ref,'ref')+pct(p.lab,'lab')+pct(p.con,'con')+pct(p.grn,'grn')+pct(p.lib,'lib')+
+      '<td style="padding:7px 0 7px 4px;text-align:right;color:var(--tm);font-size:11px">'+p.n.toLocaleString()+'</td>'+
+    '</tr>';
+  };
+
+  var hdr='<table style="width:100%;border-collapse:collapse;font-size:12px">'+
+    '<thead><tr style="border-bottom:1.5px solid var(--bd)">'+
+    '<th style="text-align:left;padding:6px 10px 8px 0;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Pollster</th>'+
+    '<th style="text-align:left;padding:6px 8px 8px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Date</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#0A8A9F">Ref</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#CC0000">Lab</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#003087">Con</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#1A6B2A">Grn</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#D4730A">LD</th>'+
+    '<th style="text-align:right;padding:6px 0 8px 4px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">n</th>'+
+    '</tr></thead><tbody id="poll-tbody">';
+
+  RECENT_POLLS.forEach(function(p,i){hdr+=makeRow(p,i,i>=5);});
+  hdr+='</tbody></table>';
+  hdr+='<div id="poll-expand-row"></div>';
+  hdr+='<div style="margin-top:8px;display:flex;align-items:center;justify-content:space-between">'+
+    '<span style="font-size:10px;color:var(--tm);font-style:italic">Click any row to view as chart · BPC-registered pollsters</span>'+
+    '<button id="poll-show-more" onclick="toggleMorePolls(this)" style="background:none;border:.5px solid var(--bd);border-radius:6px;padding:4px 12px;font-size:11px;cursor:pointer;color:var(--ts);font-family:inherit">Show '+( RECENT_POLLS.length-5)+' more ↓</button>'+
+  '</div>';
+
+  pt.innerHTML=hdr;
+}
+
+function toggleMorePolls(btn){
+  var hidden=document.querySelectorAll('.poll-row-hidden');
+  var showing=hidden[0]&&hidden[0].style.display!=='none';
+  hidden.forEach(function(r){r.style.display=showing?'none':'';});
+  btn.textContent=showing?'Show '+(RECENT_POLLS.length-5)+' more ↓':'Show fewer ↑';
+  if(showing&&pollExpandIdx>=5){closePollExpand();}
+}
+
+function expandPoll(idx){
+  var p=RECENT_POLLS[idx];
+  // If same row clicked again, close it
+  if(pollExpandIdx===idx){closePollExpand();return;}
+  pollExpandIdx=idx;
+
+  // Highlight the selected row
+  document.querySelectorAll('.poll-row').forEach(function(r){r.style.background='';});
+  var selRow=document.querySelector('.poll-row[data-idx="'+idx+'"]');
+  if(selRow)selRow.style.background='var(--s1)';
+
+  var expandWrap=document.getElementById('poll-expand-row');
+  if(!expandWrap)return;
+
+  expandWrap.innerHTML='<div style="border-top:.5px solid var(--bd);padding-top:14px;margin-top:4px">'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'+
+      '<div>'+
+        '<div style="font-size:13px;font-weight:600;color:var(--tp)">'+p.pollster+' · '+p.date+'</div>'+
+        '<div style="font-size:11px;color:var(--tm)">Client: '+p.client+' · n='+p.n.toLocaleString()+'</div>'+
+      '</div>'+
+      '<button onclick="closePollExpand()" style="background:none;border:.5px solid var(--bd);border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:13px;color:var(--ts);display:flex;align-items:center;justify-content:center;font-family:inherit">✕</button>'+
+    '</div>'+
+    '<div style="position:relative;height:160px"><canvas id="poll-expand-chart" role="img" aria-label="Poll result bar chart for '+p.pollster+'"></canvas></div>'+
+  '</div>';
+
+  // Destroy old chart
+  if(pollExpandChart)pollExpandChart.destroy();
+
+  // Small delay to ensure canvas is in DOM
+  setTimeout(function(){
+    var ctx2=document.getElementById('poll-expand-chart');
+    if(!ctx2)return;
+    var PC2={'Reform UK':'#0A8A9F','Labour':'#CC0000','Conservative':'#003087','Green':'#1A6B2A','Lib Dems':'#D4730A'};
+    var PCBG={'Reform UK':'#E8F7FA','Labour':'#FFF0F0','Conservative':'#EEF2FF','Green':'#EEF8EE','Lib Dems':'#FFF5EC'};
+    var labels=['Reform UK','Labour','Conservative','Green','Lib Dems'];
+    var data=[p.ref,p.lab,p.con,p.grn,p.lib];
+    var colors=labels.map(l=>PC2[l]);
+    var bgColors=labels.map(l=>PCBG[l]);
+    pollExpandChart=new Chart(ctx2,{
+      type:'bar',
+      data:{labels,datasets:[{data,backgroundColor:bgColors,borderColor:colors,borderWidth:2,borderRadius:5}]},
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{
+          legend:{display:false},
+          tooltip:{
+            backgroundColor:'var(--s2)',titleColor:'var(--tp)',bodyColor:'var(--ts)',
+            borderColor:'var(--bds)',borderWidth:.5,padding:8,
+            callbacks:{label:c=>c.parsed.y+'%'}
+          }
+        },
+        scales:{
+          x:{grid:{display:false},border:{display:false},ticks:{font:{size:11},color:'#898781'}},
+          y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)'},border:{display:false},ticks:{font:{size:10},color:'#898781',callback:v=>v+'%'}}
+        }
+      }
+    });
+  },50);
+}
+
+function closePollExpand(){
+  pollExpandIdx=-1;
+  if(pollExpandChart){pollExpandChart.destroy();pollExpandChart=null;}
+  document.querySelectorAll('.poll-row').forEach(function(r){r.style.background='';});
+  var ew=document.getElementById('poll-expand-row');
+  if(ew)ew.innerHTML='';
 }
 
 // CALENDAR
