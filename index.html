@@ -254,14 +254,14 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .pk-p{font-size:10px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
 .pk-n{font-size:24px;font-weight:500;line-height:1}
 .pk-d{font-size:10px;margin-top:3px}
-.aplist{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-.apitem{background:var(--s1);border-radius:8px;padding:10px 12px}
-.ap-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:7px;gap:4px}
+.aplist{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.apitem{background:var(--s1);border-radius:8px;padding:13px 14px}
+.ap-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:4px}
 .ap-name{font-size:12px;font-weight:500;line-height:1.3}
-.ap-net{font-size:15px;font-weight:600;flex-shrink:0}
-.ap-bw{height:7px;background:var(--s0);border-radius:4px;overflow:hidden;display:flex}
+.ap-net{font-size:20px;font-weight:600;flex-shrink:0}
+.ap-bw{height:8px;background:var(--s0);border-radius:4px;overflow:hidden;display:flex}
 .ap-ap{background:#1baf7a;height:100%}.ap-op{background:#e34948;height:100%}
-.ap-meta{display:flex;flex-direction:column;gap:1px;margin-top:5px;font-size:10px;color:var(--tm)}
+.ap-meta{display:flex;flex-direction:column;gap:2px;margin-top:6px;font-size:10px;color:var(--tm)}
 .belist{display:flex;flex-direction:column;gap:7px}
 .be{background:var(--s1);border-radius:8px;padding:10px 12px;border-left:3px solid var(--bd)}
 .be.gain{border-left-color:#1baf7a}.be.loss{border-left-color:#e34948}.be.hold{border-left-color:var(--lo)}
@@ -784,10 +784,10 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
         <div class="flourish-embed flourish-parliament" data-src="visualisation/29725827"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29725827/thumbnail" width="100%" alt="parliament visualization" /></noscript></div>
       </div>
     </div>
-    <div class="card">
-      <div class="ctt">Leader net approval ratings <span class="csrc">YouGov / Opinium · Jun 2026</span></div>
-      <div class="aplist" id="aplist"></div>
-    </div>
+  </div>
+  <div class="card" style="margin-bottom:14px">
+    <div class="ctt">Leader net approval ratings <span class="csrc">YouGov / Opinium · Jun 2026</span></div>
+    <div class="aplist" id="aplist"></div>
   </div>
   <div class="card">
     <div class="ctt">Key policy approval polls <span class="csrc">Click any poll to see trend · YouGov / Ipsos / Survation 2025–2026</span></div>
@@ -2424,11 +2424,10 @@ function renderPolls(){
   buildVIChart(24);
 
   // ── Leader approval ──
-  const TOP_LEADERS=['Andy Burnham','Nigel Farage','Kemi Badenoch','Ed Davey','Zack Polanski'];
-  document.getElementById('aplist').innerHTML=LEADERS.filter(l=>TOP_LEADERS.includes(l.name)).sort((a,b)=>TOP_LEADERS.indexOf(a.name)-TOP_LEADERS.indexOf(b.name)).map(l=>{
+  document.getElementById('aplist').innerHTML=LEADERS.map(l=>{
     const p=PC[l.party]||PC.ind;
     const tot=l.approve+l.disapprove;
-    return `<div class="apitem"><div class="ap-top"><div><div class="ap-name">${l.name}</div><div style="font-size:10px;color:${p.c};font-weight:500;margin-top:1px">${p.name}</div></div><div class="ap-net" style="color:${l.net>=0?'#1baf7a':l.net>=-15?'#eda100':'#e34948'}">${l.net>0?'+':''}${l.net}</div></div><div class="ap-bw"><div class="ap-ap" style="width:${Math.round(l.approve/tot*100)}%"></div><div class="ap-op" style="width:${Math.round(l.disapprove/tot*100)}%"></div></div><div class="ap-meta"><span>${l.approve}% approve</span><span>${l.disapprove}% disapprove</span></div></div>`;
+    return `<div class="apitem"><div class="ap-top"><div><div class="ap-name">${l.name}</div><div style="font-size:10px;color:${p.c};font-weight:500;margin-top:1px">${p.name}</div></div><div class="ap-net" style="color:${l.net>=0?'#1baf7a':l.net>=-15?'#eda100':'#e34948'}">${l.net>0?'+':''}${l.net}</div></div><div class="ap-bw"><div class="ap-ap" style="width:${Math.round(l.approve/tot*100)}%"></div><div class="ap-op" style="width:${Math.round(l.disapprove/tot*100)}%"></div></div><div class="ap-meta"><span>${l.approve}% approve · ${l.disapprove}% disapprove</span><span style="color:var(--tm);margin-top:1px">${l.role}</span><span style="color:var(--tga)">${l.src}</span></div></div>`;
   }).join('');
 
   renderSeatProjection();
