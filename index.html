@@ -777,6 +777,12 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <div class="aplist" id="aplist"></div>
     </div>
     <div class="card" style="margin-bottom:14px">
+      <div class="ctt">Seat distribution — 2019, 2024 &amp; projected next election <span class="csrc">Flourish · MRP model · Jul 2026</span></div>
+      <div style="margin:-4px -4px 0 -4px">
+        <div class="flourish-embed flourish-parliament" data-src="visualisation/29725827"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29725827/thumbnail" width="100%" alt="parliament visualization" /></noscript></div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:14px">
       <div class="ctt">Projected seat distribution — constituency map <span class="csrc">Electoral Calculus · MRP model · Jul 2026</span></div>
       <div style="margin:-4px -4px 0 -4px">
         <div class="flourish-embed flourish-map" data-src="visualisation/29724464" style="width:100%"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29724464/thumbnail" width="100%" alt="UK constituency map showing projected seat distribution by party" /></noscript></div>
@@ -2657,7 +2663,7 @@ function buildDailySeries(days){
   var startDay=Math.max(0,endDay-days);
   var labels=[],series={ref:[],lab:[],con:[],grn:[],lib:[]};
   var months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var bw=days<=90?35:days<=180?55:75; // tighter bandwidth for shorter views
+  var bw=days<=90?30:days<=180?45:60; // tighter bandwidth for shorter views
   for(var d=startDay;d<=endDay;d++){
     var date=new Date(origin.getTime()+d*86400*1000);
     // Label: show every 7 days for short views, every ~30 days for 2Y
@@ -2667,7 +2673,7 @@ function buildDailySeries(days){
       series[k].push(Math.round(loessSmooth(pts,k,d,bw)*10)/10);
     });
   }
-  return {labels:labels,series:series,totalDays:endDay-startDay+1,startDay:startDay,origin:origin,months:months};
+  return {labels:labels,series:series,totalDays:endDay-startDay+1};
 }
 
 // ── Build / rebuild VI chart ──
@@ -2692,42 +2698,21 @@ function buildVIChart(months){
   var result=buildDailySeries(days);
   var labels=result.labels;
   var series=result.series;
-  var origin=result.origin;
-  var startDay=result.startDay;
-  var months=result.months;
 
-  // Thin labels for x axis — show clean month-start labels
-  // Build a set of indices that fall on the 1st of each month (or quarter for 2Y)
-  var sparseLabels=labels.map(function(l,i){
-    var date=new Date(origin.getTime()+(startDay+i)*86400*1000);
-    var dom=date.getDate();
-    var mon=date.getMonth();
-    var yr=date.getFullYear();
-    if(days<=90){
-      // 3M: every Monday (weekly)
-      return date.getDay()===1?date.getDate()+' '+months[mon]:'';
-    } else if(days<=180){
-      // 6M: 1st of every other month
-      return dom===1&&mon%2===0?months[mon]+' '+(yr%100):'';
-    } else if(days<=365){
-      // 1Y: 1st of every month
-      return dom===1?months[mon]+' '+(yr%100):'';
-    } else {
-      // 2Y: 1st of Jan, Apr, Jul, Oct (quarterly)
-      return dom===1&&mon%3===0?months[mon]+' '+(yr%100):'';
-    }
-  });
+  // Thin labels for x axis — show only every N-th
+  var step=days<=90?7:days<=180?14:days<=365?30:60;
+  var sparseLabels=labels.map(function(l,i){return i%step===0?l:'';});
 
   VI_CUR={labels:labels,data:series};
 
   viChart=new Chart(ctx,{
     type:'line',
     data:{labels:sparseLabels,datasets:[
-      {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.07)',tension:.45,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
-      {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.05)',tension:.45,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
-      {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'transparent',tension:.45,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:0},
-      {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'transparent',tension:.45,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
-      {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'transparent',tension:.45,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.07)',tension:.3,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.05)',tension:.3,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'transparent',tension:.3,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:0},
+      {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'transparent',tension:.3,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'transparent',tension:.3,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
     ]},
     options:{
       responsive:true,maintainAspectRatio:false,
@@ -2738,8 +2723,8 @@ function buildVIChart(months){
           grid:{color:'rgba(0,0,0,.04)',drawTicks:false},
           border:{display:false},
           ticks:{font:{size:10},color:'#898781',maxRotation:0,
-            callback:function(val,idx){return sparseLabels[idx]||null;},
-            autoSkip:false,maxTicksLimit:100}
+            callback:function(val,idx){return sparseLabels[idx]||'';},
+            autoSkip:true,maxTicksLimit:days<=90?7:days<=180?8:days<=365?9:10}
         },
         y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)',drawTicks:false},border:{display:false},
           ticks:{font:{size:10},color:'#898781',callback:function(v){return v+'%';},padding:8}}
