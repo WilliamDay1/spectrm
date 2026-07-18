@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-17T11:45:21Z",
+    "updated": "2026-07-18T10:47:54Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham thanks Starmer after being confirmed as new Labour leader \u2013 UK politics live",
-      "date": "17 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Poultry sector growth plan risks UK national security, campaigners warn",
+      "date": "18 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/17/andy-burnham-labour-leader-speech-latest-news-updates"
+      "url": "https://www.theguardian.com/environment/2026/jul/18/poultry-sector-growth-plan-uk-national-food-security-supply-chain"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham becomes Labour leader in final step towards becoming UK PM",
-      "date": "17 Jul 2026",
+      "headline": "Burnham must shift UK mood on racism, chair of Operation Black Vote says",
+      "date": "18 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/17/andy-burnham-becomes-labour-leader-final-step-towards-uk-pm"
+      "url": "https://www.theguardian.com/world/2026/jul/18/andy-burnham-shift-uk-mood-racism-operation-black-vote"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Who is the frontrunner to be the UK's next chancellor?",
-      "date": "17 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to announce plans for new North Sea oil and gas drilling",
+      "date": "18 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c935yx2z9d4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham to promise new path for UK when he becomes Labour leader",
-      "date": "17 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c2lq12z1xdlo?at_medium=RSS&at_campaign=rss"
+      "headline": "Six political headaches Andy Burnham must tackle in his first weeks as PM",
+      "date": "18 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/18/andy-burnham-six-political-headaches-first-weeks-pm"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham\u2019s difficult first cabinet \u2013 a visual guide to the options and dilemmas",
-      "date": "17 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage\u2019s furious clash with Times editor stuns figures close to him",
+      "date": "18 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/ng-interactive/2026/jul/17/andy-burnham-first-cabinet-options-visual-guide"
+      "url": "https://www.theguardian.com/politics/2026/jul/18/nigel-farage-clash-times-editor-reform"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Five headaches Andy Burnham will have to deal with as PM",
-      "date": "17 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Lib Dems urge FA and Uefa to withdraw from Fifa",
+      "date": "18 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c62122pgjqdo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ce3qw4lq1d7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "A very quick guide to Andy Burnham",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Clacton by-election attracts 34 candidates",
       "date": "17 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyv9qe6wj7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ckge923jk3vo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "The Manchester years: how Burnham\u2019s rebirth as \u2018king of the north\u2019 set him on road to No 10",
+      "headline": "Labour pins hopes on Burnham reboot as he plans policy blitz",
       "date": "17 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/ng-interactive/2026/jul/17/andy-burnham-rebirth-king-of-the-north-road-to-no-10"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjd45xmexnyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ann Widdecombe\u2019s death should make Britain ask itself: what sort of political culture do we want? | Gaby Hinsliff",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham promises to end Labour infighting as he becomes party\u2019s leader",
       "date": "17 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/17/ann-widdecombe-death-britain-political-culture"
+      "url": "https://www.theguardian.com/politics/2026/jul/17/andy-burnham-becomes-labour-leader-final-step-towards-uk-pm"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham's 'Manchesterism' got him to No 10 - but will it work for the UK?",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Jeffrey Donaldson to appeal against conviction for child sexual offences",
       "date": "17 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyl3z2xld8o?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/17/jeffrey-donaldson-to-appeal-against-conviction-for-child-sexual-offences"
     }
   ]
 }
