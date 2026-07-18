@@ -2,12 +2,6 @@
 """
 Scrapes UK opinion polling + leader approval from Wikipedia.
 Writes polls.json to stdout.
-
-Sources:
-  Voting intention:
-    https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_United_Kingdom_general_election
-  Leader approval:
-    https://en.wikipedia.org/wiki/Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election
 """
 
 import json, re, sys
@@ -26,21 +20,21 @@ try:
         r.raise_for_status()
         return r.json().get("parse",{}).get("wikitext",{}).get("*","")
 except ImportError:
-    import urllib.request
+    import urllib.request, urllib.parse
     def fetch_wikitext(page_title):
         url = (
             "https://en.wikipedia.org/w/api.php"
-            f"?action=parse&page={urllib.request.quote(page_title)}&prop=wikitext&format=json"
+            "?action=parse&page=" + urllib.parse.quote(page_title) +
+            "&prop=wikitext&format=json"
         )
-        req = urllib.request.Request(
-            url,
-            headers={"User-Agent":"Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"}
-        )
+        req = urllib.request.Request(url, headers={
+            "User-Agent":"Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"
+        })
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.loads(r.read().decode()).get("parse",{}).get("wikitext",{}).get("*","")
 
-VI_PAGE    = "Opinion_polling_for_the_next_United_Kingdom_general_election"
-LA_PAGE    = "Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
+VI_PAGE = "Opinion_polling_for_the_next_United_Kingdom_general_election"
+LA_PAGE = "Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
 
 MONTH_MAP = {
     'jan':1,'feb':2,'mar':3,'apr':4,'may':5,'jun':6,
@@ -57,12 +51,15 @@ POLLSTER_SRCS = {
     'Ipsos':'ipsos.com',
     'JL Partners':'jlpartners.co.uk',
     'Find Out Now':'findoutnow.co.uk',
-    'Lord Ashcroft':'lordashcroftpolls.com',
+    'Ashcroft':'lordashcroftpolls.com',
     'Redfield':'redfieldandwiltonstrategies.com',
     'BMG':'bmgresearch.co.uk',
     'Deltapoll':'deltapoll.co.uk',
     'Techne':'techneuk.co.uk',
     'Norstat':'norstat.co.uk',
+    'Panelbase':'panelbase.net',
+    'Number Cruncher':'numbercruncher.co.uk',
+    'Omnisis':'omnisis.co.uk',
 }
 
 LEADER_MAP = {
@@ -75,81 +72,125 @@ LEADER_MAP = {
     'Angela Rayner': {'party':'lab','role':'Deputy Labour leader'},
 }
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
-
 def strip_wiki(s):
-    s = re.sub(r'\{\{[^}]*\}\}', '', s)
+    # Remove templates like {{foo}}
+    s = re.sub(r'\{\{[^{}]*\}\}', '', s)
+    # Unwrap wikilinks [[target|label]] -> label
     s = re.sub(r'\[\[(?:[^\]|]*\|)?([^\]]*)\]\]', r'\1', s)
+    # Remove ref tags
+    s = re.sub(r'<ref[^>]*/>', '', s)
+    s = re.sub(r'<ref[^>]*>.*?</ref>', '', s, flags=re.DOTALL)
     return s.strip()
 
 def clean_num(s):
     s = re.sub(r'[^0-9.]', '', strip_wiki(s))
-    try: return round(float(s))
-    except: return None
+    try:
+        return round(float(s))
+    except:
+        return None
 
 def parse_date(s):
-    s = strip_wiki(s).replace('–','-').replace('—','-')
-    m = re.search(r'(\d{1,2})(?:-\d{1,2})?\s+([A-Za-z]+)\s+(\d{4})', s)
+    s = strip_wiki(s).replace('–','-').replace('—','-').replace('&ndash;','-')
+    # "21-22 Jun 2026" or "21 Jun 2026"
+    m = re.search(r'(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s+([A-Za-z]+)\s+(\d{4})', s)
     if m:
         d, mon, yr = int(m.group(1)), m.group(2).lower()[:3], int(m.group(3))
         mo = MONTH_MAP.get(mon, 0)
-        if mo: return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
+        if mo and yr >= 2024:
+            return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
+    # "Jun 2026"
     m = re.search(r'([A-Za-z]+)\s+(\d{4})', s)
     if m:
         mon, yr = m.group(1).lower()[:3], int(m.group(2))
         mo = MONTH_MAP.get(mon, 0)
-        if mo: return yr*10000+mo*100+1, f"{MON_ABBR[mo]} {str(yr)[2:]}"
+        if mo and yr >= 2024:
+            return yr*10000+mo*100+1, f"{MON_ABBR[mo]} {str(yr)[2:]}"
     return None, None
 
-# ── Voting intention ──────────────────────────────────────────────────────────
-
 def parse_vi_polls(wikitext):
+    """
+    Wikipedia VI tables use this row format:
+    |-
+    | [[Pollster]] || [[Client]] || dates || sample || ref% || lab% || con% || ld% || grn% || ...
+    
+    We split on |- and parse each row.
+    """
     polls = []
-    for row in re.split(r'\n\|-+', wikitext):
-        cells = [c.strip() for c in re.split(r'\n\|(?!\|)|\|\|', row) if c.strip()]
-        if len(cells) < 7:
+
+    # Normalise: replace || with \n| so every cell starts on new line with |
+    wikitext = wikitext.replace('||', '\n|')
+
+    for row in re.split(r'\n\s*\|-+[^\n]*\n', wikitext):
+        # Get all cells: lines starting with |
+        raw_cells = re.findall(r'^\|([^\n|!][^\n]*)', row, re.MULTILINE)
+        cells = [strip_wiki(c).strip() for c in raw_cells]
+        cells = [c for c in cells if c]  # remove empty
+
+        if len(cells) < 6:
             continue
 
-        # Identify pollster from first cell
+        # Find pollster in first 2 cells
         pollster = None
-        raw0 = strip_wiki(cells[0])
-        for known in POLLSTER_SRCS:
-            if known.lower() in raw0.lower():
-                pollster = known; break
+        for ci in range(min(2, len(cells))):
+            for known in POLLSTER_SRCS:
+                if known.lower() in cells[ci].lower():
+                    pollster = known
+                    break
+            if pollster:
+                break
         if not pollster:
-            if 2 < len(raw0) < 35: pollster = raw0
-            else: continue
+            raw = cells[0]
+            if 2 < len(raw) < 40 and not raw.startswith('!'):
+                pollster = raw
+            else:
+                continue
 
-        # Find date (post-July 2024 only)
+        # Find date (post Jul 2024)
         sort_key, date_str = None, None
-        for c in cells[1:5]:
+        for c in cells[:6]:
             sk, ds = parse_date(c)
             if sk and sk > 20240700:
-                sort_key, date_str = sk, ds; break
+                sort_key, date_str = sk, ds
+                break
         if not sort_key:
             continue
 
-        # Sample size
+        # Sample size: integer 500-20000
         n = None
         for c in cells:
-            raw = re.sub(r'[^0-9]', '', strip_wiki(c))
+            raw = re.sub(r'[^0-9]', '', c)
             if raw and 500 <= int(raw) <= 20000:
-                n = int(raw); break
+                n = int(raw)
+                break
 
-        # Five party %s summing to 70-115
-        nums = [v for c in cells if (v := clean_num(c)) is not None and 3 <= v <= 60]
+        # Extract all plausible % values (3-60)
+        nums = []
+        for c in cells:
+            v = clean_num(c)
+            if v is not None and 3 <= v <= 60:
+                nums.append(v)
+
+        # Find 5 consecutive values summing 68-115
         best = None
-        for i in range(max(0, len(nums)-7)):
-            sub = nums[i:i+5]
-            if 70 <= sum(sub) <= 115:
-                best = sub; break
+        for i in range(len(nums)):
+            for length in [5, 6]:
+                if i + length > len(nums):
+                    continue
+                sub = nums[i:i+length]
+                if 68 <= sum(sub[:5]) <= 115:
+                    best = sub[:5]
+                    break
+            if best:
+                break
+
         if not best:
             continue
 
         ref, lab, con, lib, grn = best
+
         polls.append({
             'pollster': pollster,
-            'client': strip_wiki(cells[1])[:40] if len(cells) > 1 else '',
+            'client': cells[1][:40] if len(cells) > 1 else '',
             'date': date_str,
             'sort_key': sort_key,
             'n': n or 0,
@@ -157,11 +198,14 @@ def parse_vi_polls(wikitext):
             'src': POLLSTER_SRCS.get(pollster, ''),
         })
 
+    # Deduplicate newest-first
     seen, unique = set(), []
     for p in sorted(polls, key=lambda x: -x['sort_key']):
         k = (p['pollster'], p['sort_key'])
         if k not in seen:
-            seen.add(k); unique.append(p)
+            seen.add(k)
+            unique.append(p)
+
     return unique[:30]
 
 def build_monthly_history(polls):
@@ -179,76 +223,90 @@ def build_monthly_history(polls):
         lib_a.append(avg(g,'lib'))
     return {'labels':labels,'ref':ref_a,'lab':lab_a,'con':con_a,'grn':grn_a,'lib':lib_a}
 
-# ── Leader approval ───────────────────────────────────────────────────────────
-
 def parse_leader_approval(wikitext):
     results = {}
-    # Split into sections by == Heading ==
+    wikitext = wikitext.replace('||', '\n|')
     parts = re.split(r'\n={2,3}\s*([^=\n]+?)\s*={2,3}\n', wikitext)
 
     for i in range(1, len(parts), 2):
         heading = parts[i].strip()
-        body    = parts[i+1] if i+1 < len(parts) else ''
+        body = parts[i+1] if i+1 < len(parts) else ''
 
         matched = None
         for name in LEADER_MAP:
-            if name.split()[-1].lower() in heading.lower() or name.lower() in heading.lower():
-                matched = name; break
+            last = name.split()[-1]
+            if last.lower() in heading.lower() or name.lower() in heading.lower():
+                matched = name
+                break
         if not matched:
             continue
 
         rows = []
-        for row in re.split(r'\n\|-+', body):
-            cells = [strip_wiki(c).strip() for c in re.split(r'\n\|(?!\|)|\|\|', row) if strip_wiki(c).strip()]
-            if len(cells) < 4:
+        for row in re.split(r'\n\s*\|-+[^\n]*\n', body):
+            raw_cells = re.findall(r'^\|([^\n|!][^\n]*)', row, re.MULTILINE)
+            cells = [strip_wiki(c).strip() for c in raw_cells if strip_wiki(c).strip()]
+            if len(cells) < 3:
                 continue
+
             sort_key, date_str = None, None
-            for c in cells[:3]:
+            for c in cells[:4]:
                 sk, ds = parse_date(c)
                 if sk and sk > 20240700:
-                    sort_key, date_str = sk, ds; break
+                    sort_key, date_str = sk, ds
+                    break
             if not sort_key:
                 continue
+
             pollster = ''
-            for c in cells[:4]:
+            for c in cells[:5]:
                 for known in POLLSTER_SRCS:
                     if known.lower() in c.lower():
-                        pollster = known; break
-                if pollster: break
+                        pollster = known
+                        break
+                if pollster:
+                    break
 
             nums = [v for c in cells if (v := clean_num(c)) is not None and 5 <= v <= 90]
             if len(nums) < 2:
                 continue
-            rows.append({'sort_key':sort_key,'date':date_str,'pollster':pollster,
-                         'approve':nums[0],'disapprove':nums[1]})
+
+            rows.append({
+                'sort_key': sort_key, 'date': date_str,
+                'pollster': pollster,
+                'approve': nums[0], 'disapprove': nums[1],
+            })
 
         if not rows:
             continue
 
         yg = [r for r in rows if r['pollster'] == 'YouGov']
         best = sorted(yg or rows, key=lambda x: -x['sort_key'])[0]
-        src_label = f"YouGov · {best['date']}" if best['pollster'] == 'YouGov' else f"{best['pollster']} · {best['date']}"
+        src = f"YouGov · {best['date']}" if best['pollster'] == 'YouGov' else f"{best['pollster']} · {best['date']}"
 
         results[matched] = {
             'name': matched,
             'approve': best['approve'],
             'disapprove': best['disapprove'],
             'net': best['approve'] - best['disapprove'],
-            'src': src_label,
+            'src': src,
         }
-        print(f"  {matched}: {best['approve']}%/{best['disapprove']}% ({src_label})", file=sys.stderr)
+        print(f"  {matched}: {best['approve']}%/{best['disapprove']}% ({src})", file=sys.stderr)
 
     return list(results.values())
-
-# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
     print("Fetching voting intention...", file=sys.stderr)
     vi_wikitext = fetch_wikitext(VI_PAGE)
+    print(f"  Wikitext length: {len(vi_wikitext)} chars", file=sys.stderr)
+
     polls = parse_vi_polls(vi_wikitext)
     print(f"  {len(polls)} polls parsed", file=sys.stderr)
+
     if not polls:
-        print("ERROR: no polls parsed — aborting", file=sys.stderr); sys.exit(1)
+        # Debug: print first 2000 chars of wikitext to help diagnose
+        print("DEBUG wikitext sample:\n" + vi_wikitext[:2000], file=sys.stderr)
+        print("ERROR: no polls parsed — aborting", file=sys.stderr)
+        sys.exit(1)
 
     monthly = build_monthly_history(polls)
     print(f"  {len(monthly['labels'])} monthly averages", file=sys.stderr)
@@ -257,7 +315,7 @@ def main():
     try:
         la_wikitext = fetch_wikitext(LA_PAGE)
         leader_approval = parse_leader_approval(la_wikitext)
-        print(f"  {len(leader_approval)} leaders", file=sys.stderr)
+        print(f"  {len(leader_approval)} leaders parsed", file=sys.stderr)
     except Exception as e:
         print(f"  WARNING: {e}", file=sys.stderr)
         leader_approval = []
