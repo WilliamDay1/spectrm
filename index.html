@@ -2373,6 +2373,10 @@ const RECENT_POLLS=[
   {pollster:'Lord Ashcroft',client:'Ashcroft Polls',date:'28-30 May 26',n:5012,ref:25,lab:20,con:19,grn:14,lib:13,src:'lordashcroftpolls.com'},
 ];
 
+
+
+
+
 const LEADERS=[
   {name:'Andy Burnham',party:'lab',role:'MP for Makerfield · Leadership frontrunner',approve:45,disapprove:40,net:5,src:'YouGov · Jun 2026'},
   {name:'Zack Polanski',party:'grn',role:'Green leader',approve:29,disapprove:38,net:-9,src:'YouGov · Jun 2026'},
@@ -2567,35 +2571,103 @@ function renderSeatProjection(){
   }
 }
 
-// ── Build / rebuild VI chart with given month range ──
+// ── LOESS daily smoother ──
+// Takes sparse monthly VI_DATA and individual RECENT_POLLS,
+// produces a smooth daily estimate for every day in the window.
+
+// Build a flat array of all known poll data points as {date, ref, lab, con, grn, lib}
+// date = days since 2024-07-04 (GE2024)
+function buildPollPoints(){
+  var origin=new Date(2024,6,4); // 4 Jul 2024
+  var pts=[];
+  // Monthly VI averages — treat as mid-month data points
+  var monthlyDates=[
+    new Date(2024,6,15),new Date(2024,7,15),new Date(2024,8,15),new Date(2024,9,15),
+    new Date(2024,10,15),new Date(2024,11,15),new Date(2025,0,15),new Date(2025,1,15),
+    new Date(2025,2,15),new Date(2025,3,15),new Date(2025,4,15),new Date(2025,5,15),
+    new Date(2025,6,15),new Date(2025,7,15),new Date(2025,8,15),new Date(2025,9,15),
+    new Date(2025,10,15),new Date(2025,11,15),new Date(2026,0,15),new Date(2026,1,15),
+    new Date(2026,2,15),new Date(2026,3,15),new Date(2026,4,15),new Date(2026,5,15),
+  ];
+  var keys=['ref','lab','con','grn','lib'];
+  monthlyDates.forEach(function(d,i){
+    if(i>=VI_DATA.ref.length)return;
+    var daysSince=Math.round((d-origin)/(1000*86400));
+    pts.push({
+      day:daysSince,
+      ref:VI_DATA.ref[i],lab:VI_DATA.lab[i],con:VI_DATA.con[i],
+      grn:VI_DATA.grn[i],lib:VI_DATA.lib[i]
+    });
+  });
+  // Add RECENT_POLLS — parse their dates
+  var monthMap={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  RECENT_POLLS.forEach(function(p){
+    // date format: "21-22 Jun 26" or "31 May-1 Jun"
+    var parts=p.date.split(' ');
+    if(parts.length<2)return;
+    var monthStr=parts[parts.length-2];
+    var yearStr=parts[parts.length-1];
+    var mon=monthMap[monthStr.slice(0,3)];
+    if(mon===undefined)return;
+    var yr=parseInt(yearStr);
+    if(isNaN(yr))yr=26;
+    var fullYr=yr<100?2000+yr:yr;
+    // Use end date (last number before month)
+    var dayPart=parts[0].replace(/[^\d\-]/g,'');
+    var dayNums=dayPart.split('-').map(Number).filter(function(n){return!isNaN(n)&&n>0;});
+    var day=dayNums[dayNums.length-1]||1;
+    var d=new Date(fullYr,mon,day);
+    var daysSince=Math.round((d-origin)/(1000*86400));
+    if(daysSince<0)return;
+    pts.push({day:daysSince,ref:p.ref,lab:p.lab,con:p.con,grn:p.grn,lib:p.lib});
+  });
+  return pts.sort(function(a,b){return a.day-b.day;});
+}
+
+// LOESS smoother — weighted local regression at each target day
+function loessSmooth(pts,key,targetDay,bandwidth){
+  if(!pts.length)return 0;
+  // Find distances and compute weights (tricube kernel)
+  var dists=pts.map(function(p){return Math.abs(p.day-targetDay);});
+  var maxDist=bandwidth||90; // days window
+  var weights=dists.map(function(d){
+    var u=Math.min(d/maxDist,1);
+    var w=Math.pow(1-Math.pow(u,3),3);
+    return w;
+  });
+  var sumW=weights.reduce(function(a,b){return a+b;},0);
+  if(sumW<0.001)return pts[0][key];
+  // Weighted mean (local constant LOESS)
+  var sumWY=0;
+  pts.forEach(function(p,i){sumWY+=weights[i]*p[key];});
+  return sumWY/sumW;
+}
+
+// Generate daily series for a given number of days back from today
+function buildDailySeries(days){
+  var pts=buildPollPoints();
+  var origin=new Date(2024,6,4);
+  var today=new Date(2026,6,18); // current date
+  var endDay=Math.round((today-origin)/(1000*86400));
+  var startDay=Math.max(0,endDay-days);
+  var labels=[],series={ref:[],lab:[],con:[],grn:[],lib:[]};
+  var months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var bw=days<=90?30:days<=180?45:60; // tighter bandwidth for shorter views
+  for(var d=startDay;d<=endDay;d++){
+    var date=new Date(origin.getTime()+d*86400*1000);
+    // Label: show every 7 days for short views, every ~30 days for 2Y
+    var label=date.getDate()+' '+months[date.getMonth()]+' '+(date.getFullYear()%100);
+    labels.push(label);
+    ['ref','lab','con','grn','lib'].forEach(function(k){
+      series[k].push(Math.round(loessSmooth(pts,k,d,bw)*10)/10);
+    });
+  }
+  return {labels:labels,series:series,totalDays:endDay-startDay+1};
+}
+
+// ── Build / rebuild VI chart ──
 var viRangeMonths=24;
 var VI_CUR={labels:[],data:{}};
-
-function getWeeklySeries(months){
-  // Interpolate monthly data into weekly points for 3M/6M views
-  var keys=['ref','lab','con','grn','lib'];
-  var M=Math.min(months+1,VI_LABELS.length);
-  var anchors={};
-  keys.forEach(function(k){anchors[k]=VI_DATA[k].slice(-M);});
-  var monthNames=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var lastLabel=VI_LABELS[VI_LABELS.length-1]||'Jun 26';
-  var parts=lastLabel.split(' ');
-  var endDate=new Date(2000+parseInt(parts[1]||'26'),Math.max(0,monthNames.indexOf(parts[0])),28);
-  var weeks=Math.round(months*4.33);
-  var labels=[],data={ref:[],lab:[],con:[],grn:[],lib:[]};
-  for(var w=0;w<weeks;w++){
-    var frac=weeks<=1?1:w/(weeks-1);
-    var pos=frac*(M-1);
-    var i0=Math.floor(pos),i1=Math.min(M-1,i0+1),t=pos-i0;
-    keys.forEach(function(k){
-      var v=anchors[k][i0]*(1-t)+anchors[k][i1]*t;
-      data[k].push(Math.round(v*10)/10);
-    });
-    var d=new Date(endDate.getTime()-(weeks-1-w)*7*24*3600*1000);
-    labels.push(d.getDate()+' '+monthNames[d.getMonth()]);
-  }
-  return {labels:labels,data:data};
-}
 
 function buildVIChart(months){
   viRangeMonths=months;
@@ -2607,89 +2679,58 @@ function buildVIChart(months){
   var newCanvas=document.createElement('canvas');
   newCanvas.id='vi-chart';
   newCanvas.setAttribute('role','img');
-  newCanvas.setAttribute('aria-label','Voting intention trend chart');
+  newCanvas.setAttribute('aria-label','Voting intention daily estimate chart');
   if(par){par.replaceChild(newCanvas,oldCanvas);}
   const ctx=newCanvas;
 
-  var labels,series;
-  if(months<=6){
-    var wk=getWeeklySeries(months);
-    labels=wk.labels;
-    series=wk.data;
-  } else {
-    var n=Math.min(months,VI_LABELS.length);
-    labels=VI_LABELS.slice(-n);
-    series={ref:VI_DATA.ref.slice(-n),lab:VI_DATA.lab.slice(-n),con:VI_DATA.con.slice(-n),grn:VI_DATA.grn.slice(-n),lib:VI_DATA.lib.slice(-n)};
-  }
+  var days=Math.round(months*30.5);
+  var result=buildDailySeries(days);
+  var labels=result.labels;
+  var series=result.series;
+
+  // Thin labels for x axis — show only every N-th
+  var step=days<=90?7:days<=180?14:days<=365?30:60;
+  var sparseLabels=labels.map(function(l,i){return i%step===0?l:'';});
+
   VI_CUR={labels:labels,data:series};
-
-  // ── Scatter dots from individual poll data ──
-  // Each poll maps to an x-index based on its position in the label array
-  // We spread polls slightly around their true x position for the Flourish look
-  var scatterParties=[
-    {key:'ref',color:'rgba(10,138,159,.35)'},
-    {key:'lab',color:'rgba(204,0,0,.35)'},
-    {key:'con',color:'rgba(0,48,135,.3)'},
-    {key:'grn',color:'rgba(26,107,42,.35)'},
-    {key:'lib',color:'rgba(212,115,10,.35)'},
-  ];
-  var scatterDatasets=scatterParties.map(function(sp){
-    var pts=[];
-    RECENT_POLLS.forEach(function(p,pi){
-      // Map most recent polls to end of x axis — spread across last labels
-      var xIdx=labels.length-1-(RECENT_POLLS.length-1-pi)*Math.max(1,Math.floor(labels.length/RECENT_POLLS.length));
-      if(xIdx<0||xIdx>=labels.length)return;
-      pts.push({x:labels[xIdx],y:p[sp.key]});
-    });
-    return {
-      type:'scatter',
-      label:sp.key+'-scatter',
-      data:pts,
-      backgroundColor:sp.color,
-      borderColor:'transparent',
-      pointRadius:4,
-      pointHoverRadius:0,
-      showLine:false,
-      order:2,
-    };
-  });
-
-  // ── Smooth moving average lines ──
-  var lineDatasets=[
-    {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.06)',tension:.4,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0,order:1},
-    {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.05)',tension:.4,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0,order:1},
-    {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'transparent',tension:.4,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:0,order:1},
-    {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'transparent',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0,order:1},
-    {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'transparent',tension:.4,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0,order:1},
-  ];
 
   viChart=new Chart(ctx,{
     type:'line',
-    data:{labels:labels,datasets:[...scatterDatasets,...lineDatasets]},
+    data:{labels:sparseLabels,datasets:[
+      {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.07)',tension:.3,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.05)',tension:.3,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'transparent',tension:.3,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:0},
+      {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'transparent',tension:.3,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
+      {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'transparent',tension:.3,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
+    ]},
     options:{
       responsive:true,maintainAspectRatio:false,
       interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{enabled:false}},
       scales:{
         x:{
-          type:'category',
           grid:{color:'rgba(0,0,0,.04)',drawTicks:false},
           border:{display:false},
-          ticks:{font:{size:10},color:'#898781',maxRotation:0,maxTicksLimit:months<=3?7:months<=6?7:months<=12?8:10,padding:8}
+          ticks:{font:{size:10},color:'#898781',maxRotation:0,
+            callback:function(val,idx){return sparseLabels[idx]||'';},
+            autoSkip:true,maxTicksLimit:days<=90?7:days<=180?8:days<=365?9:10}
         },
-        y:{
-          min:0,max:40,
-          grid:{color:'rgba(0,0,0,.05)',drawTicks:false},
-          border:{display:false},
-          ticks:{font:{size:10},color:'#898781',callback:v=>v+'%',padding:8}
-        }
+        y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)',drawTicks:false},border:{display:false},
+          ticks:{font:{size:10},color:'#898781',callback:function(v){return v+'%';},padding:8}}
       },
       onHover:function(e,els,chart){handleVIHover(e,chart);}
     }
   });
-
-  const canvas=document.getElementById('vi-chart');
   if(ctx){ctx.addEventListener('mouseleave',function(){hideVIHover();});}
+}
+
+function setVIRange(months,btn){
+  document.querySelectorAll('#vi-range-btns .pill').forEach(function(b){
+    b.style.background='';b.style.color='';b.style.borderColor='';
+  });
+  btn.style.background='var(--brand)';btn.style.color='#fff';btn.style.borderColor='var(--brand)';
+  hideVIHover();
+  buildVIChart(months);
 }
 
 function hideVIHover(){
@@ -2706,36 +2747,29 @@ function handleVIHover(event,chart){
   var dp=document.getElementById('vi-date-pill');
   var hl=document.getElementById('vi-hover-labels');
   if(!ch||!dp||!hl)return;
-
   var area=chart.chartArea;
-  if(!area||typeof area.left==='undefined'){return;}
+  if(!area||typeof area.left==='undefined')return;
   var rect=chart.canvas.getBoundingClientRect();
-  // Raw mouse X relative to canvas
   var mouseX=event.native.clientX-rect.left;
-
-  // Only show when inside the chart plot area
   if(mouseX<area.left||mouseX>area.right){hideVIHover();return;}
 
-  // Convert mouseX to a fractional data index (smooth — not snapped)
+  // Map mouseX → fractional data index
   var pct=(mouseX-area.left)/(area.right-area.left);
   var dataLen=VI_CUR.labels.length;
   var fracIdx=pct*(dataLen-1);
   var i0=Math.max(0,Math.min(dataLen-2,Math.floor(fracIdx)));
   var i1=Math.min(dataLen-1,i0+1);
-  var t=fracIdx-i0; // 0..1 interpolation factor
+  var t=fracIdx-i0;
 
-  // Interpolate label (show nearest whole-index label)
-  var nearIdx=Math.round(fracIdx);
-  var label=VI_CUR.labels[nearIdx]||'';
-
-  // Crosshair follows mouse exactly
+  // Dashed crosshair follows mouse exactly
   ch.style.left=mouseX+'px';
   ch.style.top=area.top+'px';
   ch.style.height=(area.bottom-area.top)+'px';
   ch.style.opacity=1;
 
-  // Date pill above the line
-  dp.textContent=label;
+  // Date pill — use actual daily label
+  var nearIdx=Math.round(fracIdx);
+  dp.textContent=VI_CUR.labels[nearIdx]||'';
   dp.style.left=mouseX+'px';
   dp.style.top=(area.top-24)+'px';
   dp.style.opacity=1;
@@ -2748,48 +2782,33 @@ function handleVIHover(event,chart){
     {key:'lib',c:'#D4730A'},
   ];
 
-  // Interpolate each party's value smoothly between i0 and i1
+  // Interpolate each party's value smoothly
   var items=parties.map(function(p){
     var d=VI_CUR.data[p.key];
     if(!d||d.length<2)return null;
-    var v0=d[i0]||0, v1=d[i1]||0;
-    var v=v0+(v1-v0)*t;
+    var v=d[i0]+(d[i1]-d[i0])*t;
     var vRound=Math.round(v*10)/10;
     var py=chart.scales.y.getPixelForValue(v);
-    return {c:p.c,v:vRound,y:py};
+    return{c:p.c,v:vRound,y:py};
   }).filter(Boolean);
 
-  // Sort by y ascending (top of chart = lowest y px)
+  // Sort by y, resolve 17px min gap
   items.sort(function(a,b){return a.y-b.y;});
-  // Resolve overlaps with 17px min gap
   for(var j=1;j<items.length;j++){
-    if(items[j].y-items[j-1].y<17) items[j].y=items[j-1].y+17;
+    if(items[j].y-items[j-1].y<17)items[j].y=items[j-1].y+17;
   }
-  // Keep within chart area
   var overflow=items[items.length-1].y-(area.bottom-4);
-  if(overflow>0) items.forEach(function(it){it.y-=overflow;});
+  if(overflow>0)items.forEach(function(it){it.y-=overflow;});
 
   var wrap=document.getElementById('vi-chart-wrap');
   var wrapW=wrap?wrap.offsetWidth:600;
   var flip=mouseX>wrapW-80;
   var dotR=6;
 
-  // Labels + dots combined
   hl.innerHTML=items.map(function(it){
-    // Dot at actual interpolated y position (not label-adjusted)
-    var dotY=it.y; // use label y for visual alignment
-    return '<div style="position:absolute;left:'+(mouseX-dotR)+'px;top:'+(dotY-dotR)+'px;width:'+(dotR*2)+'px;height:'+(dotR*2)+'px;border-radius:50%;background:'+it.c+';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.3);pointer-events:none"></div>'+
-    '<div style="position:absolute;left:'+(flip?(mouseX-58):(mouseX+11))+'px;top:'+(it.y-9)+'px;font-size:12px;font-weight:700;color:'+it.c+';text-shadow:0 0 6px var(--s2),0 0 4px var(--s2),0 0 4px var(--s2)">'+it.v+'%</div>';
+    return '<div style="position:absolute;left:'+(mouseX-dotR)+'px;top:'+(it.y-dotR)+'px;width:'+(dotR*2)+'px;height:'+(dotR*2)+'px;border-radius:50%;background:'+it.c+';border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.25);pointer-events:none"></div>'+
+      '<div style="position:absolute;left:'+(flip?(mouseX-56):(mouseX+11))+'px;top:'+(it.y-9)+'px;font-size:12px;font-weight:700;color:'+it.c+';text-shadow:0 0 6px var(--s2),0 0 4px var(--s2)">'+it.v+'%</div>';
   }).join('');
-}
-
-function setVIRange(months,btn){
-  document.querySelectorAll('#vi-range-btns .pill').forEach(function(b){
-    b.style.background='';b.style.color='';b.style.borderColor='';
-  });
-  btn.style.background='var(--brand)';btn.style.color='#fff';btn.style.borderColor='var(--brand)';
-  hideVIHover();
-  buildVIChart(months);
 }
 
 // ── Polls table with 5-row default + expand + click-to-chart ──
