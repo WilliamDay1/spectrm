@@ -956,6 +956,8 @@ async function loadLiveData(){
   renderOvPolls();
   renderOvApproval();
   renderChartStrip();
+  // Always re-render polls section after live data so chart uses fresh VI_LABELS/VI_DATA
+  if(viChart){viChart.destroy();viChart=null;}
   var pollsSec=document.getElementById('sec-polls');
   if(pollsSec&&pollsSec.classList.contains('on'))renderPolls();
   var refEl=document.getElementById('ov-ref-pct');
@@ -963,7 +965,7 @@ async function loadLiveData(){
   console.log('Spectrm: live data loaded and rendered');
 }
 
-const TODAY=new Date(2026,5,28);
+const TODAY=new Date();
 const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const PC={lab:{name:'Labour',c:'#CC0000',bg:'#FFF0F0'},con:{name:'Conservative',c:'#003087',bg:'#EEF2FF'},lib:{name:'Lib Dems',c:'#D4730A',bg:'#FFF5EC'},snp:{name:'SNP',c:'#8B7700',bg:'#FFFBE0'},grn:{name:'Green',c:'#1A6B2A',bg:'#EEF8EE'},ref:{name:'Reform UK',c:'#0A8A9F',bg:'#E8F7FA'},ind:{name:'Independent',c:'#666',bg:'#F0F0F0'}};
 const SEATS=[{name:'Labour',seats:411,c:'#CC0000',pct:63.2},{name:'Conservative',seats:121,c:'#003087',pct:18.6},{name:'Lib Democrats',seats:72,c:'#D4730A',pct:11.1},{name:'SNP',seats:9,c:'#8B7700',pct:1.4},{name:'Reform UK',seats:5,c:'#0A8A9F',pct:.8},{name:'Green',seats:4,c:'#1A6B2A',pct:.6},{name:'Other',seats:28,c:'#888',pct:4.3}];
