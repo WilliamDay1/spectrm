@@ -1,0 +1,55 @@
+name: Update polls data
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 7am UTC daily (8am BST)
+  workflow_dispatch:        # manual trigger from Actions tab
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scraper
+        run: |
+          python scripts/scrape_polls.py > public/polls.json
+          echo "--- Generated polls.json preview ---"
+          python -c "
+          import json
+          d = json.load(open('public/polls.json'))
+          print('Generated:', d['generated'])
+          print('Monthly points:', len(d['monthly_history']['labels']))
+          print('Recent polls:', len(d['recent_polls']))
+          print('Leaders:', len(d['leader_approval']))
+          if d['recent_polls']:
+              p = d['recent_polls'][0]
+              print(f'Latest poll: {p[\"pollster\"]} {p[\"date\"]} — Ref {p[\"ref\"]}% Lab {p[\"lab\"]}% Con {p[\"con\"]}%')
+          for l in d['leader_approval']:
+              print(f'  {l[\"name\"]}: {l[\"net\"]:+d} ({l[\"src\"]})')
+          "
+
+      - name: Validate JSON
+        run: python -c "import json; json.load(open('public/polls.json')); print('JSON valid')"
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/polls.json
+          git diff --staged --quiet && echo "No changes" || (
+            git commit -m "chore: update polls data $(date -u '+%Y-%m-%d')"
+            git push
+          )
