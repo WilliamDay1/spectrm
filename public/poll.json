@@ -1,0 +1,28 @@
+{
+  "generated": "2026-07-18T07:00:00Z",
+  "monthly_history": {
+    "labels": ["Jul 24","Aug 24","Sep 24","Oct 24","Nov 24","Dec 24","Jan 25","Feb 25","Mar 25","Apr 25","May 25","Jun 25","Jul 25","Aug 25","Sep 25","Oct 25","Nov 25","Dec 25","Jan 26","Feb 26","Mar 26","Apr 26","May 26","Jun 26"],
+    "ref": [15.2,16.1,17.3,18.0,18.8,19.2,20.1,21.3,22.0,22.8,23.5,23.9,24.1,24.8,25.2,25.6,25.9,26.1,26.0,26.2,26.1,26.4,26.5,26.3],
+    "lab": [32.1,30.8,29.2,27.9,26.8,25.9,25.1,24.3,23.8,23.2,22.6,22.1,21.8,21.4,21.0,20.8,20.6,20.5,20.7,20.9,20.8,20.6,20.5,20.7],
+    "con": [21.8,21.6,21.3,21.1,20.9,20.7,20.6,20.5,20.3,20.1,20.0,19.9,19.8,19.7,19.6,19.5,19.5,19.4,19.4,19.3,19.4,19.5,19.4,19.4],
+    "grn": [7.8,8.2,8.9,9.4,9.8,10.2,10.6,11.0,11.4,11.8,12.0,12.2,12.4,12.6,12.7,12.8,12.9,13.0,13.1,13.0,12.9,12.8,12.9,12.9],
+    "lib": [12.8,12.7,12.6,12.6,12.5,12.4,12.4,12.3,12.3,12.2,12.2,12.1,12.1,12.1,12.1,12.0,12.0,12.1,12.1,12.2,12.2,12.1,12.1,12.1]
+  },
+  "recent_polls": [
+    {"pollster":"YouGov","client":"Times/Sky","date":"21-22 Jun 26","n":2105,"ref":25,"lab":18,"con":20,"grn":15,"lib":14,"src":"yougov.com"},
+    {"pollster":"More in Common","client":"Independent","date":"19-20 Jun 26","n":2012,"ref":26,"lab":20,"con":19,"grn":13,"lib":13,"src":"moreincommon.org.uk"},
+    {"pollster":"Opinium","client":"Observer","date":"18-19 Jun 26","n":2003,"ref":27,"lab":21,"con":18,"grn":14,"lib":12,"src":"opinium.com"},
+    {"pollster":"YouGov","client":"Times/Sky","date":"14-15 Jun 26","n":2089,"ref":24,"lab":19,"con":19,"grn":15,"lib":13,"src":"yougov.com"},
+    {"pollster":"Survation","client":"LabourList","date":"13-14 Jun 26","n":1654,"ref":25,"lab":20,"con":19,"grn":14,"lib":13,"src":"survation.com"},
+    {"pollster":"JL Partners","client":"Mail","date":"11-12 Jun 26","n":2001,"ref":26,"lab":21,"con":20,"grn":13,"lib":12,"src":"jlpartners.co.uk"},
+    {"pollster":"YouGov","client":"Times/Sky","date":"7-8 Jun 26","n":2098,"ref":25,"lab":19,"con":19,"grn":14,"lib":12,"src":"yougov.com"},
+    {"pollster":"Find Out Now","client":"Elects","date":"5-6 Jun 26","n":2200,"ref":27,"lab":20,"con":18,"grn":15,"lib":12,"src":"findoutnow.co.uk"},
+    {"pollster":"YouGov","client":"Times/Sky","date":"31 May-1 Jun 26","n":2087,"ref":27,"lab":18,"con":18,"grn":15,"lib":13,"src":"yougov.com"},
+    {"pollster":"Lord Ashcroft","client":"Ashcroft Polls","date":"28-30 May 26","n":5012,"ref":25,"lab":20,"con":19,"grn":14,"lib":13,"src":"lordashcroftpolls.com"}
+  ],
+  "leader_approval": [
+    {"name":"Keir Starmer","approve":19,"disapprove":62,"net":-43},
+    {"name":"Kemi Badenoch","approve":25,"disapprove":51,"net":-26},
+    {"name":"Nigel Farage","approve":28,"disapprove":58,"net":-30}
+  ]
+}
