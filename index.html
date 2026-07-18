@@ -254,11 +254,11 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .pk-p{font-size:10px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
 .pk-n{font-size:24px;font-weight:500;line-height:1}
 .pk-d{font-size:10px;margin-top:3px}
-.aplist{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
-.apitem{background:var(--s1);border-radius:8px;padding:13px 14px}
-.ap-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:4px}
-.ap-name{font-size:12px;font-weight:500;line-height:1.3}
-.ap-net{font-size:20px;font-weight:600;flex-shrink:0}
+.aplist{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.apitem{background:var(--s1);border-radius:8px;padding:12px 13px;min-width:0}
+.ap-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:6px}
+.ap-name{font-size:12px;font-weight:500;line-height:1.3;min-width:0}
+.ap-net{font-size:20px;font-weight:600;flex-shrink:0;line-height:1}
 .ap-bw{height:8px;background:var(--s0);border-radius:4px;overflow:hidden;display:flex}
 .ap-ap{background:#1baf7a;height:100%}.ap-op{background:#e34948;height:100%}
 .ap-meta{display:flex;flex-direction:column;gap:2px;margin-top:6px;font-size:10px;color:var(--tm)}
@@ -785,7 +785,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       </div>
     </div>
   </div>
-  <div class="card" style="margin-bottom:14px">
+  <div class="card" style="margin-bottom:14px;overflow:hidden">
     <div class="ctt">Leader net approval ratings <span class="csrc">YouGov / Opinium · Jun 2026</span></div>
     <div class="aplist" id="aplist"></div>
   </div>
