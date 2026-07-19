@@ -951,8 +951,15 @@ async function maybeUpdateManifesto(){
   const d=await loadJSON('/manifesto.json');if(!d||!d.pledges)return;
   d.pledges.forEach(function(p){const match=MF_PLEDGES.find(function(m){return m.pledge.slice(0,30).toLowerCase()===p.pledge.slice(0,30).toLowerCase();});if(match&&p.status){if(MF_COUNTS[match.status]!==undefined)MF_COUNTS[match.status]--;match.status=p.status;match.updated=p.updated||match.updated;if(MF_COUNTS[p.status]!==undefined)MF_COUNTS[p.status]++;}});
 }
+async function maybeUpdateLeaders(){
+  const d=await loadJSON('/leaders.json');if(!d||!d.length)return;
+  d.forEach(function(la){
+    var match=LEADERS.find(function(l){return l.name===la.name;});
+    if(match){match.approve=la.approve;match.disapprove=la.disapprove;match.net=la.net;if(la.src)match.src=la.src;}
+  });
+}
 async function loadLiveData(){
-  await Promise.all([maybeUpdateEconomic(),maybeUpdateNews(),maybeUpdatePolls(),maybeUpdateManifesto()]);
+  await Promise.all([maybeUpdateEconomic(),maybeUpdateNews(),maybeUpdatePolls(),maybeUpdateManifesto(),maybeUpdateLeaders()]);
   renderOvPolls();
   renderOvApproval();
   renderChartStrip();
@@ -2317,6 +2324,24 @@ function renderOvPolls(){
       '<span style="width:36px;text-align:right;font-size:11px;font-weight:500;color:var(--tp);flex-shrink:0">'+pct+'%</span>'+
     '</div>';
   }).join('');
+  // Update pk summary cards with live data
+  var keys=['ref','lab','con','grn','lib'];
+  var pks=document.querySelectorAll('.pk');
+  if(pks.length>=5){
+    keys.forEach(function(k,i){
+      var cur=VI_DATA[k]&&VI_DATA[k].length?VI_DATA[k][VI_DATA[k].length-1]:0;
+      var prev=VI_DATA[k]&&VI_DATA[k].length>1?VI_DATA[k][VI_DATA[k].length-2]:cur;
+      var diff=Math.round((cur-prev)*10)/10;
+      var pk=pks[i]; var nEl=pk.querySelector('.pk-n'); var dEl=pk.querySelector('.pk-d');
+      if(nEl) nEl.textContent=cur+'%';
+      if(dEl){
+        if(i===0){dEl.className='pk-d up';dEl.textContent='\u2191 1st place';}
+        else if(diff>0.1){dEl.className='pk-d up';dEl.textContent='\u2191 +'+diff+' on month';}
+        else if(diff<-0.1){dEl.className='pk-d dn';dEl.textContent='\u2193 '+diff+' on month';}
+        else{dEl.className='pk-d nn';dEl.textContent='\u2192 flat';}
+      }
+    });
+  }
 }
 
 function renderOvApproval(){
