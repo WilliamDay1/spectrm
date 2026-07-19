@@ -45,7 +45,12 @@ jobs:
 
       - name: Commit if changed
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/polls.json
-          if git
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update polls data $(date -u '+%Y-%m-%d')"
+            git push --force-with-lease origin main
+          fi
