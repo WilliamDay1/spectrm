@@ -101,22 +101,22 @@ def parse_vi_polls(html):
     tables = extract_tables(html)
     print(f"  Found {len(tables)} tables total", file=sys.stderr)
 
-    # Debug: print headers of first 10 tables to see structure
+    # Debug: print first 3 rows of first 10 tables
     for ti, table in enumerate(tables[:10]):
         for ri, row in enumerate(table[:3]):
             texts = [strip_tags(c)[:25] for c in row]
             print(f"  T{ti}R{ri}: {texts}", file=sys.stderr)
 
     all_polls = []
+    active_col = None  # column map carried across tables
 
     for ti, table in enumerate(tables):
-        # Look for the VI table: must have a row with Reform/Lab/Con/LD/Grn headers
+        # Try to detect a VI column header in this table
         col = {}
         for row in table[:5]:
             texts = [strip_tags(c).lower() for c in row]
             for i, t in enumerate(texts):
                 t_strip = t.strip()
-                # Match exact Wikipedia header abbreviations
                 if t_strip in ['ref','reform'] and 'ref' not in col:
                     col['ref'] = i
                 if t_strip in ['lab','labour'] and 'lab' not in col:
@@ -133,14 +133,18 @@ def parse_vi_polls(html):
                     col['date'] = i
                 if t_strip in ['pollster','firm','poll','company'] and 'pollster' not in col:
                     col['pollster'] = i
-
             if all(k in col for k in ['ref','lab','con']):
                 break
 
-        if not all(k in col for k in ['ref','lab','con']):
+        if all(k in col for k in ['ref','lab','con']):
+            active_col = col
+            print(f"  VI header found at T{ti}, cols={col}", file=sys.stderr)
+
+        # Use active_col if we have one
+        if not active_col:
             continue
 
-        print(f"  VI table found at T{ti}, cols={col}", file=sys.stderr)
+        col = active_col
         debug_count = 0
 
         for row in table:
@@ -148,15 +152,17 @@ def parse_vi_polls(html):
             if len(texts) < 5:
                 continue
 
-            # Skip rows that are headers (no % values) or empty spacer rows
-            raw_joined = ''.join([strip_tags(c) for c in row])
-            if '%' not in raw_joined and not any(c.isdigit() for c in raw_joined):
+            # Skip header rows (no % and no digits)
+            raw_joined = ''.join(texts)
+            has_pct = '%' in raw_joined
+            has_digit = any(c.isdigit() for c in raw_joined)
+            if not has_pct and not has_digit:
                 continue
-            if len([c for c in row if strip_tags(c).strip()]) < 4:
+            if len([t for t in texts if t.strip()]) < 4:
                 continue
 
-            if debug_count < 8:
-                print(f"  ROW{debug_count}: {texts[:6]}", file=sys.stderr)
+            if debug_count < 5:
+                print(f"  T{ti}ROW{debug_count}: {texts[:6]}", file=sys.stderr)
                 debug_count += 1
 
             # Pollster — strip trailing footnote numbers e.g. "Find Out Now 164" -> "Find Out Now"
