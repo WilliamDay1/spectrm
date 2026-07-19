@@ -114,22 +114,23 @@ def parse_vi_polls(html):
         for row in table[:5]:
             texts = [strip_tags(c).lower() for c in row]
             for i, t in enumerate(texts):
-                t_clean = re.sub(r'\s+','',t)  # remove spaces for matching
-                if any(x in t_clean for x in ['reform','ukip','brex']) and 'ref' not in col:
+                t_strip = t.strip()
+                # Match exact Wikipedia header abbreviations
+                if t_strip in ['ref','reform'] and 'ref' not in col:
                     col['ref'] = i
-                if 'labour' in t_clean and 'lab' not in col:
+                if t_strip in ['lab','labour'] and 'lab' not in col:
                     col['lab'] = i
-                if 'conserv' in t_clean and 'con' not in col:
+                if t_strip in ['con','conserv','conservative'] and 'con' not in col:
                     col['con'] = i
-                if any(x in t_clean for x in ['libdem','liberaldem','ld']) and 'lib' not in col:
+                if t_strip in ['ld','lib dem','liberal democrat','lib dems'] and 'lib' not in col:
                     col['lib'] = i
-                if 'green' in t_clean and 'grn' not in col:
+                if t_strip in ['grn','green'] and 'grn' not in col:
                     col['grn'] = i
-                if any(x in t_clean for x in ['sample','size']) and 'n' not in col:
+                if any(x in t_strip for x in ['sample','size']) and 'n' not in col:
                     col['n'] = i
-                if any(x in t_clean for x in ['fieldwork','date','period']) and 'date' not in col:
+                if any(x in t_strip for x in ['date','fieldwork','conducted']) and 'date' not in col:
                     col['date'] = i
-                if any(x in t_clean for x in ['firm','pollster','poll','company']) and 'pollster' not in col:
+                if t_strip in ['pollster','firm','poll','company'] and 'pollster' not in col:
                     col['pollster'] = i
 
             if all(k in col for k in ['ref','lab','con']):
@@ -145,11 +146,12 @@ def parse_vi_polls(html):
             if len(texts) < 5:
                 continue
 
-            # Skip header rows
-            joined = ' '.join(texts[:5]).lower()
-            if any(h in joined for h in ['reform','labour','conserv','fieldwork','pollster']):
-                if not any(c.isdigit() for c in ''.join(texts)):
-                    continue
+            # Skip rows that are headers (no % values) or empty spacer rows
+            raw_joined = ''.join([strip_tags(c) for c in row])
+            if '%' not in raw_joined and not any(c.isdigit() for c in raw_joined):
+                continue
+            if len([c for c in row if strip_tags(c).strip()]) < 4:
+                continue
 
             # Pollster
             pollster = None
