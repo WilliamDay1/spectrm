@@ -1,134 +1,46 @@
 {
-  "generated": "2026-07-18T18:44:51Z",
+  "generated": "2026-07-19T08:02:31Z",
   "monthly_history": {
     "labels": [
-      "Oct 24",
-      "Mar 25",
-      "Jun 25",
-      "Sep 25",
-      "Dec 25"
+      "Nov 24"
     ],
     "ref": [
-      4.0,
-      49.0,
-      37.5,
-      43.0,
-      35.0
+      34.0
     ],
     "lab": [
-      4.0,
-      30.0,
-      32.0,
-      35.5,
-      40.0
+      21.0
     ],
     "con": [
-      4.0,
-      4.0,
-      5.5,
-      6.5,
-      9.0
+      18.0
     ],
     "grn": [
-      25.0,
-      5.0,
-      4.0,
-      8.5,
-      6.0
+      7.0
     ],
     "lib": [
-      48.0,
-      4.0,
-      5.5,
-      5.0,
-      5.0
+      21.0
     ]
   },
   "recent_polls": [
     {
-      "pollster": "More in Common",
-      "client": "More in Common",
-      "date": "16 Dec 25",
-      "n": 16083,
-      "ref": 35,
-      "lab": 40,
-      "con": 9,
-      "lib": 5,
-      "grn": 6,
-      "src": "moreincommon.org.uk"
-    },
-    {
-      "pollster": "YouGov",
-      "client": "YouGov",
-      "date": "24 Sep 25",
-      "n": 13000,
-      "ref": 45,
-      "lab": 37,
-      "con": 7,
-      "lib": 6,
-      "grn": 3,
-      "src": "yougov.com"
-    },
-    {
-      "pollster": "More in Common",
-      "client": "More in Common",
-      "date": "15 Sep 25",
-      "n": 19520,
-      "ref": 41,
-      "lab": 34,
-      "con": 6,
-      "lib": 4,
-      "grn": 14,
-      "src": "moreincommon.org.uk"
-    },
-    {
-      "pollster": "YouGov",
-      "client": "YouGov",
-      "date": "18 Jun 25",
-      "n": 11500,
-      "ref": 46,
-      "lab": 38,
-      "con": 7,
-      "lib": 7,
-      "grn": 3,
-      "src": "yougov.com"
-    },
-    {
-      "pollster": "Find Out Now",
-      "client": "Electoral Calculus / Find Out Now",
-      "date": "10 Jun 25",
-      "n": 5444,
-      "ref": 29,
-      "lab": 26,
-      "con": 4,
-      "lib": 4,
-      "grn": 5,
-      "src": "findoutnow.co.uk"
-    },
-    {
-      "pollster": "Find Out Now",
-      "client": "Electoral Calculus / Find Out Now",
-      "date": "21 Mar 25",
-      "n": 5180,
-      "ref": 49,
-      "lab": 30,
-      "con": 4,
-      "lib": 4,
-      "grn": 5,
-      "src": "findoutnow.co.uk"
-    },
-    {
-      "pollster": "Find Out Now",
-      "client": "rowspan=\"4\" | Find Out Now/Electoral Cal",
-      "date": "11 Oct 24",
-      "n": 9332,
-      "ref": 4,
-      "lab": 4,
-      "con": 4,
-      "lib": 48,
-      "grn": 25,
-      "src": "findoutnow.co.uk"
+      "pollster": "Survation",
+      "client": "Survation &#91; 565 &#93;",
+      "date": "14 Nov 24",
+      "n": 1007,
+      "ref": 34,
+      "lab": 21,
+      "con": 18,
+      "lib": 21,
+      "grn": 7,
+      "src": "survation.com"
     }
   ],
-  "leader_approval": []
+  "leader_approval": [
+    {
+      "name": "Kemi Badenoch",
+      "approve": 42,
+      "disapprove": 37,
+      "net": 5,
+      "src": " \u00b7 14 Jan 25"
+    }
+  ]
 }
