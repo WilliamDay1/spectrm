@@ -28,6 +28,18 @@ LEADER_MAP = {
     'Nigel Farage':'ref','Ed Davey':'lib','Zack Polanski':'grn','Angela Rayner':'lab',
 }
 
+# Fallback figures used when Wikipedia approval page has no recent data
+# Update these manually each month if Wikipedia lags
+LEADER_FALLBACK = {
+    'Andy Burnham':   {'approve':45,'disapprove':40,'net':5,  'src':'YouGov · Jun 2026'},
+    'Zack Polanski':  {'approve':29,'disapprove':38,'net':-9, 'src':'YouGov · Jun 2026'},
+    'Ed Davey':       {'approve':32,'disapprove':44,'net':-12,'src':'YouGov · Jun 2026'},
+    'Kemi Badenoch':  {'approve':25,'disapprove':51,'net':-26,'src':'YouGov · Jun 2026'},
+    'Nigel Farage':   {'approve':28,'disapprove':58,'net':-30,'src':'YouGov · Jun 2026'},
+    'Angela Rayner':  {'approve':21,'disapprove':51,'net':-30,'src':'Opinium · Jun 2026'},
+    'Keir Starmer':   {'approve':19,'disapprove':62,'net':-43,'src':'YouGov · Jun 2026'},
+}
+
 # HARDCODED from debug output — Wikipedia VI table columns:
 # Date(s) conducted=0, Pollster=1, Client=2, Area=3, Sample size=4,
 # Lab=5, Con=6, Ref=7, LD=8, Grn=9, SNP=10, PC=11, RB=12, Others=13, Lead=14
@@ -230,11 +242,22 @@ def parse_leaders(html):
         if cur not in results or sk > results[cur]['sk']:
             results[cur] = {'sk': sk, 'date': ds, 'pollster': pollster, 'approve': ap, 'disapprove': di}
     out = []
-    for name, r in results.items():
-        src = f"YouGov · {r['date']}" if r['pollster'] == 'YouGov' else f"{r['pollster']} · {r['date']}"
-        out.append({'name': name, 'approve': r['approve'], 'disapprove': r['disapprove'],
-                    'net': r['approve'] - r['disapprove'], 'src': src})
-        print(f"  {name}: {r['approve']}%/{r['disapprove']}% ({src})", file=sys.stderr)
+    for name in LEADER_MAP:
+        if name in results:
+            r = results[name]
+            src = f"YouGov · {r['date']}" if r['pollster'] == 'YouGov' else f"{r['pollster']} · {r['date']}"
+            entry = {'name': name, 'approve': r['approve'], 'disapprove': r['disapprove'],
+                     'net': r['approve'] - r['disapprove'], 'src': src}
+            print(f"  {name}: {r['approve']}%/{r['disapprove']}% ({src}) [Wikipedia]", file=sys.stderr)
+        elif name in LEADER_FALLBACK:
+            # Wikipedia doesn't have recent data — use fallback
+            fb = LEADER_FALLBACK[name]
+            entry = {'name': name, 'approve': fb['approve'], 'disapprove': fb['disapprove'],
+                     'net': fb['net'], 'src': fb['src']}
+            print(f"  {name}: {fb['approve']}%/{fb['disapprove']}% ({fb['src']}) [fallback]", file=sys.stderr)
+        else:
+            continue
+        out.append(entry)
     return out
 
 def main():
