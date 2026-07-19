@@ -54,3 +54,4 @@ jobs:
             git commit -m "chore: update polls data $(date -u '+%Y-%m-%d')"
             git push --force-with-lease origin main
           fi
+          
