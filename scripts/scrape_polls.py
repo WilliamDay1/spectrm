@@ -141,6 +141,7 @@ def parse_vi_polls(html):
             continue
 
         print(f"  VI table found at T{ti}, cols={col}", file=sys.stderr)
+        debug_count = 0
 
         for row in table:
             texts = [strip_tags(c) for c in row]
@@ -153,6 +154,10 @@ def parse_vi_polls(html):
                 continue
             if len([c for c in row if strip_tags(c).strip()]) < 4:
                 continue
+
+            if debug_count < 8:
+                print(f"  ROW{debug_count}: {texts[:6]}", file=sys.stderr)
+                debug_count += 1
 
             # Pollster — strip trailing footnote numbers e.g. "Find Out Now 164" -> "Find Out Now"
             pollster = None
@@ -193,6 +198,7 @@ def parse_vi_polls(html):
                     if sk and sk > 20240704:
                         sort_key, date_str = sk, ds; break
             if not sort_key:
+                if debug_count <= 8: print(f"  SKIP: no date for {texts[:3]}", file=sys.stderr)
                 continue
 
             # Sample 500-5000 (strip commas from numbers like 2,930)
@@ -208,6 +214,7 @@ def parse_vi_polls(html):
                     if raw and 500 <= int(raw) <= 5000:
                         n = int(raw); break
             if not n:
+                if debug_count <= 8: print(f"  SKIP: no sample for {texts[:5]}", file=sys.stderr)
                 continue
 
             # Party values
@@ -232,11 +239,15 @@ def parse_vi_polls(html):
                         ref,lab,con,lib,grn = sub; break
 
             if not all([ref, lab, con, lib, grn]):
+                if debug_count <= 8: print(f"  SKIP: missing vals ref={ref} lab={lab} con={con} lib={lib} grn={grn} from {texts[:8]}", file=sys.stderr)
                 continue
 
             # Sanity check
             if not (8<=ref<=45 and 10<=lab<=50 and 5<=con<=45 and 3<=lib<=30 and 3<=grn<=30):
+                if debug_count <= 8: print(f"  SKIP: sanity fail ref={ref} lab={lab} con={con} lib={lib} grn={grn}", file=sys.stderr)
                 continue
+
+            print(f"  FOUND: {pollster} {date_str} Ref{ref} Lab{lab} Con{con} LD{lib} Grn{grn} n={n}", file=sys.stderr)
 
             all_polls.append({
                 'pollster': pollster,
