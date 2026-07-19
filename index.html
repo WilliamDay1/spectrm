@@ -2876,12 +2876,20 @@ function renderPollsTable(){
     '<th style="text-align:right;padding:6px 0 8px 4px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">n</th>'+
     '</tr></thead><tbody id="poll-tbody">';
 
-  RECENT_POLLS.forEach(function(p,i){hdr+=makeRow(p,i,i>=5);});
+  // Show most recent poll per pollster, sorted newest first
+  var seenPollsters={};
+  var dedupedPolls=RECENT_POLLS.filter(function(p){
+    if(seenPollsters[p.pollster])return false;
+    seenPollsters[p.pollster]=true;
+    return true;
+  });
+
+  dedupedPolls.forEach(function(p,i){hdr+=makeRow(p,i,i>=5);});
   hdr+='</tbody></table>';
   hdr+='<div id="poll-expand-row"></div>';
   hdr+='<div style="margin-top:8px;display:flex;align-items:center;justify-content:space-between">'+
-    '<span style="font-size:10px;color:var(--tm);font-style:italic">Click any row to view as chart · BPC-registered pollsters</span>'+
-    '<button id="poll-show-more" onclick="toggleMorePolls(this)" style="background:none;border:.5px solid var(--bd);border-radius:6px;padding:4px 12px;font-size:11px;cursor:pointer;color:var(--ts);font-family:inherit">Show '+( RECENT_POLLS.length-5)+' more ↓</button>'+
+    '<span style="font-size:10px;color:var(--tm);font-style:italic">Click any row to view as chart \xb7 BPC-registered pollsters</span>'+
+    (dedupedPolls.length>5?'<button id="poll-show-more" onclick="toggleMorePolls(this)" style="background:none;border:.5px solid var(--bd);border-radius:6px;padding:4px 12px;font-size:11px;cursor:pointer;color:var(--ts);font-family:inherit">Show '+(dedupedPolls.length-5)+' more \u2193</button>':'')+
   '</div>';
 
   pt.innerHTML=hdr;
