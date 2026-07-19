@@ -1,46 +1,240 @@
 {
-  "generated": "2026-07-19T08:02:31Z",
+  "generated": "2026-07-19T11:33:50Z",
   "monthly_history": {
     "labels": [
-      "Nov 24"
+      "May 25",
+      "Jun 25",
+      "Jul 25",
+      "Aug 25",
+      "Sep 25",
+      "Nov 25",
+      "Dec 25",
+      "Jan 26",
+      "Feb 26",
+      "Mar 26",
+      "Apr 26",
+      "May 26",
+      "Jun 26"
     ],
     "ref": [
-      34.0
+      10.5,
+      15.7,
+      27.6,
+      25.5,
+      20.6,
+      25.0,
+      11.7,
+      16.6,
+      15.1,
+      19.2,
+      9.3,
+      21.0,
+      26.0
     ],
     "lab": [
-      21.0
+      26.0,
+      26.7,
+      22.6,
+      23.5,
+      26.4,
+      16.0,
+      26.0,
+      25.0,
+      23.9,
+      24.2,
+      30.7,
+      30.7,
+      27.0
     ],
     "con": [
-      18.0
+      12.5,
+      13.3,
+      17.0,
+      15.5,
+      13.8,
+      13.0,
+      17.0,
+      14.4,
+      13.5,
+      16.0,
+      11.7,
+      15.0,
+      19.0
     ],
     "grn": [
-      7.0
+      6.5,
+      7.3,
+      8.8,
+      6.5,
+      8.2,
+      18.0,
+      11.7,
+      9.6,
+      10.5,
+      13.6,
+      8.0,
+      9.0,
+      11.0
     ],
     "lib": [
-      21.0
+      18.0,
+      17.3,
+      12.2,
+      13.0,
+      14.7,
+      13.0,
+      17.3,
+      15.2,
+      14.2,
+      12.6,
+      18.3,
+      12.0,
+      11.0
     ]
   },
   "recent_polls": [
     {
+      "pollster": "BMG",
+      "date": "23 Jun 26",
+      "n": 1508,
+      "ref": 26,
+      "lab": 27,
+      "con": 19,
+      "lib": 11,
+      "grn": 11,
+      "client": "",
+      "src": "bmgresearch.co.uk"
+    },
+    {
+      "pollster": "Norstat",
+      "date": "27 May 26",
+      "n": 519,
+      "ref": 9,
+      "lab": 34,
+      "con": 10,
+      "lib": 17,
+      "grn": 10,
+      "client": "",
+      "src": "norstat.co.uk"
+    },
+    {
+      "pollster": "More in Common",
+      "date": "15 May 26",
+      "n": 2599,
+      "ref": 27,
+      "lab": 30,
+      "con": 20,
+      "lib": 11,
+      "grn": 7,
+      "client": "",
+      "src": "moreincommon.org.uk"
+    },
+    {
+      "pollster": "Deltapoll",
+      "date": "15 May 26",
+      "n": 1921,
+      "ref": 27,
+      "lab": 28,
+      "con": 15,
+      "lib": 8,
+      "grn": 10,
+      "client": "",
+      "src": "deltapoll.co.uk"
+    },
+    {
+      "pollster": "Norstat",
+      "date": "27 Apr 26",
+      "n": 520,
+      "ref": 10,
+      "lab": 29,
+      "con": 14,
+      "lib": 18,
+      "grn": 8,
+      "client": "",
+      "src": "norstat.co.uk"
+    },
+    {
       "pollster": "Survation",
-      "client": "Survation &#91; 565 &#93;",
-      "date": "14 Nov 24",
-      "n": 1007,
-      "ref": 34,
-      "lab": 21,
-      "con": 18,
+      "date": "14 Apr 26",
+      "n": 521,
+      "ref": 8,
+      "lab": 31,
+      "con": 10,
       "lib": 21,
       "grn": 7,
+      "client": "",
       "src": "survation.com"
+    },
+    {
+      "pollster": "Norstat",
+      "date": "1 Apr 26",
+      "n": 522,
+      "ref": 10,
+      "lab": 32,
+      "con": 11,
+      "lib": 16,
+      "grn": 9,
+      "client": "",
+      "src": "norstat.co.uk"
+    },
+    {
+      "pollster": "Ipsos",
+      "date": "26 Mar 26",
+      "n": 523,
+      "ref": 8,
+      "lab": 37,
+      "con": 11,
+      "lib": 18,
+      "grn": 9,
+      "client": "",
+      "src": "ipsos.com"
+    },
+    {
+      "pollster": "YouGov",
+      "date": "12 Mar 26",
+      "n": 557,
+      "ref": 29,
+      "lab": 12,
+      "con": 24,
+      "lib": 5,
+      "grn": 14,
+      "client": "",
+      "src": "yougov.com"
+    },
+    {
+      "pollster": "Ashcroft",
+      "date": "6 Mar 26",
+      "n": 525,
+      "ref": 8,
+      "lab": 36,
+      "con": 10,
+      "lib": 16,
+      "grn": 12,
+      "client": "",
+      "src": "lordashcroftpolls.com"
     }
   ],
   "leader_approval": [
     {
       "name": "Kemi Badenoch",
-      "approve": 42,
-      "disapprove": 37,
-      "net": 5,
+      "approve": 25,
+      "disapprove": 14,
+      "net": 11,
       "src": " \u00b7 14 Jan 25"
+    },
+    {
+      "name": "Andy Burnham",
+      "approve": 15,
+      "disapprove": 27,
+      "net": -12,
+      "src": "Opinium \u00b7 15 Jul 26"
+    },
+    {
+      "name": "Keir Starmer",
+      "approve": 21,
+      "disapprove": 21,
+      "net": 0,
+      "src": "YouGov \u00b7 21 Jun 26"
     }
   ]
 }
