@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-18T10:47:54Z",
+    "updated": "2026-07-19T11:00:07Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Is Burnham promising a new dawn for North Sea oil and gas?",
+      "date": "19 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c4g3l22ry6wo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "2",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Digital ID plan to be scrapped in Burnham's first major policy pledge",
+      "date": "19 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c5y08z25q8eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "3",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Here be dragons: does moving power to the north work?",
+      "date": "19 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/19/here-be-dragons-does-moving-power-to-the-north-work"
+    },
+    {
+      "id": "4",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Can Burnham's casual style survive contact with No 10?",
+      "date": "19 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgq2qr9gxdo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "5",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to scrap Starmer\u2019s digital ID scheme in \u2018reset of priorities\u2019",
+      "date": "18 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/18/burnham-to-scrap-starmers-digital-id-scheme-in-reset-of-priorities"
+    },
+    {
+      "id": "6",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham risks Labour backlash if he reverses ban on new oil and gas drilling",
+      "date": "18 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/18/burnham-expected-to-reverse-ban-on-new-oil-and-gas-drilling"
+    },
+    {
+      "id": "7",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham is 'people pleaser' with 'airy fairy' plans, says Kemi Badenoch",
+      "date": "18 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c304l24m0leo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "8",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "UK tech advocates alarmed by Burnham plan to scrap technology department",
+      "date": "18 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/18/burnham-plan-to-scrap-technology-department-triggers-backlash"
+    },
+    {
+      "id": "9",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham considers radical shake-up to cut energy bills",
+      "date": "18 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/money/2026/jul/18/andy-burnham-cut-energy-bills-gas-heat-pumps"
+    },
+    {
+      "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Poultry sector growth plan risks UK national security, campaigners warn",
       "date": "18 Jul 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/environment/2026/jul/18/poultry-sector-growth-plan-uk-national-food-security-supply-chain"
-    },
-    {
-      "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham must shift UK mood on racism, chair of Operation Black Vote says",
-      "date": "18 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/jul/18/andy-burnham-shift-uk-mood-racism-operation-black-vote"
-    },
-    {
-      "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to announce plans for new North Sea oil and gas drilling",
-      "date": "18 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c935yx2z9d4o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Six political headaches Andy Burnham must tackle in his first weeks as PM",
-      "date": "18 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/18/andy-burnham-six-political-headaches-first-weeks-pm"
-    },
-    {
-      "id": "5",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage\u2019s furious clash with Times editor stuns figures close to him",
-      "date": "18 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/18/nigel-farage-clash-times-editor-reform"
-    },
-    {
-      "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Lib Dems urge FA and Uefa to withdraw from Fifa",
-      "date": "18 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ce3qw4lq1d7o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "7",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Clacton by-election attracts 34 candidates",
-      "date": "17 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckge923jk3vo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Labour pins hopes on Burnham reboot as he plans policy blitz",
-      "date": "17 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjd45xmexnyo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham promises to end Labour infighting as he becomes party\u2019s leader",
-      "date": "17 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/17/andy-burnham-becomes-labour-leader-final-step-towards-uk-pm"
-    },
-    {
-      "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Jeffrey Donaldson to appeal against conviction for child sexual offences",
-      "date": "17 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/17/jeffrey-donaldson-to-appeal-against-conviction-for-child-sexual-offences"
     }
   ]
 }
