@@ -108,7 +108,13 @@ def parse_vi_polls(html):
             print(f"  T{ti}R{ri}: {texts}", file=sys.stderr)
 
     all_polls = []
-    active_col = None  # column map carried across tables
+    active_col = None
+
+    # Debug: print actual lowercased cell content for T1 header row
+    if len(tables) > 1:
+        for ri, row in enumerate(tables[1][:3]):
+            raw_cells = [strip_tags(c).lower().strip() for c in row]
+            print(f"  T1R{ri} stripped: {raw_cells}", file=sys.stderr)
 
     for ti, table in enumerate(tables):
         # Try to detect a VI column header in this table
