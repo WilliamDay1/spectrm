@@ -117,7 +117,7 @@ def parse_vi(html):
     print(f"  Using hardcoded cols: {col}", file=sys.stderr)
 
     polls = []
-    cur_yr = None
+    cur_yr = datetime.utcnow().year  # default to current year
 
     for r in all_rows:
         cells = row_cells(r)
@@ -163,12 +163,12 @@ def parse_vi(html):
         n_idx = col.get('n')
         if n_idx is not None and n_idx < len(cells):
             raw_n = re.sub(r'[^0-9]', '', cells[n_idx])
-            if raw_n and 500 <= int(raw_n) <= 5000:
+            if raw_n and 500 <= int(raw_n) <= 6000:
                 n = int(raw_n)
         if not n:
             for c in cells:
                 raw_n = re.sub(r'[^0-9]', '', c)
-                if raw_n and 500 <= int(raw_n) <= 5000:
+                if raw_n and 500 <= int(raw_n) <= 6000:
                     n = int(raw_n); break
         if not n: continue
 
