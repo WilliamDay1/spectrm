@@ -57,7 +57,8 @@ def strip_tags(s):
     return s.strip()
 
 def clean_pct(s):
-    s = re.sub(r'[^0-9.]', '', strip_tags(s))
+    s = strip_tags(s).replace('%','').replace('−','-').strip()
+    s = re.sub(r'[^0-9.]', '', s)
     try: return round(float(s))
     except: return None
 
@@ -153,38 +154,51 @@ def parse_vi_polls(html):
             if len([c for c in row if strip_tags(c).strip()]) < 4:
                 continue
 
-            # Pollster
+            # Pollster — strip trailing footnote numbers e.g. "Find Out Now 164" -> "Find Out Now"
             pollster = None
             for ci in range(min(4, len(texts))):
+                # Strip footnote reference numbers from end of pollster name
+                clean = re.sub(r'\s*\d+$', '', texts[ci]).strip()
                 for known in KNOWN_POLLSTERS:
-                    if known.lower() in texts[ci].lower():
+                    if known.lower() in clean.lower():
                         pollster = known; break
                 if pollster: break
             if not pollster:
-                p_idx = col.get('pollster', 0)
+                p_idx = col.get('pollster', 1)
                 raw = texts[p_idx] if p_idx < len(texts) else texts[0]
+                raw = re.sub(r'\s*\d+$', '', raw).strip()
                 if 2 < len(raw) < 35 and raw[0].isupper():
                     pollster = raw
                 else:
                     continue
 
-            # Date
+            # Date — Wikipedia often omits year; infer from context
             sort_key, date_str = None, None
-            d_idx = col.get('date', 2)
-            if d_idx < len(texts):
-                sort_key, date_str = parse_date(texts[d_idx])
+            d_idx = col.get('date', 0)
+            date_text = texts[d_idx] if d_idx < len(texts) else ''
+            # Try with year first
+            sk, ds = parse_date(date_text)
+            if sk and sk > 20240704:
+                sort_key, date_str = sk, ds
+            # If no year in date cell, try scanning all cells
             if not sort_key:
                 for c in texts:
                     sk, ds = parse_date(c)
                     if sk and sk > 20240704:
                         sort_key, date_str = sk, ds; break
+            # If still no year, try appending recent years to the date
+            if not sort_key and date_text:
+                for yr in ['2026', '2025', '2024']:
+                    sk, ds = parse_date(date_text + ' ' + yr)
+                    if sk and sk > 20240704:
+                        sort_key, date_str = sk, ds; break
             if not sort_key:
                 continue
 
-            # Sample 500-5000
+            # Sample 500-5000 (strip commas from numbers like 2,930)
             n = None
             n_idx = col.get('n')
-            if n_idx and n_idx < len(texts):
+            if n_idx is not None and n_idx < len(texts):
                 raw = re.sub(r'[^0-9]','',texts[n_idx])
                 if raw and 500 <= int(raw) <= 5000:
                     n = int(raw)
