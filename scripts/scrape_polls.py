@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Scrapes UK VI polls from Wikipedia parsed HTML.
+Scrapes UK VI polls from Wikipedia.
+Uses a direct regex approach on the raw HTML rather than table parsing.
 """
 import json, re, sys
 from datetime import datetime
@@ -34,7 +35,7 @@ KNOWN_POLLSTERS = [
     'YouGov','More in Common','Opinium','Survation','Savanta',
     'Ipsos','JL Partners','Find Out Now','Ashcroft','Redfield',
     'BMG','Deltapoll','Techne','Norstat','Panelbase','Number Cruncher',
-    'Freshwater','Omnisis','Focaldata','Brains','Savanta',
+    'Freshwater','Omnisis','Focaldata','Brains',
 ]
 POLLSTER_SRCS = {
     'YouGov':'yougov.com','More in Common':'moreincommon.org.uk',
@@ -62,14 +63,24 @@ def clean_pct(s):
     try: return round(float(s))
     except: return None
 
-def parse_date(s):
+def parse_date(s, default_year=None):
     s = strip_tags(s).replace('–','-').replace('—','-')
+    # Full date with year
     m = re.search(r'(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s+([A-Za-z]+)\s+(\d{4})', s)
     if m:
         d, mon, yr = int(m.group(1)), m.group(2).lower()[:3], int(m.group(3))
         mo = MONTH_MAP.get(mon, 0)
         if mo and yr >= 2024:
             return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
+    # Date without year — try default_year
+    m = re.search(r'(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s+([A-Za-z]+)', s)
+    if m and default_year:
+        d, mon = int(m.group(1)), m.group(2).lower()[:3]
+        mo = MONTH_MAP.get(mon, 0)
+        if mo:
+            yr = default_year
+            return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
+    # Month + year only
     m = re.search(r'([A-Za-z]+)\s+(\d{4})', s)
     if m:
         mon, yr = m.group(1).lower()[:3], int(m.group(2))
@@ -85,198 +96,156 @@ def get_wiki_html(page):
     }))
     return data.get("parse",{}).get("text",{}).get("*","")
 
-def extract_tables(html):
-    tables = []
-    for table_html in re.findall(r'<table[^>]*>(.*?)</table>', html, re.DOTALL):
-        rows = []
-        for row_html in re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL):
-            cells = re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row_html, re.DOTALL)
-            if cells:
-                rows.append(cells)
-        if rows:
-            tables.append(rows)
-    return tables
+def get_row_cells(row_html):
+    """Extract all td/th cell contents from a row, handling colspan by repeating."""
+    cells = []
+    for m in re.finditer(r'<t[dh]([^>]*)>(.*?)</t[dh]>', row_html, re.DOTALL):
+        attrs, content = m.group(1), m.group(2)
+        text = strip_tags(content)
+        # Handle colspan
+        cs = re.search(r'colspan=["\']?(\d+)["\']?', attrs)
+        repeat = int(cs.group(1)) if cs else 1
+        for _ in range(repeat):
+            cells.append(text)
+    return cells
 
 def parse_vi_polls(html):
-    tables = extract_tables(html)
-    print(f"  Found {len(tables)} tables total", file=sys.stderr)
+    """
+    Parse all <tr> rows from the page, looking for rows that match
+    the VI poll pattern: date | pollster | client | area | sample | Lab% | Con% | Ref% | LD% | Grn%
+    """
+    all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+    print(f"  Total <tr> rows in page: {len(all_rows)}", file=sys.stderr)
 
-    # Debug: print first 3 rows of first 10 tables
-    for ti, table in enumerate(tables[:10]):
-        for ri, row in enumerate(table[:3]):
-            texts = [strip_tags(c)[:25] for c in row]
-            print(f"  T{ti}R{ri}: {texts}", file=sys.stderr)
+    # Find column map from header rows
+    col = {}
+    for row_html in all_rows:
+        cells = get_row_cells(row_html)
+        texts_lower = [c.lower().strip() for c in cells]
+        found = {}
+        for i, t in enumerate(texts_lower):
+            if t in ('ref', 'reform uk', 'reform'): found['ref'] = i
+            if t in ('lab', 'labour'): found['lab'] = i
+            if t in ('con', 'conservative'): found['con'] = i
+            if t in ('ld', 'lib dem', 'lib dems', 'liberal democrat'): found['lib'] = i
+            if t in ('grn', 'green'): found['grn'] = i
+            if 'sample' in t or t == 'n': found['n'] = i
+            if 'conducted' in t or 'fieldwork' in t or t == 'date': found['date'] = i
+            if t in ('pollster', 'firm', 'polling firm'): found['pollster'] = i
+        if all(k in found for k in ['ref','lab','con','lib','grn']):
+            col = found
+            print(f"  Column map found: {col}", file=sys.stderr)
+            print(f"  Header row: {cells}", file=sys.stderr)
+            break
 
-    all_polls = []
-    active_col = None
+    if not col:
+        print("  ERROR: could not find column headers", file=sys.stderr)
+        # Try to infer from a known data row pattern
+        return []
 
-    # Debug: print actual lowercased cell content for T1 header row
-    if len(tables) > 1:
-        for ri, row in enumerate(tables[1][:3]):
-            raw_cells = [strip_tags(c).lower().strip() for c in row]
-            print(f"  T1R{ri} stripped: {raw_cells}", file=sys.stderr)
+    polls = []
+    current_year = None
 
-    for ti, table in enumerate(tables):
-        # Try to detect a VI column header in this table
-        col = {}
-        for row in table[:5]:
-            texts = [strip_tags(c).lower() for c in row]
-            for i, t in enumerate(texts):
-                t_strip = t.strip()
-                if t_strip in ['ref','reform'] and 'ref' not in col:
-                    col['ref'] = i
-                if t_strip in ['lab','labour'] and 'lab' not in col:
-                    col['lab'] = i
-                if t_strip in ['con','conserv','conservative'] and 'con' not in col:
-                    col['con'] = i
-                if t_strip in ['ld','lib dem','liberal democrat','lib dems'] and 'lib' not in col:
-                    col['lib'] = i
-                if t_strip in ['grn','green'] and 'grn' not in col:
-                    col['grn'] = i
-                if any(x in t_strip for x in ['sample','size']) and 'n' not in col:
-                    col['n'] = i
-                if any(x in t_strip for x in ['date','fieldwork','conducted']) and 'date' not in col:
-                    col['date'] = i
-                if t_strip in ['pollster','firm','poll','company'] and 'pollster' not in col:
-                    col['pollster'] = i
-            if all(k in col for k in ['ref','lab','con']):
-                break
-
-        if all(k in col for k in ['ref','lab','con']):
-            active_col = col
-            print(f"  VI header found at T{ti}, cols={col}", file=sys.stderr)
-
-        # Use active_col if we have one
-        if not active_col:
+    for row_html in all_rows:
+        cells = get_row_cells(row_html)
+        if len(cells) < 6:
             continue
 
-        col = active_col
-        debug_count = 0
+        # Detect year rows (Wikipedia uses year as section header in tables)
+        joined = ' '.join(cells).strip()
+        yr_m = re.match(r'^(202[4-9])\s*$', joined)
+        if yr_m:
+            current_year = int(yr_m.group(1))
+            continue
 
-        for row in table:
-            texts = [strip_tags(c) for c in row]
-            if len(texts) < 5:
-                continue
+        # Skip if no % signs (header/spacer rows)
+        if '%' not in joined:
+            continue
 
-            # Skip header rows (no % and no digits)
-            raw_joined = ''.join(texts)
-            has_pct = '%' in raw_joined
-            has_digit = any(c.isdigit() for c in raw_joined)
-            if not has_pct and not has_digit:
-                continue
-            if len([t for t in texts if t.strip()]) < 4:
-                continue
+        # Get party values using column map
+        def gcol(k, default=None):
+            idx = col.get(k, default)
+            if idx is not None and idx < len(cells):
+                return clean_pct(cells[idx])
+            return None
 
-            if debug_count < 5:
-                print(f"  T{ti}ROW{debug_count}: {texts[:6]}", file=sys.stderr)
-                debug_count += 1
+        ref = gcol('ref')
+        lab = gcol('lab')
+        con = gcol('con')
+        lib = gcol('lib')
+        grn = gcol('grn')
 
-            # Pollster — strip trailing footnote numbers e.g. "Find Out Now 164" -> "Find Out Now"
-            pollster = None
-            for ci in range(min(4, len(texts))):
-                # Strip footnote reference numbers from end of pollster name
-                clean = re.sub(r'\s*\d+$', '', texts[ci]).strip()
-                for known in KNOWN_POLLSTERS:
-                    if known.lower() in clean.lower():
-                        pollster = known; break
-                if pollster: break
-            if not pollster:
-                p_idx = col.get('pollster', 1)
-                raw = texts[p_idx] if p_idx < len(texts) else texts[0]
-                raw = re.sub(r'\s*\d+$', '', raw).strip()
-                if 2 < len(raw) < 35 and raw[0].isupper():
-                    pollster = raw
-                else:
-                    continue
+        if not all([ref, lab, con, lib, grn]):
+            continue
 
-            # Date — Wikipedia often omits year; infer from context
-            sort_key, date_str = None, None
-            d_idx = col.get('date', 0)
-            date_text = texts[d_idx] if d_idx < len(texts) else ''
-            # Try with year first
-            sk, ds = parse_date(date_text)
-            if sk and sk > 20240704:
-                sort_key, date_str = sk, ds
-            # If no year in date cell, try scanning all cells
-            if not sort_key:
-                for c in texts:
-                    sk, ds = parse_date(c)
-                    if sk and sk > 20240704:
-                        sort_key, date_str = sk, ds; break
-            # If still no year, try appending recent years to the date
-            if not sort_key and date_text:
-                for yr in ['2026', '2025', '2024']:
-                    sk, ds = parse_date(date_text + ' ' + yr)
-                    if sk and sk > 20240704:
-                        sort_key, date_str = sk, ds; break
-            if not sort_key:
-                if debug_count <= 8: print(f"  SKIP: no date for {texts[:3]}", file=sys.stderr)
-                continue
+        # Sanity check on values
+        if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30):
+            continue
 
-            # Sample 500-5000 (strip commas from numbers like 2,930)
-            n = None
-            n_idx = col.get('n')
-            if n_idx is not None and n_idx < len(texts):
-                raw = re.sub(r'[^0-9]','',texts[n_idx])
+        # Get date
+        d_idx = col.get('date', 0)
+        date_text = cells[d_idx] if d_idx < len(cells) else ''
+        sort_key, date_str = parse_date(date_text, current_year)
+        if not sort_key:
+            for c in cells:
+                sort_key, date_str = parse_date(c, current_year)
+                if sort_key: break
+        if not sort_key:
+            continue
+
+        # Get sample
+        n = None
+        n_idx = col.get('n')
+        if n_idx is not None and n_idx < len(cells):
+            raw = re.sub(r'[^0-9]','',cells[n_idx])
+            if raw and 500 <= int(raw) <= 5000:
+                n = int(raw)
+        if not n:
+            for c in cells:
+                raw = re.sub(r'[^0-9]','',c)
                 if raw and 500 <= int(raw) <= 5000:
-                    n = int(raw)
-            if not n:
-                for c in texts:
-                    raw = re.sub(r'[^0-9]','',c)
-                    if raw and 500 <= int(raw) <= 5000:
-                        n = int(raw); break
-            if not n:
-                if debug_count <= 8: print(f"  SKIP: no sample for {texts[:5]}", file=sys.stderr)
+                    n = int(raw); break
+        if not n:
+            continue
+
+        # Get pollster
+        pollster = None
+        p_idx = col.get('pollster', 1)
+        for ci in range(min(4, len(cells))):
+            clean = re.sub(r'\s*\[?\d+\]?\s*$', '', cells[ci]).strip()
+            for known in KNOWN_POLLSTERS:
+                if known.lower() in clean.lower():
+                    pollster = known; break
+            if pollster: break
+        if not pollster:
+            raw = cells[p_idx] if p_idx < len(cells) else cells[1]
+            raw = re.sub(r'\s*\[?\d+\]?\s*$', '', raw).strip()
+            if 2 < len(raw) < 35 and raw[0].isupper():
+                pollster = raw
+            else:
                 continue
 
-            # Party values
-            def get_col(k):
-                idx = col.get(k)
-                if idx is not None and idx < len(texts):
-                    return clean_pct(texts[idx])
-                return None
+        polls.append({
+            'pollster': pollster,
+            'client': cells[col.get('pollster',1)+1][:40] if col.get('pollster',1)+1 < len(cells) else '',
+            'date': date_str,
+            'sort_key': sort_key,
+            'n': n,
+            'ref':ref,'lab':lab,'con':con,'lib':lib,'grn':grn,
+            'src': POLLSTER_SRCS.get(pollster,''),
+        })
 
-            ref = get_col('ref')
-            lab = get_col('lab')
-            con = get_col('con')
-            lib = get_col('lib')
-            grn = get_col('grn')
+    print(f"  Raw polls found: {len(polls)}", file=sys.stderr)
+    if polls:
+        for p in polls[:3]:
+            print(f"  {p['pollster']} {p['date']}: Ref{p['ref']} Lab{p['lab']} Con{p['con']} LD{p['lib']} Grn{p['grn']} n={p['n']}", file=sys.stderr)
 
-            # Fallback: scan all cells for 5 consecutive plausible % values
-            if not all([ref, lab, con, lib, grn]):
-                nums = [v for c in texts if (v:=clean_pct(c)) is not None and 3 <= v <= 55]
-                for i in range(len(nums)):
-                    sub = nums[i:i+5]
-                    if len(sub)==5 and 60 <= sum(sub) <= 115:
-                        ref,lab,con,lib,grn = sub; break
-
-            if not all([ref, lab, con, lib, grn]):
-                if debug_count <= 8: print(f"  SKIP: missing vals ref={ref} lab={lab} con={con} lib={lib} grn={grn} from {texts[:8]}", file=sys.stderr)
-                continue
-
-            # Sanity check
-            if not (8<=ref<=45 and 10<=lab<=50 and 5<=con<=45 and 3<=lib<=30 and 3<=grn<=30):
-                if debug_count <= 8: print(f"  SKIP: sanity fail ref={ref} lab={lab} con={con} lib={lib} grn={grn}", file=sys.stderr)
-                continue
-
-            print(f"  FOUND: {pollster} {date_str} Ref{ref} Lab{lab} Con{con} LD{lib} Grn{grn} n={n}", file=sys.stderr)
-
-            all_polls.append({
-                'pollster': pollster,
-                'client': texts[1][:40] if len(texts)>1 else '',
-                'date': date_str,
-                'sort_key': sort_key,
-                'n': n,
-                'ref':ref,'lab':lab,'con':con,'lib':lib,'grn':grn,
-                'src': POLLSTER_SRCS.get(pollster,''),
-            })
-
+    # Deduplicate newest-first
     seen, unique = set(), []
-    for p in sorted(all_polls, key=lambda x: -x['sort_key']):
+    for p in sorted(polls, key=lambda x: -x['sort_key']):
         k = (p['pollster'], p['sort_key'])
         if k not in seen:
             seen.add(k); unique.append(p)
-
     return unique[:50]
 
 def build_monthly_history(polls):
@@ -295,45 +264,50 @@ def build_monthly_history(polls):
     return {'labels':labels,'ref':ref_a,'lab':lab_a,'con':con_a,'grn':grn_a,'lib':lib_a}
 
 def parse_leader_approval(html):
-    tables = extract_tables(html)
+    all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
     results = {}
     current_leader = None
 
     for heading in re.findall(r'<h[2-4][^>]*>(.*?)</h[2-4]>', html, re.DOTALL):
         ht = strip_tags(heading)
         for name in LEADER_MAP:
-            if name.split()[-1] in ht:
+            if name.split()[-1] in ht and name.split()[0] in ht:
                 current_leader = name
 
-    for table in tables:
-        for row in table:
-            texts = [strip_tags(c) for c in row]
-            full = ' '.join(texts)
-            for name in LEADER_MAP:
-                if name.split()[-1] in full and len(full) < 80:
-                    current_leader = name; break
-            if not current_leader or len(texts) < 3:
-                continue
-            sort_key, date_str = None, None
-            for c in texts:
-                sk, ds = parse_date(c)
-                if sk and sk > 20240700:
-                    sort_key, date_str = sk, ds; break
-            if not sort_key:
-                continue
-            pollster = ''
-            for c in texts:
-                for known in KNOWN_POLLSTERS:
-                    if known.lower() in c.lower():
-                        pollster = known; break
-                if pollster: break
-            nums = [v for c in texts if (v:=clean_pct(c)) is not None and 10<=v<=80]
-            if len(nums) < 2: continue
-            approve, disapprove = nums[0], nums[1]
-            if approve+disapprove > 130: continue
-            if current_leader not in results or sort_key > results[current_leader]['sort_key']:
-                results[current_leader] = {'sort_key':sort_key,'date':date_str,
-                    'pollster':pollster,'approve':approve,'disapprove':disapprove}
+    for row_html in all_rows:
+        cells = get_row_cells(row_html)
+        full = ' '.join(cells)
+
+        for name in LEADER_MAP:
+            if name.split()[-1] in full and len(full) < 100:
+                current_leader = name; break
+
+        if not current_leader or len(cells) < 3:
+            continue
+
+        sort_key, date_str = None, None
+        for c in cells:
+            sk, ds = parse_date(c)
+            if sk and sk > 20240700:
+                sort_key, date_str = sk, ds; break
+        if not sort_key:
+            continue
+
+        pollster = ''
+        for c in cells:
+            for known in KNOWN_POLLSTERS:
+                if known.lower() in c.lower():
+                    pollster = known; break
+            if pollster: break
+
+        nums = [v for c in cells if (v:=clean_pct(c)) is not None and 10<=v<=80]
+        if len(nums) < 2: continue
+        approve, disapprove = nums[0], nums[1]
+        if approve+disapprove > 130: continue
+
+        if current_leader not in results or sort_key > results[current_leader]['sort_key']:
+            results[current_leader] = {'sort_key':sort_key,'date':date_str,
+                'pollster':pollster,'approve':approve,'disapprove':disapprove}
 
     output = []
     for name, r in results.items():
@@ -352,14 +326,11 @@ def main():
     print(f"  HTML: {len(vi_html)} chars", file=sys.stderr)
 
     polls = parse_vi_polls(vi_html)
-    print(f"  Total: {len(polls)} polls", file=sys.stderr)
+    print(f"  Total unique polls: {len(polls)}", file=sys.stderr)
 
     if not polls:
         print("ERROR: no polls parsed", file=sys.stderr)
         sys.exit(1)
-
-    for p in polls[:5]:
-        print(f"  {p['pollster']} {p['date']}: Ref{p['ref']} Lab{p['lab']} Con{p['con']} LD{p['lib']} Grn{p['grn']} n={p['n']}", file=sys.stderr)
 
     monthly = build_monthly_history(polls)
     print(f"  Monthly: {monthly['labels']}", file=sys.stderr)
