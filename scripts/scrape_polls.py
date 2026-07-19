@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Scrapes UK VI polls from Wikipedia.
-Straightforward approach: find all <tr> rows, detect header, extract data.
 """
 import json, re, sys
 from datetime import datetime
@@ -48,7 +47,6 @@ LEADER_MAP = {
 }
 
 def st(s):
-    """Strip all HTML tags and entities, return clean text."""
     s = re.sub(r'<[^>]+>', ' ', s)
     s = re.sub(r'&[a-zA-Z]+;', ' ', s)
     s = re.sub(r'&#\d+;', ' ', s)
@@ -78,8 +76,14 @@ def parse_date(s, yr=None):
     return None,None
 
 def get_wiki_html(page):
-    data = json.loads(fetch("https://en.wikipedia.org/w/api.php",
-        f"action=parse&page={urllib.parse.quote(page)}&prop=text&format=json&disablelimitreport=1"))
+    # FIX: pass params as dict, not string
+    data = json.loads(fetch("https://en.wikipedia.org/w/api.php", {
+        "action": "parse",
+        "page": page,
+        "prop": "text",
+        "format": "json",
+        "disablelimitreport": "1"
+    }))
     return data.get("parse",{}).get("text",{}).get("*","")
 
 def row_cells(row_html):
@@ -92,7 +96,6 @@ def parse_vi(html):
     rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
     print(f"  Total rows: {len(rows)}", file=sys.stderr)
 
-    # Find header row
     col = None
     for i,r in enumerate(rows):
         cells = [c.lower().strip() for c in row_cells(r)]
@@ -109,11 +112,9 @@ def parse_vi(html):
         if all(k in c for k in ['ref','lab','con','lib','grn']):
             col=c
             print(f"  Header at row {i}: {col}", file=sys.stderr)
-            print(f"  Raw header: {[cc.lower().strip() for cc in row_cells(r)]}", file=sys.stderr)
             break
 
     if not col:
-        # Print first 20 rows' cells to debug
         print("  HEADER NOT FOUND. First 20 rows:", file=sys.stderr)
         for i,r in enumerate(rows[:20]):
             cells = row_cells(r)
@@ -127,7 +128,6 @@ def parse_vi(html):
         cells = row_cells(r)
         raw = ' '.join(cells)
 
-        # Year heading row
         ym = re.match(r'^(202\d)\s*$', raw.strip())
         if ym: cur_yr = int(ym.group(1)); continue
 
@@ -142,7 +142,6 @@ def parse_vi(html):
         if not all(v is not None for v in [ref,lab,con,lib,grn]): continue
         if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30): continue
 
-        # Date
         d_idx = col.get('date',0)
         dtxt = cells[d_idx] if d_idx < len(cells) else ''
         sk,ds = parse_date(dtxt, cur_yr)
@@ -152,7 +151,6 @@ def parse_vi(html):
                 if sk: break
         if not sk: continue
 
-        # Sample
         n=None
         n_idx=col.get('n')
         if n_idx is not None and n_idx<len(cells):
@@ -164,7 +162,6 @@ def parse_vi(html):
                 if raw_n and 500<=int(raw_n)<=5000: n=int(raw_n); break
         if not n: continue
 
-        # Pollster
         pollster=None
         for ci in range(min(4,len(cells))):
             clean=re.sub(r'\s*\[?\d+\]?$','',cells[ci]).strip()
