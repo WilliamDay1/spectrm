@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T11:33:50Z",
+  "generated": "2026-07-19T12:15:23Z",
   "monthly_history": {
     "labels": [
       "May 25",
@@ -216,13 +216,6 @@
   ],
   "leader_approval": [
     {
-      "name": "Kemi Badenoch",
-      "approve": 25,
-      "disapprove": 14,
-      "net": 11,
-      "src": " \u00b7 14 Jan 25"
-    },
-    {
       "name": "Andy Burnham",
       "approve": 15,
       "disapprove": 27,
@@ -235,6 +228,41 @@
       "disapprove": 21,
       "net": 0,
       "src": "YouGov \u00b7 21 Jun 26"
+    },
+    {
+      "name": "Kemi Badenoch",
+      "approve": 25,
+      "disapprove": 14,
+      "net": 11,
+      "src": " \u00b7 14 Jan 25"
+    },
+    {
+      "name": "Nigel Farage",
+      "approve": 28,
+      "disapprove": 58,
+      "net": -30,
+      "src": "YouGov \u00b7 Jun 2026"
+    },
+    {
+      "name": "Ed Davey",
+      "approve": 32,
+      "disapprove": 44,
+      "net": -12,
+      "src": "YouGov \u00b7 Jun 2026"
+    },
+    {
+      "name": "Zack Polanski",
+      "approve": 29,
+      "disapprove": 38,
+      "net": -9,
+      "src": "YouGov \u00b7 Jun 2026"
+    },
+    {
+      "name": "Angela Rayner",
+      "approve": 21,
+      "disapprove": 51,
+      "net": -30,
+      "src": "Opinium \u00b7 Jun 2026"
     }
   ]
 }
