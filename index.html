@@ -959,7 +959,7 @@ async function maybeUpdateLeaders(){
   });
 }
 async function loadLiveData(){
-  await Promise.all([maybeUpdateEconomic(),maybeUpdateNews(),maybeUpdatePolls(),maybeUpdateManifesto(),maybeUpdateLeaders()]);
+  await Promise.all([maybeUpdateEconomic(),maybeUpdateNews(),maybeUpdatePolls(),maybeUpdateManifesto()]);
   renderOvPolls();
   renderOvApproval();
   renderChartStrip();
