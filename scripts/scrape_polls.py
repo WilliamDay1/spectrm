@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 """
-Scrapes UK VI polls from Wikipedia.
-Uses the Wikipedia API to get parsed HTML, then extracts table data.
+Scrapes UK VI polls from Wikipedia parsed HTML.
 """
 import json, re, sys
 from datetime import datetime
 from collections import defaultdict
-import urllib.request
-import urllib.parse
+import urllib.request, urllib.parse
 
 def fetch(url, params=None):
     if params:
@@ -46,15 +44,9 @@ POLLSTER_SRCS = {
     'BMG':'bmgresearch.co.uk','Deltapoll':'deltapoll.co.uk',
     'Techne':'techneuk.co.uk','Norstat':'norstat.co.uk',
 }
-
 LEADER_MAP = {
-    'Andy Burnham':  'lab',
-    'Keir Starmer':  'lab',
-    'Kemi Badenoch': 'con',
-    'Nigel Farage':  'ref',
-    'Ed Davey':      'lib',
-    'Zack Polanski': 'grn',
-    'Angela Rayner': 'lab',
+    'Andy Burnham':'lab','Keir Starmer':'lab','Kemi Badenoch':'con',
+    'Nigel Farage':'ref','Ed Davey':'lib','Zack Polanski':'grn','Angela Rayner':'lab',
 }
 
 def strip_tags(s):
@@ -83,103 +75,170 @@ def parse_date(s):
             return yr*10000+mo*100+1, f"{MON_ABBR[mo]} {str(yr)[2:]}"
     return None, None
 
-def get_wiki_parsed_html(page):
-    """Get Wikipedia page as parsed HTML via the API."""
+def get_wiki_html(page):
     data = json.loads(fetch("https://en.wikipedia.org/w/api.php", {
-        "action": "parse",
-        "page": page,
-        "prop": "text",
-        "format": "json",
-        "disablelimitreport": "1",
+        "action":"parse","page":page,"prop":"text",
+        "format":"json","disablelimitreport":"1",
     }))
-    return data.get("parse", {}).get("text", {}).get("*", "")
+    return data.get("parse",{}).get("text",{}).get("*","")
 
-def extract_table_rows(html):
-    """Extract all table rows as lists of cell text strings."""
-    rows = []
-    for table in re.findall(r'<table[^>]*>(.*?)</table>', html, re.DOTALL):
-        for row in re.findall(r'<tr[^>]*>(.*?)</tr>', table, re.DOTALL):
-            cells = re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row, re.DOTALL)
+def extract_tables(html):
+    """Return list of tables, each a list of rows, each a list of raw cell HTML strings."""
+    tables = []
+    for table_html in re.findall(r'<table[^>]*>(.*?)</table>', html, re.DOTALL):
+        rows = []
+        for row_html in re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL):
+            cells = re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row_html, re.DOTALL)
             if cells:
-                rows.append([strip_tags(c) for c in cells])
-    return rows
+                rows.append(cells)
+        if rows:
+            tables.append(rows)
+    return tables
+
+def find_column_map(header_rows):
+    """
+    Given header rows, return dict mapping column name -> index.
+    We look for: Reform/UKIP, Labour, Conservative, Lib Dem, Green, sample size, date
+    """
+    col_map = {}
+    for row in header_rows:
+        texts = [strip_tags(c).lower() for c in row]
+        for i, t in enumerate(texts):
+            if any(x in t for x in ['reform','ukip','brex']) and 'ref' not in col_map:
+                col_map['ref'] = i
+            elif any(x in t for x in ['labour','lab']) and 'lab' not in col_map:
+                col_map['lab'] = i
+            elif any(x in t for x in ['conserv','con','tory']) and 'con' not in col_map:
+                col_map['con'] = i
+            elif any(x in t for x in ['lib dem','liberal','ld']) and 'lib' not in col_map:
+                col_map['lib'] = i
+            elif any(x in t for x in ['green','grn']) and 'grn' not in col_map:
+                col_map['grn'] = i
+            elif any(x in t for x in ['sample','size','n =','respondent']) and 'n' not in col_map:
+                col_map['n'] = i
+            elif any(x in t for x in ['date','fieldwork','period']) and 'date' not in col_map:
+                col_map['date'] = i
+            elif any(x in t for x in ['poll','firm','company','conduct']) and 'pollster' not in col_map:
+                col_map['pollster'] = i
+    return col_map
 
 def parse_vi_polls(html):
-    rows = extract_table_rows(html)
-    print(f"  Total table rows found: {len(rows)}", file=sys.stderr)
+    tables = extract_tables(html)
+    print(f"  Found {len(tables)} tables", file=sys.stderr)
 
-    polls = []
-    for cells in rows:
-        if len(cells) < 6:
-            continue
+    all_polls = []
 
-        # Skip obvious header rows
-        joined = ' '.join(cells[:4]).lower()
-        if any(h in joined for h in ['pollster','firm','fieldwork','date','poll','client']):
-            continue
-
-        # Find pollster in first 3 cells
-        pollster = None
-        for ci in range(min(3, len(cells))):
-            for known in KNOWN_POLLSTERS:
-                if known.lower() in cells[ci].lower():
-                    pollster = known; break
-            if pollster: break
-        if not pollster:
-            raw = cells[0].strip()
-            if 2 < len(raw) < 35 and raw[0].isupper():
-                pollster = raw
+    for ti, table in enumerate(tables):
+        # Find header rows (rows with <th> cells)
+        header_rows = []
+        data_rows = []
+        for row in table:
+            # Check if row contains th elements (headers)
+            raw = ''.join(row)
+            if '<th' in raw.lower() or strip_tags(row[0]).lower() in ['pollster','firm','poll','source']:
+                header_rows.append(row)
             else:
+                data_rows.append(row)
+
+        col_map = find_column_map(header_rows)
+        print(f"  Table {ti}: {len(data_rows)} data rows, col_map={col_map}", file=sys.stderr)
+
+        # If we couldn't identify columns, try positional guessing
+        # Typical order: Pollster | Client | Dates | n | Ref | Lab | Con | LD | Grn | Oth | Lead
+        polls_from_table = []
+        for cells in data_rows:
+            texts = [strip_tags(c) for c in cells]
+            if len(texts) < 6:
                 continue
 
-        # Find date post July 2024
-        sort_key, date_str = None, None
-        for c in cells:
-            sk, ds = parse_date(c)
-            if sk and sk > 20240704:
-                sort_key, date_str = sk, ds; break
-        if not sort_key:
-            continue
+            # Find pollster
+            pollster = None
+            for ci in range(min(3, len(texts))):
+                for known in KNOWN_POLLSTERS:
+                    if known.lower() in texts[ci].lower():
+                        pollster = known; break
+                if pollster: break
+            if not pollster:
+                raw = texts[0].strip()
+                if 2 < len(raw) < 35 and raw[0].isupper() and not raw[0].isdigit():
+                    pollster = raw
+                else:
+                    continue
 
-        # Sample size 500-5000 (exclude MRP polls)
-        n = None
-        for c in cells:
-            raw = re.sub(r'[^0-9]', '', c)
-            if raw and 500 <= int(raw) <= 5000:
-                n = int(raw); break
-        if not n:
-            continue
+            # Find date
+            sort_key, date_str = None, None
+            if 'date' in col_map and col_map['date'] < len(texts):
+                sort_key, date_str = parse_date(texts[col_map['date']])
+            if not sort_key:
+                for c in texts:
+                    sk, ds = parse_date(c)
+                    if sk and sk > 20240704:
+                        sort_key, date_str = sk, ds; break
+            if not sort_key:
+                continue
 
-        # Get all numbers between 3 and 55
-        nums = []
-        for c in cells:
-            v = clean_num(c)
-            if v is not None and 3 <= v <= 55:
-                nums.append(v)
+            # Sample size 500-5000
+            n = None
+            if 'n' in col_map and col_map['n'] < len(texts):
+                v = clean_num(texts[col_map['n']])
+                if v and 500 <= v <= 5000:
+                    n = v
+            if not n:
+                for c in texts:
+                    raw = re.sub(r'[^0-9]', '', c)
+                    if raw and 500 <= int(raw) <= 5000:
+                        n = int(raw); break
+            if not n:
+                continue
 
-        # Find 5 consecutive values summing 85-105
-        best = None
-        for i in range(len(nums)):
-            sub = nums[i:i+5]
-            if len(sub) == 5 and 85 <= sum(sub) <= 105:
-                best = sub; break
-        if not best:
-            continue
+            # Get party values using col_map if available
+            ref = lab = con = lib = grn = None
+            if all(k in col_map for k in ['ref','lab','con','lib','grn']):
+                def get_col(k):
+                    idx = col_map[k]
+                    return clean_num(texts[idx]) if idx < len(texts) else None
+                ref = get_col('ref')
+                lab = get_col('lab')
+                con = get_col('con')
+                lib = get_col('lib')
+                grn = get_col('grn')
 
-        ref, lab, con, lib, grn = best
-        polls.append({
-            'pollster': pollster,
-            'client': cells[1][:40] if len(cells)>1 else '',
-            'date': date_str,
-            'sort_key': sort_key,
-            'n': n,
-            'ref': ref, 'lab': lab, 'con': con, 'lib': lib, 'grn': grn,
-            'src': POLLSTER_SRCS.get(pollster, ''),
-        })
+            # Fallback: find 5 consecutive % values summing 65-115
+            if not all([ref, lab, con, lib, grn]):
+                nums = []
+                for c in texts:
+                    v = clean_num(c)
+                    if v is not None and 3 <= v <= 60:
+                        nums.append(v)
+                for i in range(len(nums)):
+                    sub = nums[i:i+5]
+                    if len(sub) == 5 and 65 <= sum(sub) <= 115:
+                        ref, lab, con, lib, grn = sub; break
+
+            if not all([ref, lab, con, lib, grn]):
+                continue
+
+            # Sanity check: realistic UK polling ranges
+            if not (10 <= ref <= 45 and 10 <= lab <= 45 and 5 <= con <= 40
+                    and 3 <= lib <= 30 and 3 <= grn <= 25):
+                continue
+
+            polls_from_table.append({
+                'pollster': pollster,
+                'client': texts[1][:40] if len(texts) > 1 else '',
+                'date': date_str,
+                'sort_key': sort_key,
+                'n': n,
+                'ref': ref, 'lab': lab, 'con': con, 'lib': lib, 'grn': grn,
+                'src': POLLSTER_SRCS.get(pollster, ''),
+            })
+
+        print(f"  Table {ti}: {len(polls_from_table)} valid polls found", file=sys.stderr)
+        all_polls.extend(polls_from_table)
 
     # Deduplicate newest-first
     seen, unique = set(), []
-    for p in sorted(polls, key=lambda x: -x['sort_key']):
+    for p in sorted(all_polls, key=lambda x: -x['sort_key']):
         k = (p['pollster'], p['sort_key'])
         if k not in seen:
             seen.add(k); unique.append(p)
@@ -202,91 +261,105 @@ def build_monthly_history(polls):
     return {'labels':labels,'ref':ref_a,'lab':lab_a,'con':con_a,'grn':grn_a,'lib':lib_a}
 
 def parse_leader_approval(html):
-    rows = extract_table_rows(html)
+    tables = extract_tables(html)
     results = {}
+
+    # Find leader names from headings
+    headings = re.findall(r'<h[2-4][^>]*>(.*?)</h[2-4]>', html, re.DOTALL)
+    heading_texts = [strip_tags(h) for h in headings]
+
     current_leader = None
+    leader_table_idx = {}
 
-    # Also scan for headings in the HTML
-    headings = re.findall(r'<h[23][^>]*>.*?([A-Z][a-z]+ [A-Z][a-z]+).*?</h[23]>', html, re.DOTALL)
-
-    for cells in rows:
-        if not cells: continue
-
-        # Check if any cell is a leader name
+    # Map leaders to their section headings
+    for hi, ht in enumerate(heading_texts):
         for name in LEADER_MAP:
-            last = name.split()[-1]
-            if any(last in c for c in cells[:3]) and any(name.split()[0] in c for c in cells[:3]):
-                current_leader = name; break
+            if name.split()[-1] in ht and name.split()[0] in ht:
+                current_leader = name
 
-        if not current_leader or len(cells) < 3:
-            continue
+    # Process each table looking for approval data
+    for table in tables:
+        for row in table:
+            texts = [strip_tags(c) for c in row]
+            full = ' '.join(texts)
 
-        sort_key, date_str = None, None
-        for c in cells:
-            sk, ds = parse_date(c)
-            if sk and sk > 20240700:
-                sort_key, date_str = sk, ds; break
-        if not sort_key:
-            continue
+            # Detect leader name in row
+            for name in LEADER_MAP:
+                if name.split()[-1] in full and name.split()[0] in full:
+                    current_leader = name; break
 
-        pollster = ''
-        for c in cells:
-            for known in KNOWN_POLLSTERS:
-                if known.lower() in c.lower():
-                    pollster = known; break
-            if pollster: break
+            if not current_leader or len(texts) < 3:
+                continue
 
-        nums = [v for c in cells if (v:=clean_num(c)) is not None and 10<=v<=80]
-        if len(nums) < 2: continue
+            sort_key, date_str = None, None
+            for c in texts:
+                sk, ds = parse_date(c)
+                if sk and sk > 20240700:
+                    sort_key, date_str = sk, ds; break
+            if not sort_key:
+                continue
 
-        approve, disapprove = nums[0], nums[1]
-        if approve + disapprove > 130: continue
+            pollster = ''
+            for c in texts:
+                for known in KNOWN_POLLSTERS:
+                    if known.lower() in c.lower():
+                        pollster = known; break
+                if pollster: break
 
-        if current_leader not in results or sort_key > results[current_leader]['sort_key']:
-            results[current_leader] = {
-                'sort_key':sort_key,'date':date_str,'pollster':pollster,
-                'approve':approve,'disapprove':disapprove,
-            }
+            nums = [v for c in texts if (v:=clean_num(c)) is not None and 10 <= v <= 80]
+            if len(nums) < 2:
+                continue
+
+            approve, disapprove = nums[0], nums[1]
+            if approve + disapprove > 130:
+                continue
+
+            if current_leader not in results or sort_key > results[current_leader]['sort_key']:
+                results[current_leader] = {
+                    'sort_key':sort_key,'date':date_str,'pollster':pollster,
+                    'approve':approve,'disapprove':disapprove,
+                }
 
     output = []
     for name, r in results.items():
         src = f"YouGov · {r['date']}" if r['pollster']=='YouGov' else f"{r['pollster']} · {r['date']}"
         output.append({'name':name,'approve':r['approve'],'disapprove':r['disapprove'],
                        'net':r['approve']-r['disapprove'],'src':src})
-        print(f"  {name}: {r['approve']}%/{r['disapprove']}% ({src})", file=sys.stderr)
+        print(f"  {name}: {r['approve']}%/{r['disapprove']}% net={r['approve']-r['disapprove']} ({src})", file=sys.stderr)
     return output
 
 def main():
     VI_PAGE = "Opinion_polling_for_the_next_United_Kingdom_general_election"
     LA_PAGE = "Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
 
-    print("Fetching VI polls HTML...", file=sys.stderr)
-    vi_html = get_wiki_parsed_html(VI_PAGE)
-    print(f"  HTML length: {len(vi_html)} chars", file=sys.stderr)
+    print("Fetching VI polls...", file=sys.stderr)
+    vi_html = get_wiki_html(VI_PAGE)
+    print(f"  HTML: {len(vi_html)} chars", file=sys.stderr)
 
     polls = parse_vi_polls(vi_html)
-    print(f"  {len(polls)} polls parsed", file=sys.stderr)
+    print(f"  Total: {len(polls)} polls", file=sys.stderr)
 
-    if polls:
-        for p in polls[:3]:
-            print(f"  Sample: {p['pollster']} {p['date']} Ref{p['ref']} Lab{p['lab']} Con{p['con']} n={p['n']}", file=sys.stderr)
-    else:
+    if not polls:
         print("ERROR: no polls parsed", file=sys.stderr)
         sys.exit(1)
 
-    monthly = build_monthly_history(polls)
-    print(f"  Monthly labels: {monthly['labels']}", file=sys.stderr)
+    for p in polls[:5]:
+        print(f"  {p['pollster']} {p['date']}: Ref{p['ref']} Lab{p['lab']} Con{p['con']} LD{p['lib']} Grn{p['grn']} n={p['n']}", file=sys.stderr)
 
-    print("Fetching leader approval...", file=sys.stderr)
+    monthly = build_monthly_history(polls)
+    print(f"  Monthly: {monthly['labels']}", file=sys.stderr)
+
+    print("Fetching leaders...", file=sys.stderr)
     try:
-        la_html = get_wiki_parsed_html(LA_PAGE)
+        la_html = get_wiki_html(LA_PAGE)
         leaders = parse_leader_approval(la_html)
         print(f"  {len(leaders)} leaders", file=sys.stderr)
     except Exception as e:
         print(f"  WARNING: {e}", file=sys.stderr)
         leaders = []
 
-    for p in polls: p.pop('sort_key', None)
+    for p in polls:
+        p.pop('sort_key', None)
 
     print(json.dumps({
         'generated': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
