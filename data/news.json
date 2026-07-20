@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-19T11:00:07Z",
+    "updated": "2026-07-20T13:29:03Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Is Burnham promising a new dawn for North Sea oil and gas?",
-      "date": "19 Jul 2026",
+      "headline": "Burnham makes ending rough sleeping his first policy pledge as prime minister",
+      "date": "20 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4g3l22ry6wo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c0jl839j6z3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Digital ID plan to be scrapped in Burnham's first major policy pledge",
-      "date": "19 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5y08z25q8eo?at_medium=RSS&at_campaign=rss"
+      "headline": "Andy Burnham pledges to end rough sleeping in first speech as prime minister \u2013 UK politics live",
+      "date": "20 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/20/andy-burnham-new-prime-minister-pm-keir-starmer-labour-no-10-downing-street-speech-cabinet-uk-politics-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Here be dragons: does moving power to the north work?",
-      "date": "19 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham vows his arrival in power will be \u2018circuit breaker\u2019 moment for UK",
+      "date": "20 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/19/here-be-dragons-does-moving-power-to-the-north-work"
+      "url": "https://www.theguardian.com/politics/2026/jul/20/andy-burnham-uk-prime-minister-meeting-king-charles"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Can Burnham's casual style survive contact with No 10?",
-      "date": "19 Jul 2026",
+      "headline": "Watch: Starmer resigns, Burnham becomes PM... the day so far",
+      "date": "20 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgq2qr9gxdo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/videos/cd0xgxgz135o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham to scrap Starmer\u2019s digital ID scheme in \u2018reset of priorities\u2019",
-      "date": "18 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/18/burnham-to-scrap-starmers-digital-id-scheme-in-reset-of-priorities"
+      "headline": "'A circuit-breaker moment' - Watch Andy Burnham's first speech as PM in full",
+      "date": "20 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/videos/c934q2kkkvxo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham risks Labour backlash if he reverses ban on new oil and gas drilling",
-      "date": "18 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Investigation of Nigel Farage over undeclared gifts is \u2018kangaroo court\u2019, says Reform MP",
+      "date": "20 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/18/burnham-expected-to-reverse-ban-on-new-oil-and-gas-drilling"
+      "url": "https://www.theguardian.com/politics/2026/jul/20/investigation-nigel-farage-undeclared-gifts-kangaroo-court-reform-mp-sarah-pochin"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham is 'people pleaser' with 'airy fairy' plans, says Kemi Badenoch",
-      "date": "18 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "He'll be the first Andy in No 10 - but his rise to power has been decades in the making",
+      "date": "20 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c304l24m0leo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cp8pml5z8p6o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "UK tech advocates alarmed by Burnham plan to scrap technology department",
-      "date": "18 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/18/burnham-plan-to-scrap-technology-department-triggers-backlash"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Prisons minister Lord Timpson quits government",
+      "date": "20 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvg0xlrvv4mo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham considers radical shake-up to cut energy bills",
-      "date": "18 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Why has Britain\u2019s oldest political magazine become such a rabid cheerleader for Islamophobia? | Nesrine Malik",
+      "date": "20 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/jul/18/andy-burnham-cut-energy-bills-gas-heat-pumps"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/20/islamophobia-spectator-britain-oldest-political-magazine"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Poultry sector growth plan risks UK national security, campaigners warn",
-      "date": "18 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham says he will go \u2018faster\u2019 than Starmer. Why is that so hard?",
+      "date": "20 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/jul/18/poultry-sector-growth-plan-uk-national-food-security-supply-chain"
+      "url": "https://www.theguardian.com/politics/2026/jul/20/andy-burnham-says-he-will-go-faster-than-keir-starmer"
     }
   ]
 }
