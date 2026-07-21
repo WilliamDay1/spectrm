@@ -28,8 +28,6 @@ LEADER_MAP = {
     'Nigel Farage':'ref','Ed Davey':'lib','Zack Polanski':'grn','Angela Rayner':'lab',
 }
 
-# Fallback figures used when Wikipedia approval page has no recent data
-# Update these manually each month if Wikipedia lags
 LEADER_FALLBACK = {
     'Andy Burnham':   {'approve':45,'disapprove':40,'net':5,  'src':'YouGov · Jun 2026'},
     'Zack Polanski':  {'approve':29,'disapprove':38,'net':-9, 'src':'YouGov · Jun 2026'},
@@ -40,9 +38,6 @@ LEADER_FALLBACK = {
     'Keir Starmer':   {'approve':19,'disapprove':62,'net':-43,'src':'YouGov · Jun 2026'},
 }
 
-# HARDCODED from debug output — Wikipedia VI table columns:
-# Date(s) conducted=0, Pollster=1, Client=2, Area=3, Sample size=4,
-# Lab=5, Con=6, Ref=7, LD=8, Grn=9, SNP=10, PC=11, RB=12, Others=13, Lead=14
 FIXED_COL = {'date':0,'pollster':1,'n':4,'lab':5,'con':6,'ref':7,'lib':8,'grn':9}
 
 def fetch_wiki(page):
@@ -62,7 +57,6 @@ def fetch_wiki(page):
         data = json.loads(r.read().decode('utf-8'))
     return data.get("parse", {}).get("text", {}).get("*", "")
 
-# Override with requests if available
 try:
     import requests
     def fetch_wiki(page):
@@ -114,7 +108,7 @@ def parse_vi(html):
     print(f"  Total <tr> rows: {len(all_rows)}", file=sys.stderr)
 
     col = FIXED_COL.copy()
-    print(f"  Using hardcoded cols: {col}", file=sys.stderr)
+    print(f"  Using cols: {col}", file=sys.stderr)
 
     polls = []
     cur_yr = datetime.utcnow().year  # default to current year
@@ -131,11 +125,9 @@ def parse_vi(html):
             print(f"  Year: {cur_yr}", file=sys.stderr)
             continue
 
-        # Must have % signs to be a data row
         if '%' not in raw: continue
         if len(cells) < 9: continue
 
-        # Extract values using fixed column positions
         def gc(k):
             idx = col.get(k)
             if idx is not None and idx < len(cells):
@@ -149,7 +141,6 @@ def parse_vi(html):
         if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30):
             continue
 
-        # Date
         dtxt = cells[col['date']] if col['date'] < len(cells) else ''
         sk, ds = parse_date(dtxt, cur_yr)
         if not sk:
@@ -158,7 +149,6 @@ def parse_vi(html):
                 if sk: break
         if not sk: continue
 
-        # Sample size
         n = None
         n_idx = col.get('n')
         if n_idx is not None and n_idx < len(cells):
@@ -172,7 +162,6 @@ def parse_vi(html):
                     n = int(raw_n); break
         if not n: continue
 
-        # Pollster
         pollster = None
         for ci in range(min(4, len(cells))):
             clean = re.sub(r'\s*\[?\d+\]?$', '', cells[ci]).strip()
@@ -193,7 +182,7 @@ def parse_vi(html):
             'client': '', 'src': POLLSTER_SRCS.get(pollster, '')
         })
 
-    print(f"  Raw polls found: {len(polls)}", file=sys.stderr)
+    print(f"  Raw polls: {len(polls)}", file=sys.stderr)
     seen, unique = set(), []
     for p in sorted(polls, key=lambda x: -x['sort_key']):
         k = (p['pollster'], p['sort_key'])
@@ -215,15 +204,18 @@ def build_monthly(polls):
 
 def parse_leaders(html):
     rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
-    results = {}; cur = None
+    results = {}
+    cur = None
     for h in re.findall(r'<h[2-4][^>]*>(.*?)</h[2-4]>', html, re.DOTALL):
         ht = st(h)
         for name in LEADER_MAP:
-            if name.split()[-1] in ht and name.split()[0] in ht: cur = name
+            if name.split()[-1] in ht and name.split()[0] in ht:
+                cur = name
     for r in rows:
         cells = row_cells(r); full = ' '.join(cells)
         for name in LEADER_MAP:
-            if name.split()[-1] in full and len(full) < 100: cur = name; break
+            if name.split()[-1] in full and len(full) < 100:
+                cur = name; break
         if not cur or len(cells) < 3: continue
         sk, ds = None, None
         for c in cells:
@@ -241,6 +233,7 @@ def parse_leaders(html):
         if ap + di > 130: continue
         if cur not in results or sk > results[cur]['sk']:
             results[cur] = {'sk': sk, 'date': ds, 'pollster': pollster, 'approve': ap, 'disapprove': di}
+
     out = []
     for name in LEADER_MAP:
         if name in results:
@@ -250,7 +243,6 @@ def parse_leaders(html):
                      'net': r['approve'] - r['disapprove'], 'src': src}
             print(f"  {name}: {r['approve']}%/{r['disapprove']}% ({src}) [Wikipedia]", file=sys.stderr)
         elif name in LEADER_FALLBACK:
-            # Wikipedia doesn't have recent data — use fallback
             fb = LEADER_FALLBACK[name]
             entry = {'name': name, 'approve': fb['approve'], 'disapprove': fb['disapprove'],
                      'net': fb['net'], 'src': fb['src']}
@@ -263,31 +255,41 @@ def parse_leaders(html):
 def main():
     VI = "Opinion_polling_for_the_next_United_Kingdom_general_election"
     LA = "Leadership_approval_opinion_polling_for_the_next_United_Kingdom_general_election"
+
     print("Fetching VI...", file=sys.stderr)
     vi_html = fetch_wiki(VI)
     print(f"  HTML: {len(vi_html)} chars", file=sys.stderr)
+
     polls = parse_vi(vi_html)
     print(f"  Unique polls: {len(polls)}", file=sys.stderr)
     if not polls:
         print("ERROR: no polls", file=sys.stderr); sys.exit(1)
+
     for p in polls[:3]:
         print(f"  {p['pollster']} {p['date']}: Ref{p['ref']} Lab{p['lab']} Con{p['con']} n={p['n']}", file=sys.stderr)
+
     monthly = build_monthly(polls)
     print(f"  Monthly: {monthly['labels']}", file=sys.stderr)
+
     print("Fetching leaders...", file=sys.stderr)
     try:
         la_html = fetch_wiki(LA)
         leaders = parse_leaders(la_html)
         print(f"  {len(leaders)} leaders", file=sys.stderr)
     except Exception as e:
-        print(f"  WARNING: {e}", file=sys.stderr); leaders = []
+        print(f"  WARNING: {e}", file=sys.stderr)
+        leaders = [{'name':n,'approve':v['approve'],'disapprove':v['disapprove'],
+                    'net':v['net'],'src':v['src']} for n,v in LEADER_FALLBACK.items()]
+
     for p in polls: p.pop('sort_key', None)
+
     print(json.dumps({
         'generated': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'monthly_history': monthly,
         'recent_polls': polls[:10],
         'leader_approval': leaders,
     }, indent=2))
+
     print(f"\nDone: {len(polls)} polls · {len(monthly['labels'])} months · {len(leaders)} leaders", file=sys.stderr)
 
 if __name__ == '__main__': main()
