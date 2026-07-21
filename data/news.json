@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-20T13:29:03Z",
+    "updated": "2026-07-21T12:10:50Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham makes ending rough sleeping his first policy pledge as prime minister",
-      "date": "20 Jul 2026",
+      "headline": "Former Labour leader 'thrilled to bits' as son becomes new Welsh secretary",
+      "date": "21 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0jl839j6z3o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c5y3m14km87o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham pledges to end rough sleeping in first speech as prime minister \u2013 UK politics live",
-      "date": "20 Jul 2026",
+      "headline": "Andy Burnham hosts first cabinet meeting as PM after announcing cut to VAT on electricity bills \u2013 UK politics live",
+      "date": "21 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/20/andy-burnham-new-prime-minister-pm-keir-starmer-labour-no-10-downing-street-speech-cabinet-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/21/andy-burnham-pm-labour-energy-bills-cost-of-living-cabinet-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham vows his arrival in power will be \u2018circuit breaker\u2019 moment for UK",
-      "date": "20 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/20/andy-burnham-uk-prime-minister-meeting-king-charles"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Whitehall officials offered move to No 10 North in Manchester",
+      "date": "21 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c9d8p0l29pxo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Watch: Starmer resigns, Burnham becomes PM... the day so far",
-      "date": "20 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Sir Chris Bryant appointed new NI secretary",
+      "date": "21 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/cd0xgxgz135o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c20e5x4dy9lo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "'A circuit-breaker moment' - Watch Andy Burnham's first speech as PM in full",
-      "date": "20 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/c934q2kkkvxo?at_medium=RSS&at_campaign=rss"
+      "headline": "From youth mobility to food exports: the outstanding EU dilemmas facing Burnham",
+      "date": "21 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/21/eu-dilemmas-facing-burnham-food-exports-youth-mobility-starmer-europe"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Investigation of Nigel Farage over undeclared gifts is \u2018kangaroo court\u2019, says Reform MP",
-      "date": "20 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/20/investigation-nigel-farage-undeclared-gifts-kangaroo-court-reform-mp-sarah-pochin"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK borrows less than expected in June but public finances remain a challenge",
+      "date": "21 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx2vd3qgjy9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "He'll be the first Andy in No 10 - but his rise to power has been decades in the making",
-      "date": "20 Jul 2026",
+      "headline": "VAT to be cut from household electricity bills in October",
+      "date": "21 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cp8pml5z8p6o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cjwxll8jyz8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Prisons minister Lord Timpson quits government",
-      "date": "20 Jul 2026",
+      "headline": "Cause of Ann Widdecombe's death not yet established, inquest hears",
+      "date": "21 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvg0xlrvv4mo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cq89q0yyqz4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why has Britain\u2019s oldest political magazine become such a rabid cheerleader for Islamophobia? | Nesrine Malik",
-      "date": "20 Jul 2026",
+      "headline": "UK borrows less than expected as Healey vows to \u2018buffer against uncertainty\u2019",
+      "date": "21 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/20/islamophobia-spectator-britain-oldest-political-magazine"
+      "url": "https://www.theguardian.com/business/2026/jul/21/uk-borrowing-june-andy-burnham-ons-vat-electricity-bills"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham says he will go \u2018faster\u2019 than Starmer. Why is that so hard?",
-      "date": "20 Jul 2026",
+      "headline": "\u2018A big job ahead of him\u2019: world leaders congratulate Andy Burnham as he becomes Britain\u2019s PM",
+      "date": "21 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/20/andy-burnham-says-he-will-go-faster-than-keir-starmer"
+      "url": "https://www.theguardian.com/politics/2026/jul/21/world-leaders-congratulate-andy-burnham-becomes-britain-pm"
     }
   ]
 }
