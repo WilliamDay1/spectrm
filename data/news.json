@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-21T12:10:50Z",
+    "updated": "2026-07-22T12:14:24Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Former Labour leader 'thrilled to bits' as son becomes new Welsh secretary",
-      "date": "21 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5y3m14km87o?at_medium=RSS&at_campaign=rss"
+      "headline": "Andy Burnham announces review of prisoner early release scheme",
+      "date": "22 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/jul/22/andy-burnham-announces-review-of-prisoner-early-release-scheme"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham hosts first cabinet meeting as PM after announcing cut to VAT on electricity bills \u2013 UK politics live",
-      "date": "21 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/21/andy-burnham-pm-labour-energy-bills-cost-of-living-cabinet-latest-news-updates"
+      "headline": "Burnham says he will review early prisoner release scheme",
+      "date": "22 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c0ejwedl1gno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Whitehall officials offered move to No 10 North in Manchester",
-      "date": "21 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c9d8p0l29pxo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to review early prisoner release scheme amid anger over potential freeing of PC Harper\u2019s killers \u2013 UK politics live",
+      "date": "22 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/22/andy-burnham-labour-government-bus-fares-uk-politics-latest-news-updates"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Sir Chris Bryant appointed new NI secretary",
-      "date": "21 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "No immediate change to income tax allowance, says Burnham",
+      "date": "22 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c20e5x4dy9lo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c935g67wyvgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "From youth mobility to food exports: the outstanding EU dilemmas facing Burnham",
-      "date": "21 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Mahmood and Streeting accused of making \u2018cheap jokes\u2019 about prisoner early release scheme",
+      "date": "22 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/21/eu-dilemmas-facing-burnham-food-exports-youth-mobility-starmer-europe"
+      "url": "https://www.theguardian.com/law/2026/jul/22/streeting-mahmood-accused-cheap-jokes-prisoner-early-release-scheme"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK borrows less than expected in June but public finances remain a challenge",
-      "date": "21 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Scottish Labour leader Anas Sarwar set to become a minister in Burnham's government",
+      "date": "22 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cx2vd3qgjy9o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ce970y1n7plo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "VAT to be cut from household electricity bills in October",
-      "date": "21 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjwxll8jyz8o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Here\u2019s how Andy Burnham really could end homelessness | Daniel Lavelle",
+      "date": "22 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/22/andy-burnham-end-homelessness-empty-homes-capping-rents"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Cause of Ann Widdecombe's death not yet established, inquest hears",
-      "date": "21 Jul 2026",
+      "headline": "Streeting apologises after early prisoner release comments heard on mic",
+      "date": "22 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq89q0yyqz4o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cgk4x44mm50o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK borrows less than expected as Healey vows to \u2018buffer against uncertainty\u2019",
-      "date": "21 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham announces bus fares across England to be capped at \u00a32",
+      "date": "22 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/21/uk-borrowing-june-andy-burnham-ons-vat-electricity-bills"
+      "url": "https://www.theguardian.com/uk-news/2026/jul/22/burnham-announces-bus-fares-across-england-to-be-capped-at-2"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "\u2018A big job ahead of him\u2019: world leaders congratulate Andy Burnham as he becomes Britain\u2019s PM",
-      "date": "21 Jul 2026",
+      "headline": "UK inflation falls by more than expected to 2.6% in lift for Andy Burnham",
+      "date": "22 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/21/world-leaders-congratulate-andy-burnham-becomes-britain-pm"
+      "url": "https://www.theguardian.com/business/2026/jul/22/uk-inflation-falls-andy-burnham-cost-of-living-plans"
     }
   ]
 }
