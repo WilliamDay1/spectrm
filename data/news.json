@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-23T12:12:49Z",
+    "updated": "2026-07-24T12:04:44Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Badenoch says Burnham\u2019s ambitions for Britain are \u2018too small\u2019 after business rates cut for pub and clubs in England \u2013 UK politics live",
-      "date": "23 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/23/government-cuts-business-rates-essex-kemi-badenoch-latest-news-updates"
+      "headline": "Burnham to spend first day working from northern branch of No 10",
+      "date": "24 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckgvyr76973o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Gary Lineker among millionaires asking Andy Burnham to tax them more",
-      "date": "23 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgjp79m42go?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Digested week: History shrugs off Keir and makes room for brilliant Kerr",
+      "date": "24 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/24/digested-week-history-shrugs-off-keir-and-makes-room-for-brilliant-kerr"
     },
     {
       "id": "3",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Who is Miatta Fahnbulleh, the radical-thinking new UK energy secretary?",
-      "date": "23 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham urged to lobby EU leaders directly to waive new border controls",
+      "date": "24 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/23/who-is-miatta-fahnbulleh-the-radical-thinking-new-uk-energy-secretary"
+      "url": "https://www.theguardian.com/business/2026/jul/24/burnham-urged-to-lobby-eu-leaders-directly-to-waive-ees-border-controls"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Meet the man whose groundbreaking book is being devoured by the left",
-      "date": "23 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham spends first working day at new No 10 North in Manchester \u2013 UK politics live",
+      "date": "24 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/23/anton-jager-groundbreaking-book-being-devoured-by-left"
+      "url": "https://www.theguardian.com/uk-news/live/2026/jul/24/andy-burnham-labour-no-10-north-uk-politics-latest-news-updates"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham's plan to collaborate with social media creators",
-      "date": "23 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy4k74xj9lyo?at_medium=RSS&at_campaign=rss"
+      "headline": "Race, school, gender: the makeup of Andy Burnham\u2019s cabinet \u2013 in charts",
+      "date": "24 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/24/demographic-makeup-of-andy-burnham-cabinet-charts"
     },
     {
       "id": "6",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "Business rates to be cut by 20% for pubs, clubs and music venues in England",
-      "date": "23 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/23/business-rates-to-be-cut-by-20-for-england-pubs-clubs-and-music-venues"
+      "headline": "Angela Rayner rules out rent controls in England",
+      "date": "24 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx2dg54vprno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Scottish Labour leader Anas Sarwar 'delighted' to accept trade minister job",
-      "date": "23 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyez682nevo?at_medium=RSS&at_campaign=rss"
+      "headline": "So many British people have it better than they think \u2013 it\u2019s up to Burnham to make them see that | Polly Toynbee",
+      "date": "24 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/24/british-people-andy-burnham-goodwill-gestures"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ann Widdecombe public memorial to be held later this year, family says",
-      "date": "23 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cddj9edj76eo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham is acting like he\u2019s mayor of everywhere \u2013 that\u2019s not devolving power to local communities | Simon Jenkins",
+      "date": "24 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/24/andy-burnham-mayor-everywhere-devolving-localism-centralised-meloni-macron"
     },
     {
       "id": "9",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Alarm over hospital lung admissions for children in England\u2019s poorest postcodes",
-      "date": "23 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Regional mayors to take key roles in UK policy decisions as part of No 10 North plans",
+      "date": "24 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/23/alarm-hospital-lung-admissions-children-england-poorest"
+      "url": "https://www.theguardian.com/politics/2026/jul/23/regional-mayors-to-take-key-roles-in-uk-policy-decisions-as-part-of-no-10-north-plans"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Besieged by lobbyists, will UK ministers protect our ecosystems? No, they\u2019ll chicken out | George Monbiot",
-      "date": "23 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "\u2018A small snippet\u2019: what pubs make of Burnham\u2019s \u00a3100m rates giveaway",
+      "date": "24 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/23/lobbyists-uk-environment-ministers-ecosystems-chicken-poultry-faming"
+      "url": "https://www.theguardian.com/business/2026/jul/24/snippet-pubs-burnham-rates-giveaway-landlors"
     }
   ]
 }
