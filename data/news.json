@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-25T10:56:47Z",
+    "updated": "2026-07-26T11:36:59Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "\u2018Nobody was there for us\u2019: mother urges Andy Burnham to reopen case of daughter killed in Texas",
-      "date": "25 Jul 2026",
+      "headline": "Is Burnham\u2019s Oxbridge-heavy cabinet a sign of social mobility or lack of progress on class?",
+      "date": "26 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/us-news/2026/jul/25/mother-urges-andy-burnham-reopen-case-daughter-lucy-harrison-killed-texas"
+      "url": "https://www.theguardian.com/politics/2026/jul/26/burnham-oxbridge-cabinet-social-mobility-class"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Home Office rejects Palestinian Jerusalemite woman\u2019s UK visa but approves husband\u2019s",
-      "date": "25 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/25/home-office-rejects-palestinian-jerusalemite-womans-uk-visa-but-approves-husbands"
+      "headline": "Iran's 'sabre-rattling' should not intimidate UK, Wes Streeting says",
+      "date": "26 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8dng4lvrvqo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Warning: Australian politicians are importing the British right\u2019s visions of doom | Jack Jacobs",
-      "date": "25 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham says he will disagree with Trump in public if necessary",
+      "date": "26 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/25/warning-australian-politicians-are-importing-the-british-rights-visions-of-doom"
+      "url": "https://www.theguardian.com/politics/2026/jul/26/andy-burnham-interview-bbc-donald-trump-wes-streeting"
     },
     {
       "id": "4",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Green-led council 'won't assist immigration raids'",
-      "date": "24 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cgq591pq35eo?at_medium=RSS&at_campaign=rss"
+      "headline": "Birmingham council accused of giving \u2018free rein\u2019 to group erecting England flags",
+      "date": "26 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/26/birmingham-council-raise-the-colours-flags-city"
     },
     {
       "id": "5",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Existing care workers could be exempt from UK\u2019s tough new immigration rules",
-      "date": "24 Jul 2026",
+      "headline": "Am I a chicken-shop lefty? Here's what a French fast food row taught me about politics | Coco Khan",
+      "date": "26 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/24/care-workers-exempt-uk-new-immigration-rules"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/26/chicken-shop-left-french-fast-food-row-politics"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Chancellor joins PM on first day working from No 10 North",
-      "date": "24 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham rules out early election in exclusive BBC interview",
+      "date": "26 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckgvyr76973o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/videos/c935kzyq6r4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform councillors told to call donations inquiry \u2018establishment stitch-up\u2019",
-      "date": "24 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/24/reform-councillors-told-to-describe-donations-inquiry-as-establishment-stitch-up"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says he is prepared to call out Trump 'if right for Britain'",
+      "date": "26 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clye651yzdjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "The Guardian view on Andy Burnham\u2019s first week: polished politics allow an upbeat start | Editorial",
-      "date": "24 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/24/the-guardian-view-on-andy-burnhams-first-week-polished-politics-allow-an-upbeat-start"
+      "headline": "Burnham to address social care, youth unemployment and devolution",
+      "date": "25 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwylnl17w09o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Scoff at cheaper bus fares and No 10 North if you like, but Andy Burnham knows what he\u2019s doing | Jonathan Freedland",
-      "date": "24 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Police investigate payments to Reform UK first revealed by The Guardian",
+      "date": "25 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/24/andy-burnham-no-10-north-manchester-bus-fares"
+      "url": "https://www.theguardian.com/politics/2026/jul/25/police-investigate-payments-reform-uk-guardian"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Prison staff asked to warn of any prison unrest due to delays in releases",
-      "date": "24 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/prison-staff-asked-to-warn-of-any-prison-unrest-due-to-delays-in-releases-13566657"
+      "headline": "New North Sea oil drilling faces delay after gear accidentally dropped in sea",
+      "date": "25 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/jul/25/new-north-sea-oil-drilling-rosebank-faces-delay-after-gear-dropped-into-sea"
     }
   ]
 }
