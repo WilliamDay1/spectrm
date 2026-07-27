@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-26T11:36:59Z",
+    "updated": "2026-07-27T16:00:19Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Is Burnham\u2019s Oxbridge-heavy cabinet a sign of social mobility or lack of progress on class?",
-      "date": "26 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/26/burnham-oxbridge-cabinet-social-mobility-class"
+      "headline": "Zelensky visit sends clear message of support for Ukraine, Burnham says",
+      "date": "27 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Iran's 'sabre-rattling' should not intimidate UK, Wes Streeting says",
-      "date": "26 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8dng4lvrvqo?at_medium=RSS&at_campaign=rss"
+      "headline": "Jodrell Bank Observatory facing closure after major funder cuts support",
+      "date": "27 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/science/2026/jul/27/jodrell-bank-observatory-facing-closure-uk"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham says he will disagree with Trump in public if necessary",
-      "date": "26 Jul 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Labour overtakes Reform in voter poll for first time since March 2025",
+      "date": "27 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/26/andy-burnham-interview-bbc-donald-trump-wes-streeting"
+      "url": "https://www.theguardian.com/politics/2026/jul/27/labour-overtakes-reform-in-voter-poll-andy-burnham"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Birmingham council accused of giving \u2018free rein\u2019 to group erecting England flags",
-      "date": "26 Jul 2026",
+      "headline": "When it comes to predicting the future, why are TV writers better than politicians? | Zoe Williams",
+      "date": "27 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/26/birmingham-council-raise-the-colours-flags-city"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/27/predicting-the-future-why-tv-writers-better-than-politicians"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Am I a chicken-shop lefty? Here's what a French fast food row taught me about politics | Coco Khan",
-      "date": "26 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Poll shows Labour ahead of Reform UK for first time since Burnham became PM \u2013 UK politics live",
+      "date": "27 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/26/chicken-shop-left-french-fast-food-row-politics"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/27/andy-burnham-social-care-politics-live-latest-news-defence-nhs-reform-uk-tories-updates"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham rules out early election in exclusive BBC interview",
-      "date": "26 Jul 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "NHS 'will collapse' without social care reform, PM tells BBC",
+      "date": "27 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/c935kzyq6r4o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cn0n5xpzlz2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says he is prepared to call out Trump 'if right for Britain'",
-      "date": "26 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clye651yzdjo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "German officials call for tighter extremism laws after Berlin Pride attack",
+      "date": "27 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/27/german-officials-tighter-extremism-laws-berlin-pride-attack"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to address social care, youth unemployment and devolution",
-      "date": "25 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK's iconic Jodrell Bank telescope faces axe in science cuts",
+      "date": "27 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwylnl17w09o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c5y6r9rdxygo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Police investigate payments to Reform UK first revealed by The Guardian",
-      "date": "25 Jul 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Home Office blocking evacuation of dozens of women and children from Gaza",
+      "date": "27 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/25/police-investigate-payments-reform-uk-guardian"
+      "url": "https://www.theguardian.com/uk-news/2026/jul/27/home-office-blocking-evacuation-women-children-gaza-refugee-family-reunion"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "New North Sea oil drilling faces delay after gear accidentally dropped in sea",
-      "date": "25 Jul 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "PM urged to uphold climate pledges made as mayor and ban new North Sea oil drilling",
+      "date": "27 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/25/new-north-sea-oil-drilling-rosebank-faces-delay-after-gear-dropped-into-sea"
+      "url": "https://www.theguardian.com/environment/2026/jul/27/burnham-climate-pledge-greater-manchester-mayor-ban-new-north-sea-oil-drilling"
     }
   ]
 }
