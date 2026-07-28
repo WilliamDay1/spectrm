@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-27T16:00:19Z",
+    "updated": "2026-07-28T12:27:07Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Zelensky visit sends clear message of support for Ukraine, Burnham says",
-      "date": "27 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&at_campaign=rss"
+      "headline": "Badenoch urges Burnham to cancel prisoners\u2019 early release scheme \u2013 UK politics live",
+      "date": "28 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/28/andy-burnham-education-tories-ai-localism-devolution-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Jodrell Bank Observatory facing closure after major funder cuts support",
-      "date": "27 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/science/2026/jul/27/jodrell-bank-observatory-facing-closure-uk"
+      "headline": "French patrol boat heard firing shots during interview",
+      "date": "28 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy4ker2y1mko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour overtakes Reform in voter poll for first time since March 2025",
-      "date": "27 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/27/labour-overtakes-reform-in-voter-poll-andy-burnham"
+      "headline": "Badenoch calls for emergency legislation to stop early release scheme",
+      "date": "28 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjwxvw5ppw0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "When it comes to predicting the future, why are TV writers better than politicians? | Zoe Williams",
-      "date": "27 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/27/predicting-the-future-why-tv-writers-better-than-politicians"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Schools to offer technical subjects to pupils from age 14 in England, Burnham says",
+      "date": "28 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cj4k2djd5qpo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Poll shows Labour ahead of Reform UK for first time since Burnham became PM \u2013 UK politics live",
-      "date": "27 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/27/andy-burnham-social-care-politics-live-latest-news-defence-nhs-reform-uk-tories-updates"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK reports Zack Polanski to police over guillotine T-shirt post",
+      "date": "28 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c5y063yqlleo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "NHS 'will collapse' without social care reform, PM tells BBC",
-      "date": "27 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cn0n5xpzlz2o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Reader Q&A: Ask Polly Toynbee about Andy Burnham\u2019s first week as prime minister",
+      "date": "28 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/community/live/2026/jul/28/andy-burnham-first-week-prime-minister-ask-polly-toynbee-reader-questions"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "German officials call for tighter extremism laws after Berlin Pride attack",
-      "date": "27 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham urged to increase tax on banks as Barclays\u2019 profits soar",
+      "date": "28 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/27/german-officials-tighter-extremism-laws-berlin-pride-attack"
+      "url": "https://www.theguardian.com/business/2026/jul/28/barclays-increases-bonus-pool-uk-bank-tax"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK's iconic Jodrell Bank telescope faces axe in science cuts",
-      "date": "27 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5y6r9rdxygo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "<a href='https://news.sky.com/story/politics-latest-andy-burnham-keir-starmer-labour-12593360?postid=12140171#liveblog-body'>Reform UK reports Zack Polanski to police over social media post</a>",
+      "date": "28 Jul 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/reform-uk-reports-zack-polanski-to-police-over-social-media-post-13567668"
     },
     {
       "id": "9",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Home Office blocking evacuation of dozens of women and children from Gaza",
-      "date": "27 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham is taking a bold risk by busting the big lie of politics \u2013 that change is impossible | Frances Ryan",
+      "date": "28 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/27/home-office-blocking-evacuation-women-children-gaza-refugee-family-reunion"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/28/andy-burnham-bold-start-change-prime-minister"
     },
     {
       "id": "10",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "PM urged to uphold climate pledges made as mayor and ban new North Sea oil drilling",
-      "date": "27 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Can Andy Burnham end rough sleeping? \u2013 podcast",
+      "date": "28 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/jul/27/burnham-climate-pledge-greater-manchester-mayor-ban-new-north-sea-oil-drilling"
+      "url": "https://www.theguardian.com/news/audio/2026/jul/28/can-andy-burnham-end-rough-sleeping-podcast"
     }
   ]
 }
