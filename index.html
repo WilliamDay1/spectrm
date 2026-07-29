@@ -943,7 +943,7 @@ async function maybeUpdatePolls(){
   if(d.leader_approval&&d.leader_approval.length){
     d.leader_approval.forEach(function(la){
       var match=LEADERS.find(function(l){return l.name===la.name;});
-      if(match){match.approve=la.approve;match.disapprove=la.disapprove;match.net=la.net;}
+      if(match){match.approve=la.approve;match.disapprove=la.disapprove;match.net=la.net;if(la.src)match.src=la.src;}
     });
   }
 }
@@ -952,11 +952,8 @@ async function maybeUpdateManifesto(){
   d.pledges.forEach(function(p){const match=MF_PLEDGES.find(function(m){return m.pledge.slice(0,30).toLowerCase()===p.pledge.slice(0,30).toLowerCase();});if(match&&p.status){if(MF_COUNTS[match.status]!==undefined)MF_COUNTS[match.status]--;match.status=p.status;match.updated=p.updated||match.updated;if(MF_COUNTS[p.status]!==undefined)MF_COUNTS[p.status]++;}});
 }
 async function maybeUpdateLeaders(){
-  const d=await loadJSON('/leaders.json');if(!d||!d.length)return;
-  d.forEach(function(la){
-    var match=LEADERS.find(function(l){return l.name===la.name;});
-    if(match){match.approve=la.approve;match.disapprove=la.disapprove;match.net=la.net;if(la.src)match.src=la.src;}
-  });
+  // Leaders come from polls.json via maybeUpdatePolls — no separate file needed
+  return;
 }
 async function loadLiveData(){
   await Promise.all([maybeUpdateEconomic(),maybeUpdateNews(),maybeUpdatePolls(),maybeUpdateManifesto()]);
@@ -967,6 +964,9 @@ async function loadLiveData(){
   if(viChart){viChart.destroy();viChart=null;}
   var pollsSec=document.getElementById('sec-polls');
   if(pollsSec&&pollsSec.classList.contains('on'))renderPolls();
+  // Always re-render pollster table with fresh data even if section not active
+  var pt=document.getElementById('pollster-table');
+  if(pt&&pt.innerHTML)renderPollsTable&&renderPollsTable();
   var refEl=document.getElementById('ov-ref-pct');
   if(refEl&&VI_DATA.ref&&VI_DATA.ref.length)refEl.textContent=VI_DATA.ref[VI_DATA.ref.length-1]+'%';
   console.log('Spectrm: live data loaded and rendered');
