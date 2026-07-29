@@ -249,12 +249,16 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .dtbl td:last-child{text-align:right;padding-right:0}
 .cup{color:#1baf7a;font-weight:500}.cdn{color:#e34948;font-weight:500}.cnn{color:var(--tm)}
 /* POLLS */
+.polls-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.polls-map-card{display:flex;flex-direction:column;padding-bottom:0}
+.polls-iframe-wrap{flex:1;min-height:0;overflow:hidden;border-radius:0 0 10px 10px;aspect-ratio:4/5}
+.polls-iframe-wrap iframe{width:100%;height:100%;border:none;display:block}
 .pkrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:14px}
 .pk{background:var(--s2);border:.5px solid var(--bd);border-radius:12px;padding:12px 14px;border-top:3px solid}
 .pk-p{font-size:10px;font-weight:500;color:var(--tm);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
 .pk-n{font-size:24px;font-weight:500;line-height:1}
 .pk-d{font-size:10px;margin-top:3px}
-.aplist{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.aplist{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
 .apitem{background:var(--s1);border-radius:8px;padding:12px 13px;min-width:0}
 .ap-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:6px}
 .ap-name{font-size:12px;font-weight:500;line-height:1.3;min-width:0}
@@ -412,6 +416,9 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 
   /* Polls — VI tiles 2-col */
   .pkrow{grid-template-columns:1fr 1fr}
+  .polls-map-grid{grid-template-columns:1fr}
+  .polls-iframe-wrap{aspect-ratio:4/5}
+  .aplist{grid-template-columns:repeat(2,1fr)}
 
   /* Policy grid — single column */
   .polg{grid-template-columns:1fr}
@@ -769,18 +776,21 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     </div>
     <div style="position:relative;height:300px" id="vi-chart-wrap" style="cursor:crosshair;height:300px"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:0;border-left:1.5px dashed rgba(0,0,0,.3);pointer-events:none;opacity:0"></div><div id="vi-date-pill" style="position:absolute;background:var(--tp);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;pointer-events:none;opacity:0;z-index:52;white-space:nowrap;transform:translateX(-50%)"></div><div id="vi-hover-labels" style="position:absolute;inset:0;pointer-events:none;z-index:51"></div></div>
   </div>
-  <div id="pollster-table"></div>
-  <div id="poll-expand-wrap" style="display:none;margin-bottom:14px"></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
-    <div class="card" style="display:flex;flex-direction:column;height:820px;padding-bottom:0">
+  <div class="card" style="margin-bottom:14px">
+    <div class="ctt">Recent polls <span class="csrc">BPC-registered pollsters</span></div>
+    <div id="pollster-table"></div>
+    <div id="poll-expand-wrap" style="display:none"></div>
+  </div>
+  <div class="polls-map-grid">
+    <div class="card polls-map-card">
       <div class="ctt" style="flex-shrink:0">Projected seat distribution — constituency map <span class="csrc">Electoral Calculus · MRP model · Jul 2026</span></div>
-      <div style="flex:1;min-height:0;overflow:hidden;border-radius:0 0 10px 10px">
+      <div class="polls-iframe-wrap">
         <iframe src="https://flo.uri.sh/visualisation/29730462/embed" title="Constituency map" scrolling="no" frameborder="0" style="width:100%;height:100%;border:none;display:block"></iframe>
       </div>
     </div>
-    <div class="card" style="display:flex;flex-direction:column;height:820px;padding-bottom:0">
+    <div class="card polls-map-card">
       <div class="ctt" style="flex-shrink:0">Seat distribution — 2019, 2024 &amp; projected next election <span class="csrc">Flourish · MRP model · Jul 2026</span></div>
-      <div style="flex:1;min-height:0;overflow:hidden;border-radius:0 0 10px 10px">
+      <div class="polls-iframe-wrap">
         <iframe src="https://flo.uri.sh/visualisation/29725827/embed" title="Parliament chart" scrolling="no" frameborder="0" style="width:100%;height:100%;border:none;display:block"></iframe>
       </div>
     </div>
@@ -789,7 +799,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     <div class="ctt">Leader net approval ratings <span class="csrc">YouGov / Opinium · Jun 2026</span></div>
     <div class="aplist" id="aplist"></div>
   </div>
-  <div class="card">
+  <div class="card" style="margin-bottom:14px">
     <div class="ctt">Key policy approval polls <span class="csrc">Click any poll to see trend · YouGov / Ipsos / Survation 2025–2026</span></div>
     <div id="pol-polls"></div>
   </div>
