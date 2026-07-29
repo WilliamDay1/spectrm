@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-28T12:27:07Z",
+    "updated": "2026-07-29T13:12:41Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Badenoch urges Burnham to cancel prisoners\u2019 early release scheme \u2013 UK politics live",
-      "date": "28 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/28/andy-burnham-education-tories-ai-localism-devolution-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Fix palliative care before assisted dying debate, says PM",
+      "date": "29 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3w04p4373jo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "French patrol boat heard firing shots during interview",
-      "date": "28 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy4ker2y1mko?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Assisted dying debate should come after end-of-life care reform, says Burnham",
+      "date": "29 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/jul/29/assisted-dying-debate-end-of-life-care-reform-andy-burnham"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Badenoch calls for emergency legislation to stop early release scheme",
-      "date": "28 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjwxvw5ppw0o?at_medium=RSS&at_campaign=rss"
+      "headline": "The UK has an adult PM again prepared to speak to voters as fellow adults",
+      "date": "29 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/29/the-uk-has-an-adult-pm-again-prepared-to-speak-to-voters-as-fellow-adults"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Schools to offer technical subjects to pupils from age 14 in England, Burnham says",
-      "date": "28 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj4k2djd5qpo?at_medium=RSS&at_campaign=rss"
+      "headline": "Burnham does not rule out tax rises for social care reform as he fast-tracks Louise Casey\u2019s review \u2013 UK politics live",
+      "date": "29 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/29/andy-burnham-social-care-louise-casey-tories-kemi-badenoch-reform-nigel-farage-uk-politics-latest"
     },
     {
       "id": "5",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK reports Zack Polanski to police over guillotine T-shirt post",
-      "date": "28 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5y063yqlleo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Lib Dem MP calls for investigation into Reform deputy leader\u2019s \u00a380,000 loan",
+      "date": "29 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/29/richard-tice-reform-loan-george-cottrell-investigation-standards-watchdog"
     },
     {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Reader Q&A: Ask Polly Toynbee about Andy Burnham\u2019s first week as prime minister",
-      "date": "28 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/community/live/2026/jul/28/andy-burnham-first-week-prime-minister-ask-polly-toynbee-reader-questions"
+      "headline": "Andy Burnham wants to fix social care - what are the options?",
+      "date": "29 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cj4k54g0ldjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham urged to increase tax on banks as Barclays\u2019 profits soar",
-      "date": "28 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/jul/28/barclays-increases-bonus-pool-uk-bank-tax"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Philp seeks answers over French navy firing drill",
+      "date": "29 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3eknjln9lqo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-andy-burnham-keir-starmer-labour-12593360?postid=12140171#liveblog-body'>Reform UK reports Zack Polanski to police over social media post</a>",
-      "date": "28 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/reform-uk-reports-zack-polanski-to-police-over-social-media-post-13567668"
+      "headline": "Burnham to hold social care talks with Tories and Lib Dems",
+      "date": "29 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c1k1vgx08gko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham is taking a bold risk by busting the big lie of politics \u2013 that change is impossible | Frances Ryan",
-      "date": "28 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Zack Polanski will not say sorry to Farage for sharing guillotine image",
+      "date": "29 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/28/andy-burnham-bold-start-change-prime-minister"
+      "url": "https://www.theguardian.com/politics/2026/jul/29/zack-polanski-will-not-apologise-to-nigel-farage-for-sharing-image"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Can Andy Burnham end rough sleeping? \u2013 podcast",
-      "date": "28 Jul 2026",
+      "headline": "Suddenly the British right feels a political chill. It\u2019s getting cold in Andy Burnham\u2019s shadow | Rafael Behr",
+      "date": "29 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/jul/28/can-andy-burnham-end-rough-sleeping-podcast"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/29/british-right-political-chill-andy-burnham-tories-reform-keir-starmer"
     }
   ]
 }
