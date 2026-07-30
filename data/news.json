@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-07-29T13:12:41Z",
+    "updated": "2026-07-30T12:15:17Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Fix palliative care before assisted dying debate, says PM",
-      "date": "29 Jul 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Jenrick urges Burnham to rule out tax rises to fund social care",
+      "date": "30 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3w04p4373jo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cx2mj4768k5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Assisted dying debate should come after end-of-life care reform, says Burnham",
-      "date": "29 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/jul/29/assisted-dying-debate-end-of-life-care-reform-andy-burnham"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Interest rates held as Bank of England says inflation set to rise",
+      "date": "30 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cp8e6m4rndgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The UK has an adult PM again prepared to speak to voters as fellow adults",
-      "date": "29 Jul 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Jenrick ducks question on why George Cottrell gave $2m to his mother days before her big donations to Reform UK \u2013 politics live",
+      "date": "30 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/29/the-uk-has-an-adult-pm-again-prepared-to-speak-to-voters-as-fellow-adults"
+      "url": "https://www.theguardian.com/politics/live/2026/jul/30/reform-nigel-farage-robert-jenrick-labour-prisons-andy-burnham-latest-news-updates"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham does not rule out tax rises for social care reform as he fast-tracks Louise Casey\u2019s review \u2013 UK politics live",
-      "date": "29 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/29/andy-burnham-social-care-louise-casey-tories-kemi-badenoch-reform-nigel-farage-uk-politics-latest"
+      "headline": "Virtual interviews don't show bosses your personality, says Burnham",
+      "date": "30 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c4g4dkr40deo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Lib Dem MP calls for investigation into Reform deputy leader\u2019s \u00a380,000 loan",
-      "date": "29 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/29/richard-tice-reform-loan-george-cottrell-investigation-standards-watchdog"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says nuclear sub investment will protect UK and boost jobs",
+      "date": "30 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crl70x0nxr9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham wants to fix social care - what are the options?",
-      "date": "29 Jul 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Polling stations open for Greater Manchester mayoral election",
+      "date": "30 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj4k54g0ldjo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cr59dyl1lg8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Philp seeks answers over French navy firing drill",
-      "date": "29 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3eknjln9lqo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Polls open in Greater Manchester mayoral byelection overshadowed by new PM and Farage\u2019s antics",
+      "date": "30 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/jul/30/greater-manchester-mayoral-byelection-overshadowed-labour-andy-burnham-bev-craig"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to hold social care talks with Tories and Lib Dems",
-      "date": "29 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c1k1vgx08gko?at_medium=RSS&at_campaign=rss"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "UK government reviews why police ceding criminal cases to US military",
+      "date": "30 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/jul/30/uk-ministers-police-justice-review-us-military"
     },
     {
       "id": "9",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Zack Polanski will not say sorry to Farage for sharing guillotine image",
-      "date": "29 Jul 2026",
+      "headline": "I\u2019ve seen what can confound Farage on his home turf: optimism. People need a politics that offers them that | Owen Jones",
+      "date": "30 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/29/zack-polanski-will-not-apologise-to-nigel-farage-for-sharing-image"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/30/farage-home-turf-people-need-politics-optimism"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Suddenly the British right feels a political chill. It\u2019s getting cold in Andy Burnham\u2019s shadow | Rafael Behr",
-      "date": "29 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/29/british-right-political-chill-andy-burnham-tories-reform-keir-starmer"
+      "headline": "Burnham's blitz: Sam and Anne's verdict",
+      "date": "30 Jul 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/burnhams-blitz-sam-and-annes-verdict-13568293"
     }
   ]
 }
