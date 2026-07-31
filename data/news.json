@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-07-30T12:15:17Z",
+    "updated": "2026-07-31T09:24:51Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Jenrick urges Burnham to rule out tax rises to fund social care",
-      "date": "30 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cx2mj4768k5o?at_medium=RSS&at_campaign=rss"
+      "headline": "Andy Burnham to set out devolution plan amid criticism it won\u2019t benefit regions equally \u2013 UK politics live",
+      "date": "31 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/jul/31/andy-burnham-devolution-plan-labour-conservatives-kemi-bedenoch-uk-politics-live"
     },
     {
       "id": "2",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Interest rates held as Bank of England says inflation set to rise",
-      "date": "30 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Welsh holiday home tax rules could be eased after backlash",
+      "date": "31 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cp8e6m4rndgo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cj361memz12o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Jenrick ducks question on why George Cottrell gave $2m to his mother days before her big donations to Reform UK \u2013 politics live",
-      "date": "30 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/30/reform-nigel-farage-robert-jenrick-labour-prisons-andy-burnham-latest-news-updates"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham to give regional mayors share of income tax",
+      "date": "31 Jul 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c4g3eyg60e0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Virtual interviews don't show bosses your personality, says Burnham",
-      "date": "30 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "BP puts North Sea business up for sale",
+      "date": "31 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4g4dkr40deo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c62q7w003lro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham says nuclear sub investment will protect UK and boost jobs",
-      "date": "30 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crl70x0nxr9o?at_medium=RSS&at_campaign=rss"
+      "headline": "The Burnham bounce is eclipsing the Green surge \u2013 and Zack Polanski\u2019s radical hope is being tested | Gaby Hinsliff",
+      "date": "31 Jul 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/31/andy-burnham-bounce-green-surge-zack-polanski"
     },
     {
       "id": "6",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polling stations open for Greater Manchester mayoral election",
-      "date": "30 Jul 2026",
+      "headline": "MP Diane Abbott readmitted into Labour Party after suspension",
+      "date": "31 Jul 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr59dyl1lg8o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cy5dwd1p374o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Polls open in Greater Manchester mayoral byelection overshadowed by new PM and Farage\u2019s antics",
-      "date": "30 Jul 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Think our basic rights are safe? In the age of oligarchs and corporate lobbying, think again | George Monbiot",
+      "date": "31 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/30/greater-manchester-mayoral-byelection-overshadowed-labour-andy-burnham-bev-craig"
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/31/basic-rights-global-freedoms-prosecution-rajiv-menon"
     },
     {
       "id": "8",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "UK government reviews why police ceding criminal cases to US military",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Diane Abbott and Joani Reid readmitted as Labour MPs",
       "date": "30 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/jul/30/uk-ministers-police-justice-review-us-military"
+      "url": "https://www.theguardian.com/politics/2026/jul/30/diane-abbott-and-joani-reid-readmitted-as-labour-mps"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "I\u2019ve seen what can confound Farage on his home turf: optimism. People need a politics that offers them that | Owen Jones",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to free mayors from \u2018Treasury death grip\u2019 with new devolved powers",
       "date": "30 Jul 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/30/farage-home-turf-people-need-politics-optimism"
+      "url": "https://www.theguardian.com/politics/2026/jul/30/burnham-mayors-income-tax-business-rates-devolution"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham's blitz: Sam and Anne's verdict",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Palestine Action ban to be reviewed by Supreme Court",
       "date": "30 Jul 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/burnhams-blitz-sam-and-annes-verdict-13568293"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c87n321w9qlo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
