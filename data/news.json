@@ -1,29 +1,83 @@
 {
   "_meta": {
-    "updated": "2026-08-01T08:41:32Z",
+    "updated": "2026-08-02T08:55:16Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Budget in October, Healey announces, as ministers urged to stick to spending limits",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Ballot paper for Clacton by-election is longest in British electoral history",
+      "date": "2 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyem5lg78qo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "2",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Devolution plans strengthen case for written UK constitution, says Burnham",
+      "date": "1 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/02/devolution-programme-written-uk-constitution-andy-burnham"
+    },
+    {
+      "id": "3",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Mayor says Burnham's new powers will change lives",
+      "date": "1 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cddj3j50rmpo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "4",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "The Manchester mayoral result holds the key for the future of progressive politics | Neal Lawson",
+      "date": "1 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/01/bev-craig-manchester-mayoral-result-key-to-future-progressive-politics"
+    },
+    {
+      "id": "5",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Comfortable victory, but uncomfortable numbers for Labour in Greater Manchester",
+      "date": "1 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/comfortable-victory-but-uncomfortable-numbers-for-labour-in-greater-manchester-13569010"
+    },
+    {
+      "id": "6",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "On the ground in the English seaside town rightwing influencers say is being \u2018invaded\u2019",
+      "date": "1 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/01/on-the-ground-dover-rightwing-influencers-invaded"
+    },
+    {
+      "id": "7",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Sir John Curtice: The 'Burnham bounce' is real but it's not massive",
+      "date": "1 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c4g4djygr73o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "8",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Stick to spending limits, PM and chancellor tell ministers in joint memo",
       "date": "1 Aug 2026",
       "source": "BBC Politics",
       "url": "https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018MPs have had their stomachs pumped\u2019: concerns over \u2018alcohol-soaked\u2019 culture in Westminster",
-      "date": "1 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/01/mps-stomachs-pumped-uk-parliament-alcohol-culture-report"
-    },
-    {
-      "id": "3",
+      "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Turn failing water firms into not-for-profit cooperatives, MPs and mayors tell PM",
@@ -32,67 +86,13 @@
       "url": "https://www.theguardian.com/business/2026/aug/01/turn-failing-water-firms-into-not-for-profit-cooperatives-mps-and-mayors-tell-pm"
     },
     {
-      "id": "4",
+      "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
       "headline": "Like Burnham, I was an altar boy. His Catholic upbringing is shaping the way he governs |Julian Coman",
       "date": "1 Aug 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/commentisfree/2026/aug/01/andy-burnham-catholic-faith-shaping-way-governs"
-    },
-    {
-      "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Labour's Bev Craig elected mayor of Greater Manchester, replacing Andy Burnham",
-      "date": "31 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy74n1n1lnxo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "6",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Labour wins decisive victory in Greater Manchester mayoral byelection",
-      "date": "31 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/31/labour-wins-decisive-victory-in-greater-manchester-mayoral-byelection"
-    },
-    {
-      "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "High Court upholds decision to allow Chinese mega embassy",
-      "date": "31 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwylenj3znno?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Wheels could come off Stormont without reform, says Sinn F\u00e9in",
-      "date": "31 Jul 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cdew3dj454xo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham risks first revolt as PM over apparent support for North Sea drilling",
-      "date": "31 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/jul/31/andy-burnham-risks-labour-revolt-north-sea-drilling-rosebank-jackdaw-climate"
-    },
-    {
-      "id": "10",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Wait goes on for result in Greater Manchester mayoral by-election \u2013 as it happened",
-      "date": "31 Jul 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/jul/31/andy-burnham-devolution-plan-labour-conservatives-kemi-bedenoch-uk-politics-live"
     }
   ]
 }
