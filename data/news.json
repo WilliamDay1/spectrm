@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-08-04T09:21:00Z",
+    "updated": "2026-08-05T09:19:23Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mother of PC Harper \u2018bitterly disappointed\u2019 that son\u2019s killers remain eligible for early release \u2013 UK politics live",
-      "date": "4 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/04/pc-harper-prisoner-early-release-andy-burnham-labour-conservatives-badenoch-latest-news-updates"
+      "headline": "Peer urges Tories to block candidate jailed for antisemitic abuse against her",
+      "date": "5 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c1l1q6167d3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "About 1,000 fewer prisoners to get early release as Burnham tightens rules",
-      "date": "4 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Justice minister defends early release of PC Andrew Harper\u2019s killers amid possible legal challenge \u2013 UK politics live",
+      "date": "5 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/04/fewer-prisoners-early-release-burnham-tightens-rules"
+      "url": "https://www.theguardian.com/politics/live/2026/aug/05/pc-andrew-harper-police-prisoner-early-release-andy-burnham-kemi-badenoch-labour-conservatives-uk-politics-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "PC Harper's mother 'devastated' his killers set for early release under revised plans",
-      "date": "4 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c20e15d0z6zo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham considering public inquiry into UK activities of Jeffrey Epstein",
+      "date": "5 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/us-news/2026/aug/05/burnham-considering-public-inquiry-jeffrey-epstein-mohamed-al-fayed"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage and the \u00a35m question that won\u2019t go away \u2013 podcast",
-      "date": "4 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Badenoch defends decision to allow man jailed for antisemitism to stand as councillor",
+      "date": "5 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/aug/04/nigel-farage-and-the-5m-question-that-wont-go-away-podcast"
+      "url": "https://www.theguardian.com/politics/2026/aug/05/kemi-badenoch-conservatives-joshua-bonehill-paine-somerset-councillor"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "PM's intervention on prisons crisis risks damaging mistakes",
-      "date": "3 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/burnham-intervenes-on-prisons-crisis-and-risks-mistakes-being-made-13569553"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Right turn on green: is the Telegraph changing its tune on the climate?",
+      "date": "5 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/media/2026/aug/05/telegraph-climate-tories-kemi-badenoch-net-zero"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham blocks early release of rapists and child sex offenders",
-      "date": "3 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/andy-burnham-blocks-early-prison-release-for-rapists-but-pc-andrew-harpers-widow-slams-betrayal-as-husbands-killers-to-be-freed-early-13569552"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Women must not feel pressure to have \u2018ideal birth\u2019, says Yvette Cooper",
+      "date": "5 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/05/women-must-not-feel-pressure-to-have-ideal-birth-says-yvette-cooper"
     },
     {
       "id": "7",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Former neo-Nazi activist selected as Tory candidate for Somerset council election",
-      "date": "3 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/03/former-neo-nazi-activist-selected-as-tory-candidate-for-somerset-council-election"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham 'looking into' conducting Epstein inquiry, says victims minister",
+      "date": "5 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx2jpqzwzj1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Rupert Lowe\u2019s \u2018olive branch\u2019 to Farage piles more pressure on Reform leader",
-      "date": "3 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/03/rupert-lowe-restore-britain-olive-branch-reform-uk"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Restrict sale of pet flea treatments, government urged",
+      "date": "5 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c1m1xdyk0j0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Judge orders return of alleged victim of trafficking sent to France under \u2018one in one out\u2019 scheme",
-      "date": "3 Aug 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Charity Commission to investigate donations to illegal Israeli settlements",
+      "date": "4 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/03/judge-orders-return-of-alleged-victim-of-trafficking-sent-to-france-under-one-in-one-out-scheme"
+      "url": "https://www.theguardian.com/society/2026/aug/05/charity-commission-investigate-donations-israeli-settlements-palestine"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Apple launches legal challenge against UK government demand to access data",
-      "date": "3 Aug 2026",
+      "headline": "Government contracts to require job creation instead of green targets under new rules",
+      "date": "4 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/technology/2026/aug/03/apple-legal-challenge-uk-government-data-access"
+      "url": "https://www.theguardian.com/society/2026/aug/04/government-contracts-to-require-job-creation-instead-of-green-targets-under-new-rules"
     }
   ]
 }
