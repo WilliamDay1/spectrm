@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-08-05T09:19:23Z",
+    "updated": "2026-08-06T09:22:39Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Peer urges Tories to block candidate jailed for antisemitic abuse against her",
-      "date": "5 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c1l1q6167d3o?at_medium=RSS&at_campaign=rss"
+      "headline": "I knew Rod Liddle and hated what he became. He would have wanted me to say so | Zoe Williams",
+      "date": "6 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/06/i-knew-rod-liddle-and-hated-what-he-became"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Justice minister defends early release of PC Andrew Harper\u2019s killers amid possible legal challenge \u2013 UK politics live",
-      "date": "5 Aug 2026",
+      "headline": "Reform to unveil controversial plan to fine firms and jail bosses who employ illegal workers \u2013 UK politics live",
+      "date": "6 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/05/pc-andrew-harper-police-prisoner-early-release-andy-burnham-kemi-badenoch-labour-conservatives-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/aug/06/labour-reform-nigel-farage-zia-yusuf-conservatives-kemi-badenoch-joshua-bonehill-paine-uk-politics-live-news"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham considering public inquiry into UK activities of Jeffrey Epstein",
-      "date": "5 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/us-news/2026/aug/05/burnham-considering-public-inquiry-jeffrey-epstein-mohamed-al-fayed"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Walk-in mental health centres to open in banks and libraries across England",
+      "date": "6 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cpd76e737ljo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Badenoch defends decision to allow man jailed for antisemitism to stand as councillor",
-      "date": "5 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/05/kemi-badenoch-conservatives-joshua-bonehill-paine-somerset-councillor"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Sir Keir Starmer made misleading defence spending claim, watchdog says",
+      "date": "6 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c77g38mxxdyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Right turn on green: is the Telegraph changing its tune on the climate?",
-      "date": "5 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Healey urged to be bold on borrowing in first test of Burnham\u2019s growth pledge",
+      "date": "6 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/media/2026/aug/05/telegraph-climate-tories-kemi-badenoch-net-zero"
+      "url": "https://www.theguardian.com/business/2026/aug/06/healey-urged-to-be-bold-on-borrowing-in-first-test-of-burnhams-growth-pledge"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Women must not feel pressure to have \u2018ideal birth\u2019, says Yvette Cooper",
-      "date": "5 Aug 2026",
+      "headline": "Council wants pubs in London\u2019s Soho and West End to ban standing",
+      "date": "6 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/05/women-must-not-feel-pressure-to-have-ideal-birth-says-yvette-cooper"
+      "url": "https://www.theguardian.com/business/2026/aug/06/westminster-council-wants-pubs-in-london-soho-west-end-ban-standing"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham 'looking into' conducting Epstein inquiry, says victims minister",
-      "date": "5 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cx2jpqzwzj1o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Has the UK government\u2019s strategy on small boat crossings been effective?",
+      "date": "6 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/06/uk-government-strategy-small-boat-crossings-asylum-seekers-explainer"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Restrict sale of pet flea treatments, government urged",
-      "date": "5 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c1m1xdyk0j0o?at_medium=RSS&at_campaign=rss"
+      "headline": "The takedown of Jason Arday has overjoyed the right, and must be a wake-up call for the left | Jason Okundaye",
+      "date": "6 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/06/jason-arday-dei-race-issues-university-of-cambridge"
     },
     {
       "id": "9",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Charity Commission to investigate donations to illegal Israeli settlements",
-      "date": "4 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/05/charity-commission-investigate-donations-israeli-settlements-palestine"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Miliband says reopening Strait of Hormuz 'essential' as he meets Rubio",
+      "date": "6 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c1e14zn0pxeo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Government contracts to require job creation instead of green targets under new rules",
-      "date": "4 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/04/government-contracts-to-require-job-creation-instead-of-green-targets-under-new-rules"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK pledges to jail bosses employing illegal workers",
+      "date": "5 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgv864z0rvo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
