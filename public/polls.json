@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T09:38:26Z",
+  "generated": "2026-08-06T09:41:26Z",
   "monthly_history": {
     "labels": [
       "Nov 26",
@@ -152,22 +152,22 @@
     {
       "name": "Andy Burnham",
       "approve": 15,
-      "disapprove": 11,
-      "net": 4,
+      "disapprove": 13,
+      "net": 2,
       "src": "Opinium \u00b7 15 Jul 26"
     },
     {
       "name": "Keir Starmer",
       "approve": 21,
-      "disapprove": 30,
-      "net": -9,
+      "disapprove": 32,
+      "net": -11,
       "src": "YouGov \u00b7 21 Jun 26"
     },
     {
       "name": "Kemi Badenoch",
       "approve": 12,
-      "disapprove": 13,
-      "net": -1,
+      "disapprove": 15,
+      "net": -3,
       "src": "YouGov \u00b7 12 Jul 26"
     },
     {
