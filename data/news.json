@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-06T09:22:39Z",
+    "updated": "2026-08-07T07:52:17Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "I knew Rod Liddle and hated what he became. He would have wanted me to say so | Zoe Williams",
-      "date": "6 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/06/i-knew-rod-liddle-and-hated-what-he-became"
+      "headline": "Conservatives pledge to ban foreign nationals from social housing",
+      "date": "7 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cd69x9j46xjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform to unveil controversial plan to fine firms and jail bosses who employ illegal workers \u2013 UK politics live",
-      "date": "6 Aug 2026",
+      "headline": "Primary schools to be told to identify children at risk of future unemployment",
+      "date": "7 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/06/labour-reform-nigel-farage-zia-yusuf-conservatives-kemi-badenoch-joshua-bonehill-paine-uk-politics-live-news"
+      "url": "https://www.theguardian.com/society/2026/aug/07/english-primary-schools-to-be-told-to-identify-children-at-risk-of-future-unemployment"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Walk-in mental health centres to open in banks and libraries across England",
-      "date": "6 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cpd76e737ljo?at_medium=RSS&at_campaign=rss"
+      "headline": "What can Dublin teach us? Milburn goes on a quest to solve youth jobs crisis",
+      "date": "7 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/07/alan-milburn-dublin-quest-youth-jobs-ireland"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Sir Keir Starmer made misleading defence spending claim, watchdog says",
-      "date": "6 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c77g38mxxdyo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "As a Tory, I say things are looking up. Farage is fading, and the looming threat to No 10 is called Kemi | Simon Hart",
+      "date": "7 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/07/farage-fading-threat-no-10-kemi-badenoch-conservative-party"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Healey urged to be bold on borrowing in first test of Burnham\u2019s growth pledge",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Illegal working arrests double in two years, Home Office says",
       "date": "6 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/06/healey-urged-to-be-bold-on-borrowing-in-first-test-of-burnhams-growth-pledge"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ce3qzd9932do?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Council wants pubs in London\u2019s Soho and West End to ban standing",
-      "date": "6 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/06/westminster-council-wants-pubs-in-london-soho-west-end-ban-standing"
+      "headline": "'It is British life': No 10 enters 'vertical drinking' row",
+      "date": "7 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/no-10-urges-council-to-work-with-london-pubs-amid-row-over-vertical-drinking-13570555"
     },
     {
       "id": "7",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "Has the UK government\u2019s strategy on small boat crossings been effective?",
+      "headline": "Sturgeon's criticisms of Swinney reveal tensions in SNP ranks",
       "date": "6 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/06/uk-government-strategy-small-boat-crossings-asylum-seekers-explainer"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cj9dydm7wjxo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The takedown of Jason Arday has overjoyed the right, and must be a wake-up call for the left | Jason Okundaye",
+      "headline": "The Guardian view on mental health: the new secretary of state should make it a priority | Editorial",
       "date": "6 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/06/jason-arday-dei-race-issues-university-of-cambridge"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/06/the-guardian-view-on-mental-health-the-new-secretary-of-state-should-make-it-a-priority"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Miliband says reopening Strait of Hormuz 'essential' as he meets Rubio",
+      "headline": "Why has Kemi Badenoch given a former neo-Nazi an advisory role? \u2013 The Latest",
       "date": "6 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c1e14zn0pxeo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/news/audio/2026/aug/06/why-has-kemi-badenoch-given-a-former-neo-nazi-an-advisory-role-the-latest"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK pledges to jail bosses employing illegal workers",
-      "date": "5 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgv864z0rvo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham \u2018personally intervened\u2019 over possible early prison release of grooming gang perpetrators",
+      "date": "6 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/06/burnham-intervened-possible-early-prison-release-grooming-gang-perpetrators"
     }
   ]
 }
