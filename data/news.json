@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-07T07:52:17Z",
+    "updated": "2026-08-08T07:29:58Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Conservatives pledge to ban foreign nationals from social housing",
-      "date": "7 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cd69x9j46xjo?at_medium=RSS&at_campaign=rss"
+      "headline": "US accused of meddling in British politics with $500,000 grant scheme promoting \u2018shared values\u2019",
+      "date": "8 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/us-news/2026/aug/08/us-accused-of-meddling-in-british-politics-with-500000-grant-scheme-promoting-shared-values"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Primary schools to be told to identify children at risk of future unemployment",
-      "date": "7 Aug 2026",
+      "headline": "The night Belfast burned: how the Northern Ireland race riots unfolded",
+      "date": "8 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/07/english-primary-schools-to-be-told-to-identify-children-at-risk-of-future-unemployment"
+      "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/aug/08/how-northern-ireland-race-riots-unfolded-belfast"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "What can Dublin teach us? Milburn goes on a quest to solve youth jobs crisis",
-      "date": "7 Aug 2026",
+      "headline": "Union calls for robust review of OBR over fears it holds back economic growth",
+      "date": "8 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/07/alan-milburn-dublin-quest-youth-jobs-ireland"
+      "url": "https://www.theguardian.com/business/2026/aug/08/tuc-review-obr-investment-economy-business"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "As a Tory, I say things are looking up. Farage is fading, and the looming threat to No 10 is called Kemi | Simon Hart",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Thetford residents remain on edge after days of \u2018mob rule\u2019 over asylum plans",
       "date": "7 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/07/farage-fading-threat-no-10-kemi-badenoch-conservative-party"
+      "url": "https://www.theguardian.com/uk-news/2026/aug/07/thetford-residents-remain-on-edge-after-days-of-mob-rule-over-asylum-plans"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Illegal working arrests double in two years, Home Office says",
-      "date": "6 Aug 2026",
+      "headline": "Badenoch pens letter to Clacton ahead of by-election",
+      "date": "7 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ce3qzd9932do?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cwy4rq90g2po?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "'It is British life': No 10 enters 'vertical drinking' row",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Millions in England face longer waits for mental health care as NHS providers plan cuts",
       "date": "7 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/no-10-urges-council-to-work-with-london-pubs-amid-row-over-vertical-drinking-13570555"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/07/millions-in-england-face-longer-waits-for-mental-health-care-as-nhs-providers-plan-cuts"
     },
     {
       "id": "7",
-      "tag": "Devolution",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sturgeon's criticisms of Swinney reveal tensions in SNP ranks",
-      "date": "6 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj9dydm7wjxo?at_medium=RSS&at_campaign=rss"
+      "headline": "French officers halted small boats at sea 10 times since spring",
+      "date": "7 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/07/france-stop-10-small-boat-crossing-channel-since-spring"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The Guardian view on mental health: the new secretary of state should make it a priority | Editorial",
-      "date": "6 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/06/the-guardian-view-on-mental-health-the-new-secretary-of-state-should-make-it-a-priority"
+      "headline": "Government criticised over plastic spill response",
+      "date": "7 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyvx2dx4g6o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why has Kemi Badenoch given a former neo-Nazi an advisory role? \u2013 The Latest",
-      "date": "6 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/aug/06/why-has-kemi-badenoch-given-a-former-neo-nazi-an-advisory-role-the-latest"
+      "headline": "Streeting 'sickened' by sex abuse claims at Army college",
+      "date": "7 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8en51le9e1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham \u2018personally intervened\u2019 over possible early prison release of grooming gang perpetrators",
-      "date": "6 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "A \u2018Keminaissance\u2019 for the Tories is wishful thinking \u2013 Badenoch\u2019s Reform-lite summer will only end one way | Jonathan Freedland",
+      "date": "7 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/06/burnham-intervened-possible-early-prison-release-grooming-gang-perpetrators"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/07/keminaissance-tories-wishful-thinking-badenoch-reform-lite"
     }
   ]
 }
