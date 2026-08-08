@@ -2751,9 +2751,9 @@ function buildVIChart(months){
     var date=new Date(origin.getTime()+(startDay+i)*86400*1000);
     var dom=date.getDate(),mon=date.getMonth(),yr=date.getFullYear();
     if(days<=90){ return date.getDay()===1?MON[mon]:''; }
-    else if(days<=180){ return dom===1&&mon%2===0?MON[mon]+' ''+(yr%100):''; }
-    else if(days<=365){ return dom===1?MON[mon]+' ''+(yr%100):''; }
-    else { return dom===1&&mon%3===0?MON[mon]+' ''+(yr%100):''; }
+    else if(days<=180){ return dom===1&&mon%2===0?MON[mon]+' '+(yr%100):''; }
+    else if(days<=365){ return dom===1?MON[mon]+' '+(yr%100):''; }
+    else { return dom===1&&mon%3===0?MON[mon]+' '+(yr%100):''; }
   });
 
   var parties=[
@@ -2772,13 +2772,13 @@ function buildVIChart(months){
   var endMs=origin.getTime()+(startDay+labels.length-1)*86400*1000;
 
   var scatterDatasets=parties.map(function(p){
-    var pts=[];
+    // Build sparse array aligned to daily labels
+    var pts=new Array(labels.length).fill(null);
     RECENT_POLLS.forEach(function(poll){
       var val=poll[p.key];
       if(val==null)return;
-      // Parse poll date to ms
       var ds=poll.date||'';
-      var pm=ds.match(/(\d{1,2})[- ]([A-Za-z]+)[- ](\d{2,4})/);
+      var pm=ds.match(/(\d{1,2})[\s\-]([A-Za-z]+)[\s\-](\d{2,4})/);
       if(!pm)return;
       var MONTHS={'jan':0,'feb':1,'mar':2,'apr':3,'may':4,'jun':5,'jul':6,'aug':7,'sep':8,'oct':9,'nov':10,'dec':11};
       var mo=MONTHS[pm[2].toLowerCase().slice(0,3)];
@@ -2788,7 +2788,7 @@ function buildVIChart(months){
       var pollMs=new Date(yr,mo,d).getTime();
       if(pollMs<startMs||pollMs>endMs)return;
       var idx=Math.round((pollMs-startMs)/86400/1000);
-      pts.push({x:idx,y:val});
+      if(idx>=0&&idx<labels.length)pts[idx]=val;
     });
     // Convert hex to rgba with low alpha for scatter dots
     var r=parseInt(p.color.slice(1,3),16);
@@ -2802,7 +2802,6 @@ function buildVIChart(months){
       borderColor:'rgba('+r+','+g+','+b+',.0)',
       pointRadius:4,
       pointHoverRadius:4,
-      parsing:{xAxisKey:'x',yAxisKey:'y'},
       order:2,
     };
   });
@@ -2861,7 +2860,7 @@ function buildVIChart(months){
   });
 
   viChart=new Chart(ctx,{
-    type:'scatter',
+    type:'line',
     plugins:[endLabelsPlugin],
     data:{labels:sparseLabels,datasets:[...scatterDatasets,...lineDatasets]},
     options:{
@@ -2871,18 +2870,14 @@ function buildVIChart(months){
       plugins:{legend:{display:false},tooltip:{enabled:false}},
       scales:{
         x:{
-          type:'linear',
-          min:0,max:labels.length-1,
+          type:'category',
           grid:{color:'rgba(0,0,0,.05)',drawTicks:false},
           border:{display:false},
           ticks:{
             font:{size:10,family:'"Instrument Sans",sans-serif'},
             color:'#9a9793',maxRotation:0,
-            callback:function(val){
-              var i=Math.round(val);
-              return (i>=0&&i<sparseLabels.length)?sparseLabels[i]||null:null;
-            },
-            autoSkip:false,maxTicksLimit:200,stepSize:1
+            callback:function(val,idx){return sparseLabels[idx]||null;},
+            autoSkip:false,maxTicksLimit:100
           }
         },
         y:{
