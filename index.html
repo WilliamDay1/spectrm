@@ -14,12 +14,12 @@
   --lo:#1A3A5C;--lo-lt:#E8EEF5;
   --gd:#8B6914;--gd-lt:#FBF6E9;
   --rc:#7A5A1A;--rc-lt:#FDF4E3;
-  --lab:#CC0000;--lab-bg:#FFF0F0;
-  --con:#003087;--con-bg:#EEF2FF;
-  --lib:#D4730A;--lib-bg:#FFF5EC;
+  --lab:#E4003B;--lab-bg:#FFF0F0;
+  --con:#0087DC;--con-bg:#EEF2FF;
+  --lib:#FAA61A;--lib-bg:#FFF5EC;
   --snp:#8B7700;--snp-bg:#FFFBE0;
-  --grn:#1A6B2A;--grn-bg:#EEF8EE;
-  --ref:#0A8A9F;--ref-bg:#E8F7FA;
+  --grn:#00B140;--grn-bg:#EEF8EE;
+  --ref:#12B0C5;--ref-bg:#E8F7FA;
   --s0:#F8F7F4;--s1:#F2F0EC;--s2:#FFFFFF;
   --tp:#0B0B0B;--ts:#52514E;--tm:#898781;
   --bd:rgba(11,11,11,.10);--bds:rgba(11,11,11,.18);
@@ -97,7 +97,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .ni:hover{background:var(--s0);border-left-color:var(--cm)}
 .ntag{font-size:10px;font-weight:500;padding:2px 7px;border-radius:20px;display:inline-block;margin-bottom:4px}
 .tc-c{background:var(--cm-lt);color:var(--cm)}.tc-l{background:var(--lo-lt);color:var(--lo)}
-.tc-e{background:var(--gd-lt);color:var(--gd)}.tc-h{background:#EEF8EE;color:#1A6B2A}
+.tc-e{background:var(--gd-lt);color:var(--gd)}.tc-h{background:#EEF8EE;color:#00B140}
 .tc-f{background:#EEEDFE;color:#534AB7}.tc-d{background:var(--lo-lt);color:var(--lo)}
 .nhed{font-size:12px;line-height:1.4}
 .ntime{font-size:10px;color:var(--tm);margin-top:2px}
@@ -182,7 +182,7 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 .pc{background:#B8D8CE;color:#004D36;font-weight:600}.pl{background:#DBEAFE;color:#1E40AF;font-weight:600}
 .pv{background:#F3F4F6;color:#374151;font-weight:600}.ps{background:#FDBA74;color:#7C2D12;font-weight:600}
 .pr{background:#FDF5E6;color:#78644A;font-weight:600}.pe{background:#EDE9FE;color:#5B21B6;font-weight:600}.pldr{background:#FEE2E2;color:#991B1B;font-weight:600}
-.pcon{background:#EEF2FF;color:#003087;font-weight:600}
+.pcon{background:#EEF2FF;color:#0087DC;font-weight:600}
 .plib{background:#FFFBEB;color:#B45309;font-weight:600}
 .pgrn{background:#DCFCE7;color:#166534;font-weight:600}
 .pref{background:#CFFAFE;color:#0E7490;font-weight:600}
@@ -759,7 +759,15 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
 <!-- POLLS -->
 <div class="sec" id="sec-polls">
   <div class="card" style="margin-bottom:14px">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div class="ctt" style="margin-bottom:0">Voting intention — 7-poll moving average</div><div style="display:flex;gap:3px" id="vi-range-btns"><button class="pill" onclick="setVIRange(24,this)" style="background:var(--brand);color:#fff;border-color:var(--brand);font-size:11px;padding:3px 10px">2Y</button><button class="pill" onclick="setVIRange(12,this)" style="font-size:11px;padding:3px 10px">1Y</button><button class="pill" onclick="setVIRange(6,this)" style="font-size:11px;padding:3px 10px">6M</button><button class="pill" onclick="setVIRange(3,this)" style="font-size:11px;padding:3px 10px">3M</button></div></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <div class="ctt" style="margin-bottom:0">Voting intention — poll of polls</div>
+      <div style="display:flex;gap:3px" id="vi-range-btns">
+        <button class="pill" onclick="setVIRange(24,this)" style="background:var(--brand);color:#fff;border-color:var(--brand);font-size:11px;padding:3px 10px">2Y</button>
+        <button class="pill" onclick="setVIRange(12,this)" style="font-size:11px;padding:3px 10px">1Y</button>
+        <button class="pill" onclick="setVIRange(6,this)" style="font-size:11px;padding:3px 10px">6M</button>
+        <button class="pill" onclick="setVIRange(3,this)" style="font-size:11px;padding:3px 10px">3M</button>
+      </div>
+    </div>
     <div class="pkrow">
       <div class="pk" style="border-top-color:var(--ref)"><div class="pk-p">Reform UK</div><div class="pk-n" style="color:var(--ref)">26.3%</div><div class="pk-d up">↑ 1st place</div></div>
       <div class="pk" style="border-top-color:var(--lab)"><div class="pk-p">Labour</div><div class="pk-n" style="color:var(--lab)">20.7%</div><div class="pk-d dn">↓ −0.3 on month</div></div>
@@ -767,14 +775,15 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
       <div class="pk" style="border-top-color:var(--grn)"><div class="pk-p">Green</div><div class="pk-n" style="color:var(--grn)">12.9%</div><div class="pk-d dn">↓ −1.0 on month</div></div>
       <div class="pk" style="border-top-color:var(--lib)"><div class="pk-p">Lib Dems</div><div class="pk-n" style="color:var(--lib)">12.1%</div><div class="pk-d nn">→ flat</div></div>
     </div>
-    <div style="margin-bottom:8px">
-      <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--ref);display:inline-block"></span>Reform UK</span>
-      <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--lab);display:inline-block"></span>Labour</span>
-      <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--con);display:inline-block"></span>Conservative</span>
-      <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts);margin-right:12px"><span style="width:10px;height:10px;border-radius:2px;background:var(--grn);display:inline-block"></span>Green</span>
-      <span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ts)"><span style="width:10px;height:10px;border-radius:2px;background:var(--lib);display:inline-block"></span>Lib Dems</span>
+    <div style="position:relative;height:380px;margin-top:8px" id="vi-chart-wrap"><canvas id="vi-chart" role="img" aria-label="Voting intention chart"></canvas><div id="vi-crosshair" style="position:absolute;top:0;width:0;border-left:1.5px dashed rgba(0,0,0,.25);pointer-events:none;opacity:0"></div><div id="vi-date-pill" style="position:absolute;background:var(--tp);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;pointer-events:none;opacity:0;z-index:52;white-space:nowrap;transform:translateX(-50%)"></div><div id="vi-hover-labels" style="position:absolute;inset:0;pointer-events:none;z-index:51"></div></div>
+    <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ts)"><span style="width:20px;height:2.5px;background:var(--ref);display:inline-block;border-radius:2px"></span>Reform UK</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ts)"><span style="width:20px;height:2.5px;background:var(--lab);display:inline-block;border-radius:2px"></span>Labour</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ts)"><span style="width:20px;height:2.5px;background:var(--con);display:inline-block;border-radius:2px"></span>Conservative</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ts)"><span style="width:20px;height:2.5px;background:var(--grn);display:inline-block;border-radius:2px"></span>Green</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ts)"><span style="width:20px;height:2.5px;background:var(--lib);display:inline-block;border-radius:2px"></span>Lib Dems</span>
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--tm)"><span style="width:7px;height:7px;border-radius:50%;background:#bbb;display:inline-block"></span>Individual polls</span>
     </div>
-    <div style="position:relative;height:300px" id="vi-chart-wrap" style="cursor:crosshair;height:300px"><canvas id="vi-chart" role="img" aria-label="Voting intention trend Jul 2024 to Jun 2026. Reform UK rose from 15% to lead at 26.3%. Labour fell from 33% to 20.7%.">Voting intention chart showing Reform UK leading at 26.3%, Labour at 20.7%, Conservative at 19.4%.</canvas><div id="vi-crosshair" style="position:absolute;top:0;width:0;border-left:1.5px dashed rgba(0,0,0,.3);pointer-events:none;opacity:0"></div><div id="vi-date-pill" style="position:absolute;background:var(--tp);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;pointer-events:none;opacity:0;z-index:52;white-space:nowrap;transform:translateX(-50%)"></div><div id="vi-hover-labels" style="position:absolute;inset:0;pointer-events:none;z-index:51"></div></div>
   </div>
   <div class="card" style="margin-bottom:14px">
     <div class="ctt">Recent polls <span class="csrc">BPC-registered pollsters</span></div>
@@ -828,9 +837,9 @@ body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--s0);col
     <span style="color:var(--bd);margin:0 10px;font-size:14px">|</span>
     <div class="legi"><div class="legsw" style="background:#FDF5E6;border:1.5px solid #B8956A;border-radius:3px;width:13px;height:13px"></div><span style="font-size:11px;color:#78644A;font-weight:500">Recess</span></div>
     <span style="color:var(--bd);margin:0 10px;font-size:14px">|</span>
-    <div class="legi"><div class="legsw" style="background:#FEE2E2;border:1.5px solid #CC0000;border-radius:3px;width:13px;height:13px"></div><span style="font-size:11px;color:#991B1B;font-weight:500">Labour</span></div>
+    <div class="legi"><div class="legsw" style="background:#FEE2E2;border:1.5px solid #E4003B;border-radius:3px;width:13px;height:13px"></div><span style="font-size:11px;color:#991B1B;font-weight:500">Labour</span></div>
     <span style="color:var(--bd);margin:0 10px;font-size:14px">|</span>
-    <div class="legi"><div class="legsw" style="background:#EEF2FF;border:1.5px solid #003087;border-radius:3px;width:13px;height:13px"></div><span style="font-size:11px;color:#003087;font-weight:500">Conservative</span></div>
+    <div class="legi"><div class="legsw" style="background:#EEF2FF;border:1.5px solid #0087DC;border-radius:3px;width:13px;height:13px"></div><span style="font-size:11px;color:#0087DC;font-weight:500">Conservative</span></div>
     <span style="color:var(--bd);margin:0 10px;font-size:14px">|</span>
     <div class="legi"><div class="legsw" style="background:#FFFBEB;border:1.5px solid #B45309;border-radius:3px;width:13px;height:13px"></div><span style="font-size:11px;color:#B45309;font-weight:500">Lib Dem</span></div>
     <span style="color:var(--bd);margin:0 10px;font-size:14px">|</span>
@@ -984,8 +993,8 @@ async function loadLiveData(){
 
 const TODAY=new Date();
 const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
-const PC={lab:{name:'Labour',c:'#CC0000',bg:'#FFF0F0'},con:{name:'Conservative',c:'#003087',bg:'#EEF2FF'},lib:{name:'Lib Dems',c:'#D4730A',bg:'#FFF5EC'},snp:{name:'SNP',c:'#8B7700',bg:'#FFFBE0'},grn:{name:'Green',c:'#1A6B2A',bg:'#EEF8EE'},ref:{name:'Reform UK',c:'#0A8A9F',bg:'#E8F7FA'},ind:{name:'Independent',c:'#666',bg:'#F0F0F0'}};
-const SEATS=[{name:'Labour',seats:411,c:'#CC0000',pct:63.2},{name:'Conservative',seats:121,c:'#003087',pct:18.6},{name:'Lib Democrats',seats:72,c:'#D4730A',pct:11.1},{name:'SNP',seats:9,c:'#8B7700',pct:1.4},{name:'Reform UK',seats:5,c:'#0A8A9F',pct:.8},{name:'Green',seats:4,c:'#1A6B2A',pct:.6},{name:'Other',seats:28,c:'#888',pct:4.3}];
+const PC={lab:{name:'Labour',c:'#E4003B',bg:'#FFF0F0'},con:{name:'Conservative',c:'#0087DC',bg:'#EEF2FF'},lib:{name:'Lib Dems',c:'#FAA61A',bg:'#FFF5EC'},snp:{name:'SNP',c:'#8B7700',bg:'#FFFBE0'},grn:{name:'Green',c:'#00B140',bg:'#EEF8EE'},ref:{name:'Reform UK',c:'#12B0C5',bg:'#E8F7FA'},ind:{name:'Independent',c:'#666',bg:'#F0F0F0'}};
+const SEATS=[{name:'Labour',seats:411,c:'#E4003B',pct:63.2},{name:'Conservative',seats:121,c:'#0087DC',pct:18.6},{name:'Lib Democrats',seats:72,c:'#FAA61A',pct:11.1},{name:'SNP',seats:9,c:'#8B7700',pct:1.4},{name:'Reform UK',seats:5,c:'#12B0C5',pct:.8},{name:'Green',seats:4,c:'#00B140',pct:.6},{name:'Other',seats:28,c:'#888',pct:4.3}];
 
 const ABBR={
   "Prime Minister's Questions":"PMQs",
@@ -1164,7 +1173,7 @@ const CHART_DATA = [
     id:'gdppc', title:'GDP per Capita', unit:'£k', src:'ONS',
     labels:['Jan 20','Apr 20','Jul 20','Oct 20','Jan 21','Apr 21','Jul 21','Oct 21','Jan 22','Apr 22','Jul 22','Oct 22','Jan 23','Apr 23','Jul 23','Oct 23','Jan 24','Apr 24','Jul 24','Oct 24','Jan 25','Apr 25','Oct 25','Jan 26','Q1 26'],
     values:[34.2,28.1,30.5,31.2,31.0,33.1,34.8,35.0,35.5,35.8,35.9,36.0,35.9,36.2,36.4,36.5,36.8,37.0,37.2,37.4,37.5,37.7,37.9,38.1,38.4],
-    color:'#1A6B2A', up:true, current:'£38.4k', change:'+1.2% Q1 26',
+    color:'#00B140', up:true, current:'£38.4k', change:'+1.2% Q1 26',
     good:true
   },
   {
@@ -1532,8 +1541,8 @@ function pumpRoleQueue(){
 const MP_PAGE_SIZE=40;
 
 const MP_PARTIES={
-  'Labour':{c:'#CC0000',bg:'#FEE2E2',short:'Lab'},
-  'Conservative':{c:'#003087',bg:'#EEF2FF',short:'Con'},
+  'Labour':{c:'#E4003B',bg:'#FEE2E2',short:'Lab'},
+  'Conservative':{c:'#0087DC',bg:'#EEF2FF',short:'Con'},
   'Liberal Democrat':{c:'#FAA61A',bg:'#FFFBEB',short:'LD'},
   'Reform UK':{c:'#12B6CF',bg:'#CFFAFE',short:'Ref'},
   'Scottish National Party':{c:'#005EB8',bg:'#DBEAFE',short:'SNP'},
@@ -2482,7 +2491,7 @@ function renderSeatProjection(){
   // ── dot-matrix UK map ──
   var mapEl=document.getElementById('seat-map-svg');
   if(mapEl){
-    var pc={lab:'#CC0000',ref:'#0A8A9F',lib:'#D4730A',con:'#003087',grn:'#1A6B2A',snp:'#8B7700',oth:'#898781'};
+    var pc={lab:'#E4003B',ref:'#12B0C5',lib:'#FAA61A',con:'#0087DC',grn:'#00B140',snp:'#8B7700',oth:'#898781'};
     var regions=[
       {seats:8,party:'snp',cx:120,cy:55},{seats:6,party:'snp',cx:185,cy:80},
       {seats:12,party:'lab',cx:155,cy:115},{seats:10,party:'lab',cx:115,cy:120},
@@ -2509,7 +2518,7 @@ function renderSeatProjection(){
         }
       }
     });
-    var legItems=[{c:'#CC0000',l:'Lab'},{c:'#0A8A9F',l:'Ref'},{c:'#D4730A',l:'LD'},{c:'#003087',l:'Con'},{c:'#1A6B2A',l:'Grn'},{c:'#8B7700',l:'SNP'},{c:'#898781',l:'Oth'}];
+    var legItems=[{c:'#E4003B',l:'Lab'},{c:'#12B0C5',l:'Ref'},{c:'#FAA61A',l:'LD'},{c:'#0087DC',l:'Con'},{c:'#00B140',l:'Grn'},{c:'#8B7700',l:'SNP'},{c:'#898781',l:'Oth'}];
     var legX=14;
     svg+='<rect x="8" y="'+(H-26)+'" width="'+(W-16)+'" height="20" rx="4" fill="var(--s2)" opacity=".92"/>';
     legItems.forEach(function(l){
@@ -2527,9 +2536,9 @@ function renderSeatProjection(){
     var findings=[
       {icon:'ti-arrow-up-right',c:'#1baf7a',bg:'#EAF3DE',text:'Labour projected 249 seats — most of any party. Burnham bounce lifting VI from 18% to 21%.'},
       {icon:'ti-alert-triangle',c:'#eda100',bg:'#FBF6E9',text:'Reform UK 26% VI but only 198 seats — FPTP severely penalises evenly spread support.'},
-      {icon:'ti-arrow-up-right',c:'#D4730A',bg:'#FFF5EC',text:'Lib Dems: 128 seats from just 12% VI, concentrated Blue Wall vote in southern England.'},
+      {icon:'ti-arrow-up-right',c:'#FAA61A',bg:'#FFF5EC',text:'Lib Dems: 128 seats from just 12% VI, concentrated Blue Wall vote in southern England.'},
       {icon:'ti-arrow-down-right',c:'#e34948',bg:'#FFF0F0',text:'Conservatives projected 82 seats — worst result in party history, third behind Reform.'},
-      {icon:'ti-ban',c:'#003087',bg:'#EEF2FF',text:'No party wins a majority. Labour would need Lib Dem support to govern.'},
+      {icon:'ti-ban',c:'#0087DC',bg:'#EEF2FF',text:'No party wins a majority. Labour would need Lib Dem support to govern.'},
     ];
     findingsEl.innerHTML=findings.map(function(f){
       return '<div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:7px;padding:7px 9px;background:'+f.bg+';border-radius:7px">'+
@@ -2542,11 +2551,11 @@ function renderSeatProjection(){
   var chamberEl=document.getElementById('seat-chamber');
   if(chamberEl){
     var parties=[
-      {party:'Labour',seats:249,c:'#CC0000'},
-      {party:'Reform UK',seats:198,c:'#0A8A9F'},
-      {party:'Lib Dem',seats:128,c:'#D4730A'},
-      {party:'Conservative',seats:82,c:'#003087'},
-      {party:'Green',seats:31,c:'#1A6B2A'},
+      {party:'Labour',seats:249,c:'#E4003B'},
+      {party:'Reform UK',seats:198,c:'#12B0C5'},
+      {party:'Lib Dem',seats:128,c:'#FAA61A'},
+      {party:'Conservative',seats:82,c:'#0087DC'},
+      {party:'Green',seats:31,c:'#00B140'},
       {party:'SNP',seats:24,c:'#8B7700'},
       {party:'Other',seats:38,c:'#898781'},
     ];
@@ -2594,11 +2603,11 @@ function renderSeatProjection(){
         '<th style="text-align:right;padding:6px 0;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Change</th>'+
         '</tr></thead><tbody>'+
         [
-          {party:'Labour',seats:249,prev:404,change:-155,c:'#CC0000'},
-          {party:'Reform UK',seats:198,prev:5,change:193,c:'#0A8A9F'},
-          {party:'Lib Dem',seats:128,prev:72,change:56,c:'#D4730A'},
-          {party:'Conservative',seats:82,prev:121,change:-39,c:'#003087'},
-          {party:'Green',seats:31,prev:4,change:27,c:'#1A6B2A'},
+          {party:'Labour',seats:249,prev:404,change:-155,c:'#E4003B'},
+          {party:'Reform UK',seats:198,prev:5,change:193,c:'#12B0C5'},
+          {party:'Lib Dem',seats:128,prev:72,change:56,c:'#FAA61A'},
+          {party:'Conservative',seats:82,prev:121,change:-39,c:'#0087DC'},
+          {party:'Green',seats:31,prev:4,change:27,c:'#00B140'},
           {party:'SNP',seats:24,prev:9,change:15,c:'#8B7700'},
           {party:'Other',seats:38,prev:35,change:3,c:'#898781'},
         ].map(function(s){
@@ -2726,8 +2735,6 @@ function buildVIChart(months){
   var par=oldCanvas.parentElement;
   var newCanvas=document.createElement('canvas');
   newCanvas.id='vi-chart';
-  newCanvas.setAttribute('role','img');
-  newCanvas.setAttribute('aria-label','Voting intention daily estimate chart');
   if(par){par.replaceChild(newCanvas,oldCanvas);}
   const ctx=newCanvas;
 
@@ -2737,50 +2744,158 @@ function buildVIChart(months){
   var series=result.series;
   var origin=result.origin;
   var startDay=result.startDay;
-  var months=result.months;
+  var MON=result.months;
 
-  // Build sparse x-axis labels anchored to calendar dates
+  // X-axis labels
   var sparseLabels=labels.map(function(l,i){
     var date=new Date(origin.getTime()+(startDay+i)*86400*1000);
-    var dom=date.getDate();
-    var mon=date.getMonth();
-    var yr=date.getFullYear();
-    if(days<=90){
-      return date.getDay()===1?dom+' '+months[mon]:'';
-    } else if(days<=180){
-      return dom===1&&mon%2===0?months[mon]+' '+(yr%100):'';
-    } else if(days<=365){
-      return dom===1?months[mon]+' '+(yr%100):'';
-    } else {
-      return dom===1&&mon%3===0?months[mon]+' '+(yr%100):'';
-    }
+    var dom=date.getDate(),mon=date.getMonth(),yr=date.getFullYear();
+    if(days<=90){ return date.getDay()===1?MON[mon]:''; }
+    else if(days<=180){ return dom===1&&mon%2===0?MON[mon]+' ''+(yr%100):''; }
+    else if(days<=365){ return dom===1?MON[mon]+' ''+(yr%100):''; }
+    else { return dom===1&&mon%3===0?MON[mon]+' ''+(yr%100):''; }
   });
+
+  var parties=[
+    {label:'Reform UK',key:'ref',color:'#12B0C5'},
+    {label:'Labour',   key:'lab',color:'#E4003B'},
+    {label:'Con',      key:'con',color:'#0087DC'},
+    {label:'Green',    key:'grn',color:'#00B140'},
+    {label:'Lib Dems', key:'lib',color:'#FAA61A'},
+  ];
 
   VI_CUR={labels:labels,data:series};
 
+  // Build scatter datasets from individual RECENT_POLLS
+  // Map each poll date to an index in our daily labels array
+  var startMs=origin.getTime()+startDay*86400*1000;
+  var endMs=origin.getTime()+(startDay+labels.length-1)*86400*1000;
+
+  var scatterDatasets=parties.map(function(p){
+    var pts=[];
+    RECENT_POLLS.forEach(function(poll){
+      var val=poll[p.key];
+      if(val==null)return;
+      // Parse poll date to ms
+      var ds=poll.date||'';
+      var pm=ds.match(/(\d{1,2})[- ]([A-Za-z]+)[- ](\d{2,4})/);
+      if(!pm)return;
+      var MONTHS={'jan':0,'feb':1,'mar':2,'apr':3,'may':4,'jun':5,'jul':6,'aug':7,'sep':8,'oct':9,'nov':10,'dec':11};
+      var mo=MONTHS[pm[2].toLowerCase().slice(0,3)];
+      if(mo===undefined)return;
+      var yr=parseInt(pm[3]);if(yr<100)yr+=2000;
+      var d=parseInt(pm[1]);
+      var pollMs=new Date(yr,mo,d).getTime();
+      if(pollMs<startMs||pollMs>endMs)return;
+      var idx=Math.round((pollMs-startMs)/86400/1000);
+      pts.push({x:idx,y:val});
+    });
+    // Convert hex to rgba with low alpha for scatter dots
+    var r=parseInt(p.color.slice(1,3),16);
+    var g=parseInt(p.color.slice(3,5),16);
+    var b=parseInt(p.color.slice(5,7),16);
+    return {
+      type:'scatter',
+      label:p.label+' dots',
+      data:pts,
+      backgroundColor:'rgba('+r+','+g+','+b+',.22)',
+      borderColor:'rgba('+r+','+g+','+b+',.0)',
+      pointRadius:4,
+      pointHoverRadius:4,
+      parsing:{xAxisKey:'x',yAxisKey:'y'},
+      order:2,
+    };
+  });
+
+  // End-labels + dots plugin
+  var endLabelsPlugin={
+    id:'endLabels',
+    afterDatasetsDraw:function(chart){
+      var ctx2=chart.ctx;
+      // Only draw labels for line datasets (skip scatter)
+      var finals=parties.map(function(p,i){
+        var meta=chart.getDatasetMeta(i+parties.length);
+        if(!meta||!meta.data||!meta.data.length)return null;
+        var pt=meta.data[meta.data.length-1];
+        var ds=chart.data.datasets[i+parties.length];
+        var val=ds.data[ds.data.length-1];
+        return {y:pt.y,val:val,label:p.label,color:p.color};
+      }).filter(Boolean).sort(function(a,b){return a.y-b.y;});
+
+      // Spread labels vertically
+      var minGap=14;
+      for(var pass=0;pass<8;pass++){
+        for(var j=1;j<finals.length;j++){
+          if(finals[j-1].y-finals[j].y<minGap){
+            var mid=(finals[j-1].y+finals[j].y)/2;
+            finals[j-1].y=mid+minGap/2;
+            finals[j].y=mid-minGap/2;
+          }
+        }
+      }
+      ctx2.save();
+      ctx2.font='600 11px "Instrument Sans",sans-serif';
+      ctx2.textAlign='left';
+      finals.forEach(function(f){
+        if(!f.val)return;
+        ctx2.fillStyle=f.color;
+        ctx2.fillText(f.val+'%',chart.chartArea.right+6,f.y+4);
+      });
+      ctx2.restore();
+    }
+  };
+
+  // Line datasets (drawn on top of scatter)
+  var lineDatasets=parties.map(function(p){
+    return {
+      type:'line',
+      label:p.label,
+      data:series[p.key],
+      borderColor:p.color,
+      backgroundColor:'transparent',
+      tension:.5,fill:false,
+      borderWidth:p.key==='ref'||p.key==='lab'?2.5:2,
+      pointRadius:0,pointHoverRadius:0,
+      order:1,
+    };
+  });
+
   viChart=new Chart(ctx,{
-    type:'line',
-    data:{labels:sparseLabels,datasets:[
-      {label:'Reform UK',data:series.ref,borderColor:'#0A8A9F',backgroundColor:'rgba(10,138,159,.07)',tension:.45,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
-      {label:'Labour',data:series.lab,borderColor:'#CC0000',backgroundColor:'rgba(204,0,0,.05)',tension:.45,fill:true,borderWidth:2.5,pointRadius:0,pointHoverRadius:0},
-      {label:'Conservative',data:series.con,borderColor:'#003087',backgroundColor:'transparent',tension:.45,fill:false,borderWidth:2,pointRadius:0,pointHoverRadius:0},
-      {label:'Green',data:series.grn,borderColor:'#1A6B2A',backgroundColor:'transparent',tension:.45,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
-      {label:'Lib Dems',data:series.lib,borderColor:'#D4730A',backgroundColor:'transparent',tension:.45,fill:false,borderWidth:1.5,pointRadius:0,pointHoverRadius:0},
-    ]},
+    type:'scatter',
+    plugins:[endLabelsPlugin],
+    data:{labels:sparseLabels,datasets:[...scatterDatasets,...lineDatasets]},
     options:{
       responsive:true,maintainAspectRatio:false,
+      layout:{padding:{right:56,top:6,bottom:2,left:0}},
       interaction:{mode:'index',intersect:false},
       plugins:{legend:{display:false},tooltip:{enabled:false}},
       scales:{
         x:{
-          grid:{color:'rgba(0,0,0,.04)',drawTicks:false},
+          type:'linear',
+          min:0,max:labels.length-1,
+          grid:{color:'rgba(0,0,0,.05)',drawTicks:false},
           border:{display:false},
-          ticks:{font:{size:10},color:'#898781',maxRotation:0,
-            callback:function(val,idx){return sparseLabels[idx]||null;},
-            autoSkip:false,maxTicksLimit:100}
+          ticks:{
+            font:{size:10,family:'"Instrument Sans",sans-serif'},
+            color:'#9a9793',maxRotation:0,
+            callback:function(val){
+              var i=Math.round(val);
+              return (i>=0&&i<sparseLabels.length)?sparseLabels[i]||null:null;
+            },
+            autoSkip:false,maxTicksLimit:200,stepSize:1
+          }
         },
-        y:{min:0,max:40,grid:{color:'rgba(0,0,0,.05)',drawTicks:false},border:{display:false},
-          ticks:{font:{size:10},color:'#898781',callback:function(v){return v+'%';},padding:8}}
+        y:{
+          min:0,max:40,
+          grid:{color:'rgba(0,0,0,.05)',drawTicks:false},
+          border:{display:false},
+          ticks:{
+            font:{size:10,family:'"Instrument Sans",sans-serif'},
+            color:'#9a9793',
+            callback:function(v){return v>0?v+'%':'';},
+            padding:6,stepSize:10
+          }
+        }
       },
       onHover:function(e,els,chart){handleVIHover(e,chart);}
     }
@@ -2839,11 +2954,11 @@ function handleVIHover(event,chart){
   dp.style.opacity=1;
 
   var parties=[
-    {key:'ref',c:'#0A8A9F'},
-    {key:'lab',c:'#CC0000'},
-    {key:'con',c:'#003087'},
-    {key:'grn',c:'#1A6B2A'},
-    {key:'lib',c:'#D4730A'},
+    {key:'ref',c:'#12B0C5'},
+    {key:'lab',c:'#E4003B'},
+    {key:'con',c:'#0087DC'},
+    {key:'grn',c:'#00B140'},
+    {key:'lib',c:'#FAA61A'},
   ];
 
   // Interpolate each party's value smoothly
@@ -2881,7 +2996,7 @@ var pollExpandChart=null;
 function renderPollsTable(){
   var pt=document.getElementById('pollster-table');
   if(!pt)return;
-  var PC2={'ref':'#0A8A9F','lab':'#CC0000','con':'#003087','grn':'#1A6B2A','lib':'#D4730A'};
+  var PC2={'ref':'#12B0C5','lab':'#E4003B','con':'#0087DC','grn':'#00B140','lib':'#FAA61A'};
   var PCBG={'ref':'#E8F7FA','lab':'#FFF0F0','con':'#EEF2FF','grn':'#EEF8EE','lib':'#FFF5EC'};
 
   var makeRow=function(p,i,hidden){
@@ -2903,11 +3018,11 @@ function renderPollsTable(){
     '<thead><tr style="border-bottom:1.5px solid var(--bd)">'+
     '<th style="text-align:left;padding:6px 10px 8px 0;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Pollster</th>'+
     '<th style="text-align:left;padding:6px 8px 8px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">Date</th>'+
-    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#0A8A9F">Ref</th>'+
-    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#CC0000">Lab</th>'+
-    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#003087">Con</th>'+
-    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#1A6B2A">Grn</th>'+
-    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#D4730A">LD</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#12B0C5">Ref</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#E4003B">Lab</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#0087DC">Con</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#00B140">Grn</th>'+
+    '<th style="text-align:center;padding:6px 8px 8px;font-size:9px;font-weight:600;color:#FAA61A">LD</th>'+
     '<th style="text-align:right;padding:6px 0 8px 4px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--tm)">n</th>'+
     '</tr></thead><tbody id="poll-tbody">';
 
@@ -2970,7 +3085,7 @@ function expandPoll(idx){
   setTimeout(function(){
     var ctx2=document.getElementById('poll-expand-chart');
     if(!ctx2)return;
-    var PC2={'Reform UK':'#0A8A9F','Labour':'#CC0000','Conservative':'#003087','Green':'#1A6B2A','Lib Dems':'#D4730A'};
+    var PC2={'Reform UK':'#12B0C5','Labour':'#E4003B','Conservative':'#0087DC','Green':'#00B140','Lib Dems':'#FAA61A'};
     var PCBG={'Reform UK':'#E8F7FA','Labour':'#FFF0F0','Conservative':'#EEF2FF','Green':'#EEF8EE','Lib Dems':'#FFF5EC'};
     var labels=['Reform UK','Labour','Conservative','Green','Lib Dems'];
     var data=[p.ref,p.lab,p.con,p.grn,p.lib];
@@ -3120,7 +3235,7 @@ const EVENTS=[
    link:{type:'url',url:'https://www.parliament.uk/about/how/occasions/recess/',label:'Parliament recess dates'},
    detail:'Parliament rises for Christmas recess 2026. MPs and Lords return in January 2027. The recess runs until 4 January 2027.'},
 ];
-const ET={c:{cls:'pc',badge:'Commons',col:'#004D36',bg:'#B8D8CE'},l:{cls:'pl',badge:'Lords',col:'#1A4A7A',bg:'#DBEAFE'},v:{cls:'pv',badge:'Vote',col:'#7A5800',bg:'#FEF9E7'},s:{cls:'ps',badge:'State',col:'#7C2D12',bg:'#FDBA74'},r:{cls:'pr',badge:'Recess',col:'#92400E',bg:'#FDF5E6'},e:{cls:'pe',badge:'Event',col:'#4338CA',bg:'#EDE9FE'},ldr:{cls:'pldr',badge:'Labour',col:'#991B1B',bg:'#FEE2E2'},con:{cls:'pcon',badge:'Conservative',col:'#003087',bg:'#EEF2FF'},lib:{cls:'plib',badge:'Lib Dem',col:'#B45309',bg:'#FFFBEB'},grn:{cls:'pgrn',badge:'Green',col:'#166534',bg:'#DCFCE7'},ref:{cls:'pref',badge:'Reform UK',col:'#0E7490',bg:'#CFFAFE'}};
+const ET={c:{cls:'pc',badge:'Commons',col:'#004D36',bg:'#B8D8CE'},l:{cls:'pl',badge:'Lords',col:'#1A4A7A',bg:'#DBEAFE'},v:{cls:'pv',badge:'Vote',col:'#7A5800',bg:'#FEF9E7'},s:{cls:'ps',badge:'State',col:'#7C2D12',bg:'#FDBA74'},r:{cls:'pr',badge:'Recess',col:'#92400E',bg:'#FDF5E6'},e:{cls:'pe',badge:'Event',col:'#4338CA',bg:'#EDE9FE'},ldr:{cls:'pldr',badge:'Labour',col:'#991B1B',bg:'#FEE2E2'},con:{cls:'pcon',badge:'Conservative',col:'#0087DC',bg:'#EEF2FF'},lib:{cls:'plib',badge:'Lib Dem',col:'#B45309',bg:'#FFFBEB'},grn:{cls:'pgrn',badge:'Green',col:'#166534',bg:'#DCFCE7'},ref:{cls:'pref',badge:'Reform UK',col:'#0E7490',bg:'#CFFAFE'}};
 let CY=2026,CM=5;
 function isRecess(d){return RECESSES.some(r=>d>=r.start&&d<=r.end);}
 function evOn(d){return EVENTS.filter(e=>e.date.getFullYear()===d.getFullYear()&&e.date.getMonth()===d.getMonth()&&e.date.getDate()===d.getDate());}
@@ -3312,7 +3427,7 @@ const POLICIES=[
    votes:[{n:'Autumn Budget 2025 — Finance Bill',aye:338,no:289,abs:23,note:'Passed on Labour majority. Conservatives voted against; Lib Dems abstained.'},{n:'Workers Rights Act 2025',aye:402,no:215,abs:33,note:'Extended day-one rights and gig economy protections. Conservatives voted against.'}],
    stances:[{n:'Rachel Reeves',p:'Labour',av:'RR',party:'lab',v:'Support'},{n:'Keir Starmer',p:'Labour',av:'KS',party:'lab',v:'Support'},{n:'Kemi Badenoch',p:'Conservative',av:'KB',party:'con',v:'Neutral'},{n:'Mel Stride',p:'Conservative',av:'MS',party:'con',v:'Neutral'},{n:'Ed Davey',p:'Lib Dems',av:'ED',party:'lib',v:'Support'},{n:'Nigel Farage',p:'Reform UK',av:'NF',party:'ref',v:'Neutral'}],
    news:[{tc:'tc-e',tag:'Inflation',h:'CPI at 2.8% in May — above BoE 2% target for seventh consecutive month'},{tc:'tc-h',tag:'Growth',h:'UK GDP grows 0.7% in Q1 2026 — above OBR and all market forecasts'},{tc:'tc-c',tag:'BoE',h:'Bank of England holds rates at 3.75% citing energy price uncertainty'}]},
-  {id:'nhs',icon:'H',name:'NHS and health',tag:'Health',tagC:'#1A6B2A',tagBg:'#EEF8EE',accent:'#1A6B2A',
+  {id:'nhs',icon:'H',name:'NHS and health',tag:'Health',tagC:'#00B140',tagBg:'#EEF8EE',accent:'#00B140',
    facts:['7.22 million cases on NHS waiting list (April 2026) — up 100k on the month','~100,000 patients waiting over 1 year for consultant-led treatment','75.7% of A&E patients seen within 4 hours — target is 78%','£3.1bn emergency NHS funding passed Parliament in March 2026'],
    votes:[{n:'NHS Emergency Funding Bill 2026',aye:412,no:198,abs:40,note:'Passed with Labour majority. Conservatives voted against citing cost and lack of structural reform.'},{n:'NHS independent sector amendment — defeated',aye:178,no:421,abs:51,note:'Conservative amendment to expand private sector commissioning defeated.'}],
    stances:[{n:'Wes Streeting',p:'Labour',av:'WS',party:'lab',v:'Strong support'},{n:'Keir Starmer',p:'Labour',av:'KS',party:'lab',v:'Support'},{n:'Kemi Badenoch',p:'Conservative',av:'KB',party:'con',v:'Neutral'},{n:'Ed Davey',p:'Lib Dems',av:'ED',party:'lib',v:'Strong support'},{n:'Carla Denyer',p:'Green',av:'CD',party:'grn',v:'Strong support'},{n:'Nigel Farage',p:'Reform UK',av:'NF',party:'ref',v:'Support'}],
@@ -3327,7 +3442,7 @@ const POLICIES=[
    votes:[{n:'Scottish Independence Referendum Bill — Westminster',aye:89,no:521,abs:40,note:'SNP motion for Section 30 order rejected. Labour and Conservatives voted against.'}],
    stances:[{n:'Keir Starmer',p:'Labour',av:'KS',party:'lab',v:'Opposes'},{n:'Stephen Flynn',p:'SNP',av:'SF',party:'snp',v:'Strong support'},{n:'Kemi Badenoch',p:'Conservative',av:'KB',party:'con',v:'Opposes'},{n:'Ed Davey',p:'Lib Dems',av:'ED',party:'lib',v:'Opposes'},{n:'Carla Denyer',p:'Green',av:'CD',party:'grn',v:'Neutral'},{n:'Nigel Farage',p:'Reform UK',av:'NF',party:'ref',v:'Opposes'}],
    news:[{tc:'tc-e',tag:'SNP',h:'SNP tables fresh independence motion — blocked by Labour whip'},{tc:'tc-c',tag:'Polling',h:'Independence at 50% — Holyrood 2027 election battle lines forming'},{tc:'tc-c',tag:'Holyrood',h:'Scottish Government publishes new independence prospectus for younger voters'}]},
-  {id:'climate',icon:'C',name:'Climate and net zero',tag:'Environment',tagC:'#1A6B2A',tagBg:'#EEF8EE',accent:'#1A6B2A',
+  {id:'climate',icon:'C',name:'Climate and net zero',tag:'Environment',tagC:'#00B140',tagBg:'#EEF8EE',accent:'#00B140',
    facts:['UK has cut emissions 50% since 1990 — fastest reduction in the G7','Net Zero Acceleration Act 2025 commits UK to clean energy by 2035','61% of the public support the net zero 2050 commitment (YouGov Jan 2026)','North Sea oil licensing remains contested between Labour, SNP, Greens and Reform'],
    votes:[{n:'Net Zero Acceleration Act 2025',aye:389,no:220,abs:41,note:'Labour majority. Conservatives largely abstained. Greens and SNP voted Aye.'},{n:'North Sea Licensing extension — defeated',aye:211,no:387,abs:52,note:'Conservative amendment to extend North Sea oil licensing defeated by Labour.'}],
    stances:[{n:'Ed Miliband',p:'Labour',av:'EM',party:'lab',v:'Strong support'},{n:'Carla Denyer',p:'Green',av:'CD',party:'grn',v:'Strong support'},{n:'Ed Davey',p:'Lib Dems',av:'ED',party:'lib',v:'Strong support'},{n:'Kemi Badenoch',p:'Conservative',av:'KB',party:'con',v:'Neutral'},{n:'Nigel Farage',p:'Reform UK',av:'NF',party:'ref',v:'Opposes'},{n:'Stephen Flynn',p:'SNP',av:'SF',party:'snp',v:'Strong support'}],
@@ -3359,12 +3474,12 @@ function openPolicy(id){
 
 // INSTITUTIONS
 const INSTS=[
-  {n:'National Health Service',t:'Public healthcare',ico:'H',bg:'#EEF8EE',c:'#1A6B2A',m:[{l:'A&E within 4 hours',v:'75.7%',p:75.7},{l:'18-week standard',v:'65%',p:65},{l:'Waiting list',v:'7.22m',p:null},{l:'Satisfaction score',v:'58%',p:58}]},
+  {n:'National Health Service',t:'Public healthcare',ico:'H',bg:'#EEF8EE',c:'#00B140',m:[{l:'A&E within 4 hours',v:'75.7%',p:75.7},{l:'18-week standard',v:'65%',p:65},{l:'Waiting list',v:'7.22m',p:null},{l:'Satisfaction score',v:'58%',p:58}]},
   {n:'House of Commons',t:'Lower chamber — 650 MPs',ico:'C',bg:'#F5EEF0',c:'#6B2737',m:[{l:'Bills passed (session)',v:'19',p:null},{l:'MP attendance avg',v:'82%',p:82},{l:'PMQs held (session)',v:'24',p:null},{l:'Public approval',v:'29%',p:29}]},
   {n:'Bank of England',t:'Central bank',ico:'B',bg:'#E8EEF5',c:'#1A3A5C',m:[{l:'Base rate',v:'3.75%',p:null},{l:'Inflation target',v:'2.0%',p:null},{l:'MPC hold streak',v:'4 months',p:null},{l:'Annual gilt sales',v:'£70bn target',p:null}]},
   {n:'BBC',t:'Public broadcaster',ico:'B',bg:'#FBF6E9',c:'#8B6914',m:[{l:'Weekly reach',v:'74%',p:74},{l:'Trust rating',v:'51%',p:51},{l:'Impartiality score',v:'48%',p:48},{l:'Complaints upheld',v:'12%',p:12}]},
   {n:'Metropolitan Police',t:'Law enforcement — London',ico:'P',bg:'#EEEDFE',c:'#534AB7',m:[{l:'Crime solved rate',v:'43%',p:43},{l:'1-hour response',v:'61%',p:61},{l:'Public trust',v:'49%',p:49},{l:'Overall satisfaction',v:'52%',p:52}]},
-  {n:'ONS',t:'National statistics authority',ico:'O',bg:'#EEF8EE',c:'#1A6B2A',m:[{l:'Latest CPI',v:'2.8% May 26',p:null},{l:'Unemployment',v:'4.9%',p:null},{l:'GDP Q1 2026',v:'+0.7%',p:null},{l:'Payrolled employees',v:'30.3m',p:null}]},
+  {n:'ONS',t:'National statistics authority',ico:'O',bg:'#EEF8EE',c:'#00B140',m:[{l:'Latest CPI',v:'2.8% May 26',p:null},{l:'Unemployment',v:'4.9%',p:null},{l:'GDP Q1 2026',v:'+0.7%',p:null},{l:'Payrolled employees',v:'30.3m',p:null}]},
 ];
 function renderInstitutions(){
   document.getElementById('inst-grid').innerHTML=INSTS.map(i=>`<div class="icard"><div class="ihdr"><div class="iico" style="background:${i.bg};color:${i.c}">${i.ico}</div><div><div class="iname">${i.n}</div><div class="itype">${i.t}</div></div></div>${i.m.map(m=>`<div class="im"><span class="iml">${m.l}</span><div class="imrhs"><span class="imv">${m.v}</span>${m.p!==null?`<div class="imbar"><div class="imfill" style="width:${Math.min(m.p,100)}%"></div></div>`:''}</div></div>`).join('')}</div>`).join('');
