@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Scrapes UK VI polls from Wikipedia.
-Column order: Date(s)=0, Pollster=1, Client=2, Area=3, Sample=4, Lab=5, Con=6, Ref=7, LD=8, Grn=9
+Fixed column order: Date(s)=0, Pollster=1, Client=2, Area=3, Sample=4, Lab=5, Con=6, Ref=7, LD=8, Grn=9
 """
 import json, re, sys
 from datetime import datetime
@@ -20,6 +20,7 @@ POLLSTER_SRCS = {
     'Ashcroft':'lordashcroftpolls.com','Redfield':'redfieldandwiltonstrategies.com',
     'BMG':'bmgresearch.co.uk','Deltapoll':'deltapoll.co.uk',
     'Techne':'techneuk.co.uk','Norstat':'norstat.co.uk',
+    'Freshwater':'freshwaterstrategy.com','Focaldata':'focaldata.com',
 }
 KNOWN_POLLSTERS = list(POLLSTER_SRCS.keys())
 
@@ -38,19 +39,19 @@ LEADER_FALLBACK = {
     'Keir Starmer':   {'approve':19,'disapprove':62,'net':-43,'src':'YouGov · Jun 2026'},
 }
 
+# Fixed column positions confirmed from debug
 FIXED_COL = {'date':0,'pollster':1,'n':4,'lab':5,'con':6,'ref':7,'lib':8,'grn':9}
 
 def fetch_wiki(page):
     url = "https://en.wikipedia.org/w/api.php"
     params = urllib.parse.urlencode({
-        "action": "parse", "page": page, "prop": "text",
-        "format": "json", "disablelimitreport": "1"
+        "action":"parse","page":page,"prop":"text",
+        "format":"json","disablelimitreport":"1"
     })
     req = urllib.request.Request(f"{url}?{params}",
-        headers={"User-Agent": "Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"})
+        headers={"User-Agent":"Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        data = json.loads(r.read().decode('utf-8'))
-    return data.get("parse", {}).get("text", {}).get("*", "")
+        return json.loads(r.read().decode('utf-8')).get("parse",{}).get("text",{}).get("*","")
 
 try:
     import requests
@@ -60,7 +61,7 @@ try:
             headers={"User-Agent":"Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"},
             timeout=30)
         r.raise_for_status()
-        return r.json().get("parse", {}).get("text", {}).get("*", "")
+        return r.json().get("parse",{}).get("text",{}).get("*","")
 except ImportError:
     pass
 
@@ -72,25 +73,38 @@ def st(s):
     return s.strip()
 
 def pct(s):
-    s = st(s).replace('%', '').strip()
+    s = st(s).replace('%','').strip()
     m = re.search(r'(\d+(?:\.\d+)?)', s)
     try: return round(float(m.group(1))) if m else None
     except: return None
 
-def parse_date(s, yr=None):
-    s = st(s).replace('–', '-')
+def parse_date_full(s):
+    """Parse date string that INCLUDES a year. Returns (sortkey, display) or (None, None)."""
+    s = st(s).replace('–','-')
     m = re.search(r'(\d{1,2})(?:\s*-\s*\d{1,2})?\s+([A-Za-z]+)\s+(\d{4})', s)
     if m:
         d, mo, y = int(m.group(1)), MONTH_MAP.get(m.group(2).lower()[:3], 0), int(m.group(3))
-        if mo and y >= 2024: return y*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(y)[2:]}"
-    m = re.search(r'(\d{1,2})(?:\s*-\s*\d{1,2})?\s+([A-Za-z]+)', s)
-    if m and yr:
-        d, mo = int(m.group(1)), MONTH_MAP.get(m.group(2).lower()[:3], 0)
-        if mo: return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
+        if mo and 2024 <= y <= 2030:
+            return y*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(y)[2:]}"
     m = re.search(r'([A-Za-z]+)\s+(\d{4})', s)
     if m:
         mo, y = MONTH_MAP.get(m.group(1).lower()[:3], 0), int(m.group(2))
-        if mo and y >= 2024: return y*10000+mo*100+1, f"{MON_ABBR[mo]} {str(y)[2:]}"
+        if mo and 2024 <= y <= 2030:
+            return y*10000+mo*100+1, f"{MON_ABBR[mo]} {str(y)[2:]}"
+    return None, None
+
+def parse_date_with_year(s, yr):
+    """Parse date string, using yr if no year present."""
+    # Try with full year first
+    sk, ds = parse_date_full(s)
+    if sk: return sk, ds
+    # Try with provided year
+    s2 = st(s).replace('–','-')
+    m = re.search(r'(\d{1,2})(?:\s*-\s*\d{1,2})?\s+([A-Za-z]+)', s2)
+    if m and yr:
+        d, mo = int(m.group(1)), MONTH_MAP.get(m.group(2).lower()[:3], 0)
+        if mo:
+            return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
     return None, None
 
 def row_cells(row_html):
@@ -99,19 +113,25 @@ def row_cells(row_html):
 def parse_vi(html):
     all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
     print(f"  Total <tr> rows: {len(all_rows)}", file=sys.stderr)
+
     col = FIXED_COL.copy()
     polls = []
-    cur_yr = datetime.utcnow().year  # KEY FIX: default to current year
+    # Start with None — only use year if explicitly found in date cell or year header
+    cur_yr = None
+    today = datetime.utcnow()
 
     for r in all_rows:
         cells = row_cells(r)
         if not cells: continue
         raw = ' '.join(cells)
-        ym = re.match(r'^(202\d)\s*$', raw.strip())
+
+        # Detect year header rows e.g. "2024", "2025", "2026"
+        ym = re.match(r'^(202[4-9])\s*$', raw.strip())
         if ym:
             cur_yr = int(ym.group(1))
-            print(f"  Year: {cur_yr}", file=sys.stderr)
+            print(f"  Year header: {cur_yr}", file=sys.stderr)
             continue
+
         if '%' not in raw: continue
         if len(cells) < 9: continue
 
@@ -123,34 +143,54 @@ def parse_vi(html):
         if not all(v is not None for v in [ref, lab, con, lib, grn]): continue
         if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30): continue
 
+        # Try to get date — prefer full date with year in cell
         dtxt = cells[col['date']] if col['date'] < len(cells) else ''
-        sk, ds = parse_date(dtxt, cur_yr)
+
+        # First try: full date with year in the cell itself
+        sk, ds = parse_date_full(dtxt)
+
+        # Second try: use cur_yr if we have one from a year header
+        if not sk and cur_yr:
+            sk, ds = parse_date_with_year(dtxt, cur_yr)
+
+        # Third try: scan all cells for a full date
         if not sk:
             for c in cells:
-                sk, ds = parse_date(c, cur_yr)
+                sk, ds = parse_date_full(c)
                 if sk: break
-        if not sk: continue
 
+        # Skip if no valid date found, or date is in the future
+        if not sk: continue
+        yr_of_poll = sk // 10000
+        mo_of_poll = (sk % 10000) // 100
+        # Reject future dates (more than 1 month ahead)
+        if yr_of_poll > today.year or (yr_of_poll == today.year and mo_of_poll > today.month + 1):
+            continue
+        # Must be post July 2024 election
+        if sk < 20240705: continue
+
+        # Sample size
         n = None
         n_idx = col.get('n')
         if n_idx is not None and n_idx < len(cells):
-            raw_n = re.sub(r'[^0-9]', '', cells[n_idx])
+            raw_n = re.sub(r'[^0-9]','',cells[n_idx])
             if raw_n and 500 <= int(raw_n) <= 6000: n = int(raw_n)
         if not n:
             for c in cells:
-                raw_n = re.sub(r'[^0-9]', '', c)
+                raw_n = re.sub(r'[^0-9]','',c)
                 if raw_n and 500 <= int(raw_n) <= 6000: n = int(raw_n); break
         if not n: continue
 
+        # Pollster
         pollster = None
         for ci in range(min(4, len(cells))):
-            clean = re.sub(r'\s*\[?\d+\]?$', '', cells[ci]).strip()
+            clean = re.sub(r'\s*\[?\d+\]?$','',cells[ci]).strip()
             for known in KNOWN_POLLSTERS:
                 if known.lower() in clean.lower(): pollster = known; break
             if pollster: break
         if not pollster:
             p_idx = col.get('pollster', 1)
-            raw_p = re.sub(r'\s*\[?\d+\]?$', '', cells[p_idx] if p_idx < len(cells) else '').strip()
+            raw_p = re.sub(r'\s*\[?\d+\]?$','',cells[p_idx] if p_idx < len(cells) else '').strip()
             if 2 < len(raw_p) < 35 and raw_p[0].isupper(): pollster = raw_p
             else: continue
 
@@ -167,11 +207,11 @@ def parse_vi(html):
 
 def build_monthly(polls):
     bm = defaultdict(list)
-    for p in polls: bm[p['sort_key'] // 100].append(p)
-    labels, ra, la, ca, ga, lia = [], [], [], [], [], []
-    avg = lambda lst, k: round(sum(x[k] for x in lst) / len(lst), 1)
+    for p in polls: bm[p['sort_key']//100].append(p)
+    labels,ra,la,ca,ga,lia=[],[],[],[],[],[]
+    avg = lambda lst,k: round(sum(x[k] for x in lst)/len(lst),1)
     for ym in sorted(bm):
-        mo = ym % 100; g = bm[ym]
+        mo=ym%100; g=bm[ym]
         labels.append(f"{MON_ABBR[mo]} {str(ym//100)[2:]}")
         ra.append(avg(g,'ref')); la.append(avg(g,'lab')); ca.append(avg(g,'con'))
         ga.append(avg(g,'grn')); lia.append(avg(g,'lib'))
@@ -191,7 +231,7 @@ def parse_leaders(html):
         if not cur or len(cells) < 3: continue
         sk, ds = None, None
         for c in cells:
-            sk, ds = parse_date(c)
+            sk, ds = parse_date_full(c)
             if sk and sk > 20240700: break
         if not sk: continue
         pollster = ''
@@ -199,10 +239,10 @@ def parse_leaders(html):
             for known in KNOWN_POLLSTERS:
                 if known.lower() in c.lower(): pollster = known; break
             if pollster: break
-        nums = [v for c in cells if (v := pct(c)) is not None and 10 <= v <= 80]
+        nums = [v for c in cells if (v:=pct(c)) is not None and 10<=v<=80]
         if len(nums) < 2: continue
         ap, di = nums[0], nums[1]
-        if ap + di > 130: continue
+        if ap+di > 130: continue
         if cur not in results or sk > results[cur]['sk']:
             results[cur] = {'sk':sk,'date':ds,'pollster':pollster,'approve':ap,'disapprove':di}
 
