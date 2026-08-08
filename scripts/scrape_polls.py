@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Scrapes UK VI polls from Wikipedia.
-Column order from debug: Date(s)=0, Pollster=1, Client=2, Area=3, Sample=4, Lab=5, Con=6, Ref=7, LD=8, Grn=9
+Column order: Date(s)=0, Pollster=1, Client=2, Area=3, Sample=4, Lab=5, Con=6, Ref=7, LD=8, Grn=9
 """
 import json, re, sys
 from datetime import datetime
@@ -43,16 +43,11 @@ FIXED_COL = {'date':0,'pollster':1,'n':4,'lab':5,'con':6,'ref':7,'lib':8,'grn':9
 def fetch_wiki(page):
     url = "https://en.wikipedia.org/w/api.php"
     params = urllib.parse.urlencode({
-        "action": "parse",
-        "page": page,
-        "prop": "text",
-        "format": "json",
-        "disablelimitreport": "1"
+        "action": "parse", "page": page, "prop": "text",
+        "format": "json", "disablelimitreport": "1"
     })
-    req = urllib.request.Request(
-        f"{url}?{params}",
-        headers={"User-Agent": "Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"}
-    )
+    req = urllib.request.Request(f"{url}?{params}",
+        headers={"User-Agent": "Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"})
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.loads(r.read().decode('utf-8'))
     return data.get("parse", {}).get("text", {}).get("*", "")
@@ -60,12 +55,10 @@ def fetch_wiki(page):
 try:
     import requests
     def fetch_wiki(page):
-        r = requests.get(
-            "https://en.wikipedia.org/w/api.php",
+        r = requests.get("https://en.wikipedia.org/w/api.php",
             params={"action":"parse","page":page,"prop":"text","format":"json","disablelimitreport":"1"},
             headers={"User-Agent":"Spectrm/1.0 (https://spectrm.uk; polls@spectrm.uk)"},
-            timeout=30
-        )
+            timeout=30)
         r.raise_for_status()
         return r.json().get("parse", {}).get("text", {}).get("*", "")
 except ImportError:
@@ -106,40 +99,29 @@ def row_cells(row_html):
 def parse_vi(html):
     all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
     print(f"  Total <tr> rows: {len(all_rows)}", file=sys.stderr)
-
     col = FIXED_COL.copy()
-    print(f"  Using cols: {col}", file=sys.stderr)
-
     polls = []
-    cur_yr = datetime.utcnow().year  # default to current year
+    cur_yr = datetime.utcnow().year  # KEY FIX: default to current year
 
     for r in all_rows:
         cells = row_cells(r)
         if not cells: continue
         raw = ' '.join(cells)
-
-        # Detect year header rows
         ym = re.match(r'^(202\d)\s*$', raw.strip())
         if ym:
             cur_yr = int(ym.group(1))
             print(f"  Year: {cur_yr}", file=sys.stderr)
             continue
-
         if '%' not in raw: continue
         if len(cells) < 9: continue
 
         def gc(k):
             idx = col.get(k)
-            if idx is not None and idx < len(cells):
-                return pct(cells[idx])
-            return None
+            return pct(cells[idx]) if idx is not None and idx < len(cells) else None
 
         lab, con, ref, lib, grn = gc('lab'), gc('con'), gc('ref'), gc('lib'), gc('grn')
-
-        if not all(v is not None for v in [ref, lab, con, lib, grn]):
-            continue
-        if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30):
-            continue
+        if not all(v is not None for v in [ref, lab, con, lib, grn]): continue
+        if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30): continue
 
         dtxt = cells[col['date']] if col['date'] < len(cells) else ''
         sk, ds = parse_date(dtxt, cur_yr)
@@ -153,41 +135,34 @@ def parse_vi(html):
         n_idx = col.get('n')
         if n_idx is not None and n_idx < len(cells):
             raw_n = re.sub(r'[^0-9]', '', cells[n_idx])
-            if raw_n and 500 <= int(raw_n) <= 6000:
-                n = int(raw_n)
+            if raw_n and 500 <= int(raw_n) <= 6000: n = int(raw_n)
         if not n:
             for c in cells:
                 raw_n = re.sub(r'[^0-9]', '', c)
-                if raw_n and 500 <= int(raw_n) <= 6000:
-                    n = int(raw_n); break
+                if raw_n and 500 <= int(raw_n) <= 6000: n = int(raw_n); break
         if not n: continue
 
         pollster = None
         for ci in range(min(4, len(cells))):
             clean = re.sub(r'\s*\[?\d+\]?$', '', cells[ci]).strip()
             for known in KNOWN_POLLSTERS:
-                if known.lower() in clean.lower():
-                    pollster = known; break
+                if known.lower() in clean.lower(): pollster = known; break
             if pollster: break
         if not pollster:
-            raw_p = re.sub(r'\s*\[?\d+\]?$', '', cells[col.get('pollster', 1)] if col.get('pollster', 1) < len(cells) else '').strip()
-            if 2 < len(raw_p) < 35 and raw_p[0].isupper():
-                pollster = raw_p
-            else:
-                continue
+            p_idx = col.get('pollster', 1)
+            raw_p = re.sub(r'\s*\[?\d+\]?$', '', cells[p_idx] if p_idx < len(cells) else '').strip()
+            if 2 < len(raw_p) < 35 and raw_p[0].isupper(): pollster = raw_p
+            else: continue
 
-        polls.append({
-            'pollster': pollster, 'date': ds, 'sort_key': sk, 'n': n,
-            'ref': ref, 'lab': lab, 'con': con, 'lib': lib, 'grn': grn,
-            'client': '', 'src': POLLSTER_SRCS.get(pollster, '')
-        })
+        polls.append({'pollster':pollster,'date':ds,'sort_key':sk,'n':n,
+                      'ref':ref,'lab':lab,'con':con,'lib':lib,'grn':grn,
+                      'client':'','src':POLLSTER_SRCS.get(pollster,'')})
 
     print(f"  Raw polls: {len(polls)}", file=sys.stderr)
     seen, unique = set(), []
     for p in sorted(polls, key=lambda x: -x['sort_key']):
         k = (p['pollster'], p['sort_key'])
-        if k not in seen:
-            seen.add(k); unique.append(p)
+        if k not in seen: seen.add(k); unique.append(p)
     return unique[:50]
 
 def build_monthly(polls):
@@ -200,22 +175,19 @@ def build_monthly(polls):
         labels.append(f"{MON_ABBR[mo]} {str(ym//100)[2:]}")
         ra.append(avg(g,'ref')); la.append(avg(g,'lab')); ca.append(avg(g,'con'))
         ga.append(avg(g,'grn')); lia.append(avg(g,'lib'))
-    return {'labels': labels, 'ref': ra, 'lab': la, 'con': ca, 'grn': ga, 'lib': lia}
+    return {'labels':labels,'ref':ra,'lab':la,'con':ca,'grn':ga,'lib':lia}
 
 def parse_leaders(html):
     rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
-    results = {}
-    cur = None
+    results = {}; cur = None
     for h in re.findall(r'<h[2-4][^>]*>(.*?)</h[2-4]>', html, re.DOTALL):
         ht = st(h)
         for name in LEADER_MAP:
-            if name.split()[-1] in ht and name.split()[0] in ht:
-                cur = name
+            if name.split()[-1] in ht and name.split()[0] in ht: cur = name
     for r in rows:
         cells = row_cells(r); full = ' '.join(cells)
         for name in LEADER_MAP:
-            if name.split()[-1] in full and len(full) < 100:
-                cur = name; break
+            if name.split()[-1] in full and len(full) < 100: cur = name; break
         if not cur or len(cells) < 3: continue
         sk, ds = None, None
         for c in cells:
@@ -232,20 +204,20 @@ def parse_leaders(html):
         ap, di = nums[0], nums[1]
         if ap + di > 130: continue
         if cur not in results or sk > results[cur]['sk']:
-            results[cur] = {'sk': sk, 'date': ds, 'pollster': pollster, 'approve': ap, 'disapprove': di}
+            results[cur] = {'sk':sk,'date':ds,'pollster':pollster,'approve':ap,'disapprove':di}
 
     out = []
     for name in LEADER_MAP:
         if name in results:
             r = results[name]
-            src = f"YouGov · {r['date']}" if r['pollster'] == 'YouGov' else f"{r['pollster']} · {r['date']}"
-            entry = {'name': name, 'approve': r['approve'], 'disapprove': r['disapprove'],
-                     'net': r['approve'] - r['disapprove'], 'src': src}
+            src = f"YouGov · {r['date']}" if r['pollster']=='YouGov' else f"{r['pollster']} · {r['date']}"
+            entry = {'name':name,'approve':r['approve'],'disapprove':r['disapprove'],
+                     'net':r['approve']-r['disapprove'],'src':src}
             print(f"  {name}: {r['approve']}%/{r['disapprove']}% ({src}) [Wikipedia]", file=sys.stderr)
         elif name in LEADER_FALLBACK:
             fb = LEADER_FALLBACK[name]
-            entry = {'name': name, 'approve': fb['approve'], 'disapprove': fb['disapprove'],
-                     'net': fb['net'], 'src': fb['src']}
+            entry = {'name':name,'approve':fb['approve'],'disapprove':fb['disapprove'],
+                     'net':fb['net'],'src':fb['src']}
             print(f"  {name}: {fb['approve']}%/{fb['disapprove']}% ({fb['src']}) [fallback]", file=sys.stderr)
         else:
             continue
@@ -277,7 +249,7 @@ def main():
         leaders = parse_leaders(la_html)
         print(f"  {len(leaders)} leaders", file=sys.stderr)
     except Exception as e:
-        print(f"  WARNING: {e}", file=sys.stderr)
+        print(f"  WARNING: {e} — using fallback", file=sys.stderr)
         leaders = [{'name':n,'approve':v['approve'],'disapprove':v['disapprove'],
                     'net':v['net'],'src':v['src']} for n,v in LEADER_FALLBACK.items()]
 
