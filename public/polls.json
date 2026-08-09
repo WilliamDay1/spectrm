@@ -1,174 +1,114 @@
 {
-  "generated": "2026-08-08T11:24:24Z",
+  "generated": "2026-08-09T07:54:43Z",
   "monthly_history": {
     "labels": [
-      "Nov 26",
-      "Dec 26"
+      "Oct 24",
+      "Aug 25",
+      "Sep 25",
+      "Mar 26"
     ],
     "ref": [
-      26.4,
-      26.1
+      21.0,
+      31.0,
+      22.0,
+      27.0
     ],
     "lab": [
-      21.9,
-      21.7
+      25.0,
+      21.0,
+      32.0,
+      20.0
     ],
     "con": [
-      21.4,
-      21.5
+      26.0,
+      19.0,
+      8.0,
+      18.0
     ],
     "grn": [
-      11.4,
-      11.8
+      8.0,
+      8.0,
+      18.0,
+      13.0
     ],
     "lib": [
-      12.5,
-      12.3
+      14.0,
+      15.0,
+      8.0,
+      14.0
     ]
   },
   "recent_polls": [
     {
-      "pollster": "Find Out Now",
-      "date": "31 Dec 26",
-      "n": 2930,
-      "ref": 31,
-      "lab": 15,
-      "con": 17,
-      "lib": 12,
-      "grn": 17,
-      "client": "",
-      "src": "findoutnow.co.uk"
-    },
-    {
-      "pollster": "Deltapoll",
-      "date": "30 Dec 26",
-      "n": 1532,
-      "ref": 22,
-      "lab": 30,
-      "con": 23,
-      "lib": 12,
-      "grn": 9,
-      "client": "",
-      "src": "deltapoll.co.uk"
-    },
-    {
-      "pollster": "Find Out Now",
-      "date": "24 Dec 26",
-      "n": 2879,
-      "ref": 30,
-      "lab": 14,
-      "con": 18,
-      "lib": 12,
-      "grn": 17,
-      "client": "",
-      "src": "findoutnow.co.uk"
-    },
-    {
-      "pollster": "YouGov",
-      "date": "21 Dec 26",
-      "n": 2266,
-      "ref": 25,
+      "pollster": "Focaldata",
+      "date": "6 Mar 26",
+      "n": 1086,
+      "ref": 27,
       "lab": 20,
-      "con": 19,
-      "lib": 15,
-      "grn": 15,
+      "con": 18,
+      "lib": 14,
+      "grn": 13,
       "client": "",
-      "src": "yougov.com"
+      "src": "focaldata.com"
+    },
+    {
+      "pollster": "Focaldata",
+      "date": "Sep 25",
+      "n": 512,
+      "ref": 22,
+      "lab": 32,
+      "con": 8,
+      "lib": 8,
+      "grn": 18,
+      "client": "",
+      "src": "focaldata.com"
     },
     {
       "pollster": "More in Common",
-      "date": "19 Dec 26",
-      "n": 2026,
-      "ref": 28,
+      "date": "8 Aug 25",
+      "n": 815,
+      "ref": 31,
       "lab": 21,
-      "con": 22,
-      "lib": 13,
-      "grn": 9,
+      "con": 19,
+      "lib": 15,
+      "grn": 8,
       "client": "",
       "src": "moreincommon.org.uk"
     },
     {
-      "pollster": "Deltapoll",
-      "date": "19 Dec 26",
-      "n": 1552,
+      "pollster": "More in Common",
+      "date": "31 Oct 24",
+      "n": 3116,
       "ref": 21,
-      "lab": 29,
-      "con": 25,
-      "lib": 12,
+      "lab": 25,
+      "con": 26,
+      "lib": 14,
       "grn": 8,
       "client": "",
-      "src": "deltapoll.co.uk"
-    },
-    {
-      "pollster": "Opinium",
-      "date": "18 Dec 26",
-      "n": 1472,
-      "ref": 22,
-      "lab": 29,
-      "con": 23,
-      "lib": 11,
-      "grn": 10,
-      "client": "",
-      "src": "opinium.com"
-    },
-    {
-      "pollster": "Techne",
-      "date": "18 Dec 26",
-      "n": 1642,
-      "ref": 21,
-      "lab": 27,
-      "con": 26,
-      "lib": 12,
-      "grn": 7,
-      "client": "",
-      "src": "techneuk.co.uk"
-    },
-    {
-      "pollster": "Find Out Now",
-      "date": "17 Dec 26",
-      "n": 1909,
-      "ref": 33,
-      "lab": 14,
-      "con": 18,
-      "lib": 11,
-      "grn": 17,
-      "client": "",
-      "src": "findoutnow.co.uk"
-    },
-    {
-      "pollster": "Deltapoll",
-      "date": "16 Dec 26",
-      "n": 1997,
-      "ref": 30,
-      "lab": 20,
-      "con": 19,
-      "lib": 14,
-      "grn": 10,
-      "client": "",
-      "src": "deltapoll.co.uk"
+      "src": "moreincommon.org.uk"
     }
   ],
   "leader_approval": [
     {
       "name": "Andy Burnham",
-      "approve": 15,
-      "disapprove": 13,
-      "net": 2,
-      "src": "Opinium \u00b7 15 Jul 26"
+      "approve": 37,
+      "disapprove": 21,
+      "net": 16,
+      "src": "Opinium \u00b7 8 Aug 26"
     },
     {
       "name": "Keir Starmer",
-      "approve": 21,
-      "disapprove": 32,
-      "net": -11,
-      "src": "YouGov \u00b7 21 Jun 26"
+      "approve": 19,
+      "disapprove": 62,
+      "net": -43,
+      "src": "YouGov \u00b7 Jun 2026"
     },
     {
       "name": "Kemi Badenoch",
-      "approve": 12,
-      "disapprove": 15,
-      "net": -3,
-      "src": "YouGov \u00b7 12 Jul 26"
+      "approve": 35,
+      "disapprove": 41,
+      "net": -6,
+      "src": "Survation \u00b7 Jul 26"
     },
     {
       "name": "Nigel Farage",
