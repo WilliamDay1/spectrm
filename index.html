@@ -979,13 +979,21 @@ async function loadLiveData(){
   renderOvPolls();
   renderOvApproval();
   renderChartStrip();
-  // Always re-render polls section after live data so chart uses fresh VI_LABELS/VI_DATA
+  // Destroy VI chart so it rebuilds with fresh data next time polls tab opens
   if(viChart){viChart.destroy();viChart=null;}
+  // Always re-render polls section content with fresh data
   var pollsSec=document.getElementById('sec-polls');
-  if(pollsSec&&pollsSec.classList.contains('on'))renderPolls();
-  // Always re-render pollster table with fresh data even if section not active
-  var pt=document.getElementById('pollster-table');
-  if(pt&&pt.innerHTML)renderPollsTable&&renderPollsTable();
+  if(pollsSec&&pollsSec.classList.contains('on')){
+    renderPolls();
+  } else {
+    // Pre-render the pollster table even if tab not active
+    var pt=document.getElementById('pollster-table');
+    if(pt){
+      // Trigger a silent render of just the pollster table
+      var saved=pt.innerHTML;
+      try{renderPollTable();}catch(e){try{renderPolls();}catch(e2){}}
+    }
+  }
   var refEl=document.getElementById('ov-ref-pct');
   if(refEl&&VI_DATA.ref&&VI_DATA.ref.length)refEl.textContent=VI_DATA.ref[VI_DATA.ref.length-1]+'%';
   console.log('Spectrm: live data loaded and rendered');
