@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Scrapes UK VI polls from Wikipedia.
-Fixed column order: Date(s)=0, Pollster=1, Client=2, Area=3, Sample=4, Lab=5, Con=6, Ref=7, LD=8, Grn=9
+Auto-detects column positions from header row.
 """
 import json, re, sys
 from datetime import datetime
@@ -21,6 +21,7 @@ POLLSTER_SRCS = {
     'BMG':'bmgresearch.co.uk','Deltapoll':'deltapoll.co.uk',
     'Techne':'techneuk.co.uk','Norstat':'norstat.co.uk',
     'Freshwater':'freshwaterstrategy.com','Focaldata':'focaldata.com',
+    'Verian':'verian.com',
 }
 KNOWN_POLLSTERS = list(POLLSTER_SRCS.keys())
 
@@ -38,9 +39,6 @@ LEADER_FALLBACK = {
     'Angela Rayner':  {'approve':21,'disapprove':51,'net':-30,'src':'Opinium · Jun 2026'},
     'Keir Starmer':   {'approve':19,'disapprove':62,'net':-43,'src':'YouGov · Jun 2026'},
 }
-
-# Fixed column positions confirmed from debug
-FIXED_COL = {'date':0,'pollster':1,'n':4,'lab':5,'con':6,'ref':7,'lib':8,'grn':9}
 
 def fetch_wiki(page):
     url = "https://en.wikipedia.org/w/api.php"
@@ -74,18 +72,20 @@ def st(s):
 
 def pct(s):
     s = st(s).replace('%','').strip()
-    m = re.search(r'(\d+(?:\.\d+)?)', s)
+    m = re.search(r'^(\d+(?:\.\d+)?)$', s)
     try: return round(float(m.group(1))) if m else None
     except: return None
 
-def parse_date_full(s):
-    """Parse date string that INCLUDES a year. Returns (sortkey, display) or (None, None)."""
-    s = st(s).replace('–','-')
+def parse_date(s):
+    """Parse a date string that contains a full year. Returns (sortkey, display) or (None, None)."""
+    s = st(s).replace('–','-').replace('—','-')
+    # "9-10 May 2026" or "9 May 2026"
     m = re.search(r'(\d{1,2})(?:\s*-\s*\d{1,2})?\s+([A-Za-z]+)\s+(\d{4})', s)
     if m:
         d, mo, y = int(m.group(1)), MONTH_MAP.get(m.group(2).lower()[:3], 0), int(m.group(3))
         if mo and 2024 <= y <= 2030:
             return y*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(y)[2:]}"
+    # "May 2026"
     m = re.search(r'([A-Za-z]+)\s+(\d{4})', s)
     if m:
         mo, y = MONTH_MAP.get(m.group(1).lower()[:3], 0), int(m.group(2))
@@ -93,80 +93,71 @@ def parse_date_full(s):
             return y*10000+mo*100+1, f"{MON_ABBR[mo]} {str(y)[2:]}"
     return None, None
 
-def parse_date_with_year(s, yr):
-    """Parse date string, using yr if no year present."""
-    # Try with full year first
-    sk, ds = parse_date_full(s)
-    if sk: return sk, ds
-    # Try with provided year
-    s2 = st(s).replace('–','-')
-    m = re.search(r'(\d{1,2})(?:\s*-\s*\d{1,2})?\s+([A-Za-z]+)', s2)
-    if m and yr:
-        d, mo = int(m.group(1)), MONTH_MAP.get(m.group(2).lower()[:3], 0)
-        if mo:
-            return yr*10000+mo*100+d, f"{d} {MON_ABBR[mo]} {str(yr)[2:]}"
-    return None, None
-
 def row_cells(row_html):
     return [st(m.group(1)) for m in re.finditer(r'<t[dh][^>]*>(.*?)</t[dh]>', row_html, re.DOTALL)]
 
+def detect_columns(rows):
+    """Scan rows to find a header row and map column names to indices."""
+    for cells in rows[:20]:
+        t = [c.lower().strip() for c in cells]
+        col = {}
+        for i, c in enumerate(t):
+            if c in ('ref','reform'): col['ref'] = i
+            elif c in ('lab','labour'): col['lab'] = i
+            elif c in ('con','conservative'): col['con'] = i
+            elif c in ('ld','lib dem','lib dems'): col['lib'] = i
+            elif c in ('grn','green'): col['grn'] = i
+            elif 'sample' in c or c == 'n': col['n'] = i
+            elif 'date' in c or 'fieldwork' in c or 'conducted' in c: col['date'] = i
+            elif c in ('pollster','polling firm','firm'): col['pollster'] = i
+        if all(k in col for k in ['ref','lab','con','lib','grn']):
+            print(f"  Auto-detected cols: {col}", file=sys.stderr)
+            return col
+    return None
+
 def parse_vi(html):
     all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
-    print(f"  Total <tr> rows: {len(all_rows)}", file=sys.stderr)
+    parsed_rows = [row_cells(r) for r in all_rows]
+    print(f"  Total rows: {len(parsed_rows)}", file=sys.stderr)
 
-    col = FIXED_COL.copy()
-    polls = []
-    # Start with None — only use year if explicitly found in date cell or year header
-    cur_yr = None
+    col = detect_columns(parsed_rows)
+    if not col:
+        # Fallback to known positions
+        col = {'date':0,'pollster':1,'n':4,'lab':5,'con':6,'ref':7,'lib':8,'grn':9}
+        print(f"  Using fallback cols: {col}", file=sys.stderr)
+
     today = datetime.utcnow()
+    polls = []
 
-    for r in all_rows:
-        cells = row_cells(r)
-        if not cells: continue
+    for cells in parsed_rows:
+        if len(cells) < 6: continue
         raw = ' '.join(cells)
-
-        # Detect year header rows e.g. "2024", "2025", "2026"
-        ym = re.match(r'^(202[4-9])\s*$', raw.strip())
-        if ym:
-            cur_yr = int(ym.group(1))
-            print(f"  Year header: {cur_yr}", file=sys.stderr)
-            continue
-
         if '%' not in raw: continue
-        if len(cells) < 9: continue
 
+        # Get party values
         def gc(k):
             idx = col.get(k)
             return pct(cells[idx]) if idx is not None and idx < len(cells) else None
 
-        lab, con, ref, lib, grn = gc('lab'), gc('con'), gc('ref'), gc('lib'), gc('grn')
-        if not all(v is not None for v in [ref, lab, con, lib, grn]): continue
+        ref,lab,con,lib,grn = gc('ref'),gc('lab'),gc('con'),gc('lib'),gc('grn')
+        if not all(v is not None for v in [ref,lab,con,lib,grn]): continue
         if not (5<=ref<=50 and 5<=lab<=55 and 5<=con<=50 and 3<=lib<=30 and 3<=grn<=30): continue
 
-        # Try to get date — prefer full date with year in cell
-        dtxt = cells[col['date']] if col['date'] < len(cells) else ''
-
-        # First try: full date with year in the cell itself
-        sk, ds = parse_date_full(dtxt)
-
-        # Second try: use cur_yr if we have one from a year header
-        if not sk and cur_yr:
-            sk, ds = parse_date_with_year(dtxt, cur_yr)
-
-        # Third try: scan all cells for a full date
+        # Find date — scan all cells for a full date with year
+        sk, ds = None, None
+        d_idx = col.get('date', 0)
+        if d_idx < len(cells):
+            sk, ds = parse_date(cells[d_idx])
         if not sk:
             for c in cells:
-                sk, ds = parse_date_full(c)
+                sk, ds = parse_date(c)
                 if sk: break
-
-        # Skip if no valid date found, or date is in the future
         if not sk: continue
-        yr_of_poll = sk // 10000
-        mo_of_poll = (sk % 10000) // 100
-        # Reject future dates (more than 1 month ahead)
-        if yr_of_poll > today.year or (yr_of_poll == today.year and mo_of_poll > today.month + 1):
-            continue
-        # Must be post July 2024 election
+
+        # Reject future dates and pre-election dates
+        yr = sk // 10000
+        mo = (sk % 10000) // 100
+        if yr > today.year or (yr == today.year and mo > today.month + 1): continue
         if sk < 20240705: continue
 
         # Sample size
@@ -203,6 +194,9 @@ def parse_vi(html):
     for p in sorted(polls, key=lambda x: -x['sort_key']):
         k = (p['pollster'], p['sort_key'])
         if k not in seen: seen.add(k); unique.append(p)
+    print(f"  Unique: {len(unique)}", file=sys.stderr)
+    if unique:
+        print(f"  Latest: {unique[0]['pollster']} {unique[0]['date']} Ref{unique[0]['ref']} Lab{unique[0]['lab']}", file=sys.stderr)
     return unique[:50]
 
 def build_monthly(polls):
@@ -218,20 +212,20 @@ def build_monthly(polls):
     return {'labels':labels,'ref':ra,'lab':la,'con':ca,'grn':ga,'lib':lia}
 
 def parse_leaders(html):
-    rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+    all_rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
     results = {}; cur = None
     for h in re.findall(r'<h[2-4][^>]*>(.*?)</h[2-4]>', html, re.DOTALL):
         ht = st(h)
         for name in LEADER_MAP:
             if name.split()[-1] in ht and name.split()[0] in ht: cur = name
-    for r in rows:
+    for r in all_rows:
         cells = row_cells(r); full = ' '.join(cells)
         for name in LEADER_MAP:
             if name.split()[-1] in full and len(full) < 100: cur = name; break
         if not cur or len(cells) < 3: continue
         sk, ds = None, None
         for c in cells:
-            sk, ds = parse_date_full(c)
+            sk, ds = parse_date(c)
             if sk and sk > 20240700: break
         if not sk: continue
         pollster = ''
@@ -273,15 +267,11 @@ def main():
     print(f"  HTML: {len(vi_html)} chars", file=sys.stderr)
 
     polls = parse_vi(vi_html)
-    print(f"  Unique polls: {len(polls)}", file=sys.stderr)
     if not polls:
         print("ERROR: no polls", file=sys.stderr); sys.exit(1)
 
-    for p in polls[:3]:
-        print(f"  {p['pollster']} {p['date']}: Ref{p['ref']} Lab{p['lab']} Con{p['con']} n={p['n']}", file=sys.stderr)
-
     monthly = build_monthly(polls)
-    print(f"  Monthly: {monthly['labels']}", file=sys.stderr)
+    print(f"  Monthly labels: {monthly['labels']}", file=sys.stderr)
 
     print("Fetching leaders...", file=sys.stderr)
     try:
@@ -289,7 +279,7 @@ def main():
         leaders = parse_leaders(la_html)
         print(f"  {len(leaders)} leaders", file=sys.stderr)
     except Exception as e:
-        print(f"  WARNING: {e} — using fallback", file=sys.stderr)
+        print(f"  WARNING: {e}", file=sys.stderr)
         leaders = [{'name':n,'approve':v['approve'],'disapprove':v['disapprove'],
                     'net':v['net'],'src':v['src']} for n,v in LEADER_FALLBACK.items()]
 
