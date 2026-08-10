@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-09T07:33:39Z",
+    "updated": "2026-08-10T08:13:42Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "MPs fear one key issue could end new PM's honeymoon period",
-      "date": "9 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/could-this-key-issue-reverse-the-burnham-bounce-13570779"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham brings forward ban on 'subscription traps' to ease cost of living",
+      "date": "10 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cly5x9qlnvjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham to start national tour to hear cost of living concerns",
-      "date": "9 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/andy-burnham-to-start-national-tour-to-hear-cost-of-living-concerns-13571267"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Risk of patient safety 'bonfire' with Health Bill changes, Lib Dems say",
+      "date": "10 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c62e60m1jygo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Nicola Sturgeon \u2018has not spoken to\u2019 estranged husband, Peter Murrell, since he was jailed",
-      "date": "8 Aug 2026",
+      "headline": "British national shot dead in Kashmir by Pakistani security forces",
+      "date": "10 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/08/nicola-sturgeon-estranged-peter-murrell-jailed-no-contact"
+      "url": "https://www.theguardian.com/world/2026/aug/10/british-national-shot-dead-in-kashmir-by-pakistani-security-forces"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Arron Banks \u2018hired private detective\u2019 to look into journalist who investigated Reform UK",
-      "date": "8 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Revisited: Andy Burnham apologises for Labour\u2019s stance on Gaza \u2013 podcast",
+      "date": "10 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/08/arron-banks-hired-private-detective-to-look-into-journalist-who-investigated-reform-uk"
+      "url": "https://www.theguardian.com/politics/audio/2026/aug/10/revisited-andy-burnham-apologises-for-labours-stance-on-gaza-podcast"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Sadiq Khan calls on Andy Burnham to commit to climate action as pressure grows over North Sea oil",
-      "date": "8 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/aug/08/sadiq-khan-calls-on-andy-burnham-to-commit-to-climate-action-as-pressure-grows-over-north-sea-oil"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Council urged to rethink curbs on nightlife in London's West End",
+      "date": "10 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/council-urged-to-rethink-curbs-on-nightlife-in-londons-west-end-13571527"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "US accused of meddling in British politics with $500,000 grant for \u2018public education\u2019 courses",
-      "date": "8 Aug 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Cut \u00a3175 from energy bills for low-income homes, says thinktank",
+      "date": "9 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/us-news/2026/aug/08/us-accused-of-meddling-in-british-politics-with-500000-grant-scheme-promoting-shared-values"
+      "url": "https://www.theguardian.com/money/2026/aug/10/cut-175-from-energy-bills-for-low-income-homes-says-thinktank"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The night Belfast burned: how the Northern Ireland race riots unfolded",
-      "date": "8 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham vows crackdown on \u2018rip-off\u2019 business practices to ease cost of living",
+      "date": "9 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/aug/08/how-northern-ireland-race-riots-unfolded-belfast"
+      "url": "https://www.theguardian.com/business/2026/aug/09/burnham-vows-crackdown-on-rip-off-business-practices-to-ease-cost-of-living"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Union calls for robust review of OBR over fears it holds back economic growth",
-      "date": "8 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Subscriptions you can\u2019t easily cancel, sales that aren\u2019t sales \u2013 I\u2019ll end the rip-offs that British people hate | Andy Burnham",
+      "date": "9 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/08/tuc-review-obr-investment-economy-business"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/09/andy-burnham-british-people-ripped-off-cost-of-living"
     },
     {
       "id": "9",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Thetford residents remain on edge after days of \u2018mob rule\u2019 over asylum plans",
-      "date": "7 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "\u2018I was on my honeymoon!\u2019: Hamish Falconer\u2019s surprise call-up to Burnham\u2019s cabinet",
+      "date": "9 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/07/thetford-residents-remain-on-edge-after-days-of-mob-rule-over-asylum-plans"
+      "url": "https://www.theguardian.com/world/2026/aug/09/hamish-falconer-uk-minister-european-relations-eu"
     },
     {
       "id": "10",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Badenoch pens letter to Clacton ahead of by-election",
-      "date": "7 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwy4rq90g2po?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Labour seeking \u2018deeper relationship\u2019 with EU under Burnham, new minister says",
+      "date": "9 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/09/uk-eu-reset-talks-brexit-burnham-hamish-falconer"
     }
   ]
 }
