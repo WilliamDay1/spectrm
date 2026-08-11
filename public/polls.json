@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10T08:40:35Z",
+  "generated": "2026-08-11T08:10:09Z",
   "monthly_history": {
     "labels": [
       "Oct 24",
@@ -91,10 +91,10 @@
   "leader_approval": [
     {
       "name": "Andy Burnham",
-      "approve": 37,
-      "disapprove": 21,
-      "net": 16,
-      "src": "Opinium \u00b7 8 Aug 26"
+      "approve": 29,
+      "disapprove": 30,
+      "net": -1,
+      "src": "Ipsos \u00b7 9 Aug 26"
     },
     {
       "name": "Keir Starmer",
