@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-11T07:46:19Z",
+    "updated": "2026-08-12T07:59:49Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "A question for Burnham as he tours the country: how to reduce the magnetic pull of London? | Peter Hetherington",
-      "date": "11 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/11/andy-burnham-reduce-magnetic-pull-london-regional-policy-england"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Homes near pylons to get \u00a3250 a year off energy bills \u2013 first sites revealed",
+      "date": "12 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8rn42jp7d6o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Councils to get more powers to stop vape and betting shops, PM announces",
-      "date": "10 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvg90el9236o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage and Count Binface: a visual guide to their electoral careers",
+      "date": "12 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/12/nigel-farage-count-binface-electoral-careers-clacton-byelection"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "MSP apologises for hurt caused by rape 'demonisation' comments",
-      "date": "10 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Poorest areas should not house all asylum seekers, says Burnham",
+      "date": "12 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c89n5v5djpgo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c204d4z1gg8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform backer Arron Banks urged to set out extent of surveillance of journalists",
-      "date": "10 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/10/arron-banks-surveillance-journalists-media"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to chair Cobra meeting on extreme heat as temperatures surge again",
+      "date": "12 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/weather/articles/c36dr3r3ny0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Amnesty International says Farage putting \u2018hate and inhumanity\u2019 over leadership with El Salvador prison plan \u2013 as it happened",
-      "date": "10 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/10/labour-prisons-crisis-andy-burnham-reform-nigel-farage-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Early release scheme risks more serious crimes, probation chief warns",
+      "date": "12 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c39e3y1y2zjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Send foreign prisoners abroad to end early releases, says Reform",
-      "date": "10 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5yw9d2212xo?at_medium=RSS&at_campaign=rss"
+      "headline": "Paid police paternity leave to double after fathers reported being \u2018ostracised\u2019",
+      "date": "12 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/12/paid-police-paternity-leave-double-england-wales"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "From ticket booking fees to shrinkflation, six other ways Burnham could cut cost of living",
-      "date": "10 Aug 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage looks trapped and rattled - now the nationalist tide can be turned | Rafael Behr",
+      "date": "12 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/aug/10/after-burnhams-rip-offs-crackdown-what-more-could-pm-do-to-help-us-save-money"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/12/nigel-farage-trapped-nationalist-votes-division-reform"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham wants to find way to stop release of PC Harper's killers",
-      "date": "10 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/burnham-tells-justice-secretary-to-find-way-to-stop-release-of-pc-harpers-killers-13571715"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "PM admits cost of living help is not enough and hints at further support",
+      "date": "12 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cgmkee248vdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Record 230 people cross Channel in one small boat",
-      "date": "10 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4g4vxjg2yno?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK heatwaves may have cost economy \u00a34.4bn in lost output so far this year, analysis finds",
+      "date": "12 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/aug/12/heatwaves-uk-cost-economy-lost-output-thinktank"
     },
     {
       "id": "10",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Thames Water\u2019s \u00a31m payout to finance chief is \u2018unacceptable\u2019, says government department",
-      "date": "10 Aug 2026",
+      "headline": "British man with dementia told to leave Sweden after losing migration case",
+      "date": "12 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/10/thames-water-fee-finance-chief-andy-burnham"
+      "url": "https://www.theguardian.com/world/2026/aug/12/british-man-dementia-leave-sweden-brexit-migration-case"
     }
   ]
 }
