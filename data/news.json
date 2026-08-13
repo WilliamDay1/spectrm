@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-12T07:59:49Z",
+    "updated": "2026-08-13T08:00:59Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Homes near pylons to get \u00a3250 a year off energy bills \u2013 first sites revealed",
-      "date": "12 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8rn42jp7d6o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Britain's scorched fields mean a food crisis \u2013 and the government is ignoring the one measure that would help | George Monbiot",
+      "date": "13 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/13/britain-food-crisis-government-summer-weather-war-stockpiles"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage and Count Binface: a visual guide to their electoral careers",
-      "date": "12 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/12/nigel-farage-count-binface-electoral-careers-clacton-byelection"
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Polls open in Clacton by-election",
+      "date": "13 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cp308xpwv34o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Poorest areas should not house all asylum seekers, says Burnham",
-      "date": "12 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c204d4z1gg8o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Clacton byelection polls open with Farage up against slew of fringe candidates",
+      "date": "13 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/13/clacton-byelection-polls-open"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham to chair Cobra meeting on extreme heat as temperatures surge again",
-      "date": "12 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/weather/articles/c36dr3r3ny0o?at_medium=RSS&at_campaign=rss"
+      "headline": "Yvette Cooper says Labour \u2018did not do government very well\u2019 under Starmer",
+      "date": "13 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/13/yvette-cooper-labour-keir-starmer-andy-burnham"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Early release scheme risks more serious crimes, probation chief warns",
-      "date": "12 Aug 2026",
+      "headline": "MPs make fireworks plea in 'tinderbox' conditions",
+      "date": "13 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c39e3y1y2zjo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cd7lpgdeev7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Paid police paternity leave to double after fathers reported being \u2018ostracised\u2019",
-      "date": "12 Aug 2026",
+      "headline": "Category C and women\u2019s prisons could be upgraded to ease overcrowding",
+      "date": "13 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/12/paid-police-paternity-leave-double-england-wales"
+      "url": "https://www.theguardian.com/society/2026/aug/13/category-c-and-womens-prisons-could-be-upgraded"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage looks trapped and rattled - now the nationalist tide can be turned | Rafael Behr",
-      "date": "12 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reform council leader, 20, defends record one year on: \u2018The establishment will throw anyone under the bus\u2019",
+      "date": "13 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/12/nigel-farage-trapped-nationalist-votes-division-reform"
+      "url": "https://www.theguardian.com/politics/2026/aug/13/reform-uk-george-finch-defends-record-one-year-warwickshire-council"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "PM admits cost of living help is not enough and hints at further support",
+      "headline": "Nurses fainting in \u2018inhumane\u2019 conditions due to extreme heat, union warns",
       "date": "12 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cgmkee248vdo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/13/nurses-fainting-inhumane-conditions-due-to-extreme-heat-uk-union-warns"
     },
     {
       "id": "9",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK heatwaves may have cost economy \u00a34.4bn in lost output so far this year, analysis finds",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham's zero hours reforms 'a hammer blow to young people'",
       "date": "12 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/12/heatwaves-uk-cost-economy-lost-output-thinktank"
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/a-hammer-blow-to-young-people-businesses-fume-at-proposed-zero-hours-reforms-13572422"
     },
     {
       "id": "10",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "British man with dementia told to leave Sweden after losing migration case",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Scottish Labour leader hopefuls warn against party divisions",
       "date": "12 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/aug/12/british-man-dementia-leave-sweden-brexit-migration-case"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy8m2rzp94yo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
