@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-13T08:00:59Z",
+    "updated": "2026-08-14T07:57:15Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Britain's scorched fields mean a food crisis \u2013 and the government is ignoring the one measure that would help | George Monbiot",
-      "date": "13 Aug 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Clacton byelection: Farage beats Count Binface but skips result announcement \u2013 UK politics live",
+      "date": "14 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/13/britain-food-crisis-government-summer-weather-war-stockpiles"
+      "url": "https://www.theguardian.com/politics/live/2026/aug/14/clacton-byelection-nigel-farage-count-binface-reform-uk-finances-donations-investigation-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polls open in Clacton by-election",
-      "date": "13 Aug 2026",
+      "headline": "Count Binface 'gratified' for being present at declaration",
+      "date": "14 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cp308xpwv34o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/videos/c20eyx09949o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Clacton byelection polls open with Farage up against slew of fringe candidates",
-      "date": "13 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/13/clacton-byelection-polls-open"
+      "headline": "Farage wins Clacton by-election but avoids result declaration",
+      "date": "14 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c62x1gr62m1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Yvette Cooper says Labour \u2018did not do government very well\u2019 under Starmer",
-      "date": "13 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018This is hell\u2019: British widow \u2018sick\u2019 with worry over threat of being removed from Sweden",
+      "date": "14 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/13/yvette-cooper-labour-keir-starmer-andy-burnham"
+      "url": "https://www.theguardian.com/world/2026/aug/14/british-widow-joyce-thomas-sweden-deported-brexit-policy"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "MPs make fireworks plea in 'tinderbox' conditions",
-      "date": "13 Aug 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage's by-election victory won't stop questions about finances",
+      "date": "14 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cd7lpgdeev7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvgwz9delwwo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Category C and women\u2019s prisons could be upgraded to ease overcrowding",
-      "date": "13 Aug 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage wins Clacton byelection in contest boycotted by every other major party",
+      "date": "14 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/13/category-c-and-womens-prisons-could-be-upgraded"
+      "url": "https://www.theguardian.com/politics/2026/aug/14/nigel-farage-wins-clacton-byelection-count-binface-boycotted-major-parties"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform council leader, 20, defends record one year on: \u2018The establishment will throw anyone under the bus\u2019",
-      "date": "13 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham won\u2019t fix our prisons crisis until he dares to be honest with the public about crime | Polly Toynbee",
+      "date": "14 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/13/reform-uk-george-finch-defends-record-one-year-warwickshire-council"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/14/andy-burnham-prisons-crisis-honest-public-crime"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Nurses fainting in \u2018inhumane\u2019 conditions due to extreme heat, union warns",
-      "date": "12 Aug 2026",
+      "headline": "Prisons are full - who should be released early? \u2013 podcast",
+      "date": "14 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/13/nurses-fainting-inhumane-conditions-due-to-extreme-heat-uk-union-warns"
+      "url": "https://www.theguardian.com/news/audio/2026/aug/14/prisons-are-full-who-should-be-released-early-podcast"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham's zero hours reforms 'a hammer blow to young people'",
-      "date": "12 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/a-hammer-blow-to-young-people-businesses-fume-at-proposed-zero-hours-reforms-13572422"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage set for decisive but arguably empty victory in Clacton",
+      "date": "13 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/13/nigel-farage-set-for-decisive-but-arguably-empty-victory-in-clacton"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Scottish Labour leader hopefuls warn against party divisions",
-      "date": "12 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy8m2rzp94yo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Polls close in Clacton byelection where Nigel Farage faces slew of fringe candidates",
+      "date": "13 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/13/clacton-byelection-polls-open"
     }
   ]
 }
