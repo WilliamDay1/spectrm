@@ -1,11 +1,47 @@
 {
   "_meta": {
-    "updated": "2026-08-15T07:07:30Z",
+    "updated": "2026-08-16T07:09:02Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "New UK cost of living crisis looms with soaring energy bills forecast to lift inflation",
+      "date": "16 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/aug/16/new-uk-cost-of-living-crisis-looms-rising-energy-bills-inflation"
+    },
+    {
+      "id": "2",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK plans to overhaul welfare system to save \u00a350bn",
+      "date": "16 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cz977nxww1jo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "3",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "I survived two years as prime minister in a hit new game - then my cabinet deserted me",
+      "date": "15 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq56pzqy6jvo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "4",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "\u2018Let\u2019s see what he can do\u2019: will Burnham bring voters back in Labour heartlands?",
+      "date": "15 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/14/andy-burnham-barnsley-voters-labour-reform-uk-red-wall"
+    },
+    {
+      "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Westminster council threatens Charing Cross soup kitchen with closure",
@@ -14,7 +50,7 @@
       "url": "https://www.theguardian.com/society/2026/aug/15/westminster-council-threatens-charing-cross-soup-kitchen-with-closure"
     },
     {
-      "id": "2",
+      "id": "6",
       "tag": "Defence",
       "tag_class": "tc-d",
       "headline": "Temporary ban on disposable BBQs as military deployed to help battle wildfires",
@@ -23,7 +59,7 @@
       "url": "https://www.bbc.co.uk/news/articles/c0jlyqdj6geo?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "3",
+      "id": "7",
       "tag": "Leadership",
       "tag_class": "ldr",
       "headline": "Burnham announces \u00a365m for drought-hit farmers after Labour pressure",
@@ -32,7 +68,7 @@
       "url": "https://www.theguardian.com/environment/2026/aug/14/andy-burnham-climate-response-drought-hit-farmers-labour-pressure"
     },
     {
-      "id": "4",
+      "id": "8",
       "tag": "Reform",
       "tag_class": "tc-ref",
       "headline": "The Guardian view on Nigel Farage: Clacton cannot acquit him | Editorial",
@@ -41,7 +77,7 @@
       "url": "https://www.theguardian.com/commentisfree/2026/aug/14/the-guardian-view-on-nigel-farage-clacton-cannot-acquit-him"
     },
     {
-      "id": "5",
+      "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "UK diplomats no longer get hardship bonus for being posted to Buenos Aires",
@@ -50,49 +86,13 @@
       "url": "https://www.bbc.co.uk/news/articles/cly5p995ykko?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "6",
+      "id": "10",
       "tag": "Reform",
       "tag_class": "tc-ref",
       "headline": "Standards watchdog resumes Farage probe as rivals slam needless byelection",
       "date": "14 Aug 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/politics/2026/aug/14/standards-watchdog-investigation-nigel-farage-financial-gifts"
-    },
-    {
-      "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Donald Trump can\u2019t beat Iran and Nigel Farage can only beat a bin. When it counts, these populists are just losers | Jonathan Freedland",
-      "date": "14 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/14/donald-trump-iran-nigel-farage-bin-populists-losers"
-    },
-    {
-      "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "UK politics: Country a \u2018tinderbox\u2019, says Burnham, as he calls in military and bans disposable barbecues \u2013 as it happened",
-      "date": "14 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/14/clacton-byelection-nigel-farage-count-binface-reform-uk-finances-donations-investigation-latest-news-updates"
-    },
-    {
-      "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Let\u2019s see what he can do\u2019: will Burnham bring Barnsley voters back to Labour?",
-      "date": "14 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/14/andy-burnham-barnsley-voters-labour-reform-uk-red-wall"
-    },
-    {
-      "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham brings in military and bans disposable barbecues in \u2018tinderbox\u2019 Britain",
-      "date": "14 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/aug/14/burnham-temporary-ban-barbecues-tinderbox-britain"
     }
   ]
 }
