@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-16T07:09:02Z",
+    "updated": "2026-08-17T07:32:32Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "New UK cost of living crisis looms with soaring energy bills forecast to lift inflation",
-      "date": "16 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/16/new-uk-cost-of-living-crisis-looms-rising-energy-bills-inflation"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK benefits ban for foreign nationals would include EU citizens",
+      "date": "17 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cly555430nno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK plans to overhaul welfare system to save \u00a350bn",
-      "date": "16 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Changing pubs into homes to be made harder under new rules",
+      "date": "17 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cz977nxww1jo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/clyllg1v0kdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "I survived two years as prime minister in a hit new game - then my cabinet deserted me",
-      "date": "15 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq56pzqy6jvo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "My generation had no voice on Brexit \u2013 but Burnham gives the young fresh hope on Europe | Ceira Sergeant",
+      "date": "17 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/17/young-people-brexit-burnham-europe-opportunities"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Let\u2019s see what he can do\u2019: will Burnham bring voters back in Labour heartlands?",
-      "date": "15 Aug 2026",
+      "tag": "Housing",
+      "tag_class": "tc-c",
+      "headline": "More women will die if domestic abusers leave prison early, victim\u2019s parents warn",
+      "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/14/andy-burnham-barnsley-voters-labour-reform-uk-red-wall"
+      "url": "https://www.theguardian.com/society/2026/aug/17/more-women-will-die-if-domestic-abusers-leave-prison-early-victims-parents-warn"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Westminster council threatens Charing Cross soup kitchen with closure",
-      "date": "15 Aug 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Nothing less than radical whole-system change is required to fix the NHS's maternity services | Julia Sanders",
+      "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/15/westminster-council-threatens-charing-cross-soup-kitchen-with-closure"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/17/nhs-maternity-care-crisis-reports-yvette-cooper-women"
     },
     {
       "id": "6",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Temporary ban on disposable BBQs as military deployed to help battle wildfires",
-      "date": "15 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0jlyqdj6geo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Oil and gas industry urges PM to approve controversial projects",
+      "date": "17 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/oil-and-gas-industry-urges-pm-to-approve-controversial-north-sea-developments-13573878"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham announces \u00a365m for drought-hit farmers after Labour pressure",
-      "date": "14 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Loosening of planning rules in England to allow more new homes near stations",
+      "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/aug/14/andy-burnham-climate-response-drought-hit-farmers-labour-pressure"
+      "url": "https://www.theguardian.com/politics/2026/aug/17/loosening-planning-rules-england-more-homes-train-stations-rayner"
     },
     {
       "id": "8",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "The Guardian view on Nigel Farage: Clacton cannot acquit him | Editorial",
-      "date": "14 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Revisited: The Andy Burnham I know \u2013 Today in Focus podcast",
+      "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/14/the-guardian-view-on-nigel-farage-clacton-cannot-acquit-him"
+      "url": "https://www.theguardian.com/politics/audio/2026/aug/17/revisited-the-andy-burnham-i-know-today-in-focus-podcast"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK diplomats no longer get hardship bonus for being posted to Buenos Aires",
-      "date": "14 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cly5p995ykko?at_medium=RSS&at_campaign=rss"
+      "headline": "Reform accused of targeting the most vulnerable with \u00a350bn benefit cut",
+      "date": "16 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/16/jenrick-cuts-benefits-disabled-people-foreign-nationals"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Standards watchdog resumes Farage probe as rivals slam needless byelection",
-      "date": "14 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Arron Banks hired private investigators to dig into Conservative party chair",
+      "date": "16 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/14/standards-watchdog-investigation-nigel-farage-financial-gifts"
+      "url": "https://www.theguardian.com/uk-news/2026/aug/16/arron-banks-hired-private-investigators-dig-into-conservative-party-chair"
     }
   ]
 }
