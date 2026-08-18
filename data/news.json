@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-17T07:32:32Z",
+    "updated": "2026-08-18T07:20:09Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK benefits ban for foreign nationals would include EU citizens",
-      "date": "17 Aug 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Russia says UK 'will pay' for supplying drones to Ukraine",
+      "date": "18 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cly555430nno?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cy5dz0kkn0wo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Changing pubs into homes to be made harder under new rules",
-      "date": "17 Aug 2026",
+      "headline": "Disabled people in England to get 24-hour free bus travel",
+      "date": "18 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyllg1v0kdo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cjwx5vx21y2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "My generation had no voice on Brexit \u2013 but Burnham gives the young fresh hope on Europe | Ceira Sergeant",
-      "date": "17 Aug 2026",
+      "headline": "Burnham is choosing jobs over climate security. That\u2019s a big risk | Gaby Hinsliff",
+      "date": "18 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/17/young-people-brexit-burnham-europe-opportunities"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/18/andy-burnham-climate-security-net-zero-jobs"
     },
     {
       "id": "4",
-      "tag": "Housing",
-      "tag_class": "tc-c",
-      "headline": "More women will die if domestic abusers leave prison early, victim\u2019s parents warn",
-      "date": "17 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Top economists urge Burnham to sign UK up to UN initiative on global inequality",
+      "date": "18 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/17/more-women-will-die-if-domestic-abusers-leave-prison-early-victims-parents-warn"
+      "url": "https://www.theguardian.com/inequality/2026/aug/18/economists-andy-burnham-uk-un-initiative-global-international-panel-inequality"
     },
     {
       "id": "5",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Nothing less than radical whole-system change is required to fix the NHS's maternity services | Julia Sanders",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reform\u2019s Tice accused of misinformation after urging people to enjoy heatwaves",
       "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/17/nhs-maternity-care-crisis-reports-yvette-cooper-women"
+      "url": "https://www.theguardian.com/politics/2026/aug/17/reform-uk-richard-tice-stop-tackling-climate-crisis-enjoy-heat"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Oil and gas industry urges PM to approve controversial projects",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham scraps restrictions on disabled people\u2019s bus passes in England",
       "date": "17 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/oil-and-gas-industry-urges-pm-to-approve-controversial-north-sea-developments-13573878"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/17/burnham-scraps-restrictions-disabled-people-bus-passes-england"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Loosening of planning rules in England to allow more new homes near stations",
+      "headline": "Does Reform's plan to cut \u00a350bn in welfare spending add up?",
       "date": "17 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/17/loosening-planning-rules-england-more-homes-train-stations-rayner"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crl76jkxel3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Revisited: The Andy Burnham I know \u2013 Today in Focus podcast",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Huge number of children would fall into poverty under Reform\u2019s benefits plans, say campaigners",
       "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/aug/17/revisited-the-andy-burnham-i-know-today-in-focus-podcast"
+      "url": "https://www.theguardian.com/politics/2026/aug/17/children-poverty-reform-uk-benefits"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform accused of targeting the most vulnerable with \u00a350bn benefit cut",
-      "date": "16 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/16/jenrick-cuts-benefits-disabled-people-foreign-nationals"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham exchanged messages with person posing as Trump's chief of staff",
+      "date": "17 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyvj5zdjj2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Arron Banks hired private investigators to dig into Conservative party chair",
-      "date": "16 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Cabinet ministers\u2019 mobile numbers found online after Burnham targeted",
+      "date": "17 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/16/arron-banks-hired-private-investigators-dig-into-conservative-party-chair"
+      "url": "https://www.theguardian.com/politics/2026/aug/17/andy-burnham-exchanged-messages-individual-impersonating-trump-chief-of-staff-susie-wiles"
     }
   ]
 }
