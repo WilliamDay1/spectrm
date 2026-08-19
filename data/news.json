@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-18T07:20:09Z",
+    "updated": "2026-08-19T07:21:09Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Russia says UK 'will pay' for supplying drones to Ukraine",
-      "date": "18 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham unveils plan to get rough sleepers off streets for Christmas",
+      "date": "19 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy5dz0kkn0wo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvgvy2n6grno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Disabled people in England to get 24-hour free bus travel",
-      "date": "18 Aug 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Suspended Reform UK member vows to fight to remain in party",
+      "date": "19 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjwx5vx21y2o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c4gd1mez8zvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham is choosing jobs over climate security. That\u2019s a big risk | Gaby Hinsliff",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Do not cut benefits for disabled young people, dozens of UK charities urge ministers",
       "date": "18 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/18/andy-burnham-climate-security-net-zero-jobs"
+      "url": "https://www.theguardian.com/society/2026/aug/19/benefits-disabled-young-people-uk-charities-letter"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Top economists urge Burnham to sign UK up to UN initiative on global inequality",
+      "headline": "Burnham received \u00a3345,000 of donations ahead of becoming PM",
       "date": "18 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/inequality/2026/aug/18/economists-andy-burnham-uk-un-initiative-global-international-panel-inequality"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c141d4l0mgko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Reform\u2019s Tice accused of misinformation after urging people to enjoy heatwaves",
-      "date": "17 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/17/reform-uk-richard-tice-stop-tackling-climate-crisis-enjoy-heat"
+      "headline": "Join EU migration pact to tackle small boats, says Ed Davey",
+      "date": "18 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8dn3n6pvyvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham scraps restrictions on disabled people\u2019s bus passes in England",
-      "date": "17 Aug 2026",
+      "headline": "Burnham launches \u2018national drive\u2019 to get rough sleepers off streets by Christmas",
+      "date": "18 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/17/burnham-scraps-restrictions-disabled-people-bus-passes-england"
+      "url": "https://www.theguardian.com/society/2026/aug/18/burnham-national-drive-rough-sleepers-christmas"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Does Reform's plan to cut \u00a350bn in welfare spending add up?",
-      "date": "17 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crl76jkxel3o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "I won\u2019t abandon anyone to sleep rough on our streets. That\u2019s my \u00a3442m promise | Andy Burnham",
+      "date": "18 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/18/rough-sleeping-streets-christmas-local-communities"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Huge number of children would fall into poverty under Reform\u2019s benefits plans, say campaigners",
-      "date": "17 Aug 2026",
+      "headline": "Swedish MP intervenes in \u2018damaging\u2019 Brexit row over elderly Britons ordered to leave",
+      "date": "18 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/17/children-poverty-reform-uk-benefits"
+      "url": "https://www.theguardian.com/politics/2026/aug/18/swedish-mp-intervenes-brexit-row-elderly-britons-ordered-leave"
     },
     {
       "id": "9",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham exchanged messages with person posing as Trump's chief of staff",
-      "date": "17 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyvj5zdjj2o?at_medium=RSS&at_campaign=rss"
+      "headline": "Burnham declares almost \u00a3350,000 in donations in months before becoming PM",
+      "date": "18 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/18/burnham-declares-almost-350000-in-donations-in-months-before-becoming-pm"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Cabinet ministers\u2019 mobile numbers found online after Burnham targeted",
-      "date": "17 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "The Guardian view on global inequality: extreme wealth threatens democracy | Editorial",
+      "date": "18 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/17/andy-burnham-exchanged-messages-individual-impersonating-trump-chief-of-staff-susie-wiles"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/18/the-guardian-view-on-global-inequality-extreme-wealth-threatens-democracy"
     }
   ]
 }
