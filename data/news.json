@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-19T07:21:09Z",
+    "updated": "2026-08-20T07:23:35Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham unveils plan to get rough sleepers off streets for Christmas",
-      "date": "19 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Greens call for windfall tax on big banks' profits to support small business",
+      "date": "20 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgvy2n6grno?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cwy49k5x0w1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Suspended Reform UK member vows to fight to remain in party",
-      "date": "19 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "AI will not solve council cash crisis, say experts",
+      "date": "20 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4gd1mez8zvo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cdx7r9467kno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Do not cut benefits for disabled young people, dozens of UK charities urge ministers",
-      "date": "18 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/19/benefits-disabled-young-people-uk-charities-letter"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "<a href='https://news.sky.com/story/politics-latest-andy-burnham-labour-kemi-badenoch-tories-nigel-farage-reform-12593360?postid=12252391#liveblog-body'>Miliband summons top Israeli envoy over 'unacceptable and destructive' settlement project</a>",
+      "date": "20 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/miliband-summons-top-israeli-diplomat-over-unacceptable-and-destructive-settlement-project-13574896"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham received \u00a3345,000 of donations ahead of becoming PM",
-      "date": "18 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c141d4l0mgko?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage using Christianity \u2018to stir anti-Muslim feeling\u2019, says Rowan Williams",
+      "date": "20 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/20/nigel-farage-rowan-williams-tommy-robinson-christianity-anti-muslim-feeling"
     },
     {
       "id": "5",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Join EU migration pact to tackle small boats, says Ed Davey",
-      "date": "18 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8dn3n6pvyvo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Working in Keir Starmer\u2019s No 10 \u2018unbearable\u2019, says Sue Gray",
+      "date": "20 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/20/working-in-keir-starmer-no-10-unbearable-says-sue-gray"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham launches \u2018national drive\u2019 to get rough sleepers off streets by Christmas",
-      "date": "18 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/18/burnham-national-drive-rough-sleepers-christmas"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Wildfire 'overlooked' as it was in the North - MP",
+      "date": "20 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cly5lj5xp9ro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "I won\u2019t abandon anyone to sleep rough on our streets. That\u2019s my \u00a3442m promise | Andy Burnham",
-      "date": "18 Aug 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "From bone-dry to soaked to the bone, welcome to the age of climate whiplash | Aditya Chakrabortty",
+      "date": "20 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/18/rough-sleeping-streets-christmas-local-communities"
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/20/hot-summer-wet-winter-welcome-to-the-age-of-climate-whiplash"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Swedish MP intervenes in \u2018damaging\u2019 Brexit row over elderly Britons ordered to leave",
-      "date": "18 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Drill Andy drill? Burnham\u2019s North Sea dilemma \u2013 podcast",
+      "date": "20 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/18/swedish-mp-intervenes-brexit-row-elderly-britons-ordered-leave"
+      "url": "https://www.theguardian.com/news/audio/2026/aug/20/andy-burnham-north-sea-dilemma-podcast"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham declares almost \u00a3350,000 in donations in months before becoming PM",
-      "date": "18 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/18/burnham-declares-almost-350000-in-donations-in-months-before-becoming-pm"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "The dangers of politicians being 'too online' - or not online enough",
+      "date": "20 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cn5nvkdwy74o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The Guardian view on global inequality: extreme wealth threatens democracy | Editorial",
-      "date": "18 Aug 2026",
+      "headline": "Taxpayers to fund clear-up of illegal dumps in West Yorkshire, Surrey and Kent",
+      "date": "19 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/18/the-guardian-view-on-global-inequality-extreme-wealth-threatens-democracy"
+      "url": "https://www.theguardian.com/environment/2026/aug/19/taxpayers-to-fund-clear-up-of-dumps-in-west-yorkshire-surrey-and-kent"
     }
   ]
 }
