@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-08-20T07:23:35Z",
+    "updated": "2026-08-21T07:24:06Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Greens call for windfall tax on big banks' profits to support small business",
-      "date": "20 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwy49k5x0w1o?at_medium=RSS&at_campaign=rss"
+      "headline": "I put myself in the prime minister\u2019s shoes \u2013 and learned some uncomfortable lessons | Zoe Williams",
+      "date": "21 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/21/prime-ministers-political-survival-game"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "AI will not solve council cash crisis, say experts",
-      "date": "20 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Starmer donates biography of himself to Downing Street library",
+      "date": "21 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cdx7r9467kno?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/czdm6m939edo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-andy-burnham-labour-kemi-badenoch-tories-nigel-farage-reform-12593360?postid=12252391#liveblog-body'>Miliband summons top Israeli envoy over 'unacceptable and destructive' settlement project</a>",
-      "date": "20 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/miliband-summons-top-israeli-diplomat-over-unacceptable-and-destructive-settlement-project-13574896"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK reports unexpected deficit of \u00a31.8bn as John Healey prepares for first budget",
+      "date": "21 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/21/uk-unexpected-deficit-john-healey-prepares-for-first-budget"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage using Christianity \u2018to stir anti-Muslim feeling\u2019, says Rowan Williams",
-      "date": "20 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/20/nigel-farage-rowan-williams-tommy-robinson-christianity-anti-muslim-feeling"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "NI saw largest rise in disposable income of any UK region",
+      "date": "21 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c4g31gqp6q2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Working in Keir Starmer\u2019s No 10 \u2018unbearable\u2019, says Sue Gray",
-      "date": "20 Aug 2026",
+      "headline": "Back on track: can Burnham fix the north\u2019s woeful rail services?",
+      "date": "21 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/20/working-in-keir-starmer-no-10-unbearable-says-sue-gray"
+      "url": "https://www.theguardian.com/business/2026/aug/21/back-on-track-can-burnham-fix-the-norths-woeful-rail-services"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Wildfire 'overlooked' as it was in the North - MP",
-      "date": "20 Aug 2026",
+      "headline": "The town whose council wants migrants to move in",
+      "date": "21 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cly5lj5xp9ro?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ckgdpdk84d0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "From bone-dry to soaked to the bone, welcome to the age of climate whiplash | Aditya Chakrabortty",
-      "date": "20 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/20/hot-summer-wet-winter-welcome-to-the-age-of-climate-whiplash"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "My student day out in London turned to terror - now survivors like me won't be forgotten",
+      "date": "21 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cd0x91ym7veo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Drill Andy drill? Burnham\u2019s North Sea dilemma \u2013 podcast",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "French becoming more effective in stopping small boat crossings, UK says",
       "date": "20 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/aug/20/andy-burnham-north-sea-dilemma-podcast"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c1d1v333ewxo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The dangers of politicians being 'too online' - or not online enough",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
       "date": "20 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cn5nvkdwy74o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Taxpayers to fund clear-up of illegal dumps in West Yorkshire, Surrey and Kent",
-      "date": "19 Aug 2026",
+      "headline": "Leaders attack \u2018demotivating\u2019 plan to make pupils who fail GCSEs retake maths and English",
+      "date": "20 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/aug/19/taxpayers-to-fund-clear-up-of-dumps-in-west-yorkshire-surrey-and-kent"
+      "url": "https://www.theguardian.com/education/2026/aug/20/governments-plan-young-people-continue-studying-gcse-maths-english-exams"
     }
   ]
 }
