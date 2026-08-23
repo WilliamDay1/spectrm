@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-22T07:09:41Z",
+    "updated": "2026-08-23T07:10:56Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018We fear lessons will not be learned\u2019: Chloe Moffat\u2019s parents on their fight to hold Treasury to account",
-      "date": "22 Aug 2026",
+      "headline": "Onshore windfarm applications hit 10-year high in England",
+      "date": "23 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/22/chloe-moffat-parents-treasury-death"
+      "url": "https://www.theguardian.com/environment/2026/aug/23/onshore-windfarm-applications-10-year-high-england"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham economic adviser O'Neill rules out government job",
-      "date": "22 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwym4m4j848o?at_medium=RSS&at_campaign=rss"
+      "headline": "Burnham expected to give mayors new powers over local planning decisions",
+      "date": "23 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/23/burnham-expected-to-give-mayors-new-powers-over-local-planning-decisions"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Deselected candidate claims Lib Dems\u2019 religious discrimination cost him \u00a3790,000",
-      "date": "21 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Drill, Burnham, drill? The oil basin that is a totem for Trump - and a headache for Britain\u2019s new PM",
+      "date": "23 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/21/deselected-candidate-claims-lib-dems-religious-discrimination-cost-him-790000"
+      "url": "https://www.theguardian.com/environment/ng-interactive/2026/aug/23/drill-burnham-north-sea-oil-basin-totem-trump-headache-britain"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Ofcom investigating Sky News over Farage harassment claims",
-      "date": "21 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Mayors to get powers to overrule local councils on planning decisions",
+      "date": "23 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ce8k52186mmo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cy8m0gxexl4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "MPs \u2018failing to learn lesson\u2019 over freebies after accepting \u00a3400,000 of hospitality",
-      "date": "21 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/21/mps-failing-to-learn-lesson-over-freebies-after-accepting-400000-of-hospitality"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Restriction zone scheme for offenders to start in October",
+      "date": "23 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy8e8jx0x5wo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "The Guardian view on Andy Burnham\u2019s buses: a blueprint for governing Britain | Editorial",
-      "date": "21 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/21/the-guardian-view-on-andy-burnhams-buses-a-blueprint-for-governing-britain"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Violent and sexual offenders to be confined to zones of 'a few miles' after release from prison",
+      "date": "22 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/violent-and-sexual-offenders-to-be-confined-to-zones-of-a-few-miles-after-release-from-prison-13576137"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Solar farm approved despite public objection",
-      "date": "21 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4gvnr4ld32o?at_medium=RSS&at_campaign=rss"
+      "headline": "Badenoch says Reform defectors \u2018some of the most dishonest people I have met\u2019",
+      "date": "22 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/22/kemi-badenoch-says-reform-defectors-some-of-the-most-dishonest-people-i-have-met"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour stalling on Jackdaw and Rosebank because \u2018heart\u2019s not really in it\u2019, says Badenoch \u2013 as it happened",
-      "date": "21 Aug 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Former British and French diplomats urge action over Israel\u2019s \u2018erasure\u2019 of Palestine",
+      "date": "22 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/21/andy-burnham-growth-labour-john-healey-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/world/2026/aug/22/uk-france-diplomats-israel-palestine"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to send high-performing civil servants to mayoral offices",
-      "date": "21 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Economic adviser O'Neill rules out government job but backs PM's devolution plans",
+      "date": "22 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm2gme5yqnqo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cwym4m4j848o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to dispatch 100 Whitehall officials to help regional mayors",
-      "date": "21 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Unions worry Labour\u2019s plan for zero-hours contracts may break manifesto pledge",
+      "date": "22 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/21/burnham-to-dispatch-100-whitehall-officials-to-help-regional-mayors"
+      "url": "https://www.theguardian.com/uk-news/2026/aug/22/unions-worry-labours-plan-for-zero-hours-contracts-may-break-manifesto-pledge"
     }
   ]
 }
