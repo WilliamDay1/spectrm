@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-23T07:10:56Z",
+    "updated": "2026-08-24T07:37:50Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Onshore windfarm applications hit 10-year high in England",
-      "date": "23 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham arrives in Ukraine with plans to share UK blueprints for long-range missiles - Europe live",
+      "date": "24 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/aug/23/onshore-windfarm-applications-10-year-high-england"
+      "url": "https://www.theguardian.com/world/live/2026/aug/24/europe-ukraine-russia-war-kyiv-andy-burnham-volodymyr-zelenskyy-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham expected to give mayors new powers over local planning decisions",
-      "date": "23 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/23/burnham-expected-to-give-mayors-new-powers-over-local-planning-decisions"
+      "headline": "Burnham to hand long-range missile blueprints to Zelensky as he visits Kyiv",
+      "date": "24 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Drill, Burnham, drill? The oil basin that is a totem for Trump - and a headache for Britain\u2019s new PM",
-      "date": "23 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/ng-interactive/2026/aug/23/drill-burnham-north-sea-oil-basin-totem-trump-headache-britain"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Sam and Anne's guide to the term ahead",
+      "date": "24 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/sam-and-annes-guide-to-the-term-ahead-13575274"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Mayors to get powers to overrule local councils on planning decisions",
-      "date": "23 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy8m0gxexl4o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "From welfare to prisons: the challenges for Burnham when MPs return to Commons",
+      "date": "24 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/24/andy-burnham-challenges-budget-welfare-migration-prisons-mps-commons"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Restriction zone scheme for offenders to start in October",
-      "date": "23 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy8e8jx0x5wo?at_medium=RSS&at_campaign=rss"
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Photo of Disraeli among missing parliamentary works of art, FoI request finds",
+      "date": "24 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/24/photo-of-disraeli-among-missing-parliamentary-works-of-art-foi-request-finds"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Violent and sexual offenders to be confined to zones of 'a few miles' after release from prison",
-      "date": "22 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/violent-and-sexual-offenders-to-be-confined-to-zones-of-a-few-miles-after-release-from-prison-13576137"
+      "headline": "Most English secondary schools are breaking healthy food rules, finds report",
+      "date": "24 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/education/2026/aug/24/most-english-secondary-schools-are-breaking-healthy-food-rules-finds-report"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Badenoch says Reform defectors \u2018some of the most dishonest people I have met\u2019",
-      "date": "22 Aug 2026",
+      "headline": "Revisited \u2013 Brexit: an oral history \u2013 podcast",
+      "date": "24 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/22/kemi-badenoch-says-reform-defectors-some-of-the-most-dishonest-people-i-have-met"
+      "url": "https://www.theguardian.com/politics/audio/2026/aug/24/revisited-brexit-an-oral-history-podcast"
     },
     {
       "id": "8",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Former British and French diplomats urge action over Israel\u2019s \u2018erasure\u2019 of Palestine",
-      "date": "22 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to visit Ukraine with promise of boost for Kyiv\u2019s long-range missiles",
+      "date": "23 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/aug/22/uk-france-diplomats-israel-palestine"
+      "url": "https://www.theguardian.com/politics/2026/aug/24/andy-burnham-ukraine-long-range-missile-technology-kyiv-visit"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Economic adviser O'Neill rules out government job but backs PM's devolution plans",
-      "date": "22 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwym4m4j848o?at_medium=RSS&at_campaign=rss"
+      "headline": "UK productivity growing faster than official figures suggest, thinktank finds",
+      "date": "23 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/aug/24/uk-productivity-growing-faster-official-figures-resolution-foundation"
     },
     {
       "id": "10",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "Unions worry Labour\u2019s plan for zero-hours contracts may break manifesto pledge",
-      "date": "22 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/22/unions-worry-labours-plan-for-zero-hours-contracts-may-break-manifesto-pledge"
+      "headline": "Reform says it will prioritise British-born young workers for social housing",
+      "date": "23 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgjgyg1rngo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
