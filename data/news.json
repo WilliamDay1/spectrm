@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-25T07:25:43Z",
+    "updated": "2026-08-26T07:26:22Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham plans trip to New York as Ukraine pleads for US-made missiles",
-      "date": "25 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/25/andy-burnham-us-new-york-ukraine-patriot-missiles"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Household energy bills to hit three-year high as Ofgem announces 4% rise from October",
+      "date": "26 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqjkl1xvgw5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The war on \u2018loudcasting\u2019 phones can be won, but it will take some very British nudging | Dan Hancox",
-      "date": "25 Aug 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Labour\u2019s energy bills crisis is getting worse. Political honesty is essential | Nils Pratley",
+      "date": "26 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/25/war-loudcasting-british-nudging-phones-public"
+      "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/aug/26/labour-energy-bills-crisis-political-honesty-essential"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham refuses to rule out tax rises in autumn Budget",
-      "date": "25 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Dad of woman who took her own life says Treasury failed in its duty of care",
+      "date": "26 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj06818jgzlo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c0rewr790jyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "More than 70,000 social and affordable homes to be built across England over 10 years",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Labour MPs will push Burnham to back voting reform in first 100 days",
       "date": "25 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cnvly73jrrdo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/25/andy-burnham-electoral-reform-first-past-the-post"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK drone factories may face attacks from 'unknown sources', says Kremlin adviser",
+      "headline": "Why do some Labour MPs want electoral reform and will it happen?",
       "date": "25 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cg598m3meeyo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/25/why-labour-mps-electoral-reform-will-it-happen"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham vows support for Ukraine despite 'outrageous threats' from Russia",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "UK to warn citizens to stock up on food amid threat from climate crisis and hostile states",
       "date": "25 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/25/uk-to-warn-citizens-to-stock-up-on-food-amid-threat-from-climate-crisis-and-hostile-states"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Young people leaving care are dying at a troubling rate - and one age stands out",
-      "date": "24 Aug 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/young-people-leaving-care-are-dying-at-a-troubling-rate-and-one-age-stands-out-13576817"
+      "headline": "London bus drivers resume strike over heatwave working amid fears over air con deal",
+      "date": "25 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/25/london-bus-drivers-resume-strike-over-heatwave-working-amid-fears-over-air-con-deal"
     },
     {
       "id": "8",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "UK to use Ukraine battlefield data to train AI to protect sensitive sites",
-      "date": "24 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Government lays out housing plans but Burnham backtracks on social renting pledge \u2013 as it happened",
+      "date": "25 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/24/uk-to-use-ukraine-battlefield-data-to-train-ai-to-protect-sensitive-sites"
+      "url": "https://www.theguardian.com/politics/live/2026/aug/25/housing-plans-andy-burnham-social-renting-pledge-ukraine-reform-tories-rupert-lowe-uk-politics-latest"
     },
     {
       "id": "9",
-      "tag": "Housing",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Reform would evict social housing tenants over unkempt gardens",
-      "date": "24 Aug 2026",
+      "headline": "Badenoch plotted to remove Sunak as PM months before election, book claims",
+      "date": "25 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/24/reform-evict-social-housing-tenants-poor-garden-maintenance"
+      "url": "https://www.theguardian.com/politics/2026/aug/25/kemi-badenoch-rishi-sunak-conservatives-anthony-seldon-book"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham says UK with Ukraine \u2018all the way\u2019 despite \u2018outrageous threats\u2019 from Russia \u2013 Europe live",
-      "date": "24 Aug 2026",
+      "headline": "UK officials prepare for potential Trump talks as Burnham plans New York trip",
+      "date": "25 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/live/2026/aug/24/europe-ukraine-russia-war-kyiv-andy-burnham-volodymyr-zelenskyy-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/aug/25/andy-burnham-us-new-york-ukraine-patriot-missiles"
     }
   ]
 }
