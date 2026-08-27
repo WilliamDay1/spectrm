@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-08-26T07:26:22Z",
+    "updated": "2026-08-27T17:51:00Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Energy",
       "tag_class": "tc-e",
-      "headline": "Household energy bills to hit three-year high as Ofgem announces 4% rise from October",
-      "date": "26 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqjkl1xvgw5o?at_medium=RSS&at_campaign=rss"
+      "headline": "The Guardian view on energy costs: vulnerable households need help with their bills | Editorial",
+      "date": "27 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/27/the-guardian-view-on-energy-costs-vulnerable-households-need-help-with-their-bills"
     },
     {
       "id": "2",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Labour\u2019s energy bills crisis is getting worse. Political honesty is essential | Nils Pratley",
-      "date": "26 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/aug/26/labour-energy-bills-crisis-political-honesty-essential"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says united Ireland poll is 'off the table' during first NI visit",
+      "date": "27 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy9z43z3g24o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Dad of woman who took her own life says Treasury failed in its duty of care",
-      "date": "26 Aug 2026",
+      "headline": "Supreme Court asked to settle dispute over Sturgeon inquiry documents",
+      "date": "27 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c0rewr790jyo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvgy7lmlvldo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Labour MPs will push Burnham to back voting reform in first 100 days",
-      "date": "25 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/25/andy-burnham-electoral-reform-first-past-the-post"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "One in eight young people still out of work or education ahead of major review",
+      "date": "27 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c93epy2yev0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Why do some Labour MPs want electoral reform and will it happen?",
-      "date": "25 Aug 2026",
+      "headline": "Number of asylum seekers living in hotels across UK halves in a year",
+      "date": "27 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/25/why-labour-mps-electoral-reform-will-it-happen"
+      "url": "https://www.theguardian.com/uk-news/2026/aug/27/number-of-asylum-seekers-living-in-hotels-across-uk-halves-within-a-year"
     },
     {
       "id": "6",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "UK to warn citizens to stock up on food amid threat from climate crisis and hostile states",
-      "date": "25 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/25/uk-to-warn-citizens-to-stock-up-on-food-amid-threat-from-climate-crisis-and-hostile-states"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Family welcomes review of law after driver who killed daughter ruled unfit to stand trial",
+      "date": "27 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cy0zld890ggo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "London bus drivers resume strike over heatwave working amid fears over air con deal",
-      "date": "25 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/25/london-bus-drivers-resume-strike-over-heatwave-working-amid-fears-over-air-con-deal"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham calls summit of Welsh, Scottish and Northern Irish first ministers",
+      "date": "27 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c14d8v83ny7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Government lays out housing plans but Burnham backtracks on social renting pledge \u2013 as it happened",
-      "date": "25 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Unlike needy Keir, trash-talking Andy speaks a language Trump understands | John Crace",
+      "date": "27 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/25/housing-plans-andy-burnham-social-renting-pledge-ukraine-reform-tories-rupert-lowe-uk-politics-latest"
+      "url": "https://www.theguardian.com/politics/2026/aug/27/andy-burnham-trump-meeting-needy-keir-starmer"
     },
     {
       "id": "9",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Badenoch plotted to remove Sunak as PM months before election, book claims",
-      "date": "25 Aug 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Russia says it could hit UK military targets over supply of missile technology to Ukraine \u2013 as it happened",
+      "date": "27 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/25/kemi-badenoch-rishi-sunak-conservatives-anthony-seldon-book"
+      "url": "https://www.theguardian.com/politics/live/2026/aug/27/mcfadden-meta-jobs-neets-burnham-wales-unemployment-tata-steel-industry-latest-news-updates"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "UK officials prepare for potential Trump talks as Burnham plans New York trip",
-      "date": "25 Aug 2026",
+      "headline": "Andy Burnham\u2019s autumn of pain\u2013 podcast",
+      "date": "27 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/25/andy-burnham-us-new-york-ukraine-patriot-missiles"
+      "url": "https://www.theguardian.com/politics/audio/2026/aug/27/andy-burnhams-autumn-of-pain-podcast"
     }
   ]
 }
