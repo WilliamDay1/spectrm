@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-27T17:51:00Z",
+    "updated": "2026-08-28T18:56:16Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "The Guardian view on energy costs: vulnerable households need help with their bills | Editorial",
-      "date": "27 Aug 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Drumcree ruling raises fears of sectarian confrontation in Northern Ireland",
+      "date": "28 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/27/the-guardian-view-on-energy-costs-vulnerable-households-need-help-with-their-bills"
+      "url": "https://www.theguardian.com/uk-news/2026/aug/28/drumcree-dispute-court-ruling-garvaghy-road-marching-season"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says united Ireland poll is 'off the table' during first NI visit",
-      "date": "27 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy9z43z3g24o?at_medium=RSS&at_campaign=rss"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Russia \u2018losing 6,000 more troops in Ukraine each month than it can recruit\u2019",
+      "date": "28 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/aug/28/russia-losing-6000-more-troops-than-it-can-recruit-each-month-in-ukraine-says-west"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Supreme Court asked to settle dispute over Sturgeon inquiry documents",
-      "date": "27 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says he will not vote on assisted dying unlike Starmer",
+      "date": "28 Aug 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgy7lmlvldo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c1dlp27gre5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "One in eight young people still out of work or education ahead of major review",
-      "date": "27 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c93epy2yev0o?at_medium=RSS&at_campaign=rss"
+      "headline": "The Guardian view on political donations: Labour should curb the power of big money | Editorial",
+      "date": "28 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/28/the-guardian-view-on-political-donations-labour-should-curb-the-power-of-big-money"
     },
     {
       "id": "5",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Number of asylum seekers living in hotels across UK halves in a year",
-      "date": "27 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/27/number-of-asylum-seekers-living-in-hotels-across-uk-halves-within-a-year"
+      "headline": "FM calls for referendum powers as draft independence bill published",
+      "date": "28 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c4gqz58eql6o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Family welcomes review of law after driver who killed daughter ruled unfit to stand trial",
-      "date": "27 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy0zld890ggo?at_medium=RSS&at_campaign=rss"
+      "headline": "UK urged to ban imports of Brazilian meat over health concerns",
+      "date": "28 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/food/2026/aug/28/uk-urged-ban-import-brazil-meat-health-concerns"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham calls summit of Welsh, Scottish and Northern Irish first ministers",
-      "date": "27 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c14d8v83ny7o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour rejects Zack Polanski\u2019s call to \u2018slam brakes\u2019 on building AI datacentres",
+      "date": "28 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/28/labour-green-party-zack-polanski-ai-datacentres"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Unlike needy Keir, trash-talking Andy speaks a language Trump understands | John Crace",
-      "date": "27 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham says he will not vote on assisted dying bill to avoid swaying debate",
+      "date": "28 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/27/andy-burnham-trump-meeting-needy-keir-starmer"
+      "url": "https://www.theguardian.com/society/2026/aug/28/andy-burnham-abstention-assisted-dying-bill"
     },
     {
       "id": "9",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Russia says it could hit UK military targets over supply of missile technology to Ukraine \u2013 as it happened",
-      "date": "27 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/aug/27/mcfadden-meta-jobs-neets-burnham-wales-unemployment-tata-steel-industry-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "South of France holiday scuppers Davey's blood donation",
+      "date": "28 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgy5jkkp4go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham\u2019s autumn of pain\u2013 podcast",
-      "date": "27 Aug 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "French far-right leader Jordan Bardella to address Reform UK party conference",
+      "date": "28 Aug 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/aug/27/andy-burnhams-autumn-of-pain-podcast"
+      "url": "https://www.theguardian.com/world/2026/aug/28/french-far-right-leader-jordan-bardella-address-reform-uk-party-conference"
     }
   ]
 }
