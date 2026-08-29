@@ -1,11 +1,38 @@
 {
   "_meta": {
-    "updated": "2026-08-28T18:56:16Z",
+    "updated": "2026-08-29T12:47:43Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham's summer tour is over - now he has to prove himself in Parliament",
+      "date": "29 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvgy48r1nr4o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "2",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Tax promises, defence targets and Iran: Andy Burnham\u2019s budget headaches",
+      "date": "29 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/29/andy-burnham-john-healey-autumn-budget-2026-challenges"
+    },
+    {
+      "id": "3",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ireland will be united, says Gordon Brown",
+      "date": "29 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/aug/29/ireland-will-be-united-says-gordon-brown"
+    },
+    {
+      "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Drumcree ruling raises fears of sectarian confrontation in Northern Ireland",
@@ -14,7 +41,7 @@
       "url": "https://www.theguardian.com/uk-news/2026/aug/28/drumcree-dispute-court-ruling-garvaghy-road-marching-season"
     },
     {
-      "id": "2",
+      "id": "5",
       "tag": "Defence",
       "tag_class": "tc-d",
       "headline": "Russia \u2018losing 6,000 more troops in Ukraine each month than it can recruit\u2019",
@@ -23,7 +50,7 @@
       "url": "https://www.theguardian.com/world/2026/aug/28/russia-losing-6000-more-troops-than-it-can-recruit-each-month-in-ukraine-says-west"
     },
     {
-      "id": "3",
+      "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
       "headline": "Burnham says he will not vote on assisted dying unlike Starmer",
@@ -32,7 +59,7 @@
       "url": "https://www.bbc.co.uk/news/articles/c1dlp27gre5o?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "4",
+      "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "The Guardian view on political donations: Labour should curb the power of big money | Editorial",
@@ -41,7 +68,7 @@
       "url": "https://www.theguardian.com/commentisfree/2026/aug/28/the-guardian-view-on-political-donations-labour-should-curb-the-power-of-big-money"
     },
     {
-      "id": "5",
+      "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "FM calls for referendum powers as draft independence bill published",
@@ -50,7 +77,7 @@
       "url": "https://www.bbc.co.uk/news/articles/c4gqz58eql6o?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "6",
+      "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "UK urged to ban imports of Brazilian meat over health concerns",
@@ -59,40 +86,13 @@
       "url": "https://www.theguardian.com/food/2026/aug/28/uk-urged-ban-import-brazil-meat-health-concerns"
     },
     {
-      "id": "7",
+      "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Labour rejects Zack Polanski\u2019s call to \u2018slam brakes\u2019 on building AI datacentres",
       "date": "28 Aug 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/uk-news/2026/aug/28/labour-green-party-zack-polanski-ai-datacentres"
-    },
-    {
-      "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham says he will not vote on assisted dying bill to avoid swaying debate",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/28/andy-burnham-abstention-assisted-dying-bill"
-    },
-    {
-      "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "South of France holiday scuppers Davey's blood donation",
-      "date": "28 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvgy5jkkp4go?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "French far-right leader Jordan Bardella to address Reform UK party conference",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/aug/28/french-far-right-leader-jordan-bardella-address-reform-uk-party-conference"
     }
   ]
 }
