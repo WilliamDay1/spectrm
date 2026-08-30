@@ -1,11 +1,83 @@
 {
   "_meta": {
-    "updated": "2026-08-29T12:47:43Z",
+    "updated": "2026-08-30T12:08:31Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Mayors are the big winners in Burnham\u2019s devolution drive. So what happens to areas without mayors? | John Harris",
+      "date": "30 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/30/andy-burnham-mayors-devolution-regions-england-labour"
+    },
+    {
+      "id": "2",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK asks banks for feelgood stories about keeping out dirty money",
+      "date": "30 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/aug/30/treasury-city-real-life-proof-blocking-dirty-money"
+    },
+    {
+      "id": "3",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "PC Harper's killers to stay in jail as PM announces changes to early release scheme",
+      "date": "30 Aug 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crr4wd81pdpo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "4",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "PC Andrew Harper\u2019s killers will stay in prison as Burnham changes early release scheme",
+      "date": "30 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/30/pc-andrew-harper-killers-excluded-early-release-scheme"
+    },
+    {
+      "id": "5",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Arms and the \u00a35m man: Farage megadonor Christopher Harborne\u2019s military empire",
+      "date": "30 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/aug/30/arms-and-the-5m-man-farage-megadonor-christopher-harbornes-military-empire"
+    },
+    {
+      "id": "6",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "James Cleverly resigns from shadow cabinet to run for mayor of London",
+      "date": "29 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/29/james-cleverly-resigns-conservative-shadow-cabinet-london-mayor"
+    },
+    {
+      "id": "7",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "'Big-hitting' Tory MP quits shadow cabinet to stand for London mayor",
+      "date": "29 Aug 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/conservative-mp-james-cleverly-quits-shadow-cabinet-to-stand-for-london-mayor-13578660"
+    },
+    {
+      "id": "8",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Cells for arrested offenders may run out without early prison release, says Labour",
+      "date": "29 Aug 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/aug/29/cells-for-arrested-offenders-may-run-out-without-early-prison-release-says-labour"
+    },
+    {
+      "id": "9",
       "tag": "Leadership",
       "tag_class": "ldr",
       "headline": "Burnham's summer tour is over - now he has to prove himself in Parliament",
@@ -14,85 +86,13 @@
       "url": "https://www.bbc.co.uk/news/articles/cvgy48r1nr4o?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "2",
+      "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
       "headline": "Tax promises, defence targets and Iran: Andy Burnham\u2019s budget headaches",
       "date": "29 Aug 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/uk-news/2026/aug/29/andy-burnham-john-healey-autumn-budget-2026-challenges"
-    },
-    {
-      "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ireland will be united, says Gordon Brown",
-      "date": "29 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/29/ireland-will-be-united-says-gordon-brown"
-    },
-    {
-      "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Drumcree ruling raises fears of sectarian confrontation in Northern Ireland",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/28/drumcree-dispute-court-ruling-garvaghy-road-marching-season"
-    },
-    {
-      "id": "5",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Russia \u2018losing 6,000 more troops in Ukraine each month than it can recruit\u2019",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/aug/28/russia-losing-6000-more-troops-than-it-can-recruit-each-month-in-ukraine-says-west"
-    },
-    {
-      "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says he will not vote on assisted dying unlike Starmer",
-      "date": "28 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c1dlp27gre5o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The Guardian view on political donations: Labour should curb the power of big money | Editorial",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/28/the-guardian-view-on-political-donations-labour-should-curb-the-power-of-big-money"
-    },
-    {
-      "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "FM calls for referendum powers as draft independence bill published",
-      "date": "28 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c4gqz58eql6o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK urged to ban imports of Brazilian meat over health concerns",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/food/2026/aug/28/uk-urged-ban-import-brazil-meat-health-concerns"
-    },
-    {
-      "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour rejects Zack Polanski\u2019s call to \u2018slam brakes\u2019 on building AI datacentres",
-      "date": "28 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/aug/28/labour-green-party-zack-polanski-ai-datacentres"
     }
   ]
 }
