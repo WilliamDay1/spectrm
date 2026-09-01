@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-08-31T14:18:19Z",
+    "updated": "2026-09-01T11:55:57Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Sir Mel Stride replaced as shadow chancellor as Conservatives reshuffle top team",
-      "date": "31 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Keir Starmer announces he is standing down as MP",
+      "date": "1 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cp8026xlm35o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvgy4258kgyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Badenoch appoints Andrew Griffith shadow chancellor in sweeping reshuffle",
-      "date": "31 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Keir Starmer to stand down as MP, triggering byelection in north London seat \u2013 UK politics live",
+      "date": "1 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/31/kemi-badenoch-reshuffle-shadow-cabinet-patel-cleverly-resignations"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/01/andy-burnham-statement-commons-prison-release-farage-healey-defence-latest-news-updates"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Ministers consider closing social mobility watchdog as part of planned shake-up",
-      "date": "31 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/aug/31/ministers-consider-closing-social-mobility-watchdog-as-part-of-planned-shake-up"
+      "headline": "Laundry rooms to be turned into cells to tackle prison overcrowding",
+      "date": "1 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ce8x543ddzjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Can Reform UK recover from its summer horribilis?",
-      "date": "31 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/aug/31/can-reform-uk-recover-from-its-summer-horribilis"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Burghart becomes Tory deputy leader in major reshuffle",
+      "date": "1 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cp8026xlm35o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Early release scheme could see dangerous criminals released, Conservatives warn",
-      "date": "31 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckgwxx0dg05o?at_medium=RSS&at_campaign=rss"
+      "headline": "Almost half of terrorism arrests in Great Britain since 9/11 have been in past year",
+      "date": "1 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/01/almost-half-of-terrorism-arrests-in-great-britain-since-911-have-been-in-past-year"
     },
     {
       "id": "6",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Defence spending is an insatiable beast. John Healey is right to tame it | John McTernan",
-      "date": "31 Aug 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/31/defence-spending-john-healey-ministry-of-defence-progressive-government"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-labour-farage-badenoch-reform-12593360?postid=12346499#liveblog-body'>Prison-building plans get \u00a3110m investment to avoid 'nightmare' of running out of cells</a>",
+      "date": "1 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/prison-building-plans-get-110m-investment-to-avoid-nightmare-of-running-out-of-cells-13579672"
     },
     {
       "id": "7",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "The London office, the empty boxes and the \u00a31bn tax loophole",
-      "date": "31 Aug 2026",
+      "headline": "\u2018Alarm bells were going off\u2019: parents tell of ordeal at Send school closed down after abuse allegations",
+      "date": "1 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/aug/31/the-london-office-the-empty-boxes-and-the-1bn-tax-loophole"
+      "url": "https://www.theguardian.com/education/2026/sep/01/parents-tell-of-ordeal-at-send-school-closed-down-abuse"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Business groups urge Swinney to scrap 'ineffective' food price cap plan",
-      "date": "31 Aug 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to tell MPs optimism at heart of his vision for UK",
+      "date": "1 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c2l80j2rdlxo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c99dyjk7mpyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Energy",
+      "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "Cross-party talks needed to tackle climate crisis, say Lib Dems",
-      "date": "31 Aug 2026",
+      "headline": "Any ideas, anyone? Healey asks for budget pitches from apprentices and IT staff",
+      "date": "1 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/aug/31/talks-el-nino-climate-crisis-lib-dems-andy-burnham"
+      "url": "https://www.theguardian.com/politics/2026/sep/01/john-healey-invites-october-budget-ideas-from-treasury-staff-of-all-levels"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Cleverly accuses Burnham of 'war on London'",
+      "headline": "More public control is the way to grow UK economy, Burnham to tell MPs",
       "date": "31 Aug 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c93vgvyn1deo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/aug/31/andy-burnham-commons-more-public-ownership-only-way-to-grow-uk-economy"
     }
   ]
 }
