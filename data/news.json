@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-02T11:35:44Z",
+    "updated": "2026-09-03T11:33:57Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham pressed on borrowing costs and spending at first PMQs \u2013 UK politics live",
-      "date": "2 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/02/pmqs-andy-burnham-kemi-badenoch-labour-uk-politics-latest-news"
+      "headline": "Andy Burnham praises UK-EU ties in meeting with Emmanuel Macron",
+      "date": "3 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c62ezg7gkzwo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Fake 10 Downing Street listing 'exposes security failures'\u00a0on Booking.com",
-      "date": "2 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/fake-10-downing-street-listing-exposes-security-failureson-bookingcom-13580279"
+      "headline": "Care workers and others fleeing UK modern slavery win visa reprieve",
+      "date": "3 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/sep/03/care-workers-fleeing-uk-modern-slavery-win-visa-reprieve"
     },
     {
       "id": "3",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Thames Water, I refuse to pay the sewage charge in my bill while you pollute Britain\u2019s rivers and coastlines | Jenny Jones",
-      "date": "2 Sep 2026",
+      "headline": "Sadiq Khan cleared of car tax conviction caused by \u2018scam\u2019",
+      "date": "3 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/02/thames-water-sewage-charge-bill-pollute-britain-river-coastline"
+      "url": "https://www.theguardian.com/politics/2026/sep/03/sadiq-khan-cleared-of-car-tax-conviction-caused-by-scam"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sadiq Khan says he's been scammed after London mayor convicted of failing to tax car",
-      "date": "2 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/sadiq-khan-says-hes-been-scammed-after-london-mayor-convicted-of-failing-to-tax-car-13580285"
+      "headline": "Kemi Badenoch say UK must prepare for war if it wants to ensure peace \u2013 UK politics live",
+      "date": "3 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/03/andy-burnham-emmanuel-macron-zack-polanski-latest-news-updates"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sadiq Khan fined by fast-track court over untaxed car City Hall says is not his",
-      "date": "2 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/02/sadiq-khan-fined-fast-track-court-untaxed-car-city-hall-says-he-doesnt-own"
+      "headline": "Sadiq Khan's car tax conviction withdrawn after mayor targeted by 'scam'",
+      "date": "3 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/sadiq-khans-car-tax-conviction-withdrawn-after-london-mayor-targeted-by-scam-13580766"
     },
     {
       "id": "6",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Free cholesterol tests on the NHS are great \u2013 but here\u2019s the five-point health MOT I\u2019d really like to see | Devi Sridhar",
-      "date": "2 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018I would rather die than return to France\u2019: the brutal reality of the UK\u2019s one in, one out scheme",
+      "date": "3 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/02/nhs-free-cholesterol-tests-health-symptom"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/03/uk-one-in-one-out-scheme-iran-friends-channel-france"
     },
     {
       "id": "7",
-      "tag": "Housing",
-      "tag_class": "tc-c",
-      "headline": "Sky News launches new Sunday morning current affairs programme",
-      "date": "2 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/sky-news-launches-new-sunday-morning-current-affairs-programme-13580246"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Green party leader Zack Polanski seeks to stand in byelection for Keir Starmer seat",
+      "date": "3 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/03/zack-polanski-stand-keir-starmer-seat-green-party-candidate"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Badenoch v Burnham: new battle lines drawn as the leaders face off",
-      "date": "2 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/02/conservative-reshuffle-is-a-response-to-shifting-political-tides"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "MoD withheld information about nuclear test veterans' records, ex-minister claims",
+      "date": "3 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3d787k9kpyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham has already made a mistake that will cost him his premiership: he lost his nerve over political donations | George Monbiot",
-      "date": "2 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/02/andy-burnham-mistake-political-donations-wealthy-britain"
+      "headline": "Zack Polanski says he'll run for former PM Starmer's seat in by-election",
+      "date": "3 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cge41ee40vwo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Chris Mason: Will Burnham find PMQs as 'nail biting' and 'nerve wracking' as Blair did?",
-      "date": "2 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c7507z4enq6o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Can 'ratty' Farage get his mojo back?",
+      "date": "3 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/can-ratty-farage-get-his-mojo-back-13580373"
     }
   ]
 }
