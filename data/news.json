@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-03T11:33:57Z",
+    "updated": "2026-09-04T11:35:54Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham praises UK-EU ties in meeting with Emmanuel Macron",
-      "date": "3 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c62ezg7gkzwo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform suspends two officials over donations sting as Farage admits their comments \u2018don\u2019t look good\u2019 \u2013 UK politics live",
+      "date": "4 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/04/reform-uk-donations-nigel-farage-james-orr-dan-jukes-channel-4-investigation-conference-jordan-bardella-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Care workers and others fleeing UK modern slavery win visa reprieve",
-      "date": "3 Sep 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK suspends two senior officials after undercover report on donations",
+      "date": "4 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/sep/03/care-workers-fleeing-uk-modern-slavery-win-visa-reprieve"
+      "url": "https://www.theguardian.com/politics/2026/sep/04/nigel-farage-aides-step-down-reform-uk-investigation-political-donation-rules-breach"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sadiq Khan cleared of car tax conviction caused by \u2018scam\u2019",
-      "date": "3 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/03/sadiq-khan-cleared-of-car-tax-conviction-caused-by-scam"
+      "headline": "Two Reform officials step down after undercover donations report",
+      "date": "4 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c86xj5z7x61o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Kemi Badenoch say UK must prepare for war if it wants to ensure peace \u2013 UK politics live",
-      "date": "3 Sep 2026",
+      "headline": "Drones, teargas, riot squads: why has the UK gone to war against asylum seekers already fleeing conflict? | Diane Taylor",
+      "date": "4 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/03/andy-burnham-emmanuel-macron-zack-polanski-latest-news-updates"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/04/drones-teargas-riot-squads-uk-war-asylum-seekers-burnham-macron"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sadiq Khan's car tax conviction withdrawn after mayor targeted by 'scam'",
-      "date": "3 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/sadiq-khans-car-tax-conviction-withdrawn-after-london-mayor-targeted-by-scam-13580766"
+      "headline": "Britain\u2019s schools are failing its young people \u2013 and 1m Neets are paying the price | Simon Jenkins",
+      "date": "4 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/04/britain-schools-young-people-neets-exams-training"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018I would rather die than return to France\u2019: the brutal reality of the UK\u2019s one in, one out scheme",
-      "date": "3 Sep 2026",
+      "headline": "Jackdaw gasfield set to be approved by ministers this month, sources say",
+      "date": "4 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/03/uk-one-in-one-out-scheme-iran-friends-channel-france"
+      "url": "https://www.theguardian.com/environment/2026/sep/04/jackdaw-gasfield-set-to-be-approved-by-ministers-this-month-sources-say"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Green party leader Zack Polanski seeks to stand in byelection for Keir Starmer seat",
-      "date": "3 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "British army told to halt non-essential training exercises to save money",
+      "date": "4 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/03/zack-polanski-stand-keir-starmer-seat-green-party-candidate"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/04/british-army-halt-non-essential-training-exercises-save-money"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MoD withheld information about nuclear test veterans' records, ex-minister claims",
-      "date": "3 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3d787k9kpyo?at_medium=RSS&at_campaign=rss"
+      "headline": "UK has not done enough to prepare for shocks to food supplies, says watchdog",
+      "date": "4 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/04/uk-not-done-enough-to-prepare-for-shocks-to-food-supplies-says-watchdog"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Zack Polanski says he'll run for former PM Starmer's seat in by-election",
-      "date": "3 Sep 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Three crucial questions facing Farage at Reform conference",
+      "date": "4 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cge41ee40vwo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvgyp1me0j7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Can 'ratty' Farage get his mojo back?",
-      "date": "3 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/can-ratty-farage-get-his-mojo-back-13580373"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018Capitalism is dying\u2019: in Luton, these former car workers have a moral tale for our times | Aditya Chakrabortty",
+      "date": "4 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/04/capitalism-luton-car-workers-vauxhall-motors-labour-unions-reform"
     }
   ]
 }
