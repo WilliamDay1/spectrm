@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-05T10:51:15Z",
+    "updated": "2026-09-06T11:15:23Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage and Jenrick to speak on final day of Reform conference marred by scandal and protests \u2013 UK politics live",
-      "date": "5 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Black-clad Dover protesters condemned for \u2018dressing up in costumes\u2019 by minister",
+      "date": "6 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/05/nigel-farage-robert-jenrick-reform-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/sep/06/black-clad-dover-protesters-condemned-for-dressing-up-in-costumes-by-minister"
     },
     {
       "id": "2",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Gaza refugee says sister-in-law \u2018would be alive\u2019 if Home Office had let her come to UK",
-      "date": "5 Sep 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Undercover report on donations \u2018looks bad\u2019 for Reform, admits Nigel Farage \u2013 UK politics live",
+      "date": "6 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/05/gaza-refugee-visa-refusal-home-office"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/06/nigel-farage-reform-uk-donations-undercover-investigation-latest-news-updates"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform promises to increase tax-free personal allowance to \u00a315,000",
-      "date": "5 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cgk5g51xk57o?at_medium=RSS&at_campaign=rss"
+      "headline": "Zia Yusuf\u2019s post about Camden council leader is \u2018straightforward racism\u2019, says minister",
+      "date": "6 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/06/zia-yusuf-reform-uk-post-camden-council-leader-sagal-abdi-wali"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Sweden confirms 458 Britons deported or forcibly removed since Brexit",
-      "date": "5 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/05/sweden-britons-deportations-brexit"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-labour-farage-badenoch-reform-macron-12593360?postid=12384981#liveblog-body'>'Boohoo... get a life': Jenrick mocks protester after Reform party conference scuffle</a>",
+      "date": "6 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/boohoo-get-a-life-jenrick-mocks-protester-after-reform-party-conference-scuffle-13582227"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "The pressure on Burnham to appease the right is huge. But now is the time to step out of Reform\u2019s shadow | Andy Beckett",
-      "date": "5 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/05/andy-burnham-reform-uk-labour-rightwing-voters"
+      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-labour-farage-badenoch-reform-macron-12593360?postid=12384972#liveblog-body'>Zia Yusuf defended by Jenrick after 'racism' accusation from cabinet minister</a>",
+      "date": "6 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/zia-yusuf-defended-by-jenrick-after-racism-accusation-from-cabinet-minister-13582218"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Sinn F\u00e9in traitors!\u2019: how far-right rhetoric derailed party\u2019s path to power in Ireland",
-      "date": "5 Sep 2026",
+      "headline": "London mayoral contenders limber up for a race that is Sadiq Khan\u2019s to lose",
+      "date": "6 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/sep/05/sinn-fein-traitors-how-far-right-rhetoric-derailed-party-path-to-power-in-ireland"
+      "url": "https://www.theguardian.com/politics/2026/sep/06/london-mayor-contenders-race-unseat-sadiq-khan"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "The two-year trail of financial controversy dogging Reform and Farage",
-      "date": "5 Sep 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Falklands row shows urgent need to commit to 3% target, says Labour defence committee chair",
+      "date": "6 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/05/allegations-reform-uk-finances-nigel-farage"
+      "url": "https://www.theguardian.com/politics/2026/sep/06/falklands-row-raise-defence-spending-tan-dhesi-labour"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-labour-farage-badenoch-reform-macron-12593360?postid=12376977#liveblog-body'>Argentina is a 'weak country' because of its threats over Falkland Islands, Badenoch says</a>",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage brushes aside Reform controversies in closing conference speech \u2013 UK politics as it happened",
       "date": "5 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/argentina-is-a-weak-country-because-of-its-threats-over-falkland-islands-badenoch-says-13581593"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/05/nigel-farage-robert-jenrick-reform-uk-politics-latest-news-updates"
     },
     {
       "id": "9",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Farage threatens to overhaul Lords and judges to meet his pledges",
-      "date": "4 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/clyeq5jvd2po?at_medium=RSS&at_campaign=rss"
+      "headline": "\u2018I wasn\u2019t even listening,\u2019 Farage says of donations scandal meeting",
+      "date": "5 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/05/i-wasnt-even-listening-farage-says-of-donations-scandal-meeting"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage seeks to shore up damaged leadership as scandal engulfs Reform conference",
-      "date": "4 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Catastrophic dangers await Burnham\u2019s push for English devolution | Phillip Inman",
+      "date": "5 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/04/nigel-farage-seeks-shore-up-damaged-reform-leadership-scandal-engulfs-party-conference"
+      "url": "https://www.theguardian.com/politics/2026/sep/05/catastrophic-dangers-await-burnhams-push-english-devolution"
     }
   ]
 }
