@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-06T11:15:23Z",
+    "updated": "2026-09-07T12:55:45Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Black-clad Dover protesters condemned for \u2018dressing up in costumes\u2019 by minister",
-      "date": "6 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/06/black-clad-dover-protesters-condemned-for-dressing-up-in-costumes-by-minister"
+      "headline": "Plans for major overhaul of local government halted",
+      "date": "7 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx2zkj09dy4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Undercover report on donations \u2018looks bad\u2019 for Reform, admits Nigel Farage \u2013 UK politics live",
-      "date": "6 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Opposition parties accuse Healey of offering \u2018more of the same\u2019 in his first major speech as chancellor \u2013 UK politics live",
+      "date": "7 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/06/nigel-farage-reform-uk-donations-undercover-investigation-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/07/uk-politics-live-john-healey-economy-portsmouth-immigration-protests-latest-news-updates"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Zia Yusuf\u2019s post about Camden council leader is \u2018straightforward racism\u2019, says minister",
-      "date": "6 Sep 2026",
+      "headline": "I had an amazing experience as a disabled person at school in the 70s. Since then, discrimination has got far worse | Mik Scarlet",
+      "date": "7 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/06/zia-yusuf-reform-uk-post-camden-council-leader-sagal-abdi-wali"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/07/disabled-person-school-discrimination-benefits"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-labour-farage-badenoch-reform-macron-12593360?postid=12384981#liveblog-body'>'Boohoo... get a life': Jenrick mocks protester after Reform party conference scuffle</a>",
-      "date": "6 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/boohoo-get-a-life-jenrick-mocks-protester-after-reform-party-conference-scuffle-13582227"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour\u2019s new powers for water customers are a \u2018stitch-up\u2019, say campaigners",
+      "date": "7 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/07/labour-new-powers-water-companies-consumer-stitch-up"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "<a href='https://news.sky.com/story/politics-latest-burnham-labour-farage-badenoch-reform-macron-12593360?postid=12384972#liveblog-body'>Zia Yusuf defended by Jenrick after 'racism' accusation from cabinet minister</a>",
-      "date": "6 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/zia-yusuf-defended-by-jenrick-after-racism-accusation-from-cabinet-minister-13582218"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ministers condemn \u2018thuggish\u2019 far-right activists after Portsmouth unrest",
+      "date": "7 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/sep/07/ministers-condemn-far-right-activists-portsmouth-asylum-seekers"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "London mayoral contenders limber up for a race that is Sadiq Khan\u2019s to lose",
-      "date": "6 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/06/london-mayor-contenders-race-unseat-sadiq-khan"
+      "headline": "Protesters block roads in Portsmouth after 140 migrants arrive in boat",
+      "date": "7 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/clyegwl9vzqo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Falklands row shows urgent need to commit to 3% target, says Labour defence committee chair",
-      "date": "6 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018We can win here\u2019: Zack Polanski presses the flesh in Holborn and St Pancras",
+      "date": "7 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/06/falklands-row-raise-defence-spending-tan-dhesi-labour"
+      "url": "https://www.theguardian.com/politics/2026/sep/07/we-can-win-here-zack-polanski-presses-the-flesh-in-holborn-and-st-pancras"
     },
     {
       "id": "8",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage brushes aside Reform controversies in closing conference speech \u2013 UK politics as it happened",
-      "date": "5 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Hundreds of far-right protesters descend on Portsmouth after small boat arrival",
+      "date": "7 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/05/nigel-farage-robert-jenrick-reform-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/06/far-right-protesters-descend-on-portsmouth-after-small-boat-arrival"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "\u2018I wasn\u2019t even listening,\u2019 Farage says of donations scandal meeting",
-      "date": "5 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/05/i-wasnt-even-listening-farage-says-of-donations-scandal-meeting"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Jaguar Land Rover boss to meet minister as thousands of job cuts expected",
+      "date": "6 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crer948xq00o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Catastrophic dangers await Burnham\u2019s push for English devolution | Phillip Inman",
-      "date": "5 Sep 2026",
+      "headline": "The Guardian view on Burnham\u2019s devolution plans: power must be accompanied by scrutiny | Editorial",
+      "date": "6 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/05/catastrophic-dangers-await-burnhams-push-english-devolution"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/06/the-guardian-view-on-burnhams-devolution-plans-power-must-be-accompanied-by-scrutiny"
     }
   ]
 }
