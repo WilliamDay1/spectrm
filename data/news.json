@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-08T11:38:02Z",
+    "updated": "2026-09-09T11:44:24Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "UK plan to sanction illegal Israeli settlements draws criticism from US, Israel and British MPs \u2013 UK politics live",
-      "date": "8 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "UK \u2018showing leadership\u2019 with West Bank sanctions, says Burnham as he faces Badenoch at PMQs \u2013 politics live",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/08/uk-us-trade-israel-sanctions-labour-ed-miliband-farage-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/09/uk-israel-west-bank-ed-miliband-andy-burnham-uk-politics-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Some veterans to be called up to test UK's war resilience",
-      "date": "8 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crr4qr2wg8do?at_medium=RSS&at_campaign=rss"
+      "headline": "Ministers to put white working-class people in UK at heart of new equalities unit",
+      "date": "9 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/inequality/2026/sep/09/ministers-to-put-white-working-class-people-in-uk-at-heart-of-new-equalities-unit"
     },
     {
       "id": "3",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "UK commits \u00a3100m to bolster Ukraine\u2019s air defences over winter",
-      "date": "8 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018I am seen as a Marmite figure\u2019: Margaret Hodge on political battles, victories, errors \u2013 and regrets",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/08/uk-commits-100m-bolster-ukraine-air-defences-russia-war"
+      "url": "https://www.theguardian.com/politics/2026/sep/09/i-am-seen-as-a-marmite-figure-margaret-hodge-on-political-battles-victories-errors-and-regrets"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "I am sending the assisted dying bill back to the Lords \u2013 and this time, peers must do the right thing | Lauren Edwards",
-      "date": "8 Sep 2026",
+      "headline": "Reform insists National Rally agreed migrant policy after backlash in France",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/08/assisted-dying-bill-house-of-lords-mps-lauren-edwards"
+      "url": "https://www.theguardian.com/world/2026/sep/09/reform-uk-national-rally-migrants-deal-farage-bardella"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Low turnout threatens Commons vote on assisted dying, say MPs",
-      "date": "8 Sep 2026",
+      "headline": "Polanski calls for report on ecosystem collapse to be published in full",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/sep/08/low-turnout-threatens-commons-vote-on-assisted-dying-say-mps"
+      "url": "https://www.theguardian.com/politics/2026/sep/09/zack-polanski-calls-report-ecosystem-collapse-published-greens"
     },
     {
       "id": "6",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "UK to adopt tougher stance on Israel with illegal settlements trade ban",
-      "date": "8 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK datacentres will create just 25% of jobs predicted by tech sector, analysis finds",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/07/ed-miliband-reset-uk-relations-israel-palestine"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/09/uk-datacentres-will-create-just-25-of-jobs-predicted-by-tech-sector-analysis-finds"
     },
     {
       "id": "7",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Inside Burnham's big Israel gamble",
-      "date": "8 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/inside-burnhams-big-israel-gamble-13582770"
+      "headline": "Burnham urged to tackle inequality with policies including wealth tax",
+      "date": "9 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/09/burnham-inequality-policies-wealth-tax-compass-report"
     },
     {
       "id": "8",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The byelection here in Holborn and St Pancras is Labour\u2019s to lose. But lose it might | Polly Toynbee",
-      "date": "8 Sep 2026",
+      "headline": "European democracies are running out of time to turn away from the abyss | Rafael Behr",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/08/byelection-holborn-st-pancras-labour-green-party-defence-rent-north-sea-oil-burnham"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/09/far-right-europe-afd-germany-nigel-farage"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Majority of Tory and Reform voters do not back cuts to disability benefits, survey finds",
-      "date": "8 Sep 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Inside Reform UK \u2013 podcast",
+      "date": "9 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/sep/08/majority-tory-reform-voters-do-not-back-cuts-disability-benefits-survey"
+      "url": "https://www.theguardian.com/news/audio/2026/sep/09/inside-reform-uk-podcast"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Minister condemns disorder at Portsmouth anti-migrant protest after police officers hurt",
-      "date": "7 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Chris Mason: Burnham looks to show he will go further than Starmer with West Bank sanctions",
+      "date": "8 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqxv2335je1o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c3v439n5xlpo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
