@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-09T11:44:24Z",
+    "updated": "2026-09-10T11:41:49Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "UK \u2018showing leadership\u2019 with West Bank sanctions, says Burnham as he faces Badenoch at PMQs \u2013 politics live",
-      "date": "9 Sep 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Hospitality industry fears jobs at risk from plan to give mayors powers to impose \u2018tourist tax\u2019",
+      "date": "10 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/09/uk-israel-west-bank-ed-miliband-andy-burnham-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/10/andy-burnham-hospitality-row-mayors-tourism-tax-levy-regional-mayors-education-ukraine-russia-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Ministers to put white working-class people in UK at heart of new equalities unit",
-      "date": "9 Sep 2026",
+      "headline": "UK ministers explore raising price of water for some users amid shortages",
+      "date": "10 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/inequality/2026/sep/09/ministers-to-put-white-working-class-people-in-uk-at-heart-of-new-equalities-unit"
+      "url": "https://www.theguardian.com/environment/2026/sep/10/water-shortages-uk-supply-raising-price"
     },
     {
       "id": "3",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "\u2018I am seen as a Marmite figure\u2019: Margaret Hodge on political battles, victories, errors \u2013 and regrets",
-      "date": "9 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/09/i-am-seen-as-a-marmite-figure-margaret-hodge-on-political-battles-victories-errors-and-regrets"
+      "headline": "Ex-Tory campaign chief pleads guilty over election bet",
+      "date": "10 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cde0rk4r5jjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform insists National Rally agreed migrant policy after backlash in France",
-      "date": "9 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/sep/09/reform-uk-national-rally-migrants-deal-farage-bardella"
+      "headline": "England's mayors to be given power to introduce tourist tax",
+      "date": "10 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3wjnv3z8nxo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "Polanski calls for report on ecosystem collapse to be published in full",
-      "date": "9 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/09/zack-polanski-calls-report-ecosystem-collapse-published-greens"
+      "headline": "Badenoch denies housing benefit cuts plan would make people homeless",
+      "date": "10 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cj9xznl0yvzo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK datacentres will create just 25% of jobs predicted by tech sector, analysis finds",
-      "date": "9 Sep 2026",
+      "headline": "Tourists in England face nightly levy on hotel and Airbnb stays under new plans",
+      "date": "10 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/09/uk-datacentres-will-create-just-25-of-jobs-predicted-by-tech-sector-analysis-finds"
+      "url": "https://www.theguardian.com/business/2026/sep/10/england-nightly-levy-hotel-airbnb-stays-tourist-tax-plans"
     },
     {
       "id": "7",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham urged to tackle inequality with policies including wealth tax",
-      "date": "9 Sep 2026",
+      "headline": "JP Morgan boss meets Burnham and Healey to warn against bank tax rise",
+      "date": "10 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/09/burnham-inequality-policies-wealth-tax-compass-report"
+      "url": "https://www.theguardian.com/business/2026/sep/09/jp-morgan-boss-jamie-dimon-to-warn-uk-chancellor-against-bank-tax-hike"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "European democracies are running out of time to turn away from the abyss | Rafael Behr",
-      "date": "9 Sep 2026",
+      "headline": "Applicants for UK citizenship charged more than five times the admin cost",
+      "date": "10 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/09/far-right-europe-afd-germany-nigel-farage"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/10/applicants-for-uk-citizenship-charged-more-than-five-times-the-admin-cost"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Inside Reform UK \u2013 podcast",
-      "date": "9 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK disabled people could swap Pip cash for \u2018in kind\u2019 support in benefit overhaul",
+      "date": "10 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/sep/09/inside-reform-uk-podcast"
+      "url": "https://www.theguardian.com/politics/2026/sep/10/disabled-people-personal-independence-payments-pip-support"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Chris Mason: Burnham looks to show he will go further than Starmer with West Bank sanctions",
-      "date": "8 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3v439n5xlpo?at_medium=RSS&at_campaign=rss"
+      "headline": "\u2018Fundamentally unfair\u2019: Burnham must overhaul migration reforms, says TUC general secretary",
+      "date": "10 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/10/fundamentally-unfair-burnham-must-overhaul-migration-reforms-says-tuc-general-secretary"
     }
   ]
 }
