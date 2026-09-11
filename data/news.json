@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-10T11:41:49Z",
+    "updated": "2026-09-11T11:41:52Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Hospitality industry fears jobs at risk from plan to give mayors powers to impose \u2018tourist tax\u2019",
-      "date": "10 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "MPs to vote again on assisted dying as bill returns to parliament \u2013 UK politics live",
+      "date": "11 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/10/andy-burnham-hospitality-row-mayors-tourism-tax-levy-regional-mayors-education-ukraine-russia-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/11/assisted-dying-vote-uk-politics-latest-news-labour-andy-burnham"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK ministers explore raising price of water for some users amid shortages",
-      "date": "10 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/sep/10/water-shortages-uk-supply-raising-price"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Polanski selected as Green Party candidate for Starmer's former seat",
+      "date": "11 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqxvzpg82yvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Ex-Tory campaign chief pleads guilty over election bet",
-      "date": "10 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cde0rk4r5jjo?at_medium=RSS&at_campaign=rss"
+      "headline": "Greens select Zack Polanski to run in Holborn and St Pancras byelection",
+      "date": "11 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/11/zack-polanski-selected-green-party-holborn-st-pancras-byelection"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "England's mayors to be given power to introduce tourist tax",
-      "date": "10 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3wjnv3z8nxo?at_medium=RSS&at_campaign=rss"
+      "headline": "Tech whistleblowers warn AI could wipe out humanity. Doomspeak or not, we must take these claims seriously | Gaby Hinsliff",
+      "date": "11 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/11/risky-ai-research-pause-humanity"
     },
     {
       "id": "5",
-      "tag": "Housing",
-      "tag_class": "tc-c",
-      "headline": "Badenoch denies housing benefit cuts plan would make people homeless",
-      "date": "10 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj9xznl0yvzo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Pressure grows on Burnham to commit to increasing statutory paternity leave",
+      "date": "11 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/money/2026/sep/11/mps-urge-andy-burnham-increase-statutory-paternity-leave-uk"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tourists in England face nightly levy on hotel and Airbnb stays under new plans",
-      "date": "10 Sep 2026",
+      "headline": "New battery-powered trains to \u2018bring faster journeys to the north\u2019",
+      "date": "11 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/10/england-nightly-levy-hotel-airbnb-stays-tourist-tax-plans"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/10/new-battery-powered-trains-will-bring-faster-journeys-to-north"
     },
     {
       "id": "7",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "JP Morgan boss meets Burnham and Healey to warn against bank tax rise",
-      "date": "10 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/09/jp-morgan-boss-jamie-dimon-to-warn-uk-chancellor-against-bank-tax-hike"
+      "headline": "Henry Zeffman: How Burnham got ready to govern with four key moments mapped out",
+      "date": "11 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqxvz2r1qg4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Applicants for UK citizenship charged more than five times the admin cost",
-      "date": "10 Sep 2026",
+      "headline": "MPs urged not to take \u2018extraordinary risk\u2019 of forcing through assisted dying bill as vote looms",
+      "date": "11 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/10/applicants-for-uk-citizenship-charged-more-than-five-times-the-admin-cost"
+      "url": "https://www.theguardian.com/society/2026/sep/10/mps-commons-extraordinary-risk-forcing-through-assisted-dying-bill"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK disabled people could swap Pip cash for \u2018in kind\u2019 support in benefit overhaul",
-      "date": "10 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/10/disabled-people-personal-independence-payments-pip-support"
+      "headline": "Rayner defends pause to local council overhaul",
+      "date": "11 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwyz9jlqrj4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Fundamentally unfair\u2019: Burnham must overhaul migration reforms, says TUC general secretary",
-      "date": "10 Sep 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK beset by internal row over response to Dover and Portsmouth protests",
+      "date": "11 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/10/fundamentally-unfair-burnham-must-overhaul-migration-reforms-says-tuc-general-secretary"
+      "url": "https://www.theguardian.com/politics/2026/sep/11/reform-uk-beset-by-internal-row-over-response-to-dover-and-portsmouth-protests"
     }
   ]
 }
