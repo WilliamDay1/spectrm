@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-11T11:41:52Z",
+    "updated": "2026-09-12T11:08:01Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MPs to vote again on assisted dying as bill returns to parliament \u2013 UK politics live",
-      "date": "11 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/11/assisted-dying-vote-uk-politics-latest-news-labour-andy-burnham"
+      "headline": "Reform receives record \u00a336m donation from crypto billionaire",
+      "date": "12 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3v4zvyde15o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Polanski selected as Green Party candidate for Starmer's former seat",
-      "date": "11 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqxvzpg82yvo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK given record \u00a336m donation by British crypto billionaire",
+      "date": "12 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/11/reform-uk-given-record-36m-donation-by-british-crypto-billionaire"
     },
     {
       "id": "3",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Greens select Zack Polanski to run in Holborn and St Pancras byelection",
-      "date": "11 Sep 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Call it the Miliband doctrine. Let\u2019s hope the new Israeli settlement boycott is just the start | Steve Bloomfield",
+      "date": "12 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/11/zack-polanski-selected-green-party-holborn-st-pancras-byelection"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/12/miliband-doctrine-israeli-settlement-boycott-uk-foreign-policy"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tech whistleblowers warn AI could wipe out humanity. Doomspeak or not, we must take these claims seriously | Gaby Hinsliff",
-      "date": "11 Sep 2026",
+      "headline": "From black-clad agitators to an appeal for \u2018Tommo\u2019s Mum\u2019: an unsettling week with the Patriot Platform",
+      "date": "12 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/11/risky-ai-research-pause-humanity"
+      "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/sep/12/from-black-clad-agitators-to-an-appeal-for-tommos-mum-an-unsettling-week-with-the-patriot-platform"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Pressure grows on Burnham to commit to increasing statutory paternity leave",
-      "date": "11 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/sep/11/mps-urge-andy-burnham-increase-statutory-paternity-leave-uk"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "MPs vote against fresh attempt to legalise assisted dying",
+      "date": "12 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c17j91jenr8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "New battery-powered trains to \u2018bring faster journeys to the north\u2019",
-      "date": "11 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/10/new-battery-powered-trains-will-bring-faster-journeys-to-north"
+      "headline": "Reform given record \u00a336m donation from crypto billionaire",
+      "date": "12 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/reform-uk-given-record-36m-donation-from-crypto-billionaire-ben-delo-13584676"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Henry Zeffman: How Burnham got ready to govern with four key moments mapped out",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Northern Ireland schools must give girls option to wear trousers from next year",
       "date": "11 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqxvz2r1qg4o?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/sep/11/northern-ireland-schools-girls-trousers-uniform"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MPs urged not to take \u2018extraordinary risk\u2019 of forcing through assisted dying bill as vote looms",
+      "headline": "Vets can diagnose bluetongue to cut test delays",
       "date": "11 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/sep/10/mps-commons-extraordinary-risk-forcing-through-assisted-dying-bill"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cn07xvxqpg7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Rayner defends pause to local council overhaul",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "UK lawmakers urge Burnham to back ban on superintelligent AI after chilling warnings",
       "date": "11 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwyz9jlqrj4o?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/technology/2026/sep/11/mps-urge-andy-burnham-block-artificial-superintelligence-asi"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK beset by internal row over response to Dover and Portsmouth protests",
+      "tag": "Devolution",
+      "tag_class": "tc-c",
+      "headline": "MPs vote against legalising assisted dying in England and Wales",
       "date": "11 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/11/reform-uk-beset-by-internal-row-over-response-to-dover-and-portsmouth-protests"
+      "url": "https://www.theguardian.com/society/2026/sep/11/mps-vote-against-legalising-assisted-dying-in-england-and-wales"
     }
   ]
 }
