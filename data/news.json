@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-13T12:12:41Z",
+    "updated": "2026-09-14T13:12:08Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform's \u00a372m donations 'entirely in line with law', Jenrick says",
-      "date": "13 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckgwkeg1vy8o?at_medium=RSS&at_campaign=rss"
+      "headline": "TUC leader calls for ban on crypto donations and says Reform\u2019s \u00a372m shows democracy \u2018in crisis\u2019 - UK politics live",
+      "date": "14 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/14/reform-uk-political-donations-cap-richard-tice-ben-delo-christopher-harborne-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform\u2019s Robert Jenrick \u2018very confident\u2019 \u00a372m donations are \u2018perfectly legal\u2019 \u2013 UK politics live",
-      "date": "13 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/13/reform-uk-nigel-farage-robert-jenrick-christopher-harborne-ben-delo-donations-funding-anthropic-ai-uk-politics-latest-news-updates"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham cancels engagements after death of father",
+      "date": "14 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c68xkddgnd47o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Only slim chance government will meet target of building 1.5m homes, minister says",
-      "date": "13 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham cancels engagements as his father\u2019s death is announced",
+      "date": "14 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/sep/13/slim-chance-government-target-building-homes"
+      "url": "https://www.theguardian.com/politics/2026/sep/14/andy-burnham-father-roy-dies"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "'Slim chance' government will hit 1.5m new homes target, Rayner tells BBC",
-      "date": "13 Sep 2026",
+      "headline": "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station",
+      "date": "14 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cgqdlw0x092o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "George Osborne calls for UK to rejoin EU customs union and boost trade",
-      "date": "13 Sep 2026",
+      "headline": "UK unions split over donations cap as TUC chief says \u2018super-rich\u2019 corrupting politics",
+      "date": "14 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/13/george-osborne-calls-for-uk-to-rejoin-eu-customs-union-and-boost-trade"
+      "url": "https://www.theguardian.com/politics/2026/sep/14/uk-unions-split-over-party-donations-cap-as-tuc-chief-says-super-rich-corrupting-politics"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK\u2019s \u00a372m donations may be caught by new bill, Rayner suggests",
-      "date": "13 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "There\u2019s a surprisingly simple reason for England\u2019s high antidepressant use: lots of people need them | Dean Burnett",
+      "date": "14 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/13/reform-uk-donations-new-bill-retrospective-effect-angela-rayner"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/14/england-record-antidepressant-use-gp-guidelines-overprescribing"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Carer\u2019s allowance scandal victims could wait until 2054 for justice, charities warn",
-      "date": "13 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/sep/13/carers-allowance-scandal-victims-could-wait-until-2054-for-justice-charities-warn"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "What you need to know about the huge donations to Reform UK",
+      "date": "14 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/videos/c6n4kdj3xzz2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The perilous economic conditions facing the UK can be traced back to Trump | Richard Partington",
-      "date": "13 Sep 2026",
+      "headline": "UK MPs and Lords call for new laws to tackle AI threat to human rights",
+      "date": "14 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/13/uk-autumn-budget-healey-trump"
+      "url": "https://www.theguardian.com/technology/2026/sep/14/ai-regulation-anthropic-uk-human-rights-committee-mps-lords"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Warning: our democracy won\u2019t survive the death of reading. Read on if you still can | John Harris",
-      "date": "13 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/13/democracy-survive-death-reading-fascists-uk-ports"
+      "headline": "Westminster's time is coming to an end, Welsh, Scottish, Northern Irish leaders say",
+      "date": "14 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c62enegxyl9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Backlash grows over Trump's 'completely wrong' comments on Irish reunification",
-      "date": "13 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/backlash-grows-over-trumps-completely-wrong-comments-on-irish-reunification-13585285"
+      "headline": "Campaigners told to respect rivals as local election abuse rises",
+      "date": "14 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3re7v5399zo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
