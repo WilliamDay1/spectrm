@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-14T13:12:08Z",
+    "updated": "2026-09-15T11:59:51Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "TUC leader calls for ban on crypto donations and says Reform\u2019s \u00a372m shows democracy \u2018in crisis\u2019 - UK politics live",
-      "date": "14 Sep 2026",
+      "headline": "TUC warns of danger of \u2018out of control political spending\u2019 but stops short of backing caps on donations \u2013  UK politics live",
+      "date": "15 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/14/reform-uk-political-donations-cap-richard-tice-ben-delo-christopher-harborne-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/15/nigel-farage-reform-labour-party-funding-donations-unions-funding-72m-christopher-harborne-ai-louise-haigh-tuc-andy-burnham-uk-politics-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham cancels engagements after death of father",
-      "date": "14 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c68xkddgnd47o?at_medium=RSS&at_campaign=rss"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Jaguar Land Rover in talks to sell Defender to Nato countries",
+      "date": "15 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/15/jaguar-land-rover-sell-defender-nato-jlr"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham cancels engagements as his father\u2019s death is announced",
-      "date": "14 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/14/andy-burnham-father-roy-dies"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Balaclava ban aims to address 'substantial' problems",
+      "date": "15 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq0kldp8k100o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station",
-      "date": "14 Sep 2026",
+      "headline": "Unions urge ministers to soften planned changes to immigration rules",
+      "date": "15 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqp8d0nj04g6o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK unions split over donations cap as TUC chief says \u2018super-rich\u2019 corrupting politics",
-      "date": "14 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/14/uk-unions-split-over-party-donations-cap-as-tuc-chief-says-super-rich-corrupting-politics"
+      "headline": "State pension likely to top \u00a313,000 a year as UK wage growth slows to 3.9%",
+      "date": "15 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c2l8v7l0djqo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "There\u2019s a surprisingly simple reason for England\u2019s high antidepressant use: lots of people need them | Dean Burnett",
-      "date": "14 Sep 2026",
+      "headline": "Union leaders resist political donations cap after Reform given \u00a372m",
+      "date": "15 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/14/england-record-antidepressant-use-gp-guidelines-overprescribing"
+      "url": "https://www.theguardian.com/politics/2026/sep/15/trade-unions-americanisation-politics-political-donations-reform-uk"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "What you need to know about the huge donations to Reform UK",
-      "date": "14 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Political donors could face tougher residency rules",
+      "date": "15 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/c6n4kdj3xzz2o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cw3d7mv5v72ro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK MPs and Lords call for new laws to tackle AI threat to human rights",
-      "date": "14 Sep 2026",
+      "headline": "Louise Haigh: UK must heed warnings from AI experts",
+      "date": "15 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/technology/2026/sep/14/ai-regulation-anthropic-uk-human-rights-committee-mps-lords"
+      "url": "https://www.theguardian.com/technology/2026/sep/15/uk-must-heed-warnings-from-ai-experts-minister-louise-haigh"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Westminster's time is coming to an end, Welsh, Scottish, Northern Irish leaders say",
-      "date": "14 Sep 2026",
+      "headline": "Police commissioner may cancel tour after backlash",
+      "date": "15 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c62enegxyl9o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cjn5dlgevw05o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Campaigners told to respect rivals as local election abuse rises",
-      "date": "14 Sep 2026",
+      "headline": "We must heed warnings of AI tech developers, says UK minister",
+      "date": "15 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3re7v5399zo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/crvgyq7wljzwo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
