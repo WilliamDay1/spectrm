@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-15T11:59:51Z",
+    "updated": "2026-09-16T11:56:55Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "TUC warns of danger of \u2018out of control political spending\u2019 but stops short of backing caps on donations \u2013  UK politics live",
-      "date": "15 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/15/nigel-farage-reform-labour-party-funding-donations-unions-funding-72m-christopher-harborne-ai-louise-haigh-tuc-andy-burnham-uk-politics-latest-news-updates"
+      "headline": "Nandy pledges crackdown on 'doxxing' after RNLI volunteers see personal details online",
+      "date": "16 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c64gjr5l57d2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Jaguar Land Rover in talks to sell Defender to Nato countries",
-      "date": "15 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says budget will be \u2018challenging\u2019 and denies he is just \u2018tax and spend socialist\u2019 \u2013 UK politics live",
+      "date": "16 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/15/jaguar-land-rover-sell-defender-nato-jlr"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/16/lisa-nandy-x-andy-burnham-labour-reform-uk-politics-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Balaclava ban aims to address 'substantial' problems",
-      "date": "15 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham thanks well-wishers following his father's death",
+      "date": "16 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq0kldp8k100o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c8vgy53k49lgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Unions urge ministers to soften planned changes to immigration rules",
-      "date": "15 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqp8d0nj04g6o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham and Trump expected to meet for first time next week as PM steps up presence on world stage",
+      "date": "16 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/16/andy-burnham-donald-trump-un-general-assembly"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "State pension likely to top \u00a313,000 a year as UK wage growth slows to 3.9%",
-      "date": "15 Sep 2026",
+      "headline": "Village votes to leave UK over asylum housing plan",
+      "date": "16 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c2l8v7l0djqo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ckz7zyn1lwypo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Union leaders resist political donations cap after Reform given \u00a372m",
-      "date": "15 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/15/trade-unions-americanisation-politics-political-donations-reform-uk"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Petrol and diesel price rises push UK inflation higher",
+      "date": "16 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cv2dw7lw4rkpo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Political donors could face tougher residency rules",
-      "date": "15 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw3d7mv5v72ro?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "\u2018We need to get it right\u2019: union gusto for Burnham to face make-or-break tests",
+      "date": "16 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/16/we-need-to-get-it-right-union-gusto-for-burnham-to-face-make-or-break-tests"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Louise Haigh: UK must heed warnings from AI experts",
-      "date": "15 Sep 2026",
+      "headline": "Big-money donations poison British politics. We can stop the mega-rich buying access and influence | Gordon Brown",
+      "date": "16 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/technology/2026/sep/15/uk-must-heed-warnings-from-ai-experts-minister-louise-haigh"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/16/big-money-donations-mega-rich-access-influence-democracy-reform-gordon-brown"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Police commissioner may cancel tour after backlash",
-      "date": "15 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjn5dlgevw05o?at_medium=RSS&at_campaign=rss"
+      "headline": "Mayors and other local leaders could be given powers to oversee water firms",
+      "date": "16 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/16/mayors-and-other-local-leaders-could-be-given-powers-to-oversee-water-firms"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "We must heed warnings of AI tech developers, says UK minister",
-      "date": "15 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crvgyq7wljzwo?at_medium=RSS&at_campaign=rss"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Airlines should pay for CO2 removal if Heathrow expands, say climate advisers",
+      "date": "16 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/environment/2026/sep/16/heathrow-airport-should-pay-co2-removal-expand-climate-advisers"
     }
   ]
 }
