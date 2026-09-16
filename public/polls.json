@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T12:31:03Z",
+  "generated": "2026-09-16T12:29:04Z",
   "monthly_history": {
     "labels": [
       "Oct 24",
@@ -91,10 +91,10 @@
   "leader_approval": [
     {
       "name": "Andy Burnham",
-      "approve": 40,
-      "disapprove": 27,
-      "net": 13,
-      "src": "Ipsos \u00b7 4 Sep 26"
+      "approve": 45,
+      "disapprove": 40,
+      "net": 5,
+      "src": "YouGov \u00b7 Jun 2026"
     },
     {
       "name": "Keir Starmer",
@@ -105,10 +105,10 @@
     },
     {
       "name": "Kemi Badenoch",
-      "approve": 35,
-      "disapprove": 41,
-      "net": -6,
-      "src": "Survation \u00b7 Jul 26"
+      "approve": 25,
+      "disapprove": 51,
+      "net": -26,
+      "src": "YouGov \u00b7 Jun 2026"
     },
     {
       "name": "Nigel Farage",
