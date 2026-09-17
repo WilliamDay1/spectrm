@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-16T11:56:55Z",
+    "updated": "2026-09-17T11:58:31Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Nandy pledges crackdown on 'doxxing' after RNLI volunteers see personal details online",
-      "date": "16 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c64gjr5l57d2o?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Tories suggest they would scrap \u20181970s\u2019 tradition of having TUC figures on Bank of England court \u2013 UK politics live",
+      "date": "17 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/17/conservatives-badenoch-griffiths-healey-burnham-tax-rises-budget-economy-bank-of-england-latest-uk-politics-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says budget will be \u2018challenging\u2019 and denies he is just \u2018tax and spend socialist\u2019 \u2013 UK politics live",
-      "date": "16 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/16/lisa-nandy-x-andy-burnham-labour-reform-uk-politics-latest-news-updates"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Interest rates held but Bank signals rise if energy prices stay high",
+      "date": "17 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm4gjrxez1q0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham thanks well-wishers following his father's death",
-      "date": "16 Sep 2026",
+      "tag": "Devolution",
+      "tag_class": "tc-c",
+      "headline": "Helen Jenner likely to take over as Reform Wales leader, sources tell BBC",
+      "date": "17 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8vgy53k49lgo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqgk52xjd08ko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham and Trump expected to meet for first time next week as PM steps up presence on world stage",
-      "date": "16 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/16/andy-burnham-donald-trump-un-general-assembly"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Call for \u00a3375k elected mayor referendum rejected",
+      "date": "17 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c674e3xnk93do?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Village votes to leave UK over asylum housing plan",
-      "date": "16 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Conservatives urge Burnham to rule out tax rises at Budget",
+      "date": "17 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckz7zyn1lwypo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cw7v4je1mnveo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Petrol and diesel price rises push UK inflation higher",
-      "date": "16 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Police boss cancels 'ridiculous' theatre tour",
+      "date": "17 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cv2dw7lw4rkpo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c317jzjvyr5lo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018We need to get it right\u2019: union gusto for Burnham to face make-or-break tests",
-      "date": "16 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Peers call for UK to enact tobacco-style ban on gambling advertising",
+      "date": "17 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/16/we-need-to-get-it-right-union-gusto-for-burnham-to-face-make-or-break-tests"
+      "url": "https://www.theguardian.com/society/2026/sep/17/peers-call-for-uk-to-enact-tobacco-style-ban-gambling-advertising"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Big-money donations poison British politics. We can stop the mega-rich buying access and influence | Gordon Brown",
-      "date": "16 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/16/big-money-donations-mega-rich-access-influence-democracy-reform-gordon-brown"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Plaid warned not to cut help for poorer children if it wants Labour to back budget",
+      "date": "17 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx5yl20qvyn2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mayors and other local leaders could be given powers to oversee water firms",
+      "headline": "\u2018Made in Europe\u2019 law threatens UK plans for reset with EU",
       "date": "16 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/16/mayors-and-other-local-leaders-could-be-given-powers-to-oversee-water-firms"
+      "url": "https://www.theguardian.com/world/2026/sep/16/made-in-europe-laws-could-derail-uk-eu-reset-plans"
     },
     {
       "id": "10",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Airlines should pay for CO2 removal if Heathrow expands, say climate advisers",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Nato leader warns of \u2018most dangerous and complex security environment in a generation\u2019",
       "date": "16 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/sep/16/heathrow-airport-should-pay-co2-removal-expand-climate-advisers"
+      "url": "https://www.theguardian.com/world/2026/sep/16/nato-leader-warns-of-most-dangerous-and-complex-security-environment-in-a-generation"
     }
   ]
 }
