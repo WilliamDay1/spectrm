@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-18T11:39:30Z",
+    "updated": "2026-09-19T11:22:02Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ex-Labour deputy leader Tom Watson joins Palantir",
-      "date": "18 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj62ed1d2p3eo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Michael Marra elected Scottish Labour leader \u2013 and faces uphill battle to reverse party\u2019s fortunes",
+      "date": "19 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/19/michael-marra-elected-as-scottish-labour-leader"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Digested week: BuzzBallz signed by Tory leader builds excitement for conference",
-      "date": "18 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/18/digested-week-buzzballz-signed-badenoch-tory-conference"
+      "headline": "Michael Marra named new leader of Scottish Labour",
+      "date": "19 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/michael-marra-named-new-leader-of-scottish-labour-13589558"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "We have a duty to 'progress' Good Friday Agreement, taoiseach tells PM",
-      "date": "18 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cked7zjq57n5o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK activists squabble over Farage\u2019s plan for \u00a372m donations",
+      "date": "19 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/19/reform-uk-activists-farage-spending-plan-party-donations"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham hosts Ireland\u2019s taoiseach as he bids for UK exemptions from EU\u2019s \u2018Made in Europe\u2019 plan \u2013 UK politics live",
-      "date": "18 Sep 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Lib Dems have \u2018moral responsibility\u2019 to block Reform, says Ed Davey as party gears up for snap election",
+      "date": "19 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/18/andy-burnham-ireland-john-healey-eu-made-in-europe-plan-uk-politics-latest-updates-news"
+      "url": "https://www.theguardian.com/politics/2026/sep/19/lib-dems-have-moral-responsibility-to-block-reform-says-ed-davey-as-party-gears-up-for-snap-election"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "Badenoch says she is instructing lawyers to challenge government after Tory-run council's 94% tax hike",
-      "date": "18 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw4gq87ed6n3o?at_medium=RSS&at_campaign=rss"
+      "headline": "\u2018Cost of housing\u2019 crunch looms for low-income families, warns Resolution Foundation",
+      "date": "19 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/19/cost-of-housing-crunch-looms-for-low-income-families-warns-resolution-foundation"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK Youth Parliament looks set to be axed",
-      "date": "18 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c689jke4w310o?at_medium=RSS&at_campaign=rss"
+      "headline": "Sir Ed Davey says Jackdaw gas field 'makes sense' as decision looms for government",
+      "date": "19 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/sir-ed-davey-says-jackdaw-gas-field-makes-sense-as-decision-looms-for-government-13589540"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018A man threatened to shoot me\u2019: the abuse pushing UK councillors out of politics",
-      "date": "18 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/18/abuse-harassment-pushing-uk-councillors-out-of-politics"
+      "headline": "Are the Lib Dems still delivering or should they change course?",
+      "date": "19 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/the-liberal-democrats-holding-firm-or-missing-out-13589307"
     },
     {
       "id": "8",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Slowly then all at once: this emboldened Celtic alliance could spell the end of the UK | Simon Jenkins",
+      "headline": "Polanski request to postpone Greens\u2019 conference to focus on byelection refused by party",
       "date": "18 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/18/westminster-celtic-alliance-scotland-wales-ireland-uk"
+      "url": "https://www.theguardian.com/politics/2026/sep/18/zack-polanski-request-postpone-greens-conference-byelection-refused"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Healey to ask EU finance ministers to let UK into Made in Europe scheme",
+      "headline": "Reform donor Ben Delo loaned \u00a3350k to academic later found to have engaged in online bullying",
       "date": "18 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr6240ej07ejo?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/18/reform-donor-ben-delo-loaned-350k-academic-online-bullying"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018Outright racist\u2019 Daniel Thomas will face full force of law over any crimes, says home secretary",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham urged by opposition parties to follow Macron and act with more urgency on Russian threat \u2013 as it happened",
       "date": "18 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/18/daniel-thomas-shabana-mahmood-far-right-extremism-asylum-sites"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/18/andy-burnham-ireland-john-healey-eu-made-in-europe-plan-uk-politics-latest-updates-news"
     }
   ]
 }
