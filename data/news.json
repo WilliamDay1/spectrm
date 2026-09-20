@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-19T11:22:02Z",
+    "updated": "2026-09-20T11:43:37Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Michael Marra elected Scottish Labour leader \u2013 and faces uphill battle to reverse party\u2019s fortunes",
-      "date": "19 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/19/michael-marra-elected-as-scottish-labour-leader"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Lib Dems vow to end 'computer says no' economy to boost growth",
+      "date": "20 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqrk31k7pprlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Michael Marra named new leader of Scottish Labour",
-      "date": "19 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/michael-marra-named-new-leader-of-scottish-labour-13589558"
+      "headline": "MP calls for Yorkshire to get its own parliament",
+      "date": "20 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqe9emvx0eydo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK activists squabble over Farage\u2019s plan for \u00a372m donations",
-      "date": "19 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/19/reform-uk-activists-farage-spending-plan-party-donations"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ed Davey calls for immediate 10p cut to fuel duty",
+      "date": "20 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cr89j514dly2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Lib Dems have \u2018moral responsibility\u2019 to block Reform, says Ed Davey as party gears up for snap election",
-      "date": "19 Sep 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK minister warns of impact of Trump\u2019s Iran war on next month\u2019s budget",
+      "date": "20 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/19/lib-dems-have-moral-responsibility-to-block-reform-says-ed-davey-as-party-gears-up-for-snap-election"
+      "url": "https://www.theguardian.com/politics/2026/sep/20/uk-budget-made-harder-donald-trump-war-iran-bridget-phillipson-andy-burnham"
     },
     {
       "id": "5",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Cost of housing\u2019 crunch looms for low-income families, warns Resolution Foundation",
-      "date": "19 Sep 2026",
+      "headline": "Victims say Home Office attempt to curtail spycops inquiry will result in a \u2018cover-up\u2019",
+      "date": "20 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/19/cost-of-housing-crunch-looms-for-low-income-families-warns-resolution-foundation"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/20/victims-say-home-office-attempt-to-curtail-spycops-inquiry-will-result-in-a-cover-up"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Sir Ed Davey says Jackdaw gas field 'makes sense' as decision looms for government",
-      "date": "19 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/sir-ed-davey-says-jackdaw-gas-field-makes-sense-as-decision-looms-for-government-13589540"
+      "headline": "Don\u2019t discount Reform because it's had a bad year. In our angry, fragile democracy, anything can happen | John Harris",
+      "date": "20 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/20/discount-reform-bad-year-angry-fragile-democracy-nigel-farage-labour"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Are the Lib Dems still delivering or should they change course?",
-      "date": "19 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/the-liberal-democrats-holding-firm-or-missing-out-13589307"
+      "headline": "An arrest, a defection and a new leader - how Reform's 'challenging' week unfolded",
+      "date": "20 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwlyk2x3rg24o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polanski request to postpone Greens\u2019 conference to focus on byelection refused by party",
-      "date": "18 Sep 2026",
+      "headline": "Chiltern Railways enters public ownership in Labour nationalisation push",
+      "date": "20 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/18/zack-polanski-request-postpone-greens-conference-byelection-refused"
+      "url": "https://www.theguardian.com/business/2026/sep/20/chiltern-railways-enters-public-ownership-labour-nationalisation"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform donor Ben Delo loaned \u00a3350k to academic later found to have engaged in online bullying",
-      "date": "18 Sep 2026",
+      "headline": "\u2018Flip the table and rise up\u2019: Lib Dems\u2019 president in combative mood as party gathers in Brighton",
+      "date": "20 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/18/reform-donor-ben-delo-loaned-350k-academic-online-bullying"
+      "url": "https://www.theguardian.com/politics/2026/sep/20/lib-dem-president-josh-barbarinde-combative-mood-party-conference"
     },
     {
       "id": "10",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham urged by opposition parties to follow Macron and act with more urgency on Russian threat \u2013 as it happened",
-      "date": "18 Sep 2026",
+      "headline": "Kemi Badenoch accuses Andy Burnham of \u2018fiddling while Europe risks burning\u2019",
+      "date": "19 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/18/andy-burnham-ireland-john-healey-eu-made-in-europe-plan-uk-politics-latest-updates-news"
+      "url": "https://www.theguardian.com/politics/2026/sep/20/kemi-badenoch-accuses-andy-burnham-fiddling-europe-risks-burning"
     }
   ]
 }
