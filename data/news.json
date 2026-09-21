@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-20T11:43:37Z",
+    "updated": "2026-09-21T13:11:40Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Lib Dems vow to end 'computer says no' economy to boost growth",
-      "date": "20 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqrk31k7pprlo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage names new leader for Reform UK in Wales after predecessor arrested \u2013 UK politics live",
+      "date": "21 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/21/ed-davey-liberal-democrats-party-conference-brighton-labour-conservatives-andy-burnham-kemi-badenoch-nigel-farage-reform-uk-politics-latest-news"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MP calls for Yorkshire to get its own parliament",
-      "date": "20 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqe9emvx0eydo?at_medium=RSS&at_campaign=rss"
+      "headline": "\u2018I have to keep reliving it\u2019: infected blood claimants being asked to prove eligibility",
+      "date": "21 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/sep/21/infected-blood-victims-and-relatives-struggle-to-claim-compensation"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ed Davey calls for immediate 10p cut to fuel duty",
-      "date": "20 Sep 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Helen Jenner unveiled by Nigel Farage as new leader of Reform in Wales",
+      "date": "21 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr89j514dly2o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cjly4p95y3zko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tories pledge to bring back tax-free shopping for tourists",
+      "date": "21 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmd68px5qqddo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "5",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Lib Dems call for one-to-one midwife care during childbirth",
+      "date": "21 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cw4gr8pde059o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "6",
+      "tag": "Devolution",
+      "tag_class": "tc-c",
+      "headline": "Specialist courts for rape cases to be rolled out in England and Wales",
+      "date": "21 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c5lympv9nw3jo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "7",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "What do you think of the MPs\u2019 inquiry into UK Eurovision song contest failure? I give it nul points | Laura Snapes",
+      "date": "21 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/21/eurovision-mps-inquiry-song-contest-failure-uk"
+    },
+    {
+      "id": "8",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK should 'team up' with Canada in new Europe alliance, Canadian minister tells BBC",
+      "date": "21 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmed7p06epxjo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "9",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Lib Dems propose big tech levy to fund \u00a3250m online crime agency",
+      "date": "20 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/20/lib-dems-use-conference-to-set-out-2bn-plan-to-cut-fuel-duty"
+    },
+    {
+      "id": "10",
       "tag": "Economy",
       "tag_class": "tc-e",
       "headline": "UK minister warns of impact of Trump\u2019s Iran war on next month\u2019s budget",
       "date": "20 Sep 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/politics/2026/sep/20/uk-budget-made-harder-donald-trump-war-iran-bridget-phillipson-andy-burnham"
-    },
-    {
-      "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Victims say Home Office attempt to curtail spycops inquiry will result in a \u2018cover-up\u2019",
-      "date": "20 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/20/victims-say-home-office-attempt-to-curtail-spycops-inquiry-will-result-in-a-cover-up"
-    },
-    {
-      "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Don\u2019t discount Reform because it's had a bad year. In our angry, fragile democracy, anything can happen | John Harris",
-      "date": "20 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/20/discount-reform-bad-year-angry-fragile-democracy-nigel-farage-labour"
-    },
-    {
-      "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "An arrest, a defection and a new leader - how Reform's 'challenging' week unfolded",
-      "date": "20 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwlyk2x3rg24o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Chiltern Railways enters public ownership in Labour nationalisation push",
-      "date": "20 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/20/chiltern-railways-enters-public-ownership-labour-nationalisation"
-    },
-    {
-      "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018Flip the table and rise up\u2019: Lib Dems\u2019 president in combative mood as party gathers in Brighton",
-      "date": "20 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/20/lib-dem-president-josh-barbarinde-combative-mood-party-conference"
-    },
-    {
-      "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Kemi Badenoch accuses Andy Burnham of \u2018fiddling while Europe risks burning\u2019",
-      "date": "19 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/20/kemi-badenoch-accuses-andy-burnham-fiddling-europe-risks-burning"
     }
   ]
 }
