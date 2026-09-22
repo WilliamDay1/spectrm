@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-21T13:11:40Z",
+    "updated": "2026-09-22T11:57:39Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage names new leader for Reform UK in Wales after predecessor arrested \u2013 UK politics live",
-      "date": "21 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham plays down past critical comments about Trump ahead of UN meeting \u2013 UK politics live",
+      "date": "22 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/21/ed-davey-liberal-democrats-party-conference-brighton-labour-conservatives-andy-burnham-kemi-badenoch-nigel-farage-reform-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/22/andy-burnham-donald-trump-un-general-assembly-uk-politics-latest-news"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018I have to keep reliving it\u2019: infected blood claimants being asked to prove eligibility",
-      "date": "21 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/21/infected-blood-victims-and-relatives-struggle-to-claim-compensation"
+      "headline": "PM to warn EU chief of 'damage' posed by Made in Europe scheme",
+      "date": "22 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cv2dwylkl7weo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Helen Jenner unveiled by Nigel Farage as new leader of Reform in Wales",
-      "date": "21 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK to help refuel Saudi jets countering Houthi attacks",
+      "date": "22 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjly4p95y3zko?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqlykpe4dk0yo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Tories pledge to bring back tax-free shopping for tourists",
-      "date": "21 Sep 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Unexpected UK borrowing surge adds to pre-Budget pressure on chancellor",
+      "date": "22 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmd68px5qqddo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c68049m18435o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Lib Dems call for one-to-one midwife care during childbirth",
-      "date": "21 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw4gr8pde059o?at_medium=RSS&at_campaign=rss"
+      "headline": "Caution versus ambition: strategy debate dominates Lib Dem conference",
+      "date": "22 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/22/caution-versus-ambition-strategy-debate-dominates-lib-dem-conference"
     },
     {
       "id": "6",
-      "tag": "Devolution",
-      "tag_class": "tc-c",
-      "headline": "Specialist courts for rape cases to be rolled out in England and Wales",
-      "date": "21 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5lympv9nw3jo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham does not rule out Brexit reversal being in next Labour manifesto",
+      "date": "22 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/22/andy-burnham-fails-rule-out-brexit-reversal-next-labour-manifesto"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "What do you think of the MPs\u2019 inquiry into UK Eurovision song contest failure? I give it nul points | Laura Snapes",
-      "date": "21 Sep 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK borrows \u00a318bn in August, putting pressure on Healey before budget",
+      "date": "22 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/21/eurovision-mps-inquiry-song-contest-failure-uk"
+      "url": "https://www.theguardian.com/business/2026/sep/22/uk-government-borrowing-john-healey-budget-bond-markets"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK should 'team up' with Canada in new Europe alliance, Canadian minister tells BBC",
-      "date": "21 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmed7p06epxjo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "There is a racism and cohesion crisis in Britain, and someone needs to lead us out of it. His name is Andy Burnham | Polly Toynbee",
+      "date": "22 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/22/racism-cohesion-crisis-britain-andy-burnham-extremists"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Lib Dems propose big tech levy to fund \u00a3250m online crime agency",
-      "date": "20 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/20/lib-dems-use-conference-to-set-out-2bn-plan-to-cut-fuel-duty"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham expects to find 'common ground' with Trump in first meeting",
+      "date": "22 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK minister warns of impact of Trump\u2019s Iran war on next month\u2019s budget",
-      "date": "20 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Britain needs cash and everyone knows we should break the pensions triple lock. Where is the courage? | Gaby Hinsliff",
+      "date": "22 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/20/uk-budget-made-harder-donald-trump-war-iran-bridget-phillipson-andy-burnham"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/22/britain-pensions-triple-lock-andy-burnham"
     }
   ]
 }
