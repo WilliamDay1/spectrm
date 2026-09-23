@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-22T11:57:39Z",
+    "updated": "2026-09-23T11:59:06Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham plays down past critical comments about Trump ahead of UN meeting \u2013 UK politics live",
-      "date": "22 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Streeting confirms annual \u00a3120m payments to Mauritius on hold while Chagos Islands deal is reviewed \u2013 UK politics live",
+      "date": "23 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/22/andy-burnham-donald-trump-un-general-assembly-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/23/andy-burnham-labour-anti-disinformation-uk-politics-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "PM to warn EU chief of 'damage' posed by Made in Europe scheme",
-      "date": "22 Sep 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK warned over ballooning debt costs and slower growth ahead of Budget",
+      "date": "23 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cv2dwylkl7weo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c607ly09y7rlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK to help refuel Saudi jets countering Houthi attacks",
-      "date": "22 Sep 2026",
+      "headline": "UK to review Chagos Islands deal over lack of US support, Streeting tells BBC",
+      "date": "23 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqlykpe4dk0yo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ck3wjy3pdwdno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Unexpected UK borrowing surge adds to pre-Budget pressure on chancellor",
-      "date": "22 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Farmers' fury as race for \u00a3233m funding compared to 'scramble for Oasis tickets'",
+      "date": "23 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c68049m18435o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c3pwlejxrd7do?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Caution versus ambition: strategy debate dominates Lib Dem conference",
-      "date": "22 Sep 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "UK to launch military squadron to protect satellites in space",
+      "date": "23 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/22/caution-versus-ambition-strategy-debate-dominates-lib-dem-conference"
+      "url": "https://www.theguardian.com/politics/2026/sep/23/uk-raf-military-squadron-protect-satellites-in-space"
     },
     {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham does not rule out Brexit reversal being in next Labour manifesto",
-      "date": "22 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/22/andy-burnham-fails-rule-out-brexit-reversal-next-labour-manifesto"
+      "headline": "UK to fight Russian disinformation and push new global AI standards, Burnham says",
+      "date": "23 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6rerlq99w30o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK borrows \u00a318bn in August, putting pressure on Healey before budget",
-      "date": "22 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/22/uk-government-borrowing-john-healey-budget-bond-markets"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Has Burnham changed tack on Russia?",
+      "date": "23 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/has-burnham-changed-tack-on-russia-13590666"
     },
     {
       "id": "8",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "There is a racism and cohesion crisis in Britain, and someone needs to lead us out of it. His name is Andy Burnham | Polly Toynbee",
-      "date": "22 Sep 2026",
+      "headline": "Burnham navigates diplomatic rapids in first Trump meeting, but turbulent waters lie ahead",
+      "date": "23 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/22/racism-cohesion-crisis-britain-andy-burnham-extremists"
+      "url": "https://www.theguardian.com/politics/2026/sep/23/andy-burnham-first-donald-trump-meeting-united-nations-un-general-assembly"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham expects to find 'common ground' with Trump in first meeting",
-      "date": "22 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Critics of UK government\u2019s economic forecaster are \u2018shooting the messenger\u2019, say MPs",
+      "date": "23 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/23/obr-treasury-committee-shooting-messenger-mps-economic-forecaster-uk"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Britain needs cash and everyone knows we should break the pensions triple lock. Where is the courage? | Gaby Hinsliff",
-      "date": "22 Sep 2026",
+      "headline": "It\u2019s easy to ignore the Lib Dems, but they could soon hold the balance of power | Rafael Behr",
+      "date": "23 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/22/britain-pensions-triple-lock-andy-burnham"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/23/ignore-lib-dems-hold-balance-of-power"
     }
   ]
 }
