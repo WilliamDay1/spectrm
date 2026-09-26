@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-25T12:05:27Z",
+    "updated": "2026-09-26T11:41:37Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Polanski heckled at Jewish community hustings after saying that Zionism is a form of racism \u2013 UK politics live",
-      "date": "25 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Green shoots? Burnham cultivates rural links in attempt to \u2018build back trust\u2019 with farmers",
+      "date": "26 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/25/zack-polanski-zionism-hustings-byelection-green-party-ed-miliband-iran-unga-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/sep/26/andy-burnham-farmers-build-back-trust"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Marina Hyde on Trump, tech bros and Taylor Swift - podcast",
-      "date": "25 Sep 2026",
+      "headline": "Work intensifying on UK laws to stamp out concert ticket touts, say sources",
+      "date": "26 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/sep/25/marina-hyde-trump-tech-bros-taylor-swift-time-alive-podcast"
+      "url": "https://www.theguardian.com/business/2026/sep/26/work-intensifying-uk-laws-stamp-out-concert-ticket-touts"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Has Burnham proved he can handle Trump? - The Latest",
-      "date": "25 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/sep/23/has-burnham-proved-he-can-handle-trump-the-latest"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Rayner criticises visa rule proposals ahead of Labour conference",
+      "date": "26 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2zz035q99o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Plans are under way to finally help Britain\u2019s unemployed young people \u2013 will Labour pull it off? | Polly Toynbee",
-      "date": "25 Sep 2026",
+      "headline": "Severely disabled young people should get fast-track access to benefits, Milburn says",
+      "date": "26 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/25/britain-unemployed-young-people-labour-plans-alan-milburn"
+      "url": "https://www.theguardian.com/society/2026/sep/26/severely-disabled-young-people-fast-track-benefits-milburn"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Sagal Abdi-Wali: Labour\u2019s candidate in Starmer\u2019s former seat zeroes in on local issues amid Green challenge",
-      "date": "25 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/25/sagal-abdi-wali-labour-byelection-starmer-local-issues-green-challenge"
+      "headline": "Burnham not doing enough to boost growth, says former business secretary",
+      "date": "26 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c9zrzzmez7j5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham talks about \u2018public control\u2019 of the utilities but it\u2019s a minefield. We can lead him through it | Will Hutton and Andy Haldane",
-      "date": "25 Sep 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Labour must reunite progressive voters to win the next election, says Lucy Powell",
+      "date": "26 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/ng-interactive/2026/sep/25/andy-burnham-utilities-public-ownership-nationalisation-thames-water"
+      "url": "https://www.theguardian.com/politics/2026/sep/26/labour-must-reunite-progressive-voters-to-win-the-next-election-says-lucy-powell"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018Devastating\u2019: council rejects Frome residents\u2019 bid for regeneration project",
-      "date": "25 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "The tricky tests awaiting Andy Burnham after Labour conference",
+      "date": "26 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/sep/25/council-rejects-frome-residents-bid-regeneration-project-mayday-saxonvale"
+      "url": "https://www.theguardian.com/politics/2026/sep/26/andy-burnham-tricky-labour-conference-budget-eu-oil"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Harman: Burnham must address immigration in Liverpool speech",
-      "date": "25 Sep 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/electoral-dysfunction-andy-burnham-must-address-immigration-in-labour-conference-speech-says-harriet-harman-13591495"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Of course you can be English if you\u2019re not white. So why can\u2019t the right leave the question alone? | Jason Okundaye",
+      "date": "26 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/26/sunak-definition-britishness-englishness-ethnonationalism"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Can Andy Burnham make Britain believe again?",
-      "date": "25 Sep 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Labour members urge government to cancel Palantir's NHS contract",
+      "date": "26 Sep 2026",
       "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/can-andy-burnham-make-britain-believe-again-13591555"
+      "url": "https://news.sky.com/story/labour-members-call-on-government-to-cancel-palantirs-nhs-contract-13591968"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Miliband tells Iran minister UK will not tolerate 'hostile activity' on British soil",
+      "headline": "Glasgow City Council pauses plan to fire and rehire 23,000 staff",
       "date": "25 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwp8476m06pyo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6kg090rx2kdo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
