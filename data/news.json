@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-27T12:20:23Z",
+    "updated": "2026-09-28T14:20:41Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "UK politics live: Burnham says he wants to fight next election on plan for new taxes to pay for free social care in England",
-      "date": "27 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Healey tells party conference that money New Labour had in 1990s \u2018is simply not there now\u2019 \u2013 UK politics live",
+      "date": "28 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/27/uk-politics-live-labour-party-conference-andy-burnham-angela-rayner-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/28/labour-party-conference-healey-economy-streeting-miliband-andy-burnham-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018We\u2019ve done everything by the book\u2019: EU citizens left in limbo after UK government strips post-Brexit residency status",
-      "date": "27 Sep 2026",
+      "headline": "Healey offers upbeat vision but sheds little light on how it will be paid for",
+      "date": "28 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/27/eu-citizens-home-office-strips-post-brexit-residency-status"
+      "url": "https://www.theguardian.com/politics/2026/sep/28/john-healey-chancellor-upbeat-vision-reindustrialise-britain"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour is nostalgic for two-party politics. That cosy, simple time is over \u2013 let it go | John Harris",
-      "date": "27 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/27/labour-party-two-party-politics-reform-andy-burnham"
+      "headline": "Best thing we can offer young people is a job, not benefits, says chancellor",
+      "date": "28 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3x2zw18ge59o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Houses can be built on floodplains despite failing safety test, says high court",
-      "date": "27 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/27/high-court-floodplains-development-safety-test-north-somerset-yatton"
+      "headline": "Mahmood to reopen scheme to resettle refugees in the UK",
+      "date": "28 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c5vgyj8k3dzgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham proposes NHS-style social care system for England",
-      "date": "27 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Avanti West Coast services to be nationalised from March",
+      "date": "28 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crwyzd3gv519o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c60qxk7d2539o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Tony Blair would like Andy Burnham to take his advice on rejoining the EU. Should he? | Tom Baldwin",
-      "date": "27 Sep 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Healey vows to stick to fiscal rules in budget built on hope",
+      "date": "28 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/27/tony-blair-andy-burnham-advice-rejoining-eu-labour"
+      "url": "https://www.theguardian.com/politics/2026/sep/28/john-healey-fiscal-rules-budget-hope"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham\u2019s plan for a radical reset collides with economic reality | Heather Stewart",
-      "date": "27 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/27/burnham-plan-radical-reset-economic-reality"
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "New NHS-style social care system could take decades, Dilnot says",
+      "date": "28 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c83v4qe70r0ko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Rip the plaster off\u2019: Andy Burnham sets out vision for universal free social care",
-      "date": "27 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tensions rise as Orange Order members vow to continue with march blocked by police",
+      "date": "28 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/27/andy-burnham-sets-out-vision-for-universal-free-social-care"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/27/tense-standoff-loyalist-march-portadown-protesters-block-route"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "I have seen with pride how British overseas aid saves children\u2019s lives. That is why I say cuts should be reversed | David Harewood",
-      "date": "27 Sep 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Israel does not have right to close UK consulate in Jerusalem, Foreign Office advised",
+      "date": "28 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/27/pride-british-overseas-aid-saves-childrens-lives-cuts-reversed-david-harewood"
+      "url": "https://www.theguardian.com/politics/2026/sep/28/israel-no-right-close-jerusalem-uk-consulate-foreign-office-advised"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham announces scheme to help first-time buyers onto housing ladder",
-      "date": "27 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cv8e33gdw17no?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Avanti West Coast to be renationalised in March",
+      "date": "28 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/28/avanti-west-coast-to-be-renationalised-in-march"
     }
   ]
 }
