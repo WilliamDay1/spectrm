@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-28T14:20:41Z",
+    "updated": "2026-09-29T13:13:24Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Healey tells party conference that money New Labour had in 1990s \u2018is simply not there now\u2019 \u2013 UK politics live",
-      "date": "28 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/28/labour-party-conference-healey-economy-streeting-miliband-andy-burnham-latest-news-updates"
+      "headline": "Rayner announces crackdown on 'cowboy' leasehold property agents",
+      "date": "29 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjr4vgnq71kpo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Healey offers upbeat vision but sheds little light on how it will be paid for",
-      "date": "28 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Thinktank says pension triple lock \u2018fiscally unsustainable\u2019 ahead of Burnham\u2019s speech to conference \u2013 UK politics live",
+      "date": "29 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/28/john-healey-chancellor-upbeat-vision-reindustrialise-britain"
+      "url": "https://www.theguardian.com/politics/live/2026/sep/29/andy-burnham-labour-conference-liverpool-speech-triple-lock-pension-angela-rayner-lucy-powell-bridget-phillipson-uk-politics-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Best thing we can offer young people is a job, not benefits, says chancellor",
-      "date": "28 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to unveil public body to invest in electricity grid",
+      "date": "29 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3x2zw18ge59o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqn4k9nypxjro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Mahmood to reopen scheme to resettle refugees in the UK",
-      "date": "28 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5vgyj8k3dzgo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "\u2018Visible and engaged\u2019: Burnham in listening mode with businesses at Labour party conference",
+      "date": "29 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/sep/29/andy-burnham-business-labour-party-conference-budget-tax-rises"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Avanti West Coast services to be nationalised from March",
-      "date": "28 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c60qxk7d2539o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "To the people voting for Nigel Farage: is this really the finger you want on the red button? | Marina Hyde",
+      "date": "29 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/29/nigel-farage-reform-raf-fairford-red-button"
     },
     {
       "id": "6",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Healey vows to stick to fiscal rules in budget built on hope",
-      "date": "28 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/28/john-healey-fiscal-rules-budget-hope"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Chris Mason: Burnham opens debate on huge issue of social care reform",
+      "date": "29 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckp840qp85l2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "New NHS-style social care system could take decades, Dilnot says",
-      "date": "28 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c83v4qe70r0ko?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham expected to say he will push ahead with electoral reform plans",
+      "date": "29 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/29/andy-burnham-push-ahead-electoral-reform-plans"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tensions rise as Orange Order members vow to continue with march blocked by police",
-      "date": "28 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/27/tense-standoff-loyalist-march-portadown-protesters-block-route"
+      "headline": "Scrapping pensions triple lock 'morally wrong', says union boss",
+      "date": "29 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cklyje46xnpgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Israel does not have right to close UK consulate in Jerusalem, Foreign Office advised",
-      "date": "28 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to signal willingness to look at scrapping pension triple lock to fund social care",
+      "date": "29 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/28/israel-no-right-close-jerusalem-uk-consulate-foreign-office-advised"
+      "url": "https://www.theguardian.com/politics/2026/sep/29/andy-burnham-labour-conference-pension-triple-lock-social-care"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Avanti West Coast to be renationalised in March",
-      "date": "28 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/28/avanti-west-coast-to-be-renationalised-in-march"
+      "headline": "Labour supporters on how Britain could be better",
+      "date": "29 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/videos/cmvgyxzy0290o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
