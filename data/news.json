@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-09-29T13:13:24Z",
+    "updated": "2026-09-30T12:54:13Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Rayner announces crackdown on 'cowboy' leasehold property agents",
-      "date": "29 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjr4vgnq71kpo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Voters back Burnham\u2019s plan to cut back triple lock to fund social care reform by 48% to 28%, poll suggests \u2013 as it happened",
+      "date": "30 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/sep/30/andy-burnham-eu-brexit-rejoin-customs-union-fuel-duty-budget-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Thinktank says pension triple lock \u2018fiscally unsustainable\u2019 ahead of Burnham\u2019s speech to conference \u2013 UK politics live",
-      "date": "29 Sep 2026",
+      "headline": "\u2018Oozing everyman charm\u2019: what the papers say about Andy Burnham\u2019s speech",
+      "date": "30 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/29/andy-burnham-labour-conference-liverpool-speech-triple-lock-pension-angela-rayner-lucy-powell-bridget-phillipson-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/sep/30/what-papers-say-andy-burnham-speech-labour-conference"
     },
     {
       "id": "3",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham to unveil public body to invest in electricity grid",
-      "date": "29 Sep 2026",
+      "headline": "Move to rejoin EU among options for UK, says Burnham",
+      "date": "30 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqn4k9nypxjro?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmlyewr0lnj3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Visible and engaged\u2019: Burnham in listening mode with businesses at Labour party conference",
-      "date": "29 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Do you want help from humans or AI bots? Because the UK civil service is changing \u2013 and not for the better | The civil servant",
+      "date": "30 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/sep/29/andy-burnham-business-labour-party-conference-budget-tax-rises"
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/30/humans-or-ai-bots-uk-civil-service"
     },
     {
       "id": "5",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "To the people voting for Nigel Farage: is this really the finger you want on the red button? | Marina Hyde",
-      "date": "29 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/29/nigel-farage-reform-raf-fairford-red-button"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Household energy bills forecast to see biggest rise in four years",
+      "date": "30 Sep 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwz0zvj4m1myo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Chris Mason: Burnham opens debate on huge issue of social care reform",
-      "date": "29 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckp840qp85l2o?at_medium=RSS&at_campaign=rss"
+      "headline": "How will Burnham\u2019s national care service work \u2013 and how will it be funded?",
+      "date": "30 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/sep/29/what-are-labours-plans-overhaul-social-care-explainer-andy-burnham"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham expected to say he will push ahead with electoral reform plans",
-      "date": "29 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Mediation over Drumcree parade is \u2018dead in the water\u2019, say nationalists",
+      "date": "30 Sep 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/29/andy-burnham-push-ahead-electoral-reform-plans"
+      "url": "https://www.theguardian.com/uk-news/2026/sep/30/drumcree-parade-mediation-dead-in-the-water-say-nationalists"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Scrapping pensions triple lock 'morally wrong', says union boss",
-      "date": "29 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to fight next election on pledge to change voting system",
+      "date": "30 Sep 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cklyje46xnpgo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cm158en2qxg9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to signal willingness to look at scrapping pension triple lock to fund social care",
-      "date": "29 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/29/andy-burnham-labour-conference-pension-triple-lock-social-care"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Peter Murrell's legal aid withdrawn after embezzlement conviction",
+      "date": "30 Sep 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/ex-snp-chief-executive-peter-murrells-legal-aid-withdrawn-after-embezzlement-conviction-13593568"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour supporters on how Britain could be better",
-      "date": "29 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/cmvgyxzy0290o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham: UK could \u2018go all the way\u2019 by rejoining EU",
+      "date": "30 Sep 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/sep/30/andy-burnham-uk-could-go-all-the-way-rejoining-eu"
     }
   ]
 }
