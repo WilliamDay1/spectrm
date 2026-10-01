@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-09-30T12:54:13Z",
+    "updated": "2026-10-01T13:45:49Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Voters back Burnham\u2019s plan to cut back triple lock to fund social care reform by 48% to 28%, poll suggests \u2013 as it happened",
-      "date": "30 Sep 2026",
+      "headline": "\u2018Thank you Andy Burnham\u2019: prisoners react as they begin to leave under early release scheme \u2013 UK politics live",
+      "date": "1 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/sep/30/andy-burnham-eu-brexit-rejoin-customs-union-fuel-duty-budget-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/01/universal-credit-benefits-welfare-conservatives-kemi-badenoch-andy-burnham-labour-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\u2018Oozing everyman charm\u2019: what the papers say about Andy Burnham\u2019s speech",
-      "date": "30 Sep 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/30/what-papers-say-andy-burnham-speech-labour-conference"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Conservatives pledge 'tough love' benefit rules for under-25s",
+      "date": "1 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cklyjy9pv93yo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Move to rejoin EU among options for UK, says Burnham",
-      "date": "30 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmlyewr0lnj3o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "British Sikh activist released from Delhi jail after nine-year detention",
+      "date": "1 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/oct/01/british-sikh-activist-jagtar-singh-johal-released-delhi-jail-india"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Do you want help from humans or AI bots? Because the UK civil service is changing \u2013 and not for the better | The civil servant",
-      "date": "30 Sep 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham is right that \u2018hope comes from honesty\u2019. That\u2019s why Labour must make the case for rejoining the EU | Sadiq Khan",
+      "date": "1 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/30/humans-or-ai-bots-uk-civil-service"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/01/andy-burnham-sadiq-khan-hope-labour-rejoining-the-eu-brexit-growth-security"
     },
     {
       "id": "5",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Household energy bills forecast to see biggest rise in four years",
-      "date": "30 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Water system a 'disaster', Green deputy leader says",
+      "date": "1 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwz0zvj4m1myo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cm9w4wyw9g9yo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "How will Burnham\u2019s national care service work \u2013 and how will it be funded?",
-      "date": "30 Sep 2026",
+      "headline": "Prisoners thank Andy Burnham as they leave jail in first wave of early releases",
+      "date": "1 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/sep/29/what-are-labours-plans-overhaul-social-care-explainer-andy-burnham"
+      "url": "https://www.theguardian.com/society/2026/oct/01/prisoners-thank-andy-burnham-leave-jail-early-releases"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mediation over Drumcree parade is \u2018dead in the water\u2019, say nationalists",
-      "date": "30 Sep 2026",
+      "headline": "Releasing prisoners won\u2019t solve the crisis in English and Welsh jails. Here\u2019s what will | Enver Solomon",
+      "date": "1 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/30/drumcree-parade-mediation-dead-in-the-water-say-nationalists"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/01/releasing-prisoners-crisis-english-welsh-jails-sentences"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to fight next election on pledge to change voting system",
-      "date": "30 Sep 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm158en2qxg9o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Global bond sell-off intensifies, as UK long-term borrowing costs pass 6%",
+      "date": "1 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/01/global-bond-sell-off-uk-long-term-borrowing-costs-us-bond-yield"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Peter Murrell's legal aid withdrawn after embezzlement conviction",
-      "date": "30 Sep 2026",
+      "headline": "Ministers hand EY contract to scrutinise Tata Steel funding request",
+      "date": "1 Oct 2026",
       "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/ex-snp-chief-executive-peter-murrells-legal-aid-withdrawn-after-embezzlement-conviction-13593568"
+      "url": "https://news.sky.com/story/ministers-hand-ey-contract-to-scrutinise-tata-steel-funding-request-13593946"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham: UK could \u2018go all the way\u2019 by rejoining EU",
-      "date": "30 Sep 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Group encouraging people to join Green party to back \u2018Zionism is racism\u2019 agenda",
+      "date": "1 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/sep/30/andy-burnham-uk-could-go-all-the-way-rejoining-eu"
+      "url": "https://www.theguardian.com/politics/2026/oct/01/group-encouraging-people-join-green-party-back-zionism-is-racism"
     }
   ]
 }
