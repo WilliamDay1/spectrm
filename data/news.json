@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-03T11:55:30Z",
+    "updated": "2026-10-04T12:45:30Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Greens would nationalise Thames and SE Water without paying compensation, says deputy leader \u2013 UK politics live",
-      "date": "3 Oct 2026",
+      "headline": "Badenoch says Tories want policies \u2018for everybody\u2019 as she defends plan to let millionaires get free childcare \u2013 UK politics live",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/03/green-party-conference-zack-polanski-uk-politics-latest-news-updates-labour-conservatives-reform"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/04/conservatives-tories-conference-kemi-badenoch-james-cleverly-labour-jury-trials-green-party-zionism-uk-politics-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "What do Britain\u2019s death-penalty cheerleaders have to say about Christa Pike? | Maya Foa",
-      "date": "3 Oct 2026",
+      "headline": "The demands of Welsh devolution are simple: just give us what Scotland has | Will Hayward",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/03/christa-pike-capital-punishment-uk-rightwing-politicians"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/04/demands-welsh-devolution-scotland-andy-burnham"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Widdecombe suspect charged with planning terror act against Farage",
-      "date": "3 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Courts backlog will fall despite scrapping of jury trial plan, minister says",
+      "date": "4 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cv1j3lgrl6gko?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/crq5nd9dgz68o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Greens can move Labour in the right direction, says Polanski",
-      "date": "3 Oct 2026",
+      "headline": "Badenoch unveils plan to end \u00a3100,000 childcare 'cliff edge' ahead of Tory conference",
+      "date": "4 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmx239469krpo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmn06l362ypeo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018There\u2019s no such thing as democracy\u2019: Yanis Varoufakis | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
-      "date": "3 Oct 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Court quashes block on mothers and children in Gaza joining families in UK",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/oct/03/democracy-yanis-varoufakis-radical-thinking-with-aditya-chakrabortty-podcast"
+      "url": "https://www.theguardian.com/politics/2026/oct/04/court-quashes-block-on-mothers-and-children-in-gaza-joining-families-in-uk"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tories pledge to build 50,000 new prison places",
-      "date": "3 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck9qrqq53nj3o?at_medium=RSS&at_campaign=rss"
+      "headline": "Can teaching schoolchildren about Britain\u2019s role in the transatlantic slave trade remain optional? | Morgan Ofori",
+      "date": "4 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/education/2026/oct/04/teaching-schoolchildren-britain-role-transatlantic-slave-trade"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "'There\u2019s no such thing as democracy': Yanis Varoufakis | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
-      "date": "3 Oct 2026",
+      "headline": "Jacob Rees-Mogg accuses Tucker Carlson of \u2018verging on defending Hitler\u2019",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/oct/03/theres-no-such-thing-as-democracy-yanis-varoufakis-radical-thinking-with-aditya-chakrabortty-podcast"
+      "url": "https://www.theguardian.com/us-news/2026/oct/04/jacob-rees-mogg-tucker-carlson-adolf-hitler-second-world-war-uk-armed-forces-vladimir-putin"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "London Labour council warns it may raise council tax by 150%",
-      "date": "3 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham\u2019s plans for social care and its workers are admirable but changes must come quickly | Heather Stewart",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/03/london-labour-council-tax-hammersmith-fulham"
+      "url": "https://www.theguardian.com/business/2026/oct/04/andy-burnham-plans-social-care-workers-changes"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "What is Zionism and why do some critics describe it as racist?",
-      "date": "3 Oct 2026",
+      "headline": "\u2018The violence is off the scale\u2019: staff and passengers at risk as assaults on UK trains soar to record high",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/oct/03/what-is-zionism-green-party-debate"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/04/violence-rail-workers-passengers-risk-assaults-uk-railways-soar-record-high-transport"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018People are deserting it\u2019: why are London mansions struggling to sell?",
-      "date": "3 Oct 2026",
+      "headline": "Thousands of Glasgow council workers face pay cuts in one of UK\u2019s biggest fire-and-rehire plans",
+      "date": "4 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/oct/03/london-mansions-sell-house-prices-prime-property"
+      "url": "https://www.theguardian.com/society/2026/oct/04/glasgow-council-workers-face-pay-cuts-in-fire-and-rehire-plan-after-union-talks-break-down"
     }
   ]
 }
