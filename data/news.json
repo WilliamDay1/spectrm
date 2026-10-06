@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-05T15:09:40Z",
+    "updated": "2026-10-06T13:31:08Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Artist 'taking legal advice' over Tories' use of Andy Burnham portrait",
-      "date": "5 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj62yg157prxo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Badenoch suggests Tories would not reverse Labour\u2019s pensions triple lock legislation \u2013 UK politics live",
+      "date": "6 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/06/kemi-badenoch-conservatives-labour-reform-greens-uk-politics-latest-news"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "No 10 insists RAF Fairford is safe after US withdraws its bombers \u2013 UK politics live",
-      "date": "5 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/05/tory-party-conference-labour-reform-planning-economy-business-latest-news-updates"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Tories pledge \u00a310bn for British anti-missile defence system",
+      "date": "6 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cxvgdl5npl86o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tensions exposed among Greens by 'Zionism is racism' conference vote",
-      "date": "5 Oct 2026",
+      "headline": "Author and former politician Jeffrey Archer dies aged 86",
+      "date": "6 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjr4yx9663q6o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ckj0l401dvpgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Mel B \u2018heartbroken\u2019 by Windrush scandal victims\u2019 fight for justice",
-      "date": "5 Oct 2026",
+      "headline": "Loss of green space could be issue that decides Holborn and St Pancras byelection",
+      "date": "6 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/05/mel-b-windrush-scandal-fight-for-justice-legal-support-commissioner"
+      "url": "https://www.theguardian.com/politics/2026/oct/06/holborn-st-pancras-byelection-green-spaces-hs2-housing-euston"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why Kemi Badenoch embraces being the leader of the \u2018nasty party\u2019 \u2013 podcast",
-      "date": "5 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/oct/05/kemi-badenoch-conservative-leader-nasty-party-podcast"
+      "headline": "I won't accept exclusion within Green Party, says Polanski after criticism of Zionism motion",
+      "date": "6 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjy56yxxwy3po?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Jewish Greens chair says she could leave party over 'Zionism is racism' motion",
-      "date": "5 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm4g1dxe50nyo?at_medium=RSS&at_campaign=rss"
+      "headline": "Badenoch denies \u2018British Iron Dome\u2019 plan \u2013 after Tories use phrase in press release",
+      "date": "6 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/06/badenoch-british-iron-dome-plan-tory-press-release"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Shadow chancellor to unveil Tory plans to cut taxes and regulations",
-      "date": "5 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqj9kje82jm1o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham\u2019s surprise EU-turn could deliver the Tories from a generational mess | Gaby Hinsliff",
+      "date": "6 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/06/andy-burnham-eu-tories-kemi-badenoch-brexit"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "\ufeffThe UK\u2019s G20 presidency will push Andy Burnham to the centre of the global stage. What will he use it for? | Michael Jacobs",
-      "date": "5 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/05/uk-g20-presidency-andy-burnham-global-stage-technology-food-climate-economy"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Sky News announces new hosts of Sunday Morning With\u2026",
+      "date": "6 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/sky-news-announces-new-hosts-of-sunday-morning-with-13595471"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK unprepared for food emergencies and threats to supplies, experts warn",
-      "date": "5 Oct 2026",
+      "headline": "Lord Archer: The outrageous extrovert who lived a life tainted by scandal",
+      "date": "6 Oct 2026",
       "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/uk-unprepared-for-food-emergencies-and-threats-to-supplies-experts-warn-13595286"
+      "url": "https://news.sky.com/story/lord-archer-the-outrageous-extrovert-who-lived-a-life-tainted-by-scandal-13595584"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Cleverly hits out at Braverman over 'Englishness' row",
+      "headline": "MPs call for investigation after Lutnick-Epstein whistleblower dies",
       "date": "5 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/cleverly-hits-out-at-braverman-over-englishness-row-13595283"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwm2686gl6kno?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
