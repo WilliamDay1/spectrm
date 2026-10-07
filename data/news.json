@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-06T13:31:08Z",
+    "updated": "2026-10-07T13:44:52Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Badenoch suggests Tories would not reverse Labour\u2019s pensions triple lock legislation \u2013 UK politics live",
-      "date": "6 Oct 2026",
+      "headline": "Couples would be able to leave \u00a31m and family home exempt from inheritance tax under Tories, says Badenoch \u2013 UK politics live",
+      "date": "7 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/06/kemi-badenoch-conservatives-labour-reform-greens-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/07/kemi-badenoch-inheritance-tax-conservatives-tory-conference-labour-green-party-reform-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Tories pledge \u00a310bn for British anti-missile defence system",
-      "date": "6 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cxvgdl5npl86o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tories accused of prioritising rich voters as Badenoch lays out inheritance tax cut plan",
+      "date": "7 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/07/tories-prioritising-rich-voters-inheritance-tax-cut-badenoch-conference-speech"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Author and former politician Jeffrey Archer dies aged 86",
-      "date": "6 Oct 2026",
+      "headline": "Reform internal inquiry says party did not break law over donations sting",
+      "date": "7 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckj0l401dvpgo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ckly020edl45o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Loss of green space could be issue that decides Holborn and St Pancras byelection",
-      "date": "6 Oct 2026",
+      "headline": "The Greens may yet win in Holborn and St Pancras \u2013 but what happened to the party set to \u2018replace\u2019 Labour? | Andy Beckett",
+      "date": "7 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/06/holborn-st-pancras-byelection-green-spaces-hs2-housing-euston"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/07/green-party-polanski-holborn-and-st-pancras-byelection-labour"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "I won't accept exclusion within Green Party, says Polanski after criticism of Zionism motion",
-      "date": "6 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjy56yxxwy3po?at_medium=RSS&at_campaign=rss"
+      "headline": "Reform clears its own officials of breaking party funding laws despite police investigation",
+      "date": "7 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/07/reform-clears-officials-breaking-party-funding-laws-despite-police-investigation"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Badenoch denies \u2018British Iron Dome\u2019 plan \u2013 after Tories use phrase in press release",
-      "date": "6 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/06/badenoch-british-iron-dome-plan-tory-press-release"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Widdecombe suspect accused of trying to break into Farage's home",
+      "date": "7 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckj0lj6v3g9vo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham\u2019s surprise EU-turn could deliver the Tories from a generational mess | Gaby Hinsliff",
-      "date": "6 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/06/andy-burnham-eu-tories-kemi-badenoch-brexit"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Greens face conference centre ban over Zionism motion",
+      "date": "7 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6p9gzg032n4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Sky News announces new hosts of Sunday Morning With\u2026",
-      "date": "6 Oct 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Widdecombe murder suspect accused of terror plot against Farage 'researched number of prominent people', court told",
+      "date": "7 Oct 2026",
       "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/sky-news-announces-new-hosts-of-sunday-morning-with-13595471"
+      "url": "https://news.sky.com/story/widdecombe-murder-suspect-joshua-kerry-appears-in-court-over-farage-terror-charge-13595798"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Lord Archer: The outrageous extrovert who lived a life tainted by scandal",
-      "date": "6 Oct 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK inquiry clears own advisers over donations sting",
+      "date": "7 Oct 2026",
       "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/lord-archer-the-outrageous-extrovert-who-lived-a-life-tainted-by-scandal-13595584"
+      "url": "https://news.sky.com/story/reform-uk-internal-inquiry-clears-own-advisers-over-donations-sting-13596069"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MPs call for investigation after Lutnick-Epstein whistleblower dies",
-      "date": "5 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwm2686gl6kno?at_medium=RSS&at_campaign=rss"
+      "headline": "IMF chief urges governments to tighten belts as global debt levels soar",
+      "date": "7 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/07/imf-chief-kristalina-georgieva-urges-governments-tighten-belts-global-debt-levels-soar"
     }
   ]
 }
