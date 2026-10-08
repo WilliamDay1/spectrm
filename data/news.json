@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-07T13:44:52Z",
+    "updated": "2026-10-08T13:52:28Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "Couples would be able to leave \u00a31m and family home exempt from inheritance tax under Tories, says Badenoch \u2013 UK politics live",
-      "date": "7 Oct 2026",
+      "headline": "Racial and religious hate crimes at record high in England and Wales, data shows",
+      "date": "8 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/07/kemi-badenoch-inheritance-tax-conservatives-tory-conference-labour-green-party-reform-latest-news-updates"
+      "url": "https://www.theguardian.com/society/2026/oct/08/racial-and-religious-hate-crimes-at-record-high-in-england-and-wales-data-shows"
     },
     {
       "id": "2",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Tories accused of prioritising rich voters as Badenoch lays out inheritance tax cut plan",
-      "date": "7 Oct 2026",
+      "headline": "Polls open in Holborn and St Pancras byelection \u2013 UK politics live",
+      "date": "8 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/07/tories-prioritising-rich-voters-inheritance-tax-cut-badenoch-conference-speech"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/08/holborn-st-pancras-byelection-labour-greens-zack-polanski-uk-politics-live-news-updates"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform internal inquiry says party did not break law over donations sting",
-      "date": "7 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "UK and Germany will face threats together, says Burnham in Berlin",
+      "date": "8 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckly020edl45o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmwyq34qexdzo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The Greens may yet win in Holborn and St Pancras \u2013 but what happened to the party set to \u2018replace\u2019 Labour? | Andy Beckett",
-      "date": "7 Oct 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "UK\u2019s military needs to focus spending on domestic defence, not overseas missions \u2013 report",
+      "date": "8 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/07/green-party-polanski-holborn-and-st-pancras-byelection-labour"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/08/uk-military-domestic-defence-overseas-missions-thinktank-report"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform clears its own officials of breaking party funding laws despite police investigation",
-      "date": "7 Oct 2026",
+      "headline": "British consulate in East Jerusalem will stay open as UK mission, says Ed Miliband",
+      "date": "8 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/07/reform-clears-officials-breaking-party-funding-laws-despite-police-investigation"
+      "url": "https://www.theguardian.com/politics/2026/oct/08/uk-consulate-east-jerusalem-remain-open-uk-mission-ed-miliband"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Widdecombe suspect accused of trying to break into Farage's home",
-      "date": "7 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Clubs fear political interference in Man City appeal",
+      "date": "8 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckj0lj6v3g9vo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/sport/football/articles/c6y93qq5175wo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Greens face conference centre ban over Zionism motion",
-      "date": "7 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6p9gzg032n4o?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Covid, Brexit and Liz Truss mini-budget led to lasting decline in mental health, study finds",
+      "date": "8 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/oct/08/covid-brexit-liz-truss-mini-budget-lasting-decline-mental-health-uk-study"
     },
     {
       "id": "8",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Widdecombe murder suspect accused of terror plot against Farage 'researched number of prominent people', court told",
-      "date": "7 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/widdecombe-murder-suspect-joshua-kerry-appears-in-court-over-farage-terror-charge-13595798"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "French minister invites UK to \u2018come all the way back\u2019 to the EU",
+      "date": "8 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/08/french-minister-invites-uk-to-come-all-the-way-back-to-the-eu"
     },
     {
       "id": "9",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK inquiry clears own advisers over donations sting",
-      "date": "7 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/reform-uk-internal-inquiry-clears-own-advisers-over-donations-sting-13596069"
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Holborn and St Pancras by-election gets under way",
+      "date": "8 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck24059mlzm8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "IMF chief urges governments to tighten belts as global debt levels soar",
-      "date": "7 Oct 2026",
+      "headline": "Voting opens in high-stakes Holborn and St Pancras byelection",
+      "date": "8 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/07/imf-chief-kristalina-georgieva-urges-governments-tighten-belts-global-debt-levels-soar"
+      "url": "https://www.theguardian.com/politics/2026/oct/08/voting-opens-holborn-st-pancras-byelection-green-party-zack-polanksi-labour-sagal-abdi-wali"
     }
   ]
 }
