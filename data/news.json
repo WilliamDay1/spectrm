@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-08T13:52:28Z",
+    "updated": "2026-10-09T13:37:21Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Devolution",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Racial and religious hate crimes at record high in England and Wales, data shows",
-      "date": "8 Oct 2026",
+      "headline": "Polanski defends leadership of Greens and says he will not step down after byelection defeat by Labour \u2013 UK politics live",
+      "date": "9 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/08/racial-and-religious-hate-crimes-at-record-high-in-england-and-wales-data-shows"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/09/holborn-st-pancras-byelection-result-zack-polanski-sagal-abdi-wali-uk-labour-green-party-uk-politics-latest-news"
     },
     {
       "id": "2",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polls open in Holborn and St Pancras byelection \u2013 UK politics live",
-      "date": "8 Oct 2026",
+      "headline": "Robert Jenrick launches scathing broadside against \u2018Kensington Kemi\u2019",
+      "date": "9 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/08/holborn-st-pancras-byelection-labour-greens-zack-polanski-uk-politics-live-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/oct/09/robert-jenrick-launches-scathing-broadside-against-kensington-kemi"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "UK and Germany will face threats together, says Burnham in Berlin",
-      "date": "8 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmwyq34qexdzo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tory tax break for banks has cost UK public purse \u00a36bn, says TUC",
+      "date": "9 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/money/2026/oct/09/tory-tax-break-banks-cost-uk-public-purse-tuc"
     },
     {
       "id": "4",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "UK\u2019s military needs to focus spending on domestic defence, not overseas missions \u2013 report",
-      "date": "8 Oct 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Leader of Jewish Greens calls for Zack Polanski to resign after byelection loss",
+      "date": "9 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/08/uk-military-domestic-defence-overseas-missions-thinktank-report"
+      "url": "https://www.theguardian.com/politics/2026/oct/09/leader-of-jewish-greens-calls-for-zack-polanski-to-resign"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "British consulate in East Jerusalem will stay open as UK mission, says Ed Miliband",
-      "date": "8 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/08/uk-consulate-east-jerusalem-remain-open-uk-mission-ed-miliband"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham promises to curb non-compete rules in job contracts",
+      "date": "9 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c63r5wx8z8wzo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Clubs fear political interference in Man City appeal",
-      "date": "8 Oct 2026",
+      "headline": "Polanski vows to stay on as Green leader as criticism mounts",
+      "date": "9 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/sport/football/articles/c6y93qq5175wo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmewe5lvl2rqo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Covid, Brexit and Liz Truss mini-budget led to lasting decline in mental health, study finds",
-      "date": "8 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Did the Zionism row lose it for Zack Polanski? \u2013 podcast",
+      "date": "9 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/08/covid-brexit-liz-truss-mini-budget-lasting-decline-mental-health-uk-study"
+      "url": "https://www.theguardian.com/politics/audio/2026/oct/09/did-the-zionism-row-lose-it-for-zack-polanski-podcast"
     },
     {
       "id": "8",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "French minister invites UK to \u2018come all the way back\u2019 to the EU",
-      "date": "8 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/08/french-minister-invites-uk-to-come-all-the-way-back-to-the-eu"
+      "headline": "Ex-first minister Mark Drakeford suggests Wales Office should go",
+      "date": "9 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm4g13dqwj7zo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Holborn and St Pancras by-election gets under way",
-      "date": "8 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck24059mlzm8o?at_medium=RSS&at_campaign=rss"
+      "headline": "Digested week: Don\u2019t worry about the plague, go and read some Anne Carson",
+      "date": "9 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/09/digested-week-plague-nobel-prize-anne-carson"
     },
     {
       "id": "10",
       "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Voting opens in high-stakes Holborn and St Pancras byelection",
-      "date": "8 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/08/voting-opens-holborn-st-pancras-byelection-green-party-zack-polanksi-labour-sagal-abdi-wali"
+      "headline": "Labour sees off Green challenge to win Holborn by-election",
+      "date": "9 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqly3xjy1g11o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
