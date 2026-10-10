@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-09T13:37:21Z",
+    "updated": "2026-10-10T12:54:30Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polanski defends leadership of Greens and says he will not step down after byelection defeat by Labour \u2013 UK politics live",
-      "date": "9 Oct 2026",
+      "headline": "Greens must avoid \u2018capture by extremists and racists\u2019, says party MP",
+      "date": "10 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/09/holborn-st-pancras-byelection-result-zack-polanski-sagal-abdi-wali-uk-labour-green-party-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/2026/oct/10/greens-must-avoid-capture-by-extremists-and-racists-ellie-chowns-zionism-racism"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Robert Jenrick launches scathing broadside against \u2018Kensington Kemi\u2019",
-      "date": "9 Oct 2026",
+      "headline": "UK must not be beholden to foreign AI, says head of Alan Turing Institute",
+      "date": "10 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/09/robert-jenrick-launches-scathing-broadside-against-kensington-kemi"
+      "url": "https://www.theguardian.com/technology/2026/oct/10/uk-foreign-ai-head-alan-turing-institute-george-williamson"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Tory tax break for banks has cost UK public purse \u00a36bn, says TUC",
-      "date": "9 Oct 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "\u2018Gaza is a moral tear in the universe\u2019: Naomi Klein and Astra Taylor | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
+      "date": "10 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/oct/09/tory-tax-break-banks-cost-uk-public-purse-tuc"
+      "url": "https://www.theguardian.com/politics/audio/2026/oct/10/gaza-is-a-moral-tear-in-the-universe-naomi-klein-and-astra-taylor-radical-thinking-with-aditya-chakrabortty-podcast"
     },
     {
       "id": "4",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Leader of Jewish Greens calls for Zack Polanski to resign after byelection loss",
-      "date": "9 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "\u2018If voters aren\u2019t better off by the next election, we\u2019re screwed\u2019: Labour insiders voice fears over budget",
+      "date": "10 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/09/leader-of-jewish-greens-calls-for-zack-polanski-to-resign"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/10/labour-fears-budget-burnham-healey"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham promises to curb non-compete rules in job contracts",
-      "date": "9 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c63r5wx8z8wzo?at_medium=RSS&at_campaign=rss"
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "UK accused of giving people of Gaza false hope over new refugee safe route",
+      "date": "10 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/10/uk-gaza-refugee-resettlement-scheme-palestinians-home-office"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polanski vows to stay on as Green leader as criticism mounts",
+      "headline": "\u2018Would I sit down with Tommy Robinson? It\u2019s not a definite no\u2019: lessons from people who fought the far right in the 70s, 80s and beyond",
+      "date": "10 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/10/lessons-from-people-who-fought-the-far-right-in-the-70s-80s-and-beyond"
+    },
+    {
+      "id": "7",
+      "tag": "Housing",
+      "tag_class": "tc-c",
+      "headline": "Create new pre-apprenticeship scheme to close youth unemployment gap, says Milburn",
+      "date": "10 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/education/2026/oct/10/pre-apprenticeship-scheme-landmark-alan-milburn-youth-jobs-crisis-report"
+    },
+    {
+      "id": "8",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Northern Ireland secretary Chris Bryant bans Drumcree parade",
+      "date": "9 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/09/northern-ireland-secretary-chris-bryant-bans-drumcree-parade"
+    },
+    {
+      "id": "9",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Polanski vows to stay as Green leader as he faces criticism after by-election defeat",
       "date": "9 Oct 2026",
       "source": "BBC Politics",
       "url": "https://www.bbc.co.uk/news/articles/cmewe5lvl2rqo?at_medium=RSS&at_campaign=rss"
     },
     {
-      "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Did the Zionism row lose it for Zack Polanski? \u2013 podcast",
-      "date": "9 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/oct/09/did-the-zionism-row-lose-it-for-zack-polanski-podcast"
-    },
-    {
-      "id": "8",
-      "tag": "Devolution",
-      "tag_class": "tc-c",
-      "headline": "Ex-first minister Mark Drakeford suggests Wales Office should go",
-      "date": "9 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm4g13dqwj7zo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Digested week: Don\u2019t worry about the plague, go and read some Anne Carson",
-      "date": "9 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/09/digested-week-plague-nobel-prize-anne-carson"
-    },
-    {
       "id": "10",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour sees off Green challenge to win Holborn by-election",
+      "headline": "Lib Dem MP quits frontbench job over Ed Davey's leadership",
       "date": "9 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqly3xjy1g11o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cw4g13j4mdxjo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
