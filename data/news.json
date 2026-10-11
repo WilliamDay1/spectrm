@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-10T12:54:30Z",
+    "updated": "2026-10-11T13:18:25Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Greens must avoid \u2018capture by extremists and racists\u2019, says party MP",
-      "date": "10 Oct 2026",
+      "headline": "People smugglers are still profiting from small boats. Can the UK fix the crisis?",
+      "date": "11 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/10/greens-must-avoid-capture-by-extremists-and-racists-ellie-chowns-zionism-racism"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/11/people-smugglers-profit-small-boats-can-uk-fix-crisis"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK must not be beholden to foreign AI, says head of Alan Turing Institute",
-      "date": "10 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham faces questions over push to scrap photo ID voting requirement",
+      "date": "11 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/technology/2026/oct/10/uk-foreign-ai-head-alan-turing-institute-george-williamson"
+      "url": "https://www.theguardian.com/politics/2026/oct/11/andy-burnham-faces-questions-electoral-system-changes-photo-id-voting"
     },
     {
       "id": "3",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "\u2018Gaza is a moral tear in the universe\u2019: Naomi Klein and Astra Taylor | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
-      "date": "10 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/oct/10/gaza-is-a-moral-tear-in-the-universe-naomi-klein-and-astra-taylor-radical-thinking-with-aditya-chakrabortty-podcast"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK does not support Trump's Russia diesel deal, says Streeting",
+      "date": "11 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c65yn92nj423o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "\u2018If voters aren\u2019t better off by the next election, we\u2019re screwed\u2019: Labour insiders voice fears over budget",
-      "date": "10 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/10/labour-fears-budget-burnham-healey"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "It's within DUP's gift to remove O'Neill as first minister, says Lockhart",
+      "date": "11 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm79pd2zzl59o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "UK accused of giving people of Gaza false hope over new refugee safe route",
-      "date": "10 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour has got the message \u2013 developing nations suffer most from bond market turmoil | Heather Stewart",
+      "date": "11 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/10/uk-gaza-refugee-resettlement-scheme-palestinians-home-office"
+      "url": "https://www.theguardian.com/business/2026/oct/11/labour-bond-market-turmoil-developing-nations-andy-burnham-brown-blair"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018Would I sit down with Tommy Robinson? It\u2019s not a definite no\u2019: lessons from people who fought the far right in the 70s, 80s and beyond",
-      "date": "10 Oct 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Britain stands behind Zelenskyy, says Streeting after Trump\u2019s call for new leader in Ukraine",
+      "date": "11 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/10/lessons-from-people-who-fought-the-far-right-in-the-70s-80s-and-beyond"
+      "url": "https://www.theguardian.com/politics/2026/oct/11/britain-stands-behind-zelenskyy-streeting-trump-ukraine"
     },
     {
       "id": "7",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Create new pre-apprenticeship scheme to close youth unemployment gap, says Milburn",
-      "date": "10 Oct 2026",
+      "headline": "Surgeon faces deportation as Home Office revokes refugee status for Syrians",
+      "date": "11 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/education/2026/oct/10/pre-apprenticeship-scheme-landmark-alan-milburn-youth-jobs-crisis-report"
+      "url": "https://www.theguardian.com/politics/2026/oct/11/surgeon-faces-deportation-syria-uk-home-office-revokes-refugee-status-syrians"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Northern Ireland secretary Chris Bryant bans Drumcree parade",
-      "date": "9 Oct 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "\u2018Gaza is a moral tear in the universe\u2019: Naomi Klein and Astra Taylor | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
+      "date": "11 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/09/northern-ireland-secretary-chris-bryant-bans-drumcree-parade"
+      "url": "https://www.theguardian.com/news/audio/2026/oct/11/gaza-is-a-moral-tear-in-the-universe-naomi-klein-and-astra-taylor-radical-thinking-with-aditya-chakrabortty-podcast"
     },
     {
       "id": "9",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Polanski vows to stay as Green leader as he faces criticism after by-election defeat",
-      "date": "9 Oct 2026",
+      "headline": "MPs seek to overturn ruling that stops police being sued for failings",
+      "date": "10 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmewe5lvl2rqo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6y43mmke7ygo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Lib Dem MP quits frontbench job over Ed Davey's leadership",
-      "date": "9 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw4g13j4mdxjo?at_medium=RSS&at_campaign=rss"
+      "headline": "Greens must avoid \u2018capture by extremists and racists\u2019, says party MP",
+      "date": "10 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/10/greens-must-avoid-capture-by-extremists-and-racists-ellie-chowns-zionism-racism"
     }
   ]
 }
