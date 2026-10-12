@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-11T13:18:25Z",
+    "updated": "2026-10-12T15:55:33Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "People smugglers are still profiting from small boats. Can the UK fix the crisis?",
-      "date": "11 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Was Burnham right to talk about Russian interference in Brexit? \u2013 podcast",
+      "date": "12 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/11/people-smugglers-profit-small-boats-can-uk-fix-crisis"
+      "url": "https://www.theguardian.com/politics/audio/2026/oct/12/was-burnham-wrong-to-talk-about-russian-interference-in-brexit-podcast"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham faces questions over push to scrap photo ID voting requirement",
-      "date": "11 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/11/andy-burnham-faces-questions-electoral-system-changes-photo-id-voting"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Britain won't tolerate threats on our soil, Miliband says as he summons Iran ambassador",
+      "date": "12 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6gr82ekqewyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK does not support Trump's Russia diesel deal, says Streeting",
-      "date": "11 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c65yn92nj423o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham claims EU summit could boost growth and help control illegal migration \u2013 UK politics live",
+      "date": "12 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/12/uk-politics-live-tories-andy-burnham-russian-interference-brexit-eu-latest"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "It's within DUP's gift to remove O'Neill as first minister, says Lockhart",
-      "date": "11 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm79pd2zzl59o?at_medium=RSS&at_campaign=rss"
+      "headline": "Reform\u2019s Zia Yusuf is sounding more and more like Trump every day | Zoe Williams",
+      "date": "12 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/12/reform-zia-yusuf-trump-today-programme"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour has got the message \u2013 developing nations suffer most from bond market turmoil | Heather Stewart",
-      "date": "11 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/11/labour-bond-market-turmoil-developing-nations-andy-burnham-brown-blair"
+      "headline": "PM believes Brexit vote was legitimate despite Russia interference claims, No 10 says",
+      "date": "12 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq5ynr4kn3nmo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Britain stands behind Zelenskyy, says Streeting after Trump\u2019s call for new leader in Ukraine",
-      "date": "11 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "How significant are Burnham\u2019s remarks on Kremlin interference in Brexit vote?",
+      "date": "12 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/11/britain-stands-behind-zelenskyy-streeting-trump-ukraine"
+      "url": "https://www.theguardian.com/politics/2026/oct/12/andy-burnham-kremlin-eu-referendum-brexit"
     },
     {
       "id": "7",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Surgeon faces deportation as Home Office revokes refugee status for Syrians",
-      "date": "11 Oct 2026",
+      "headline": "Children and women included in Reform plan to immediately deport 90,000 asylum seekers",
+      "date": "12 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/11/surgeon-faces-deportation-syria-uk-home-office-revokes-refugee-status-syrians"
+      "url": "https://www.theguardian.com/politics/2026/oct/12/children-mothers-included-reform-immediately-deport-asylum-seekers"
     },
     {
       "id": "8",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "\u2018Gaza is a moral tear in the universe\u2019: Naomi Klein and Astra Taylor | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
-      "date": "11 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/oct/11/gaza-is-a-moral-tear-in-the-universe-naomi-klein-and-astra-taylor-radical-thinking-with-aditya-chakrabortty-podcast"
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Reform pledges to suspend UK's asylum system for up to five years",
+      "date": "12 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwnv0zmjld51o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "MPs seek to overturn ruling that stops police being sued for failings",
-      "date": "10 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6y43mmke7ygo?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage adviser had unpublicised role at polling firm",
+      "date": "12 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/12/nigel-farage-adviser-influential-role-polling-firm-chris-bruni-lowe"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Greens must avoid \u2018capture by extremists and racists\u2019, says party MP",
-      "date": "10 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/10/greens-must-avoid-capture-by-extremists-and-racists-ellie-chowns-zionism-racism"
+      "headline": "Sinn F\u00e9in ministers facing no-confidence vote after Drumcree dispute",
+      "date": "12 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c68jz0282re9o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
