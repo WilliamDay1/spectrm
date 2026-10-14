@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-13T14:28:53Z",
+    "updated": "2026-10-14T12:14:46Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "MI5 chief Ken McCallum confirms Russia did interfere in Brexit referendum but says it had little impact \u2013 UK politics live",
-      "date": "13 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Manchester City did not raise Premier League charges with me, Burnham tells PMQs \u2013 UK politics live",
+      "date": "14 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/13/andy-burnham-brexit-eu-europe-neil-kinnock-lobby-wes-streeting-labour-prisoner-early-release-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/14/pmqs-andy-burnham-kemi-badenoch-zelenskyy-uk-politics-latest-news"
     },
     {
       "id": "2",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Welsh government and Labour strike budget deal with \u00a360m for additional learning needs",
-      "date": "13 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6pqg7n9l312o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK government apologises for past burials of stillborn babies in mass graves",
+      "date": "14 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/14/uk-government-apologises-stillborn-babies-mass-graves"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Rightwing extremists increasingly likely to consider terrorist attacks, MI5 chief says",
-      "date": "13 Oct 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage says charities that help asylum seekers reach UK should be prosecuted",
+      "date": "14 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/13/rightwing-extremists-increasingly-likely-to-consider-terrorist-attacks-mi5-chief-says"
+      "url": "https://www.theguardian.com/politics/2026/oct/14/nigel-farage-charities-help-asylum-seekers-uk-prosecute"
     },
     {
       "id": "4",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK growth forecast upgraded but higher energy prices to hit economy next year",
-      "date": "13 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham had two hospitality dinners with Man City chairman, deleted records show",
+      "date": "14 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmglw0r21zexo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c83vq9vpwwr1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage denies Reform would let troops shoot small boats after Jenrick\u2019s \u2018lethal force\u2019 claim",
-      "date": "13 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/13/nigel-farage-reform-robert-jenrick-small-boats-royal-marines-lethal-force"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Bookies in last-ditch plea to Healey to avert budget tax bombshell",
+      "date": "14 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/bookies-in-last-ditch-plea-to-healey-to-avert-budget-tax-bombshell-13599154"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "IMF raises UK growth forecast as economist says Healey should \u2018stay the course\u2019",
-      "date": "13 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "John Healey \u2018targets tax crackdown on online marketplaces\u2019 in first budget",
+      "date": "14 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/13/john-healey-uk-finances-imf-gdp-growth-forecast-2026"
+      "url": "https://www.theguardian.com/business/2026/oct/14/john-healey-tax-crackdown-online-marketplaces-amazon-ebay-budget"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "One thing must now be clear to Andy Burnham. The rightwing press is on a war footing \u2013 and he\u2019s the enemy | Jane Martinson",
-      "date": "13 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "This civil war on the British right is a charade \u2013 its politics are more united than ever | Jonathan Liew",
+      "date": "14 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/13/andy-burnham-rightwing-press-nigel-farage-kemi-badenoch"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/14/civil-war-british-right-charade-politics-united-coalition"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Chronic UTIs made MP 'feel like a drug user'",
-      "date": "13 Oct 2026",
+      "headline": "Why 'cool kids' won't let Swindon in Thames Valley",
+      "date": "14 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6m2r5gyprmvo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cx8dz4235vnyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why the prime minister wants to talk about Brexit again",
-      "date": "13 Oct 2026",
+      "headline": "Chris Mason: Lib Dems rally behind Davey as he pledges change",
+      "date": "14 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cxvgdql2y7zqo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqy7l03ydkyko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK economy to grow more than expected - but households face sharper rise in inflation, IMF says",
-      "date": "13 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/uk-economy-to-grow-more-than-expected-but-households-face-sharper-rise-in-inflation-imf-says-13598675"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Global financial system is failing developing countries, says Ed Miliband",
+      "date": "14 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/14/global-financial-system-is-failing-developing-countries-says-ed-miliband-world-bank"
     }
   ]
 }
