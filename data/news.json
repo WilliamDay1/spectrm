@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-14T12:14:46Z",
+    "updated": "2026-10-15T11:56:27Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Manchester City did not raise Premier League charges with me, Burnham tells PMQs \u2013 UK politics live",
-      "date": "14 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK threatens to ban Eritreans over returns policy",
+      "date": "15 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/14/pmqs-andy-burnham-kemi-badenoch-zelenskyy-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/15/uk-threatens-to-ban-eritreans-over-returns-policy"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK government apologises for past burials of stillborn babies in mass graves",
-      "date": "14 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "John Healey vows to give \u2018breathing space\u2019 to consumers and businesses in first budget",
+      "date": "15 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/14/uk-government-apologises-stillborn-babies-mass-graves"
+      "url": "https://www.theguardian.com/politics/2026/oct/15/john-healey-first-budget-breathing-space-consumers-businesses-imf-living-costs"
     },
     {
       "id": "3",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage says charities that help asylum seekers reach UK should be prosecuted",
-      "date": "14 Oct 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Wes Streeting in US for Hegseth meeting as Ukraine tensions escalate \u2013 UK politics live",
+      "date": "15 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/14/nigel-farage-charities-help-asylum-seekers-uk-prosecute"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/15/uk-politics-latest-news-updates-nigel-farage-reform-labour-conservatives"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham had two hospitality dinners with Man City chairman, deleted records show",
-      "date": "14 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c83vq9vpwwr1o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Former DUP leader Jeffrey Donaldson sentenced to 15 years for child sexual offences",
+      "date": "15 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/15/jeffrey-donaldson-sentenced-to-15-years-for-child-sexual-offences"
     },
     {
       "id": "5",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Bookies in last-ditch plea to Healey to avert budget tax bombshell",
-      "date": "14 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Government to publish Telegraph probes amid Burnham Abu Dhabi row",
+      "date": "15 Oct 2026",
       "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/bookies-in-last-ditch-plea-to-healey-to-avert-budget-tax-bombshell-13599154"
+      "url": "https://news.sky.com/story/government-to-publish-telegraph-probes-amid-burnham-abu-dhabi-row-13599517"
     },
     {
       "id": "6",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "John Healey \u2018targets tax crackdown on online marketplaces\u2019 in first budget",
-      "date": "14 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/14/john-healey-tax-crackdown-online-marketplaces-amazon-ebay-budget"
+      "headline": "Healey says surprise UK growth is 'sign of resilience' ahead of Budget",
+      "date": "15 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck8dz1me439no?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "This civil war on the British right is a charade \u2013 its politics are more united than ever | Jonathan Liew",
-      "date": "14 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK economy unexpectedly grows in August despite fall in consumer spending",
+      "date": "15 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/14/civil-war-british-right-charade-politics-united-coalition"
+      "url": "https://www.theguardian.com/business/2026/oct/15/uk-economy-unexpectedly-grows-01-in-august-despite-fuel-hit-to-household-budgets"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why 'cool kids' won't let Swindon in Thames Valley",
-      "date": "14 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cx8dz4235vnyo?at_medium=RSS&at_campaign=rss"
+      "headline": "No timeline for lifting Land Registry paywall as ownership remains opaque",
+      "date": "15 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/environment/2026/oct/15/no-timeline-for-lifting-land-registry-paywall-as-ownership-remains-opaque"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Chris Mason: Lib Dems rally behind Davey as he pledges change",
-      "date": "14 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqy7l03ydkyko?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham v Swinney: will the UK PM overshadow the SNP\u2019s conference?",
+      "date": "15 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/15/andy-burnham-scotland-visit-snp-conference"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Global financial system is failing developing countries, says Ed Miliband",
-      "date": "14 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK households have paid extra \u00a313,961 on bills since 2021 amid soaring inflation, TUC says",
+      "date": "15 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/14/global-financial-system-is-failing-developing-countries-says-ed-miliband-world-bank"
+      "url": "https://www.theguardian.com/business/2026/oct/15/uk-households-extra-bills-inflation-tuc"
     }
   ]
 }
