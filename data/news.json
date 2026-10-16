@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-15T11:56:27Z",
+    "updated": "2026-10-16T11:46:59Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK threatens to ban Eritreans over returns policy",
-      "date": "15 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/15/uk-threatens-to-ban-eritreans-over-returns-policy"
+      "headline": "Minister warns people to save water amid drought",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq0ld4g0309go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "John Healey vows to give \u2018breathing space\u2019 to consumers and businesses in first budget",
-      "date": "15 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/15/john-healey-first-budget-breathing-space-consumers-businesses-imf-living-costs"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Equality watchdog writes to Greens over 'Zionism is racism' motion",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmly0np1gldvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "Wes Streeting in US for Hegseth meeting as Ukraine tensions escalate \u2013 UK politics live",
-      "date": "15 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to deliver speech in Scotland on devolution \u2013 UK politics live",
+      "date": "16 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/15/uk-politics-latest-news-updates-nigel-farage-reform-labour-conservatives"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/16/andy-burnham-scotland-devolution-speech-reform-uk-documentary-jenrick-farage-latest-news-updates"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Former DUP leader Jeffrey Donaldson sentenced to 15 years for child sexual offences",
-      "date": "15 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/15/jeffrey-donaldson-sentenced-to-15-years-for-child-sexual-offences"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham asks for 'manual trawl' of records for former Man City links",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6x2ve4nr9pgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Government to publish Telegraph probes amid Burnham Abu Dhabi row",
-      "date": "15 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/government-to-publish-telegraph-probes-amid-burnham-abu-dhabi-row-13599517"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "'Massive challenge' to protect Donaldson from harm in jail",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwm243x4my4zo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Healey says surprise UK growth is 'sign of resilience' ahead of Budget",
-      "date": "15 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck8dz1me439no?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Digested week: No Nobel again for Trump but he looks a cert to retain Fifa peace prize | John Crace",
+      "date": "16 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/16/digested-week-no-nobel-trump-fifa-peace-prize"
     },
     {
       "id": "7",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "UK economy unexpectedly grows in August despite fall in consumer spending",
-      "date": "15 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/15/uk-economy-unexpectedly-grows-01-in-august-despite-fuel-hit-to-household-budgets"
+      "headline": "Banks expect to be hit with higher taxes in Budget",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c32l4k2xdvrzo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "No timeline for lifting Land Registry paywall as ownership remains opaque",
-      "date": "15 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/15/no-timeline-for-lifting-land-registry-paywall-as-ownership-remains-opaque"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham to urge Swinney to work with him on devolution during Scottish visit",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmlykv9pey7go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham v Swinney: will the UK PM overshadow the SNP\u2019s conference?",
-      "date": "15 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018A direct cultural threat\u2019: your questions on the rise of the right across Europe answered",
+      "date": "16 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/15/andy-burnham-scotland-visit-snp-conference"
+      "url": "https://www.theguardian.com/community/2026/oct/16/far-right-politics-rise-across-europe-afd-germany-elections-your-questions-answered"
     },
     {
       "id": "10",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK households have paid extra \u00a313,961 on bills since 2021 amid soaring inflation, TUC says",
-      "date": "15 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/15/uk-households-extra-bills-inflation-tuc"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Councils warned of risks of high street pedestrianisation",
+      "date": "16 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqdjv9pzzkd7o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
