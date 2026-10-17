@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-16T11:46:59Z",
+    "updated": "2026-10-17T11:03:55Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Minister warns people to save water amid drought",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq0ld4g0309go?at_medium=RSS&at_campaign=rss"
+      "headline": "Heathrow expansion would boost growth, chancellor says",
+      "date": "17 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/heathrow-expansion-would-boost-growth-chancellor-says-13600118"
     },
     {
       "id": "2",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "Equality watchdog writes to Greens over 'Zionism is racism' motion",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmly0np1gldvo?at_medium=RSS&at_campaign=rss"
+      "headline": "Plan to make firms pay more to train older workers than youth apprentices in England",
+      "date": "17 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/17/make-firms-pay-more-train-older-workers-youth-apprentices-england"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to deliver speech in Scotland on devolution \u2013 UK politics live",
-      "date": "16 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018Austerity is inevitably painful\u2019: How Michael Gove justifies his politics | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
+      "date": "17 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/16/andy-burnham-scotland-devolution-speech-reform-uk-documentary-jenrick-farage-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/commentisfree/audio/2026/oct/17/austerity-is-inevitably-painful-how-michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty-podcast"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham asks for 'manual trawl' of records for former Man City links",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6x2ve4nr9pgo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Brexit\u2019s back \u2013 but are British voters ready to contemplate a reversal?",
+      "date": "17 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/17/brexit-back-british-voters-ready-contemplate-reversal"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "'Massive challenge' to protect Donaldson from harm in jail",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwm243x4my4zo?at_medium=RSS&at_campaign=rss"
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Palestine Action post by wife of PM's adviser being assessed by police",
+      "date": "17 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/palestine-action-post-by-sarah-helms-wife-of-national-security-adviser-being-assessed-by-met-police-13600095"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Digested week: No Nobel again for Trump but he looks a cert to retain Fifa peace prize | John Crace",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Healey backs pro-growth case for Heathrow third runway after Burnham ducks issue",
       "date": "16 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/16/digested-week-no-nobel-trump-fifa-peace-prize"
+      "url": "https://www.theguardian.com/environment/2026/oct/16/healey-pro-growth-heathrow-third-runway-burnham"
     },
     {
       "id": "7",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Banks expect to be hit with higher taxes in Budget",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Police assess Palestine Action post by national security adviser's wife",
       "date": "16 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c32l4k2xdvrzo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/crn4el88y7p2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham to urge Swinney to work with him on devolution during Scottish visit",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reform councillor quits over offensive remarks",
       "date": "16 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmlykv9pey7go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c64g1803dkp7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018A direct cultural threat\u2019: your questions on the rise of the right across Europe answered",
+      "headline": "No 10 leaves option open to impose Chinese EV tariffs if UK joins EU scheme",
       "date": "16 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/community/2026/oct/16/far-right-politics-rise-across-europe-afd-germany-elections-your-questions-answered"
+      "url": "https://www.theguardian.com/politics/2026/oct/16/uk-chinese-electric-vehicle-ev-tariffs-eu-made-in-europe-scheme"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Councils warned of risks of high street pedestrianisation",
+      "headline": "Reform councillor calls TV report 'vote interference'",
       "date": "16 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqdjv9pzzkd7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqjdm2nylkz0o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
