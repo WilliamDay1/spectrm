@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-17T11:03:55Z",
+    "updated": "2026-10-18T11:34:25Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Heathrow expansion would boost growth, chancellor says",
-      "date": "17 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/heathrow-expansion-would-boost-growth-chancellor-says-13600118"
+      "headline": "Polanski says he will not overturn Green Party's 'Zionism is racism' motion",
+      "date": "18 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmn8w5v8yne4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Plan to make firms pay more to train older workers than youth apprentices in England",
-      "date": "17 Oct 2026",
+      "headline": "\u2018Damp squib\u2019: Ed Davey can breathe easy as Lib Dem leadership challenge fails to materialise",
+      "date": "18 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/17/make-firms-pay-more-train-older-workers-youth-apprentices-england"
+      "url": "https://www.theguardian.com/politics/2026/oct/18/lib-dem-opposition-ed-davey-leadership-challenge-fails-to-materialise"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Austerity is inevitably painful\u2019: How Michael Gove justifies his politics | Radical Thinking with Aditya Chakrabortty \u2013 podcast",
-      "date": "17 Oct 2026",
+      "headline": "Zack Polanski says application of Zionism is racist and no state has right to exist",
+      "date": "18 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/commentisfree/audio/2026/oct/17/austerity-is-inevitably-painful-how-michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty-podcast"
+      "url": "https://www.theguardian.com/politics/2026/oct/18/greens-zack-polanski-application-zionism-racist-no-state-right-to-exist"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Brexit\u2019s back \u2013 but are British voters ready to contemplate a reversal?",
-      "date": "17 Oct 2026",
+      "headline": "Aspiring Reform MP who said \u2018you cannot be Muslim and British\u2019 suspended",
+      "date": "18 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/17/brexit-back-british-voters-ready-contemplate-reversal"
+      "url": "https://www.theguardian.com/politics/2026/oct/18/aspiring-reform-mp-cannot-be-muslim-and-british-suspended"
     },
     {
       "id": "5",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Palestine Action post by wife of PM's adviser being assessed by police",
-      "date": "17 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/palestine-action-post-by-sarah-helms-wife-of-national-security-adviser-being-assessed-by-met-police-13600095"
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Ending corridor care in hospitals for children will be a priority, says health secretary",
+      "date": "18 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm2kezgd77qlo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Healey backs pro-growth case for Heathrow third runway after Burnham ducks issue",
-      "date": "16 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018Austerity is inevitably painful\u2019: How Michael Gove justifies his politics | Radical Thinking with Aditya Chakrabortty",
+      "date": "18 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/16/healey-pro-growth-heathrow-third-runway-burnham"
+      "url": "https://www.theguardian.com/news/audio/2026/oct/18/michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty"
     },
     {
       "id": "7",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Police assess Palestine Action post by national security adviser's wife",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crn4el88y7p2o?at_medium=RSS&at_campaign=rss"
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "NHS faces 'more challenging' winter than normal, minister warns",
+      "date": "18 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/nhs-faces-more-challenging-winter-after-summer-of-heatwaves-yvette-cooper-warns-13600504"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform councillor quits over offensive remarks",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c64g1803dkp7o?at_medium=RSS&at_campaign=rss"
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Yvette Cooper pledges \u00a3140m to boost urgent care as NHS faces \u2018tough\u2019 winter",
+      "date": "17 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/oct/18/yvette-cooper-140m-boost-urgent-care-nhs-tough-winter"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "No 10 leaves option open to impose Chinese EV tariffs if UK joins EU scheme",
-      "date": "16 Oct 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "No action to be taken against wife of PM\u2019s aide over Palestine Action post",
+      "date": "17 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/16/uk-chinese-electric-vehicle-ev-tariffs-eu-made-in-europe-scheme"
+      "url": "https://www.theguardian.com/politics/2026/oct/17/sarah-helm-jonathan-powell-palestine-action"
     },
     {
       "id": "10",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "Reform councillor calls TV report 'vote interference'",
-      "date": "16 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqjdm2nylkz0o?at_medium=RSS&at_campaign=rss"
+      "headline": "SNP says campaign for next referendum on independence \u2018has already begun\u2019",
+      "date": "17 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/17/snp-campaign-second-referendum-independence-john-swinney"
     }
   ]
 }
