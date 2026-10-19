@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-18T11:34:25Z",
+    "updated": "2026-10-19T13:48:47Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Polanski says he will not overturn Green Party's 'Zionism is racism' motion",
-      "date": "18 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmn8w5v8yne4o?at_medium=RSS&at_campaign=rss"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "No 10: Hegseth \u2018wrong\u2019 to say most non-US Nato soldiers didn\u2019t fight in Afghanistan \u2013 UK politics live",
+      "date": "19 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/19/andy-burnham-labour-children-welfare-neets-kemi-badenoch-conservatives-nigel-farage-reform-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Damp squib\u2019: Ed Davey can breathe easy as Lib Dem leadership challenge fails to materialise",
-      "date": "18 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/18/lib-dem-opposition-ed-davey-leadership-challenge-fails-to-materialise"
+      "headline": "Reform MSP quits party to sit as independent",
+      "date": "19 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq398dgkdg8xo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Zack Polanski says application of Zionism is racist and no state has right to exist",
-      "date": "18 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/18/greens-zack-polanski-application-zionism-racist-no-state-right-to-exist"
+      "headline": "Bereaved families could face 'unjust' tax bill after civil service pension delays",
+      "date": "19 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq1m4zz9e44go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Aspiring Reform MP who said \u2018you cannot be Muslim and British\u2019 suspended",
-      "date": "18 Oct 2026",
+      "headline": "Youth services in parts of England in state of emergency, children\u2019s commissioner says",
+      "date": "19 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/18/aspiring-reform-mp-cannot-be-muslim-and-british-suspended"
+      "url": "https://www.theguardian.com/society/2026/oct/19/children-services-state-of-emergency-hardest-places-england"
     },
     {
       "id": "5",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Ending corridor care in hospitals for children will be a priority, says health secretary",
-      "date": "18 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "PM says youth unemployment is a 'catastrophe and a moral failure'",
+      "date": "19 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm2kezgd77qlo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cq0melgpre23o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Austerity is inevitably painful\u2019: How Michael Gove justifies his politics | Radical Thinking with Aditya Chakrabortty",
-      "date": "18 Oct 2026",
+      "headline": "After the ITV expos\u00e9, see Reform\u2019s fixation with \u2018hate preachers\u2019 as the stinking hypocrisy it really is | Owen Jones",
+      "date": "19 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/oct/18/michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/19/reform-itv-hate-preachers-far-right-extremism-nigel-farage"
     },
     {
       "id": "7",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "NHS faces 'more challenging' winter than normal, minister warns",
-      "date": "18 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/nhs-faces-more-challenging-winter-after-summer-of-heatwaves-yvette-cooper-warns-13600504"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "People playing loud music on buses could face \u00a3100 fine",
+      "date": "19 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm89z008x7xdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Yvette Cooper pledges \u00a3140m to boost urgent care as NHS faces \u2018tough\u2019 winter",
-      "date": "17 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/18/yvette-cooper-140m-boost-urgent-care-nhs-tough-winter"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Plan to deal with Troubles legacy to be debated in House of Commons",
+      "date": "19 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm93zkqj7z39o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "No action to be taken against wife of PM\u2019s aide over Palestine Action post",
-      "date": "17 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham urged to launch inquiry into unequal health impacts of air pollution",
+      "date": "19 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/17/sarah-helm-jonathan-powell-palestine-action"
+      "url": "https://www.theguardian.com/environment/2026/oct/19/andy-burnham-government-inquiry-unequal-health-impacts-air-pollution"
     },
     {
       "id": "10",
-      "tag": "Devolution",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "SNP says campaign for next referendum on independence \u2018has already begun\u2019",
-      "date": "17 Oct 2026",
+      "headline": "Profit warnings from UK-listed firms at highest level in two years as Iran war drives up costs",
+      "date": "19 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/17/snp-campaign-second-referendum-independence-john-swinney"
+      "url": "https://www.theguardian.com/business/2026/oct/19/profit-warnings-from-uk-listed-firms-at-highest-level-in-two-years-as-iran-war-drives-up-costs"
     }
   ]
 }
