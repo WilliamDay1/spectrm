@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-19T13:48:47Z",
+    "updated": "2026-10-20T11:57:30Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "No 10: Hegseth \u2018wrong\u2019 to say most non-US Nato soldiers didn\u2019t fight in Afghanistan \u2013 UK politics live",
-      "date": "19 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/19/andy-burnham-labour-children-welfare-neets-kemi-badenoch-conservatives-nigel-farage-reform-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK to deploy jets to defend Saudi Arabia from Houthi attacks",
+      "date": "20 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckr5yqe1r1llo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform MSP quits party to sit as independent",
-      "date": "19 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq398dgkdg8xo?at_medium=RSS&at_campaign=rss"
+      "headline": "Covid revealed \u2018underlying fragility of adult social care workforce\u2019, inquiry finds \u2013 UK politics live",
+      "date": "20 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/20/kemi-badenoch-john-healey-capital-gains-tax-budget-covid-inquiry-care-homes-uk-politics-latest-news"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Bereaved families could face 'unjust' tax bill after civil service pension delays",
-      "date": "19 Oct 2026",
+      "headline": "Jobless rate falls but small firms cut back hiring",
+      "date": "20 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq1m4zz9e44go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6eq327pzr53o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Youth services in parts of England in state of emergency, children\u2019s commissioner says",
-      "date": "19 Oct 2026",
+      "headline": "UK to deploy fighter jets to protect Saudi Arabia from Houthi attacks",
+      "date": "20 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/19/children-services-state-of-emergency-hardest-places-england"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/20/uk-raf-typhoon-fighters-saudi-arabia-houthi-attacks"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "PM says youth unemployment is a 'catastrophe and a moral failure'",
-      "date": "19 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq0melgpre23o?at_medium=RSS&at_campaign=rss"
+      "headline": "UK government failures led to Covid spreading \u2018like wildfire\u2019 in care homes, inquiry finds",
+      "date": "20 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/20/uk-government-failures-led-to-covid-spreading-like-wildfire-in-care-homes-inquiry-finds"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "After the ITV expos\u00e9, see Reform\u2019s fixation with \u2018hate preachers\u2019 as the stinking hypocrisy it really is | Owen Jones",
-      "date": "19 Oct 2026",
+      "headline": "Thames Water creditors secure former Labour minister to drive rescue deal",
+      "date": "20 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/19/reform-itv-hate-preachers-far-right-extremism-nigel-farage"
+      "url": "https://www.theguardian.com/business/2026/oct/20/thames-water-creditors-former-labour-minister-john-hutton-rescue-deal"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "People playing loud music on buses could face \u00a3100 fine",
-      "date": "19 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Chancellor rejects calls to raise Capital Gains Tax in Budget",
+      "date": "20 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm89z008x7xdo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c50me4w4x1vyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Plan to deal with Troubles legacy to be debated in House of Commons",
-      "date": "19 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm93zkqj7z39o?at_medium=RSS&at_campaign=rss"
+      "headline": "Ex-Greens co-leader urges council groups to reject Zionism policy",
+      "date": "20 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/20/greens-adrian-ramsay-council-groups-reject-zionism-racism-policy"
     },
     {
       "id": "9",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham urged to launch inquiry into unequal health impacts of air pollution",
-      "date": "19 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/19/andy-burnham-government-inquiry-unequal-health-impacts-air-pollution"
+      "headline": "Burnham vows end to 'rip-off parking charges' under new rules",
+      "date": "20 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck87ze7wl4qno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Profit warnings from UK-listed firms at highest level in two years as Iran war drives up costs",
-      "date": "19 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Surprise drop in UK unemployment to 4.7% as John Healey\u2019s first budget looms",
+      "date": "20 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/19/profit-warnings-from-uk-listed-firms-at-highest-level-in-two-years-as-iran-war-drives-up-costs"
+      "url": "https://www.theguardian.com/business/2026/oct/20/uk-unemployment-rate-surprise-drop"
     }
   ]
 }
