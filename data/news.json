@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-20T11:57:30Z",
+    "updated": "2026-10-21T12:12:23Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK to deploy jets to defend Saudi Arabia from Houthi attacks",
-      "date": "20 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckr5yqe1r1llo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham and Badenoch clash over Jackdaw gasfield and inflation \u2013 UK politics live",
+      "date": "21 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/21/jackdaw-gasfield-labour-andy-burnham-zack-polanski-uk-politics-latest-news"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Covid revealed \u2018underlying fragility of adult social care workforce\u2019, inquiry finds \u2013 UK politics live",
-      "date": "20 Oct 2026",
+      "headline": "Bereaved civil service families could face \u2018unjust\u2019 tax bills due to pension scheme delays",
+      "date": "21 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/20/kemi-badenoch-john-healey-capital-gains-tax-budget-covid-inquiry-care-homes-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/2026/oct/21/bereaved-civil-service-families-tax-bills-pension-scheme-delays-capita-death-in-benefit-claims"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Jobless rate falls but small firms cut back hiring",
-      "date": "20 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6eq327pzr53o?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Stratford International on track to get cross-Channel trains in budget boost",
+      "date": "21 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/21/stratford-internationalinternational-trains-budget-boost"
     },
     {
       "id": "4",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "UK to deploy fighter jets to protect Saudi Arabia from Houthi attacks",
-      "date": "20 Oct 2026",
+      "headline": "Cabinet split widens as minister refuses to back Shabana Mahmood\u2019s immigration plans",
+      "date": "21 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/20/uk-raf-typhoon-fighters-saudi-arabia-houthi-attacks"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/21/cabinet-split-shabana-mahmood-immigration-plans-labour-miatta-fahnbulleh"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK government failures led to Covid spreading \u2018like wildfire\u2019 in care homes, inquiry finds",
-      "date": "20 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/20/uk-government-failures-led-to-covid-spreading-like-wildfire-in-care-homes-inquiry-finds"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Inflation and government borrowing highest for a year ahead of next week's Budget",
+      "date": "21 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6gel2xv4493o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Thames Water creditors secure former Labour minister to drive rescue deal",
-      "date": "20 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/20/thames-water-creditors-former-labour-minister-john-hutton-rescue-deal"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Chris Mason: Jackdaw approved but tricky energy trade-offs remain",
+      "date": "21 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cked35dz47y7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Chancellor rejects calls to raise Capital Gains Tax in Budget",
-      "date": "20 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c50me4w4x1vyo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK approves Jackdaw gasfield in North Sea",
+      "date": "21 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/environment/2026/oct/21/jackdaw-gasfield-in-north-sea-approved"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ex-Greens co-leader urges council groups to reject Zionism policy",
-      "date": "20 Oct 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Climate campaigners condemn \u2018maddening\u2019 decision to approve Jackdaw gasfield",
+      "date": "21 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/20/greens-adrian-ramsay-council-groups-reject-zionism-racism-policy"
+      "url": "https://www.theguardian.com/environment/2026/oct/21/jackdaw-gasfield-climate-campaigners-condemn-decision-north-sea-mining"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham vows end to 'rip-off parking charges' under new rules",
-      "date": "20 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck87ze7wl4qno?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK government borrowing rises to \u00a324.5bn as John Healey prepares for budget",
+      "date": "21 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/21/uk-government-borrowing-rises-john-healey-budget"
     },
     {
       "id": "10",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Surprise drop in UK unemployment to 4.7% as John Healey\u2019s first budget looms",
-      "date": "20 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "From strife-torn France to the UK, rightwing populists win when they stir chaos while promising order  | Rafael Behr",
+      "date": "21 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/20/uk-unemployment-rate-surprise-drop"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/21/france-uk-rightwing-populists-marine-le-pen-donald-trump"
     }
   ]
 }
