@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-21T12:12:23Z",
+    "updated": "2026-10-22T12:15:29Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham and Badenoch clash over Jackdaw gasfield and inflation \u2013 UK politics live",
-      "date": "21 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Minister says 32 government services offline due to PHP code flaw \u2013 UK politics live",
+      "date": "22 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/21/jackdaw-gasfield-labour-andy-burnham-zack-polanski-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/22/john-healey-chancellor-budget-red-tape-small-businsesses-jackdaw-oil-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Bereaved civil service families could face \u2018unjust\u2019 tax bills due to pension scheme delays",
-      "date": "21 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Save high street by taxing online sales at higher rate, Burnham urged",
+      "date": "22 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/21/bereaved-civil-service-families-tax-bills-pension-scheme-delays-capita-death-in-benefit-claims"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/22/save-high-street-tax-online-sales-burnham-urged"
     },
     {
       "id": "3",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Stratford International on track to get cross-Channel trains in budget boost",
-      "date": "21 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/21/stratford-internationalinternational-trains-budget-boost"
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "MI5 spied on NHS founder Nye Bevan for more than 20 years, newly released files show",
+      "date": "22 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3n049jr2ge5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Cabinet split widens as minister refuses to back Shabana Mahmood\u2019s immigration plans",
-      "date": "21 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/21/cabinet-split-shabana-mahmood-immigration-plans-labour-miatta-fahnbulleh"
+      "headline": "Tougher punishments for criminals who refuse to attend sentencing backed by victim's family",
+      "date": "22 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cr74p0zkd4jjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "Inflation and government borrowing highest for a year ahead of next week's Budget",
-      "date": "21 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6gel2xv4493o?at_medium=RSS&at_campaign=rss"
+      "headline": "You be the chancellor: play our budget game to see if you can balance the books",
+      "date": "22 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/oct/22/uk-budget-game-2026-john-healey-labour-andy-burnham"
     },
     {
       "id": "6",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Chris Mason: Jackdaw approved but tricky energy trade-offs remain",
-      "date": "21 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cked35dz47y7o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Wanted: new No 10 adviser to help citizens deal with rise of AI",
+      "date": "22 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/22/downing-street-advisers-andy-burnham-ai"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK approves Jackdaw gasfield in North Sea",
-      "date": "21 Oct 2026",
+      "headline": "Everyone hates Oxford Street. Will pedestrianisation save it?",
+      "date": "22 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/21/jackdaw-gasfield-in-north-sea-approved"
+      "url": "https://www.theguardian.com/news/2026/oct/22/everyone-hates-oxford-street-will-pedestrianisation-save-it"
     },
     {
       "id": "8",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Climate campaigners condemn \u2018maddening\u2019 decision to approve Jackdaw gasfield",
-      "date": "21 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/21/jackdaw-gasfield-climate-campaigners-condemn-decision-north-sea-mining"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "UK's gaps in Arctic defence leave it open to Russian attacks, committee warns",
+      "date": "22 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmj471wgpky7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK government borrowing rises to \u00a324.5bn as John Healey prepares for budget",
-      "date": "21 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Are the Tories back? - podcast",
+      "date": "22 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/21/uk-government-borrowing-rises-john-healey-budget"
+      "url": "https://www.theguardian.com/news/audio/2026/oct/22/are-the-tories-back-podcast"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "From strife-torn France to the UK, rightwing populists win when they stir chaos while promising order  | Rafael Behr",
-      "date": "21 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/21/france-uk-rightwing-populists-marine-le-pen-donald-trump"
+      "headline": "1800s law must be updated to protect 'backbone' of UK - MP",
+      "date": "22 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/uk-seeks-tougher-punishments-to-deter-undersea-pipeline-attacks-13602075"
     }
   ]
 }
