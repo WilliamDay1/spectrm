@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-22T12:15:29Z",
+    "updated": "2026-10-23T11:56:53Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Minister says 32 government services offline due to PHP code flaw \u2013 UK politics live",
-      "date": "22 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/22/john-healey-chancellor-budget-red-tape-small-businsesses-jackdaw-oil-latest-news-updates"
+      "headline": "Earnings limit of up to \u00a3140K for first-time buyers loan scheme",
+      "date": "23 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Save high street by taxing online sales at higher rate, Burnham urged",
-      "date": "22 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/22/save-high-street-tax-online-sales-burnham-urged"
+      "headline": "Burnham suggests stocking up on tinned food and bottled water",
+      "date": "23 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckr5yz2pqqppo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "MI5 spied on NHS founder Nye Bevan for more than 20 years, newly released files show",
-      "date": "22 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3n049jr2ge5o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham warns of \u2018winter of greater flooding\u2019 \u2013 UK politics live",
+      "date": "23 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/23/uk-warnings-stockpile-storm-austen-treasury-autumn-budget-latest-news-updates"
     },
     {
       "id": "4",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Tougher punishments for criminals who refuse to attend sentencing backed by victim's family",
-      "date": "22 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr74p0zkd4jjo?at_medium=RSS&at_campaign=rss"
+      "headline": "This man has quit Badenoch\u2019s increasingly hard-right Tory party \u2013 others should be brave enough to do the same | Polly Toynbee",
+      "date": "23 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/23/tory-party-kemi-badenoch-quit-andrew-boff"
     },
     {
       "id": "5",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "You be the chancellor: play our budget game to see if you can balance the books",
-      "date": "22 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/oct/22/uk-budget-game-2026-john-healey-labour-andy-burnham"
+      "tag": "Devolution",
+      "tag_class": "tc-c",
+      "headline": "Wales plans to ban steel pylons as government launches consultation",
+      "date": "23 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c9x28dgj2r0go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Wanted: new No 10 adviser to help citizens deal with rise of AI",
-      "date": "22 Oct 2026",
+      "headline": "Briton facing forced separation from baby son after Sweden orders his deportation",
+      "date": "23 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/22/downing-street-advisers-andy-burnham-ai"
+      "url": "https://www.theguardian.com/politics/2026/oct/23/briton-forced-separation-baby-son-sweden-deportation-brexit"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Everyone hates Oxford Street. Will pedestrianisation save it?",
-      "date": "22 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/2026/oct/22/everyone-hates-oxford-street-will-pedestrianisation-save-it"
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Mounjaro rollout on NHS needs 'urgent' boost, say MPs",
+      "date": "23 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/mounjaro-rollout-on-nhs-needs-urgent-boost-say-mps-13602553"
     },
     {
       "id": "8",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "UK's gaps in Arctic defence leave it open to Russian attacks, committee warns",
-      "date": "22 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmj471wgpky7o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "EU leaders to press Burnham to pay more towards Ukraine\u2019s defence",
+      "date": "23 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/oct/23/eu-uk-summit-burnham-ukraine-defence"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Are the Tories back? - podcast",
-      "date": "22 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/audio/2026/oct/22/are-the-tories-back-podcast"
+      "headline": "Don't leave AI to tech bros and oligarchs, UK's AI minister says",
+      "date": "23 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck7vp8g38y7vo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "1800s law must be updated to protect 'backbone' of UK - MP",
-      "date": "22 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/uk-seeks-tougher-punishments-to-deter-undersea-pipeline-attacks-13602075"
+      "headline": "Chancellor says he will cut 'pointless paperwork' to save businesses up to \u00a3800m",
+      "date": "23 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm5ynpywq1e3o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
