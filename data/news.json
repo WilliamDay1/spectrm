@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-23T11:56:53Z",
+    "updated": "2026-10-24T11:26:29Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Earnings limit of up to \u00a3140K for first-time buyers loan scheme",
-      "date": "23 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?at_medium=RSS&at_campaign=rss"
+      "headline": "Is London really the most-taxed city? Banks accused of cherrypicking data",
+      "date": "24 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/24/banking-lobby-group-accused-cherry-picking-data-healey-tax-rise"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham suggests stocking up on tinned food and bottled water",
-      "date": "23 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckr5yz2pqqppo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "No unions, low taxes: why some of Britain\u2019s top chefs are opening outposts in Gulf states",
+      "date": "24 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/food/2026/oct/24/uk-tsunami-taxes-top-london-restaurants-expand-abroad"
     },
     {
       "id": "3",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Andy Burnham warns of \u2018winter of greater flooding\u2019 \u2013 UK politics live",
-      "date": "23 Oct 2026",
+      "headline": "Andy Burnham has come for the headphone-dodgers. But is there any evidence fines work?",
+      "date": "24 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/23/uk-warnings-stockpile-storm-austen-treasury-autumn-budget-latest-news-updates"
+      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/24/andy-burnham-has-come-for-the-headphone-dodgers-but-is-there-any-evidence-fines-work"
     },
     {
       "id": "4",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "This man has quit Badenoch\u2019s increasingly hard-right Tory party \u2013 others should be brave enough to do the same | Polly Toynbee",
-      "date": "23 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/23/tory-party-kemi-badenoch-quit-andrew-boff"
-    },
-    {
-      "id": "5",
       "tag": "Devolution",
       "tag_class": "tc-c",
       "headline": "Wales plans to ban steel pylons as government launches consultation",
-      "date": "23 Oct 2026",
+      "date": "24 Oct 2026",
       "source": "BBC Politics",
       "url": "https://www.bbc.co.uk/news/articles/c9x28dgj2r0go?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "5",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Fine \u2018headphone dodgers\u2019 if you will, but to really tackle antisocial behaviour, Britain should look to Japan | Emily Bratt",
+      "date": "24 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/24/headphone-dodgers-antisocial-behaviour-britain-japan"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Briton facing forced separation from baby son after Sweden orders his deportation",
-      "date": "23 Oct 2026",
+      "headline": "Tinned food, loo roll and power banks: the Brits following advice to stockpile",
+      "date": "24 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/23/briton-forced-separation-baby-son-sweden-deportation-brexit"
+      "url": "https://www.theguardian.com/society/2026/oct/24/tinned-food-loo-roll-power-banks-brits-stockpiling-government-advice"
     },
     {
       "id": "7",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Mounjaro rollout on NHS needs 'urgent' boost, say MPs",
-      "date": "23 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/mounjaro-rollout-on-nhs-needs-urgent-boost-say-mps-13602553"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "What essentials to keep, what rubbish to get rid of? Burnham, Badenoch, Farage don\u2019t know either | Robert Hutton",
+      "date": "24 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/24/burnham-badenoch-farage-essentials-truss"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "EU leaders to press Burnham to pay more towards Ukraine\u2019s defence",
-      "date": "23 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Most levelling up projects still unfinished years after funding allocated",
+      "date": "24 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/oct/23/eu-uk-summit-burnham-ukraine-defence"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/24/most-conservative-party-levelling-up-projects-unfinished-funding-allocation"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Don't leave AI to tech bros and oligarchs, UK's AI minister says",
-      "date": "23 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck7vp8g38y7vo?at_medium=RSS&at_campaign=rss"
+      "headline": "At Aberfan, I saw fathers digging for their missing children. And the lessons society should have learned, it hasn\u2019t | John Humphrys",
+      "date": "24 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/24/aberfan-disaster-missing-children-deaths-john-humphrys"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Chancellor says he will cut 'pointless paperwork' to save businesses up to \u00a3800m",
-      "date": "23 Oct 2026",
+      "headline": "Tory activist in 'contract killing broker' claim had worked for party HQ",
+      "date": "24 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm5ynpywq1e3o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c63r5779vyl9o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
