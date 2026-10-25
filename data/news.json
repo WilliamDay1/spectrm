@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-24T11:26:29Z",
+    "updated": "2026-10-25T11:54:50Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Is London really the most-taxed city? Banks accused of cherrypicking data",
-      "date": "24 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/24/banking-lobby-group-accused-cherry-picking-data-healey-tax-rise"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham open to 'honest discussion' on EU free movement",
+      "date": "25 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8e36kyk1qx5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "No unions, low taxes: why some of Britain\u2019s top chefs are opening outposts in Gulf states",
-      "date": "24 Oct 2026",
+      "headline": "Demand for UK government action 10 months after British man\u2019s death in Grenada",
+      "date": "25 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/food/2026/oct/24/uk-tsunami-taxes-top-london-restaurants-expand-abroad"
+      "url": "https://www.theguardian.com/world/2026/oct/25/demand-uk-government-action-after-british-man-death-grenada"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham has come for the headphone-dodgers. But is there any evidence fines work?",
-      "date": "24 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/24/andy-burnham-has-come-for-the-headphone-dodgers-but-is-there-any-evidence-fines-work"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Budget to include \u00a31bn for social and affordable housing",
+      "date": "25 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqm24j9y9zn7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Devolution",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Wales plans to ban steel pylons as government launches consultation",
-      "date": "24 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c9x28dgj2r0go?at_medium=RSS&at_campaign=rss"
+      "headline": "The boss whose twice-bust business appears to be back despite \u00a33m debts",
+      "date": "25 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/25/recruitment-boss-twice-bust-business-resurface-debts"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Fine \u2018headphone dodgers\u2019 if you will, but to really tackle antisocial behaviour, Britain should look to Japan | Emily Bratt",
-      "date": "24 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/24/headphone-dodgers-antisocial-behaviour-britain-japan"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Four ways Labour could raise money in the Budget without hiking income tax",
+      "date": "25 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c65yn9p55np2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tinned food, loo roll and power banks: the Brits following advice to stockpile",
-      "date": "24 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/24/tinned-food-loo-roll-power-banks-brits-stockpiling-government-advice"
+      "headline": "PM open to 'honest discussion' about return to EU free movement",
+      "date": "25 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/pm-open-to-honest-discussion-about-return-to-free-movement-with-eu-13603444"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "What essentials to keep, what rubbish to get rid of? Burnham, Badenoch, Farage don\u2019t know either | Robert Hutton",
-      "date": "24 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/24/burnham-badenoch-farage-essentials-truss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour unveils \u00a3285m funding boost to 'shift power' to local leaders",
+      "date": "25 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/labour-unveils-285m-funding-boost-for-local-communities-so-decisions-can-be-made-closer-to-home-13603437"
     },
     {
       "id": "8",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "Most levelling up projects still unfinished years after funding allocated",
-      "date": "24 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/24/most-conservative-party-levelling-up-projects-unfinished-funding-allocation"
+      "headline": "Students like new tenancy freedoms - but landlords warn of higher rents",
+      "date": "25 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqx29lnzr48po?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "At Aberfan, I saw fathers digging for their missing children. And the lessons society should have learned, it hasn\u2019t | John Humphrys",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham says he wants \u2018honest discussion\u2019 about freedom of movement with EU",
       "date": "24 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/24/aberfan-disaster-missing-children-deaths-john-humphrys"
+      "url": "https://www.theguardian.com/politics/2026/oct/25/andy-burnham-says-he-wants-honest-discussion-about-freedom-of-movement-with-eu"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Tory activist in 'contract killing broker' claim had worked for party HQ",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Healey\u2019s first budget to include big devolution package to boost growth",
       "date": "24 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c63r5779vyl9o?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/24/andy-burnham-john-healey-first-budget-devolution-growth-package"
     }
   ]
 }
