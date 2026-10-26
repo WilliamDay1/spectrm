@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-25T11:54:50Z",
+    "updated": "2026-10-26T13:27:10Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham open to 'honest discussion' on EU free movement",
-      "date": "25 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8e36kyk1qx5o?at_medium=RSS&at_campaign=rss"
+      "headline": "I would like to rejoin EU, says Burnham, but \u2018British public are the bosses\u2019 \u2013 UK politics live",
+      "date": "26 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/oct/26/andy-burnham-labour-brexit-eu-homelessness-immigration-budget-rosebank-reform-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Demand for UK government action 10 months after British man\u2019s death in Grenada",
-      "date": "25 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/oct/25/demand-uk-government-action-after-british-man-death-grenada"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham leaves door open to referendum on EU free movement",
+      "date": "26 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx240dpzv009o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Budget to include \u00a31bn for social and affordable housing",
-      "date": "25 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Funding set to double for plan to get rough sleepers off streets by Christmas",
+      "date": "26 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqm24j9y9zn7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c3n04yxn2yqro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "The boss whose twice-bust business appears to be back despite \u00a33m debts",
-      "date": "25 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/25/recruitment-boss-twice-bust-business-resurface-debts"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Healey to shield low-income pensioners from income tax in the Budget",
+      "date": "26 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck98zp7zeq65o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Four ways Labour could raise money in the Budget without hiking income tax",
-      "date": "25 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c65yn9p55np2o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "If the PM reboots the UK for working-class people, unions will be with him. But the time for talking is over | Andrea Egan",
+      "date": "26 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/26/andy-burnham-reboot-uk-working-class-people-budget-unions"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "PM open to 'honest discussion' about return to EU free movement",
-      "date": "25 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/pm-open-to-honest-discussion-about-return-to-free-movement-with-eu-13603444"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Drive reindustrialisation from No 10 North or risk failure, MPs tell Burnham",
+      "date": "26 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/26/drive-reindustrialisation-from-no-10-north-labour-mps-tell-burnham"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour unveils \u00a3285m funding boost to 'shift power' to local leaders",
-      "date": "25 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/labour-unveils-285m-funding-boost-for-local-communities-so-decisions-can-be-made-closer-to-home-13603437"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Brexit deal is not good enough for British public, says Andy Burnham",
+      "date": "26 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/26/brexit-deal-not-good-enough-andy-burnham"
     },
     {
       "id": "8",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Students like new tenancy freedoms - but landlords warn of higher rents",
-      "date": "25 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqx29lnzr48po?at_medium=RSS&at_campaign=rss"
+      "headline": "UK poised to miss reduced aid spending target of 0.3% of national income",
+      "date": "26 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/oct/26/uk-international-aid-target-spending-shortfall-budget-research"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham says he wants \u2018honest discussion\u2019 about freedom of movement with EU",
-      "date": "24 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Higher training costs for older workers risks plan to tackle youth jobs crisis, employers say",
+      "date": "26 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/25/andy-burnham-says-he-wants-honest-discussion-about-freedom-of-movement-with-eu"
+      "url": "https://www.theguardian.com/education/2026/oct/26/training-costs-apprenticeships-older-workers-youth-jobs-crisis-neet"
     },
     {
       "id": "10",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Healey\u2019s first budget to include big devolution package to boost growth",
-      "date": "24 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "We\u2019ve made Oxford Street traffic-free \u2013 and that\u2019s just the start. Soon there\u2019ll be green spaces for arts and music too | Sadiq Khan",
+      "date": "26 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/24/andy-burnham-john-healey-first-budget-devolution-growth-package"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/26/oxford-street-car-traffic-ban-new-plans-2027-sadiq-khan"
     }
   ]
 }
