@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-26T13:27:10Z",
+    "updated": "2026-10-27T12:34:37Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "I would like to rejoin EU, says Burnham, but \u2018British public are the bosses\u2019 \u2013 UK politics live",
-      "date": "26 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Tories dismiss PM\u2019s budget \u2018everyday fixes\u2019 as little more than \u2018cheaper gherkins\u2019, and \u2018an insult to families\u2019 \u2013 UK politics live",
+      "date": "27 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/26/andy-burnham-labour-brexit-eu-homelessness-immigration-budget-rosebank-reform-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/27/budget-burnham-healey-everday-fixes-gherkins-conservatives-miliband-carers-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham leaves door open to referendum on EU free movement",
-      "date": "26 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK and EU officials to discuss freedom of movement",
+      "date": "27 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cx240dpzv009o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmqlngkz0elxo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Funding set to double for plan to get rough sleepers off streets by Christmas",
-      "date": "26 Oct 2026",
+      "headline": "Chancellor to cut tariffs on some food and freeze fuel duty to give families 'breathing space'",
+      "date": "27 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3n04yxn2yqro?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Healey to shield low-income pensioners from income tax in the Budget",
-      "date": "26 Oct 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "MPs and MSP detained by Israel and barred from entering West Bank",
+      "date": "27 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck98zp7zeq65o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqg7xenmde78o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "If the PM reboots the UK for working-class people, unions will be with him. But the time for talking is over | Andrea Egan",
-      "date": "26 Oct 2026",
+      "headline": "Why won't MPs tax the rich? We asked them \u2013 and their answers gave us hope | Faiza Shaheen",
+      "date": "27 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/26/andy-burnham-reboot-uk-working-class-people-budget-unions"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/27/mps-tax-super-rich-wealthy-voters-reform-budget-burnham"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Drive reindustrialisation from No 10 North or risk failure, MPs tell Burnham",
-      "date": "26 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK officials discussing options including free movement with EU ahead of summit",
+      "date": "27 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/26/drive-reindustrialisation-from-no-10-north-labour-mps-tell-burnham"
+      "url": "https://www.theguardian.com/politics/2026/oct/27/uk-eu-relationship-talks-summit-free-movement-jonathan-reynolds"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Brexit deal is not good enough for British public, says Andy Burnham",
-      "date": "26 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Number of UK businesses in financial distress \u2018at two-decade high\u2019",
+      "date": "27 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/26/brexit-deal-not-good-enough-andy-burnham"
+      "url": "https://www.theguardian.com/business/2026/oct/27/number-of-uk-businesses-in-financial-distress-at-two-decade-high-budget"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK poised to miss reduced aid spending target of 0.3% of national income",
-      "date": "26 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/26/uk-international-aid-target-spending-shortfall-budget-research"
+      "headline": "Independent review announced into murder of student Henry Nowak",
+      "date": "27 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cv70pnw784x7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Higher training costs for older workers risks plan to tackle youth jobs crisis, employers say",
-      "date": "26 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham in danger of sleepwalking into climate disaster, say campaigners",
+      "date": "27 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/education/2026/oct/26/training-costs-apprenticeships-older-workers-youth-jobs-crisis-neet"
+      "url": "https://www.theguardian.com/environment/2026/oct/27/burnham-sleepwalking-climate-disaster-campaigners"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "We\u2019ve made Oxford Street traffic-free \u2013 and that\u2019s just the start. Soon there\u2019ll be green spaces for arts and music too | Sadiq Khan",
-      "date": "26 Oct 2026",
+      "headline": "UK government met 137 businesses over AI datacentres \u2013 but no environmental groups",
+      "date": "27 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/26/oxford-street-car-traffic-ban-new-plans-2027-sadiq-khan"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/27/uk-government-environmental-groups-ai-datacentres-expansion-plans-investigation"
     }
   ]
 }
