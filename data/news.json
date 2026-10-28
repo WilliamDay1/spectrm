@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-27T12:34:37Z",
+    "updated": "2026-10-28T13:22:48Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "Tories dismiss PM\u2019s budget \u2018everyday fixes\u2019 as little more than \u2018cheaper gherkins\u2019, and \u2018an insult to families\u2019 \u2013 UK politics live",
-      "date": "27 Oct 2026",
+      "headline": "Budget 2026: John Healey offers \u00a3100 payment to households to help navigate \u2018global economic storms\u2019",
+      "date": "28 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/27/budget-burnham-healey-everday-fixes-gherkins-conservatives-miliband-carers-latest-news-updates"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/28/budget-2026-john-healey-offers-100-payment-to-households-to-help-navigate-global-economic-storms"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK and EU officials to discuss freedom of movement",
-      "date": "27 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmqlngkz0elxo?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Budget 2026 live: Healey announces \u00a3100 energy payment for millions and 3% rise in bank surcharge",
+      "date": "28 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/live/2026/oct/28/budget-2026-latest-updates-john-healey-andy-burnham-labour-uk-politics"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Chancellor to cut tariffs on some food and freeze fuel duty to give families 'breathing space'",
-      "date": "27 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Budget 2026: Key points at a glance",
+      "date": "28 Oct 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "MPs and MSP detained by Israel and barred from entering West Bank",
-      "date": "27 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqg7xenmde78o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Business secretary writes to Poundland owner as administration fears build",
+      "date": "28 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/oct/28/business-secretary-jonathan-reynolds-poundland-owner-gordon-brothers-administration-fears"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Why won't MPs tax the rich? We asked them \u2013 and their answers gave us hope | Faiza Shaheen",
-      "date": "27 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Healey poised to overturn cut to cash Isa allowance in first budget",
+      "date": "28 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/27/mps-tax-super-rich-wealthy-voters-reform-budget-burnham"
+      "url": "https://www.theguardian.com/money/2026/oct/28/healey-poised-to-overturn-cut-to-cash-isa-allowance-in-first-budget"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK officials discussing options including free movement with EU ahead of summit",
-      "date": "27 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/oct/27/uk-eu-relationship-talks-summit-free-movement-jonathan-reynolds"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Main budget announcements at a glance",
+      "date": "28 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/main-budget-announcements-at-a-glance-13604706"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Number of UK businesses in financial distress \u2018at two-decade high\u2019",
-      "date": "27 Oct 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Yvette Cooper drops plans to abolish NHS patient champion after outcry",
+      "date": "28 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/27/number-of-uk-businesses-in-financial-distress-at-two-decade-high-budget"
+      "url": "https://www.theguardian.com/society/2026/oct/28/yvette-cooper-drops-plans-abolish-healthwatch-england"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Independent review announced into murder of student Henry Nowak",
-      "date": "27 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cv70pnw784x7o?at_medium=RSS&at_campaign=rss"
+      "headline": "John Healey to end standing charges on gas bills for 23m homes",
+      "date": "28 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/money/2026/oct/28/john-healey-to-end-standing-charges-on-gas-bills-ofgem-budget"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham in danger of sleepwalking into climate disaster, say campaigners",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Landline switchover could cut people off in emergency, minister warned",
       "date": "27 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/27/burnham-sleepwalking-climate-disaster-campaigners"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6x29g1nlr51o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK government met 137 businesses over AI datacentres \u2013 but no environmental groups",
+      "headline": "What do we know about Chancellor John Healey?",
       "date": "27 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/27/uk-government-environmental-groups-ai-datacentres-expansion-plans-investigation"
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/videos/cwz0vgjj14lmo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
