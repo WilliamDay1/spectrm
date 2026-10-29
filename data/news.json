@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-10-28T13:22:48Z",
+    "updated": "2026-10-29T13:31:47Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Budget 2026: John Healey offers \u00a3100 payment to households to help navigate \u2018global economic storms\u2019",
-      "date": "28 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Healey accepts \u2018hard decisions\u2019 ahead as thinktank says 2020s set to be worst decade for living standards growth \u2013 UK politics live",
+      "date": "29 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/28/budget-2026-john-healey-offers-100-payment-to-households-to-help-navigate-global-economic-storms"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/29/budget-john-healey-labour-uk-politics-latest-news"
     },
     {
       "id": "2",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Budget 2026 live: Healey announces \u00a3100 energy payment for millions and 3% rise in bank surcharge",
-      "date": "28 Oct 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "HMRC puts 200 billionaires on UK tax crackdown hitlist",
+      "date": "29 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/live/2026/oct/28/budget-2026-latest-updates-john-healey-andy-burnham-labour-uk-politics"
+      "url": "https://www.theguardian.com/news/2026/oct/29/hmrc-billionaires-uk-tax-crackdown-compliance-managers"
     },
     {
       "id": "3",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "Budget 2026: Key points at a glance",
-      "date": "28 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss"
+      "headline": "John Healey faces questions over budget leak that moved bank share prices",
+      "date": "29 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/29/john-healey-faces-questions-over-budget-leak-that-moved-bank-share-prices"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Business secretary writes to Poundland owner as administration fears build",
-      "date": "28 Oct 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Is this play-safe budget a sign that the prime minister is planning an early election? | Larry Elliott",
+      "date": "29 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/oct/28/business-secretary-jonathan-reynolds-poundland-owner-gordon-brothers-administration-fears"
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/29/budget-prime-minister-early-election-andy-burnham"
     },
     {
       "id": "5",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Healey poised to overturn cut to cash Isa allowance in first budget",
-      "date": "28 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/oct/28/healey-poised-to-overturn-cut-to-cash-isa-allowance-in-first-budget"
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Treasury will not commit to reducing welfare bill before next election",
+      "date": "29 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm5ynwkjgpz3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "Main budget announcements at a glance",
-      "date": "28 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/main-budget-announcements-at-a-glance-13604706"
+      "headline": "\u2018Scattergun\u2019 budget will still leave Britons facing higher energy bills, says thinktank",
+      "date": "29 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/29/scattergun-budget-leave-britons-higher-energy-bills-thinktank"
     },
     {
       "id": "7",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Yvette Cooper drops plans to abolish NHS patient champion after outcry",
-      "date": "28 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/oct/28/yvette-cooper-drops-plans-abolish-healthwatch-england"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Budget 2026: We answer your questions",
+      "date": "29 Oct 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/budget-2026-we-answer-your-questions-13605003"
     },
     {
       "id": "8",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "John Healey to end standing charges on gas bills for 23m homes",
-      "date": "28 Oct 2026",
+      "headline": "Healey vows to cut welfare bill before next election with \u2018tough\u2019 approach to young people",
+      "date": "29 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/oct/28/john-healey-to-end-standing-charges-on-gas-bills-ofgem-budget"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/29/healey-cut-welfare-bill-tough-approach-young-people-accept-jobs"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Landline switchover could cut people off in emergency, minister warned",
-      "date": "27 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6x29g1nlr51o?at_medium=RSS&at_campaign=rss"
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Angry Labour MPs urge leadership not to overrule energy secretary on Rosebank",
+      "date": "29 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/environment/2026/oct/29/labour-mps-rosebank-oilfield-decision-miatta-fahnbulleh-john-healey"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "What do we know about Chancellor John Healey?",
-      "date": "27 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/cwz0vgjj14lmo?at_medium=RSS&at_campaign=rss"
+      "headline": "Liz Truss has brought our divided nation together \u2013 in mockery of her | Emma Brockes",
+      "date": "29 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/29/liz-truss-new-book-prime-minister-divided-nation"
     }
   ]
 }
