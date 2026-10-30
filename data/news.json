@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-10-29T13:31:47Z",
+    "updated": "2026-10-30T13:22:36Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Healey accepts \u2018hard decisions\u2019 ahead as thinktank says 2020s set to be worst decade for living standards growth \u2013 UK politics live",
-      "date": "29 Oct 2026",
+      "headline": "Public sector an \u2018afterthought\u2019 to North Sea oil jobs, says Unison leader",
+      "date": "30 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/oct/29/budget-john-healey-labour-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/2026/oct/30/public-sector-afterthought-north-sea-oil-jobs-unison"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "HMRC puts 200 billionaires on UK tax crackdown hitlist",
-      "date": "29 Oct 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says he wants to \u2018draw a line\u2019 under relationship with devolved powers \u2013 UK politics live",
+      "date": "30 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/news/2026/oct/29/hmrc-billionaires-uk-tax-crackdown-compliance-managers"
+      "url": "https://www.theguardian.com/politics/live/2026/oct/30/andy-burnham-labour-conservatives-devolution-scotland-wales-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "John Healey faces questions over budget leak that moved bank share prices",
-      "date": "29 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/29/john-healey-faces-questions-over-budget-leak-that-moved-bank-share-prices"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Mayors will be free to use share of tax to give residents grants",
+      "date": "30 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm8xzw8zgdedo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Is this play-safe budget a sign that the prime minister is planning an early election? | Larry Elliott",
-      "date": "29 Oct 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/29/budget-prime-minister-early-election-andy-burnham"
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "Streeting denies 'kicking can down the road' in defence spending row",
+      "date": "30 Oct 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cw62yrzxjnk4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Treasury will not commit to reducing welfare bill before next election",
-      "date": "29 Oct 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm5ynwkjgpz3o?at_medium=RSS&at_campaign=rss"
+      "headline": "Digested week: The Traitors suddenly feels tired \u2013 time for a politicians version? | John Crace",
+      "date": "30 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/30/digested-week-celebrity-traitors-liz-truss-harry-kane"
     },
     {
       "id": "6",
       "tag": "Economy",
       "tag_class": "tc-e",
-      "headline": "\u2018Scattergun\u2019 budget will still leave Britons facing higher energy bills, says thinktank",
-      "date": "29 Oct 2026",
+      "headline": "Healey\u2019s budget cuts mean Britain is likely to miss green heating targets",
+      "date": "30 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/29/scattergun-budget-leave-britons-higher-energy-bills-thinktank"
+      "url": "https://www.theguardian.com/environment/2026/oct/30/john-healey-budget-cuts-miss-green-heating-targets"
     },
     {
       "id": "7",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Budget 2026: We answer your questions",
-      "date": "29 Oct 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/budget-2026-we-answer-your-questions-13605003"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham admits he would have liked more radical first budget",
+      "date": "30 Oct 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/30/andy-burnham-first-budget-labour-welfare"
     },
     {
       "id": "8",
-      "tag": "Election",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Healey vows to cut welfare bill before next election with \u2018tough\u2019 approach to young people",
-      "date": "29 Oct 2026",
+      "headline": "Beach volleyball in Morecambe Bay? An Olympics of the north sounds like a winner | Emma John",
+      "date": "30 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/29/healey-cut-welfare-bill-tough-approach-young-people-accept-jobs"
+      "url": "https://www.theguardian.com/sport/2026/oct/30/beach-volleyball-morecambe-bay-olympics-of-the-north-andy-burnham"
     },
     {
       "id": "9",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Angry Labour MPs urge leadership not to overrule energy secretary on Rosebank",
-      "date": "29 Oct 2026",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Mahmood infuriates fellow ministers by failing to reveal impact of UK migration shake-up",
+      "date": "30 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/oct/29/labour-mps-rosebank-oilfield-decision-miatta-fahnbulleh-john-healey"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/30/shabana-mahmood-infuriates-ministers-migration-shake-up"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Liz Truss has brought our divided nation together \u2013 in mockery of her | Emma Brockes",
-      "date": "29 Oct 2026",
+      "headline": "UK government\u2019s obesity plan \u2018doomed to fail\u2019, MPs warn",
+      "date": "30 Oct 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/oct/29/liz-truss-new-book-prime-minister-divided-nation"
+      "url": "https://www.theguardian.com/society/2026/oct/30/uk-government-obesity-plan-doomed-mps-warn"
     }
   ]
 }
