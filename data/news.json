@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-02T16:27:16Z",
+    "updated": "2026-11-03T14:33:05Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "No10 defends flight to Manchester to collect Andy Burnham",
-      "date": "2 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK councillor charged with rape and sexual assault",
+      "date": "3 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvglwjydgk74o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c63elky79np7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage\u2019s regular column for the Telegraph to end",
-      "date": "2 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "King gives speech to Commonwealth leaders as Burnham opens slavery apology talks \u2013 UK politics live",
+      "date": "3 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/02/nigel-farage-telegraph-column-ends"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/03/shabana-mahmood-migration-brexit-eu-labour-andy-burnham-kemi-badenoch-king-charles-commonwealth-uk-politics-latest-news"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Home secretary Shabana Mahmood sets out changes to settlement rules \u2013 UK politics live",
-      "date": "2 Nov 2026",
+      "headline": "British people don\u2019t need to apologise for slavery \u2013 but the government does | Olivette Otele",
+      "date": "3 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/02/andy-burnham-shabana-mahmood-migration-indefinite-leave-to-remain-care-workers-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/03/british-people-slavery-governmment-andy-burnham-transatlantic-trade"
     },
     {
       "id": "4",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Shabana Mahmood softens immigration plans in face of cabinet backlash",
-      "date": "2 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/02/shabana-mahmood-softens-immigration-plans-cabinet-backlash-leave-to-remain"
+      "headline": "UK and EU agree draft deal to scrap Brexit red tape over food exports",
+      "date": "3 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmp3grwre9xdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Labour to end cooperation with Greens in 11 councils over \u2018Zionism is racism\u2019 policy",
-      "date": "2 Nov 2026",
+      "headline": "Shabana Mahmood has barely softened her plans \u2013 Britain\u2019s immigration regime is now a theatre of cruelty | Owen Jones",
+      "date": "3 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/02/labour-end-cooperation-green-party-councils-zionism-racism-policy"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/03/shabana-mahmood-immigration-theatre-cruelty-labour"
     },
     {
       "id": "6",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why is Labour risking a row over migration? \u2013 podcast",
-      "date": "2 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/nov/02/why-is-labour-risking-a-row-over-migration-podcast"
+      "headline": "Mahmood refuses to put cost on care worker settlement climbdown",
+      "date": "3 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm75pgqdyzldo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour ends power-sharing with Greens in 11 councils over Zionism row",
-      "date": "2 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c63dj21yvjd3o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham denies proposing return to free movement in talks with EU",
+      "date": "3 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/03/andy-burnham-labour-free-movement-eu-europe"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "No 10 defends flight to Caribbean going via Manchester to pick up Burnham",
-      "date": "2 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK and EU agree deal to remove Brexit checks on food and animal products",
+      "date": "3 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/02/andy-burnham-flight-caribbean-commonwealth-manchester"
+      "url": "https://www.theguardian.com/politics/2026/nov/03/deal-finalised-remove-brexit-checks-food-animal-products"
     },
     {
       "id": "9",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Unions gain access to thousands of Google workers after UK employment rights overhaul",
-      "date": "2 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/02/unions-google-workers-uk-employment-rights"
+      "headline": "Labour MPs pull their punches on immigration changes",
+      "date": "3 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck0e0jpww9wro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Chris Mason: Home secretary to face scrutiny over changes to rules for legal migrants",
-      "date": "2 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck4g13zrm513o?at_medium=RSS&at_campaign=rss"
+      "headline": "Henry Nowak \u2018would have hated\u2019 riots after his murder, says family",
+      "date": "3 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/03/henry-nowak-would-have-hated-riots-after-his-murder-his-says-family"
     }
   ]
 }
