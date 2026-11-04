@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-03T14:33:05Z",
+    "updated": "2026-11-04T14:47:14Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK councillor charged with rape and sexual assault",
-      "date": "3 Nov 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Time to focus on cost of living, says PM after US election results",
+      "date": "4 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c63elky79np7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6kgl0xk8en9o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "King gives speech to Commonwealth leaders as Burnham opens slavery apology talks \u2013 UK politics live",
-      "date": "3 Nov 2026",
+      "headline": "Burnham says US midterm results have created \u2018opportunity\u2019 for world to focus on cost of living and ending Iran war \u2013 UK politics live",
+      "date": "4 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/03/shabana-mahmood-migration-brexit-eu-labour-andy-burnham-kemi-badenoch-king-charles-commonwealth-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/04/ed-miliband-andy-burnham-king-charles-labour-louise-haigh-alex-burghart-pmqs-conservatives-uk-politics-latest-news"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "British people don\u2019t need to apologise for slavery \u2013 but the government does | Olivette Otele",
-      "date": "3 Nov 2026",
+      "headline": "UNHCR criticises UK\u2019s 30-year \u2018earned settlement\u2019 plans for refugees",
+      "date": "4 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/03/british-people-slavery-governmment-andy-burnham-transatlantic-trade"
+      "url": "https://www.theguardian.com/world/2026/nov/04/unhcr-criticises-uks-30-year-earned-settlement-plans-for-refugees"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK and EU agree draft deal to scrap Brexit red tape over food exports",
-      "date": "3 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmp3grwre9xdo?at_medium=RSS&at_campaign=rss"
+      "headline": "Want to know what all your co-workers earn? Be careful what you wish for | Andr\u00e9 Spicer",
+      "date": "4 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/04/pay-transparency-coworkers-earn-know-open-workers"
     },
     {
       "id": "5",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Shabana Mahmood has barely softened her plans \u2013 Britain\u2019s immigration regime is now a theatre of cruelty | Owen Jones",
-      "date": "3 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/03/shabana-mahmood-immigration-theatre-cruelty-labour"
+      "headline": "Poundland supplier urges 'thorough' state probe into owner's conduct",
+      "date": "4 Nov 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/poundland-supplier-urges-thorough-state-probe-into-owners-conduct-13607893"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mahmood refuses to put cost on care worker settlement climbdown",
-      "date": "3 Nov 2026",
+      "headline": "Children spending too long on maths app TT Rockstars, MP warns",
+      "date": "4 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm75pgqdyzldo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c64g1vyxq4j5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham denies proposing return to free movement in talks with EU",
-      "date": "3 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "These cruel new plans to \u2018stop the boats\u2019 show the government completely misunderstands refugees like me | Anonymous",
+      "date": "4 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/03/andy-burnham-labour-free-movement-eu-europe"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/04/stop-the-boats-government-refugees-settlement-rules-syria-uk"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK and EU agree deal to remove Brexit checks on food and animal products",
-      "date": "3 Nov 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Rogue UK energy bosses and brokers face crackdown on mis-selling",
+      "date": "4 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/03/deal-finalised-remove-brexit-checks-food-animal-products"
+      "url": "https://www.theguardian.com/business/2026/nov/04/rogue-energy-bosses-and-brokers-face-crackdown-on-mis-selling"
     },
     {
       "id": "9",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour MPs pull their punches on immigration changes",
-      "date": "3 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck0e0jpww9wro?at_medium=RSS&at_campaign=rss"
+      "headline": "Parliament risks 'catastrophic event' without urgent renovation",
+      "date": "4 Nov 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/parliament-risks-catastrophic-event-without-urgent-renovation-mps-warn-13607723"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Henry Nowak \u2018would have hated\u2019 riots after his murder, says family",
-      "date": "3 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/03/henry-nowak-would-have-hated-riots-after-his-murder-his-says-family"
+      "headline": "Miliband says slavery apology will not bring cost for UK taxpayers",
+      "date": "4 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm8ezneewr9lo?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
