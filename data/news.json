@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-04T14:47:14Z",
+    "updated": "2026-11-05T14:52:08Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "Time to focus on cost of living, says PM after US election results",
-      "date": "4 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6kgl0xk8en9o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says long-awaited 10-year plan may be delayed until January \u2013 UK politics live",
+      "date": "5 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/05/uk-politics-latest-news-updates-andy-burnham-eu-brexit-labour"
     },
     {
       "id": "2",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Burnham says US midterm results have created \u2018opportunity\u2019 for world to focus on cost of living and ending Iran war \u2013 UK politics live",
-      "date": "4 Nov 2026",
+      "headline": "What can Andy Burnham learn from the \u2018blue wave\u2019 in the US? \u2013 podcast",
+      "date": "5 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/04/ed-miliband-andy-burnham-king-charles-labour-louise-haigh-alex-burghart-pmqs-conservatives-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/politics/audio/2026/nov/05/what-can-andy-burnham-learn-from-the-blue-wave-in-the-us-podcast"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UNHCR criticises UK\u2019s 30-year \u2018earned settlement\u2019 plans for refugees",
-      "date": "4 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/04/unhcr-criticises-uks-30-year-earned-settlement-plans-for-refugees"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Putin not invited to G20 summit in Manchester, says Burnham",
+      "date": "5 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmqjnkn8951qo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Want to know what all your co-workers earn? Be careful what you wish for | Andr\u00e9 Spicer",
-      "date": "4 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/04/pay-transparency-coworkers-earn-know-open-workers"
+      "headline": "Could this be the last Bonfire Night for noisy fireworks?",
+      "date": "5 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crp3gk07850zo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Poundland supplier urges 'thorough' state probe into owner's conduct",
-      "date": "4 Nov 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/poundland-supplier-urges-thorough-state-probe-into-owners-conduct-13607893"
+      "headline": "Mahmood accused of hardening rules for 200,000 successful asylum applicants",
+      "date": "5 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/05/shabana-mahmood-accused-hardening-immigration-plans-200000-successful-asylum-applicants"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Children spending too long on maths app TT Rockstars, MP warns",
-      "date": "4 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c64g1vyxq4j5o?at_medium=RSS&at_campaign=rss"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Interest rate rise in midst of cost of living crisis will leave many incredulous",
+      "date": "5 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/nov/05/interest-rate-rise-in-midst-of-cost-of-living-crisis-will-leave-many-incredulous"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "These cruel new plans to \u2018stop the boats\u2019 show the government completely misunderstands refugees like me | Anonymous",
-      "date": "4 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/04/stop-the-boats-government-refugees-settlement-rules-syria-uk"
+      "headline": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
+      "date": "5 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmze4zk4d789o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Rogue UK energy bosses and brokers face crackdown on mis-selling",
-      "date": "4 Nov 2026",
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "No amount of sliding in the polls can shake Kemi Badenoch\u2019s self-belief \u2013 or alter her party\u2019s direction | Andy Beckett",
+      "date": "5 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/04/rogue-energy-bosses-and-brokers-face-crackdown-on-mis-selling"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/05/kemi-badenoch-polls-tory-party-direction"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Parliament risks 'catastrophic event' without urgent renovation",
-      "date": "4 Nov 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/parliament-risks-catastrophic-event-without-urgent-renovation-mps-warn-13607723"
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Palestine Action ban undermined confidence in anti-terror laws, Supreme Court told",
+      "date": "5 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmr4yvel29keo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Miliband says slavery apology will not bring cost for UK taxpayers",
-      "date": "4 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm8ezneewr9lo?at_medium=RSS&at_campaign=rss"
+      "headline": "Activists across Europe prepare two days of protests against datacentres",
+      "date": "5 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/nov/05/activists-across-europe-protests-ai-against-datacentres"
     }
   ]
 }
