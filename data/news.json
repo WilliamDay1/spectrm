@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-05T14:52:08Z",
+    "updated": "2026-11-06T14:30:11Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says long-awaited 10-year plan may be delayed until January \u2013 UK politics live",
-      "date": "5 Nov 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "UK government to extend controversial Palantir NHS contract as it draws up plan for British alternative \u2013 UK politics live",
+      "date": "6 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/05/uk-politics-latest-news-updates-andy-burnham-eu-brexit-labour"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/06/burnham-force-employers-publish-salaries-job-ads-labour-chagos-islands-shabana-mahmood-eu-universities-brexit-kemi-badenoch-tories-uk-politics-latest-news"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "What can Andy Burnham learn from the \u2018blue wave\u2019 in the US? \u2013 podcast",
-      "date": "5 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Commuters and shoppers face disruption from tube driver strikes in run-up to Christmas",
+      "date": "6 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/nov/05/what-can-andy-burnham-learn-from-the-blue-wave-in-the-us-podcast"
+      "url": "https://www.theguardian.com/uk-news/2026/nov/06/commuters-and-shoppers-face-disruption-from-tube-driver-strikes-in-run-up-to-christmas"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Putin not invited to G20 summit in Manchester, says Burnham",
-      "date": "5 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "PM tells firms to publish salaries in job adverts ahead of new law",
+      "date": "6 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmqjnkn8951qo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Could this be the last Bonfire Night for noisy fireworks?",
-      "date": "5 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crp3gk07850zo?at_medium=RSS&at_campaign=rss"
+      "headline": "\u2018Profound anger\u2019 among black voters over Kemi Badenoch\u2019s slavery remarks",
+      "date": "6 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/06/kemi-badenoch-slavery-comments-anger-black-voters-operation-black-vote"
     },
     {
       "id": "5",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mahmood accused of hardening rules for 200,000 successful asylum applicants",
-      "date": "5 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/05/shabana-mahmood-accused-hardening-immigration-plans-200000-successful-asylum-applicants"
+      "headline": "Policing needs reform to cope with modern criminals, Met Police chief warns",
+      "date": "6 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cvglww2r307ko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Interest rate rise in midst of cost of living crisis will leave many incredulous",
-      "date": "5 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage's exit from the Telegraph may be cause for cheer. But there\u2019s a sobering side to this story | Jane Martinson",
+      "date": "6 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/05/interest-rate-rise-in-midst-of-cost-of-living-crisis-will-leave-many-incredulous"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/06/nigel-farage-telegraph-story-newspaper-ai"
     },
     {
       "id": "7",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
-      "date": "5 Nov 2026",
+      "headline": "Algorithm allocates Highland 'significant increase' in asylum-seeking children",
+      "date": "6 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmze4zk4d789o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6y43zvwzre1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Election",
-      "tag_class": "tc-c",
-      "headline": "No amount of sliding in the polls can shake Kemi Badenoch\u2019s self-belief \u2013 or alter her party\u2019s direction | Andy Beckett",
-      "date": "5 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Employers to be forced to put salaries on job ads, Andy Burnham announces",
+      "date": "6 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/05/kemi-badenoch-polls-tory-party-direction"
+      "url": "https://www.theguardian.com/law/2026/nov/06/uk-employers-forced-put-salaries-job-adverts-andy-burnham"
     },
     {
       "id": "9",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Palestine Action ban undermined confidence in anti-terror laws, Supreme Court told",
-      "date": "5 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reform councillor's post branded racist by Labour",
+      "date": "6 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmr4yvel29keo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6kgl0gx19e1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Activists across Europe prepare two days of protests against datacentres",
-      "date": "5 Nov 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Notre-Dame was restored in five years and under budget. But the Palace of Westminster? No chance | Simon Jenkins",
+      "date": "6 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/05/activists-across-europe-protests-ai-against-datacentres"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/06/palace-westminster-parliament-restored-notre-dame-mps"
     }
   ]
 }
