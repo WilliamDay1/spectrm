@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-06T14:30:11Z",
+    "updated": "2026-11-07T13:26:09Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "UK government to extend controversial Palantir NHS contract as it draws up plan for British alternative \u2013 UK politics live",
-      "date": "6 Nov 2026",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Court rules against Home Office in asylum seeker kidnapping case",
+      "date": "7 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/06/burnham-force-employers-publish-salaries-job-ads-labour-chagos-islands-shabana-mahmood-eu-universities-brexit-kemi-badenoch-tories-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/law/2026/nov/07/court-of-appeal-rules-kidnap-for-ransom-libya-exploitation-trafficking-victims-asylum-seeker-home-office"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Commuters and shoppers face disruption from tube driver strikes in run-up to Christmas",
-      "date": "6 Nov 2026",
+      "headline": "Great British Railways: new dawn for a new network but with plenty of old problems to fix",
+      "date": "7 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/06/commuters-and-shoppers-face-disruption-from-tube-driver-strikes-in-run-up-to-christmas"
+      "url": "https://www.theguardian.com/business/2026/nov/07/great-british-railways-new-dawn-for-a-new-network-but-with-plenty-of-old-problems-to-fix"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "PM tells firms to publish salaries in job adverts ahead of new law",
-      "date": "6 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o?at_medium=RSS&at_campaign=rss"
+      "headline": "Five European leaders call for closer EU-UK ties ahead of Brussels summit",
+      "date": "7 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/nov/07/europe-leaders-call-closer-eu-uk-ties-brussels-summit"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Profound anger\u2019 among black voters over Kemi Badenoch\u2019s slavery remarks",
-      "date": "6 Nov 2026",
+      "headline": "Home Office sued after stripping almost 1,500 EU citizens of right to live in UK",
+      "date": "7 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/06/kemi-badenoch-slavery-comments-anger-black-voters-operation-black-vote"
+      "url": "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Policing needs reform to cope with modern criminals, Met Police chief warns",
-      "date": "6 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvglww2r307ko?at_medium=RSS&at_campaign=rss"
+      "headline": "Radical Thinking podcast",
+      "date": "7 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/commentisfree/audio/2026/nov/07/why-woke-20-is-taking-on-trump-and-establishment-politics-nesrine-malik-radical-thinking"
     },
     {
       "id": "6",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage's exit from the Telegraph may be cause for cheer. But there\u2019s a sobering side to this story | Jane Martinson",
-      "date": "6 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018Super-force\u2019 plans a real threat to local policing, English mayors say",
+      "date": "7 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/06/nigel-farage-telegraph-story-newspaper-ai"
+      "url": "https://www.theguardian.com/uk-news/2026/nov/07/super-force-plans-england-wales-threaten-local-policing-mayors"
     },
     {
       "id": "7",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Algorithm allocates Highland 'significant increase' in asylum-seeking children",
-      "date": "6 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6y43zvwzre1o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK councillor promoted collapsed $1.9bn \u2018Ponzi scheme\u2019 HyperVerse that left victims suicidal",
+      "date": "7 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/07/reform-uk-councillor-promoted-alleged-ponzi-scheme-hyperverse"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Employers to be forced to put salaries on job ads, Andy Burnham announces",
-      "date": "6 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/law/2026/nov/06/uk-employers-forced-put-salaries-job-adverts-andy-burnham"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Parliament restoration delays 'frustrating', says Commons Speaker",
+      "date": "7 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm89zznj21ylo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform councillor's post branded racist by Labour",
+      "headline": "Why smoky bacon crisps threaten to reignite rows over EU rules",
       "date": "6 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6kgl0gx19e1o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cm1dwwqrr1kvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "Notre-Dame was restored in five years and under budget. But the Palace of Westminster? No chance | Simon Jenkins",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham aims for \u2018quite radical change\u2019 in support for young people",
       "date": "6 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/06/palace-westminster-parliament-restored-notre-dame-mps"
+      "url": "https://www.theguardian.com/politics/2026/nov/06/andy-burnham-quite-radical-change-young-people-support-benefits-neets"
     }
   ]
 }
