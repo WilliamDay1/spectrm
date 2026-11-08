@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-11-07T13:26:09Z",
+    "updated": "2026-11-08T13:45:51Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,22 +8,67 @@
       "id": "1",
       "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Court rules against Home Office in asylum seeker kidnapping case",
-      "date": "7 Nov 2026",
+      "headline": "UK spent \u00a3100m on zombie Brexit border inspection posts",
+      "date": "8 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/law/2026/nov/07/court-of-appeal-rules-kidnap-for-ransom-libya-exploitation-trafficking-victims-asylum-seeker-home-office"
+      "url": "https://www.theguardian.com/politics/2026/nov/08/uk-zombie-brexit-border-inspection-posts-check-goods"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Great British Railways: new dawn for a new network but with plenty of old problems to fix",
-      "date": "7 Nov 2026",
+      "headline": "\u2018I just got AI emails rejecting my application \u2013 or no reply at all\u2019: this is the soul-crushing reality of being a Neet | John Harris",
+      "date": "8 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/07/great-british-railways-new-dawn-for-a-new-network-but-with-plenty-of-old-problems-to-fix"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/08/young-people-soul-crushing-reality-neet-alan-milburn-life"
     },
     {
       "id": "3",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Women in media alleging abuse too often not protected, Lisa Nandy says",
+      "date": "8 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/media/2026/nov/08/women-abuse-media-industry-lisa-nandy-russell-brand"
+    },
+    {
+      "id": "4",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Nandy rejects claims of politicising Remembrance Sunday after Erasmus row",
+      "date": "8 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmvg72p1zgvlo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "id": "5",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018AI clog\u2019: UK public bodies battle onslaught of chatbot-generated complaints",
+      "date": "8 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/technology/2026/nov/08/ai-clog-public-bodies-local-authorities-onslaught-chatbot-generated-correspondence"
+    },
+    {
+      "id": "6",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018Windrush\u2019 accusations over sharp rise in Turkish nationals facing removal from UK",
+      "date": "8 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/08/turkish-nationals-uk-indefinite-leave-to-remain-home-office-windrush"
+    },
+    {
+      "id": "7",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "Rise in NHS birth centre closures \u2018shocking\u2019 denial of women\u2019s rights, experts say",
+      "date": "7 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/nov/07/nhs-birth-centre-maternity-unit-closures-england-womens-rights"
+    },
+    {
+      "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Five European leaders call for closer EU-UK ties ahead of Brussels summit",
@@ -32,67 +77,22 @@
       "url": "https://www.theguardian.com/world/2026/nov/07/europe-leaders-call-closer-eu-uk-ties-brussels-summit"
     },
     {
-      "id": "4",
+      "id": "9",
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Court rules against Home Office in asylum seeker kidnapping case",
+      "date": "7 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/law/2026/nov/07/court-of-appeal-rules-kidnap-for-ransom-libya-exploitation-trafficking-victims-asylum-seeker-home-office"
+    },
+    {
+      "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
       "headline": "Home Office sued after stripping almost 1,500 EU citizens of right to live in UK",
       "date": "7 Nov 2026",
       "source": "The Guardian Politics",
       "url": "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled"
-    },
-    {
-      "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Radical Thinking podcast",
-      "date": "7 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/commentisfree/audio/2026/nov/07/why-woke-20-is-taking-on-trump-and-establishment-politics-nesrine-malik-radical-thinking"
-    },
-    {
-      "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018Super-force\u2019 plans a real threat to local policing, English mayors say",
-      "date": "7 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/07/super-force-plans-england-wales-threaten-local-policing-mayors"
-    },
-    {
-      "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK councillor promoted collapsed $1.9bn \u2018Ponzi scheme\u2019 HyperVerse that left victims suicidal",
-      "date": "7 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/07/reform-uk-councillor-promoted-alleged-ponzi-scheme-hyperverse"
-    },
-    {
-      "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Parliament restoration delays 'frustrating', says Commons Speaker",
-      "date": "7 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm89zznj21ylo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Why smoky bacon crisps threaten to reignite rows over EU rules",
-      "date": "6 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm1dwwqrr1kvo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham aims for \u2018quite radical change\u2019 in support for young people",
-      "date": "6 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/06/andy-burnham-quite-radical-change-young-people-support-benefits-neets"
     }
   ]
 }
