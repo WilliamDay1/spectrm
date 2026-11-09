@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-08T13:45:51Z",
+    "updated": "2026-11-09T16:45:08Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "UK spent \u00a3100m on zombie Brexit border inspection posts",
-      "date": "8 Nov 2026",
+      "headline": "\u2018Black English\u2019 and \u2018Asian English\u2019 should be census options, MPs say",
+      "date": "9 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/08/uk-zombie-brexit-border-inspection-posts-check-goods"
+      "url": "https://www.theguardian.com/uk-news/2026/nov/09/black-english-asian-english-should-be-census-options-mps"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018I just got AI emails rejecting my application \u2013 or no reply at all\u2019: this is the soul-crushing reality of being a Neet | John Harris",
-      "date": "8 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham warns that NHS will \u2018struggle\u2019 to cope if consultants don\u2019t resume talks over pay \u2013 UK politics live",
+      "date": "9 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/08/young-people-soul-crushing-reality-neet-alan-milburn-life"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/09/polanski-greens-labour-andy-burnham-climate-crisis-ev-targets-uk-politics-latest-news"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Women in media alleging abuse too often not protected, Lisa Nandy says",
-      "date": "8 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Cop31: will Andy Burnham choose climate or cost of living? \u2013 podcast",
+      "date": "9 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/media/2026/nov/08/women-abuse-media-industry-lisa-nandy-russell-brand"
+      "url": "https://www.theguardian.com/politics/audio/2026/nov/09/cop31-will-andy-burnham-choose-climate-or-cost-of-living-podcast"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Nandy rejects claims of politicising Remembrance Sunday after Erasmus row",
-      "date": "8 Nov 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Action on energy costs is my overriding aim, says Fahnbulleh",
+      "date": "9 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmvg72p1zgvlo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmz7x7q7q8vvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018AI clog\u2019: UK public bodies battle onslaught of chatbot-generated complaints",
-      "date": "8 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/technology/2026/nov/08/ai-clog-public-bodies-local-authorities-onslaught-chatbot-generated-correspondence"
+      "headline": "Civil servant who juggled up to five government jobs guilty of fraud",
+      "date": "9 Nov 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/civil-servant-who-juggled-up-to-five-government-jobs-guilty-of-fraud-13610264"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Windrush\u2019 accusations over sharp rise in Turkish nationals facing removal from UK",
-      "date": "8 Nov 2026",
+      "headline": "Thames Water asks creditors for more time to help repay \u00a320bn debt pile",
+      "date": "9 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/08/turkish-nationals-uk-indefinite-leave-to-remain-home-office-windrush"
+      "url": "https://www.theguardian.com/business/2026/nov/09/thames-water-asks-creditors-more-time-repay-debt-pile"
     },
     {
       "id": "7",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "Rise in NHS birth centre closures \u2018shocking\u2019 denial of women\u2019s rights, experts say",
-      "date": "7 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/07/nhs-birth-centre-maternity-unit-closures-england-womens-rights"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Man jailed over racist Badenoch death threats",
+      "date": "9 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c5n494x9kgp0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Five European leaders call for closer EU-UK ties ahead of Brussels summit",
-      "date": "7 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/07/europe-leaders-call-closer-eu-uk-ties-brussels-summit"
+      "headline": "Government's EV targets expected to be reduced this week",
+      "date": "9 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqkg5g2970epo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Court rules against Home Office in asylum seeker kidnapping case",
-      "date": "7 Nov 2026",
+      "headline": "Fixing UK\u2019s youth jobs crisis demands much more investment, TUC boss warns",
+      "date": "9 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/law/2026/nov/07/court-of-appeal-rules-kidnap-for-ransom-libya-exploitation-trafficking-victims-asylum-seeker-home-office"
+      "url": "https://www.theguardian.com/society/2026/nov/09/uk-young-people-job-work-employment-crisis-paul-nowak-milburn-review"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Home Office sued after stripping almost 1,500 EU citizens of right to live in UK",
-      "date": "7 Nov 2026",
+      "tag": "NHS",
+      "tag_class": "tc-h",
+      "headline": "British people don\u2019t trust Palantir \u2013 it\u2019s not too late to reverse the NHS\u2019s dependence on it | Ben Coleman",
+      "date": "9 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/09/british-people-palantir-nhs-health-data-us-tech-firm"
     }
   ]
 }
