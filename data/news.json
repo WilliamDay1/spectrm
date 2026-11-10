@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-11-09T16:45:08Z",
+    "updated": "2026-11-10T15:08:26Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Black English\u2019 and \u2018Asian English\u2019 should be census options, MPs say",
-      "date": "9 Nov 2026",
+      "headline": "Planned Tory welfare cuts \u2018a charter for human misery,\u2019 says Labour \u2013 UK politics live",
+      "date": "10 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/09/black-english-asian-english-should-be-census-options-mps"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/10/badenoch-conservative-welfare-cuts-disability-benefits-burnham-politics-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham warns that NHS will \u2018struggle\u2019 to cope if consultants don\u2019t resume talks over pay \u2013 UK politics live",
-      "date": "9 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/09/polanski-greens-labour-andy-burnham-climate-crisis-ev-targets-uk-politics-latest-news"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Sales of tinned food and bottled water  jump after 'Be Ready' campaign launch",
+      "date": "10 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqev3vl4ek33o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Cop31: will Andy Burnham choose climate or cost of living? \u2013 podcast",
-      "date": "9 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/nov/09/cop31-will-andy-burnham-choose-climate-or-cost-of-living-podcast"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tories pledge to cut benefits for children with 'milder cases' of ADHD",
+      "date": "10 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3j474prl2r7o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Action on energy costs is my overriding aim, says Fahnbulleh",
-      "date": "9 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmz7x7q7q8vvo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Police receive further criminal allegations against Russell Brand",
+      "date": "10 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/news/2026/nov/10/lucy-powell-russell-brand-cross-examination-victims"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Civil servant who juggled up to five government jobs guilty of fraud",
-      "date": "9 Nov 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/civil-servant-who-juggled-up-to-five-government-jobs-guilty-of-fraud-13610264"
+      "headline": "Phones to be banned from pupils' bags or pockets under stricter rules for schools in England",
+      "date": "10 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c51kdk422w8jo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Politics",
+      "tag": "Election",
       "tag_class": "tc-c",
-      "headline": "Thames Water asks creditors for more time to help repay \u00a320bn debt pile",
-      "date": "9 Nov 2026",
+      "headline": "Will the Trump-supporting UK right share in his ignominy? No, it\u2019s too dishonest for that | Polly Toynbee",
+      "date": "10 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/09/thames-water-asks-creditors-more-time-repay-debt-pile"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/10/trump-supporting-uk-right-dishonest-british-rightwing-commentators-maga"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Man jailed over racist Badenoch death threats",
-      "date": "9 Nov 2026",
+      "headline": "Hundreds more offenders leaving jail on Tuesday",
+      "date": "10 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c5n494x9kgp0o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c51kdk8z7ym3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Government's EV targets expected to be reduced this week",
-      "date": "9 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqkg5g2970epo?at_medium=RSS&at_campaign=rss"
+      "headline": "Gen Z doesn\u2018t relish going to war \u2013 so what! You should worry more about the reckless generations that do | Jason Okundaye",
+      "date": "10 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/10/britain-gen-z-war-right-young-people-protect"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Fixing UK\u2019s youth jobs crisis demands much more investment, TUC boss warns",
-      "date": "9 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/09/uk-young-people-job-work-employment-crisis-paul-nowak-milburn-review"
+      "headline": "Hundreds more prisoners being released early",
+      "date": "10 Nov 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/hundreds-more-prisoners-being-freed-early-in-latest-wave-of-scheme-13610445"
     },
     {
       "id": "10",
-      "tag": "NHS",
-      "tag_class": "tc-h",
-      "headline": "British people don\u2019t trust Palantir \u2013 it\u2019s not too late to reverse the NHS\u2019s dependence on it | Ben Coleman",
-      "date": "9 Nov 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "Young people in UK hit by \u2018low-gear economy\u2019, warns Bank of England deputy",
+      "date": "10 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/09/british-people-palantir-nhs-health-data-us-tech-firm"
+      "url": "https://www.theguardian.com/business/2026/nov/10/young-people-uk-economy-bank-of-england-clare-lombardelli"
     }
   ]
 }
