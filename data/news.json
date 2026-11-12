@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-11-11T14:38:55Z",
+    "updated": "2026-11-12T15:30:13Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform boycotts Senedd after member banned for saying white people being replaced",
-      "date": "11 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm15egny92lvo?at_medium=RSS&at_campaign=rss"
+      "headline": "Sadiq Khan joins Labour figures urging PM not to water down electric vehicle targets \u2013 UK politics live",
+      "date": "12 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/12/milburn-review-neets-young-people-welfare-work-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham says government will unveil 10-year plan by mid-December",
-      "date": "11 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage was guest on Brand podcast after sexual assault investigation began",
+      "date": "12 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/11/andy-burnham-says-government-will-unveil-10-year-plan-by-mid-december"
+      "url": "https://www.theguardian.com/politics/2026/nov/12/farage-was-guest-on-brand-podcast-after-sexual-assault-investigation-began"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham indicates backing for \u2018black English\u2019 and \u2018Asian English\u2019 census options \u2013 UK politics live",
-      "date": "11 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/11/andy-burnham-kemi-badenoch-pmqs-cop31-windfarms-europe-brexit-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Some under-25s should get fewer benefits, Milburn review to say",
+      "date": "12 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "From blood group ID to cycle racks : I asked for little ways to fix broken Britain and the public\u2019s ideas give me hope  | Martin Lewis",
-      "date": "11 Nov 2026",
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "AI helped UK defy expectations \u2013 but will economy\u2019s resilience fizzle out?",
+      "date": "12 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/11/how-fix-broken-britain-public-better"
+      "url": "https://www.theguardian.com/business/2026/nov/12/ai-uk-economy-john-healey"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MPs jostle for slice of \u00a314.6m from axed leisure centre",
-      "date": "11 Nov 2026",
+      "headline": "MPs urge Labour ministers to get on with trophy hunting ban",
+      "date": "12 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw07373rjpdvo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/ckdd17m79yldo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham lauds \u00a312bn offshore wind investment as he prepares for climate summit",
-      "date": "11 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/nov/11/burnham-offshore-wind-investment-norfolk-climate-summit-cop31-jackdaw-gasfield"
+      "tag": "Economy",
+      "tag_class": "tc-e",
+      "headline": "UK economy grows at fastest rate for more than two years",
+      "date": "12 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "National security of all countries at risk due to climate crisis, UK foreign secretary warns",
-      "date": "11 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/nov/11/ed-miliband-national-security-climate-crisis-cop31"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham says climate consensus 'gone' but pledges 'new era of leadership'",
+      "date": "12 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmg46y7wev42o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Governments 'asleep at the wheel' over social care, says head of review",
-      "date": "11 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c9143zxyyvndo?at_medium=RSS&at_campaign=rss"
+      "headline": "UK drone maker founded by Ukrainians hits \u00a34.5bn value after raising \u00a3500m",
+      "date": "12 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/nov/12/uk-drone-maker-ukraine-value-uforce"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tories would have to raise state pension age above 70 to keep triple lock, says minister",
-      "date": "11 Nov 2026",
+      "headline": "The Booker prize winner described a dystopian Britain. But haven\u2019t we been living in that since Brexit? | Zoe Williams",
+      "date": "12 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/money/2026/nov/11/tories-raise-state-pension-age-70-triple-lock-torsten-bell"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/12/brexits-gains-were-a-fiction-its-harms-are-real-we-dont-have-to-go-on-living-in-this-nightmare"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "For Trump, Musk and Farage, the message is the same: voters don\u2019t want to be hijacked by billionaires | Rafael Behr",
-      "date": "11 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/11/donald-trump-elon-musk-nigel-farage-voters-billionaires-midterms"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham's push for closer EU ties causes ripples in his party and others",
+      "date": "12 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cr78251892z7o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
