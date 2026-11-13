@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-12T15:30:13Z",
+    "updated": "2026-11-13T14:49:16Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Sadiq Khan joins Labour figures urging PM not to water down electric vehicle targets \u2013 UK politics live",
-      "date": "12 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/12/milburn-review-neets-young-people-welfare-work-latest-news-updates"
+      "headline": "Piddington to bring legal challenge over asylum base plans",
+      "date": "13 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ckzd91jqvm0lo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage was guest on Brand podcast after sexual assault investigation began",
-      "date": "12 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/12/farage-was-guest-on-brand-podcast-after-sexual-assault-investigation-began"
+      "tag": "Immigration",
+      "tag_class": "tc-c",
+      "headline": "Reform and Tory spokesmen in angry clash over immigration at Piddington",
+      "date": "13 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cr9d7y937n58o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Some under-25s should get fewer benefits, Milburn review to say",
-      "date": "12 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss"
+      "headline": "Row breaks out between Tories and Reform at Piddington news conference \u2013 UK politics live",
+      "date": "13 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/13/uk-eu-post-brexit-deal-relationship-trade-food-standards-committee-latest-news-updates"
     },
     {
       "id": "4",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "AI helped UK defy expectations \u2013 but will economy\u2019s resilience fizzle out?",
-      "date": "12 Nov 2026",
+      "tag": "Devolution",
+      "tag_class": "tc-c",
+      "headline": "If you\u2019re wondering what a Reform government might look like, just look at its chaotic record in Wales | Will Hayward",
+      "date": "13 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/12/ai-uk-economy-john-healey"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/reform-uk-government-wales-senedd-chaotic-record"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "MPs urge Labour ministers to get on with trophy hunting ban",
-      "date": "12 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckdd17m79yldo?at_medium=RSS&at_campaign=rss"
+      "headline": "The dark side of reselling apps: \u2018If you include your pants, I\u2019ll pay more\u2019",
+      "date": "13 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/media/2026/nov/13/reselling-apps-dark-side-under-16s-social-media-ban-child-protection"
     },
     {
       "id": "6",
-      "tag": "Economy",
-      "tag_class": "tc-e",
-      "headline": "UK economy grows at fastest rate for more than two years",
-      "date": "12 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reform could try to remove Senedd presiding officer over member's speaking ban",
+      "date": "13 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/crq5ve0l0416o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says climate consensus 'gone' but pledges 'new era of leadership'",
-      "date": "12 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmg46y7wev42o?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Digested week: Do we really have to see Liz Truss at the Cenotaph for the next 30 years? | John Crace",
+      "date": "13 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/13/digested-week-liz-truss-cenotaph"
     },
     {
       "id": "8",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "UK drone maker founded by Ukrainians hits \u00a34.5bn value after raising \u00a3500m",
-      "date": "12 Nov 2026",
+      "headline": "Oxfordshire villagers to launch legal fight against asylum centre plan",
+      "date": "13 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/12/uk-drone-maker-ukraine-value-uforce"
+      "url": "https://www.theguardian.com/uk-news/2026/nov/13/planned-asylum-centre-near-oxfordshire-village-legal-challenge-piddington"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The Booker prize winner described a dystopian Britain. But haven\u2019t we been living in that since Brexit? | Zoe Williams",
-      "date": "12 Nov 2026",
+      "headline": "Ofsted\u2019s menacing inspections are still disastrous. Schools should answer to the communities they serve | Simon Jenkins",
+      "date": "13 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/12/brexits-gains-were-a-fiction-its-harms-are-real-we-dont-have-to-go-on-living-in-this-nightmare"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/ofsted-inspections-schools-communities-statistics-teachers-parents"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham's push for closer EU ties causes ripples in his party and others",
-      "date": "12 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Smart glasses banned from Welsh Parliament after ruling they could be used for speeches",
+      "date": "13 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr78251892z7o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6p3ew5e4d70o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
