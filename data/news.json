@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-13T14:49:16Z",
+    "updated": "2026-11-14T13:44:03Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Immigration",
-      "tag_class": "tc-c",
-      "headline": "Piddington to bring legal challenge over asylum base plans",
-      "date": "13 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Welsh Labour leader says party focused too much on powers for Senedd in past",
+      "date": "14 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ckzd91jqvm0lo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6jre3q9jjwro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Reform and Tory spokesmen in angry clash over immigration at Piddington",
-      "date": "13 Nov 2026",
+      "headline": "Young people should have legal guarantee of job or training, Milburn tells BBC",
+      "date": "14 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr9d7y937n58o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c69vwp09d7vvo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Row breaks out between Tories and Reform at Piddington news conference \u2013 UK politics live",
-      "date": "13 Nov 2026",
+      "headline": "Torture survivors may have been sent to Sussex asylum camp unlawfully, documentary reveals",
+      "date": "14 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/13/uk-eu-post-brexit-deal-relationship-trade-food-standards-committee-latest-news-updates"
+      "url": "https://www.theguardian.com/uk-news/2026/nov/14/asylum-seekers-crowborough-torture-survivors-military-camp"
     },
     {
       "id": "4",
-      "tag": "Devolution",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "If you\u2019re wondering what a Reform government might look like, just look at its chaotic record in Wales | Will Hayward",
-      "date": "13 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/reform-uk-government-wales-senedd-chaotic-record"
+      "headline": "Business secretary to hold further talks with Poundland owners amid rescue talks",
+      "date": "14 Nov 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/reynolds-to-hold-further-talks-with-poundland-owners-amid-rescue-talks-13612143"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The dark side of reselling apps: \u2018If you include your pants, I\u2019ll pay more\u2019",
-      "date": "13 Nov 2026",
+      "headline": "UK tells blind Nigerian pensioner to go to India for medical treatment",
+      "date": "14 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/media/2026/nov/13/reselling-apps-dark-side-under-16s-social-media-ban-child-protection"
+      "url": "https://www.theguardian.com/uk-news/2026/nov/14/uk-tells-blind-nigerian-pensioner-to-go-home-to-india"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform could try to remove Senedd presiding officer over member's speaking ban",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Tories pay artist for Burnham images after legal threat",
       "date": "13 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crq5ve0l0416o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cr5y139wplppo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Digested week: Do we really have to see Liz Truss at the Cenotaph for the next 30 years? | John Crace",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Andy Burnham urges Labour to \u2018rearm\u2019 for Kemi Badenoch comeback",
       "date": "13 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/13/digested-week-liz-truss-cenotaph"
+      "url": "https://www.theguardian.com/politics/2026/nov/13/andy-burnham-urges-labour-to-re-arm-for-kemi-badenoch-comeback"
     },
     {
       "id": "8",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Oxfordshire villagers to launch legal fight against asylum centre plan",
+      "headline": "Labour chief whip tells Vogue she takes tough approach to keeping MPs in line",
       "date": "13 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/13/planned-asylum-centre-near-oxfordshire-village-legal-challenge-piddington"
+      "url": "https://www.theguardian.com/politics/2026/nov/13/labour-chief-whip-tough-approach-vogue-interview-mps-in-line-anneliese-midgley"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Ofsted\u2019s menacing inspections are still disastrous. Schools should answer to the communities they serve | Simon Jenkins",
+      "headline": "No 10 considering expanding under-25s benefits overhaul to older age groups",
       "date": "13 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/ofsted-inspections-schools-communities-statistics-teachers-parents"
+      "url": "https://www.theguardian.com/society/2026/nov/13/no-10-considering-expanding-under-25s-benefits-overhaul-to-older-age-groups"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Smart glasses banned from Welsh Parliament after ruling they could be used for speeches",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Fight the climate crisis or go for growth? There is a way Burnham can do both | Jonathan Freedland",
       "date": "13 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6p3ew5e4d70o?at_medium=RSS&at_campaign=rss"
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/fight-climate-crisis-growth-andy-burnham-economic-leaders"
     }
   ]
 }
