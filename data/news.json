@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-14T13:44:03Z",
+    "updated": "2026-11-15T14:13:44Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Welsh Labour leader says party focused too much on powers for Senedd in past",
-      "date": "14 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6jre3q9jjwro?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Bad jobs or benefits? Milburn should force employers to help the young | Richard Partington",
+      "date": "15 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/business/2026/nov/15/firms-labour-youth-employment-push"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Young people should have legal guarantee of job or training, Milburn tells BBC",
-      "date": "14 Nov 2026",
+      "headline": "Minister backs legal right to job support for young people",
+      "date": "15 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c69vwp09d7vvo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqr7gn1zmlj1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Torture survivors may have been sent to Sussex asylum camp unlawfully, documentary reveals",
-      "date": "14 Nov 2026",
+      "headline": "\u2018No such thing as a free lunch,\u2019 says Milburn as he warns it will take a decade for UK benefits bill to come down",
+      "date": "15 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/14/asylum-seekers-crowborough-torture-survivors-military-camp"
+      "url": "https://www.theguardian.com/society/2026/nov/15/no-free-lunch-milburn-mcfadden-kuenssberg-uk-benefits-youth-unemployment-neet"
     },
     {
       "id": "4",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Business secretary to hold further talks with Poundland owners amid rescue talks",
-      "date": "14 Nov 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/reynolds-to-hold-further-talks-with-poundland-owners-amid-rescue-talks-13612143"
+      "headline": "Trident nuclear submarine concludes record underwater deployment",
+      "date": "15 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/15/trident-nuclear-submarine-hms-vengeance-record-tour"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK tells blind Nigerian pensioner to go to India for medical treatment",
-      "date": "14 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Obama portrait artist draws Burnham for Big Issue cover to highlight rough sleeping vow",
+      "date": "15 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/14/uk-tells-blind-nigerian-pensioner-to-go-home-to-india"
+      "url": "https://www.theguardian.com/society/2026/nov/15/obama-portrait-artist-draws-burnham-big-issue-rough-sleeping-vow-shepard-fairey"
     },
     {
       "id": "6",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Tories pay artist for Burnham images after legal threat",
-      "date": "13 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cr5y139wplppo?at_medium=RSS&at_campaign=rss"
+      "headline": "Is Burnham\u2019s plan for a housing revolution anything more than a pipedream? | John Harris",
+      "date": "15 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/15/burnham-housing-crisis-revolution-pipedream-children-hope"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Andy Burnham urges Labour to \u2018rearm\u2019 for Kemi Badenoch comeback",
-      "date": "13 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK losing support to Labour after \u2018difficult year\u2019, says Danny Kruger",
+      "date": "15 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/13/andy-burnham-urges-labour-to-re-arm-for-kemi-badenoch-comeback"
+      "url": "https://www.theguardian.com/politics/2026/nov/15/reform-uk-losing-support-to-labour-after-difficult-year-says-danny-kruger"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour chief whip tells Vogue she takes tough approach to keeping MPs in line",
-      "date": "13 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/13/labour-chief-whip-tough-approach-vogue-interview-mps-in-line-anneliese-midgley"
+      "headline": "Minister says 'fundamental reset' of system needed as NEETs review looms",
+      "date": "15 Nov 2026",
+      "source": "Sky News Politics",
+      "url": "https://news.sky.com/story/minister-says-fundamental-reset-of-system-needed-as-neets-review-looms-13612451"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "No 10 considering expanding under-25s benefits overhaul to older age groups",
-      "date": "13 Nov 2026",
+      "headline": "Troubled Scottish steel supplier raises questions over Royal Navy contracts",
+      "date": "15 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/13/no-10-considering-expanding-under-25s-benefits-overhaul-to-older-age-groups"
+      "url": "https://www.theguardian.com/business/2026/nov/15/liberty-steel-dalzell-scotland-royal-navy-contracts-warships"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Fight the climate crisis or go for growth? There is a way Burnham can do both | Jonathan Freedland",
-      "date": "13 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Russell Brand accuser waives anonymity to call for consent law change",
+      "date": "15 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/fight-climate-crisis-growth-andy-burnham-economic-leaders"
+      "url": "https://www.theguardian.com/law/2026/nov/15/uk-government-to-consider-changing-age-of-consent-after-allegations-against-russell-brand"
     }
   ]
 }
