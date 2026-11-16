@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-11-15T14:13:44Z",
+    "updated": "2026-11-16T16:16:33Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Bad jobs or benefits? Milburn should force employers to help the young | Richard Partington",
-      "date": "15 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/15/firms-labour-youth-employment-push"
+      "headline": "Miliband says he won't resign if government approves Rosebank oil field",
+      "date": "16 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crvg2n8vwyqdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Minister backs legal right to job support for young people",
-      "date": "15 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cqr7gn1zmlj1o?at_medium=RSS&at_campaign=rss"
+      "headline": "Brand statement from prison claiming his innocence \u2018appalling\u2019 and could breach rules, says No 10 \u2013 UK politics live",
+      "date": "16 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/16/ed-miliband-russell-brand-andy-burnham-brexit-eu-milburn-review-young-people-employment-uk-politics-latest-news"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018No such thing as a free lunch,\u2019 says Milburn as he warns it will take a decade for UK benefits bill to come down",
-      "date": "15 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/15/no-free-lunch-milburn-mcfadden-kuenssberg-uk-benefits-youth-unemployment-neet"
+      "headline": "Faisal Islam: What's in the Brexit reset food deal and are there trade-offs?",
+      "date": "16 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Trident nuclear submarine concludes record underwater deployment",
-      "date": "15 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Under-threat lidos get lifeline as Andy Burnham sets up fund to rebuild pools",
+      "date": "16 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/15/trident-nuclear-submarine-hms-vengeance-record-tour"
+      "url": "https://www.theguardian.com/lifeandstyle/2026/nov/16/lidos-lifeline-andy-burnham-fund-rebuild-outdoor-pools"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Obama portrait artist draws Burnham for Big Issue cover to highlight rough sleeping vow",
-      "date": "15 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/15/obama-portrait-artist-draws-burnham-big-issue-rough-sleeping-vow-shepard-fairey"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Barristers must stop using rape myths in trials, justice secretary says",
+      "date": "16 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cj04w7n74gqno?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Is Burnham\u2019s plan for a housing revolution anything more than a pipedream? | John Harris",
-      "date": "15 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/15/burnham-housing-crisis-revolution-pipedream-children-hope"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Create more jobs for under-25s by cutting National Insurance, key report urges",
+      "date": "16 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK losing support to Labour after \u2018difficult year\u2019, says Danny Kruger",
-      "date": "15 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Share your thoughts on Andy Burnham\u2019s plan for a new EU deal",
+      "date": "16 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/15/reform-uk-losing-support-to-labour-after-difficult-year-says-danny-kruger"
+      "url": "https://www.theguardian.com/politics/2026/nov/16/brexit-share-your-thoughts-on-andy-burnhams-plan-for-a-new-eu-deal"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Minister says 'fundamental reset' of system needed as NEETs review looms",
-      "date": "15 Nov 2026",
-      "source": "Sky News Politics",
-      "url": "https://news.sky.com/story/minister-says-fundamental-reset-of-system-needed-as-neets-review-looms-13612451"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "UK lost more than it gained from Brexit, Burnham to say ahead of EU summit",
+      "date": "16 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/crp3e1n5kezpo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Troubled Scottish steel supplier raises questions over Royal Navy contracts",
-      "date": "15 Nov 2026",
+      "headline": "Barristers could be barred from practice over use of rape myths, warns justice secretary",
+      "date": "16 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/15/liberty-steel-dalzell-scotland-royal-navy-contracts-warships"
+      "url": "https://www.theguardian.com/law/2026/nov/16/barristers-barred-practice-rape-myths-russell-brand-trial"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Russell Brand accuser waives anonymity to call for consent law change",
-      "date": "15 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham pledges early intervention and \u2018benefits backstop\u2019 to tackle youth jobs crisis",
+      "date": "16 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/law/2026/nov/15/uk-government-to-consider-changing-age-of-consent-after-allegations-against-russell-brand"
+      "url": "https://www.theguardian.com/society/2026/nov/15/no-free-lunch-milburn-mcfadden-kuenssberg-uk-benefits-youth-unemployment-neet"
     }
   ]
 }
