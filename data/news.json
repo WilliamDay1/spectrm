@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-16T16:16:33Z",
+    "updated": "2026-11-17T16:22:23Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Miliband says he won't resign if government approves Rosebank oil field",
-      "date": "16 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crvg2n8vwyqdo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham makes Milburn head of unit to implement new jobs and welfare approach for young people \u2013 live",
+      "date": "17 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/17/alan-milburn-youth-unempolyment-neets-economy-welfare-brexit-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Brand statement from prison claiming his innocence \u2018appalling\u2019 and could breach rules, says No 10 \u2013 UK politics live",
-      "date": "16 Nov 2026",
+      "headline": "\u2018They learn the job doing the job\u2019: the project helping UK\u2019s Neets into work",
+      "date": "17 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/16/ed-miliband-russell-brand-andy-burnham-brexit-eu-milburn-review-young-people-employment-uk-politics-latest-news"
+      "url": "https://www.theguardian.com/society/2026/nov/17/helping-neets-into-work-project"
     },
     {
       "id": "3",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Faisal Islam: What's in the Brexit reset food deal and are there trade-offs?",
-      "date": "16 Nov 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "UK sanctions firms over Israeli West Bank settlements",
+      "date": "17 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvglr977x3z0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Under-threat lidos get lifeline as Andy Burnham sets up fund to rebuild pools",
-      "date": "16 Nov 2026",
+      "headline": "Hoping for Britain to rejoin the EU with Andy Burnham? You may be waiting a long time | Timothy Garton Ash",
+      "date": "17 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/lifeandstyle/2026/nov/16/lidos-lifeline-andy-burnham-fund-rebuild-outdoor-pools"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/hope-britain-rejoin-eu-andy-burnham-europe"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Barristers must stop using rape myths in trials, justice secretary says",
-      "date": "16 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cj04w7n74gqno?at_medium=RSS&at_campaign=rss"
+      "headline": "Ministers vow to create new welfare system for young people as they back Milburn report",
+      "date": "17 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/nov/17/alan-milburn-report-young-people-work-neets-job-support-savingsalan-milburn-plan-young-people-work-neets-savings-200m-a-year"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Create more jobs for under-25s by cutting National Insurance, key report urges",
-      "date": "16 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss"
+      "headline": "\u2018Chloe\u2019s policy\u2019 aims to prevent repeat of case of Treasury worker who took her own life",
+      "date": "17 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/17/chloe-moffat-policy-parents-treasury-worker-employers"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Share your thoughts on Andy Burnham\u2019s plan for a new EU deal",
-      "date": "16 Nov 2026",
+      "tag": "Energy",
+      "tag_class": "tc-e",
+      "headline": "Where do people want to see Britain\u2019s climate action plan working? On their own doorstep | Miatta Fahnbulleh",
+      "date": "17 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/16/brexit-share-your-thoughts-on-andy-burnhams-plan-for-a-new-eu-deal"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/britain-climate-action-plan-working-cop31-voters-jobs-home-prices"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "UK lost more than it gained from Brexit, Burnham to say ahead of EU summit",
-      "date": "16 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/crp3e1n5kezpo?at_medium=RSS&at_campaign=rss"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Age instead of need drives Alan Milburn\u2019s new reforms. Welcome to the two-tier welfare state | Frances Ryan",
+      "date": "17 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/alan-milburn-reforms-two-tier-welfare-state-disabilities"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Barristers could be barred from practice over use of rape myths, warns justice secretary",
-      "date": "16 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/law/2026/nov/16/barristers-barred-practice-rape-myths-russell-brand-trial"
+      "headline": "Government must act now or lose Royal Mail, former minister warns",
+      "date": "17 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjvg26p3z2gdo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham pledges early intervention and \u2018benefits backstop\u2019 to tackle youth jobs crisis",
-      "date": "16 Nov 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Ed Miliband announces first sanctions on Israeli firms working in West Bank",
+      "date": "17 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/15/no-free-lunch-milburn-mcfadden-kuenssberg-uk-benefits-youth-unemployment-neet"
+      "url": "https://www.theguardian.com/world/2026/nov/17/ed-miliband-israel-west-bank-settlements-sanctions"
     }
   ]
 }
