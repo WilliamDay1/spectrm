@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-17T16:22:23Z",
+    "updated": "2026-11-18T15:54:21Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham makes Milburn head of unit to implement new jobs and welfare approach for young people \u2013 live",
-      "date": "17 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK government \u2018breaking the law\u2019 by not stopping decline of wild birds",
+      "date": "18 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/17/alan-milburn-youth-unempolyment-neets-economy-welfare-brexit-latest-news-updates"
+      "url": "https://www.theguardian.com/environment/2026/nov/18/uk-government-angela-eagle-natural-england-wild-birds-decline-"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "\u2018They learn the job doing the job\u2019: the project helping UK\u2019s Neets into work",
-      "date": "17 Nov 2026",
+      "tag": "Defence",
+      "tag_class": "tc-d",
+      "headline": "PM urges Badenoch to withdraw \u2018crass\u2019 defence of disability cuts on grounds \u2018amputees run marathons\u2019 \u2013 UK politics live",
+      "date": "18 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/17/helping-neets-into-work-project"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/18/shabana-mahmood-andy-burnham-kemi-badenoch-pmqs-latest-news-updates"
     },
     {
       "id": "3",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "UK sanctions firms over Israeli West Bank settlements",
-      "date": "17 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvglr977x3z0o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham should fight next election on promise to rejoin EU, says Peter Kyle",
+      "date": "18 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/18/david-lammy-andy-burnham-campaign-rejoining-eu-election-brexit"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Hoping for Britain to rejoin the EU with Andy Burnham? You may be waiting a long time | Timothy Garton Ash",
-      "date": "17 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Labour faces double blow over UK fossil fuel projects",
+      "date": "18 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/hope-britain-rejoin-eu-andy-burnham-europe"
+      "url": "https://www.theguardian.com/business/2026/nov/18/sse-threatens-to-close-yorkshire-gas-storage-site-unless-ministers-intervene"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Ministers vow to create new welfare system for young people as they back Milburn report",
-      "date": "17 Nov 2026",
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "Israel delays building contracts for West Bank settlement after UK sanctions",
+      "date": "18 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/17/alan-milburn-report-young-people-work-neets-job-support-savingsalan-milburn-plan-young-people-work-neets-savings-200m-a-year"
+      "url": "https://www.theguardian.com/world/2026/nov/18/israel-construction-contracts-e1-west-bank-settlement-uk-sanctions"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Chloe\u2019s policy\u2019 aims to prevent repeat of case of Treasury worker who took her own life",
-      "date": "17 Nov 2026",
+      "headline": "Ministers to drop foie gras imports ban to help seal EU food trade deal",
+      "date": "18 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/17/chloe-moffat-policy-parents-treasury-worker-employers"
+      "url": "https://www.theguardian.com/politics/2026/nov/18/labour-drops-foie-gras-import-ban-eu-food-trade-deal"
     },
     {
       "id": "7",
-      "tag": "Energy",
-      "tag_class": "tc-e",
-      "headline": "Where do people want to see Britain\u2019s climate action plan working? On their own doorstep | Miatta Fahnbulleh",
-      "date": "17 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/britain-climate-action-plan-working-cop31-voters-jobs-home-prices"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham promises to 'move quickly' on Neets report",
+      "date": "18 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c8n50457edd4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Age instead of need drives Alan Milburn\u2019s new reforms. Welcome to the two-tier welfare state | Frances Ryan",
-      "date": "17 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/alan-milburn-reforms-two-tier-welfare-state-disabilities"
+      "headline": "Home secretary plans to tackle 'corrosive' perception of two-tier policing",
+      "date": "18 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c3vg24wpg040o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Government must act now or lose Royal Mail, former minister warns",
-      "date": "17 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Lammy urges Burnham to take UK back into the EU",
+      "date": "18 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjvg26p3z2gdo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cm9q8jx05q3go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Ed Miliband announces first sanctions on Israeli firms working in West Bank",
-      "date": "17 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/17/ed-miliband-israel-west-bank-settlements-sanctions"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Minister criticises media for 'amplifying' Russell Brand's prison message",
+      "date": "18 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cq702k1w8xd3o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
