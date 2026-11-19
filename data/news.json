@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-18T15:54:21Z",
+    "updated": "2026-11-19T15:58:26Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "UK government \u2018breaking the law\u2019 by not stopping decline of wild birds",
-      "date": "18 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/nov/18/uk-government-angela-eagle-natural-england-wild-birds-decline-"
+      "headline": "Timetable set out for dismantling leasehold system in England and Wales",
+      "date": "19 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cw987ynpd0n1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Defence",
-      "tag_class": "tc-d",
-      "headline": "PM urges Badenoch to withdraw \u2018crass\u2019 defence of disability cuts on grounds \u2018amputees run marathons\u2019 \u2013 UK politics live",
-      "date": "18 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/18/shabana-mahmood-andy-burnham-kemi-badenoch-pmqs-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Faults not fixed in 90% of homes in government insulation scheme",
+      "date": "19 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c65y193gpvkgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham should fight next election on promise to rejoin EU, says Peter Kyle",
-      "date": "18 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/18/david-lammy-andy-burnham-campaign-rejoining-eu-election-brexit"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "'Public have heard enough from Russell Brand', says PM's spokesman",
+      "date": "19 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmgrenln8p29o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Labour faces double blow over UK fossil fuel projects",
-      "date": "18 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Election date? Brexit reset outcome? Farage\u2019s survival chances? Andrew Sparrow answers your questions",
+      "date": "19 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/18/sse-threatens-to-close-yorkshire-gas-storage-site-unless-ministers-intervene"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/19/kemi-badenoch-andy-burnham-uk-politics-latest-news-updates"
     },
     {
       "id": "5",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "Israel delays building contracts for West Bank settlement after UK sanctions",
-      "date": "18 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "UK-EU reset talks will go \u2018down to the wire\u2019 as crunch summit approaches",
+      "date": "19 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/18/israel-construction-contracts-e1-west-bank-settlement-uk-sanctions"
+      "url": "https://www.theguardian.com/world/2026/nov/19/uk-eu-reset-talks-andy-burnham-food-farming-tuition-fees"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Ministers to drop foie gras imports ban to help seal EU food trade deal",
-      "date": "18 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/18/labour-drops-foie-gras-import-ban-eu-food-trade-deal"
+      "headline": "Cleverly to run as Tory London mayor candidate",
+      "date": "19 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmy0ep02wn3lo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham promises to 'move quickly' on Neets report",
-      "date": "18 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "EU-UK talks going down to the wire, says No 10",
+      "date": "19 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c8n50457edd4o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c623j4kpg94go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Home secretary plans to tackle 'corrosive' perception of two-tier policing",
-      "date": "18 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c3vg24wpg040o?at_medium=RSS&at_campaign=rss"
+      "tag": "Gaza",
+      "tag_class": "tc-f",
+      "headline": "UN warns against misuse of security laws as UK weighs Palestine Action ban",
+      "date": "19 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/19/un-warns-misuse-security-laws-uk-palestine-action-ban"
     },
     {
       "id": "9",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Lammy urges Burnham to take UK back into the EU",
-      "date": "18 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Badenoch defends amputee marathon runners claim in benefits cut row",
+      "date": "19 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm9q8jx05q3go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cw62pz48vj4go?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
-      "tag": "Politics",
+      "tag": "Immigration",
       "tag_class": "tc-c",
-      "headline": "Minister criticises media for 'amplifying' Russell Brand's prison message",
-      "date": "18 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cq702k1w8xd3o?at_medium=RSS&at_campaign=rss"
+      "headline": "Lack of early border controls made UK \u2018extremely vulnerable\u2019 to Covid, inquiry finds",
+      "date": "19 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/19/covid-inquiry-uk-report-lack-of-early-border-controls-virus-spread"
     }
   ]
 }
