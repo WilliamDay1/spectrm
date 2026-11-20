@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-19T15:58:26Z",
+    "updated": "2026-11-20T15:41:19Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Devolution",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Timetable set out for dismantling leasehold system in England and Wales",
-      "date": "19 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw987ynpd0n1o?at_medium=RSS&at_campaign=rss"
+      "headline": "EU wants \u2018closest possible relationship\u2019 with UK after agreeing Brexit reset deal \u2013 live",
+      "date": "20 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/live/2026/nov/20/uk-eu-european-union-brexit-deal-andy-burnham-latest-news-updates"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Faults not fixed in 90% of homes in government insulation scheme",
-      "date": "19 Nov 2026",
+      "headline": "New Brexit deal 'won't solve' all issues, but is a 'step in the right direction'",
+      "date": "20 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c65y193gpvkgo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cm4gn9xw1v99o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
-      "tag": "Politics",
+      "tag": "Housing",
       "tag_class": "tc-c",
-      "headline": "'Public have heard enough from Russell Brand', says PM's spokesman",
-      "date": "19 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmgrenln8p29o?at_medium=RSS&at_campaign=rss"
+      "headline": "Mahmood \u2018smells a rat\u2019 over housing provision for vulnerable people in Birmingham",
+      "date": "20 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/nov/20/ahabana-mahmood-housing-provision-vulnerable-people-birmingham-supported-exempt-accommodation"
     },
     {
       "id": "4",
       "tag": "Reform",
       "tag_class": "tc-ref",
-      "headline": "Election date? Brexit reset outcome? Farage\u2019s survival chances? Andrew Sparrow answers your questions",
-      "date": "19 Nov 2026",
+      "headline": "No one else in Reform is suitable to lead the party, Nigel Farage says",
+      "date": "20 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/19/kemi-badenoch-andy-burnham-uk-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/nov/20/nigel-farage-leadership-reform-uk-party"
     },
     {
       "id": "5",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "UK-EU reset talks will go \u2018down to the wire\u2019 as crunch summit approaches",
-      "date": "19 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham has agreed EU reset deal with tuition fees issue unresolved, says No 10",
+      "date": "20 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/19/uk-eu-reset-talks-andy-burnham-food-farming-tuition-fees"
+      "url": "https://www.theguardian.com/politics/2026/nov/20/fallout-over-tuition-fees-may-snag-burnhams-eu-deal-say-insiders"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Cleverly to run as Tory London mayor candidate",
-      "date": "19 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmy0ep02wn3lo?at_medium=RSS&at_campaign=rss"
+      "headline": "Household rush to stockpile emergency supplies sends British retail sales soaring",
+      "date": "20 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/nov/20/rush-stockpile-emergency-supplies-sends-british-retail-sales-soaring"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "EU-UK talks going down to the wire, says No 10",
-      "date": "19 Nov 2026",
+      "headline": "Stabbed councillor 'protecting staff member during street clean'",
+      "date": "20 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c623j4kpg94go?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c6lymr180dgyo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
-      "tag": "Gaza",
-      "tag_class": "tc-f",
-      "headline": "UN warns against misuse of security laws as UK weighs Palestine Action ban",
-      "date": "19 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018You\u2019ve got me for life\u2019: first ceremonies in England cement care leavers\u2019 relationships",
+      "date": "20 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/19/un-warns-misuse-security-laws-uk-palestine-action-ban"
+      "url": "https://www.theguardian.com/society/2026/nov/20/lifelong-guardianship-ceremonies-england-care-leavers-relationships"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Badenoch defends amputee marathon runners claim in benefits cut row",
-      "date": "19 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw62pz48vj4go?at_medium=RSS&at_campaign=rss"
+      "headline": "Home Office tells woman born and raised in London she is not British",
+      "date": "20 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/20/home-office-tells-woman-born-london-she-is-not-british"
     },
     {
       "id": "10",
-      "tag": "Immigration",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Lack of early border controls made UK \u2018extremely vulnerable\u2019 to Covid, inquiry finds",
-      "date": "19 Nov 2026",
+      "headline": "The UK government ridicules villages such as Piddington \u2013 but it\u2019s these \u2018Nimbys\u2019 who show us the way | Simon Jenkins",
+      "date": "20 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/19/covid-inquiry-uk-report-lack-of-early-border-controls-virus-spread"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/20/villages-piddington-nimbys-local-communities"
     }
   ]
 }
