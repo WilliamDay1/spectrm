@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updated": "2026-11-20T15:41:19Z",
+    "updated": "2026-11-21T14:51:58Z",
     "update_frequency": "daily"
   },
   "headlines": [
@@ -8,91 +8,91 @@
       "id": "1",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "EU wants \u2018closest possible relationship\u2019 with UK after agreeing Brexit reset deal \u2013 live",
-      "date": "20 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/live/2026/nov/20/uk-eu-european-union-brexit-deal-andy-burnham-latest-news-updates"
+      "headline": "Scouts say they face \u00a31m tourist tax cost for overnight trips",
+      "date": "21 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cxdd1e9yvlzjo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "New Brexit deal 'won't solve' all issues, but is a 'step in the right direction'",
-      "date": "20 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gn9xw1v99o?at_medium=RSS&at_campaign=rss"
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Reform UK considers pact with Restore Britain to overcome stalling performance in polls",
+      "date": "21 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/21/reform-uk-considers-pact-restore-britain-stalling-performance-polls"
     },
     {
       "id": "3",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mahmood \u2018smells a rat\u2019 over housing provision for vulnerable people in Birmingham",
-      "date": "20 Nov 2026",
+      "headline": "Rejoining EU \u2018on the table\u2019 as UK makes deals on trade and young people",
+      "date": "21 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/20/ahabana-mahmood-housing-provision-vulnerable-people-birmingham-supported-exempt-accommodation"
+      "url": "https://www.theguardian.com/politics/2026/nov/21/rejoining-eu-uk-trade-youth-deals-ed-miliband"
     },
     {
       "id": "4",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "No one else in Reform is suitable to lead the party, Nigel Farage says",
-      "date": "20 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/20/nigel-farage-leadership-reform-uk-party"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "First minister 'gobsmacked' by Burnham's devolution calls rejection",
+      "date": "21 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/ck9874vydr83o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham has agreed EU reset deal with tuition fees issue unresolved, says No 10",
-      "date": "20 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "\u2018National scandal\u2019: residents in England rally against surge in mega-warehouse developments",
+      "date": "21 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/20/fallout-over-tuition-fees-may-snag-burnhams-eu-deal-say-insiders"
+      "url": "https://www.theguardian.com/politics/2026/nov/21/national-scandal-residents-in-england-rally-against-surge-in-mega-warehouse-developments"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Household rush to stockpile emergency supplies sends British retail sales soaring",
-      "date": "20 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/20/rush-stockpile-emergency-supplies-sends-british-retail-sales-soaring"
+      "headline": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+      "date": "21 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Stabbed councillor 'protecting staff member during street clean'",
-      "date": "20 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6lymr180dgyo?at_medium=RSS&at_campaign=rss"
+      "headline": "I hated life as a Neet. But now I\u2019ve found a job, life is just as precarious | Emilija Morrison",
+      "date": "21 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/21/hated-life-neet-found-job-life-precarious-government-young-people"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018You\u2019ve got me for life\u2019: first ceremonies in England cement care leavers\u2019 relationships",
-      "date": "20 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/society/2026/nov/20/lifelong-guardianship-ceremonies-england-care-leavers-relationships"
+      "headline": "Staff gagging clauses lifted ahead of probe into culture at data watchdog",
+      "date": "21 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cwdr1xyzr5lmo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Home Office tells woman born and raised in London she is not British",
-      "date": "20 Nov 2026",
+      "headline": "Why is Shabana Mahmood tackling \u2018two-tier policing\u2019 if she doesn\u2019t believe it exists? | Gaby Hinsliff",
+      "date": "21 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/20/home-office-tells-woman-born-london-she-is-not-british"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/21/shabana-mahmood-two-tier-policing-britain-public-myth"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "The UK government ridicules villages such as Piddington \u2013 but it\u2019s these \u2018Nimbys\u2019 who show us the way | Simon Jenkins",
+      "headline": "JP Morgan boss says he will find ways to offset \u2018unfair\u2019 rise in UK tax on banks",
       "date": "20 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/20/villages-piddington-nimbys-local-communities"
+      "url": "https://www.theguardian.com/business/2026/nov/20/jp-morgan-jamie-dimon-uk-tax-hike-bank-surcharge"
     }
   ]
 }
