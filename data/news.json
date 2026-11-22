@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-21T14:51:58Z",
+    "updated": "2026-11-22T14:48:14Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Scouts say they face \u00a31m tourist tax cost for overnight trips",
-      "date": "21 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Tories would scrap Burnham's deal with EU, deputy leader says",
+      "date": "22 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cxdd1e9yvlzjo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cr868jnlllpgo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Reform UK considers pact with Restore Britain to overcome stalling performance in polls",
-      "date": "21 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "UK politics: Burnham should \u2018move on\u2019 from Brexit, says Theresa May, as critics hit out over closer EU ties \u2013 as it happened",
+      "date": "22 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/21/reform-uk-considers-pact-restore-britain-stalling-performance-polls"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/22/andy-burnham-brexit-theresa-may-michael-gove-latest-news-updates"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Rejoining EU \u2018on the table\u2019 as UK makes deals on trade and young people",
-      "date": "21 Nov 2026",
+      "headline": "\u2018Just wrong\u2019: British right distances itself from Trump after Putin \u2018friend\u2019 post",
+      "date": "22 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/21/rejoining-eu-uk-trade-youth-deals-ed-miliband"
+      "url": "https://www.theguardian.com/politics/2026/nov/22/british-right-reform-tory-party-distances-itself-from-trump-putin-friend-post"
     },
     {
       "id": "4",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "First minister 'gobsmacked' by Burnham's devolution calls rejection",
-      "date": "21 Nov 2026",
+      "headline": "Theresa May 'aghast' at Burnham's EU plans and says 'Brexit is done'",
+      "date": "22 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck9874vydr83o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cvj6l8y3x1x4o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018National scandal\u2019: residents in England rally against surge in mega-warehouse developments",
-      "date": "21 Nov 2026",
+      "headline": "Closer EU ties will give UK say on Brussels decisions, says Ed Miliband",
+      "date": "22 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/21/national-scandal-residents-in-england-rally-against-surge-in-mega-warehouse-developments"
+      "url": "https://www.theguardian.com/politics/2026/nov/22/closer-eu-ties-uk-ed-miliband-brexit"
     },
     {
       "id": "6",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Deal with EU not dependent on tuition fees agreement, Miliband says",
-      "date": "21 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Theresa May \u2018aghast\u2019 at Andy Burnham\u2019s talk about rejoining EU",
+      "date": "22 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/2026/nov/22/theresa-may-aghast-andy-burnham-talk-about-rejoining-eu"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "I hated life as a Neet. But now I\u2019ve found a job, life is just as precarious | Emilija Morrison",
-      "date": "21 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "The looming UK winter may spawn a double headache for Andy Burnham | Richard Partington",
+      "date": "22 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/21/hated-life-neet-found-job-life-precarious-government-young-people"
+      "url": "https://www.theguardian.com/business/2026/nov/22/looming-uk-winter-spawns-double-headache-for-andy-burnham"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Staff gagging clauses lifted ahead of probe into culture at data watchdog",
-      "date": "21 Nov 2026",
+      "headline": "MP criticises company ownership register plans",
+      "date": "22 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cwdr1xyzr5lmo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqkgmy2nxy4lo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Why is Shabana Mahmood tackling \u2018two-tier policing\u2019 if she doesn\u2019t believe it exists? | Gaby Hinsliff",
-      "date": "21 Nov 2026",
+      "headline": "There\u2019s probably a cult hiding in plain sight on your high street. At last, Britain is confronting the problem | Rachael Reign",
+      "date": "22 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/21/shabana-mahmood-two-tier-policing-britain-public-myth"
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/22/britain-cult-problem-survivors-abuse-high-street-politics"
     },
     {
       "id": "10",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "JP Morgan boss says he will find ways to offset \u2018unfair\u2019 rise in UK tax on banks",
-      "date": "20 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/business/2026/nov/20/jp-morgan-jamie-dimon-uk-tax-hike-bank-surcharge"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "'Move on!' Former PMs pile in with advice for Andy Burnham, but will he listen?",
+      "date": "22 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cjn5023e6ez4o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
