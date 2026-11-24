@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-23T18:38:39Z",
+    "updated": "2026-11-24T18:07:36Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says it would be \u2018unthinkable\u2019 for the UK to rejoin the EU without a referendum \u2013 UK politics live",
-      "date": "23 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Farage preaches the Brexit gospel according to St Nige | John Crace",
+      "date": "24 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/23/andy-burnham-brexit-europe-eu-uk-summit-deal-commons-cbi-farage-badenoch-haigh-politics-latest-news-updates"
+      "url": "https://www.theguardian.com/politics/2026/nov/24/farage-preaches-the-brexit-gospel-according-to-st-nige"
     },
     {
       "id": "2",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Pip assessments need 'fundamental overhaul', report to say",
-      "date": "23 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvlyj3rn201xo?at_medium=RSS&at_campaign=rss"
+      "headline": "Proposals in Timms review for changes to Pip would lead to higher welfare bill, IFS says \u2013 UK politics live",
+      "date": "24 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/24/pip-review-stephen-timms-andy-burnham-disability-welfare-brexit-latest-news-updates"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "\u2018Scapegoating\u2019: green groups condemn plan to axe Environment Agency and Natural England",
-      "date": "23 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/23/natural-england-could-be-abolished-quango-cull-louise-haigh"
+      "headline": "Disability benefit review calls for closer link with claimant costs",
+      "date": "24 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cm4gn6gn9057o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "What tactics will Burnham use to sell his EU plans? \u2013 podcast",
-      "date": "23 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/nov/23/what-tactics-will-burnham-use-to-sell-his-eu-plans-podcast"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reform breaks boycott of Welsh Parliament with call to remove presiding officer",
+      "date": "24 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmqj5ql7r2ljo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Leadership",
       "tag_class": "ldr",
-      "headline": "Kemi is beside herself that Burnham is trying to salvage a Brexit deal. Can\u2019t we all stop talking about it? | John Crace",
-      "date": "23 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/23/kemi-is-beside-herself-that-burnham-is-trying-to-salvage-a-brexit-deal-cant-we-all-stop-talking-about-it"
+      "headline": "Tories accuse Burnham of turning No 10 into 'joke' after influencer video row",
+      "date": "24 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cv0l3nlgl80ro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Abolishing Natural England would be travesty, say campaigners",
-      "date": "23 Nov 2026",
+      "headline": "What are the proposals for changing personal independence payment?",
+      "date": "24 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/environment/2026/nov/23/abolishing-natural-england-would-be-travesty-say-campaigners"
+      "url": "https://www.theguardian.com/world/2026/nov/24/what-proposals-changing-personal-independence-payment"
     },
     {
       "id": "7",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Lucy Powell to visit China to promote UK education weeks after MI5 warning",
-      "date": "23 Nov 2026",
+      "tag": "Reform",
+      "tag_class": "tc-ref",
+      "headline": "Nigel Farage rules out deal with Restore Britain unless it disavows controversial backers",
+      "date": "24 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/23/uk-visit-china-lucy-powell-education-mi5-universities-warning"
+      "url": "https://www.theguardian.com/politics/2026/nov/24/nigel-farage-rules-out-reform-uk-deal-restore-britain"
     },
     {
       "id": "8",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham: I won\u2019t listen to ex-Tory PMs who left UK with \u2018bad Brexit deal\u2019",
-      "date": "23 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/23/andy-burnham-brexit-deal-eu"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tory plan to sell off London's Victorian jails to raise \u00a31.4bn",
+      "date": "24 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c607417kgx81o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "9",
-      "tag": "Housing",
+      "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Children left without parental care after Home Office stops them joining father in UK",
-      "date": "23 Nov 2026",
+      "headline": "Outcry grows over Labour plan to exempt most brownfield sites from nature protection rules",
+      "date": "24 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/23/children-home-office-stops-joining-father-uk-ghana"
+      "url": "https://www.theguardian.com/politics/2026/nov/24/outcry-uk-plans-to-exempt-brownfield-sites-nature-protection-rules"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Welsh Greens back plan to separate from English party",
-      "date": "23 Nov 2026",
+      "headline": "Key takeaways from the Timms review into Pip disability benefit",
+      "date": "24 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cjy5xewrw657o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c69w9gw9wx9no?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
