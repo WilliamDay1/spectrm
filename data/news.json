@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-24T18:07:36Z",
+    "updated": "2026-11-25T17:30:29Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Farage preaches the Brexit gospel according to St Nige | John Crace",
-      "date": "24 Nov 2026",
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Burnham dismisses Badenoch\u2019s criticism over influencer and declines to apologise for \u2018vile video\u2019 \u2013 UK politics live",
+      "date": "25 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/24/farage-preaches-the-brexit-gospel-according-to-st-nige"
+      "url": "https://www.theguardian.com/politics/live/2026/nov/25/andy-burnham-kemi-badenoch-pmqs-energy-bills-tiktok-welfare-benefits-timms-reform-brexit-devolution-latest-news-updates"
     },
     {
       "id": "2",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Proposals in Timms review for changes to Pip would lead to higher welfare bill, IFS says \u2013 UK politics live",
-      "date": "24 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/24/pip-review-stephen-timms-andy-burnham-disability-welfare-brexit-latest-news-updates"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Badenoch challenges Burnham over university fees for EU students",
+      "date": "25 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cw4gn8lxj5r1o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Disability benefit review calls for closer link with claimant costs",
-      "date": "24 Nov 2026",
+      "headline": "EU offers UK fresh deal on 'Made in Europe' scheme",
+      "date": "25 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gn6gn9057o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/c50md8x9gdgro?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "4",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "Reform breaks boycott of Welsh Parliament with call to remove presiding officer",
-      "date": "24 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cmqj5ql7r2ljo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Influencers Behaving Badly at No 10? Burnham could have worse problems | Emma Brockes",
+      "date": "25 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/25/influencers-no-10-downing-street-andy-burnham-luke-hamnett-max-balegde"
     },
     {
       "id": "5",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Tories accuse Burnham of turning No 10 into 'joke' after influencer video row",
-      "date": "24 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Reality TV star backs extending sex education to 18",
+      "date": "25 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cv0l3nlgl80ro?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cqgkl38j1r76o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "What are the proposals for changing personal independence payment?",
-      "date": "24 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/world/2026/nov/24/what-proposals-changing-personal-independence-payment"
+      "headline": "No 10 does not rule out inviting back influencer at centre of video row",
+      "date": "25 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cx987j6e26elo?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Nigel Farage rules out deal with Restore Britain unless it disavows controversial backers",
-      "date": "24 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/24/nigel-farage-rules-out-reform-uk-deal-restore-britain"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "Nuclear test veterans will get full truth, says Burnham, as he confirms independent panel",
+      "date": "25 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c6808k8dxvgko?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Tory plan to sell off London's Victorian jails to raise \u00a31.4bn",
-      "date": "24 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c607417kgx81o?at_medium=RSS&at_campaign=rss"
+      "headline": "Labour \u2018committed\u2019 to ban on conversion practices despite calls for proposed law to be scrapped",
+      "date": "25 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/world/2026/nov/25/labour-committed-ban-conversion-practices-despite-proposed-law-scrapped"
     },
     {
       "id": "9",
-      "tag": "Politics",
+      "tag": "Devolution",
       "tag_class": "tc-c",
-      "headline": "Outcry grows over Labour plan to exempt most brownfield sites from nature protection rules",
-      "date": "24 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/24/outcry-uk-plans-to-exempt-brownfield-sites-nature-protection-rules"
+      "headline": "None of UK government's \u00a32.5bn steel package spent in Wales, figures show",
+      "date": "25 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqwy0r98r26po?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "10",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Key takeaways from the Timms review into Pip disability benefit",
-      "date": "24 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c69w9gw9wx9no?at_medium=RSS&at_campaign=rss"
+      "headline": "Still racist, misogynistic and homophobic. I\u2019m putting Britain\u2019s biggest police force on notice \u2013 we won\u2019t tolerate this | Sadiq Khan",
+      "date": "25 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/25/racist-misogynistic-homophobic-met-police-britain"
     }
   ]
 }
