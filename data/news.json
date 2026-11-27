@@ -1,98 +1,98 @@
 {
   "_meta": {
-    "updated": "2026-11-26T17:12:44Z",
+    "updated": "2026-11-27T16:54:30Z",
     "update_frequency": "daily"
   },
   "headlines": [
     {
       "id": "1",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham says UK net migration now under 'sufficient' control",
-      "date": "26 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Ex-council leader jailed for fraud and tax evasion",
+      "date": "27 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/ck792l8ndqyqo?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cmkgdjyd5j98o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "2",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Mandelson tried to influence Starmer\u2019s cabinet reshuffle, new documents reveal \u2013 UK politics live",
-      "date": "26 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/live/2026/nov/26/uk-eu-food-deal-farage-penalty-compensation-reform-net-migration-latest-news-updates"
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Tory candidates must sign pledge to scrap net-zero targets, says Badenoch",
+      "date": "27 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy95295835o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "3",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Watch: Sadiq Khan proud of 'various identities' in Lords maiden speech",
-      "date": "26 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/videos/cqglrn0kjjl4o?at_medium=RSS&at_campaign=rss"
+      "headline": "UK pensions department hit by \u2018serious cyber incident\u2019, minister says \u2013 as it happened",
+      "date": "27 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/politics/live/2026/nov/27/department-work-pensions-offline-cyber-incident-rosebank-slapps-latest-news-updates"
     },
     {
       "id": "4",
-      "tag": "Leadership",
-      "tag_class": "ldr",
-      "headline": "Burnham joined by former PMs at Widdecombe service",
-      "date": "26 Nov 2026",
+      "tag": "Politics",
+      "tag_class": "tc-c",
+      "headline": "Government to limit costly legal claims aimed at silencing whistleblowers",
+      "date": "27 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cvglrn4p1np0o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/cw24ez2zvge0o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "5",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Mandelson kept shares as ambassador despite conflict of interest fears, documents show",
-      "date": "26 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c6808dv4e817o?at_medium=RSS&at_campaign=rss"
+      "headline": "They crossed the doom loop of Groundhog Day with Nightmare on Elm Street. Voil\u00e0 \u2013 it\u2019s Peter Mandelson | Robert Hutton",
+      "date": "27 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/27/groundhog-day-nightmare-on-elm-street-peter-mandelson-brexit-debate"
     },
     {
       "id": "6",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Nearly 100 Labour MPs including ministerial aides oppose Rosebank oil field",
-      "date": "26 Nov 2026",
+      "headline": "Reform's Joe Martin threatens legal challenge after being banned from speaking in Senedd",
+      "date": "27 Nov 2026",
       "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/cw24ez32d1n4o?at_medium=RSS&at_campaign=rss"
+      "url": "https://www.bbc.co.uk/news/articles/crz9d30wklz3o?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "7",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Labour\u2019s split over Rosebank oilfield exposed by letter from nearly 100 MPs",
-      "date": "26 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/26/labour-split-over-rosebank-oilfield-exposed-by-letter-from-nearly-100-mps"
+      "headline": "'We have no interest in hearing from Huw Edwards', Downing Street says",
+      "date": "27 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/c60mdl2y2w3do?at_medium=RSS&at_campaign=rss"
     },
     {
       "id": "8",
       "tag": "Politics",
       "tag_class": "tc-c",
-      "headline": "Rosebank rebellion: are resignations next? \u2013 podcast",
-      "date": "26 Nov 2026",
+      "headline": "DWP \u2018cyber incident\u2019 knocks almost all pensions and benefits systems offline",
+      "date": "27 Nov 2026",
       "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/audio/2026/nov/26/rosebank-rebellion-are-resignations-next-podcast"
+      "url": "https://www.theguardian.com/politics/2026/nov/27/dwp-cyber-incident-pensions-benefits-systems-offline"
     },
     {
       "id": "9",
-      "tag": "Politics",
-      "tag_class": "tc-c",
-      "headline": "New UK-EU treaty has 10-year termination clause",
-      "date": "26 Nov 2026",
-      "source": "BBC Politics",
-      "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss"
+      "tag": "Leadership",
+      "tag_class": "ldr",
+      "headline": "A third of rough sleepers offered bed or support after Burnham Christmas vow",
+      "date": "27 Nov 2026",
+      "source": "The Guardian Politics",
+      "url": "https://www.theguardian.com/society/2026/nov/27/third-rough-sleepers-offered-bed-support-burnham-christmas-vow"
     },
     {
       "id": "10",
-      "tag": "Reform",
-      "tag_class": "tc-ref",
-      "headline": "Do you want to waste 15 minutes of your life reading the Reformer by Nigel Farage? | John Crace",
-      "date": "26 Nov 2026",
-      "source": "The Guardian Politics",
-      "url": "https://www.theguardian.com/politics/2026/nov/26/reformer-nigel-farage-burnham-eu"
+      "tag": "Election",
+      "tag_class": "tc-c",
+      "headline": "Reform wins by-elections after offensive comments",
+      "date": "27 Nov 2026",
+      "source": "BBC Politics",
+      "url": "https://www.bbc.co.uk/news/articles/cqkg5y3gr1w7o?at_medium=RSS&at_campaign=rss"
     }
   ]
 }
